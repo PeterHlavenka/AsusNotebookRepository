@@ -1,0 +1,321 @@
+{\rtf1\ansi\ansicpg1250\deff0\nouicompat\deflang1029{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}{\f2\fnil\fcharset238 Calibri;}{\f3\fnil\fcharset0 Consolas;}{\f4\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green176\blue80;\red255\green0\blue0;\red0\green0\blue255;\red163\green21\blue21;\red0\green0\blue0;\red102\green102\blue102;\red43\green145\blue175;\red69\green133\blue203;}
+{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs28\lang9\tab\tab\b\fs36 WPF\par
+\fs28 SelectedItems : \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Nova slozka : Controls\b\fs36\par
+{\pntext\f4\'B7\tab}\b0\fs28 Vytvorime si vlastni datagrid ktery bude dedit od datagridu : ExtendedDatagrid . V ni bude properta na kterou se nabindujeme. Vsechny property v xaml jsou \b dependency property \b0 a muzeme si vytvorit i vlastni.\b\fs36\par
+{\pntext\f4\'B7\tab}\b0\fs28 ReSharper ma makro na vytvareni dependency property,  staci napsat dep a on doplni zbytek.  \b\fs36\par
+{\pntext\f4\'B7\tab}\b0\fs28 Klavesova \b zkratka   ctrl+alt+mezernik \b0 doplnuje usingy ve xaml. \b\fs36\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0\fs28 Vytvorime si teda vlastni propertu ve tride \cf1\b ExtendedDataGrid\cf0\b0   bude se jmenovat \cf1 BindableSelectedProperty\cf0 .\b\fs36\par
+{\pntext\f4\'B7\tab}\b0\fs28 A bude tu kolekce IList \cf1 BindableSelectedItems  \cf0 ktera interne v datagridu uchovava kolekci polozek z gridu. Tato kolekce je provazana pomoci two way bindingu s kolekci na viewModelu , takze pokud se zmeni interni kolekce datagridu , zmeni se i kolekce ve viewModelu.                \cf2\f1\fs19 BindableSelectedItems\cf3 ="\{\cf4 Binding\cf2  Path\cf3 =SelectedGalaxies,\cf2  Mode\cf3 =TwoWay\}"\cf0\b\f0\fs36\par
+{\pntext\f4\'B7\tab}\b0\fs28 Override metoda \cf1 OnSelectionChanged\cf0  zachytava event kliknuti do gridu, nejdrive zavola rodicovskou metodu   \cf3\f1\fs19 base\cf5 .OnSelectionChanged(e);   \f0\fs28\lang1033 . V teto metode projdeme kolekci SelectedItems . To je kolekce na rodicovske tride ( Controls.Multiselector. SelectedItems ).  Tady jsou ulozene naklikane elementy. Abychom je mohli v tabulce zobrazit , musime je dostat do kolekce BindableSelectedItems ( ta provazana s viewModelem ). Je to teda trasa :  \b kliknuti  \b0  ->  \b Controls.SelectedItems  \b0 -> \cf6 OnSelectionChanged (event) \cf5   ->  \b BindableSelectedItems  \b0 ->   \cf6 xamlBinding\cf5    ->   \b viewModel.SelectedGalaxies.\cf0\fs36\lang9\par
+{\pntext\f4\'B7\tab}\b0\fs28 Bude tu  metoda \cf1 SelectedItemsChanged\cf0   ktera bude implementovat funkcnost nasi property - BindableSelectedItemsProperty.   Na jejim argumentu \cf1 d \cf0 se daji najit zalezitosti jako d.newValue,  d.oldValue ...\b\fs36\par
+
+\pard\sa200\sl276\slmult1\b0\fs28\tab\f2\lang1029 Value je jen pro cteni proto si z ni hodnoty ve\f0\lang1033 zmeme do noveho IListu :      \cf7\f1\fs19 IList\cf5  selectedItems = (\cf7 IList\cf5 ) d.NewValue;\f3        , \f0\fs28 vycistime si kolekci na gridu :   \f1\fs19 dataGrid.SelectedItems.Clear();\f3      \f0\fs28 a ve foreachi  do kolekce \tab gridu \tab vlozime polozky z IListu   \f1\fs19 selectedItems \f3  , \f0\fs28 coz jsou vlastne polozky z d.NewValue. \cf0\b\fs36\lang9\par
+\tab\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0\fs28 V mainViewModelu mame kolekci  IList    \cf8\b SelectedGalaxies  \cf0\b0 .      V xaml je na to nabindovano  \cf2\f1\fs19  \fs22 BindableSelectedItems\cf3 ="\{\cf4 Binding\cf2  Path\cf3 =SelectedGalaxies\}"\f3\lang1033  \cf0\b\f0\fs28\lang9\par
+{\pntext\f4\'B7\tab}\b0\lang1033 Zbyva provazat kolekci  SelectedGalaxies z viewModelu s kolekci ve tride ExtendedDataGrid. \b\lang9\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Kdyz budeme chtit v datagridu zobrazit nejake galaxie uz vybrane potrebujeme postupovat obracene a zapsat je v metode SelectedItemsChanged.  Pouzijeme k tomu parametry metody. Kopirovani probiha tak , ze si vytvorime lokalni kolekci a tam dame itemy jeden po druhem . Kdybychom vymennili jen reference   kolekce = kolekce jina   bylo by to spatne.\b\par
+
+\pard\sa200\sl276\slmult1\b0 =============================================================\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 V konstruktoru by nemelo byt zadne inicializovani hodnot promennych . Proto jsme vytvorili button Vybrat, ktery nam resi vybrani trech galaxii  naraz. \par
+{\pntext\f4\'B7\tab}Pokud chceme aby byly vybrane tri galaxie po spusteni aplikace,  vytvorime inicializacni  metodu . Pokud se budeme bavit o vybrani galaxii , tohle se vztahuje k usercontrol GalaxyView a timpadem bude inicializacni metoda v GalaxyView.xaml: \par
+
+\pard\sa200\sl276\slmult1\tab\fs22\tab\cf5\f1  \cf3 var\cf5  model = \cf7 CastleContainer\cf5 .Container.Resolve<\cf7 GalaxyViewModel\cf5 >();\f3\lang1033    \par
+\tab\tab  \f1\fs19 DataContext = model;\par
+\f3\tab\tab\cf0\f0\fs28\lang9\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Zakladni sloupec je  DataGridTextColumn , da se prepisovat pomoci IsReadOnly = false.\par
+{\pntext\f4\'B7\tab}Pokud si rozsirime grid kvuli SelectedItems , ktera ve WPF chybi, musime explicitne uvadet  mode = two way.\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\li1440\sa200\sl276\slmult1\b\fs44 Styly\b0\fs28\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Muzeme si pridat  \cf3\f1\fs22 <\cf4 Window.Resources\cf3 >\cf0\f0  \fs28\par
+
+\pard\sa200\sl276\slmult1\tab Sem se davaji sablony napr :       \par
+\tab     \cf3\f1\fs22 <\cf4 DataTemplate\cf2  x\cf3 :\cf2 Key\cf3 ="CheckColumntemplate">\cf5\par
+            \cf3 <\cf4 CheckBox\cf2  IsChecked\cf3 ="\{\cf4 Binding\cf2  IsChecked\cf3 ,\cf2  UpdateSourceTrigger\cf3 =PropertyChanged\}"/>\cf5\par
+        \cf3 </\cf4 DataTemplate\cf3 >\cf0\f0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Ve sloupci kde chceme sablonu pouzit rekneme jen :\par
+
+\pard\sa200\sl276\slmult1\tab\cf3\f1\fs22 <\cf4 DataGridTemplateColumn\cf2  Header\cf3 ="IsChecked"\cf2  CellTemplate\cf3 ="\{\cf4 StaticResource\cf2  CheckColumntemplate\cf3\}">\cf0\f0\par
+\fs28\par
+
+\pard\li720\sa200\sl276\slmult1\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Nastaveni pro celou aplikaci  v App.xaml :\b0\par
+
+\pard\sa200\sl240\slmult1\tab\cf3\f1\fs19 <\cf4 Application.Resources\cf3 >\cf5\par
+        \cf3 <\cf4 Style\cf2  TargetType\cf3 ="Button" >\f3\lang1033                          \cf0\b\fs22 // Nastavujeme styl pro tlacitko\cf5\b0\f1\fs19\lang9\par
+            \cf3 <\cf4 Style.Triggers\cf3 >\f3\lang1033                                         \cf5\f1\lang9\par
+                \cf3 <\cf4 Trigger\cf2  Property\cf3 ="IsEnabled"\cf2  Value\cf3 ="True">\f3\lang1033                       \cf0\b\fs22 // Definujeme co tento styl spousti \cf5\b0\f1\fs19\lang9\par
+                    \cf3 <\cf4 Setter\cf2  Property\cf3 ="Background"\cf2  Value\cf3 ="BlueViolet"/>\cf5\par
+                    \cf3 <\cf4 Setter\cf2  Property\cf3 ="Foreground"\cf2  Value\cf3 ="White"/>\cf5\par
+                \cf3 </\cf4 Trigger\cf3 >\cf5\par
+                \cf3 <\cf4 DataTrigger\cf2  Binding\cf3 ="\{\cf4 Binding\cf2  Path\cf3 =SelectedGalaxy\}"\cf2  Value\cf3 ="\{\cf4 x\cf3 :\cf4 Null\cf3\}">\f3\lang1033\tab\tab\tab\cf0\b\fs22  // DataTriger je spoustec podle objektu \cf5\b0\f1\fs19\lang9\par
+                    \cf3 <\cf4 Setter\cf2  Property\cf3 ="Background"\cf2  Value\cf3 ="Red"/>\cf5                  \par
+                \cf3 </\cf4 DataTrigger\cf3 >\cf5\par
+            \cf3 </\cf4 Style.Triggers\cf3 >\cf5\par
+
+\pard\sa200\sl276\slmult1         \cf3 </\cf4 Style\cf3 >\cf5  \par
+\f3\lang1033   \f1\lang9    \cf3 </\cf4 Application.Resources\cf3 >\par
+\cf0\f0\fs28\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 V App.xaml si muzeme vytvorit tzv.  \b ControlTemplate\b0  . Slouzi k tomu , abychom si mohli urcite soucasti UI (UserInterface)  definovat jen jednou a potom je pouzivat na vice mistech.\b\par
+
+\pard\fi-360\li720\sa200\sl240\slmult1\cf3\b0\f3\fs19\lang1033\tab\f1\fs22\lang9 <\cf4 ControlTemplate\cf2  TargetType\cf3 ="ContentControl"\cf2  x\cf3 :\cf2 Key\cf3 ="DialogWindowTemplate">\f3\lang1033              \cf0\f0 //Definujeme tzv. ContenControl , budeme ji rikat DialogWindowTemplate\cf5\f2\lang9\par
+\f1             \cf3 <\cf4 StackPanel\cf3 >\f3\lang1033\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab    \cf0\f0 // Musime ji dat do nejakeho kontejneru napr stackPanelu\cf5\f1\lang9\par
+                \cf3 <\cf4 Border\cf2  BorderThickness\cf3 ="1"\cf2  BorderBrush\cf3 ="Red"\par
+\f3\lang1033\tab\tab\tab\tab\cf2\f1\lang9  Visibility\cf3 ="\{\cf4 Binding\cf2  Path\cf3 =IsValid,\cf2  Converter\cf3 =\{\cf4 StaticResource\cf2  BoolToVisibilityConverter\cf3\}\}">\f3\lang1033  \cf0\f0 // Bindujeme na boolean , potrebujeme ale prevod na visibilitu ***\cf5\f1\lang9\par
+                    \f3\lang1033   \cf3\f1\lang9 <\cf4 TextBlock\cf2  Text\cf3 ="\{\cf4 Binding\cf2  Path\cf3 =Error\}"/>\f3\lang1033                \cf0\b // Vypis ErrorStringu do textBlocku\cf5\b0\f1\lang9\par
+                \cf3 </\cf4 Border\cf3 >\cf5\par
+            \par
+                \cf3 <\cf4 ContentPresenter\cf3  />\f3\lang1033                    \cf0\b // TOHLE RIKA ZE NASLEDUJE DALSI OBSAH DEFINOVANY V    \cf2 ContentControl   \cf0 DIALOGOVEHO OKNA \cf5\b0\f1\lang9\par
+            \cf3 </\cf4 StackPanel\cf3 >\cf5\par
+
+\pard\sa200\sl240\slmult1\f3\lang1033\tab\cf3\f1\lang9 </\cf4 ControlTemplate\cf3 >\cf0\b\f0\par
+
+\pard\sa200\sl276\slmult1\b0\fs28\par
+\tab\b *** \b0 Prevod na visibilitu probiha pomoci tzv.  \b Converteru . \b0  Implementuje IValueConverter, prevezme dve metody z rozhrani  . Metoda \b Convert \b0 funguje ve smeru z view do viewModelu  a metoda \b ConvertBack \b0 z \tab viewModelu do view . Ta se moc nepouziva. Metode timto predame boolean IsValid a vrati nam visibilitu .  Boolean  true - vraci  Visibility.Collapsed,      false - Visibility.Visible. \b\par
+\b0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 V dialogovem okne ktere chce pouzivat ControlTemplate z app.xaml,  rekneme ze : \par
+
+\pard\sa200\sl276\slmult1  \fs22\tab\cf3\f1 <\cf4 ContentControl\cf2  Template\cf3 ="\{\cf4 StaticResource\cf2  DialogWindowTemplate\cf3\}">\par
+\f3\lang1033\tab\tab < \cf0 Tady bude normalne kod ktery se bude zobrazovat po DialogWindowTemplatu.  ( Klasika gridy , texboxy ... ) >\cf3\f1\lang9\par
+\f3\lang1033\tab\f1 </\cf4 ContentControl\cf3 >\cf0\f0\lang9\par
+\fs28\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b x: Key    \b0 je zalezitost ze tridy Dictionary .  Timto definujeme co je ve slovniku klic . :\par
+
+\pard\sa200\sl276\slmult1\fs22\tab\cf3\f1\fs19 <\cf4 Window.Resources\cf3 >\cf5\par
+        \cf3 <\cf4 DataTemplate\cf2  x\cf3 :\cf2 Key\cf3 ="CheckColumntemplate">\f3\lang1033        \cf0\b\f0\fs22 // toto je klic \cf5\b0\f1\fs19\lang9\par
+            \cf3 <\cf4 CheckBox\cf2  IsChecked\cf3 ="\{\cf4 Binding\cf2  IsChecked\cf3 ,\cf2  UpdateSourceTrigger\cf3 =PropertyChanged\}"/>\f3\lang1033        \cf0\b\f0\fs22 // a toto value\cf5\b0\f1\fs19\lang9\par
+        \cf3 </\cf4 DataTemplate\cf3 >\cf5\par
+    \cf3 </\cf4 Window.Resources\cf3 >\cf0\f0\fs22\par
+\fs28\tab a nasledne v kodu xaml muzeme zavolat podle klice  : \par
+\cf3\f3\fs19\lang1033\tab\f1\lang9 <\cf4 DataGridTemplateColumn\cf2  Header\cf3 ="IsChecked"\cf2  CellTemplate\cf3 ="\{\cf4 StaticResource\cf2  CheckColumntemplate\cf3\}">\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\cf0\f0\fs28 Pokud chceme pouzit RelayCommand musi to byt instance ICommand.\cf3\f1\fs19\par
+{\pntext\f4\'B7\tab}\cf0\b\f0\fs28\lang1033 Sloupce dataGridu\b0\lang9\par
+{\pntext\f4\'B7\tab}\lang1033 V xaml nastavime \cf2\f1\fs19 AutoGenerateColumns\cf3 ="False"\cf0\f0\fs28  C \lang9\par
+
+\pard\sa200\sl276\slmult1\par
+\b Rozdelovani sloupcu v gridu :  \par
+*              znamena vyplneni / roztazeni az do kraje\par
+Auto      znamena sloupec nebo radek podle komponenty ktera je v nem vlozena\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\b\par
+\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+.\fs22\par
+}
+ 

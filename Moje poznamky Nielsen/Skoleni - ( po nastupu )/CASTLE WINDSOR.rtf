@@ -1,0 +1,262 @@
+{\rtf1\ansi\ansicpg1250\deff0\nouicompat\deflang1029{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Consolas;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue0;\red43\green145\blue175;\red0\green0\blue255;\red102\green102\blue102;\red128\green100\blue162;\red165\green165\blue165;}
+{\*\listtable 
+{\list\listhybrid
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'00.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc4\leveljc0\levelstartat1{\leveltext\'02\'01.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc3\leveljc0\levelstartat1{\leveltext\'02\'02.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc2\leveljc0\levelstartat1{\leveltext\'02\'03.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc1\leveljc0\levelstartat1{\leveltext\'02\'04.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'05.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc4\leveljc0\levelstartat1{\leveltext\'02\'06.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc3\leveljc0\levelstartat1{\leveltext\'02\'07.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc23\leveljc1\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f3\jclisttab\tx0}\listid1 }}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs40\lang9                                                                                             \cf1\b CASTLE WINDSOR\cf0\b0\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Castle pomoci registrace " vyresi" vsechny zavislosti na tridach a rozhranich . \par
+{\pntext\f3\'B7\tab}Nainstalujeme z firemniho serveru pomoci NuGet manageru balik Mediaresearch.Framework.DataAcess.BLToolkit.Castle , BLToolkit.CP.4.dll a DataAccess.BLToolkit.\par
+{\pntext\f3\'B7\tab}Vytvorime si v hlavnim projektu tridu \b CastleContainer\b0  .\par
+{\pntext\f3\'B7\tab}Trida CastleContainer je navrhovy vzor singleton, muze tedy existovat jen jedna instance.\par
+{\pntext\f3\'B7\tab}Ma privatni atributy m_lock a m_container a jednu readonly vlastnost. (vsechno static). \par
+
+\pard\sa200\sl276\slmult1\tab m_lock slouzi k zamceni getru , kdyby do nej chtelo vstoupit jine vlakno programu , bude muset pockat az to prvni vlakno vyleze. V tu chvili uz bude instance (jedina) vytvorena a dalsi vlakno maximalne vrati tu \tab samou instanci.\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Ve vsech oknech kde se nastavuje \b DataContext \b0 musi by resolving :    \cf2\f1\fs22 DataContext = \cf3 CastleContainer\cf2 .Container.Resolve<\cf3 PlanetsViewModel\cf2 >();\f2\lang1033     (osetrit stav kdy je aplikace v design modu)\cf0\f0\lang9\par
+
+\pard\sa200\sl276\slmult1\fs28\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\ilvl8\fi-360\li720\sa200\sl276\slmult1 Vytvorime tridu \b Bootstraper\b0 .\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Bude mit metodu void Start().  To je jedina metoda ktera se vola v MainWindow.xaml.cs\fs20 .           \cf4\f1\fs22 new\cf2  \cf3 Bootstraper\cf2 ().Start();\f0\fs28\lang1033 .\cf0\fs20\lang9\par
+{\pntext\f3\'B7\tab}\cf2\fs28\lang1033 Ve tride Bootstrapper je vlozena jeste jedna trida a to : \cf5\b Installer\b0  \cf2 , ktera dedi od \cf5\b\lang9 IWinsorInstaller\cf0\b0 . \fs20\par
+{\pntext\f3\'B7\tab}\fs28 V metode Start() se zavola trida CastleContainer, na ni vlastnost Container, ktera vraci rozhrani  \cf5\b IWinsorContainer \cf0 ,\b0  a na nom zavola metodu Install . Jako parametr bude mit nove vytvorenou instanci tridy Installer a my ze startu preskocime do metody Install na tride Installer.\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Trida \b Installer \b0 : IWindowInstaller\par
+{\pntext\f3\'B7\tab}Ma metodu:               \cf4\f1\fs19 public\cf2  \cf4 void\cf2  Install(\cf3 IWindsorContainer\cf2  container, \cf3 IConfigurationStore\cf2  store)\f2\lang1033 .\cf0\f0\fs28\lang9\par
+{\pntext\f3\'B7\tab}V ni rekneme tride EntityDaoFactory ze ktere assembly jsou dao tridy:                         \cf3\f1\fs19 Assembly\cf2  entities = \cf3 Assembly\cf2 .GetAssembly(\cf4 typeof\cf2 (\cf3 Galaxie\cf2 ));\cf0\f0\fs28\par
+{\pntext\f3\'B7\tab}Kontejneru z parametru metody zaregistrujeme EntityDaoFactory , ktera za pouziti FactoryMethod vytvori vsechny potrebne instance dao trid jako interfacy : IGalaxyDao, IPlanetDao IPropertyDao ...\par
+{\pntext\f3\'B7\tab}Vytvari rozhrani jen pro dao tridy takze rozhrani pro tridu ktera neni dao napr .  PropertiesManager (na spravu vlastnosti) musime vytvorit sami. \par
+{\pntext\f3\'B7\tab}V dalsim kroku zaregistrujeme Rozhrani IDaoSource , ktere je ale ImplementedBy <DependencyDaoSource> a ma zivotni cyklus . Lifestyle.Singleton.  IDaoSource ma zavislost na EntityDaoFactory.\par
+{\pntext\f3\'B7\tab}Ted muzeme v metode Start() tridy bootstraper  vyresit IDaoSource.                             \cf3\f1\fs19 CastleContainer\cf2 .Container.Resolve<\cf3 IDaoSource\cf2 >();\cf0\f0\fs28\par
+{\pntext\f3\'B7\tab}Zbyva zaregistrovat vsechny viewModely.\par
+{\pntext\f3\'B7\tab}Trida GalaxyViewModel se predava jinym viewModelum i jako IGalaxySelector takze za metodou ImplementedBy() , pridame klauzuli .\cf2\f1 Forward<\cf3 IGalaxySelector\cf2 >().\cf0\f0\par
+{\pntext\f3\'B7\tab}To plati i pro PlanetsViewModel kterou pouzivame jako IPlanetSelector.\par
+{\pntext\f3\'B7\tab}Ostatni viewModely nemaji Forward .\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 V konstruktoru GalaxyViewModelu byla zavislost na IDaoSource daoSource.  V konstruktoru samotnem jsme potom tvorili dao objekt pomoci bltoolkitu nasledovne: \par
+
+\pard\sa200\sl276\slmult1\tab IGalaxyDao m_galaxyDao   =   daoSource.GetDaoByEntityType< IGalaxyDao, Galaxie, int >();\par
+\tab Ted staci dat do konstruktoru GalaxyViewModelu jen zavislost na  IGalaxyDao  \cf6 galaxyDao  \cf0  a jen rekneme ze : m_galaxyDao = \cf6 galaxyDao.\par
+\cf0\tab\cf7 Na cteni kodu je dobra aplikace CodeWriter.\cf0\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Predelame vsechny viewModely podle GalaxyViewModelu.\par
+{\pntext\f3\'B7\tab}\b TransactionManager\b0  se porad bere z \b DaoSource\b0  . Je to z duvodu toho , ze muzeme pracovat s vice databazema kdybychom meli vic zaregistrovanych manageru  , castle by nam vratil prvniho v poradi a mohli bychom provadet transakce na uplne jine databazi nez bylo v planu.                           \cf2\f1\fs19 m_transactionManager = daoSource.TransactionManager;\f2\lang1033             (trida PlanetsViewModel.constructor)\cf0\f0\fs28\lang9\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+==============================================\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Ukoly:\b0\par
+{\pntext\f3\'B7\tab}\strike Predelat zavislosti z IDaoDource \strike0\par
+{\pntext\f3\'B7\tab}\strike Zlikvidovat cestinu \strike0\par
+{\pntext\f3\'B7\tab}\strike Vymenit tridu PropertiesManager za interface\strike0\par
+{\pntext\f3\'B7\tab}\strike Udelat predka pro ViewModely ViewModelBase , aby nemusel kazdy implementovat INotify\strike0\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1 ===============================================\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Zaregistroval jsem ITransactionManager ve tride Bootstraper\par
+{\pntext\f3\'B7\tab}Pada na primarnim   klici v AddProperty  => duplicate key   ( Tabulka vlastnost nema automatickou inkrementaci  , udelal jsem insert  na zaklade id ziskaneho z databaze ).\par
+{\pntext\f3\'B7\tab}Nove rozhrani IPropertiesManager jsem dal do slozky ViewModels => trideni slozek ?\par
+{\pntext\f3\'B7\tab}Sql server mi v query vraci puvodni nazvy Vlastnosti\par
+
+\pard\sa200\sl276\slmult1 ==============================================\par
+\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+.\fs22\par
+}
+ 
