@@ -1,0 +1,316 @@
+{\rtf1\ansi\ansicpg1250\deff0\nouicompat\deflang1029{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}{\f2\fnil\fcharset238 Consolas;}{\f3\fnil\fcharset0 Consolas;}{\f4\fnil\fcharset238 Calibri;}{\f5\fnil\fcharset0 Segoe UI;}{\f6\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue255;\red0\green0\blue0;\red163\green21\blue21;\red0\green176\blue80;\red43\green145\blue175;\red165\green165\blue165;\red102\green102\blue102;\red0\green128\blue0;\red255\green255\blue255;\red128\green128\blue128;\red155\green0\blue211;}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\f0\fs24\lang9                                                                 \fs72 ADO-NET\fs24\par
+\cf0\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Vytvorime string v Main Window , bude to connectionString pro vsechny tridy   \par
+
+\pard\sa200\sl276\slmult1\fs20\tab  \cf2\f1 public\cf3  \cf2 const\cf3  \cf2 string\cf3  Conn = \cf4 "Data Source=PHA0003;Initial Catalog=Vesmir;Integrated Security=True"\cf3 ;\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\f2\fs24\lang1029 Budeme potrebovat jednu statickou instanci GalaxieViewModelu , kterou budeme predavat me\f3\lang1033 zi tridama.\f1\fs20\lang9\par
+{\pntext\f6\'B7\tab}\cf0\f0\fs24 Do Solution pozor ne do  projektu pridame\f4\lang1029  novy\f0\lang1033  projekt typu\cf1\lang9  ClassLibrary  \cf0 ( bude mit priponu .dll) a v hlavnim projektu nastavime reference.\par
+
+\pard\sa200\sl276\slmult1\tab\cf5 NazevProjektu\cf0 .\cf1 Core\cf0\par
+\tab\cf5 NazevProjektu\cf1 .Entities   \cf0 => tady bude abstraktni trida \cf5 EntityDaoBase\cf0   a pro kazdou entitu tady bude Dao trida  napr. GalaxieDao  (DataAccesObject)\par
+\tab V projektu musime pridat reference  Solution.\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Vytvorime tridy entit => Planeta , Galaxie , Vlastnost, VlastnostiPlanet. Musi byt public. Budou mit jen vlastnosti ( get; set;)\par
+{\pntext\f6\'B7\tab}Vytvorime abstraktni public tridu EntityDaoBase od ktere budou dedit dao tridy .\par
+{\pntext\f6\'B7\tab}Pro kazdou entitu vytvorime tridu dao   => PlanetaDao, GalaxieDao ..  ktere slouzi pro ukladani do db. Trida dao ve svem konstruktoru zavola kostruktor predka a preda connectionString. Obsahuje List vracejici metodu LoadGalaxies, co je metoda ktera pomoci metody predka " LoadEntity" vraci List<Galaxie>.   Obdobne pro vsechny entity.\par
+{\pntext\f6\'B7\tab}Pro kazdou entitu vytvorime tridu  dataContract  =>   PlanetDataContract, GalaxieDataContract ..  , vlastnosti  \{get; set;\} konstruktor, metodu na prevod z entity na datacontract a obracene, implementujeme INotify na vlastnosti a Galaxie navic budou mit List <PlanetDataContract> ListOfPlanets.\par
+{\pntext\f6\'B7\tab}Ve slozce View si vyrobime userControly pro jednotlive casti hlavniho okna  => PlanetView,   GalaxieView .. V nich bindujeme datagridu ItemsSource na vlastnosti viewModelu. (Kazdy control ma svuj)\par
+
+\pard\sa200\sl276\slmult1\tab V codeBehindu userControlu musime nastavit dataContext na statickou promennou z codeBehindu MainWindow ( ta ktera se predava po cele aplikaci).\par
+\tab V dataContextu pro planetView ale nemuzeme vytvorit novy PlanetViewModel.  Potrebujeme totiz vedet odkud se maji vzit ty planety ktere budou zobrazeny v gridu. A kde se vezmou ? Nacteme je \tab podle vlastnosti  SelectedGalaxy \tab na galaxyViewModelu. Proto musime dat tride \tab PlanetViewModel \b zavislost na galaxyViewModelu.\b0  \par
+\tab\tab\cf2\f1\fs19 if\cf3  (!System.ComponentModel.\cf6 DesignerProperties\cf3 .GetIsInDesignMode(\cf2 this\cf3 ))\par
+                DataContext = \cf2 new\cf3  \cf6 PlanetsViewModel\cf3 (\cf6 MainWindow\cf3 .GalaxyViewModel);\par
+\f3\lang1033\tab\f0\fs24 dataContext nastavujeme jen  kdyz nejsme v design modu.\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 V GalaxyViewModelu si nastavime vlastnost ObservableCollection<GalaxyDataContract>   do ktere nacteme galaxie z db a nabindujeme na ItemsSource dataGridu v UserControl GalaxieView. \cf0\lang9\par
+
+\pard\sa200\sl276\slmult1\cf3\lang1033\tab Trida DataContract neni nijak slozita ma public vlastnosti podle entity ze ktere ji vytvarime , implementuje INotify  a ma tovarni metodu ktera vyrabi instance z parametru typu Galaxie.\cf0\lang9\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\cf3\lang1033 Kdyz uz mame List mohli bychom ho naplnit z DB. To je mozne prez nejakou dao tridu ktera skrze metodu sveho predka vstoupi do databaze. Vytvorime proto privatni promennou  m_galaxyDao a skrze ni naplnime Observable Collection ListOfGalaxies   galaxiemi.  Observable je to proto , aby bylo mozne pomoci INotify informovat view o zmenach .  Jelikoz ale metoda LoadAllGalaxies na promenne m_galaxyDao vraci List musime ho do Observable nacpat \tab jako parametr at si to prekouse sama.\par
+{\pntext\f6\'B7\tab}Napiseme si zakladni tridu pro commandy  CommandBase . Vsechny commandy budou instance teto tridy. Bude implementovat rozhrani ICommand . Bude mit dva konstruktory. Prvni prijima jako parametr metodu ktera vraci bool, ta bude predhozena vygenerovanemu kodu jako canExecute a druhy parametr je Action , tj  metoda execute. Druhy konstruktor prijima jenom Action execute , zavola prvni konstruktor jemuz predhodi lambda vyraz ktery vraci true a metodu z parametru.  Navic ma metodu FireCanExecute ktera se stara o vyhazovani eventu. Je hodne podobna metode v INotify.\cf0\lang9\par
+{\pntext\f6\'B7\tab}Ve slozce View si vyrobime dialogove okna , okno ktere jde pouzit vickrat delame jen jednou  => PlanetDialogWindow , GalaxieDialogWindow ..\par
+{\pntext\f6\'B7\tab}V GalaxyViewModelu si udelame icommand , ktery bude ovladat tlacitko editaceGalaxie. Podminkou pro povoleni tlacitka bude SelectedGalaxy != null a  execute cast bude nova metoda DoEditGalaxy. V ni vyvolame dialogove okno GalaxyDialogWindow. Toto implementuje rozhrani IDialogWindow ktere si napiseme a bude mit jen metodu Close (). Ta se nemusi implementovat.\par
+{\pntext\f6\'B7\tab}Ve viewModelu dialogovych oken budou commandy pro tlacitka ok a storno . Jejich execute cast bude volat metody Save a metodu Storno(). Vytvorime  ViewModel dialogoveho okna, musi dostat v konstruktoru  svoje View v podobe  IDialogWindow.  V metodach save a storno po zmacknuti tlacitka jen zavola         gdw \cf7 (IDialog).\cf0 Close();   \par
+{\pntext\f6\'B7\tab}V metode DoEditGalaxy  v GalaxyViewModelu  si udelame promennou typu IDialog  gdw = new GalaxyDialogWindow();   Vytvorime viewModel ktery toto okno bude ovladat => GalaxyDialogViewModel viewModel = new GalaxyDialogViewModel ( SelectedGalaxy , gdw) a predame mu jeho vlastni view . View ma commandy sava a storno , ty zavolaji  metodu save/ storno a pomoci promenne gdw se samy zavrou.\par
+{\pntext\f6\'B7\tab}Ve slozce ViewModel  budeme potrebovat  pro kazde View - ViewModel.\par
+{\pntext\f6\'B7\tab}Mezi ViewModely si hodime  rozhrani IDialogWindow  ktere slouzi na zavirani dialogovych oken.  (jen jedna metoda close ktera se ani nemusi implementovat).\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs32 EntityDaoBase\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\b\tab  \b0 Je abstraktni genericka trida a jeji konstruktor, promenne a metody jsou protected. Je vytvorena proto , abychom nemuseli psat dokola stejny kod.  V konstruktoru vyzaduje connectionString , takze \tab vsechny tridy ktere od ni  dedi musi taky chtit do konstruktoru connectionString \par
+\tab\tab\cf3\f1\fs19  \cf2 public\cf3  GalaxyDao(\cf2 string\cf3  connectionString) : \cf2 base\cf3 (connectionString)\f3\lang1033   \cf0\f0\fs24\lang9\par
+\cf3\f3\fs19\lang1033\tab\cf0\f0\fs24\lang9 Jedina metoda vraci seznam entit . Druh entity zavisi na tom ve ktere zdedene tride je metoda volana. Priklad: Volame v GalaxieDao , dostaneme seznam vsech galaxii z databaze dbo.Galaxie\cf3\f1\fs19  \f3\lang1033 .\f1\lang9  \par
+\f3\lang1033\tab\tab\cf2\f1 protected\cf3  \cf6 List\cf3 <\cf6 TEntity\cf3 > LoadEntity(\cf2 string\cf3  query, \cf6 Func\cf3 <\cf6 SqlDataReader\cf3 , \cf6 TEntity\cf3 > factoryMethod\f3 , \cf6\f1 SqlParameter\cf3 [] parameters = \cf2 null\cf3 )\f3   \cf7 (nepovinny parametr)\cf3\f1\par
+\f3\tab\f0\fs24 Pozaduje jako parametr sql dotaz kterym se vybira co chceme vytahnout z databaze  , a ve druhe casti chce celou metodu definovanou ve zdedenych tridach (delegat), jinymi slovy chce nacteny objekt \tab SqlDataReader, ktery uz obsahuje instanci \tab entity.\par
+\tab\b Co LoadEntity dela \b0 :\par
+\tab Vytvori si List na ukladani entit\par
+\tab\tab\cf6\f1\fs19 List\cf3 <\cf6 TEntity\cf3 > result = \cf2 new\cf3  \cf6 List\cf3 <\cf6 TEntity\cf3 >();\f0\fs24\par
+\tab  Pomoci usingu otevre spojeni s db \par
+\tab\tab\cf2\f1\fs19 using\cf3  (\cf6 SqlConnection\cf3  conn = \cf2 new\cf3  \cf6 SqlConnection\cf3 (ConnectionString))\f3       \f1 conn.Open();\par
+\f3\tab\f0\fs24 Otevre spojeni , spusti transaction. \par
+\tab Vytvori SqlCommand kteremu preda dotaz a connString\par
+\tab\tab\cf2\f1\fs19 using\cf3  (\cf6 SqlCommand\cf3  command = \cf2 new\cf3  \cf6 SqlCommand\cf3 (query, conn))\f0\fs24\par
+\tab Prida sql parametry do commandu.\tab\par
+\tab Vytvori SqlDataReader pomoci metody na tride command\par
+\cf2\f3\fs19\tab\tab\f1 using\cf3  (\cf6 SqlDataReader\cf3  reader = command.ExecuteReader())\f0\fs24\par
+\tab  A jeho pomoci while  nacita pomoci metody factoryMethod (\cf8 coz je vlastne metoda podle DaoTridy ze ktere je tato metoda volana => dostali jsme ji jako parametr (delegat) , je to anonymni metoda \tab ,ktera je ve zdedene tride definovana pomoci  lambda vyrazu\cf3 ) , jednotlive instance entit , dokud neprecte vsechny polozky z db.\par
+\tab Vysledky uklada do resultu\par
+\tab\tab\cf2\f1\fs19 var\cf3  vlp = factoryMethod.Invoke(reader);\f3   \f1 result.Add(vlp);\f3   \f1  \cf2 return\cf3  result;\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\f0\fs32 GalaxieDao\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\tab Je jednou ze trid ktere potrebujeme pro kazdou entitu z databaze. Dedi z EntityDaoBase , ve svem konstruktoru pozaduje connectionString , zavola konstruktor predka a preda connString.\par
+\tab\tab\cf2\f1\fs19 public\cf3  GalaxyDao(\cf2 string\cf3  connectionString)  : \cf2 base\cf3 (connectionString) \f0\fs24\par
+\tab Ma metodu LoadAllGalaxies .\par
+\tab\b Co LoadGalaxies dela \b0 :\par
+\tab\tab vytvori dotaz ve kterem definuje co chce z databaze vytahnout\par
+\tab\tab\cf2\f1\fs19 string\cf3  query = \cf4 "Select Id, Jmeno, PolohaX, PolohaY, PolohaZ from dbo.Galaxie"\cf3 ;\f0\fs24\par
+\tab\tab no a v returnu rovnou zavola metodu z rodicovske tridy LoadEntities , ktere preda query a anonymni metodu definovanou pomoci lambda vyrazu , jejimz ukolem je pomoci SqlDataReadru nacist \tab\tab instanci   Galaxie.\par
+\tab\tab\cf2\f1\fs19 return\cf3  LoadEntity(query, (\cf6 SqlDataReader\cf3  reader) => \cf2 new\cf3  \cf6 Galaxie\cf3 ()\f3  \{\f1 Id = reader.GetInt32(0),\f3   \f1 Jmeno = reader.GetString(1)\f3\});\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\f0\fs28  \fs32 Vytvoreni MVVM\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\tab Vytvorime jsi slozky ViewModels a Views. Kazde View ma svuj ViewModel\par
+\tab Do slozky \b View \b0 vlozime UserControl . To je komponenta ktera se da potom vkladat do Xaml jako jakoukoli jinou komponentu . V mainWindow je potreba uvest nameSpace napr\par
+\tab\tab\cf1\f1\fs19 xmlns\cf2 :\cf1 views\cf2 ="clr-namespace:WpfUniverse.Views"\cf3\f0\fs24\par
+\tab Zajimavejsi je trida \b GalaxyViewModel\b0   , implementuje rozhrani INotifyPropertyChanged. \par
+\tab Ma privatni promennou podle entity pro kterou tvorime viewModel pro pristup do databaze\par
+\tab\tab\cf2\f1\fs19 private\cf3  \cf6 GalaxyDao\cf3  m_galaxyDao;\f0\fs24\par
+\tab Instanci m_galaxyDao vytvorime  v konstruktoru pricemz ji predame pomoci celeho nazvu connectionString\par
+\tab\tab\f1\fs19 m_galaxyDao = \cf2 new\cf3  \cf6 GalaxyDao\cf3 (\cf6 MainWindow\cf3 .Conn);\f0\fs24\par
+\tab Na promenne m_galaxyDao zavolame LoadAllGalaxies() ktera dal vola LoadEntity atd.\par
+\f3\fs19\tab\tab\f1 ListOfGalaxies = m_galaxyDao.LoadAllGalaxies();\f0\fs24\par
+\tab A na vlastnosti uz rovnou bindujeme. \par
+\par
+\tab\b Jak vytvorit event kdyz se zmeni vlastnost \cf7  (informujeme planetViewModel, ze byla zmenena vlastnost SelectedGalaxy na galaxyViewModelu)\b0\f4\lang1029\par
+\cf3\f0\lang1033\tab\tab Napiseme si event ktery se vyvola kdyz budeme potrebovat . \par
+\tab\tab\tab          \cf2\f1\fs19 public\cf3  \cf2 event\cf3  \cf6 EventHandler\cf3 <\cf6 Galaxie\cf3 > OnGalaxyChanged;\par
+\par
+\f0\fs24\tab\tab Mnejme vlastnost  \cf2\f4\lang1029 public\cf3  \cf6 Galaxie\cf3  SelectedGalaxy\f0\lang1033\par
+\tab\tab Ma normalne \f4\lang1029  \cf2 get\cf3  \{ \cf2 return\cf3  m_selectedGalaxy; \}\f0\lang1033\par
+\tab\tab A ma s\cf2\f4\lang1029 et\f0\lang1033  \{  \cf0 ve kterem zavolame metodu   \i FireGalaxyChanged(m_selectedGalaxy)  \i0 , takze vyvolame event pokazde kdyz se zmeni vlastnost SelectedGalaxy.\cf3\par
+\par
+\tab\tab Metoda \cf0\b FireGalaxyChanged( Galaxie galaxy) \b0 je hodne podobna medode OnPropertyChanged u INotify  , dela to , ze vyvola event  . Jeji telo je :\cf3\par
+\tab\tab\tab\f1\fs19 OnGalaxyChanged?.Invoke(\cf2 this\cf3 , galaxy); \f3    \cf7\f0\fs24 OnGalaxyChanged je nazev toho eventu\f3\fs19 .\cf3\f0\fs24\par
+\par
+\tab\b Jak se trida PlanetsViewModel dozvi o zmene na vlastnosti SelectedGalaxy ?\par
+\tab\tab\b0 Tride PlanetsViewModel musime vytvorit zavislost na tride GalaxyViewMode a to v kostruktoru.\par
+\tab\tab\tab\cf2\f1\fs19 public\cf3  PlanetsViewModel(\cf6 GalaxyViewModel\cf3  galaxyViewModel)\f0\fs24\par
+\tab\tab V konstruktoru pridame         \f1\fs19 galaxyViewModel.OnGalaxyChanged += OnGalaxyChange\f3 d;   \f0\fs24 Druha cast je private metoda planetViewModelu. \par
+\tab\tab Tim zaregistrujeme metodu planetviewModelu OnGalaxyChanged jako posluchace eventu \f1\fs19 galaxyViewModel.OnGalaxyChanged \f3 . \par
+\tab\tab\f0\fs24 SelectedGalaxy zname podle instance galaxyViewModelu kt. jsme dostali v konstruktoru a tedy i  Id.\par
+\tab\tab Zavolame na dao tride metodu LoadPlanetsBasedOnId .\par
+\tab\tab Ulozime do Observable a nabindujeme.\par
+\tab\tab A samozrejme implementujeme INotify\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs32  ICommands\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\b\fs32\tab\tab\b0\fs24 Vytvorime slozku Commands a v ni tridu CommandBase. Trida implementuje rozhrani ICommand , vsechny commandy ktere budeme pouzivat jsou instance tridy CommandBase. \par
+\tab\tab Vytvorime vlastnost CommandBase     public CommandBase   NejakyCommand \{get; private set;\}\par
+\tab\tab V konstruktoru vytvorime instanci        NejakyCommand = new  CommandBase( dve moznosti konstruktoru bud (canExecute  , Action Execute)  , nebo ( jen Action Execute)\par
+\tab\tab kde Execute je metoda napsana v teto tride tj . ve tride kde je NejakyCommand deklarovany. \par
+\tab\tab V XAML nabindujeme tlacitkam Command = \{Binding NejakyCommand \}.\par
+\tab\tab Pokud je provedeni akce zavisle na zmenach napr v jinem viewModelu , vytvorime metodu :\par
+\tab\tab\tab\cf2\f1\fs19 private\cf3  \cf2 void\cf3  OnGalaxyChanged(\cf2 object\cf3  sender, \cf6 Galaxie\cf3  galaxy)\f0\fs24\par
+\tab\tab Tuto metodu zaregistrujeme jako posluchace \cf1 eventu\cf3 :  \f1\fs19  \cf2 public\cf3  \cf2 event\cf3  \cf6 EventHandler\cf3 <\cf6 Galaxie\cf3 > OnGalaxyChanged;\f3   \f0\fs24    ve tride galaxyViewModel, ktera vystreluje event pomoci metody: \f1\fs19 FireGalaxyChanged(\cf6 Galaxie\cf3  galaxy)\f0\fs24\par
+\tab\tab\tab\f1\fs19 galaxyViewModel.OnGalaxyChanged += OnGalaxyChanged;\f0\fs24\par
+\tab\tab V nasi tride v metode \f1\fs19 OnGalaxyChanged\f3  \f0\fs24 musime zavolat metodu ze tridy CommandBase , ktera urcuje za jakych okolnosti je command proveditelny \par
+\tab\tab\tab\f1\fs19 AddPlanet.FireCanExecute();\f3  \f0\fs24\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs36 Dialogy\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\tab Nasekame dialogove okna , ty ktere se daji pouzit vickrat delame jen jednou .  Kazde view ma svuj VM. \par
+\tab Muzeme vytvorit VM pro dialog uz ve tride ze ktere je dialogove okno vyvolano a predat VM oknu rovnou . Je to VM ktery toto okno ovlada. Tim si zajistime to , ze po navratu z dialogu budeme mit porad promennou VM, na ktere jsou vsechny \tab vlastnosti se kterymi muzeme dal pracovat.  Na to ale musi mit trida PlanetaDialogWindow  v konstruktoru zavislost na viewModel:\par
+\tab\tab\f1\fs19  \cf2 public\cf3  PlanetaDialogWindow(\cf6 PlanetsDialogViewModel\cf3  viewModel)\par
+\f3\tab Volani z PlanetsVM:\f0\fs24\par
+\tab\tab\cf6\f1\fs19 PlanetsDialogViewModel\cf3  viewModel = \cf2 new\cf3  \cf6 PlanetsDialogViewModel\cf3 (m_selectedGalaxy.Id, m_planetDao);\par
+           \f3   \f1  \cf6 PlanetaDialogWindow\cf3  pdw = \cf2 new\cf3  \cf6 PlanetaDialogWindow\cf3 (viewModel);\par
+\f3\tab\tab\cf9\f1 pdw.Show();\cf3\f0\fs24\par
+\par
+\tab Dialogove okno jen plni textBoxy , nedele Save . Preda volajici tride skrze viewModel ktery mu byl predan informaci o tom , jake tlacitko bylo stlaceno   OK/Storno. \par
+\tab Zavirani provedeme tak ze vytvorime IDialogWindow.\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs36 IDialogWindow\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\tab Dialogove okna jako napr.  GalaxyDialogWindow  implementuji rozhrani IDialogWindow (slozka viewModels).\par
+\tab Toto rozhrani ma jedinou metodu Close(), ktera se navic nemusi implementovat protoze uz ji ma v sobe. \par
+\tab\cf1 Zmena\par
+\cf0\tab Puvodne jsme dialogovemu oknu dali viewModel ktery ho ovlada .\par
+\tab Ted jsme to prekopali prave kvuli zavirani tak ze vytvorime dialogove okno bezparametrickym konstruktorem, a potom vytvorime VM kteremu dame do vinku to co potrebuje pro praci a samotne \f4\lang1029\tab\f0\lang1033 dialogove okno. \par
+\tab To, ze  VM pozaduje v konstruktoru Interface nam nijak nevadi, protoze\cf8\i  tim ze dialogove okno implementuje rozhrani\cf0\i0 ,  ho vlastne dostane. (Polymorfizmus).\par
+\tab Takze vlastne puvodni cesta jako na zacatku. \par
+\tab\tab\cf6\f1\fs19 PlanetaDialogWindow\cf3  pdw = \cf2 new\cf3  \cf6 PlanetaDialogWindow\cf3 ();\par
+         \f3   \f1    \cf6 PlanetsDialogViewModel\cf3  viewModel = \cf2 new\cf3  \cf6 PlanetsDialogViewModel\cf3 (m_selectedGalaxy.Id, m_planetDao, pdw);\cf0\f0\fs24\par
+\tab Musime nastavit datacontext:\par
+\cf3\tab\tab\f1\fs19  pdw.DataContext = viewModel;\f3  \f0\fs24\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs36  Delegati\b0\fs24\par
+
+\pard\sa200\sl276\slmult1\b\fs36\tab\fs28 Func< bool > \b0  \fs24 je delegat ktery nepozaduje zadny parametr    a  vraci boolean. \par
+\tab\b\fs28 Func< someMethod , bool > \b0   delegat ktery jako vstup pozaduje metodu a vraci bool. \par
+\fs24\tab\b\fs28 Action \b0 delegat encapsulated a method , ktera nic nepozaduje ani nic nevraci. \fs24\par
+\par
+\cf1\b\f4\fs28\lang1029 .\f0\lang1033 Co udelat v pondeli \f4\lang1029  \f0\lang1033 :\cf0\b0\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\cf5 Dodelat metodu ve tride PlanetDataContract   Convert.toDbEntity\par
+{\pntext\f6\'B7\tab}PlanetDialogViewModel chce datacontract takze pomoci nove metody predelat ve tride PlanetViewModel  m_selectedPlanet , SelectedPlanet .\par
+{\pntext\f6\'B7\tab}\cf0 Tride PlanetDialogViewModel odebrat z konstruktoru  dao tridu => uz ji nepotrebuje, protoze ukladani probiha mimo dialog.  Ve tride PlanetViewModel odebrat z volajicich metod.\par
+{\pntext\f6\'B7\tab}Zpusobit zavirani okna GalaxyDialogWindow  to implementuje rozhrani , vytvorime commandy pro tlacitka a vlastnosti ktere se budou menit podle stlaceneho tlacitka.  Trida PlanetViewModel vi co bylo stlaceno  . Taky uz nepotrebujeme vlastnosti   OnSavePressed a OnStorno. Z code behindu GalaxyDialogView odebrat if a nepotrebuje ani galaxii jako parametr.\par
+{\pntext\f6\'B7\tab}\f4\lang1029 Zavirani by\f0\lang1033  melo fungovat tak, ze se vytvori kopie objektu ktery menime , meni se jen kopie a pokud bude stlaceno save , original se vymeni za zmenenou kopii.\par
+{\pntext\f6\'B7\tab}Dialogove okno upravy galaxii upravu neprovede v databazi ,  chteli jsme taky  prekopat kod tridy  EntityDaoBase. To by bylo prilis slozite tak je nechame jak jsou.\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+Problem:\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 storno button v editaci galaxii provede zmenu v tabulce     (v databazi se hodnota nemeni) .                updateSouceTrigger  blbost.\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Ve tride GalaxyDao jsem  doplnil metodu SaveGalaxy  ale blbe protoze mi prepsalo celou tabulku. => zapomel jsem WHERE\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 napsal jsem metodu v galaxyDataContractu na prevod z datacontractu na galaxie.\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Editace galaxii uz se ulozi do databaze\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Refresh tabulky planet po pridani planety funguje  , jenomze jsem na to tahal zas cele planety z databaze . Princip je natahnout entity jen na zacatku , upravovat je v operacni pameti a do db vstupovat jen kdyz musim. (Vsechny planety ziskam z Listu <Planet> ve tride GalaxyDataContract a do db pridam jen jednu).\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Editace planety funguje   u storna porad prepisuje hodnotu ve view (ne v databazi). (upravovat kopii)\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 V EntityDaoBase neni metoda pro vymazavani z databaze , a ani v dao tride. (uz je)\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 PropertiesViewModel musi mit zavislost na PlanetViewModelu aby vedel  jaka je  SelectedPlanet. (spravne)\cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Musi se vyhazovat event kdyz se zmeni SelectedPlanet pomoci metody FireOnSelectedPlanetChanged.  \cf3\fs24\par
+{\pntext\f6\'B7\tab}\cf0\fs28 Tridu PropertiesViewModel jsem zaregistroval jako posluchace eventu.\cf3\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Jelikoz potrebuju pro PropertiesViewModel zavislost na PlanetsViewModelu  musim vytvorit i PlanetsViewModel jako statickou cast MainWindow code behindu.\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Ted musim zmenit datacontext planetView  na : \f1\fs19 DataContext = \cf6 MainWindow\cf3 .PlanetViewModel;\f0\fs24\par
+{\pntext\f6\'B7\tab}\fs28 A PropertiesView datacontext  bude  \f1\fs19 DataContext = \cf2 new\cf3  \cf6 PropertiesViewModel\cf3 (\cf6 MainWindow\cf3 .PlanetViewModel);\f3     \f0\fs28 Pridanim userControlu do mainWindow se vytvori instance ViewModelu ktery bude view ovladat.\fs24\par
+
+\pard\sa200\sl276\slmult1\fs28 Ve tride PropertiesViewModel zname vybranou planetu , je typu datacontract teda ma i List< Vlastnosti> ListOfVlastnosti . Zname teda na kazde planete nazvy vlastnosti ktere ma. Zobrazovat chceme ve tride PropertiesView ktere ovlada PropertiesViewModel. Tady musime zjistit aktualni nazvy vlastnosti ktere existuji . \cf0 To se da provest na m_vlastnostDao , ktera ale zase pristupuje do db v konstruktoru PropertiesViewModelu.  Melo by se zajistit aby se pri zmene Vlastnosti  zmenila i promenna ve ktere jsou ulozene takze ven z konstruktoru a vytvorit tridu ktera bude seznam vlastnosti uchovavat a menit . Mozna ve tride VlastnostDataContract udelat ListOfAllPossibleProperties. \par
+Na tride VlastnostDataContract si udelame vlastnost bool IsChecked ktera bude uchovavat stav vlastnosti jestli je nebo neni zaskrtnuta. V PropertiesViewModel mame List < VlastnostDataContract >.  Pomoci metody ktera porovna nazvy polozek tohoto listu s nazvy vlastnosti na promenne m_selectedPlanet,  zmenime v tomto listu hodnoty IsChecked  a nabindujeme na checkbox . \par
+\cf3\par
+\par
+\par
+\cf1 Nevim jak vybrat vic galaxii  .  V XAML je jen SelectedItem a ten ma jen jednu polozku. \cf3\par
+=========================================================================================================================\par
+Z databaze by se meli data nacitat jen jednou na zacatku . Kdyz uz jsou v pameti pracujeme s kolekcema v pameti a nenacitame pri kazde prilezitosti data znovu.\par
+Priklad : neni treba nacitat planety ktere si muzeme ulozit do datacontractu galaxii.  \par
+\f1\fs19  \cf2 if\cf3  (galaxy.Planets == \cf2 null\cf3 )\f3  \f1\{\f3   \f1 galaxy.Planets = m_planetDao.LoadPlanetsBasedOnId(m_selectedGalaxy.Id).Select(x => \cf6 PlanetDataContract\cf3 .Create(x)).ToList();\f3   \f1\}\par
+\f3  \f1 ListOfPlanetsFromSelectedGalaxies = \cf2 new\cf3  \cf6 ObservableCollection\cf3 <\cf6 PlanetDataContract\cf3 >(galaxy.Planets);\par
+\f0\fs28 Toto by se melo udelat pri nacitani z databaze takze v konstruktoru datacontractu.\par
+==================================================================================================================\par
+\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Pridal jsem ke tride Planeta        List< Vlastnosti > VlastnostiPlanet;\par
+{\pntext\f6\'B7\tab}To same pro tridu PlanetaDataContract\par
+{\pntext\f6\'B7\tab}Z databaze se nenacitaji vsechny planety jen ty z vybrane galaxie. Takze podle id .\par
+{\pntext\f6\'B7\tab}Ve tride PlanetaDao se musi udelat dotaz s pomoci join dostat z databaze planetu i se seznamem Vlastnosti.  Metoda \f1\fs19  LoadPlanetsBasedOnId(\cf2 int\cf3  id)\f0\fs28\par
+{\pntext\f6\'B7\tab}\fs24 osetrit pripad ze planeta nema vlastnosti.\fs28\par
+
+\pard\sa200\sl276\slmult1\par
+\cf2\highlight10\strike\f1\fs19 Select\cf3   Id\cf11 ,\cf3  Jmeno\cf11 ,\cf3  Velikost\cf11 ,\cf3  GalaxieId\cf11 ,\cf3  Identifikator \par
+\cf2 from\cf3  dbo\cf11 .\cf3 Planeta \par
+\cf2 where\cf3  GalaxieId \cf11 =\cf3  3\highlight0\strike0\f0\fs28\par
+
+\pard\li360\sa200\sl276\slmult1\fs24\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\cf12\fs28 Chtelo to : Udelat na VlastnostiDataContractu vlastnost <bool> IsChecked a na tu nabindovat xaml.\cf3\fs24\par
+
+\pard\sa200\sl276\slmult1\par
+======================================================================================================================================================================\par
+\b\fs32\ltrmark 8.\ltrmark 8.\ltrmark 2017\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0\fs28 Zaskrtnuti checkboxu se projevi na kolekci ListOfVlastnosts ve tride PropertiesViewModel. Po zmene vybrane planety vyvolany event zavola metodu CheckForCheckedProperties a prepise IsChecked na VlastnostDataContractech vlozenych v listu. Chtelo by to pri zmene ulozit novy seznam vlastnosti do db. Jak zjistit zmenu? Event.  Trida VlastnostDataContract musi poslat event kdyz se zmeni IsChecked vlastnost.\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Trida VlastnostDataContract posila eventu, ale PropertiesViewModel mi ji nejak nechce chytit. Je to v tom, ze se zmenila instance private m_vlastnostDataContract  ale ne ta v Listu. Kdyz udelam event  a Fire metodu \cf5 staticke\cf3 , tak se eventy vyvolavaji uz pri nacitani  dataContractu do listu , protoze metoda Fire se vola ve vlastnosti IsChecked.set.     Dalo by se to osetrit kontrolou jestli se kolekce zmenila pred zapisem do databaze.\fs24\par
+
+\pard\sa200\sl276\slmult1\fs28             Udelal jsem bool m_nacteno  ktery bude true az po zmene SelectedPlanet a po  kontrole CheckForCheckedProperties.\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Po zmene zaskrtnuti checkboxu zjistime ktere vlastnosti jsou zaskrtnuty, pridame je do  PlanetaDataContract.Properties a updatneme  v db podle id.\fs24\par
+
+\pard\sa200\sl276\slmult1\fs28\tab Update planet probiha pomoci PlanetDao tridy , update VlastnostiPlanet pomoci VlastnostiPlanetDao, v metode se musi udelat novy query protoze se zmenil seznam vlastnosti ktere ma. \fs24\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Ve tride VlastnostiPlanetDao musime udelat insert.\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Problem z nekonecnym cyklem kontrola datacontractu mi znovu poslala event..   ->  musi se odregistrovat event a po zapisu zase zaregistrovat\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Co duplicitni zaznamy kdyz uz nejaka VlastnostiPlanets existuje \fs24\par
+{\pntext\f6\'B7\tab}\fs28 Vyhazuje nullRefferenceException , pritom objekt planeta mi existuje , mozna je to tim ze nema vlastnosti \fs24\tab\tab\par
+
+\pard\sa200\sl276\slmult1 ==========================================\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 IsChecked vyhodi event OnPropertySelecteChanged  prez FireSelectionChanged , posluchac se zaregistruje v  PropertiesViewModel.OnPlanetChanged. Teda nejdriv se odregistruje aby bylo mozne provest nacteni  metodou CheckForCheckedProperties .  Registrace probiha jen tady ne v konstruktoru.\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Ktery VlastnostDataContract je poslanej prez event? \fs24\par
+{\pntext\f6\'B7\tab}\fs28 Prekliknuti  galaxie  =>         NullReferenceException\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Prekliknuti  vlastnosti => \f5\fs18 Cannot insert duplicate key in object 'dbo.VlastnostiPlanet'\f0\fs24\par
+{\pntext\f6\'B7\tab}\fs28 Pridani vlastnosti funguje  v db jen  potrebuje view refresh  => znovu zkontrolovat vlastnosti planety  CheckForCheckedProperties do posluchace eventu (\f1\fs19 PropertyOnPlanetSelectionChanged\f0\fs28 )\fs24\par
+
+\pard\sa200\sl276\slmult1\fs28\tab vyvola preteceni zasobniku.\par
+\par
+
+\pard\b\f5\fs18 System.Data.SqlClient.SqlException:\b0  'Violation of PRIMARY KEY constraint 'PK_VlastnostiPlanet'. Cannot insert duplicate key in object 'dbo.VlastnostiPlanet'. The duplicate key value is (123, 2).\par
+The statement has been terminated.'\par
+
+\pard\sa200\sl276\slmult1\f0\fs28\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 potrebuju predhodit bindingu prazdny list \par
+{\pntext\f6\'B7\tab}snazim se vyhnout tahani z databaze\par
+
+\pard\sa200\sl276\slmult1\f5\fs18 constraint 'PK_VlastnostiPlanet'. Cannot insert duplicate key in object 'dbo.VlastnostiPlanet'. The duplicate key value is (123, 1).\par
+\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\f0\fs28 metody na inser a update by meli byt na vlastnostiPlanetDao\par
+{\pntext\f6\'B7\tab}Problem byl v referenci  . Cashovani nas odstinilo od neustaleho tahani veci z databaze , na druhou stranu je potreba myslet na to , ze kdyz neco zmenime v databazi , musime to zmenit i v objektu ktery na polozky natazene z db ukazuje. Blbe napsano ono to neukazuje  . Problem s nerefreshnutim checkboxu po zmene vlastnosti a vymene planety pryc a zpatky.\par
+
+\pard\sa200\sl276\slmult1\par
+\cf1  PRIDAT PLANETU MA ID 0  A PO KLIKNUTI NA PRIDANOU NULL REFFERENCE.\cf3\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\fs24\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
