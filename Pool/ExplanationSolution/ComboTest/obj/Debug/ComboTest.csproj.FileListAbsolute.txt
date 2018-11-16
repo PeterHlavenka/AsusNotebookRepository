@@ -1,0 +1,15 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\bin\Debug\ComboTest.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\bin\Debug\ComboTest.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\bin\Debug\ComboTest.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\App.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest_MarkupCompile.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest_MarkupCompile.lref
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.g.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.Properties.Resources.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.csproj.GenerateResource.Cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.pdb

@@ -1,0 +1,7 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\bin\Debug\Delegate.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\bin\Debug\Delegate.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\bin\Debug\Delegate.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\obj\Debug\Delegate.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\obj\Debug\Delegate.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate\obj\Debug\Delegate.pdb

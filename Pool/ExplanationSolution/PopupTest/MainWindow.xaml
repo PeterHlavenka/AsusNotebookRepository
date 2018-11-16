@@ -1,0 +1,74 @@
+﻿<Window
+    x:Class="PopupTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PopupTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    Title="MainWindow"
+    Width="525"
+    Height="500"
+    mc:Ignorable="d">
+    <Grid>
+        <Button
+            Name="MyButton"
+            Width="100"
+            Height="50">
+            Tlacitko
+        </Button>
+        <Button Background="Red"  Width="100"
+                Height="50" 
+                Margin="208,264,209,155"></Button>
+        <StackPanel>
+            <CheckBox
+                Name="PCheckBox"
+                Margin="10,10,0,0"
+                Content="Popup Window" />
+
+            <Button
+                Width="129"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    Storyboard.TargetName="theTransform"
+                                    Storyboard.TargetProperty="(RotateTransform.Angle)"
+                                    From="0"
+                                    To="360"
+                                    Duration="0:0:5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                Start Animation
+            </Button>
+            <Popup
+                AllowsTransparency="True"
+                HorizontalOffset="0"
+                IsOpen="{Binding ElementName=PCheckBox, Path=IsChecked}"
+                Placement="Bottom"
+                PlacementTarget="{Binding ElementName=MyButton}"
+                PopupAnimation="Slide"
+                VerticalOffset="0">
+                <Canvas
+                    Width="120"
+                    Height="100"
+                    Margin="150"
+                    Background="Green">
+                    <Canvas.RenderTransform>
+                        <RotateTransform x:Name="theTransform" />
+                    </Canvas.RenderTransform>
+                    <TextBlock Foreground="LightGray" TextWrapping="Wrap">
+                        Rotating Popup
+                    </TextBlock>
+                </Canvas>
+            </Popup>
+           
+        </StackPanel>
+    </Grid>
+</Window>

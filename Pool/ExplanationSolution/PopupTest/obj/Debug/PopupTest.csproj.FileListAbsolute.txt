@@ -1,0 +1,15 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\bin\Debug\PopupTest.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\bin\Debug\PopupTest.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\bin\Debug\PopupTest.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\App.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest_MarkupCompile.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest_MarkupCompile.lref
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.g.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.Properties.Resources.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.csproj.GenerateResource.Cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.pdb

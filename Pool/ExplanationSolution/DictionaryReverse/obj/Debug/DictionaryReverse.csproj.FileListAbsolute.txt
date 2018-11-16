@@ -1,0 +1,14 @@
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\bin\Debug\DictionaryReverse.exe.config
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\bin\Debug\DictionaryReverse.exe
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\bin\Debug\DictionaryReverse.pdb
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\App.g.cs
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse_MarkupCompile.cache
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse_MarkupCompile.lref
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.g.resources
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.Properties.Resources.resources
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.GenerateResource.Cache
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.exe
+C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.pdb

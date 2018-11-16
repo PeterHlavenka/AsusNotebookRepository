@@ -1,0 +1,15 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\AsyncAwait.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\App.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\AsyncAwait.csproj.GenerateResource.Cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\AsyncAwait.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.pdb

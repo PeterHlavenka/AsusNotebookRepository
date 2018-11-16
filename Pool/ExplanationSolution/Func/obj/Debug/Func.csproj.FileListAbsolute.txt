@@ -1,0 +1,7 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\bin\Debug\Func.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\bin\Debug\Func.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\bin\Debug\Func.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe.config
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.pdb
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\App.g.cs
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani_MarkupCompile.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani_MarkupCompile.lref
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.g.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.Properties.Resources.resources
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.GenerateResource.Cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
+C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
