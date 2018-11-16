@@ -45,7 +45,7 @@
             </Grid>
             <ControlTemplate.Triggers>
                 <Trigger Property="IsMouseOver" Value="true">
-                    <Setter TargetName="Rectangle" Property="Fill" Value="GreenYellow" />
+                    <Setter TargetName="Rectangle" Property="Fill" Value="Transparent" />
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
                     <Setter Property="RenderTransform">
@@ -108,6 +108,9 @@
                 HorizontalAlignment="Center"
                 Template="{StaticResource ButtonTemmplate}">
             <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource StoryboardResource}" />
+                </EventTrigger>
                 <EventTrigger RoutedEvent="Button.Click">
                     <BeginStoryboard Storyboard="{StaticResource StoryboardResource}" />
                 </EventTrigger>
