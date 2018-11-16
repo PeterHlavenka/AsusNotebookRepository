@@ -23,11 +23,46 @@
             <Setter Property="CaretBrush" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
         </Style>
+        <!--RepeatBehavior="Forever"-->
+        <Storyboard x:Key="StoryboardResource">
+            <DoubleAnimation
+                AutoReverse="False"                
+                Storyboard.TargetName="TheTransform"
+                Storyboard.TargetProperty="(RotateTransform.Angle)"
+                From="0"
+                To="200"
+                Duration="0:0:1" />
+        </Storyboard>
+        <ControlTemplate x:Key="ButtonTemmplate" TargetType="Button">
+            <Grid>
+                <Rectangle
+                    Name="Rectangle"
+                    Stroke="Transparent"
+                    StrokeThickness="1" />
+                <Viewbox>
+                    <ContentPresenter Margin="{TemplateBinding Padding}" />
+                </Viewbox>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="Rectangle" Property="Fill" Value="GreenYellow" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX=".9" ScaleY=".9" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="RenderTransformOrigin" Value=".5,.5" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel
             HorizontalAlignment="Center"
@@ -43,12 +78,13 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
+            
             <!--<MediaElement
                 x:Name="LoadingGif"                
                 Width="200"
                 Height="200"
                 HorizontalAlignment="Center"
-                Source="C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\Matika 2.0\Matika 2.0\GifFolder\LoadingGifDrawing.gif">
+                Source="C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\Matika 2.0\Matika 2.0\Resources\LoadingGifDrawing.gif">
                 <MediaElement.Triggers>
                     <EventTrigger RoutedEvent="MediaElement.Loaded">
                         <EventTrigger.Actions>
@@ -56,7 +92,7 @@
                                 <Storyboard>
                                     <MediaTimeline
                                         RepeatBehavior="Forever"
-                                        Source="C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\Matika 2.0\Matika 2.0\GifFolder\LoadingGifDrawing.gif"
+                                        Source="C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\Matika 2.0\Matika 2.0\Resources\LoadingGifDrawing.gif"  umisteni se zmenilo
                                         Storyboard.TargetName="LoadingGif" />
 
                                 </Storyboard>
@@ -66,5 +102,23 @@
                 </MediaElement.Triggers>
             </MediaElement>-->
         </StackPanel>
+        <Button Grid.Row="1"                
+                Height="40"
+                Margin="20"
+                HorizontalAlignment="Center"
+                Template="{StaticResource ButtonTemmplate}">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard Storyboard="{StaticResource StoryboardResource}" />
+                </EventTrigger>
+            </Button.Triggers>
+            <Grid>
+                <Image RenderTransformOrigin=".5,.5" Source="/Resources/Settings.ico">
+                    <Image.RenderTransform>
+                        <RotateTransform x:Name="TheTransform" />
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+        </Button>
     </Grid>
 </Window>
