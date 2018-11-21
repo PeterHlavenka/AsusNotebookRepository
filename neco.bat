@@ -51,20 +51,36 @@ FOR /F "tokens=1-3" %%i IN ('%toolsDir%\sigcheck.exe %binDir%\%exeName%') DO ( I
 
 
 
-SET assemlyInfo=..\..\_shared\GlobalAssemblyInfo.cs
-rem SET assemlyInfo=C:\Pool\AdIntel\src\_shared\Text.txt
+SET assemblyInfo=..\..\_shared\GlobalAssemblyInfo.cs
 @echo GlobalAsemlyInfo je zde: %assemlyInfo%
 
 pause
-@echo zjistuju verzi v assemlyInfo...
 
-FOR /F "tokens=*" %%A IN (%assemlyInfo%) DO (@echo %%A)
 
-pause
+@echo Replacne text definovany v replace:
+rem for /f "skip=1 delims=" %%i in ('%assemblyInfo%') do del "%%i"
+rem find /V "VersionAttribute" %assemlyInfo% > %assemlyInfo%
+
 @echo off
-(for /f "tokens=1* delims=:" %%a in (%assemlyInfo%) do ( 
-  echo %%a|find "AssemblyVersionAttribute(" >%version% && echo %%a: ||echo %%a: %%b
-))>..\..\_shared\Text.txt
+set "replace=VersionAttribute"
+set "replaced=different"
+
+set "source=..\..\_shared\GlobalAssemblyInfo.cs"
+set "target=..\..\_shared\Text.txt"
+
+setlocal enableDelayedExpansion
+(
+   for /F "tokens=1* delims=:" %%a in ('findstr /N "^" %source%') do (
+      set "line=%%b"
+      if defined line set "line=!line:%replace%=%replaced%!"
+      echo(!line!
+   )
+) > %target%
+endlocal
+
+
+
+
 
 
 GOTO End
