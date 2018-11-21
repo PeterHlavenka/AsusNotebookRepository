@@ -8,7 +8,7 @@ FOR %%A IN (%*) DO (
 
 IF /i "%suppressConfirmation%"=="y" GOTO Confirm
 
-SET /P basicyesno=You are about to publish CZ TEST version. Would you like to continue? [Y/N]:
+SET /P basicyesno=You are about to change assembly version. Would you like to continue? [Y/N]:
 IF /i "%basicyesno%"=="y" GOTO Confirm
 
 GOTO End
@@ -35,8 +35,6 @@ SET appName=Importing2 %language% %environment%
 @echo Application name is: %appName%
 @echo.
 
-
-
 SET toolsDir=..\..\..\tools\Deploy.Net.4.0
 @echo Tools directory is: %toolsDir%
 @echo.
@@ -52,54 +50,25 @@ FOR /F "tokens=1-3" %%i IN ('%toolsDir%\sigcheck.exe %binDir%\%exeName%') DO ( I
 
 
 SET assemblyInfo=..\..\_shared\GlobalAssemblyInfo.cs
-@echo GlobalAsemlyInfo je zde: %assemlyInfo%
-
-pause
+SET temporaryFile=..\..\_shared\temp.txt
 
 @echo Toto deletne radky ve kterych je VersionAttribute:
-findstr /v /i /c:"VersionAttribute" ..\..\_shared\GlobalAssemblyInfo.cs >..\..\_shared\Text.txt
+findstr /v /i /c:"VersionAttribute" %assemblyInfo% > %temporaryFile%
 pause
 
-@echo Toto pripise na konec souboru muj text:
+@echo pridavam dva nove radky
 @echo off
-@echo [assembly: AssemblyVersionAttribute("%version%")]>>..\..\_shared\Text.txt
-@echo [assembly: AssemblyInformationalVersionAttribute("%version%")]>>..\..\_shared\Text.txt
+@echo [assembly: AssemblyVersionAttribute("%version%")]>> %temporaryFile%
+@echo [assembly: AssemblyInformationalVersionAttribute("%version%")]>> %temporaryFile%
 pause
 
-@echo Replacne text definovany v replace:
-rem for /f "skip=1 delims=" %%i in ('%assemblyInfo%') do del "%%i"
-rem find /V "VersionAttribute" %assemlyInfo% > %assemlyInfo%
-
 @echo off
-set "replace=VersionAttribute"
-set "replaced=different"
-
-set "source=..\..\_shared\GlobalAssemblyInfo.cs"
-set "target=..\..\_shared\Text.txt"
-
-setlocal enableDelayedExpansion
-(
-   for /F "tokens=1* delims=:" %%a in ('findstr /N "^" %source%') do (
-      set "line=%%b"
-      if defined line set "line=!line:%replace%=%replaced%!"
-      echo(!line!
-   )
-) > %target%
-endlocal
-
-
-
-
-
+(for /f "tokens=1* delims=" %%a in (%temporaryFile%) do ( 
+  echo %%a %%b
+))>%assemblyInfo%
 
 GOTO End
 
-:err
-echo Nastala chyba...
-IF /i "%suppressConfirmation%"=="y" exit /B 1
-timeout 3
-pause
-exit /B 1
 
 :end
 IF /i "%suppressConfirmation%"=="y" exit /B 0
