@@ -60,7 +60,11 @@ pause
 
 FOR /F "tokens=*" %%A IN (%assemlyInfo%) DO (@echo %%A)
 
-
+pause
+@echo off
+(for /f "tokens=1* delims=:" %%a in (%assemlyInfo%) do ( 
+  echo %%a|find "AssemblyVersionAttribute(" >%version% && echo %%a: ||echo %%a: %%b
+))>..\..\_shared\Text.txt
 
 
 GOTO End
