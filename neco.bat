@@ -56,8 +56,14 @@ SET assemblyInfo=..\..\_shared\GlobalAssemblyInfo.cs
 
 pause
 
-@echo Toto deletne radky ve kterych je VersionAttribute
+@echo Toto deletne radky ve kterych je VersionAttribute:
 findstr /v /i /c:"VersionAttribute" ..\..\_shared\GlobalAssemblyInfo.cs >..\..\_shared\Text.txt
+pause
+
+@echo Toto pripise na konec souboru muj text:
+@echo off
+@echo [assembly: AssemblyVersionAttribute("%version%")]>>..\..\_shared\Text.txt
+@echo [assembly: AssemblyInformationalVersionAttribute("%version%")]>>..\..\_shared\Text.txt
 pause
 
 @echo Replacne text definovany v replace:
