@@ -56,6 +56,9 @@ SET assemblyInfo=..\..\_shared\GlobalAssemblyInfo.cs
 
 pause
 
+@echo Toto deletne radky ve kterych je VersionAttribute
+findstr /v /i /c:"VersionAttribute" ..\..\_shared\GlobalAssemblyInfo.cs >..\..\_shared\Text.txt
+pause
 
 @echo Replacne text definovany v replace:
 rem for /f "skip=1 delims=" %%i in ('%assemblyInfo%') do del "%%i"
