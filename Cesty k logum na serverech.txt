@@ -1,0 +1,101 @@
+d:\Services\VideoMatching.TEST\Logs\VideoMatchingService.log.1
+d:\Services\MIR.Schedule.TEST\Log\MIR.Schedule.Service.DEBUG.log.1
+d:\Services\MIR.Export.PostOffice.Service.TEST\Log\MIR.Export.PostOffice.Service.log.1
+d:\Services\Pricing.Service.TEST\Logs\Pricing.Service.Log.1
+
+
+<Service id="DbSyncServiceBusinessMedia"   Mohlo by byt na adsapp1 sice to tam ukazuje, ale takova sluzba tam neni ani v ToDelete slozce
+
+d:\Services\DbSync.Client.Service.SeznamCz\Logs\DbSync.Client.Debug.log.1
+
+RC:
+d:\Services\Reprocessing.Registration.Service.RC\Log\ReprocessingService.log.1
+d:\Services\Pricing.Service.RC\Logs\Pricing.Service.Log
+d:\Services\MIR.Schedule.RC\Log\MIR.Schedule.Service.DEBUG.log.1
+d:\Services\MIR.Import2.Service.RC\Log\MIR.Import2.MainService.log.1
+d:\Services\MIR.Export.Thumbnail.Service.RC\Logs\MIR.Export.Thumbnail.log.1
+d:\Services\MIR.Export.PostOffice.Service.RC\Log\MIR.Export.PostOffice.Service.log.1
+d:\Services\DbSync.Client.Service.SeznamCz\Logs\DbSync.Client.Debug.log.1
+
+OSTRE CZ:
+NEMAM VM1 - NEKDO TAM BYL
+d:\Services\Videomatching\Logs\VideoMatchingService.log.1
+d:\Services\VideoMatching\Logs\VideoMatchingService.log.1         VM2
+c:\Services\VideoMatching\Logs\Duplicities.log.1
+d:\Services\AdIntel\VideoMatching\Logs\VideoMatchingService.log.1
+c:\services\Videomatching\Logs\VideoMatchingService.log.1
+c:\services\AdIntel\VideoMatching\Logs\Duplicities.log.1    VM6
+C:\services\AdIntel\VideoMatching\Logs   VM7
+c:\Services\VideoMatching\Logs\VideoMatchingService.log.1  VM8
+c:\services\AdIntel\VideoMatching\Logs\VideoMatchingService.log.1   VMBackup
+
+d:\Services\DuplicityHunterIncremental\Logs\DuplitiyHunterService.log.1	DH INCREMENTAL
+d:\Services\AdIntel\EyedeaPictureMatching\Logs\PictureMatchingService.log.1   PM2
+
+d:\Services\AdIntel\Reprocessing.Registration.Service\Log\ReprocessingService.log.1
+d:\Services\AdIntel\MIR.Schedule\Log\MIR.Schedule.Service.DEBUG.log.1
+d:\Services\AdIntel\MIR.Export.Thumbnail.Service\Logs\MIR.Export.Thumbnail.log.1
+d:\Services\AdIntel\MIR.Export.PostOffice.Service\Log\MIR.Export.PostOffice.Service.log.1
+d:\Services\AdIntel\MIR.Export.Creative.Service\Log\MIR.Export.Creative.Service.log.1
+d:\Services\AdIntel\Pricing.Service\Logs\Pricing.Service.Log.1
+
+c:\services\DuplicityHunter\Logs\DuplitiyHunterService.log.1
+
+BG Test
+
+
+		 serviceLogPath="\\AdIntel-RC-CZ\d$\" />
+
+d:\Services\Pricing.Service.TEST\Logs\Pricing.Service.Log
+d:\Services\MIR.Import2.Service.TEST\Log\MIR.Import2.MainService.log.1
+d:\Services\Reprocessing.Registration.Service.TEST\Log\ReprocessingService.log.1
+d:\Services\ScheduleService.TEST\Log\MIR.Schedule.Service.DEBUG.log.1
+
+RC:
+d:\Services\MIR.Import2.Service.RC\Log\MIR.Import2.MainService.log
+d:\Services\PricingService.RC\Logs\Pricing.Service.Log
+d:\Services\Reprocessing.Registration.Service.RC\Log\ReprocessingService.log.1
+d:\Services\ScheduleService.RC\Log\MIR.Schedule.Service.DEBUG.log.1
+
+
+BG ostrre
+c:\Services\PictureMatchingService\Logs\PictureMatchingService.log
+c:\Services\PricingService\Logs\Pricing.Service.Log
+
+c:\Services\Reprocessing.Registration.Service\Log\ReprocessingService.log
+
+c:\Services\ScheduleService\Log\MIR.Schedule.Service.INFO.log
+c:\Services\MIR.Export.Creative.Service\Log\MIR.Export.Creative.Service.log
+c:\Services\MIR.Import2.Service\Log\MIR.Import2.MainService.log
+DH:
+c:\Services\AdIntel\DuplicityHunterIncremental\Logs\DuplitiyHunterService.log.1
+VM5
+c:\Services\AdIntel\VideoMatching\Logs\VideoMatchingService.log.1
+VM1
+c:\Services\VideoMatching\Logs\VideoMatchingService.log.1
+c:\Services\VideoMatching\Logs\VideoMatchingService.log
+c:\Services\VideoMatching\Logs\VideoMatchingService.log
+c:\Shodan\VideoMatching\Logs\VideoMatchingService.log.1
+c:\Shodan\AdIntel\VideoMatching\Logs\VideoMatchingService.log.1
+c:\Shodan\AdIntel\VideoMatching\Logs\VideoMatchingService.log.1
+
+<?xml version="1.0" encoding="utf-8" ?>
+<castle>
+
+  <installers>
+        <!--
+	<install type="MIR.Schedule.Service.Installers.Schedulers.HqCreativeImportScheduler.HqCreativeImportSchedulerInstaller, MIR.Schedule.Service"/>
+        <install type="MIR.Schedule.Service.Installers.Schedulers.TvmDataExportScheduler.TvmDataExportInstaller, MIR.Schedule.Service"/>
+        <install type="MIR.Schedule.Service.Installers.Schedulers.NielsenExportScheduler.NielsenExportInstaller, MIR.Schedule.Service"/> 
+	-->
+
+		<install type="MIR.Schedule.Service.Installers.Schedulers.DuplicityKillerScheduler.DuplicityKillerInstaller, MIR.Schedule.Service"/>
+		<install type="MIR.Schedule.Service.Installers.Common.MediaDataDaoSourceInstaller, MIR.Schedule.Service"/>-->
+  </installers>
+
+</castle>
+
+
+
+
+
