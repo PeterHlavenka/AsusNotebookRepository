@@ -6,24 +6,16 @@ namespace Matika_2._0
     {
         private static string Sign => " : ";
 
-        public Share()
+        public Share(int difficulty)
         {
-            int fir;
-            int sec;
-            int res;
+            var res = new Random().Next(10 + 1);
+            var sec = new Random().Next(1, difficulty + 1);
+            var fir = res * sec;
 
-            do
-            {
-                fir = new Random().Next(10 + 1);
-                sec = Max > 10 ? new Random().Next(1, (Max / 10) + 1) : new Random().Next(1, Max);
 
-                res = fir * sec;
-            }
-            while (res > Max);
+            Result = res;
 
-            Result = fir;
-
-            Task = string.Join(" ", res, Sign, sec, EqualSign);
+            Task = string.Join(" ", fir, Sign, sec, EqualSign);
         }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matika 2.0", "Matika 2.0\Matika 2.0.csproj", "{9301BDB2-2004-4D71-ABAC-B9A94D39BD1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Shell\Shell.csproj", "{005D3A7C-EF8C-4C3C-B002-388649B877F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9301BDB2-2004-4D71-ABAC-B9A94D39BD1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9301BDB2-2004-4D71-ABAC-B9A94D39BD1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9301BDB2-2004-4D71-ABAC-B9A94D39BD1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005D3A7C-EF8C-4C3C-B002-388649B877F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005D3A7C-EF8C-4C3C-B002-388649B877F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005D3A7C-EF8C-4C3C-B002-388649B877F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005D3A7C-EF8C-4C3C-B002-388649B877F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

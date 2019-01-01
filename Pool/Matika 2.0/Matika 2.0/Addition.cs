@@ -4,16 +4,18 @@ namespace Matika_2._0
 {
     public class Addition : Example
     {
-        private static string Sign => " + ";
+        public Addition(int difficulty)
+        {
+            do
+            {
+                var first = new Random().Next(difficulty + 1);
+                var second = new Random().Next(difficulty) + 1;
 
-        public Addition()
-        {           
-            var first = new Random().Next(Max);
-            var second = new Random().Next(Max - first);
-
-            Result = first + second;
-
-            Task = string.Join(" ",first, Sign, second, EqualSign);            
+                Result = first + second;
+                Task = string.Join(" ", first, Sign, second, EqualSign);
+            } while (Result < difficulty / 1.2);
         }
+
+        private static string Sign => " + ";
     }
 }

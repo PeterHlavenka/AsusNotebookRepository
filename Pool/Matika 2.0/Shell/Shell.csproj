@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9301BDB2-2004-4D71-ABAC-B9A94D39BD1B}</ProjectGuid>
+    <ProjectGuid>{005D3A7C-EF8C-4C3C-B002-388649B877F8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Matika_2._0</RootNamespace>
-    <AssemblyName>Matika 2.0</AssemblyName>
+    <RootNamespace>Shell</RootNamespace>
+    <AssemblyName>Shell</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,18 +38,6 @@
     <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Mediaresearch.Framework.DataAccess.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Framework.Gui.2.7.0\lib\net40-Client\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Mediaresearch.Framework.Gui, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Framework.Gui.2.7.0\lib\net40-Client\Mediaresearch.Framework.Gui.dll</HintPath>
-    </Reference>
-    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.2\lib\net40-client\Mediaresearch.Framework.Utilities.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -73,34 +61,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainViewModel.cs" />
-    <Compile Include="SettingsDialogView.xaml.cs">
-      <DependentUpon>SettingsDialogView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SettingsDialogViewModel.cs" />
-    <Compile Include="Share.cs" />
-    <Compile Include="Addition.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Difference.cs" />
-    <Compile Include="Example.cs" />
-    <Page Include="MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SettingsDialogView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
-    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,9 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resources\Settings.ico" />
+    <ProjectReference Include="..\Matika 2.0\Matika 2.0.csproj">
+      <Project>{9301bdb2-2004-4d71-abac-b9a94d39bd1b}</Project>
+      <Name>Matika 2.0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

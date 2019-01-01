@@ -4,23 +4,25 @@ namespace Matika_2._0
 {
     public class Product : Example
     {
-        private static string Sign => " * ";
-
-        public Product()
+        public Product(int difficulty)
         {
             int first;
             int second;
+            var maximum = difficulty * 10 / 3;
 
             do
             {
+                difficulty = difficulty == 10 ? difficulty - 1 : difficulty;
+
                 first = new Random().Next(10 + 1);
-                second = Max > 10 ?  new Random().Next((Max / 10) + 1) : new Random().Next(Max);
+                second = new Random().Next(difficulty + 1);
 
                 Result = first * second;
-            }
-            while (Result > Max);
+            } while (Result < maximum);
 
             Task = string.Join(" ", first, Sign, second, EqualSign);
-        }        
+        }
+
+        private static string Sign => " . ";
     }
 }
