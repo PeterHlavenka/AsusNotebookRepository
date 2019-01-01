@@ -5,10 +5,12 @@ namespace Matika.Configurations
 {
     public class MatikaConfiguration : ConfigBase
     {
-        public override string GetConfigName() => nameof(MatikaConfiguration);
+        private readonly string m_name = "MatikaSection";
 
-        [ConfigurationProperty(nameof(Test), IsRequired = true)]
-        public int Test => (int)this["Test"];
+        public override string GetConfigName() => m_name;
+
+        [ConfigurationProperty(nameof(StartDifficulty), IsRequired = true)]
+        public int StartDifficulty => (int)this["StartDifficulty"];
 
     }
 }

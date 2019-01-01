@@ -20,12 +20,12 @@ namespace Matika
         private int m_wrongCount;
 
 
-        public MainViewModel()
+        public MainViewModel(int difficulty)
         {
             Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
-            Settings = new SettingsDialogViewModel {Difficulty = 10};
+            Settings = new SettingsDialogViewModel {Difficulty = difficulty};
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
