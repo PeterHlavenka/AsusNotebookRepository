@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Matika_2._0
+namespace Matika
 {
     public class Difference : Example
     {
