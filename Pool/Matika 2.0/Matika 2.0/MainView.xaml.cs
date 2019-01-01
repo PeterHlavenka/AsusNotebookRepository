@@ -13,5 +13,12 @@ namespace Matika_2._0
         }
 
 
+        private void MainView_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainViewModel dc)
+            {
+                dc.ResultTextBox = ResultTextBox;
+            }
+        }
     }
 }

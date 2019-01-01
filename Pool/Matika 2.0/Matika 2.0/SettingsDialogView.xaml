@@ -8,8 +8,8 @@
     Title="SettingsDialogView"
     MinWidth="550"
     MaxWidth="550"
-    WindowStartupLocation="CenterOwner"
     SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterOwner"
     mc:Ignorable="d">
     <Window.Resources>
         <Style TargetType="Slider">

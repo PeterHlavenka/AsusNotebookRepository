@@ -11,6 +11,7 @@
     Height="450"
     d:DataContext="{d:DesignInstance local:MainViewModel}"
     FocusManager.FocusedElement="{Binding ElementName=ResultTextBox}"
+    Loaded="MainView_OnLoaded"
     ResizeMode="NoResize"
     mc:Ignorable="d">
     <Window.Resources>
@@ -73,6 +74,7 @@
             <TextBox
                 Name="ResultTextBox"
                 Width="120"
+                Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
                     <KeyBinding

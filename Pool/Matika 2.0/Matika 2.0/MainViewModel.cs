@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using Caliburn.Micro;
 using Mediaresearch.Framework.Gui;
 
@@ -11,6 +10,8 @@ namespace Matika_2._0
     {
         private int m_counter;
         private Example m_example;
+
+        private Brush m_resultBrush;
         private SettingsDialogViewModel m_settings;
 
         private int m_succesCount;
@@ -30,7 +31,7 @@ namespace Matika_2._0
             ResetCommand = new RelayCommand(DoReset);
         }
 
-        public BitmapImage Img => new BitmapImage(new Uri(@"pack://application:,,,/Matika 2.0;component/Resources/Settings.ico"));
+        public TextBox ResultTextBox { get; set; }
 
         public SettingsDialogViewModel Settings
         {
@@ -54,6 +55,7 @@ namespace Matika_2._0
             {
                 m_example = value;
                 Counter++;
+                ResultBrush = Brushes.Black;
                 NotifyOfPropertyChange();
             }
         }
@@ -98,19 +100,35 @@ namespace Matika_2._0
             }
         }
 
+        public Brush ResultBrush
+        {
+            get => m_resultBrush;
+            set
+            {
+                m_resultBrush = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        private bool Repair { get; set; }
+
         private void DoReset()
         {
             UserResult = string.Empty;
             WrongCount++;
+            ResultBrush = Brushes.Black;
         }
 
-
         private void DoGenerate(object obj)
-        {                  
+        {
             var success = int.TryParse(obj.ToString(), out var number);
             if (success && number == Example.Result)
-            {                
-                SuccesCount++;
+            {
+                if (Repair == false)
+                {
+                    SuccesCount++;
+                }
+                Repair = false;
 
                 Example temp;
                 do
@@ -122,6 +140,11 @@ namespace Matika_2._0
 
                 UserResult = string.Empty;
             }
+            else
+            {
+                ResultBrush = Brushes.Red;
+                Repair = true;
+            }
         }
 
         public void SettingsButtonClicked()
@@ -132,6 +155,8 @@ namespace Matika_2._0
             {
                 DoGenerate(Example.Result);
                 Counter--;
+                SuccesCount--;
+                ResultTextBox.Focus();
             }
         }
     }
