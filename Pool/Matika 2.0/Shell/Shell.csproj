@@ -95,9 +95,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Matika 2.0\Matika 2.0.csproj">
+    <ProjectReference Include="..\Matika\Matika.csproj">
       <Project>{9301bdb2-2004-4d71-abac-b9a94d39bd1b}</Project>
-      <Name>Matika 2.0</Name>
+      <Name>Matika</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

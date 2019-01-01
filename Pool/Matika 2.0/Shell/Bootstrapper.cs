@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Caliburn.Micro;
-using Matika_2._0;
+using Matika;
+
 
 namespace Shell
 {

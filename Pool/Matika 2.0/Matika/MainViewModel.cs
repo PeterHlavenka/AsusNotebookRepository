@@ -4,7 +4,7 @@ using System.Windows.Media;
 using Caliburn.Micro;
 using Mediaresearch.Framework.Gui;
 
-namespace Matika_2._0
+namespace Matika
 {
     public class MainViewModel : Screen
     {
