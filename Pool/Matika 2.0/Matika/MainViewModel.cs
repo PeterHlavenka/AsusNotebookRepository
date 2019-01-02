@@ -1,8 +1,12 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using Caliburn.Micro;
 using Mediaresearch.Framework.Gui;
+using WpfAnimatedGif;
 
 namespace Matika
 {
@@ -10,6 +14,8 @@ namespace Matika
     {
         private int m_counter;
         private Example m_example;
+
+        private Visibility m_monkeyVisibility = Visibility.Collapsed;
 
         private Brush m_resultBrush;
         private SettingsDialogViewModel m_settings;
@@ -25,11 +31,13 @@ namespace Matika
             Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
+
             Settings = new SettingsDialogViewModel {Difficulty = difficulty};
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
         }
+
 
         public TextBox ResultTextBox { get; set; }
 
@@ -110,13 +118,72 @@ namespace Matika
             }
         }
 
+        private DispatcherTimer Timer { get; set; }
+
+
         private bool Repair { get; set; }
+
+        public ImageAnimationController MonkeyController { get; set; }
+        private bool IsMonkeyRunning { get; set; }
+
+        public Visibility MonkeyVisibility
+        {
+            get => m_monkeyVisibility;
+            set
+            {
+                m_monkeyVisibility = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        private void MoveMonkey()
+        {
+            Timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(6),
+                IsEnabled = true
+            };
+            Timer.Tick += PauseMonkey;
+
+            Timer.Start();
+            IsMonkeyRunning = true;
+            MonkeyVisibility = Visibility.Visible;
+            SetMonkeyStartPosition();
+            MonkeyController.Play();
+        }
+
+
+        private void SetMonkeyStartPosition()
+        {
+            MonkeyController.GotoFrame(29);
+        }
+
+        private void PauseMonkey(object sender, EventArgs e)
+        {
+            IsMonkeyRunning = false;
+            MonkeyController.Pause();
+            Timer.Stop();
+        }
 
         private void DoReset()
         {
+            if (string.IsNullOrEmpty(UserResult))
+            {
+                return;
+            }
+
             UserResult = string.Empty;
-            WrongCount++;
-            ResultBrush = Brushes.Black;
+           
+            if (Equals(ResultBrush, Brushes.Red))
+            {
+                WrongCount++;
+                ResultBrush = Brushes.Black;
+
+                if (!IsMonkeyRunning)
+                {
+                    MoveMonkey();
+                }
+            }          
         }
 
         private void DoGenerate(object obj)
@@ -149,6 +216,7 @@ namespace Matika
                 }
             }
         }
+
 
         public void SettingsButtonClicked()
         {
