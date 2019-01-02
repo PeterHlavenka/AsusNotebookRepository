@@ -77,6 +77,9 @@
     <Reference Include="WpfAnimatedGif, Version=1.4.17.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WpfAnimatedGif.1.4.17\lib\net\WpfAnimatedGif.dll</HintPath>
     </Reference>
+    <Reference Include="XamlAnimatedGif, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XamlAnimatedGif.1.2.0\lib\net45\XamlAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -84,14 +87,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Configurations\MatikaConfiguration.cs" />
-    <Compile Include="MainView.xaml.cs">
+    <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
+      <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\EnumeratedWordsViewModel.cs" />
+    <Compile Include="Gui\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainViewModel.cs" />
-    <Compile Include="SettingsDialogView.xaml.cs">
+    <Compile Include="Gui\MainViewModel.cs" />
+    <Compile Include="Gui\MatikaView.xaml.cs">
+      <DependentUpon>MatikaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MatikaViewModel.cs" />
+    <Compile Include="Gui\SettingsDialogView.xaml.cs">
       <DependentUpon>SettingsDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingsDialogViewModel.cs" />
+    <Compile Include="Gui\SettingsDialogViewModel.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Addition.cs" />
     <Compile Include="App.xaml.cs">
@@ -100,11 +111,19 @@
     </Compile>
     <Compile Include="Difference.cs" />
     <Compile Include="Example.cs" />
-    <Page Include="MainView.xaml">
+    <Page Include="Gui\EnumeratedWordsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingsDialogView.xaml">
+    <Page Include="Gui\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\MatikaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\SettingsDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,16 +1,18 @@
-﻿using System;
+﻿
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Caliburn.Micro;
+using Matika.Gui;
 using Mediaresearch.Framework.Gui;
 using WpfAnimatedGif;
 
-namespace Matika
+namespace Matika.Gui
 {
-    public class MainViewModel : Screen
+    public class MatikaViewModel : Screen
     {
         private int m_counter;
         private Example m_example;
@@ -26,13 +28,13 @@ namespace Matika
         private int m_wrongCount;
 
 
-        public MainViewModel(int difficulty)
+        public MatikaViewModel(int difficulty)
         {
             Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new SettingsDialogViewModel {Difficulty = difficulty};
+            Settings = new SettingsDialogViewModel { Difficulty = difficulty };
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
@@ -173,7 +175,7 @@ namespace Matika
             }
 
             UserResult = string.Empty;
-           
+
             if (Equals(ResultBrush, Brushes.Red))
             {
                 WrongCount++;
@@ -183,7 +185,7 @@ namespace Matika
                 {
                     MoveMonkey();
                 }
-            }          
+            }
         }
 
         private void DoGenerate(object obj)
