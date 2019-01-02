@@ -142,8 +142,11 @@ namespace Matika
             }
             else
             {
-                ResultBrush = Brushes.Red;
-                Repair = true;
+                if (!string.IsNullOrEmpty(obj.ToString()))
+                {
+                    ResultBrush = Brushes.Red;
+                    Repair = true;
+                }
             }
         }
 
