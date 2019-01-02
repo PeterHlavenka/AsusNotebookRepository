@@ -1,6 +1,5 @@
 ﻿using System.Windows;
-using Matika;
-using Matika_2._0;
+using WpfAnimatedGif;
 
 namespace Matika
 {
@@ -20,6 +19,14 @@ namespace Matika
             if (DataContext is MainViewModel dc)
             {
                 dc.ResultTextBox = ResultTextBox;
+            }
+        }
+
+        private void ShowingMonkey_OnAnimationLoaded(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainViewModel dc)
+            {
+                dc.MonkeyController = ImageBehavior.GetAnimationController(ShowingMonkey);
             }
         }
     }
