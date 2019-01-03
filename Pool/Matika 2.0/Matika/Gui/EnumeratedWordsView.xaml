@@ -2,11 +2,81 @@
     x:Class="Matika.Gui.EnumeratedWordsView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Matika"
+    xmlns:local="clr-namespace:Matika.Gui"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignInstance local:EnumeratedWordsViewModel}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid />
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ButtonTemmplate" TargetType="Button">
+            <Grid>
+                <Rectangle
+                    Name="Rectangle"
+                    Stroke="Transparent"
+                    StrokeThickness="1" />
+                <Viewbox>
+                    <ContentPresenter Margin="{TemplateBinding Padding}" />
+                </Viewbox>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="Rectangle" Property="Fill" Value="Transparent" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX=".9" ScaleY=".9" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="RenderTransformOrigin" Value=".5,.5" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel>
+            <TextBlock
+                Width="600"
+                Margin="50,50,50,10"
+                FontSize="100"
+                Text="{Binding DisplayedName}"
+                TextAlignment="Center" />
+            <TextBlock
+                Width="600"
+                Margin="0,0,0,40"
+                FontSize="20"
+                Text="{Binding Help}"
+                TextAlignment="Center" />
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontWeight="Bold"
+                    Text="y - ý" />
+                <Button
+                    Margin="20,20,30,20"
+                    cal:Message.Attach="[Event Click] = [Action LeftButtonClicked()]"
+                    Template="{StaticResource ButtonTemmplate}">
+                    <Image Source="../Resources/leftArrow.png" />
+                </Button>
+                <Button
+                    Margin="30,20,20,20"
+                    cal:Message.Attach="[Event Click] = [Action RightButtonClicked()]"
+                    Template="{StaticResource ButtonTemmplate}">
+                    <Image Source="../Resources/rightArrow.png" />
+                </Button>
+                <TextBlock
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontWeight="Bold"
+                    Text="i - í" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </UserControl>

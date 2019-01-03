@@ -124,6 +124,7 @@
       <DependentUpon>SettingsDialogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\SettingsDialogViewModel.cs" />
+    <Compile Include="IWord.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Addition.cs" />
     <Compile Include="App.xaml.cs">
@@ -200,6 +201,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>EnumeratedWordsDb.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\leftArrow.png" />
+    <Resource Include="Resources\rightArrow.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
