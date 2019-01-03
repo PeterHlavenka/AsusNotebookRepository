@@ -10,6 +10,8 @@ namespace Matika.Gui
         {
             MatikaViewModel = matikaViewModel;
             EnumeratedWordsViewModel = new EnumeratedWordsViewModel();
+
+            
             
         }
 

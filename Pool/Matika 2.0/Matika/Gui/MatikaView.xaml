@@ -5,11 +5,11 @@
     xmlns:animatedGif="http://wpfanimatedgif.codeplex.com"
     xmlns:cal="http://www.caliburnproject.org"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:matika="clr-namespace:Matika"
+    xmlns:gui="clr-namespace:Matika.Gui"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="800"
     Height="450"
-    d:DataContext="{d:DesignInstance matika:MainViewModel}"
+    d:DataContext="{d:DesignInstance gui:MainViewModel}"
     Loaded="MainView_OnLoaded"
     mc:Ignorable="d">
     <UserControl.Resources>
