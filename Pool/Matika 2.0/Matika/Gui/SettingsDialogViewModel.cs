@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
 
-namespace Matika
+namespace Matika.Gui
 {
     public class SettingsDialogViewModel : Screen
     {

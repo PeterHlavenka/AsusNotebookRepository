@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Windows;
 using Caliburn.Micro;
 using Castle.Windsor;
-using Matika;
+using Matika.Gui;
 using Shell.Installers;
 
 
