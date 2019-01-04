@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Matika
+namespace Matika.Data
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -244,7 +244,7 @@ namespace Matika
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.M_Words")]
-	public partial class M_Word : INotifyPropertyChanging, INotifyPropertyChanged , IWord
+	public partial class M_Word : INotifyPropertyChanging, INotifyPropertyChanged, IWord
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);

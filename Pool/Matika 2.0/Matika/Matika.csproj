@@ -103,7 +103,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Configurations\MatikaConfiguration.cs" />
-    <Compile Include="EnumeratedWordsDB.designer.cs">
+    <Compile Include="Data\EnumeratedWordsDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumeratedWordsDB.dbml</DependentUpon>
@@ -170,12 +170,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="EnumeratedWordsDB.dbml">
+    <None Include="Data\EnumeratedWordsDB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>EnumeratedWordsDB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EnumeratedWordsDB.dbml.layout">
+    <None Include="Data\EnumeratedWordsDB.dbml.layout">
       <DependentUpon>EnumeratedWordsDB.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -194,10 +194,10 @@
     <Resource Include="Resources\Settings.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EnumeratedWordsDb.mdf">
+    <Content Include="Data\EnumeratedWordsDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="EnumeratedWordsDb_log.ldf">
+    <Content Include="Data\EnumeratedWordsDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>EnumeratedWordsDb.mdf</DependentUpon>
     </Content>

@@ -11,6 +11,7 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
     <UserControl.Resources>
+        <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
         <ControlTemplate x:Key="ButtonTemmplate" TargetType="Button">
             <Grid>
                 <Rectangle
@@ -37,10 +38,14 @@
         </ControlTemplate>
     </UserControl.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <StackPanel>
             <TextBlock
                 Width="600"
-                Margin="50,50,50,10"
+                Margin="50,38,50,10"
                 FontSize="100"
                 Text="{Binding DisplayedName}"
                 TextAlignment="Center" />
@@ -78,5 +83,37 @@
                     Text="i - í" />
             </StackPanel>
         </StackPanel>
+        <StatusBar Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Width="30"
+                    Height="30"
+                    Margin="20,0"
+                    HorizontalAlignment="Center"
+                    cal:Message.Attach="[Event Click] = [Action SettingsButtonClicked()]"
+                    Template="{StaticResource ButtonTemmplate}">
+
+                    <Grid>
+                        <Image Source="{StaticResource Settings}" />
+                    </Grid>
+                </Button>
+                <ComboBox
+                    Width="150"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    cal:Message.Attach="[Event SelectionChanged] = [Action SelectionChanged($source, $eventArgs)]"
+                    AlternationCount="1"
+                    FontWeight="Bold"
+                    ItemsSource="{Binding EnumChars}"
+                    Text="{x:Null}" />
+
+                <TextBlock
+                    Margin="15,0"
+                    VerticalAlignment="Center"
+                    FontSize="15"
+                    Text="{Binding Counter}"
+                    TextAlignment="Center" />
+            </StackPanel>
+        </StatusBar>
     </Grid>
 </UserControl>

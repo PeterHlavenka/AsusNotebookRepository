@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using Caliburn.Micro;
+using Matika.Data;
 using Action = System.Action;
 
 namespace Matika.Gui
@@ -12,37 +14,42 @@ namespace Matika.Gui
 
     {
         private static readonly Random Random = new Random();
+        private int m_counter;
 
         private string m_displayedName;
+        private string[] m_enumChars;
         private string m_help;
         private IWord m_item;
+        private string m_selectedItem;
 
         public EnumeratedWordsViewModel()
         {
-            var dc = new EnumeratedWordsDBDataContext();
-            var array = new[] {"B", "M"};
-            var first = array.Shuffle().First();
-            IWord[] test = null;
-
-            switch (first)
-            {
-                case "B":
-                    test = dc.B_Words.Select(d => d).ToArray();
-                    break;
-                case "M":
-                    test = dc.M_Words.Select(d => d).ToArray();
-                    break;
-            }
-
-
-            test = test.Shuffle();
-
-            Queue = new Queue<IWord>(test);
-
+            EnumChars = new[] {"B", "M"};
+            GetQueue(null);
             ChangeItem(Queue);
         }
 
-        private Queue<IWord> Queue { get; }
+        public int Counter
+        {
+            get => m_counter;
+            set
+            {
+                m_counter = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        public string[] EnumChars
+        {
+            get => m_enumChars;
+            set
+            {
+                m_enumChars = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        private Queue<IWord> Queue { get; set; }
 
         public IWord Item
         {
@@ -50,6 +57,7 @@ namespace Matika.Gui
             set
             {
                 m_item = value;
+                Counter++;
                 NotifyOfPropertyChange();
             }
         }
@@ -80,6 +88,36 @@ namespace Matika.Gui
 
                 NotifyOfPropertyChange();
             }
+        }
+
+        public void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GetQueue((string) e.AddedItems[0]);
+            ChangeItem(Queue);
+        }
+
+        private void GetQueue(string parameter)
+        {
+            var dc = new EnumeratedWordsDBDataContext();
+
+            var first = string.IsNullOrEmpty(parameter) ? EnumChars.Shuffle().First() : parameter;
+
+            IWord[] test = null;
+
+            switch (first)
+            {
+                case "B":
+                    test = dc.B_Words.Select(d => d).ToArray();
+                    break;
+                case "M":
+                    test = dc.M_Words.Select(d => d).ToArray();
+                    break;
+            }
+
+
+            test = test.Shuffle();
+
+            Queue = new Queue<IWord>(test);
         }
 
         private void ChangeItem(Queue<IWord> queue)
