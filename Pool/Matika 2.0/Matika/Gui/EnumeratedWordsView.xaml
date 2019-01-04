@@ -43,10 +43,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock
-                Width="600"
+            <TextBlock                
                 Margin="50,38,50,10"
-                FontSize="100"
+                FontSize="95"
                 Text="{Binding DisplayedName}"
                 TextAlignment="Center" />
             <TextBlock
@@ -60,7 +59,7 @@
                 <TextBlock
                     Margin="20"
                     HorizontalAlignment="Center"
-                    FontSize="50"
+                    FontSize="45"
                     FontWeight="Bold"
                     Text="y - ý" />
                 <Button

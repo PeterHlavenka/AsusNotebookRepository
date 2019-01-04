@@ -4,9 +4,10 @@ CREATE TABLE [dbo].B_Words
     [Name] NCHAR(100) NOT NULL, 
     [IsEnumerated] BIT NOT NULL DEFAULT 1, 
     [CoveredName] NCHAR(100) NULL,
+	[Help] nchar(100)
 )
 
-CREATE TRIGGER [Trigger]
+CREATE TRIGGER [BTrigger]
 	ON [dbo].[B_Words]
 	FOR  INSERT
 	AS

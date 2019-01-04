@@ -20,11 +20,10 @@ namespace Matika.Gui
         private string[] m_enumChars;
         private string m_help;
         private IWord m_item;
-        private string m_selectedItem;
 
         public EnumeratedWordsViewModel()
         {
-            EnumChars = new[] {"B", "M"};
+            EnumChars = new[] {"B", "L", "M"};
             GetQueue(null);
             ChangeItem(Queue);
         }
@@ -108,6 +107,9 @@ namespace Matika.Gui
             {
                 case "B":
                     test = dc.B_Words.Select(d => d).ToArray();
+                    break;
+                case "L":
+                    test = dc.L_Words.Select(d => d).ToArray();
                     break;
                 case "M":
                     test = dc.M_Words.Select(d => d).ToArray();
