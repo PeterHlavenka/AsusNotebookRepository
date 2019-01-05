@@ -45,7 +45,7 @@
         <StackPanel>
             <TextBlock                
                 Margin="50,38,50,10"
-                FontSize="95"
+                FontSize="90"
                 Text="{Binding DisplayedName}"
                 TextAlignment="Center" />
             <TextBlock
