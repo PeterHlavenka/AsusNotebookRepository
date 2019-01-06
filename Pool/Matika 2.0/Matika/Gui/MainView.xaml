@@ -9,14 +9,14 @@
     Width="800"
     Height="520"
     d:DataContext="{d:DesignInstance matika:MainViewModel}"
-    ResizeMode="CanResize"
+    ResizeMode="NoResize"
     mc:Ignorable="d">
 
     <TabControl>
-        <TabItem Background="Green" Header="Matika">
+        <TabItem Header="Matika">
             <matika:MatikaView DataContext="{Binding MatikaViewModel}" />
         </TabItem>
-        <TabItem Background="Green" Header="Slova">
+        <TabItem Header="Vyjmenovaná Slova" IsSelected="True">
             <matika:EnumeratedWordsView DataContext="{Binding EnumeratedWordsViewModel}" />
         </TabItem>
     </TabControl>

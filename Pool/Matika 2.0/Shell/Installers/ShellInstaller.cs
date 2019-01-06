@@ -17,6 +17,7 @@ namespace Shell.Installers
 
             container.Register(Component.For<IWindowManager>().ImplementedBy<WindowManager>());
             container.Register(Component.For<MatikaViewModel>().DependsOn(Dependency.OnValue("difficulty", provider.GetConfig<MatikaConfiguration>().StartDifficulty)));
+            container.Register(Component.For<EnumeratedWordsViewModel>());
             container.Register(Component.For<MainViewModel>());
         }
     }

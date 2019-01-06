@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EnumeratedWordsDb" Class="EnumeratedWordsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\EnumeratedWordsDb.mdf;Integrated Security=True" SettingsObjectName="Matika.Properties.Settings" SettingsPropertyName="EnumeratedWordsDbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.B_Words" Member="B_Words">
+    <Type Name="B_Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnumerated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoveredName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Help" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.L_Words" Member="L_Words">
+    <Type Name="L_Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnumerated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoveredName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Help" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Words" Member="M_Words">
+    <Type Name="M_Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnumerated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoveredName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Help" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
