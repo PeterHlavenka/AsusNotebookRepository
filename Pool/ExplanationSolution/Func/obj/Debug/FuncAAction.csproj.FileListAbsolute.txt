@@ -5,3 +5,10 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\FuncAAction.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Func\obj\Debug\Func.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\bin\Debug\Func.exe.config
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\bin\Debug\Func.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\bin\Debug\Func.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csprojAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\Func.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\Func.pdb

@@ -13,3 +13,18 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePo
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csprojAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.exe.config
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\App.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup_MarkupCompile.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup_MarkupCompile.lref
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.g.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.Properties.Resources.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.GenerateResource.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.CoreCompileInputs.cache

@@ -5,3 +5,10 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate2\obj\Debug\Delegate2.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate2\obj\Debug\Delegate2.pdb
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\Delegate2\obj\Debug\Delegate2.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\bin\Debug\Delegate2.exe.config
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\bin\Debug\Delegate2.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\bin\Debug\Delegate2.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csprojAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.pdb

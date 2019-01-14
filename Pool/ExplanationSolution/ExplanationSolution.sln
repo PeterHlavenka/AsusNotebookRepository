@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "WpfApp1\AsyncAwait.csproj", "{B7EEF213-995A-4E93-B72C-117D7AF03D08}"
 EndProject
@@ -32,6 +32,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INotifyPropertyChanged", "INotifyPropertyChanged\INotifyPropertyChanged.csproj", "{FC8CECE9-3253-4CFD-858F-2F61830E518B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryReverse", "DictionaryReverse\DictionaryReverse.csproj", "{4C20D8D0-8B05-4BF2-9075-7079A71E3585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thready", "Thready", "{FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitHandle_WaitAll_WaitAny", "WaitHandle_WaitAll_WaitAny\WaitHandle_WaitAll_WaitAny.csproj", "{5E247159-FD6C-4C19-96C5-0E1D4CA18458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lock - Monitor", "Lock - Monitor\Lock - Monitor.csproj", "{0A4A6E93-BC6F-474E-87C8-69B2D70048F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandShaking", "HandShaking\HandShaking.csproj", "{A5FF2279-F956-4C9D-8BE7-17E9D376035A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerazeniVlakenWaitPulse", "SerazeniVlakenWaitPulse\SerazeniVlakenWaitPulse.csproj", "{6F028DE3-FB75-4411-A980-F77AFC8BD18B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,9 +109,31 @@ Global
 		{4C20D8D0-8B05-4BF2-9075-7079A71E3585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C20D8D0-8B05-4BF2-9075-7079A71E3585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C20D8D0-8B05-4BF2-9075-7079A71E3585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E247159-FD6C-4C19-96C5-0E1D4CA18458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E247159-FD6C-4C19-96C5-0E1D4CA18458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E247159-FD6C-4C19-96C5-0E1D4CA18458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E247159-FD6C-4C19-96C5-0E1D4CA18458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5FF2279-F956-4C9D-8BE7-17E9D376035A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5FF2279-F956-4C9D-8BE7-17E9D376035A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5FF2279-F956-4C9D-8BE7-17E9D376035A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5FF2279-F956-4C9D-8BE7-17E9D376035A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E247159-FD6C-4C19-96C5-0E1D4CA18458} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{A5FF2279-F956-4C9D-8BE7-17E9D376035A} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{6F028DE3-FB75-4411-A980-F77AFC8BD18B} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

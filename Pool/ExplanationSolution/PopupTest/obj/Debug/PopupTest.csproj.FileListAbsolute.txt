@@ -13,3 +13,18 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTes
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\PopupTest\obj\Debug\PopupTest.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csprojAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\bin\Debug\PopupTest.exe.config
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\bin\Debug\PopupTest.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\bin\Debug\PopupTest.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\App.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest_MarkupCompile.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest_MarkupCompile.lref
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.g.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.Properties.Resources.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.GenerateResource.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.CoreCompileInputs.cache

@@ -21,3 +21,27 @@ C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\INotifyPropertyChanged\bin\D
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Data.dll
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Diagrams.Core.dll
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csprojResolveAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csprojAssemblyReference.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.exe.config
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Diagrams.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Diagrams.Extensions.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.GridView.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Data.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Diagrams.Core.dll
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\MainWindow.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\App.g.cs
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged_MarkupCompile.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged_MarkupCompile.lref
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\MainWindow.baml
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.g.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.Properties.Resources.resources
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.GenerateResource.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CopyComplete
