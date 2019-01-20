@@ -26,11 +26,22 @@ namespace Matika.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Data\\Enumerat" +
-            "edWordsDb.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v12.0\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Data\\En" +
+            "umeratedWordsDb.mdf;Integrated Security=True")]
         public string EnumeratedWordsDbConnectionString {
             get {
                 return ((string)(this["EnumeratedWordsDbConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\Data\\Enumera" +
+            "tedWordsDb - Copy.mdf\";Integrated Security=True")]
+        public string EnumeratedWordsDb___CopyConnectionString {
+            get {
+                return ((string)(this["EnumeratedWordsDb___CopyConnectionString"]));
             }
         }
     }

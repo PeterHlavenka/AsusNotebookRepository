@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EnumeratedWordsDb" Class="EnumeratedWordsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\EnumeratedWordsDb.mdf;Integrated Security=True" SettingsObjectName="Matika.Properties.Settings" SettingsPropertyName="EnumeratedWordsDbConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EnumeratedWordsDb - Copy" Class="EnumeratedWordsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;|DataDirectory|\Data\EnumeratedWordsDb - Copy.mdf&quot;;Integrated Security=True" SettingsObjectName="Matika.Properties.Settings" SettingsPropertyName="EnumeratedWordsDb___CopyConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.B_Words" Member="B_Words">
     <Type Name="B_Word">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -25,6 +25,15 @@
       <Column Name="IsEnumerated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="CoveredName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
       <Column Name="Help" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.P_Words" Member="P_Words">
+    <Type Name="P_Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnumerated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoveredName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Help" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

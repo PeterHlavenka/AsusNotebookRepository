@@ -23,7 +23,7 @@ namespace Matika.Gui
 
         public EnumeratedWordsViewModel()
         {
-            EnumChars = new[] {"B", "L", "M"};
+            EnumChars = new[] {"B", "L", "M", "P"};
             GetQueue(null);
             ChangeItem(Queue);
         }
@@ -114,6 +114,9 @@ namespace Matika.Gui
                 case "M":
                     test = dc.M_Words.Select(d => d).ToArray();
                     break;
+                case "P":
+                    test = dc.P_Words.Select(d => d).ToArray();
+                    break;
             }
 
 
@@ -139,6 +142,8 @@ namespace Matika.Gui
                 }
             }
         }
+
+
 
         public async void LeftButtonClicked()
         {
