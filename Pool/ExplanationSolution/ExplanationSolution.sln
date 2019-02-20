@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandShaking", "HandShaking\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerazeniVlakenWaitPulse", "SerazeniVlakenWaitPulse\SerazeniVlakenWaitPulse.csproj", "{6F028DE3-FB75-4411-A980-F77AFC8BD18B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAsyncResult", "IAsyncResult\IAsyncResult.csproj", "{EB5B3C4D-4ED8-4C70-90B8-105817170145}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F028DE3-FB75-4411-A980-F77AFC8BD18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +140,7 @@ Global
 		{0A4A6E93-BC6F-474E-87C8-69B2D70048F9} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{A5FF2279-F956-4C9D-8BE7-17E9D376035A} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{6F028DE3-FB75-4411-A980-F77AFC8BD18B} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{EB5B3C4D-4ED8-4C70-90B8-105817170145} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
