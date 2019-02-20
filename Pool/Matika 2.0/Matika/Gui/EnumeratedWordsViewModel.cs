@@ -143,7 +143,10 @@ namespace Matika.Gui
             }
         }
 
-
+        public void SettingsButtonClicked()
+        {
+            Console.WriteLine(@"Not implemented");
+        }
 
         public async void LeftButtonClicked()
         {
