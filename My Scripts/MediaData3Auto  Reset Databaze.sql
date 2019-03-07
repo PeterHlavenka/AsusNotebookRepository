@@ -1,5 +1,5 @@
 
-
+-- USE master DROP DATABASE MediaData3Auto_ss
 -- create snapshot MEDIADATA
 USE master
 CREATE DATABASE MediaData3Auto_ss ON

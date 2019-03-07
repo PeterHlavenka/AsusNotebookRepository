@@ -1,7 +1,7 @@
 ﻿/* 
     Author:		 Peter Hlavenka
     Created:	 16.11.2018
-    Description: 50127 (TFS) 
+    Description: 50127 (TFS)															Vetsinou staci upravit trigger a nasadit ho bez changescriptu
 */
 set transaction isolation level serializable;
 

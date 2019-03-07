@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerazeniVlakenWaitPulse", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAsyncResult", "IAsyncResult\IAsyncResult.csproj", "{EB5B3C4D-4ED8-4C70-90B8-105817170145}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterWithDependencyProperty", "CounterWithDependencyProperty\CounterWithDependencyProperty.csproj", "{AFAB3A33-291D-4821-877E-647A17368841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemThreadingTimer", "SystemThreadingTimer\SystemThreadingTimer.csproj", "{236A5B57-9141-441E-8819-2B19D6B1BEAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +135,14 @@ Global
 		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB5B3C4D-4ED8-4C70-90B8-105817170145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAB3A33-291D-4821-877E-647A17368841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAB3A33-291D-4821-877E-647A17368841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAB3A33-291D-4821-877E-647A17368841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAB3A33-291D-4821-877E-647A17368841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
