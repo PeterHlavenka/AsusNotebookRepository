@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterWithDependencyProper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemThreadingTimer", "SystemThreadingTimer\SystemThreadingTimer.csproj", "{236A5B57-9141-441E-8819-2B19D6B1BEAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableValues", "NullableValues\NullableValues.csproj", "{F608ACBE-F990-4E79-AC8E-5D81F31188D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,10 @@ Global
 		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{236A5B57-9141-441E-8819-2B19D6B1BEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F608ACBE-F990-4E79-AC8E-5D81F31188D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F608ACBE-F990-4E79-AC8E-5D81F31188D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F608ACBE-F990-4E79-AC8E-5D81F31188D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F608ACBE-F990-4E79-AC8E-5D81F31188D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
