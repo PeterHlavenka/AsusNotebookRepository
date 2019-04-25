@@ -4,13 +4,13 @@ namespace Matika.Gui
 {
     public class MainViewModel : Screen
     {
-        public MainViewModel(MatikaViewModel matikaViewModel, EnumeratedWordsViewModel enumeratedWordsViewModel)
+        public MainViewModel(MatikaViewModel matikaViewModel) //, EnumeratedWordsViewModel enumeratedWordsViewModel)
         {
             MatikaViewModel = matikaViewModel;
-            EnumeratedWordsViewModel = enumeratedWordsViewModel;                        
+           // EnumeratedWordsViewModel = enumeratedWordsViewModel;                        
         }
 
         public MatikaViewModel MatikaViewModel { get; set; }
-        public EnumeratedWordsViewModel EnumeratedWordsViewModel { get; set; }
+        //public EnumeratedWordsViewModel EnumeratedWordsViewModel { get; set; }
     }
 }

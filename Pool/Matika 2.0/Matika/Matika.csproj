@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Matika</RootNamespace>
     <AssemblyName>Matika</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -29,6 +29,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,16 +61,16 @@
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Mediaresearch.Framework.DataAccess.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Framework.Gui.2.7.0\lib\net40-Client\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
     </Reference>
     <Reference Include="Mediaresearch.Framework.Gui, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Framework.Gui.2.7.0\lib\net40-Client\Mediaresearch.Framework.Gui.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\Mediaresearch.Framework.Gui.dll</HintPath>
     </Reference>
     <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.2\lib\net40-client\Mediaresearch.Framework.Utilities.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\Mediaresearch.Framework.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -185,7 +186,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Gifs\ShowingMonkey.gif" />
@@ -194,13 +197,6 @@
     <Resource Include="Resources\Settings.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\EnumeratedWordsDb - Copy.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\EnumeratedWordsDb - Copy_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>EnumeratedWordsDb - Copy.mdf</DependentUpon>
-    </Content>
     <Content Include="Data\EnumeratedWordsDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
