@@ -16,8 +16,8 @@
         <TabItem Header="Matika">
             <matika:MatikaView DataContext="{Binding MatikaViewModel}" />
         </TabItem>
-        <!--<TabItem Header="Vyjmenovaná Slova" IsSelected="True">
+        <TabItem Header="Vyjmenovaná Slova" IsSelected="True">
             <matika:EnumeratedWordsView DataContext="{Binding EnumeratedWordsViewModel}" />
-        </TabItem>-->
+        </TabItem>
     </TabControl>
 </Window>
