@@ -267,7 +267,7 @@ namespace Matika.Data
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.L_Words")]
 	public partial class L_Word : INotifyPropertyChanging, INotifyPropertyChanged, IWord
-    {
+	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
@@ -425,7 +425,7 @@ namespace Matika.Data
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.M_Words")]
 	public partial class M_Word : INotifyPropertyChanging, INotifyPropertyChanged, IWord
-    {
+	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
@@ -582,8 +582,8 @@ namespace Matika.Data
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.P_Words")]
-	public partial class P_Word : INotifyPropertyChanging, INotifyPropertyChanged, IWord
-    {
+	public partial class P_Word : INotifyPropertyChanging, INotifyPropertyChanged,IWord
+	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
