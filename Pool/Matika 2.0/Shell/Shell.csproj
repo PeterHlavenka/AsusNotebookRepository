@@ -74,11 +74,17 @@
     <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Matika 2.0\Shell\bin\Debug\Mediaresearch.Framework.Utilities.dll</HintPath>
+    <Reference Include="Mediaresearch.Framework.DataAccess.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Gui.2.7.0.4\lib\net40-client\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Gui, Version=2.7.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Gui.2.7.0.4\lib\net40-client\Mediaresearch.Framework.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.2.2\lib\net40-client\Mediaresearch.Framework.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
