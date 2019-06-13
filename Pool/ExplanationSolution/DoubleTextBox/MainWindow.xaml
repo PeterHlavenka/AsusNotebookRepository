@@ -1,0 +1,33 @@
+﻿<Window
+    x:Class="DoubleTextBox.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DoubleTextBox"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <local:CommaToDotConverter x:Key="commaToDotConverter" />
+    </Window.Resources>
+    <Grid>
+        <Label Margin="10,100">Na prevedeni carky na tecku, je pouzity CommaToDotConverter. Pokud je zapnuta ceska klavesnice, tak vlozi cele cislo</Label>
+        <TextBox
+            Width="120"
+            Height="23"
+            Margin="250,175,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Language="{Binding Info}"
+            Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=LostFocus, StringFormat=N1, Converter={StaticResource commaToDotConverter}}"
+            TextWrapping="Wrap" />
+        <TextBox
+            Height="23"
+            Margin="250,175,0,0"
+            HorizontalAlignment="Left"
+            Text="Press for notify code behind proptery.    UpdateSourceTrigger=LostFocus"
+            TextWrapping="Wrap" />
+    </Grid>
+</Window>

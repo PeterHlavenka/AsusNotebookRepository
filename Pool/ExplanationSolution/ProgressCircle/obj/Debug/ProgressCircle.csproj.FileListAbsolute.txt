@@ -38,7 +38,6 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\App.g.cs
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle_MarkupCompile.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle_MarkupCompile.lref
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\MainWindow.baml
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.g.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.GenerateResource.cache
