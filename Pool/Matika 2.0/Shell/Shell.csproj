@@ -154,17 +154,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Matika\Matika.csproj">
-      <Project>{9301bdb2-2004-4d71-abac-b9a94d39bd1b}</Project>
-      <Name>Matika</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gui\Gui.csproj">
+      <Project>{9301bdb2-2004-4d71-abac-b9a94d39bd1b}</Project>
+      <Name>Gui</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
