@@ -12,7 +12,7 @@ namespace Matika
 
             Result = first - second;
 
-            Task = string.Join(" ", first, Sign, second, EqualSign);
+            TaskString = string.Join(" ", first, Sign, second, EqualSign);
         }
 
         private static string Sign => " - ";

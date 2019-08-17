@@ -113,15 +113,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Configurations\MatikaConfiguration.cs" />
+    <Compile Include="Conversion.cs" />
     <Compile Include="Data\EnumeratedWordsDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumeratedWordsDB.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Gui\Delka.cs" />
     <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
       <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\EnumeratedWordsViewModel.cs" />
+    <Compile Include="Gui\IConvertable.cs" />
     <Compile Include="Gui\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,11 @@
       <DependentUpon>SettingsDialogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\SettingsDialogViewModel.cs" />
+    <Compile Include="Gui\UnitConversionView.xaml.cs">
+      <DependentUpon>UnitConversionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\UnitConversionViewModel.cs" />
+    <Compile Include="Gui\ViewModelBase.cs" />
     <Compile Include="IWord.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Addition.cs" />
@@ -156,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Gui\SettingsDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\UnitConversionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

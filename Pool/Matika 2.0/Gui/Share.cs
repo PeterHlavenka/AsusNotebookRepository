@@ -15,7 +15,7 @@ namespace Matika
 
             Result = res;
 
-            Task = string.Join(" ", fir, Sign, sec, EqualSign);
+            TaskString = string.Join(" ", fir, Sign, sec, EqualSign);
         }
     }
 }

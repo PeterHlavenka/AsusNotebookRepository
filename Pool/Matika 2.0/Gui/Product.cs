@@ -20,7 +20,7 @@ namespace Matika
                 Result = first * second;
             } while (Result < maximum);
 
-            Task = string.Join(" ", first, Sign, second, EqualSign);
+            TaskString = string.Join(" ", first, Sign, second, EqualSign);
         }
 
         private static string Sign => " . ";

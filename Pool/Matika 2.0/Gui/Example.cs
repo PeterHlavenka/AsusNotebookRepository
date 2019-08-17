@@ -7,7 +7,7 @@ namespace Matika
     public class Example
     {
         public int Result { get; protected set; }
-        public string Task { get; set; }
+        public string TaskString { get; set; }
         protected static string EqualSign => " =  ";
         private static int Diff { get; set; }
 

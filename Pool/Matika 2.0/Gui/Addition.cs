@@ -12,7 +12,7 @@ namespace Matika
                 var second = new Random().Next(difficulty) + 1;
 
                 Result = first + second;
-                Task = string.Join(" ", first, Sign, second, EqualSign);
+                TaskString = string.Join(" ", first, Sign, second, EqualSign);
             } while (Result < difficulty / 1.2);
         }
 

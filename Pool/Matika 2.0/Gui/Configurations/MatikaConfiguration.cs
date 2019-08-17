@@ -13,4 +13,15 @@ namespace Matika.Configurations
         public int StartDifficulty => (int)this["StartDifficulty"];
 
     }
+
+    public class UnitConversionConfiguration : ConfigBase
+    {
+        private readonly string m_name = "UnitConversionSection";
+
+        public override string GetConfigName() => m_name;
+
+        [ConfigurationProperty(nameof(StartDifficulty), IsRequired = true)]
+        public int StartDifficulty => (int)this["StartDifficulty"];
+
+    }
 }
