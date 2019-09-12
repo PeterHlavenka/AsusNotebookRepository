@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfUniverse.Gui.Views.EditPropertyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AddPropertyDialogWindow" Height="900" Width="800" 
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <DataTemplate x:Key="CheckColumntemplate">
+            <CheckBox IsChecked="{Binding IsChecked, UpdateSourceTrigger=PropertyChanged}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+
+    <Border Padding="10">
+        <StackPanel  Margin="15,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="0,0,0,10" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20">Selected planet:</TextBlock>
+                <TextBlock Margin="20,0,0,10" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Text="{Binding SelectedPlanet.Jmeno}"></TextBlock>
+            </StackPanel>
+
+
+            <DataGrid ItemsSource="{Binding ListOfAllPossibleVlastnosts}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedProperty, UpdateSourceTrigger=PropertyChanged}" VerticalScrollBarVisibility="Visible" MaxHeight="400"  >
+                <DataGrid.Columns >
+                    <!--Id column-->
+
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}" IsReadOnly="False"/>
+                    <!--Nazev column-->
+                    <DataGridTextColumn Header="Nazev" Binding="{Binding Nazev, UpdateSourceTrigger=PropertyChanged , Mode=TwoWay}" IsReadOnly="False"/>
+
+                    <!--CheckBox column-->
+                    <DataGridTemplateColumn Header="IsChecked" CellTemplate="{StaticResource CheckColumntemplate}">
+                        <!--<DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding IsChecked, UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>-->
+                    </DataGridTemplateColumn>
+
+
+                    <!--Empty column-->
+                    <DataGridTemplateColumn Header="" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!--CheckBox second column , mnohem mene psani-->
+                    <DataGridTemplateColumn Header="Second Column" CellTemplate="{StaticResource CheckColumntemplate}"/>
+
+                    <!--<DataGridComboBoxColumn ItemsSource="{Binding Items}"></DataGridComboBoxColumn>-->
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <ContentControl Template="{StaticResource DialogWindowTemplate}">
+                <!--Buttons first row-->
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,10">
+                    <Button Width="120" Height="30" Margin="10,0" Command="{Binding SaveChanges}" >Save name changes</Button>
+                    <Button Width="120" Height="30" Margin="20,0" Command="{Binding RemoveSelected}">Remove selected</Button>
+                    <Button Width="120" Height="30" Margin="10,0" Command="{Binding CheckAll}">Check all</Button>
+                    <Button Width="120" Height="30" Margin="20,0" Command="{Binding UncheckAll}">Uncheck all</Button>
+                </StackPanel>
+            </ContentControl>
+
+
+            <!--New property checkboxes-->
+            <TextBlock Margin="0,40,0,0" Text="New property:" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Padding="2" Text="Please type new property's name:      "/>
+                <TextBox Margin="10,0" Width="250" Text="{Binding NameOfNewProperty, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" ToolTip="{Binding Path=Error}" />
+            </StackPanel>
+
+            <!--Buttons second row-->
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Width="120" Height="30" Margin="10,0" Command="{Binding AddNewProperty}" >Add new property</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                <!--SelectedProperty extract-->
+                <TextBlock  Text="Selected property:" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Margin="10,0" Width="250" Text="{Binding SelectedProperty.Nazev, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                </StackPanel>
+                <!--PropertiesCount extract-->
+                <TextBlock  Text="Properties count:" FontWeight="Bold" Margin="10,0"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="10,0,0,0" Width="250" Text="{Binding ListOfAllPossibleVlastnosts.Count}" />
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Margin="0,40,0,0" Text="Errors:" FontWeight="Bold"/>
+            <TextBlock></TextBlock>
+
+
+        </StackPanel>
+    </Border>
+</Window>

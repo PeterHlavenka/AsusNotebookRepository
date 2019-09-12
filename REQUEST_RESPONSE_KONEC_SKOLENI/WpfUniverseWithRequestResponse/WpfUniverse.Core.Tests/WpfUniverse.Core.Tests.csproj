@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36FA9C11-62A5-49D6-BD7B-87CFC02ABCAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfUniverse.Core.Tests</RootNamespace>
+    <AssemblyName>WpfUniverse.Core.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="BLToolkit.CP.4, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b1d3f6ab3aadaca3, processorArchitecture=MSIL">
+      <HintPath>..\packages\BLToolkit.CP.4.dll.4.3.3.0\lib\BLToolkit.CP.4.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Communication.Common, Version=2.3.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Communication.Common.2.3.3.1\lib\net45\Mediaresearch.Framework.Communication.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.BLToolkit, Version=2.3.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.BLToolkit.2.3.2.3\lib\net40-Client\Mediaresearch.Framework.DataAccess.BLToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.Core, Version=2.3.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.Core.2.3.2.1\lib\net40-Client\Mediaresearch.Framework.DataAccess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Mapping, Version=2.3.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Mapping.2.3.1.5\lib\net45\Mediaresearch.Framework.Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.0.0\lib\net40-Client\Mediaresearch.Framework.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Validation, Version=2.3.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Validation.2.3.1.5\lib\net40-Client\Mediaresearch.Framework.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceActions\SelectAllGalaxiesServiceActionTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\WpfUniverse\WpfUniverse.Core\WpfUniverse.Core.csproj">
+      <Project>{5E17A705-3A02-4377-8807-C9E4C0E13820}</Project>
+      <Name>WpfUniverse.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WpfUniverse\WpfUniverse.Entities\WpfUniverse.Entities.csproj">
+      <Project>{b3ea62ea-080e-4e65-8baf-fc2f0eabf172}</Project>
+      <Name>WpfUniverse.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUniverse.Common\WpfUniverse.Common.csproj">
+      <Project>{265b6c42-f97a-498f-8309-165c47613c96}</Project>
+      <Name>WpfUniverse.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUniverse.Gui\WpfUniverse.Gui.csproj">
+      <Project>{e809a1c3-a3b6-4845-a6ca-0698f298eca9}</Project>
+      <Name>WpfUniverse.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUniverse.Shell\WpfUniverse.Shell.csproj">
+      <Project>{c6a2ccf4-1c2a-48e6-9471-5a15e5faea78}</Project>
+      <Name>WpfUniverse.Shell</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

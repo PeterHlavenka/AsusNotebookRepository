@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfUniverse.Gui.Views.GalaxyDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="GalaxyDialogView" Height="600" Width="500" WindowStartupLocation="CenterScreen">
+
+    
+    <Window.InputBindings>
+        <KeyBinding Key="Escape" Command="{Binding Path=StornoGalaxyCommand}"/>
+    </Window.InputBindings>
+
+    
+
+    <Border Padding="10">
+        <StackPanel  Margin="60,0">
+            <TextBlock Margin="0,0,0,10" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20">Galaxy:</TextBlock>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">Id:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding Id, Mode=OneWay}" IsReadOnly="True"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">Jmeno:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding Jmeno, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" ToolTip="{Binding Path=Error}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaX:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaX, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" ToolTip="{Binding Path=Error}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaY:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaY,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" ToolTip="{Binding Path=ErrorOverride}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaZ:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaZ}"></TextBox>
+            </StackPanel>
+
+            <!--contentControl-->
+            <ContentControl Template="{StaticResource DialogWindowTemplate}">
+                <!--Button-->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <Button Width="140" Height="30" Margin="10,0" Command="{Binding StornoGalaxyCommand}" >STORNO</Button>
+                    <Button Width="140" Height="30" Margin="30,0" Command="{Binding SaveGalaxyCommand}" CommandParameter="{Binding Path=IsValid}">SAVE</Button>
+                </StackPanel>
+            </ContentControl>
+
+
+            <TextBlock Margin="0,30,0,10">Error info:</TextBlock>
+
+
+            <TextBlock Text="{Binding Path=Error}"/>
+
+        </StackPanel>
+    </Border>
+
+
+</Window>

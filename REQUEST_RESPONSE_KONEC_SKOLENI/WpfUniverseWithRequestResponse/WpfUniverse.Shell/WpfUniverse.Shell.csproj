@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6A2CCF4-1C2A-48E6-9471-5A15E5FAEA78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfUniverse.Shell</RootNamespace>
+    <AssemblyName>WpfUniverse.Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLToolkit.CP.4, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b1d3f6ab3aadaca3, processorArchitecture=MSIL">
+      <HintPath>..\packages\BLToolkit.CP.4.dll.4.3.3.0\lib\BLToolkit.CP.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Communication.Common, Version=2.3.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Communication.Common.2.3.3.1\lib\net45\Mediaresearch.Framework.Communication.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.BLToolkit, Version=2.3.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.BLToolkit.2.3.2.3\lib\net40-Client\Mediaresearch.Framework.DataAccess.BLToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.BLToolkit.Castle, Version=2.3.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.BLToolkit.Castle.2.3.2.2\lib\net40-Client\Mediaresearch.Framework.DataAccess.BLToolkit.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.Core, Version=2.3.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.Core.2.3.2.1\lib\net40-Client\Mediaresearch.Framework.DataAccess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.ServerService.Communication, Version=2.3.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.ServerService.Communication.2.3.3.1\lib\net45\Mediaresearch.Framework.ServerService.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.0.0\lib\net40-Client\Mediaresearch.Framework.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Validation, Version=2.3.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Validation.2.3.1.5\lib\net40-Client\Mediaresearch.Framework.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServerProxy\ServerProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Installers\Installer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\WpfUniverse\WpfUniverse.Core\WpfUniverse.Core.csproj">
+      <Project>{5e17a705-3a02-4377-8807-c9e4c0e13820}</Project>
+      <Name>WpfUniverse.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUniverse.Common\WpfUniverse.Common.csproj">
+      <Project>{265B6C42-F97A-498F-8309-165C47613C96}</Project>
+      <Name>WpfUniverse.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUniverse.Gui\WpfUniverse.Gui.csproj">
+      <Project>{e809a1c3-a3b6-4845-a6ca-0698f298eca9}</Project>
+      <Name>WpfUniverse.Gui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

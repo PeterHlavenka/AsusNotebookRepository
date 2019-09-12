@@ -1,0 +1,71 @@
+﻿<Application x:Class="WpfUniverse.Shell.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfUniverse.Shell"
+             xmlns:converters="clr-namespace:WpfUniverse.Gui.Converters;assembly=WpfUniverse.Gui">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:AppBootstrapper x:Key="AppBootstrapper"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+            <Style TargetType="Button" x:Key="ButtonStyle1">
+                <Style.Triggers>
+
+                    <Trigger Property="IsEnabled" Value="True">
+                        <!-- Pokud ma vlastnost IsEnabled  (na buttonu ) hodnotu true -->
+                        <Setter Property="Background" Value="BlueViolet"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Trigger>
+
+
+                    <DataTrigger Binding="{Binding Path=SelectedGalaxy}" Value="{x:Null}">
+                        <!--  Pokud SelectedGalaxy  (hodnota ktera enabluje tlacitko Prida tPlanetu je null-->
+                        <Setter Property="Background" Value="Red"/>
+                        <!-- Bude pozadi komponenty Button cervene (Pokud neni disabled , tam si to prepisuje system)-->
+                    </DataTrigger>
+
+                </Style.Triggers>
+            </Style>
+
+
+
+
+            <Style TargetType="TextBlock" >
+                <Setter Property="FontStyle" Value="Italic"/>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
+
+
+
+
+            <Style TargetType="Button" x:Key="ButtonStyle2">
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="True">
+                        <Setter Property="Background" Value="Green"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+
+            <!-- Vypis errors v  dialogovych oknech -->
+            <ControlTemplate TargetType="ContentControl" x:Key="DialogWindowTemplate">
+                <StackPanel>
+                    <Border BorderThickness="1" BorderBrush="Red" Visibility="{Binding Path=IsValid, Converter={StaticResource BoolToVisibilityConverter}}">
+                        <TextBlock Text="{Binding Path=Error}"/>
+                    </Border>
+
+                    <ContentPresenter />
+                    <!--ContentPresenter nasleduje v okne po tomto templatu-->
+                </StackPanel>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
