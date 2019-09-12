@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfUniverse.Views.GalaxyDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfUniverse.Views"
+        mc:Ignorable="d"
+        Title="GalaxyDialogWindow" Height="400" Width="500" WindowStartupLocation="CenterScreen">
+    
+    <Border Padding="10">
+        <StackPanel  Margin="60,0">
+            <TextBlock Margin="0,0,0,10" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20">Galaxie:</TextBlock>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">Id:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding Id}" IsReadOnly="True"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">Jmeno:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding Jmeno}"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaX:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaX}"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaY:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaY}"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Width="160" Height="30" Margin="10,0">PolohaZ:</TextBlock>
+                <TextBox Width="140" Margin="10,0" Text="{Binding PolohaZ}"></TextBox>
+            </StackPanel>
+
+            <!--Button-->
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Width="140" Height="30" Margin="10,0" Command="{Binding StornoGalaxyCommand}" >STORNO</Button>
+                <Button Width="140" Height="30" Margin="30,0" Command="{Binding SaveGalaxyCommand}">SAVE</Button>
+                
+            </StackPanel>
+
+            
+        </StackPanel>
+    </Border>
+</Window>
