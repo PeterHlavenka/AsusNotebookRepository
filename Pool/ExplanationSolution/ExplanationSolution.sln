@@ -61,6 +61,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{9D5DFFC4-021
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleTextBox", "DoubleTextBox\DoubleTextBox.csproj", "{6170F44F-D0B0-4103-BF39-7AB2B5E780FF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{A945145E-EFB2-4257-8ED9-B0A66806C910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedRadGridViewPlusBehaviors", "ExtendedRadGridViewPlusBehaviors\ExtendedRadGridViewPlusBehaviors.csproj", "{1D881ECA-9039-4E11-809F-4D1ADBDE64FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +179,10 @@ Global
 		{6170F44F-D0B0-4103-BF39-7AB2B5E780FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6170F44F-D0B0-4103-BF39-7AB2B5E780FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6170F44F-D0B0-4103-BF39-7AB2B5E780FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -196,6 +204,7 @@ Global
 		{8AD446FC-E21F-4AE8-BDC7-FC0CC670EB29} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{38360F62-7EFA-40E8-90CA-761424EC393E} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{6170F44F-D0B0-4103-BF39-7AB2B5E780FF} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
+		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
