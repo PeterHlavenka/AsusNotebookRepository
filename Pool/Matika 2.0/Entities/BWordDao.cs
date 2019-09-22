@@ -1,9 +1,11 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
 
 namespace Entities
 {
-   public class BWordDao: EntityIdentityKeyDaoBase<BWord, EnumeratedWordsDataModel, int, BWord>, IWordDao
+   public class BWordDao: EntityIdentityKeyDaoBase<BWord, EnumeratedWordsDataModel, int, BWord>, IBWordDao
     {
         public BWordDao(string dbAlias)
             : base(dbAlias)
@@ -15,9 +17,17 @@ namespace Entities
         {
         }
 
+        public IEnumerable<BWord> GetBWords()
+        {
+            using (var model = CreateDbContext())
+            {                
+                return model.BWord.Select(d => d);           
+            }
+        }
     }
 
-    public interface IWordDao : ISimpleDao<BWord, int>
+    public interface IBWordDao : ISimpleDao<BWord, int>
     {
+        IEnumerable<BWord> GetBWords();
     }
 }

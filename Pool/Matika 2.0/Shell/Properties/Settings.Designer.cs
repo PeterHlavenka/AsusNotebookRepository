@@ -22,5 +22,17 @@ namespace Shell.Properties {
                 return defaultInstance;
             }
         }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=EnumeratedWords;Integrated Security=True")]
+        public string ConnectionDb
+        {
+            get
+            {
+                return ((string)(this["ConnectionDb"]));
+            }
+        }
     }
 }

@@ -5,6 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Caliburn.Micro;
+using Entities;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
 using Action = System.Action;
 
 namespace Matika.Gui
@@ -12,6 +14,7 @@ namespace Matika.Gui
     public class EnumeratedWordsViewModel : Screen
 
     {
+        private readonly IBWordDao m_bWordDao;
         private static readonly Random Random = new Random();
         private int m_counter;
 
@@ -20,8 +23,9 @@ namespace Matika.Gui
         private string m_help;
         private IWord m_item;
 
-        public EnumeratedWordsViewModel()
+        public EnumeratedWordsViewModel(IDaoSource daoSource)
         {
+            m_bWordDao = daoSource.GetDaoByEntityType<IBWordDao, BWord, int>();
             EnumChars = new[] {"B", "L", "M", "P"};
             GetQueue(null);
             ChangeItem(Queue);
@@ -96,8 +100,6 @@ namespace Matika.Gui
 
         private void GetQueue(string parameter)
         {
-            var dc = new EnumeratedWordsDBDataContext();
-
             var first = string.IsNullOrEmpty(parameter) ? EnumChars.Shuffle().First() : parameter;
 
             IWord[] test = null;
@@ -105,17 +107,18 @@ namespace Matika.Gui
             switch (first)
             {
                 case "B":
-                    test = dc.B_Words.Select(d => d).ToArray();
+                   
+                    test = m_bWordDao.GetBWords().ToArray();
                     break;
-                case "L":
-                    test = dc.L_Words.Select(d => d).ToArray();
-                    break;
-                case "M":
-                    test = dc.M_Words.Select(d => d).ToArray();
-                    break;
-                case "P":
-                    test = dc.P_Words.Select(d => d).ToArray();
-                    break;
+                    //case "L":
+                    //    test = dc.L_Words.Select(d => d).ToArray();
+                    //    break;
+                    //case "M":
+                    //    test = dc.M_Words.Select(d => d).ToArray();
+                    //    break;
+                    //case "P":
+                    //    test = dc.P_Words.Select(d => d).ToArray();
+                    //    break;
             }
 
 

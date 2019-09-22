@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BLToolkit.DataAccess;
+﻿using BLToolkit.DataAccess;
 using Mediaresearch.Framework.DataAccess.BLToolkit;
 using Mediaresearch.Framework.DataAccess.BLToolkit.DaoFactory;
 
 namespace Entities
 {
     [DaoFactory(DaoType = typeof(BWordDao))]
-    [TableName("BWord", Owner = "dbo")]
-   public class BWord : LightDatabaseEntityIdentityIntKey<BWord>
+    [TableName("B_Word", Owner = "dbo")]
+   public class BWord : LightDatabaseEntityIdentityIntKey<BWord>, IWord
     {
         public string Name { get; set; }
         public bool IsEnumerated { get; set; }
