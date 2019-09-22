@@ -114,11 +114,6 @@
     </ApplicationDefinition>
     <Compile Include="Configurations\MatikaConfiguration.cs" />
     <Compile Include="Conversion.cs" />
-    <Compile Include="Data\EnumeratedWordsDB.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EnumeratedWordsDB.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Gui\Delka.cs" />
     <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
       <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>
@@ -192,14 +187,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Data\EnumeratedWordsDB.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>EnumeratedWordsDB.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Data\EnumeratedWordsDB.dbml.layout">
-      <DependentUpon>EnumeratedWordsDB.dbml</DependentUpon>
-    </None>
     <None Include="Matika_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -219,13 +206,6 @@
     <Resource Include="Resources\Settings.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\EnumeratedWordsDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\EnumeratedWordsDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>EnumeratedWordsDb.mdf</DependentUpon>
-    </Content>
     <Resource Include="Resources\leftArrow.png" />
     <Resource Include="Resources\rightArrow.png" />
   </ItemGroup>

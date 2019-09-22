@@ -5,7 +5,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Caliburn.Micro;
-using Matika.Data;
 using Action = System.Action;
 
 namespace Matika.Gui
