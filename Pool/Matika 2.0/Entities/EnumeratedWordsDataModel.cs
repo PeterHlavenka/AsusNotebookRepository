@@ -47,5 +47,8 @@ namespace Entities
         }
 
         public Table<BWord> BWord => GetTable<BWord>();
+        public Table<LWord> LWord => GetTable<LWord>();
+        public Table<PWord> PWord => GetTable<PWord>();
+        public Table<MWord> MWord => GetTable<MWord>();
     }
 }

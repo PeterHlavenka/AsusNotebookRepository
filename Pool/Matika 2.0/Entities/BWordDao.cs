@@ -17,7 +17,7 @@ namespace Entities
         {
         }
 
-        public IEnumerable<BWord> GetBWords()
+        public IEnumerable<BWord> GetWords()
         {
             using (var model = CreateDbContext())
             {                
@@ -28,6 +28,6 @@ namespace Entities
 
     public interface IBWordDao : ISimpleDao<BWord, int>
     {
-        IEnumerable<BWord> GetBWords();
+        IEnumerable<BWord> GetWords();
     }
 }
