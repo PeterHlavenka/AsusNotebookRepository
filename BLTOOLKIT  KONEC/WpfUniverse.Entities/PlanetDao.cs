@@ -26,7 +26,7 @@ namespace WpfUniverse.Entities
             using (UniverseDataModel model = CreateDbContext())
             {
                 var query = (from pl in model.Planeta                                                               // Vybirame z tabulky Planeta
-
+                            
                                  // VYTRIDIME SI KOLEKCI VLASTNOSTI
                              join vp in model.VlastnostiPlanet on pl.Id equals vp.PlanetaId into vpl                // Z tabulky VlastnostiPlanet vyber ty polozky, kde se Id planety shoduje s PlanetaId, uloz si je prozatim do kolekce vpl.   Kolekce obsahuje jen VlastnostiPlanet kde pl.Id == vp.PlanetaId                
                              from vp in vpl.DefaultIfEmpty()                                                        // Z VlastnostiPlanet ve vpl, (pokud je prazdna  (nejsou zadne vlastnosti) vyber defaultni),

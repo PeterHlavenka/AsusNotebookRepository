@@ -1,4 +1,4 @@
-﻿namespace Matika
+﻿namespace Entities
 {
     public interface IWord
     {

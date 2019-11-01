@@ -1,4 +1,11 @@
-﻿using Caliburn.Micro;
+﻿using System.Reflection;
+using Caliburn.Micro;
+using Entities;
+using Matika.Properties;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
+using Mediaresearch.Framework.DataAccess.BLToolkit.DaoFactory;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Transactions;
+
 
 namespace Matika.Gui
 {
@@ -13,7 +20,7 @@ namespace Matika.Gui
 
         public MainViewModel(MatikaViewModel matikaViewModel, UnitConversionViewModel unitConversionViewModel)
         {
-            MatikaViewModel = matikaViewModel;           
+            MatikaViewModel = matikaViewModel;
             UnitConversionViewModel = unitConversionViewModel;
         }
 

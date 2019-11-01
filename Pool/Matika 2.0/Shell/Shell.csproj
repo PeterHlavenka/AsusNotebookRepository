@@ -65,6 +65,9 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BLToolkit.CP.4, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b1d3f6ab3aadaca3, processorArchitecture=MSIL">
+      <HintPath>..\packages\BLToolkit.CP.4.dll.4.3.3.0\lib\BLToolkit.CP.4.dll</HintPath>
+    </Reference>
     <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
     </Reference>
@@ -77,14 +80,26 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Mediaresearch.Framework.DataAccess.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Framework.Gui.2.7.0.4\lib\net40-client\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
+    <Reference Include="Mediaresearch.Framework.DataAccess.BLToolkit, Version=2.5.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.BLToolkit.2.5.5.1\lib\net40-client\Mediaresearch.Framework.DataAccess.BLToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.BLToolkit.Castle, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.BLToolkit.Castle.2.5.2\lib\net40-client\Mediaresearch.Framework.DataAccess.BLToolkit.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.Common, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.Common.2.5.1.1\lib\net40\Mediaresearch.Framework.DataAccess.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.DataAccess.Core, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.DataAccess.Core.2.5.1.1\lib\net40-client\Mediaresearch.Framework.DataAccess.Core.dll</HintPath>
     </Reference>
     <Reference Include="Mediaresearch.Framework.Gui, Version=2.7.0.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Framework.Gui.2.7.0.4\lib\net40-client\Mediaresearch.Framework.Gui.dll</HintPath>
     </Reference>
-    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.2.2\lib\net40-client\Mediaresearch.Framework.Utilities.dll</HintPath>
+    <Reference Include="Mediaresearch.Framework.Utilities, Version=3.0.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Utilities.3.0.3.1\lib\net40-client\Mediaresearch.Framework.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediaresearch.Framework.Validation, Version=2.3.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mediaresearch.Framework.Validation.2.3.1.5\lib\net40-Client\Mediaresearch.Framework.Validation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -161,6 +176,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{ca8ee1af-cda1-408d-b976-7bf875cce455}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gui\Gui.csproj">
       <Project>{9301bdb2-2004-4d71-abac-b9a94d39bd1b}</Project>
       <Name>Gui</Name>

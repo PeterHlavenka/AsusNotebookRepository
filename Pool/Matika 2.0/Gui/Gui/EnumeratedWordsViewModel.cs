@@ -5,7 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Caliburn.Micro;
-using Matika.Data;
+using Entities;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
 using Action = System.Action;
 
 namespace Matika.Gui
@@ -13,6 +14,7 @@ namespace Matika.Gui
     public class EnumeratedWordsViewModel : Screen
 
     {
+       
         private static readonly Random Random = new Random();
         private int m_counter;
 
@@ -20,9 +22,19 @@ namespace Matika.Gui
         private string[] m_enumChars;
         private string m_help;
         private IWord m_item;
+        private readonly IBWordDao m_bWordDao;
+        private readonly ILWordDao m_lWordDao;
+        private readonly IMWordDao m_mWordDao;
+        private readonly IPWordDao m_pWordDao;
 
-        public EnumeratedWordsViewModel()
+
+        public EnumeratedWordsViewModel(IDaoSource daoSource)
         {
+            m_bWordDao = daoSource.GetDaoByEntityType<IBWordDao, BWord, int>();
+            m_lWordDao = daoSource.GetDaoByEntityType<ILWordDao, LWord, int>();
+            m_mWordDao = daoSource.GetDaoByEntityType<IMWordDao, MWord, int>();
+            m_pWordDao = daoSource.GetDaoByEntityType<IPWordDao, PWord, int>();
+
             EnumChars = new[] {"B", "L", "M", "P"};
             GetQueue(null);
             ChangeItem(Queue);
@@ -97,25 +109,24 @@ namespace Matika.Gui
 
         private void GetQueue(string parameter)
         {
-            var dc = new EnumeratedWordsDBDataContext();
-
             var first = string.IsNullOrEmpty(parameter) ? EnumChars.Shuffle().First() : parameter;
-
+          
             IWord[] test = null;
 
             switch (first)
             {
                 case "B":
-                    test = dc.B_Words.Select(d => d).ToArray();
+                   
+                    test = m_bWordDao.GetWords().ToArray();
                     break;
                 case "L":
-                    test = dc.L_Words.Select(d => d).ToArray();
+                    test = m_lWordDao.GetWords().ToArray();
                     break;
                 case "M":
-                    test = dc.M_Words.Select(d => d).ToArray();
+                    test = m_mWordDao.GetWords().ToArray();
                     break;
                 case "P":
-                    test = dc.P_Words.Select(d => d).ToArray();
+                    test = m_pWordDao.GetWords().ToArray();
                     break;
             }
 

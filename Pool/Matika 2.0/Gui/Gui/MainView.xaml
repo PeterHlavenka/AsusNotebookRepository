@@ -16,11 +16,11 @@
         <TabItem Header="Matika">
             <matika:MatikaView DataContext="{Binding MatikaViewModel}" />
         </TabItem>
-        <TabItem Header="Vyjmenovaná Slova">
+        <!--<TabItem Header="Vyjmenovaná Slova">
             <matika:EnumeratedWordsView DataContext="{Binding EnumeratedWordsViewModel}" />
         </TabItem>
         <TabItem Header="Převody jednotek" IsSelected="True">
             <matika:UnitConversionView DataContext="{Binding UnitConversionViewModel}" />
-        </TabItem>
+        </TabItem>-->
     </TabControl>
 </Window>

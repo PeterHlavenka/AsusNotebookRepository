@@ -1,11 +1,17 @@
-﻿using Caliburn.Micro;
+﻿using System.Reflection;
+using Caliburn.Micro;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using Entities;
 using Matika;
 using Matika.Configurations;
 using Matika.Gui;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Castle;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
+using Mediaresearch.Framework.DataAccess.BLToolkit.DaoFactory;
+using Mediaresearch.Framework.DataAccess.BLToolkit.Transactions;
 using Mediaresearch.Framework.Utilities.Configuration;
 
 namespace Shell.Installers
@@ -14,6 +20,17 @@ namespace Shell.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
+            Assembly entities = Assembly.GetAssembly(typeof(BWord));
+
+            container.Register(Component.For<EntityDaoFactory>().UsingFactoryMethod(() =>
+                new EntityDaoFactory("matika", Properties.Settings.Default.ConnectionDb, new TransactionManager())
+                {
+                    DaoAssemblies = new[] { entities.FullName },
+                    EnumTableAssemblies = new[] { entities.FullName },
+                }));
+
+            container.Register(Component.For<IDaoSource>().ImplementedBy<DependencyDaoSource>().LifestyleSingleton());
+
             container.Register(Component.For<IConfigurationProvider>().ImplementedBy<ConfigurationProvider>());
             var provider = container.Resolve<IConfigurationProvider>();
 
