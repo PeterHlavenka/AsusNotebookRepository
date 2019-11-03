@@ -126,6 +126,7 @@
     </ApplicationDefinition>
     <Compile Include="Configurations\MatikaConfiguration.cs" />
     <Compile Include="Conversion.cs" />
+    <Compile Include="Converters\CommaToDotConverter.cs" />
     <Compile Include="Gui\Delka.cs" />
     <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
       <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>

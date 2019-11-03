@@ -49,11 +49,17 @@ namespace Matika
             {
                  to = lowest.Skip(rand.Next(1, Math.Min(lowest.Count -1, stepDifference))).First();                 
             }            
+               
+            Result = from.Key < to.Key ? number / Math.Pow(step, (to.Key - from.Key)) : number * Math.Pow(step, (from.Key - to.Key));
+
+            while (!settings.DecimalNumbers && Math.Abs(Result - (int)Result) > double.Epsilon)
+            {
+                number = number * 10;
+                Result = from.Key < to.Key ? number / Math.Pow(step, (to.Key - from.Key)) : number * Math.Pow(step, (from.Key - to.Key));
+            }
 
             FromUnit = from.Value;
             ToUnit = to.Value;
-               
-            Result = from.Key < to.Key ? number / Math.Pow(step, (to.Key - from.Key)) : number * Math.Pow(step, (from.Key - to.Key));
             TaskString = string.Join(" ", number, FromUnit, EqualSign);
 
             return this;
