@@ -30,7 +30,7 @@
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="FontSize" Value="70" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
             <Setter Property="MinWidth" Value="150" />
         </Style>
         <!--  RepeatBehavior="Forever"  -->
@@ -76,17 +76,21 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackPanel
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Orientation="Horizontal">
+        <Grid Margin="50,0,0,0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
             <TextBlock
+                Grid.Column="0"
                 Focusable="False"
                 Style="{StaticResource ToUnitTextBlock}"
                 Text="{Binding Conversion.TaskString}" />
             <TextBox
                 Name="ResultTextBox"
-                Width="250"
+                Grid.Column="1"
+                Margin="0,0,30,0"
                 HorizontalContentAlignment="Center"
                 Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CommaToDotConverter}}">
@@ -98,9 +102,13 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
-            <TextBlock Style="{StaticResource ToUnitTextBlock}" Text="{Binding Conversion.ToUnit}" />
-        </StackPanel>
-
+            <TextBlock
+                Grid.Column="2"
+                MaxWidth="150"
+                HorizontalAlignment="Right"
+                Style="{StaticResource ToUnitTextBlock}"
+                Text="{Binding Conversion.ToUnit}" />
+        </Grid>
 
         <!--  StatusBar  -->
         <StatusBar Grid.Row="1" Margin="0,0,0,-2">
