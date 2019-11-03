@@ -23,32 +23,23 @@ namespace Matika
         public Conversion Generate(UnitConversionsSettingsViewModel settings)
         {
             var rand = new Random();
-            var allowedConvertables = Convertables.First();
+            var allowedConvertables = Convertables.First();  // delka zatim
             var dict = allowedConvertables.UnitsDictionary;
             var step = allowedConvertables.Step;
-
-            
-
-            var number = new Random().Next(1, 1 + settings.Difficulty * settings.Difficulty); 
-           
             var notNulls = dict.Where(d => d.Value != string.Empty).ToList();
 
-            var stepDifference = Math.Min(settings.Difficulty, notNulls.Count);
+            var number = new Random().Next(1, 1 + settings.Difficulty * settings.Difficulty * settings.Difficulty); 
+            var stepDifference = settings.StepDifference;
 
-            KeyValuePair<int, string> from = notNulls.Skip(new Random().Next(notNulls.Count)).First();
-            KeyValuePair<int, string> to;
+            var from = notNulls.Skip(new Random().Next(notNulls.Count)).First();
 
             var highest = notNulls.Where(d => d.Key > from.Key).OrderBy(d => d.Key).ToList();
-            var lowest = notNulls.Where(d => d.Key <= from.Key).OrderByDescending(d => d.Key).ToList();
+            var lowest = notNulls.Where(d => d.Key < from.Key).OrderByDescending(d => d.Key).ToList();
 
-            if (highest.Count > lowest.Count)
-            {                
-                to = highest.Skip(rand.Next(Math.Min(highest.Count -1, stepDifference))).First();
-            }
-            else
-            {
-                 to = lowest.Skip(rand.Next(1, Math.Min(lowest.Count -1, stepDifference))).First();                 
-            }            
+            var availables = highest.Take(stepDifference).ToList();
+            availables.AddRange(lowest.Take(stepDifference));
+           
+            var to = availables.ElementAt(rand.Next(availables.Count));
                
             Result = from.Key < to.Key ? number / Math.Pow(step, (to.Key - from.Key)) : number * Math.Pow(step, (from.Key - to.Key));
 
@@ -62,7 +53,7 @@ namespace Matika
             ToUnit = to.Value;
             TaskString = string.Join(" ", number, FromUnit, EqualSign);
 
-            return this;
+            return this;               
         }
     }
 }

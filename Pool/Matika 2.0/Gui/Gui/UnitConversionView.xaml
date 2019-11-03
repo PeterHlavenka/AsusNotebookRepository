@@ -87,6 +87,7 @@
             <TextBox
                 Name="ResultTextBox"
                 Width="250"
+                HorizontalContentAlignment="Center"
                 Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CommaToDotConverter}}">
                 <TextBox.InputBindings>

@@ -6,7 +6,7 @@
     xmlns:matika="clr-namespace:Matika.Gui"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="1200"
+    Width="1000"
     Height="520"
     d:DataContext="{d:DesignInstance matika:MainViewModel}"
     ResizeMode="NoResize"
