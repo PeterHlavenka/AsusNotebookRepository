@@ -12,36 +12,49 @@ namespace Matika
             Convertables = convertables;
         }
 
-        public int Result { get; protected set; }
+        public double Result { get; protected set; }
         public string TaskString { get; set; }
         protected static string EqualSign => " =  ";
+        public string FromUnit { get; set; }
+        public string ToUnit { get; set; }
 
         public IEnumerable<IConvertable> Convertables { get; set; }
 
-        public Conversion Generate(SettingsDialogViewModel settings)
+        public Conversion Generate(UnitConversionsSettingsViewModel settings)
         {
-            // allowed conversions.random
+            var rand = new Random();
             var allowedConvertables = Convertables.First();
+            var dict = allowedConvertables.UnitsDictionary;
+            var step = allowedConvertables.Step;
 
-            var units = allowedConvertables.Units;
+            
 
-            var number = 3;
-            var from = 0;
-            var to = 0;
-            var fromUnit = string.Empty;
-            var toUnit = string.Empty;
+            var number = new Random().Next(1, 1 + settings.Difficulty * settings.Difficulty); 
+           
+            var notNulls = dict.Where(d => d.Value != string.Empty).ToList();
 
-            while (fromUnit == "null" || toUnit == "null" || from == to)
-            {
-                from = new Random().Next(units.Count);
-                to = new Random().Next(units.Count);
-                fromUnit = allowedConvertables.Units.ElementAt(from);
-                toUnit = allowedConvertables.Units.ElementAt(to);
+            var stepDifference = Math.Min(settings.Difficulty, notNulls.Count);
 
-                if(from != to)
-                Result = (int) (from < to ? number * Math.Pow(allowedConvertables.Step, (to - from)) : number / Math.Pow(allowedConvertables.Step, (from - to) ))  ;
-                TaskString = string.Join(" ", number, fromUnit, EqualSign, toUnit);
+            KeyValuePair<int, string> from = notNulls.Skip(new Random().Next(notNulls.Count)).First();
+            KeyValuePair<int, string> to;
+
+            var highest = notNulls.Where(d => d.Key > from.Key).OrderBy(d => d.Key).ToList();
+            var lowest = notNulls.Where(d => d.Key <= from.Key).OrderByDescending(d => d.Key).ToList();
+
+            if (highest.Count > lowest.Count)
+            {                
+                to = highest.Skip(rand.Next(Math.Min(highest.Count -1, stepDifference))).First();
             }
+            else
+            {
+                 to = lowest.Skip(rand.Next(1, Math.Min(lowest.Count -1, stepDifference))).First();                 
+            }            
+
+            FromUnit = from.Value;
+            ToUnit = to.Value;
+               
+            Result = from.Key < to.Key ? number / Math.Pow(step, (to.Key - from.Key)) : number * Math.Pow(step, (from.Key - to.Key));
+            TaskString = string.Join(" ", number, FromUnit, EqualSign);
 
             return this;
         }

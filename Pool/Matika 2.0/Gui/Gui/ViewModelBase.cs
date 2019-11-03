@@ -12,30 +12,12 @@ namespace Matika.Gui
     public abstract class ViewModelBase : Screen
     {
         private int m_counter;
-
-
         private Visibility m_monkeyVisibility = Visibility.Collapsed;
-
-        private Brush m_resultBrush;
-        private SettingsDialogViewModel m_settings;
-
+        private Brush m_resultBrush = Brushes.Black;
         private int m_succesCount;
         private string m_userResult;
-
         private int m_wrongCount;
-
         public TextBox ResultTextBox { get; set; }
-
-        public SettingsDialogViewModel Settings
-        {
-            get => m_settings;
-            set
-            {
-                m_settings = value;
-                NotifyOfPropertyChange();
-            }
-        }
-
         public ICommand GenerateCommand { get; set; }
         public ICommand ResetCommand { get; set; }
 

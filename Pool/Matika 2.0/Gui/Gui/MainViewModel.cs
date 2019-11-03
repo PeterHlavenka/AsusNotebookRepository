@@ -11,6 +11,12 @@ namespace Matika.Gui
 {
     public class MainViewModel : Screen
     {
+        public MainViewModel(MatikaViewModel matikaViewModel, UnitConversionViewModel unitConversionViewModel)
+        {
+            MatikaViewModel = matikaViewModel;           
+            UnitConversionViewModel = unitConversionViewModel;
+        }
+
         //public MainViewModel(MatikaViewModel matikaViewModel, EnumeratedWordsViewModel enumeratedWordsViewModel, UnitConversionViewModel unitConversionViewModel)
         //{
         //    MatikaViewModel = matikaViewModel;
@@ -18,11 +24,12 @@ namespace Matika.Gui
         //    UnitConversionViewModel = unitConversionViewModel;
         //}
 
-        public MainViewModel(MatikaViewModel matikaViewModel, UnitConversionViewModel unitConversionViewModel)
-        {
-            MatikaViewModel = matikaViewModel;
-            UnitConversionViewModel = unitConversionViewModel;
-        }
+
+        //public MainViewModel(MatikaViewModel matikaViewModel, UnitConversionViewModel unitConversionViewModel)
+        //{
+        //    MatikaViewModel = matikaViewModel;
+        //    UnitConversionViewModel = unitConversionViewModel;
+        //}
 
         public MatikaViewModel MatikaViewModel { get; set; }
         public EnumeratedWordsViewModel EnumeratedWordsViewModel { get; set; }

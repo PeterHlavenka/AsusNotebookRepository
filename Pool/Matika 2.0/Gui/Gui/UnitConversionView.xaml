@@ -17,12 +17,19 @@
         <BitmapImage x:Key="Monkey" UriSource="../Gifs/ShowingMonkey.gif" />
         <Style TargetType="TextBox">
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="FontSize" Value="100" />
+            <Setter Property="FontSize" Value="70" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="MinWidth" Value="150" />
             <Setter Property="CaretBrush" Value="Transparent" />
-            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+        <Style x:Key="ToUnitTextBlock" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="70" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="150" />
         </Style>
         <!--  RepeatBehavior="Forever"  -->
         <Storyboard x:Key="StoryboardResource">
@@ -60,6 +67,8 @@
         </ControlTemplate>
     </UserControl.Resources>
 
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -69,14 +78,13 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Orientation="Horizontal">
-            <TextBox
-                Background="Yellow"
+            <TextBlock
                 Focusable="False"
+                Style="{StaticResource ToUnitTextBlock}"
                 Text="{Binding Conversion.TaskString}" />
             <TextBox
                 Name="ResultTextBox"
-                Width="120"
-                Background="Orange"
+                Width="150"
                 Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
@@ -87,8 +95,11 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
+            <TextBlock Style="{StaticResource ToUnitTextBlock}" Text="{Binding Conversion.ToUnit}" />
         </StackPanel>
 
+
+        <!--  StatusBar  -->
         <StatusBar Grid.Row="1" Margin="0,0,0,-2">
             <StackPanel Orientation="Horizontal">
                 <Button
@@ -98,7 +109,6 @@
                     HorizontalAlignment="Center"
                     cal:Message.Attach="[Event Click] = [Action SettingsButtonClicked()]"
                     Template="{StaticResource ButtonTemmplate}">
-
                     <Grid>
                         <Image Source="{StaticResource Settings}" />
                     </Grid>

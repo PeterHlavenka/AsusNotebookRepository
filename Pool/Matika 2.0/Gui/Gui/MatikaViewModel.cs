@@ -7,6 +7,7 @@ namespace Matika.Gui
     public class MatikaViewModel : ViewModelBase
     {
         private Example m_example;
+        private MatikaSettingsViewModel m_settings;
 
         public MatikaViewModel(int difficulty)
         {
@@ -14,7 +15,7 @@ namespace Matika.Gui
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new SettingsDialogViewModel {Difficulty = difficulty};
+            Settings = new MatikaSettingsViewModel {Difficulty = difficulty};
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
@@ -28,6 +29,16 @@ namespace Matika.Gui
                 m_example = value;
                 Counter++;
                 ResultBrush = Brushes.Black;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        public MatikaSettingsViewModel Settings
+        {
+            get => m_settings;
+            set
+            {
+                m_settings = value;
                 NotifyOfPropertyChange();
             }
         }

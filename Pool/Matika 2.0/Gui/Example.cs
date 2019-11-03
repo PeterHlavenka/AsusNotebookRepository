@@ -12,7 +12,7 @@ namespace Matika
         private static int Diff { get; set; }
 
 
-        public Example Generate(SettingsDialogViewModel settings)
+        public Example Generate(MatikaSettingsViewModel settings)
         {
             Diff = settings.Difficulty;
 

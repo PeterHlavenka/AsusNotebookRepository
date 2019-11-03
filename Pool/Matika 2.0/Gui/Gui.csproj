@@ -140,15 +140,19 @@
       <DependentUpon>MatikaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\MatikaViewModel.cs" />
-    <Compile Include="Gui\SettingsDialogView.xaml.cs">
-      <DependentUpon>SettingsDialogView.xaml</DependentUpon>
+    <Compile Include="Gui\MatikaSettingsView.xaml.cs">
+      <DependentUpon>MatikaSettingsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Gui\SettingsDialogViewModel.cs" />
+    <Compile Include="Gui\MatikaSettingsViewModel.cs" />
+    <Compile Include="Gui\UnitConversionsSettingsView.xaml.cs">
+      <DependentUpon>UnitConversionsSettingsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gui\UnitConversionView.xaml.cs">
       <DependentUpon>UnitConversionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\UnitConversionViewModel.cs" />
     <Compile Include="Gui\ViewModelBase.cs" />
+    <Compile Include="SettingsBase.cs" />
     <Compile Include="Share.cs" />
     <Compile Include="Addition.cs" />
     <Compile Include="App.xaml.cs">
@@ -157,6 +161,7 @@
     </Compile>
     <Compile Include="Difference.cs" />
     <Compile Include="Example.cs" />
+    <Compile Include="Gui\UnitConversionsSettingsViewModel.cs" />
     <Page Include="Gui\EnumeratedWordsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,7 +174,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Gui\SettingsDialogView.xaml">
+    <Page Include="Gui\MatikaSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\UnitConversionsSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
