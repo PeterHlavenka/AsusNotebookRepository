@@ -69,6 +69,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vyjimky", "Vyjimky", "{7CD2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryFinallyTest1", "TryFinallyTest1\TryFinallyTest1.csproj", "{2CAFA786-9343-4C45-9796-4729CAF07996}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualResetEventProZachytavadlo", "ManualResetEventProZachytavadlo\ManualResetEventProZachytavadlo.csproj", "{97C3CE85-C6DF-44F4-935E-1359C7F307EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +193,10 @@ Global
 		{2CAFA786-9343-4C45-9796-4729CAF07996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CAFA786-9343-4C45-9796-4729CAF07996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CAFA786-9343-4C45-9796-4729CAF07996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,6 +221,7 @@ Global
 		{6170F44F-D0B0-4103-BF39-7AB2B5E780FF} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{2CAFA786-9343-4C45-9796-4729CAF07996} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
+		{97C3CE85-C6DF-44F4-935E-1359C7F307EF} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

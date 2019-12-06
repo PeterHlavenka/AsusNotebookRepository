@@ -3,7 +3,7 @@
 
 -- MotiveVersionDao.SelectAssociatedMessagesReprezentativeId(int motiveVersionId)  se prelozi takto:
 exec sp_executesql N'SELECT
-	[message].[NormCreativeId]
+	[message].[NormCreativeId], motiveVersion.Id
 FROM
 	[Media].[MediaMessage] [message]
 		INNER JOIN [Creative].[Creative] [creative] ON [message].[NormCreativeId] = [creative].[Id]
@@ -12,8 +12,8 @@ WHERE
 	[motiveVersion].[Id] = @motiveVersionId AND [motiveVersion].[ActiveFrom] <= [message].[AdvertisedFrom] AND
 	[motiveVersion].[ActiveTo] > [message].[AdvertisedFrom]
 GROUP BY
-	[message].[NormCreativeId]
-',N'@motiveVersionId int',@motiveVersionId= 1513434  --1066283
+	[message].[NormCreativeId], motiveVersion.Id
+',N'@motiveVersionId int',@motiveVersionId= 262133 --306149 -- 1513434  --1066283
 
 
 
@@ -33,7 +33,38 @@ WHERE
 	[motiveVersion].[ActiveTo] > [message].[AdvertisedFrom] AND
 	[message].[NormCreativeId] = @normCreativeId
 	option(force order)
-',N'@motiveVersionId int,@normCreativeId int',@motiveVersionId=1513434,@normCreativeId=16407130
+',N'@motiveVersionId int,@normCreativeId int',@motiveVersionId=262133,@normCreativeId=411684
+
+exec sp_executesql N'SELECT
+	
+	Min([message].[Id])
+FROM
+	[Media].[MediaMessage] [message]
+		INNER JOIN [Creative].[Creative] [creative] ON [message].[NormCreativeId] = [creative].[Id]
+		INNER JOIN [Media].[MotiveVersion] [motiveVersion] ON [creative].[MotiveId] = [motiveVersion].[MotiveId]
+WHERE
+	[motiveVersion].[Id] = @motiveVersionId AND
+	[motiveVersion].[ActiveFrom] <= [message].[AdvertisedFrom] AND
+	[motiveVersion].[ActiveTo] > [message].[AdvertisedFrom] AND
+	[message].[NormCreativeId] = @normCreativeId
+	option(force order)
+',N'@motiveVersionId int,@normCreativeId int',@motiveVersionId=262133,@normCreativeId=413800
+
+exec sp_executesql N'SELECT
+	
+	Min([message].[Id])
+FROM
+	[Media].[MediaMessage] [message]
+		INNER JOIN [Creative].[Creative] [creative] ON [message].[NormCreativeId] = [creative].[Id]
+		INNER JOIN [Media].[MotiveVersion] [motiveVersion] ON [creative].[MotiveId] = [motiveVersion].[MotiveId]
+WHERE
+	[motiveVersion].[Id] = @motiveVersionId AND
+	[motiveVersion].[ActiveFrom] <= [message].[AdvertisedFrom] AND
+	[motiveVersion].[ActiveTo] > [message].[AdvertisedFrom] AND
+	[message].[NormCreativeId] = @normCreativeId
+	option(force order)
+',N'@motiveVersionId int,@normCreativeId int',@motiveVersionId=262133,@normCreativeId=1092904
+
 
 --------------------
 -- nalezeni skupin podle motiveVersionId ktere maji vice kreativ

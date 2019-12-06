@@ -4,40 +4,46 @@ using System.Threading.Tasks;
 
 namespace CanctellationTokenNaManualResetEventu
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            CancellationToken can1 = new CancellationToken();   // neni potreba - nevyuzito
-            ManualResetEvent e = new ManualResetEvent(false);
-            Task t1 = Task.Factory.StartNew(() =>
-            {
-                Thread.Sleep(15000);   // operace trva 15 sekund
-                e.Set();
-            }, can1);
+            var manualResetEvent = new ManualResetEvent(false);
 
-
-            CancellationTokenSource cts = new CancellationTokenSource();  // hlavni a pouzity token
-            Task tCancelling = Task.Factory.StartNew(() =>
+            // Rozbehnu task, ktery trva 15 sekund
+            Task.Factory.StartNew(() =>
             {
-                Thread.Sleep(2000);  // ale po dvou sekundach je cancelnuta
-                cts.Cancel();
+                Thread.Sleep(15000); 
+                manualResetEvent.Set();
             });
 
-            NewMethod(e, cts);
+            // Vytvorim cancellation token
+            var cancellationTokenSource = new CancellationTokenSource(); 
+
+            // Vytvorim dalsi vlakno, ktere na cancellation tokenu zavola po dvou sekundach cancel()
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(2000); 
+                cancellationTokenSource.Cancel();
+            }, cancellationTokenSource.Token);
+
+
+            // Zavola metodu
+            NewMethod(manualResetEvent, cancellationTokenSource);
         }
 
-        private static void NewMethod(ManualResetEvent e, CancellationTokenSource cts)
+
+        // Tato metoda ma cekat na resetEvent. Jenze dostala i cancellationToken, na kterem po dvou sekundach je zavolano cancel. Tim vyhodi vyjimku, odchytne ji a vypise na konzoli, ze bylo cancelnuto
+        private static void NewMethod(ManualResetEvent manualResetEvent, CancellationTokenSource cancellationTokenSource)
         {
             try
             {
-                Task.Factory.StartNew(() => WaitHandle.WaitAll(new[] { e }), cts.Token).Wait(cts.Token);   // vyhodi operationCancelledException
+                Task.Factory.StartNew(() => WaitHandle.WaitAll(new WaitHandle[] {manualResetEvent})).Wait(cancellationTokenSource.Token); // vyhodi operationCancelledException
             }
             catch (OperationCanceledException)
             {
-
-               Console.WriteLine("Operation was cancelled");
-               Console.ReadLine();
+                Console.WriteLine("Operation was cancelled");
+                Console.ReadLine();
             }
         }
     }
