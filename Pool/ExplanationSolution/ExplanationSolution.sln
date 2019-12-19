@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryFinallyTest1", "TryFinal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualResetEventProZachytavadlo", "ManualResetEventProZachytavadlo\ManualResetEventProZachytavadlo.csproj", "{97C3CE85-C6DF-44F4-935E-1359C7F307EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBlockWithLongTextRightAlignment", "TextBlockWithLongTextRightAlignment\TextBlockWithLongTextRightAlignment.csproj", "{5B7769E0-7484-4EBB-8465-A8473DB5713B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -197,6 +199,10 @@ Global
 		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C3CE85-C6DF-44F4-935E-1359C7F307EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7769E0-7484-4EBB-8465-A8473DB5713B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7769E0-7484-4EBB-8465-A8473DB5713B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7769E0-7484-4EBB-8465-A8473DB5713B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7769E0-7484-4EBB-8465-A8473DB5713B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
