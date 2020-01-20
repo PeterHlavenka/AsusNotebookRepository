@@ -28,7 +28,7 @@ namespace WaitHandle_WaitAll_WaitAny
             WaitHandle.WaitAll(WaitHandles);
             // The time shown below should match the longest task.
             Console.WriteLine("Both tasks are completed (time waited={0})", (DateTime.Now - dt).TotalMilliseconds);
-                
+
 
             // Queue up two tasks on two different threads; 
             // wait until any tasks are completed.
@@ -39,8 +39,8 @@ namespace WaitHandle_WaitAll_WaitAny
             ThreadPool.QueueUserWorkItem(DoTask, WaitHandles[1]);
             var index = WaitHandle.WaitAny(WaitHandles);
             // The time shown below should match the shortest task.
-            Console.WriteLine("Task {0} finished first (time waited={1}).", index , (DateTime.Now - dt).TotalMilliseconds);
-                
+            Console.WriteLine("Task {0} finished first (time waited={1}).", index, (DateTime.Now - dt).TotalMilliseconds);
+
 
             Console.ReadLine();
         }
@@ -48,10 +48,10 @@ namespace WaitHandle_WaitAll_WaitAny
         private static void DisplayInfo()
         {
             Console.WriteLine
-                ("Aplikace vytvori dva AutoResetEventy. To jsou objekty, ktere dedi od tridy WaitHandle.\n" +
-                 "Na vytvoreni threadu pouzije ThreadPool a jeho metodu ThreadPool.QueueUserWorkItem(DoTask, WaitHandles[0]);\n" +
-                 "ktere preda waitCallBack - coz je metoda z main threadu, pomoci ktere muze vedlejsi thread komunikovat s main threadem."
-                );
+            ("Aplikace vytvori dva AutoResetEventy. To jsou objekty, ktere dedi od tridy WaitHandle.\n" +
+             "Na vytvoreni threadu pouzije ThreadPool a jeho metodu ThreadPool.QueueUserWorkItem(DoTask, WaitHandles[0]);\n" +
+             "ktere preda waitCallBack - coz je metoda z main threadu, pomoci ktere muze vedlejsi thread komunikovat s main threadem."
+            );
 
             Console.WriteLine();
             Console.WriteLine();

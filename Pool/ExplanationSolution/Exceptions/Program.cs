@@ -11,7 +11,7 @@ namespace Exceptions
         {
             try
             {
-                List<Exception> exceptions = new List<Exception>();
+                var exceptions = new List<Exception>();
                 // do some stuff here ........
                 // we have an exception with an innerexception, so add it to the list
                 exceptions.Add(new TimeoutException("It timed out", new ArgumentException("ID missing")));
@@ -19,13 +19,11 @@ namespace Exceptions
                 // Another exception, add to list
                 exceptions.Add(new NotImplementedException("Somethings not implemented"));
                 // all done, now create the AggregateException and throw it
-                AggregateException aggEx = new AggregateException(exceptions);
+                var aggEx = new AggregateException(exceptions);
                 throw aggEx;
 
 
-
                 //throw new IOException().SetCode(0x70);
-               
             }
 
             catch (IOException ex) when ((ex.HResult & 0xFFFF) == 0x27 || (ex.HResult & 0xFFFF) == 0x70)
@@ -40,7 +38,7 @@ namespace Exceptions
 
                 if (ex is AggregateException ae)
                 {
-                    foreach (var e in ae.Flatten().InnerExceptions)   // vypis inner exceptions z aggregate exc
+                    foreach (var e in ae.Flatten().InnerExceptions) // vypis inner exceptions z aggregate exc
                     {
                         Console.WriteLine(e.Message);
                     }

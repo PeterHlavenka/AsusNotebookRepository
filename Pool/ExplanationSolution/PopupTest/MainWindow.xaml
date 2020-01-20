@@ -17,9 +17,9 @@
             Height="50">
             Tlacitko
         </Button>
-        <Button Background="Red"  Width="100"
-                Height="50" 
-                Margin="208,264,209,155"></Button>
+        <Button Background="Red" Width="100"
+                Height="50"
+                Margin="208,264,209,155" />
         <StackPanel>
             <CheckBox
                 Name="PCheckBox"
@@ -68,7 +68,7 @@
                     </TextBlock>
                 </Canvas>
             </Popup>
-           
+
         </StackPanel>
     </Grid>
 </Window>

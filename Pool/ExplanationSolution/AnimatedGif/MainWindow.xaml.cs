@@ -15,7 +15,7 @@ namespace AnimatedGif
 
             Console.WriteLine(Directory.GetCurrentDirectory());
 
-            Files = Directory.GetFiles(@"\images");  // slozka images je na C
+            Files = Directory.GetFiles(@"\images"); // slozka images je na C
             DataContext = this;
         }
 

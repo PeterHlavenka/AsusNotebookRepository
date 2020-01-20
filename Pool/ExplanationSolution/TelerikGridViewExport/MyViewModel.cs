@@ -2,9 +2,10 @@
 using System.Collections.ObjectModel;
 using System.Windows.Forms;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Controls.GridView;
 using Telerik.Windows.Data;
 using Telerik.Windows.Diagrams.Core;
+using ContextMenu = System.Windows.Controls.ContextMenu;
+using MenuItem = System.Windows.Controls.MenuItem;
 
 namespace TelerikGridViewExport
 {
@@ -16,18 +17,20 @@ namespace TelerikGridViewExport
         {
             get
             {
-                if (this.clubs == null)
+                if (clubs == null)
                 {
-                    this.clubs = this.CreateClubs();
+                    clubs = CreateClubs();
                 }
 
-                return this.clubs;
+                return clubs;
             }
         }
 
+        private CompositeFilterDescriptorCollection Descriptors { get; set; }
+
         private ObservableCollection<Club> CreateClubs()
         {
-            ObservableCollection<Club> clubs = new ObservableCollection<Club>();
+            var clubs = new ObservableCollection<Club>();
             Club club;
 
             club = new Club("Liverpool", new DateTime(1892, 1, 1), 45362);
@@ -42,14 +45,15 @@ namespace TelerikGridViewExport
             return clubs;
         }
 
-        private CompositeFilterDescriptorCollection Descriptors { get; set; }
-        
 
         public void Filtered(object sender)
         {
-            var radGrid = sender as RadGridView;            
+            var radGrid = sender as RadGridView;
 
-            if(radGrid?.FilterDescriptors.Count == 0) { return;}
+            if (radGrid?.FilterDescriptors.Count == 0)
+            {
+                return;
+            }
 
             Descriptors = new CompositeFilterDescriptorCollection();
 
@@ -58,14 +62,13 @@ namespace TelerikGridViewExport
 
         public void SetFilters(object source)
         {
-            if (source is System.Windows.Controls.MenuItem menuItem)
+            if (source is MenuItem menuItem)
             {
-                if (menuItem.Parent is System.Windows.Controls.ContextMenu parent)
+                if (menuItem.Parent is ContextMenu parent)
                 {
                     var radGrid = parent.PlacementTarget as RadGridView;
 
-                    
-                    
+
                     radGrid?.FilterDescriptors.SuspendNotifications();
 
                     radGrid?.FilterDescriptors.AddRange(Descriptors);
@@ -76,12 +79,11 @@ namespace TelerikGridViewExport
         }
 
 
-
         public void ExportToExcel(object source)
         {
-            if (source is System.Windows.Controls.MenuItem menuItem)
+            if (source is MenuItem menuItem)
             {
-                if (menuItem.Parent is System.Windows.Controls.ContextMenu parent)
+                if (menuItem.Parent is ContextMenu parent)
                 {
                     var radGrid = parent.PlacementTarget as RadGridView;
 

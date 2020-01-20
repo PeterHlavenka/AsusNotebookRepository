@@ -5,15 +5,16 @@ using System.Windows.Threading;
 namespace CounterWithDependencyProperty
 {
     public partial class MainWindow : Window
-    {        
+    {
+        public static readonly DependencyProperty CounterProperty = DependencyProperty.Register("Counter", typeof(int), typeof(MainWindow), new PropertyMetadata(10)); // PropertyMetatata - sem se dava startovaci hodnota. Timer proto startuje od desitky
         // TOTO LZE I VE VIEWMODEL VIZ ADMIN REPRICING  // Podle Holubce pouzivat System.Threading.Timer viz poznamky DispatcherTimer.docx
 
         public MainWindow()
         {
             InitializeComponent();
 
-            new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal,              // tady definuju v jakem intervalu se musi provadet callback
-                delegate                                                                         // toto je callback, ktery se vykona na threadu z threadPoolu kazdou sekundu. 
+            new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, // tady definuju v jakem intervalu se musi provadet callback
+                delegate // toto je callback, ktery se vykona na threadu z threadPoolu kazdou sekundu. 
                 {
                     int newValue;
 
@@ -30,7 +31,7 @@ namespace CounterWithDependencyProperty
                 }, Dispatcher
             );
 
-                                                                                                  // Timer neni potreba startovat. 
+            // Timer neni potreba startovat. 
         }
 
 
@@ -39,7 +40,5 @@ namespace CounterWithDependencyProperty
             get => (int) GetValue(CounterProperty);
             set => SetValue(CounterProperty, value);
         }
-
-        public static readonly DependencyProperty CounterProperty = DependencyProperty.Register("Counter", typeof(int), typeof(MainWindow), new PropertyMetadata(10));  // PropertyMetatata - sem se dava startovaci hodnota. Timer proto startuje od desitky
     }
 }

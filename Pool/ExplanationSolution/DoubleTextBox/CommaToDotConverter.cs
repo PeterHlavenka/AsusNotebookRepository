@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace DoubleTextBox
 {
-    public class CommaToDotConverter:IValueConverter
+    public class CommaToDotConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -13,7 +13,7 @@ namespace DoubleTextBox
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value?.ToString().Replace(',', '.');           
+            return value?.ToString().Replace(',', '.');
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ResizePopup
 
         private void onDragDelta(object sender, DragDeltaEventArgs e)
 
-        {            
+        {
             var yadjust = Popup.Height + e.VerticalChange;
 
             var xadjust = Popup.Width + e.HorizontalChange;

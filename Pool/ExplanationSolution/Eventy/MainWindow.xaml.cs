@@ -1,40 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Eventy
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow 
+    public partial class MainWindow
     {
         public MainWindow()
         {
             InitializeComponent();
-           
+
             // 4. Zaregistrujeme posluchace
             MyEvent += Posluchac;
 
             // 6. Zaregistrujeme posluchace v jine tride
-            VnitrniTridaPosluchac tridaPosluchac = new VnitrniTridaPosluchac();            
+            var tridaPosluchac = new VnitrniTridaPosluchac();
             MyEvent += tridaPosluchac.PosluchacVJineTride;
-
-            
         }
 
-        
+
         // 1. Deklarujeme event v posilaci tride
         public event EventHandler MyEvent;
 
@@ -53,7 +39,7 @@ namespace Eventy
         // 5. Metoda posluchace, zaregistrovana v konstruktoru
         public void Posluchac(object sender, EventArgs e)
         {
-            Console.WriteLine($@"Dostal jsem event");
+            Console.WriteLine(@"Dostal jsem event");
         }
     }
 
@@ -61,7 +47,7 @@ namespace Eventy
     {
         public void PosluchacVJineTride(object sender, EventArgs e)
         {
-            Console.WriteLine($@"Dostal jsem event a jsem pritom v jine tride");
+            Console.WriteLine(@"Dostal jsem event a jsem pritom v jine tride");
         }
     }
 

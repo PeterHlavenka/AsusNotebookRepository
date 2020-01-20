@@ -35,7 +35,7 @@
                 AutoGenerateColumns="True"
                 ItemsSource="{Binding Path=ObservableItems, Mode=TwoWay}"
                 SelectionMode="Extended"
-                SelectionUnit="FullRow"                
+                SelectionUnit="FullRow"
                 GroupRenderMode="Flat">
                 <!--<telerik:RadGridView.Columns>
                 <telerik:GridViewDataColumn
@@ -148,7 +148,7 @@
             </telerik:RadGridView.Columns>-->
             </telerik:RadGridView>
         </StackPanel>
-        
+
 
     </Grid>
 </Window>

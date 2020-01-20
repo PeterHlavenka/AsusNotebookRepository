@@ -25,7 +25,7 @@ namespace WpfApp1
             //int result = await ComputeAsync();            
             //TextBlock.Text = result.ToString();
 
-            TextBlock.Text = $@" pokracuju po zavolani asynchronni metody";
+            TextBlock.Text = @" pokracuju po zavolani asynchronni metody";
         }
 
         // dlouhotrvajici uloha
@@ -51,7 +51,7 @@ namespace WpfApp1
         public async Task RunCompute() //nic nevraci
         {
             //SyncComputation
-           // var result = Compute();
+            // var result = Compute();
 
             //Async Computation
             var result = await ComputeAsync();

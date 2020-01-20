@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AsyncAwait2
 {
-    class Program
+    internal class Program
     {
-        static void  Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("volam Run");
             Run();
@@ -17,13 +14,13 @@ namespace AsyncAwait2
             Console.ReadLine();
         }
 
-        private static async  Task<int> VratPocetZnakuAsync()
+        private static async Task<int> VratPocetZnakuAsync()
         {
-            HttpClient client = new HttpClient();
+            var client = new HttpClient();
 
-            Task<string> ulohaSObsahemWebu = client.GetStringAsync("http://www.seznam.cz");
+            var ulohaSObsahemWebu = client.GetStringAsync("http://www.seznam.cz");
             Console.WriteLine("Zacinam stahovat\n");
-            string obsah = await (ulohaSObsahemWebu);
+            var obsah = await ulohaSObsahemWebu;
 
             Console.WriteLine($"Pocet znaku {obsah.Length}");
 
@@ -33,18 +30,15 @@ namespace AsyncAwait2
 
             // předání kontroly programu metodě, která nás zavolala, dokud se úloha nedokončí.
             // await z ní následně zároveň získá výsledek
-            
+
 
             //vracime bezici ulohu podle navratoveho typu, ktera ale po skonceni cinnosti vrati tento int:
-            return obsah.Length;  
+            return obsah.Length;
         }
 
         private static async void Run()
         {
-            
-
-            int pocetZnaku = await VratPocetZnakuAsync();
-           
+            var pocetZnaku = await VratPocetZnakuAsync();
         }
     }
 }

@@ -13,17 +13,17 @@ namespace CanctellationTokenNaManualResetEventu
             // Rozbehnu task, ktery trva 15 sekund
             Task.Factory.StartNew(() =>
             {
-                Thread.Sleep(15000); 
+                Thread.Sleep(15000);
                 manualResetEvent.Set();
             });
 
             // Vytvorim cancellation token
-            var cancellationTokenSource = new CancellationTokenSource(); 
+            var cancellationTokenSource = new CancellationTokenSource();
 
             // Vytvorim dalsi vlakno, ktere na cancellation tokenu zavola po dvou sekundach cancel()
             Task.Factory.StartNew(() =>
             {
-                Thread.Sleep(2000); 
+                Thread.Sleep(2000);
                 cancellationTokenSource.Cancel();
             }, cancellationTokenSource.Token);
 

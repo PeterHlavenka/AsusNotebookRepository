@@ -21,7 +21,7 @@ namespace SystemThreadingTimer
                     if (Result == 5)
                     {
                         StopTimer();
-                        Console.WriteLine($"Timer stopped");
+                        Console.WriteLine("Timer stopped");
                     }
                 }
                 , null // object is useful for providing the additional information required for the Timer operation. However, this State object is not mandatory and hence we can set it as null 

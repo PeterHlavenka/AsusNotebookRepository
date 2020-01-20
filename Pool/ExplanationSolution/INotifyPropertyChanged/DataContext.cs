@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -12,12 +11,10 @@ using Telerik.Windows.Diagrams.Core;
 
 namespace INotifyPropertyChanged
 {
-    public class DataContext: System.ComponentModel.INotifyPropertyChanged
+    public class DataContext : System.ComponentModel.INotifyPropertyChanged
     {
         private int m_count = 758;
-        private ObservableCollection<Item> m_observableItems = new ObservableCollection<Item>();
 
-        
 
         public DataContext(RadGridView radGridView)
         {
@@ -27,6 +24,21 @@ namespace INotifyPropertyChanged
             worker.DoWork += DoWork;
             worker.RunWorkerAsync();
         }
+
+
+        public List<Item> List { get; set; } = new List<Item>();
+
+        public int Count
+        {
+            get => m_count;
+            set
+            {
+                m_count = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<Item> ObservableItems { get; set; } = new ObservableCollection<Item>();
 
         private void DoWork(object sender, DoWorkEventArgs e)
         {
@@ -49,20 +61,20 @@ namespace INotifyPropertyChanged
                         Footage = GetSubstring(result[6]) == string.Empty ? 0 : double.Parse(GetSubstring(result[6])),
                         AdvertisementType = GetSubstring(result[7]),
                         Placement = GetSubstring(result[8]),
-                        PriceValue = GetSubstring(result[9]) == string.Empty ? (decimal?)null : Convert.ToDecimal(GetSubstring(result[9])),
+                        PriceValue = GetSubstring(result[9]) == string.Empty ? (decimal?) null : Convert.ToDecimal(GetSubstring(result[9])),
                         ComputationResultValue = GetSubstring(result[10]) == string.Empty ? 0 : double.Parse(GetSubstring(result[10])),
                         ComputationResultFailureType = GetSubstring(result[11]),
-                        SponsoringsPerAdvertiserPerSponsoredProgramme = GetSubstring(result[12]) == string.Empty ? (int?)null : int.Parse(result[12].Substring(1, result[12].Length - 2))
+                        SponsoringsPerAdvertiserPerSponsoredProgramme = GetSubstring(result[12]) == string.Empty ? (int?) null : int.Parse(result[12].Substring(1, result[12].Length - 2))
                     };
 
                     List.Add(item);
                 }
 
-               // MessageBox.Show("Loaded");
-                             
+                // MessageBox.Show("Loaded");
+
                 Application.Current.Dispatcher.BeginInvoke(new Action(delegate
                 {
-                   // ObservableItems = new ObservableCollection<Item>(List);     
+                    // ObservableItems = new ObservableCollection<Item>(List);     
                     ObservableItems.AddRange(List);
                 }));
             }
@@ -72,44 +84,6 @@ namespace INotifyPropertyChanged
                 return result.Substring(1, result.Length - 2);
             }
         }
-
-
-        
-        public List<Item> List { get; set; } = new List<Item>();
-
-        public int Count
-        {
-            get => m_count;
-            set
-            {
-                m_count = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public ObservableCollection<Item> ObservableItems
-        {
-            get => m_observableItems;
-            set
-            {
-                m_observableItems = value; 
-               // OnPropertyChanged(nameof(ObservableItems));
-            }
-        }
-
-
-        #region INotifyRegion
-        
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        } 
-        #endregion
 
         public class Item
         {
@@ -142,6 +116,16 @@ namespace INotifyPropertyChanged
         }
 
 
-      
+        #region INotifyRegion
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
 }

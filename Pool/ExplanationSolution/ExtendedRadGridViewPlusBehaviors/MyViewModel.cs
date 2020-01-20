@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Telerik.Windows.Controls;
 
 namespace ExtendedRadGridViewPlusBehaviors
@@ -16,18 +12,18 @@ namespace ExtendedRadGridViewPlusBehaviors
         {
             get
             {
-                if (this.clubs == null)
+                if (clubs == null)
                 {
-                    this.clubs = this.CreateClubs();
+                    clubs = CreateClubs();
                 }
 
-                return this.clubs;
+                return clubs;
             }
         }
 
         private ObservableCollection<Club> CreateClubs()
         {
-            ObservableCollection<Club> clubs = new ObservableCollection<Club>();
+            var clubs = new ObservableCollection<Club>();
             Club club;
 
             club = new Club("Liverpool", new DateTime(1892, 1, 1), 45362);

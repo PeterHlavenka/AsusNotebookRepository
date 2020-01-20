@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,7 +9,7 @@ namespace Lock___Monitor
         private static readonly object Lock = new object();
         private static decimal m_money = 130;
         private static AutoResetEvent m_are = new AutoResetEvent(false);
-       
+
 
         private static void Main(string[] args)
         {
@@ -19,7 +17,7 @@ namespace Lock___Monitor
                               "Problem je, ze do kriticke sekce se za podminku  if (m_money > 100) dostanou vsechny tri vlakna, protoze v te chvili je jeste stav uctu opravdu 130 korun \n\n");
 
             Console.WriteLine("Priklad bez pouziti locku:\n");
-           // Enumerable.Range(1, 3).Select(i => i).ToList().ForEach(i => Task.Factory.StartNew(() => { DoWork(i);}));
+            // Enumerable.Range(1, 3).Select(i => i).ToList().ForEach(i => Task.Factory.StartNew(() => { DoWork(i);}));
 
             var tasks = new[]
             {
@@ -39,7 +37,7 @@ namespace Lock___Monitor
                 Task.Factory.StartNew(() => DoWorkWithLock(3))
             };
             Task.WaitAll(tasks);
-            
+
 
             Console.ReadLine();
         }
@@ -48,11 +46,11 @@ namespace Lock___Monitor
         {
             if (m_money > 100)
             {
-                
                 Thread.Sleep(new Random().Next(500, 2000));
-                Console.WriteLine($"    Vlakno "+i+" vybira 100");
+                Console.WriteLine("    Vlakno " + i + " vybira 100");
                 m_money = m_money - 100;
             }
+
             Console.WriteLine("    Stav uctu je: " + m_money);
         }
 
@@ -65,8 +63,9 @@ namespace Lock___Monitor
                     Thread.Sleep(new Random().Next(500, 2000));
                     Console.WriteLine($"    Vlakno {0} vybira 100,", i);
                     m_money = m_money - 100;
-                }               
+                }
             }
+
             Console.WriteLine("    Stav uctu je: " + m_money);
         }
     }

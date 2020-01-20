@@ -16,7 +16,6 @@ namespace Delegate
             //pouziti. V podstate misto Soucet(5, 2)  napiseme  del1(5, 2)  jen vymenime skutecny nazev metody za zastupce
             Console.WriteLine(del1(5, 2));
 
-            
 
             del2 = MathOperation.Rozdil;
 

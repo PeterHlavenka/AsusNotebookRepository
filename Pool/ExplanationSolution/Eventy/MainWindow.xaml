@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <local:UserControl1 Width="100" Height="200"></local:UserControl1>
-        <Button HorizontalAlignment="Left" Width="100" Height="40" Content="Button" Click="ButtonBase_OnClick"></Button>
+        <local:UserControl1 Width="100" Height="200" />
+        <Button HorizontalAlignment="Left" Width="100" Height="40" Content="Button" Click="ButtonBase_OnClick" />
     </Grid>
 </Window>

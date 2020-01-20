@@ -22,7 +22,8 @@
                     StaysOpen="False">
 
                     <Grid Background="Blue">
-                        <ListBox Width="{Binding ElementName=Popup, Path=Width}" Height="{Binding ElementName=Popup, Path=Height}">
+                        <ListBox Width="{Binding ElementName=Popup, Path=Width}"
+                                 Height="{Binding ElementName=Popup, Path=Height}">
                             <ListBoxItem Background="Red">ahoj</ListBoxItem>
                             <ListBoxItem Background="Green">ahoj</ListBoxItem>
                             <ListBoxItem Background="Red">ahoj</ListBoxItem>

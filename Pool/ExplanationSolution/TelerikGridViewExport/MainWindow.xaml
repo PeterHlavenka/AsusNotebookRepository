@@ -40,15 +40,17 @@
             </telerik:RadGridView.Columns>
 
 
-
             <telerik:RadGridView.ContextMenu>
                 <ContextMenu>
-                    <MenuItem cal:Message.Attach="[Event Click] = [Action SetFilters($source)];           [Event OnDistinctValuesLoading] = [Action OnDistinctValuesLoading($source, $eventArgs)]" Header="Setni Filtry" >
+                    <MenuItem
+                        cal:Message.Attach="[Event Click] = [Action SetFilters($source)];           [Event OnDistinctValuesLoading] = [Action OnDistinctValuesLoading($source, $eventArgs)]"
+                        Header="Setni Filtry">
                         <MenuItem.Icon>
                             <Image Source="../../../Icons/table-select-column.png" />
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem cal:Message.Attach="[Event Click] = [Action ExportToExcel($source)]" Header="Export to Excel">
+                    <MenuItem cal:Message.Attach="[Event Click] = [Action ExportToExcel($source)]"
+                              Header="Export to Excel">
                         <MenuItem.Icon>
                             <Image
                                 Width="16"

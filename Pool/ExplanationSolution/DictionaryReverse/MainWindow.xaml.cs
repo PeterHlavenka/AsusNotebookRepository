@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DictionaryReverse
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -36,12 +25,12 @@ namespace DictionaryReverse
 
             var neco = new Dictionary<int, List<int>>();
 
-            neco.Add(1, new List<int> { 100, 200 }); // stejne
-            neco.Add(2, new List<int> { 100, 300 });
-            neco.Add(3, new List<int> { 100, 200 }); //stejne
-            neco.Add(4, new List<int> { 100, 400 });
-            neco.Add(5, new List<int> { 600, 500 });
-            neco.Add(6, new List<int> { 100, 200 }); // stejne
+            neco.Add(1, new List<int> {100, 200}); // stejne
+            neco.Add(2, new List<int> {100, 300});
+            neco.Add(3, new List<int> {100, 200}); //stejne
+            neco.Add(4, new List<int> {100, 400});
+            neco.Add(5, new List<int> {600, 500});
+            neco.Add(6, new List<int> {100, 200}); // stejne
 
 
             // Pokuk chci groupnout podle kolekce, musim ji prevest na string a groupovat podle nej

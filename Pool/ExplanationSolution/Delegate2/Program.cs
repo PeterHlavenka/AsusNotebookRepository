@@ -17,7 +17,7 @@ namespace Delegate2
 
             //slozeni delegatu
             del3 = del1 + del2;
-            del3("Petr");   //zavola metodu Ahoj a Nashledanou
+            del3("Petr"); //zavola metodu Ahoj a Nashledanou
             Console.WriteLine();
 
             //dekomponovani delegatu
@@ -38,4 +38,3 @@ namespace Delegate2
         }
     }
 }
-
