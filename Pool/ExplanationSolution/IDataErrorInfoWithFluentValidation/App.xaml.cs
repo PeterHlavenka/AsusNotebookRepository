@@ -1,11 +1,9 @@
-﻿using System.Windows;
-
-namespace WpfApp1
+﻿namespace IDataErrorInfoWithFluentValidation
 {
     /// <summary>
     ///     Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class App
     {
     }
 }
