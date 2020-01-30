@@ -6,15 +6,19 @@
 --vytvorit promenne pro zapamatovani si insertnutych ID
 --naplnit je pres SCOPE_IDENTITY()
 --pouzit tato ID ve vazbach
-
+SELECT 'ServiceType'
  SELECT * FROM Environment.ServiceType st
+ SELECT 'ServiceComponentType'
  SELECT * FROM Environment.ServiceComponentType sct
+ SELECT 'ServiceInstance'
  SELECT * FROM Environment.ServiceInstance
+ SELECT 'ServiceComponentInstance'
  SELECT * FROM Environment.ServiceComponentInstance WHERE Environment.ServiceComponentInstance.Value01 in ('2000', '60000', 'D392988D-869D-43A9-B252-BD0F0FCD8BF9', '500')
+ SELECT 'ServiceTypeComponentPermission'
  SELECT * FROM Environment.ServiceTypeComponentPermission WHERE Environment.ServiceTypeComponentPermission.ComponentName in ('pressRepricingJobBatch', 'pressRepricingJobPeriodMs', 'pressRepricingJobPriceListGuidString', 'pressRepricingJobStartMs')
+ SELECT 'ServiceInstanceComponentRegistration'
  SELECT * FROM Environment.ServiceInstanceComponentRegistration WHERE Environment.ServiceInstanceComponentRegistration.ServiceInstanceId = 15
 
- SELECT * FROM Environment.ServiceComponentType sct
 
  -- ID CKA SE PRI NOVEM REVERTU MUZOU LISIT.
 
@@ -26,3 +30,5 @@
  --DELETE FROM Environment.ServiceComponentInstance WHERE Environment.ServiceComponentInstance.Value01 in ('2000', '60000', 'D392988D-869D-43A9-B252-BD0F0FCD8BF9', '500')
  --DELETE FROM  Environment.ServiceTypeComponentPermission WHERE Environment.ServiceTypeComponentPermission.ComponentName in ('pressRepricingJobBatch', 'pressRepricingJobPeriodMs', 'pressRepricingJobPriceListGuidString', 'pressRepricingJobStartMs')
  --DELETE FROM Environment.ServiceInstanceComponentRegistration WHERE Environment.ServiceInstanceComponentRegistration.ServiceInstanceId = 12
+
+ --UPDATE Environment.ServiceTypeComponentPermission SET Environment.ServiceTypeComponentPermission.ServiceComponentTypeId = 8 WHERE Environment.ServiceTypeComponentPermission.ComponentName = 'pressRepricingJobPriceListGuidString'

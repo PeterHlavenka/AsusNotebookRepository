@@ -20,13 +20,12 @@ namespace Exceptions
                 exceptions.Add(new NotImplementedException("Somethings not implemented"));
                 // all done, now create the AggregateException and throw it
                 var aggEx = new AggregateException(exceptions);
-                throw aggEx;
-
-
-                //throw new IOException().SetCode(0x70);
+                //throw aggEx;
+                
+                throw new IOException().SetCode(0x70);
             }
 
-            catch (IOException ex) when ((ex.HResult & 0xFFFF) == 0x27 || (ex.HResult & 0xFFFF) == 0x70)
+            catch (IOException ex) when ((ex.HResult & 0xFFFF) == 0x27 || (ex.HResult & 0xFFFF) == 0x70) // (vcetne Malo mista na disku )
             {
                 Console.WriteLine(ex.Message);
                 //throw new InvalidOperationException();  rethrownuti zabije program a do dalsiho catche se nedostane
