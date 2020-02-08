@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -11,6 +12,12 @@ namespace Exceptions
         {
             try
             {
+                var date = DateTime.Now;
+                Console.WriteLine(date.ToString());
+                Console.WriteLine(date.ToString(CultureInfo.InvariantCulture));
+                Console.WriteLine(date.ToString("yyyyMMdd hh:mm"));
+                Console.ReadLine();
+                
                 var exceptions = new List<Exception>();
                 // do some stuff here ........
                 // we have an exception with an innerexception, so add it to the list
