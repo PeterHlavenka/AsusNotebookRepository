@@ -8,7 +8,6 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\AsyncAwa
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csprojAssemblyReference.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.pdb

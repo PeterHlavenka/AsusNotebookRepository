@@ -12,9 +12,6 @@ C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.exe
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.pdb
@@ -27,3 +24,6 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csprojAssemblyReference.cache

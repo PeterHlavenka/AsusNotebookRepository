@@ -28,17 +28,18 @@ C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\ProgressCircle\obj\Debug\Pro
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\ProgressCircle\obj\Debug\ProgressCircle.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\ProgressCircle\obj\Debug\ProgressCircle.exe
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\ProgressCircle\obj\Debug\ProgressCircle.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\bin\Debug\ProgressCircle.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\bin\Debug\ProgressCircle.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\bin\Debug\ProgressCircle.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csprojAssemblyReference.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\MainWindow.g.cs
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\App.g.cs
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle_MarkupCompile.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle_MarkupCompile.lref
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\MainWindow.baml
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.g.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.pdb

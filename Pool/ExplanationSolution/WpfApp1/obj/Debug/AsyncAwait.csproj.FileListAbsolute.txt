@@ -13,9 +13,6 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\AsyncAwait.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\bin\Debug\WpfApp1.pdb
@@ -28,3 +25,5 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.pdb

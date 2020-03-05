@@ -13,9 +13,6 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePo
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ResizePopup\obj\Debug\ResizePopup.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\bin\Debug\ResizePopup.pdb
@@ -28,3 +25,5 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.pdb

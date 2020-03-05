@@ -13,9 +13,6 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTes
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\ComboTest\obj\Debug\ComboTest.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.pdb
@@ -28,3 +25,5 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb

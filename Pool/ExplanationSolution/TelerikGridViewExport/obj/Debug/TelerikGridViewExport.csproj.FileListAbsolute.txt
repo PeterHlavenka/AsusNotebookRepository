@@ -55,9 +55,6 @@ C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\TelerikGridViewExport\bin\De
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\TelerikGridViewExport\bin\Debug\Caliburn.Micro.pdb
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\TelerikGridViewExport\bin\Debug\Caliburn.Micro.xml
 C:\Users\phlavenka\OneDrive\Projects\AwaitAsyncTest\TelerikGridViewExport\bin\Debug\System.Windows.Interactivity.xml
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\TelerikGridViewExport.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\TelerikGridViewExport.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\TelerikGridViewExport.pdb
@@ -76,6 +73,7 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\Caliburn.Micro.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\Caliburn.Micro.xml
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csprojAssemblyReference.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\MainWindow.g.cs
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\App.g.cs
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -87,3 +85,5 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.CopyComplete
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.pdb

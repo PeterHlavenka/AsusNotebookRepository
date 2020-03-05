@@ -13,9 +13,6 @@ C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPr
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
 C:\Users\phlavenka\Documents\Visual Studio 2017\Projects\AwaitAsyncTest\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csprojAssemblyReference.cache
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
-C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe.config
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.pdb
@@ -28,3 +25,6 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.Properties.Resources.resources
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.GenerateResource.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CoreCompileInputs.cache
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
+C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csprojAssemblyReference.cache

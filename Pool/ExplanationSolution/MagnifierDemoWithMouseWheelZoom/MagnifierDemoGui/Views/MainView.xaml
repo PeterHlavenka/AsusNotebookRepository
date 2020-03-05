@@ -1,0 +1,35 @@
+﻿<Window x:Class="Gui.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:Gui.ViewModels"
+        xmlns:enums="clr-namespace:Gui.Enums"
+        xmlns:views="clr-namespace:Gui.Views"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance models:MainViewModel}"
+        Title="MainView" Height="900" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontSize="16" Text="Used memory:" />
+            <TextBlock FontSize="16" Text="{Binding Path=MemoryUsed}" Margin="20,0" />
+            <TextBlock FontSize="16" Text="MB" />
+            <TextBlock FontSize="16" Text="Model.MagnifierDemoGuid:" Margin="40,0,20,0" />
+            <TextBlock FontSize="16" Text="{Binding ModelGuid}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="230" Margin="80,10,10,10"
+                    Content="New ViewModel"
+                    Command="{Binding ChangeModelCommand}"
+                    CommandParameter="{x:Static enums:ChangeType.ViewModelChange}" />
+            <Button Width="230" Margin="10"
+                    Content="Change images in current ViewModel"
+                    Command="{Binding ChangeImageCommand}"
+                    CommandParameter="{x:Static enums:ChangeType.ImageChange}" />
+        </StackPanel>
+
+
+        <views:ViewWithMagnifierView DataContext="{Binding MagnifierViewModel}" />
+    </StackPanel>
+</Window>
