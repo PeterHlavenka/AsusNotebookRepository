@@ -19,5 +19,7 @@ namespace Xceed_wpfToolkit_Magnifier
 
             MyButton.Content = text != MyButton.Content.ToString() ? text : " Bylo znovu stlaceno tlacitko ";
         }
+        
+        public Visibility MagnifierVisibility { get; set; }
     }
 }
