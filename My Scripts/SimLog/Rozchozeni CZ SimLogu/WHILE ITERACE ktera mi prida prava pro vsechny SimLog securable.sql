@@ -1,7 +1,7 @@
 
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
-BEGIN TRANSACTION updateSchemaTransaction;
+BEGIN TRANSACTION addPermissionsTransaction;
 
 BEGIN TRY
 
@@ -11,7 +11,7 @@ DECLARE @securables TABLE(idx INT PRIMARY KEY IDENTITY (1, 1), securableId INT N
 DECLARE @developerId INT;
 DECLARE @numrows INT, @i INT, @secId INT;
 SET @i = 1
-SET @developerId = (SELECT TOP (1) Id FROM [Membership].[User] WHERE UserName LIKE '%phlavenka%')
+SET @developerId = (SELECT TOP (1) Id FROM [Membership].[User] WHERE UserName LIKE '%slunakova%')         -- nastavit spravny userName
 SET @ApplicationId = (SELECT TOP (1) Id FROM Membership.Application WHERE ApplicationName = 'MIR.SimLog')
 SET @PermissionId = (SELECT TOP (1) Id FROM Membership.Permission WHERE Code = 'Execute')
 
@@ -25,9 +25,7 @@ SET @numrows = (SELECT COUNT(*) FROM @securables)
 
     WHILE (@i <= @numrows)
     BEGIN
-        SET @secId = (SELECT TOP(1) securableId FROM @securables WHERE idx = @i)
-		
-		SELECT @secId
+        SET @secId = (SELECT TOP(1) securableId FROM @securables WHERE idx = @i)				
 
 		INSERT INTO Membership.UserPermission (UserId, PermissionId, SecurableId, ApplicationId, ValidFrom, ValidTo) 
 		VALUES (@developerId, @PermissionId, @secId, @ApplicationId, GETDATE(), '2100-1-1')
@@ -39,9 +37,11 @@ SET @numrows = (SELECT COUNT(*) FROM @securables)
 	
 END TRY
 BEGIN CATCH
-	ROLLBACK TRANSACTION updateSchemaTransaction;
+	ROLLBACK TRANSACTION addPermissionsTransaction;
 
 	DECLARE @ErrorMessage NVARCHAR (4000), @ErrorSeverity INT, @ErrorState INT;
 	SELECT @ErrorMessage = ERROR_MESSAGE (), @ErrorSeverity = ERROR_SEVERITY (), @ErrorState = ERROR_STATE ();
 	RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
 END CATCH
+
+
