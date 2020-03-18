@@ -14,7 +14,6 @@ namespace Matika.Gui
 
         public UnitConversionViewModel(int difficulty, Conversion conversion)
         {
-            Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
 
@@ -78,7 +77,6 @@ namespace Matika.Gui
             if (manager.ShowDialog(Settings) == false)
             {
                 Conversion = Conversion.Generate(Settings);
-                Counter--;
                 SuccesCount--;
                 ResultTextBox.Focus();
             }

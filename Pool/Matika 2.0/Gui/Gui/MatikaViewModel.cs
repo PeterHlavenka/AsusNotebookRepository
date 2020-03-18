@@ -11,7 +11,6 @@ namespace Matika.Gui
 
         public MatikaViewModel(int difficulty)
         {
-            Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
 
@@ -27,7 +26,6 @@ namespace Matika.Gui
             set
             {
                 m_example = value;
-                Counter++;
                 ResultBrush = Brushes.Black;
                 NotifyOfPropertyChange();
             }
@@ -83,7 +81,6 @@ namespace Matika.Gui
             if (manager.ShowDialog(Settings) == false)
             {
                 DoGenerate(Example.Result);
-                Counter--;
                 SuccesCount--;
                 ResultTextBox.Focus();
             }

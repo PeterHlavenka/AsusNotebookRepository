@@ -110,7 +110,6 @@
                     Margin="15,0"
                     VerticalAlignment="Center"
                     FontSize="15"
-                    Text="{Binding Counter}"
                     TextAlignment="Center" />
             </StackPanel>
         </StatusBar>

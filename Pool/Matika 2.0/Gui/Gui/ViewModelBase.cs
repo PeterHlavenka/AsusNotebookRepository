@@ -11,7 +11,6 @@ namespace Matika.Gui
 {
     public abstract class ViewModelBase : Screen
     {
-        private int m_counter;
         private Visibility m_monkeyVisibility = Visibility.Collapsed;
         private Brush m_resultBrush = Brushes.Black;
         private int m_succesCount;
@@ -28,16 +27,6 @@ namespace Matika.Gui
             set
             {
                 m_userResult = value;
-                NotifyOfPropertyChange();
-            }
-        }
-
-        public int Counter
-        {
-            get => m_counter;
-            set
-            {
-                m_counter = value;
                 NotifyOfPropertyChange();
             }
         }

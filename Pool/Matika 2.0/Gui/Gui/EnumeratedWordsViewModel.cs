@@ -16,7 +16,6 @@ namespace Matika.Gui
     {
        
         private static readonly Random Random = new Random();
-        private int m_counter;
 
         private string m_displayedName;
         private string[] m_enumChars;
@@ -39,17 +38,7 @@ namespace Matika.Gui
             GetQueue(null);
             ChangeItem(Queue);
         }
-
-        public int Counter
-        {
-            get => m_counter;
-            set
-            {
-                m_counter = value;
-                NotifyOfPropertyChange();
-            }
-        }
-
+        
         public string[] EnumChars
         {
             get => m_enumChars;
@@ -68,7 +57,6 @@ namespace Matika.Gui
             set
             {
                 m_item = value;
-                Counter++;
                 NotifyOfPropertyChange();
             }
         }
