@@ -251,5 +251,11 @@
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Prevody_metry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\white.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

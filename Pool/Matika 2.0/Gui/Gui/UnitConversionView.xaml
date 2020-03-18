@@ -14,6 +14,7 @@
     mc:Ignorable="d">
 
     <UserControl.Resources>
+        <BitmapImage x:Key="White" UriSource="../Resources/white.jpg" />
         <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
         <BitmapImage x:Key="Monkey" UriSource="../Gifs/ShowingMonkey.gif" />
         <converters:CommaToDotConverter x:Key="CommaToDotConverter" />
@@ -76,7 +77,24 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Margin="50,0,0,0" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource White}" />
+        </Grid.Background>
+        <Image
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="190,50,0,0"
+            Source="../Resources/Prevody_metry.png" />
+        <Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="50,0,0,0"
+            VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
@@ -92,6 +110,7 @@
                 Grid.Column="1"
                 Margin="0,0,30,0"
                 HorizontalContentAlignment="Center"
+                Background="Transparent"
                 Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CommaToDotConverter}}">
                 <TextBox.InputBindings>
@@ -111,7 +130,11 @@
         </Grid>
 
         <!--  StatusBar  -->
-        <StatusBar Grid.Row="1" Margin="0,0,0,-2">
+        <StatusBar
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,0,0,-2">
             <StackPanel Orientation="Horizontal">
                 <Button
                     Width="30"
