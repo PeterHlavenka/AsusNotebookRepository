@@ -145,6 +145,10 @@
       <DependentUpon>MatikaSettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\MatikaSettingsViewModel.cs" />
+    <Compile Include="Gui\SplashScreenView.xaml.cs">
+      <DependentUpon>SplashScreenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\SplashScreenViewModel.cs" />
     <Compile Include="Gui\UnitConversionsSettingsView.xaml.cs">
       <DependentUpon>UnitConversionsSettingsView.xaml</DependentUpon>
     </Compile>
@@ -176,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Gui\MatikaSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\SplashScreenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

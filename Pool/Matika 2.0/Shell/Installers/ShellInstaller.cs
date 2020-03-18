@@ -37,8 +37,7 @@ namespace Shell.Installers
             var matikaConfiguration = provider.GetConfig<MatikaConfiguration>();
 
             container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel));
-
-            container.Register(Component.For<IWindowManager>().ImplementedBy<WindowManager>());
+            
             container.Register(Component.For<IConvertable>().ImplementedBy<Delka>());
             container.Register(Component.For<Conversion>());
             container.Register(Component.For<MatikaViewModel>()
