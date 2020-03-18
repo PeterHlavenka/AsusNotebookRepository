@@ -9,12 +9,12 @@ namespace Matika.Gui
         private Example m_example;
         private MatikaSettingsViewModel m_settings;
 
-        public MatikaViewModel(int difficulty)
+        public MatikaViewModel(int difficulty, int addCount, int differenceCount, int productCount, int divideCount)
         {
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new MatikaSettingsViewModel {Difficulty = difficulty};
+            Settings = new MatikaSettingsViewModel {Difficulty = difficulty, AddCount = addCount, DifferenceCount = differenceCount, ProductCount = productCount, DivideCount = divideCount};
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);

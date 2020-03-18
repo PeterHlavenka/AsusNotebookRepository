@@ -20,7 +20,7 @@ namespace Shell.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            Assembly entities = Assembly.GetAssembly(typeof(BWord));
+            Assembly entities = Assembly.GetAssembly(typeof(BWord));            
 
             container.Register(Component.For<EntityDaoFactory>().UsingFactoryMethod(() =>
                 new EntityDaoFactory("matika", Properties.Settings.Default.ConnectionDb, new TransactionManager())
@@ -33,15 +33,25 @@ namespace Shell.Installers
 
             container.Register(Component.For<IConfigurationProvider>().ImplementedBy<ConfigurationProvider>());
             var provider = container.Resolve<IConfigurationProvider>();
+            var unitConversionConfiguration = provider.GetConfig<UnitConversionConfiguration>();
+            var matikaConfiguration = provider.GetConfig<MatikaConfiguration>();
 
             container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel));
 
             container.Register(Component.For<IWindowManager>().ImplementedBy<WindowManager>());
             container.Register(Component.For<IConvertable>().ImplementedBy<Delka>());
             container.Register(Component.For<Conversion>());
-            container.Register(Component.For<MatikaViewModel>().DependsOn(Dependency.OnValue("difficulty", provider.GetConfig<MatikaConfiguration>().StartDifficulty)));
+            container.Register(Component.For<MatikaViewModel>()
+                .DependsOn(Dependency.OnValue("difficulty", matikaConfiguration.StartDifficulty))
+                .DependsOn(Dependency.OnValue("addCount", matikaConfiguration.AddCount))
+                .DependsOn(Dependency.OnValue("differenceCount", matikaConfiguration.DifferenceCount))
+                .DependsOn(Dependency.OnValue("productCount", matikaConfiguration.ProductCount))
+                .DependsOn(Dependency.OnValue("divideCount", matikaConfiguration.DivideCount))                
+                );
             container.Register(Component.For<EnumeratedWordsViewModel>());
-            container.Register(Component.For<UnitConversionViewModel>().DependsOn(Dependency.OnValue("difficulty", provider.GetConfig<UnitConversionConfiguration>().StartDifficulty)));
+            container.Register(Component.For<UnitConversionViewModel>().DependsOn(Dependency.OnValue("difficulty", unitConversionConfiguration.StartDifficulty))
+                .DependsOn(Dependency.OnValue("stepDifference", unitConversionConfiguration.StepDifference))
+            );
             container.Register(Component.For<MainViewModel>());
         }
     }

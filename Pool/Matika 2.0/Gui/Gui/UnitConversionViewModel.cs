@@ -12,12 +12,12 @@ namespace Matika.Gui
         private UnitConversionsSettingsViewModel m_settings;
         public new TextBox ResultTextBox { get; set; }
 
-        public UnitConversionViewModel(int difficulty, Conversion conversion)
+        public UnitConversionViewModel(int difficulty, int stepDifference, Conversion conversion)
         {
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new UnitConversionsSettingsViewModel { Difficulty = difficulty };
+            Settings = new UnitConversionsSettingsViewModel {Difficulty = difficulty, StepDifference = stepDifference};
             Conversion = conversion.Generate(Settings); //new Conversion(new List<IConvertable>()).Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
