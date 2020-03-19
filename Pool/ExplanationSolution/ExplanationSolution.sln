@@ -87,6 +87,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xceed_wpfToolkit_Magnifier"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Magnifier", "Magnifier", "{F6282C65-E991-4306-B0C2-74666F0C5405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadGrid_Podbarvovani_radku", "RadGrid_Podbarvovani_radku\RadGrid_Podbarvovani_radku.csproj", "{1C9CA2C1-C224-4075-BF6C-3D73623754C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -233,6 +235,10 @@ Global
 		{DC0AE17B-F5AF-443F-977F-8E8DD96A1DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC0AE17B-F5AF-443F-977F-8E8DD96A1DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC0AE17B-F5AF-443F-977F-8E8DD96A1DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9CA2C1-C224-4075-BF6C-3D73623754C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9CA2C1-C224-4075-BF6C-3D73623754C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9CA2C1-C224-4075-BF6C-3D73623754C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9CA2C1-C224-4075-BF6C-3D73623754C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -263,6 +269,7 @@ Global
 		{20CAB3BF-5DCD-4DE0-BBE0-89C9E709D9A4} = {2C66E4E0-A9EF-4E44-8D4A-F43A3F512410}
 		{DC0AE17B-F5AF-443F-977F-8E8DD96A1DEB} = {20CAB3BF-5DCD-4DE0-BBE0-89C9E709D9A4}
 		{F6282C65-E991-4306-B0C2-74666F0C5405} = {2C66E4E0-A9EF-4E44-8D4A-F43A3F512410}
+		{1C9CA2C1-C224-4075-BF6C-3D73623754C8} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

@@ -19,7 +19,7 @@ namespace Matika.Gui
             WrongCount = 0;
 
             Settings = new UnitConversionsSettingsViewModel { Difficulty = difficulty };
-            Conversion = conversion.Generate(Settings); //new Conversion(new List<IConvertable>()).Generate(Settings);
+            Conversion = conversion.Generate(Settings); 
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
         }
