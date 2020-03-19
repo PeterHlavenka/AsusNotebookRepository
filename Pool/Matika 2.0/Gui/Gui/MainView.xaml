@@ -19,8 +19,11 @@
         <!--<TabItem Header="Vyjmenovaná Slova">
             <matika:EnumeratedWordsView DataContext="{Binding EnumeratedWordsViewModel}" />
         </TabItem>-->
-        <TabItem Header="Převody jednotek" IsSelected="True">
+        <TabItem Header="Převody jednotek" IsSelected="False">
             <matika:UnitConversionView DataContext="{Binding UnitConversionViewModel}" />
+        </TabItem>
+        <TabItem Header="Velká čísla" IsSelected="True">
+            <matika:BigNumbersView DataContext="{Binding BigNumbersViewModel}" />
         </TabItem>
     </TabControl>
 </Window>

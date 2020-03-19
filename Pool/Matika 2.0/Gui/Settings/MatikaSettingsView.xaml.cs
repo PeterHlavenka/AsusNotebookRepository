@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Matika.Gui
+namespace Matika.Settings
 {
     /// <summary>
     ///     Interaction logic for SettingsDialogView.xaml

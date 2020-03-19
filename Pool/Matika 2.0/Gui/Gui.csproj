@@ -127,6 +127,12 @@
     <Compile Include="Configurations\MatikaConfiguration.cs" />
     <Compile Include="Conversion.cs" />
     <Compile Include="Converters\CommaToDotConverter.cs" />
+    <Compile Include="Examples\BigNumbersAddition.cs" />
+    <Compile Include="Examples\BigNumbersDifference.cs" />
+    <Compile Include="Gui\BigNumbersView.xaml.cs">
+      <DependentUpon>BigNumbersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\BigNumbersViewModel.cs" />
     <Compile Include="Gui\Delka.cs" />
     <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
       <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>
@@ -141,32 +147,41 @@
       <DependentUpon>MatikaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\MatikaViewModel.cs" />
-    <Compile Include="Gui\MatikaSettingsView.xaml.cs">
+    <Compile Include="Settings\BigNumbersSettingsViewModel.cs" />
+    <Compile Include="Settings\BigNumbersSettingsView.xaml.cs">
+      <DependentUpon>BigNumbersSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ISettings.cs" />
+    <Compile Include="Settings\MatikaSettingsView.xaml.cs">
       <DependentUpon>MatikaSettingsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Gui\MatikaSettingsViewModel.cs" />
+    <Compile Include="Settings\MatikaSettingsViewModel.cs" />
     <Compile Include="Gui\SplashScreenView.xaml.cs">
       <DependentUpon>SplashScreenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\SplashScreenViewModel.cs" />
-    <Compile Include="Gui\UnitConversionsSettingsView.xaml.cs">
+    <Compile Include="Settings\UnitConversionsSettingsView.xaml.cs">
       <DependentUpon>UnitConversionsSettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\UnitConversionView.xaml.cs">
       <DependentUpon>UnitConversionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\UnitConversionViewModel.cs" />
-    <Compile Include="Gui\ViewModelBase.cs" />
+    <Compile Include="Gui\MatikaViewModelBase.cs" />
     <Compile Include="SettingsBase.cs" />
-    <Compile Include="Share.cs" />
-    <Compile Include="Addition.cs" />
+    <Compile Include="Examples\Share.cs" />
+    <Compile Include="Examples\Addition.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Difference.cs" />
-    <Compile Include="Example.cs" />
-    <Compile Include="Gui\UnitConversionsSettingsViewModel.cs" />
+    <Compile Include="Examples\Difference.cs" />
+    <Compile Include="Examples\Example.cs" />
+    <Compile Include="Settings\UnitConversionsSettingsViewModel.cs" />
+    <Page Include="Gui\BigNumbersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gui\EnumeratedWordsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,7 +194,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Gui\MatikaSettingsView.xaml">
+    <Page Include="Settings\BigNumbersSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings\MatikaSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,7 +206,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Gui\UnitConversionsSettingsView.xaml">
+    <Page Include="Settings\UnitConversionsSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,7 +216,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
+    <Compile Include="Examples\Product.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

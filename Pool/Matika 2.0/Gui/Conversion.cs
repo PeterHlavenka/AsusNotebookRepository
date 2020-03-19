@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Matika.Gui;
+using Matika.Settings;
 
 namespace Matika
 {

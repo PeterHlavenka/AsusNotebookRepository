@@ -5,11 +5,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Caliburn.Micro;
+using Matika.Examples;
 using WpfAnimatedGif;
 
 namespace Matika.Gui
 {
-    public abstract class ViewModelBase : Screen
+    public abstract class MatikaViewModelBase : Screen
     {
         private Visibility m_monkeyVisibility = Visibility.Collapsed;
         private Brush m_resultBrush = Brushes.Black;
@@ -19,7 +20,20 @@ namespace Matika.Gui
         public TextBox ResultTextBox { get; set; }
         public ICommand GenerateCommand { get; set; }
         public ICommand ResetCommand { get; set; }
+        private Example m_example;
 
+        public abstract void SettingsButtonClicked();
+
+        public Example Example
+        {
+            get => m_example;
+            set
+            {
+                m_example = value;
+                ResultBrush = Brushes.Black;
+                NotifyOfPropertyChange();
+            }
+        }
 
         public string UserResult
         {

@@ -1,12 +1,13 @@
 ﻿using System.Windows.Media;
 using Caliburn.Micro;
+using Matika.Examples;
+using Matika.Settings;
 using Mediaresearch.Framework.Gui;
 
 namespace Matika.Gui
 {
-    public class MatikaViewModel : ViewModelBase
+    public class MatikaViewModel : MatikaViewModelBase
     {
-        private Example m_example;
         private MatikaSettingsViewModel m_settings;
 
         public MatikaViewModel(int difficulty, int addCount, int differenceCount, int productCount, int divideCount)
@@ -18,17 +19,6 @@ namespace Matika.Gui
             Example = new Example().Generate(Settings);
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
-        }
-
-        public Example Example
-        {
-            get => m_example;
-            set
-            {
-                m_example = value;
-                ResultBrush = Brushes.Black;
-                NotifyOfPropertyChange();
-            }
         }
 
         public MatikaSettingsViewModel Settings
@@ -74,7 +64,7 @@ namespace Matika.Gui
         }
 
 
-        public void SettingsButtonClicked()
+        public override void SettingsButtonClicked()
         {
             var manager = new WindowManager();
 

@@ -1,8 +1,9 @@
 ﻿using Caliburn.Micro;
+using Matika.Settings;
 
 namespace Matika
 {
-   public class SettingsBase : Screen
+   public class SettingsBase : Screen, ISettings
     {
         private int m_difficulty;
         public int Difficulty

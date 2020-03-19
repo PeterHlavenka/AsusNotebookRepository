@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Matika.Gui;
+using Matika.Settings;
 
-namespace Matika
+namespace Matika.Examples
 {
     public class Example
     {

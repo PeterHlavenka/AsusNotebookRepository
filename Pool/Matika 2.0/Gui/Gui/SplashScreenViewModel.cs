@@ -50,7 +50,8 @@ namespace Matika.Gui
         {
             base.OnActivate();
            
-            await Task.Run(m_initAction);            
+            await Task.Run(m_initAction);       
+                        Thread.Sleep(2000);
             TryClose();
         }
     }

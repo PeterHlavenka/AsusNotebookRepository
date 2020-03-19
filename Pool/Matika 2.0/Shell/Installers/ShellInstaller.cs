@@ -8,6 +8,7 @@ using Entities;
 using Matika;
 using Matika.Configurations;
 using Matika.Gui;
+using Matika.Settings;
 using Mediaresearch.Framework.DataAccess.BLToolkit.Castle;
 using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
 using Mediaresearch.Framework.DataAccess.BLToolkit.DaoFactory;
@@ -51,6 +52,10 @@ namespace Shell.Installers
             container.Register(Component.For<UnitConversionViewModel>().DependsOn(Dependency.OnValue("difficulty", unitConversionConfiguration.StartDifficulty))
                 .DependsOn(Dependency.OnValue("stepDifference", unitConversionConfiguration.StepDifference))
             );
+            container.Register(Component.For<BigNumbersSettingsViewModel>()
+                .DependsOn(Dependency.OnValue("first", 100000))
+                .DependsOn(Dependency.OnValue("second", 10000)));
+            container.Register(Component.For<BigNumbersViewModel>());
             container.Register(Component.For<MainViewModel>());
         }
     }

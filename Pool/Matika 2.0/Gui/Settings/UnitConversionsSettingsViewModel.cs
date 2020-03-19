@@ -1,4 +1,4 @@
-﻿namespace Matika.Gui
+﻿namespace Matika.Settings
 {
    public class UnitConversionsSettingsViewModel : SettingsBase
     {

@@ -2,11 +2,12 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 using Caliburn.Micro;
+using Matika.Settings;
 using Mediaresearch.Framework.Gui;
 
 namespace Matika.Gui
 {
-    public class UnitConversionViewModel : ViewModelBase
+    public class UnitConversionViewModel : MatikaViewModelBase
     {
         private Conversion m_conversion;
         private UnitConversionsSettingsViewModel m_settings;
@@ -70,7 +71,7 @@ namespace Matika.Gui
             }
         }
 
-        public void SettingsButtonClicked()
+        public override void SettingsButtonClicked()
         {
             var manager = new WindowManager();
 

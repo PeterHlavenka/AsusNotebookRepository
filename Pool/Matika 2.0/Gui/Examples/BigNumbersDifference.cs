@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Matika
+namespace Matika.Examples
 {
-    public class Difference : Example
+   public class BigNumbersDifference : Example
     {
-        public Difference(int diffuculty)
+        public BigNumbersDifference(int diffuculty)
         {
             var maximum = diffuculty * 10;
             var first = new Random().Next(maximum + 1);

@@ -1,6 +1,4 @@
-﻿using Caliburn.Micro;
-
-namespace Matika.Gui
+﻿namespace Matika.Settings
 {
     public class MatikaSettingsViewModel : SettingsBase
     {

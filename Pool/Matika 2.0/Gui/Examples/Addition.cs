@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Matika
+namespace Matika.Examples
 {
     public class Addition : Example
     {

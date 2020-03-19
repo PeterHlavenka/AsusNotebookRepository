@@ -28,15 +28,17 @@ namespace Shell
 
             MainViewModel root = null;
 
-            void InitAction()
-            {                
-                m_container.Install(new ShellInstaller());
-                root = m_container.Resolve<MainViewModel>();
-            }
-            var splashScreen = new SplashScreenViewModel(InitAction);  
-            manager.ShowDialog(splashScreen);
+            //void InitAction()
+            //{
+            //    m_container.Install(new ShellInstaller());
+            //    root = m_container.Resolve<MainViewModel>();
+            //}
+            //var splashScreen = new SplashScreenViewModel(InitAction);
+            //manager.ShowDialog(splashScreen);
 
-            
+
+            m_container.Install(new ShellInstaller());
+            root = m_container.Resolve<MainViewModel>();
             manager.ShowDialog(root);
             Application.Shutdown();
         }
