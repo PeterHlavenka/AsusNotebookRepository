@@ -34,9 +34,24 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f">
+          <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
+          <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Mediaresearch.Framework.Gui.Telerik, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\..\..\..\..\..\..\Pool\GitFramework\src\Mediaresearch.Framework.Gui.Telerik\bin\Debug\Mediaresearch.Framework.Gui.Telerik.dll</HintPath>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
+        <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System.Xml" />
         <Reference Include="System.Xaml">
             <RequiredTargetFramework>4.0</RequiredTargetFramework>
@@ -96,6 +111,12 @@
     <ItemGroup>
         <None Include="App.config" />
         <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\..\..\..\..\Pool\GitFramework\src\Mediaresearch.Framework.Gui.Telerik\Mediaresearch.Framework.Gui.Telerik.csproj">
+        <Project>{a9c74a0f-4f06-4032-ac37-978e25c1b0a2}</Project>
+        <Name>Mediaresearch.Framework.Gui.Telerik</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
