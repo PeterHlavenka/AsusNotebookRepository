@@ -1,0 +1,35 @@
+﻿<Window x:Class="RadGrid_Podbarvovani_radku.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadGrid_Podbarvovani_radku"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:telerik1="clr-namespace:Mediaresearch.Framework.Gui.Telerik;assembly=Mediaresearch.Framework.Gui.Telerik"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid>
+        <Grid.Resources>
+            <!-- Odebere oznaceni bunky (ctverec) -->
+            <Style TargetType="telerik:GridViewCell">
+                <Setter Property="CurrentBorderBrush" Value="Transparent" />
+            </Style>
+
+            <!-- Nastaveni vysky "Header" radku -->
+            <!-- Nepomuze, protoze je nekde setnuta default vyska na 26. Musim v behindu chytit event RowLoaded a upravit v nem PART_HeaderCellGrid  -->
+            <Style TargetType="telerik:GridViewHeaderRow">
+                <Setter Property="Height" Value="15" />
+            </Style>
+        </Grid.Resources>
+        <telerik1:ExtendedRadGridView
+            x:Name="RadGridView" Margin="10"
+            RowLoaded="RadGridView_OnRowLoaded"
+            AutoGenerateColumns="False">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" Header="Jmeno" UniqueName="Name" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding SurName}" Header="Prijmeni"
+                                            UniqueName="Prijmeni" />
+            </telerik:RadGridView.Columns>
+        </telerik1:ExtendedRadGridView>
+    </Grid>
+</Window>
