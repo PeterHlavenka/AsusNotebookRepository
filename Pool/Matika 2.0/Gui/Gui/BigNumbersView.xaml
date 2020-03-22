@@ -9,6 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    Loaded="MainView_OnLoaded"
     mc:Ignorable="d">
     <UserControl.Resources>
         <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
@@ -73,6 +74,7 @@
                 Width="250"
                 Foreground="{Binding ResultBrush}"
                 Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <!--  TextChanged="ResultTextBox_OnTextChanged">  -->
                 <TextBox.InputBindings>
                     <KeyBinding
                         Key="Enter"
@@ -99,7 +101,7 @@
                 </Button>
                 <TextBlock Margin="5,20" Text="Obtížnost:" />
                 <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
-                <TextBlock Margin="200,20,5,25" Text="Správně:" />
+                <TextBlock Margin="150,20,5,25" Text="Správně:" />
                 <TextBlock
                     Margin="5,20"
                     Foreground="Green"
@@ -115,6 +117,7 @@
             Name="ShowingMonkey"
             Grid.Row="1"
             Width="400"
+            HorizontalAlignment="Left"
             gif:ImageBehavior.AnimateInDesignMode="False"
             gif:ImageBehavior.AnimatedSource="{StaticResource Monkey}"
             gif:ImageBehavior.AnimationLoaded="ShowingMonkey_OnAnimationLoaded"

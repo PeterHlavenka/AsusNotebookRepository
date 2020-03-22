@@ -99,7 +99,7 @@
                 </Button>
                 <TextBlock Margin="5,20" Text="Obtížnost:" />
                 <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
-                <TextBlock Margin="200,20,5,25" Text="Správně:" />
+                <TextBlock Margin="150,20,5,25" Text="Správně:" />
                 <TextBlock
                     Margin="5,20"
                     Foreground="Green"
@@ -115,6 +115,7 @@
             Name="ShowingMonkey"
             Grid.Row="1"
             Width="400"
+            HorizontalAlignment="Left"
             animatedGif:ImageBehavior.AnimateInDesignMode="False"
             animatedGif:ImageBehavior.AnimatedSource="{StaticResource Monkey}"
             animatedGif:ImageBehavior.AnimationLoaded="ShowingMonkey_OnAnimationLoaded"

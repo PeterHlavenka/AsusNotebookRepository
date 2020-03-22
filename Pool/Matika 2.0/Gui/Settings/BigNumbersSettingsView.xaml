@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib"
     xmlns:local="clr-namespace:Matika.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="BigNumbersSettingsView"
@@ -26,6 +27,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -39,7 +42,7 @@
                 Width="200"
                 Margin="10,0"
                 HorizontalContentAlignment="Center"
-                Text="{Binding FirstNumberSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding FirstNumberSize, StringFormat={}{0:N0}, ConverterCulture={x:Static globalization:CultureInfo.CurrentCulture}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBlock
                 Grid.Row="1"
@@ -51,8 +54,32 @@
                 Width="200"
                 Margin="10,0"
                 HorizontalContentAlignment="Center"
-                Text="{Binding SecondNumberSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding SecondNumberSize, StringFormat={}{0:N0}, ConverterCulture={x:Static globalization:CultureInfo.CurrentCulture}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
+            <CheckBox
+                Grid.Row="2"
+                Grid.Column="0"
+                MinHeight="30"
+                Margin="10,0"
+                VerticalContentAlignment="Center"
+                Content="Jen celé tisícovky"
+                IsChecked="{Binding WholeThousands, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <CheckBox
+                Grid.Row="3"
+                Grid.Column="0"
+                MinHeight="30"
+                Margin="10,0"
+                VerticalContentAlignment="Center"
+                Content="Přesahy"
+                IsChecked="{Binding Overlaps, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
         </Grid>
     </Grid>
 </Window>

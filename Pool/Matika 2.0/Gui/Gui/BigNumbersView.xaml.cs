@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,36 @@ namespace Matika.Gui
             InitializeComponent();
         }
 
+        private void MainView_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is BigNumbersViewModel dc)
+            {
+                dc.ResultTextBox = ResultTextBox;
+            }
+        }
+
         private void ShowingMonkey_OnAnimationLoaded(object sender, RoutedEventArgs e)
         {
             if (DataContext is BigNumbersViewModel dc)
             {
                 dc.MonkeyController = ImageBehavior.GetAnimationController(ShowingMonkey);
                 ResultTextBox.Focus();
+            }
+        }
+
+        private void ResultTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(ResultTextBox.Text))
+                {               
+                    int valueBefore = int.Parse(ResultTextBox.Text, NumberStyles.AllowThousands);
+                    ResultTextBox.Text = $"{valueBefore:N0}";             
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);              
             }
         }
     }

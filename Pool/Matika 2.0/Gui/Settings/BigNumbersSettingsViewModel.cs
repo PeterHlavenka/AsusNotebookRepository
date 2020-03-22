@@ -15,5 +15,7 @@ namespace Matika.Settings
         }
         public int FirstNumberSize { get; set; }
         public int SecondNumberSize { get; set; }
+        public bool WholeThousands { get; set; }
+        public bool Overlaps { get; set; }
     }
 }

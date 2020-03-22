@@ -16,7 +16,8 @@ namespace Matika.Gui
         public BigNumbersViewModel(BigNumbersSettingsViewModel bigNumberSettingsViewModel)
         {
             Settings = bigNumberSettingsViewModel;
-            Example = new BigNumbersAddition(Settings.FirstNumberSize / 1000, Settings.SecondNumberSize/1000);
+
+            Example = new BigNumbersAddition(Settings);
             
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
@@ -49,7 +50,7 @@ namespace Matika.Gui
 
                 Repair = false;
 
-                Example = new BigNumbersAddition(Settings.FirstNumberSize / 1000, Settings.SecondNumberSize / 1000);
+                Example = new BigNumbersAddition(Settings);
 
                 UserResult = string.Empty;
             }
