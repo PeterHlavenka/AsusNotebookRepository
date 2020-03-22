@@ -16,6 +16,10 @@ namespace Matika.Examples
             {
                 var firstNumberDigits = (int) Math.Floor(Math.Log10(first) + 1);
                 var secondNumberDigits = (int) Math.Floor(Math.Log10(settings.SecondNumberSize) + 1);
+                if (firstNumberDigits > secondNumberDigits)
+                {
+                    secondNumberDigits = firstNumberDigits;
+                }
                 var skip = firstNumberDigits - secondNumberDigits;
 
                 var list = new List<int>();

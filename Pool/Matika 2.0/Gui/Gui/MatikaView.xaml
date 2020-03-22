@@ -78,7 +78,10 @@
                         Key="Enter"
                         Command="{Binding GenerateCommand}"
                         CommandParameter="{Binding Path=Text, RelativeSource={RelativeSource AncestorType={x:Type TextBox}}}" />
-                    <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
+                    <KeyBinding
+                        Key="Back"
+                        Command="{Binding ResetCommand}"
+                        CommandParameter="{Binding ElementName=ResultTextBox}" />
                 </TextBox.InputBindings>
             </TextBox>
         </StackPanel>

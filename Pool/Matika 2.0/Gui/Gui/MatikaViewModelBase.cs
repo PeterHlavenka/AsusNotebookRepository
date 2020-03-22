@@ -124,14 +124,19 @@ namespace Matika.Gui
             Timer.Stop();
         }
 
-        protected void DoReset()
+        protected void DoReset(object obj)
         {
             if (string.IsNullOrEmpty(UserResult))
             {
                 return;
             }
 
-            UserResult = string.Empty;
+            UserResult = UserResult.Substring(0, UserResult.Length - 1);
+
+            if (obj is TextBox tbx)
+            {
+                tbx.CaretIndex = tbx.Text.Length;
+            }
 
             if (Equals(ResultBrush, Brushes.Red))
             {
@@ -142,6 +147,8 @@ namespace Matika.Gui
                 {
                     MoveMonkey();
                 }
+
+                UserResult = string.Empty;
             }
         }
     }
