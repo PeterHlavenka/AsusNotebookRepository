@@ -51,6 +51,7 @@ namespace Matika.Gui
                 if (!string.IsNullOrEmpty(ResultTextBox.Text))
                 {               
                     int valueBefore = int.Parse(ResultTextBox.Text, NumberStyles.AllowThousands);
+                    ResultTextBox.CaretIndex = ResultTextBox.Text.Length;
                     ResultTextBox.Text = $"{valueBefore:N0}";             
                 }
             }
