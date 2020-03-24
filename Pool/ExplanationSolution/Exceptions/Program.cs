@@ -34,7 +34,8 @@ namespace Exceptions
 
             catch (IOException ex) when ((ex.HResult & 0xFFFF) == 0x27 || (ex.HResult & 0xFFFF) == 0x70) // (vcetne Malo mista na disku )
             {
-                Console.WriteLine(ex.Message);
+                var str = ex.GetType();
+                Console.WriteLine(str);
                 //throw new InvalidOperationException();  rethrownuti zabije program a do dalsiho catche se nedostane
             }
             catch (Exception exc)
