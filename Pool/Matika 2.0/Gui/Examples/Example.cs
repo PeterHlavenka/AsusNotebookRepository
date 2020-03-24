@@ -17,30 +17,33 @@ namespace Matika.Examples
         {
             Diff = settings.Difficulty;
 
-            var list = new List<int>();
+            List<int> list = new List<int>();
 
-            for (var i = 0; i < settings.AddCount; i++)
+            for (int i = 0; i < settings.AddCount; i++)
             {
                 list.Add(0);
             }
-            for (var i = 0; i < settings.DifferenceCount; i++)
+
+            for (int i = 0; i < settings.DifferenceCount; i++)
             {
                 list.Add(1);
             }
-            for (var i = 0; i < settings.ProductCount; i++)
+
+            for (int i = 0; i < settings.ProductCount; i++)
             {
                 list.Add(2);
             }
-            for (var i = 0; i < settings.DivideCount; i++)
+
+            for (int i = 0; i < settings.DivideCount; i++)
             {
                 list.Add(3);
             }
 
-            var rand = 0;
+            int rand = 0;
 
             if (list.Count > 0)
             {
-                var r = new Random().Next(list.Count);
+                int r = new Random().Next(list.Count);
                 rand = list[r];
             }
 

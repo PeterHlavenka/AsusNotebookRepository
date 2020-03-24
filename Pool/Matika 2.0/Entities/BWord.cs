@@ -6,7 +6,7 @@ namespace Entities
 {
     [DaoFactory(DaoType = typeof(BWordDao))]
     [TableName("B_Word", Owner = "dbo")]
-   public class BWord : LightDatabaseEntityIdentityIntKey<BWord>, IWord
+    public class BWord : LightDatabaseEntityIdentityIntKey<BWord>, IWord
     {
         public string Name { get; set; }
         public bool IsEnumerated { get; set; }

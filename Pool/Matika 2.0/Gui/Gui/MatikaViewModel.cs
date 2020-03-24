@@ -33,7 +33,7 @@ namespace Matika.Gui
 
         public override void DoGenerate(object obj)
         {
-            var success = int.TryParse(obj.ToString(), out var number);
+            bool success = int.TryParse(obj.ToString(), out int number);
             if (success && number == Example.Result)
             {
                 if (Repair == false)

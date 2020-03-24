@@ -10,7 +10,7 @@ namespace Matika.Gui
         {
             get
             {
-                var result = new Dictionary<int, string>
+                Dictionary<int, string> result = new Dictionary<int, string>
                 {
                     {0, "mm"},
                     {1, "cm"},

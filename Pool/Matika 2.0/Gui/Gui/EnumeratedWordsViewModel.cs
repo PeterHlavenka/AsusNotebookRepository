@@ -14,7 +14,6 @@ namespace Matika.Gui
     public class EnumeratedWordsViewModel : Screen
 
     {
-       
         private static readonly Random Random = new Random();
 
         private string m_displayedName;
@@ -38,7 +37,7 @@ namespace Matika.Gui
             GetQueue(null);
             ChangeItem(Queue);
         }
-        
+
         public string[] EnumChars
         {
             get => m_enumChars;
@@ -97,14 +96,14 @@ namespace Matika.Gui
 
         private void GetQueue(string parameter)
         {
-            var first = string.IsNullOrEmpty(parameter) ? EnumChars.Shuffle().First() : parameter;
-          
+            string first = string.IsNullOrEmpty(parameter) ? EnumChars.Shuffle().First() : parameter;
+
             IWord[] test = null;
 
             switch (first)
             {
                 case "B":
-                   
+
                     test = m_bWordDao.GetWords().ToArray();
                     break;
                 case "L":
@@ -168,6 +167,7 @@ namespace Matika.Gui
             {
                 return;
             }
+
             DisplayedName = Item.Name;
 
             var action = new Action(() =>
@@ -191,9 +191,9 @@ namespace Matika.Gui
         /// <returns></returns>
         public static T[] Shuffle<T>(this T[] instance)
         {
-            for (var i = 0; i < instance.Length; ++i)
+            for (int i = 0; i < instance.Length; ++i)
             {
-                var j = Random.Next(i, instance.Length); // select a random j such that i <= j < instance.Length
+                int j = Random.Next(i, instance.Length); // select a random j such that i <= j < instance.Length
 
                 // swap instance[i] and instance[j]
                 var x = instance[j];

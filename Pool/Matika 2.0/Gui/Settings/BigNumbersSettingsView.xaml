@@ -2,6 +2,7 @@
     x:Class="Matika.Settings.BigNumbersSettingsView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:Matika.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib"
     xmlns:local="clr-namespace:Matika.Settings"
@@ -12,6 +13,8 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.Resources>
+            <converters:ValuesToBoolConverter x:Key="ValuesToBoolConverter" />
+            <converters:SizeToBoolConverter x:Key="SizeToBoolConverter" />
             <Style TargetType="TextBox">
                 <Style.Setters>
                     <Setter Property="FontSize" Value="30" />
@@ -37,6 +40,7 @@
 
             <TextBlock Text=" Maximální velikost prvního čísla" />
             <TextBox
+                Name="FirstNumberSizeTextBox"
                 Grid.Row="0"
                 Grid.Column="1"
                 Width="200"
@@ -49,6 +53,7 @@
                 Grid.Column="0"
                 Text=" Maximální velikost druhého čísla" />
             <TextBox
+                Name="SecondNumberSizeTextBox"
                 Grid.Row="1"
                 Grid.Column="1"
                 Width="200"
@@ -57,6 +62,7 @@
                 Text="{Binding SecondNumberSize, StringFormat={}{0:N0}, ConverterCulture={x:Static globalization:CultureInfo.CurrentCulture}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
             <CheckBox
+                Name="WholeThousandCheckBox"
                 Grid.Row="2"
                 Grid.Column="0"
                 MinHeight="30"
@@ -67,6 +73,25 @@
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="2" ScaleY="2" />
                 </CheckBox.LayoutTransform>
+                <CheckBox.Style>
+                    <Style TargetType="CheckBox">
+                        <Setter Property="IsEnabled" Value="False" />
+                        <Style.Triggers>
+                            <!--<DataTrigger Binding="{Binding FirstNumberSize, Converter={StaticResource SizeToBoolConverter}}" Value="True">
+                                <Setter Property="IsChecked" Value="True" />
+                            </DataTrigger>-->
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding Path=FirstNumberSize, Converter={StaticResource SizeToBoolConverter}}" Value="True" />
+                                    <Condition Binding="{Binding Path=SecondNumberSize, Converter={StaticResource SizeToBoolConverter}}" Value="True" />
+                                </MultiDataTrigger.Conditions>
+                                <MultiDataTrigger.Setters>
+                                    <Setter Property="IsEnabled" Value="True" />
+                                </MultiDataTrigger.Setters>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </CheckBox.Style>
             </CheckBox>
             <CheckBox
                 Grid.Row="3"

@@ -5,7 +5,7 @@ using Mediaresearch.Framework.DataAccess.BLToolkit.Dao;
 
 namespace Entities
 {
-   public class BWordDao: EntityIdentityKeyDaoBase<BWord, EnumeratedWordsDataModel, int, BWord>, IBWordDao
+    public class BWordDao : EntityIdentityKeyDaoBase<BWord, EnumeratedWordsDataModel, int, BWord>, IBWordDao
     {
         public BWordDao(string dbAlias)
             : base(dbAlias)
@@ -20,8 +20,8 @@ namespace Entities
         public IEnumerable<BWord> GetWords()
         {
             using (var model = CreateDbContext())
-            {                
-                return model.BWord.Select(d => d);           
+            {
+                return model.BWord.Select(d => d);
             }
         }
     }

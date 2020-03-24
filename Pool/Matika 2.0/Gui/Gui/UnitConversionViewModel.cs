@@ -31,7 +31,7 @@ namespace Matika.Gui
             {
                 m_conversion = value;
                 NotifyOfPropertyChange();
-            } 
+            }
         }
 
         public UnitConversionsSettingsViewModel Settings
@@ -46,7 +46,7 @@ namespace Matika.Gui
 
         public override void DoGenerate(object obj)
         {
-            var success = double.TryParse(obj.ToString(), out var number);
+            bool success = double.TryParse(obj.ToString(), out double number);
 
             if (success && Math.Abs(number - Conversion.Result) < double.Epsilon)
             {
@@ -57,7 +57,7 @@ namespace Matika.Gui
 
                 Repair = false;
 
-                Conversion = Conversion.Generate(Settings); 
+                Conversion = Conversion.Generate(Settings);
 
                 UserResult = string.Empty;
             }

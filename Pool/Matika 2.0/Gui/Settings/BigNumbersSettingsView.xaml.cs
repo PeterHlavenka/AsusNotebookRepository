@@ -23,7 +23,6 @@ namespace Matika.Settings
         public BigNumbersSettingsView()
         {
             InitializeComponent();
-            
         }
     }
 }

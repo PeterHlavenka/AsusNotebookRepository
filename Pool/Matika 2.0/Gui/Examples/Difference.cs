@@ -6,9 +6,9 @@ namespace Matika.Examples
     {
         public Difference(int diffuculty)
         {
-            var maximum = diffuculty * 10;
-            var first = new Random().Next(maximum + 1);
-            var second = new Random().Next(10 + 1);
+            int maximum = diffuculty * 10;
+            int first = new Random().Next(maximum + 1);
+            int second = new Random().Next(10 + 1);
 
             Result = first - second;
 

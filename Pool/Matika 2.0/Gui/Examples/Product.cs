@@ -8,7 +8,7 @@ namespace Matika.Examples
         {
             int first;
             int second;
-            var maximum = difficulty * 10 / 3;
+            int maximum = difficulty * 10 / 3;
 
             do
             {

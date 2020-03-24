@@ -13,8 +13,10 @@ namespace Matika.Settings
             FirstNumberSize = first;
             SecondNumberSize = second;
         }
+
         public int FirstNumberSize { get; set; }
         public int SecondNumberSize { get; set; }
+        public bool CanWholeThousand => FirstNumberSize > 1000 && SecondNumberSize > 1000;
         public bool WholeThousands { get; set; }
         public bool Overlaps { get; set; }
     }

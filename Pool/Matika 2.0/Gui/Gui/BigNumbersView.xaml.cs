@@ -49,15 +49,15 @@ namespace Matika.Gui
             try
             {
                 if (!string.IsNullOrEmpty(ResultTextBox.Text))
-                {               
+                {
                     int valueBefore = int.Parse(ResultTextBox.Text, NumberStyles.AllowThousands);
                     ResultTextBox.CaretIndex = ResultTextBox.Text.Length;
-                    ResultTextBox.Text = $"{valueBefore:N0}";             
+                    ResultTextBox.Text = $"{valueBefore:N0}";
                 }
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception);              
+                Console.WriteLine(exception);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 using System.Windows;
@@ -21,26 +22,26 @@ namespace Shell
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
-        {           
+        {
             m_container = new WindsorContainer();
             m_container.Register(Component.For<IWindowManager>().ImplementedBy<WindowManager>());
             var manager = m_container.Resolve<IWindowManager>();
-
-            MainViewModel root = null;
-
-            //void InitAction()
-            //{
-            //    m_container.Install(new ShellInstaller());
-            //    root = m_container.Resolve<MainViewModel>();
-            //}
-            //var splashScreen = new SplashScreenViewModel(InitAction);
-            //manager.ShowDialog(splashScreen);
-
-
-            m_container.Install(new ShellInstaller());
-            root = m_container.Resolve<MainViewModel>();
-            manager.ShowDialog(root);
-            Application.Shutdown();
+            var splashScreen = new SplashScreenViewModel();
+            manager.ShowWindow(splashScreen);
+            
+            try
+            {
+                m_container.Install(new ShellInstaller());
+                var root = m_container.Resolve<MainViewModel>();
+                manager.ShowWindow(root);
+                Application.Current.MainWindow = (Window) root.GetView();
+                splashScreen.TryClose();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
         }
     }
 }

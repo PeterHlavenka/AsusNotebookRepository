@@ -1,6 +1,6 @@
 ﻿namespace Matika.Settings
 {
-   public class UnitConversionsSettingsViewModel : SettingsBase
+    public class UnitConversionsSettingsViewModel : SettingsBase
     {
         private bool m_decimalNumbers;
         private int m_stepDifference = 1;

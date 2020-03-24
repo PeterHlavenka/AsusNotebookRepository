@@ -5,7 +5,7 @@ using Mediaresearch.Framework.DataAccess.BLToolkit;
 
 namespace Entities
 {
-   public class EnumeratedWordsDataModel : TransactionDbManager
+    public class EnumeratedWordsDataModel : TransactionDbManager
     {
         public EnumeratedWordsDataModel(DataProviderBase dataProvider, string connectionString)
             : base(dataProvider, connectionString)

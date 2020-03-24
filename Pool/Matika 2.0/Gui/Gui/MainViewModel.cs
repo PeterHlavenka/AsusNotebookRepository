@@ -13,7 +13,7 @@ namespace Matika.Gui
     {
         public MainViewModel(MatikaViewModel matikaViewModel, UnitConversionViewModel unitConversionViewModel, BigNumbersViewModel bigNumbersViewModel)
         {
-            MatikaViewModel = matikaViewModel;           
+            MatikaViewModel = matikaViewModel;
             UnitConversionViewModel = unitConversionViewModel;
             BigNumbersViewModel = bigNumbersViewModel;
         }

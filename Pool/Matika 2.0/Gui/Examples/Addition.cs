@@ -8,8 +8,8 @@ namespace Matika.Examples
         {
             do
             {
-                var first = new Random().Next(difficulty + 1);
-                var second = new Random().Next(difficulty) + 1;
+                int first = new Random().Next(difficulty + 1);
+                int second = new Random().Next(difficulty) + 1;
 
                 Result = first + second;
                 TaskString = string.Join(" ", first, Sign, second, EqualSign);

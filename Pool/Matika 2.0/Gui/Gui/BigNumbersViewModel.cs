@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using Caliburn.Micro;
@@ -11,17 +12,16 @@ using Mediaresearch.Framework.Gui;
 
 namespace Matika.Gui
 {
-    public class BigNumbersViewModel: MatikaViewModelBase
+    public class BigNumbersViewModel : MatikaViewModelBase
     {
         public BigNumbersViewModel(BigNumbersSettingsViewModel bigNumberSettingsViewModel)
         {
             Settings = bigNumberSettingsViewModel;
 
             Example = new BigNumbersAddition(Settings);
-            
+
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
-            
         }
 
         private BigNumbersSettingsViewModel Settings { get; set; }
@@ -40,7 +40,8 @@ namespace Matika.Gui
 
         public override void DoGenerate(object obj)
         {
-            var success = int.TryParse(obj.ToString(), out var number);
+            string entry = Regex.Replace(obj.ToString(), @"\s+", string.Empty);
+            bool success = int.TryParse(entry, out int number);
             if (success && number == Example.Result)
             {
                 if (Repair == false)
@@ -61,7 +62,7 @@ namespace Matika.Gui
                     ResultBrush = Brushes.Red;
                     Repair = true;
                 }
-            }                                
+            }
         }
     }
 }

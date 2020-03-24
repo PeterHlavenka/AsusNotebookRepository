@@ -8,9 +8,9 @@ namespace Matika.Examples
 
         public Share(int difficulty)
         {
-            var res = new Random().Next(10 + 1);
-            var sec = new Random().Next(1, difficulty + 1);
-            var fir = res * sec;
+            int res = new Random().Next(10 + 1);
+            int sec = new Random().Next(1, difficulty + 1);
+            int fir = res * sec;
 
 
             Result = res;

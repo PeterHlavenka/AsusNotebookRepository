@@ -71,7 +71,6 @@
     </UserControl.Resources>
 
 
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

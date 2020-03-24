@@ -24,7 +24,8 @@
             <Setter Property="TickPlacement" Value="None" />
         </Style>
         <Style x:Key="SliderTextBlockStyle" TargetType="TextBlock">
-            <Setter Property="Text" Value=" 1                         2                         3                        4                        5                         6" />
+            <Setter Property="Text"
+                    Value=" 1                         2                         3                        4                        5                         6" />
             <Setter Property="Margin" Value="30,0" />
         </Style>
         <Style TargetType="TextBlock">

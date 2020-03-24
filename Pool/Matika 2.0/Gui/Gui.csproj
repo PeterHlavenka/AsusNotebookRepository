@@ -127,6 +127,8 @@
     <Compile Include="Configurations\MatikaConfiguration.cs" />
     <Compile Include="Conversion.cs" />
     <Compile Include="Converters\CommaToDotConverter.cs" />
+    <Compile Include="Converters\SizeToBoolConverter.cs" />
+    <Compile Include="Converters\ValuesToBoolConverter.cs" />
     <Compile Include="Examples\BigNumbersAddition.cs" />
     <Compile Include="Examples\BigNumbersDifference.cs" />
     <Compile Include="Gui\BigNumbersView.xaml.cs">
