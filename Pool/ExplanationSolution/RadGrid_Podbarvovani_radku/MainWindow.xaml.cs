@@ -2,15 +2,12 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using Caliburn.Micro;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.GridView;
 
 namespace RadGrid_Podbarvovani_radku
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   // MEDIARESEARCH.GUI.TELERIK JE NATVRDO DO POOLU
     public partial class MainWindow  
     {
         public MainWindow()
