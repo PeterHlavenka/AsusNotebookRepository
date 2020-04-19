@@ -13,7 +13,7 @@ namespace RadGrid_Podbarvovani_radku
         public MainWindow()
         {
             InitializeComponent();
-            List<Person> persons = new List<Person>{new Person("Peter", "Hlavenka"), new Person("Vladimira", "Hlavenkova")};
+            List<Person> persons = new List<Person>{new Person("Peter", "Hlavenka"), new Person("Vladimira", "Hlavenkova"), new Person("Vladimira", "Hlavenkova"), new Person("Vladimira", "Hlavenkova") };
             RadGridView.ItemsSource = persons;
         }
 
