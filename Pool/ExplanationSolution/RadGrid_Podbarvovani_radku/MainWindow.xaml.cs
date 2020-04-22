@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Common;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.GridView;
 
@@ -36,17 +37,5 @@ namespace RadGrid_Podbarvovani_radku
                 var necofi = neco.FirstOrDefault(x => x.Name == "Background_Over");
             }
         }
-    }
-
-    public class Person
-    {
-        public Person(string name, string surName)
-        {
-            Name = name;
-            SurName = surName;
-        }
-
-        public string Name { get; set; }
-        public string SurName { get; set; }
     }
 }

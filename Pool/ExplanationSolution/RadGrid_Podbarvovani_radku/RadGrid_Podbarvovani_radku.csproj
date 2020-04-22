@@ -113,6 +113,10 @@
       <Project>{a9c74a0f-4f06-4032-ac37-978e25c1b0a2}</Project>
       <Name>Mediaresearch.Framework.Gui.Telerik</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7840e327-fcd1-424d-9b12-48f4575eef83}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
