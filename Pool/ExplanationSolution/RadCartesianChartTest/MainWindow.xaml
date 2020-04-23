@@ -1,12 +1,143 @@
-﻿<Window x:Class="RadCartesianChartTest.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RadCartesianChartTest"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+﻿<Window
+    x:Class="RadCartesianChartTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RadCartesianChartTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    Title="MainWindow"
+    Width="1100"
+    Height="800"
+    mc:Ignorable="d">
+
     <Grid>
-         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <telerik:RadCartesianChart Name="chart">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+
+                <telerik:CategoricalAxis />
+                <!--<telerik:LinearAxis Minimum="0" Maximum="110" MajorStep="10" />-->
+            </telerik:RadCartesianChart.VerticalAxis>
+
+            <telerik:RadCartesianChart.Grid>
+                <telerik:CartesianChartGrid StripLinesVisibility="Y">
+                    <telerik:CartesianChartGrid.YStripeBrushes>
+                        <SolidColorBrush Color="#F2F2F2" />
+                        <SolidColorBrush Color="Transparent" />
+                    </telerik:CartesianChartGrid.YStripeBrushes>
+                </telerik:CartesianChartGrid>
+            </telerik:RadCartesianChart.Grid>
+
+            <telerik:BarSeries
+                CategoryBinding="NOC"
+                CombineMode="Stack"
+                ItemsSource="{Binding AllData}"
+                ValueBinding="Bronze">
+                <telerik:BarSeries.DefaultVisualStyle>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#DC5B20" />
+                    </Style>
+                </telerik:BarSeries.DefaultVisualStyle>
+            </telerik:BarSeries>
+            <telerik:BarSeries
+                CategoryBinding="NOC"
+                CombineMode="Stack"
+                ItemsSource="{Binding AllData}"
+                ValueBinding="Silver">
+                <telerik:BarSeries.DefaultVisualStyle>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#C3C3C3" />
+                    </Style>
+                </telerik:BarSeries.DefaultVisualStyle>
+            </telerik:BarSeries>
+            <telerik:BarSeries
+                CategoryBinding="NOC"
+                CombineMode="Stack"
+                ItemsSource="{Binding AllData}"
+                ValueBinding="Gold">
+                <telerik:BarSeries.DefaultVisualStyle>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#E8BC34" />
+                    </Style>
+                </telerik:BarSeries.DefaultVisualStyle>
+            </telerik:BarSeries>
+        </telerik:RadCartesianChart>
+
+
+
+        <telerik:RadCartesianChart
+            x:Name="DateTimeChart"
+            Grid.Row="0"
+            Grid.Column="2">
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior
+                    DragMode="Pan"
+                    PanMode="Horizontal"
+                    ZoomMode="Horizontal" />
+            </telerik:RadCartesianChart.Behaviors>
+            <!--  Axis  -->
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis>
+
+                    <telerik:LinearAxis.LabelTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" />
+                        </DataTemplate>
+                    </telerik:LinearAxis.LabelTemplate>
+                </telerik:LinearAxis>
+            </telerik:RadCartesianChart.VerticalAxis>
+
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeContinuousAxis LabelFitMode="MultiLine" LabelFormat="hh:mm:ss" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+
+            <!--  Series  -->
+            <telerik:RadCartesianChart.Series>
+                <telerik:LineSeries
+                    ItemsSource="{Binding AllData}"
+                    Stroke="Orange"
+                    StrokeThickness="2" />
+                <telerik:LineSeries
+                    ItemsSource="{Binding AllData}"
+                    Stroke="Red"
+                    StrokeThickness="2" />
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+
+
+
+        <telerik:RadCartesianChart
+            Name="IntervalChart"
+            Grid.Row="2"
+            Grid.Column="0">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeContinuousAxis LabelFormat="MMM dd" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:LineSeries
+                    CategoryBinding="XDate"
+                    ItemsSource="{Binding}"
+                    ValueBinding="YVal" />
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+
+
     </Grid>
 </Window>
