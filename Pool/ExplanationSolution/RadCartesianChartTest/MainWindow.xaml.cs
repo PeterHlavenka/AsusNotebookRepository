@@ -16,7 +16,7 @@ namespace RadCartesianChartTest
 
             DataContext = new OlympicMedalStatisticsViewModel();
             DateTimeChart.DataContext = new DateTimeChartDataContext(DateTimeChart);
-            var test = new IntervalChartDatacontext(IntervalChart);
+            IntervalChart.DataContext = new IntervalChartDatacontext(IntervalChart);
         }
     }
 }

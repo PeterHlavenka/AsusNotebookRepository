@@ -10,7 +10,11 @@
     Width="1100"
     Height="800"
     mc:Ignorable="d">
-
+<Window.Resources>
+    <Style TargetType="telerik:LineSeries">
+        <Setter Property="StrokeThickness" Value="8"/>
+    </Style>
+</Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -20,7 +24,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="40" />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <telerik:RadCartesianChart Name="chart">
@@ -124,18 +128,19 @@
             Name="IntervalChart"
             Grid.Row="2"
             Grid.Column="0">
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior
+                    DragMode="Pan"
+                    PanMode="Horizontal"
+                    ZoomMode="Horizontal" />
+            </telerik:RadCartesianChart.Behaviors>
             <telerik:RadCartesianChart.HorizontalAxis>
                 <telerik:DateTimeContinuousAxis LabelFormat="MMM dd" />
             </telerik:RadCartesianChart.HorizontalAxis>
             <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis />
+                <telerik:LinearAxis  MajorStep="1"/>
             </telerik:RadCartesianChart.VerticalAxis>
-            <telerik:RadCartesianChart.Series>
-                <telerik:LineSeries
-                    CategoryBinding="XDate"
-                    ItemsSource="{Binding}"
-                    ValueBinding="YVal" />
-            </telerik:RadCartesianChart.Series>
+
         </telerik:RadCartesianChart>
 
 
