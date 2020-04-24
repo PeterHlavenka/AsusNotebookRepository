@@ -18,40 +18,28 @@ namespace RadCartesianChartTest
         public IntervalChartDatacontext(RadCartesianChart intervalChart)
         {
             AvailableInterval = new List<PlotInfo>
-            {
-                new PlotInfo {XDate = new DateTime(2013, 1, 22), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 23), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 24), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 25), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 26), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 27), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 28), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 29), YVal = null,},
+            {      
+                //nepotrebuju vynechani
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 55, 30 ), YVal = 7,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 58, 00 ), YVal = 7,}, 
+                //null na vynechani staci jeden point
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = null,},               
+                //dalsi interval
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = 7,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 06, 00 ), YVal = 7,},
             };
 
             MissingInterval = new List<PlotInfo>
             {
-                new PlotInfo {XDate = new DateTime(2013, 1, 22), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 23), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 24), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 25), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 26), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 27), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 28), YVal = 7,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 29), YVal = 7,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 50, 00 ), YVal = 6,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 55, 30 ), YVal = 6,},
+                //null na vynechani
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 55, 30 ), YVal = null,},                
+                //dalsi interval
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 58, 00 ), YVal = 6,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = 6,},
             };
 
-            NextChannel = new List<PlotInfo>
-            {
-                new PlotInfo {XDate = new DateTime(2013, 1, 22), YVal = 6,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 23), YVal = 6,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 24), YVal = 6,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 25), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 26), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 27), YVal = null,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 28), YVal = 6,},
-                new PlotInfo {XDate = new DateTime(2013, 1, 29), YVal = 6,},
-            };
 
             LineSeries line = new LineSeries
             {
@@ -66,14 +54,14 @@ namespace RadCartesianChartTest
                 Stroke = new SolidColorBrush { Color = Colors.Red },               
                 CategoryBinding = new PropertyNameDataPointBinding() { PropertyName = "XDate" },
                 ValueBinding = new PropertyNameDataPointBinding() { PropertyName = "YVal" },
-                ItemsSource = NextChannel
+                ItemsSource = MissingInterval
             };
 
+
             intervalChart.Series.Add(line);
-            intervalChart.Series.Add(missing);
+            intervalChart.Series.Add(missing);         
         }
 
-        public List<PlotInfo> NextChannel { get; set; }
 
         public List<PlotInfo> MissingInterval
         {

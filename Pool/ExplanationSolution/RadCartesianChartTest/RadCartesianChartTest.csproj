@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="DateTimeChartDataContext.cs" />
     <Compile Include="IntervalChartDatacontext.cs" />
+    <Compile Include="LabelConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

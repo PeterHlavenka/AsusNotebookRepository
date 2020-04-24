@@ -21,8 +21,8 @@ namespace RadCartesianChartTest
             AllData = new List<ReferenceStreamData>();
 
             
-            var first = new ReferenceStreamData{Date = DateTime.Now, Value = 15};
-            var second = new ReferenceStreamData { Date = DateTime.Now.AddMinutes(10), Value = 13 };
+            var first = new ReferenceStreamData{Date = DateTime.Now, Value = 15, ChannelName = "boo"};
+            var second = new ReferenceStreamData { Date = DateTime.Now.AddMinutes(10), Value = 13, ChannelName = "boo"};
 
             AllData.Add(first);
             AllData.Add(second);

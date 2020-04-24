@@ -10,11 +10,12 @@
     Width="1100"
     Height="800"
     mc:Ignorable="d">
-<Window.Resources>
-    <Style TargetType="telerik:LineSeries">
-        <Setter Property="StrokeThickness" Value="8"/>
-    </Style>
-</Window.Resources>
+    <Window.Resources>
+        <Style TargetType="telerik:LineSeries">
+            <Setter Property="StrokeThickness" Value="20" />
+        </Style>
+        <local:LabelConverter x:Key="LabelConverter"></local:LabelConverter>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -24,7 +25,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="40" />
-            <RowDefinition Height="Auto"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <telerik:RadCartesianChart Name="chart">
@@ -96,17 +97,21 @@
             <!--  Axis  -->
             <telerik:RadCartesianChart.VerticalAxis>
                 <telerik:LinearAxis>
-
+                    
                     <telerik:LinearAxis.LabelTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding}" />
+                            <!--<TextBlock Text="{Binding DataItem.Date}"></TextBlock>-->
+                            <TextBlock Text="{Binding Converter={StaticResource LabelConverter}, ConverterParameter={x:Reference Name=DateTimeChart }}" />
                         </DataTemplate>
                     </telerik:LinearAxis.LabelTemplate>
                 </telerik:LinearAxis>
             </telerik:RadCartesianChart.VerticalAxis>
 
             <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:DateTimeContinuousAxis LabelFitMode="MultiLine" LabelFormat="hh:mm:ss" />
+                <telerik:DateTimeContinuousAxis
+                    LabelFitMode="MultiLine"
+                    LabelFormat="hh:mm:ss"
+                    MajorStepUnit="Minute" />
             </telerik:RadCartesianChart.HorizontalAxis>
 
             <!--  Series  -->
@@ -127,7 +132,8 @@
         <telerik:RadCartesianChart
             Name="IntervalChart"
             Grid.Row="2"
-            Grid.Column="0">
+            Grid.Column="0"
+            Grid.ColumnSpan="3">
             <telerik:RadCartesianChart.Behaviors>
                 <telerik:ChartPanAndZoomBehavior
                     DragMode="Pan"
@@ -135,12 +141,14 @@
                     ZoomMode="Horizontal" />
             </telerik:RadCartesianChart.Behaviors>
             <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:DateTimeContinuousAxis LabelFormat="MMM dd" />
+                <telerik:DateTimeContinuousAxis
+                    LabelFormat="mm:ss"
+                    MajorStep="5"
+                    MajorStepUnit="Minute" />
             </telerik:RadCartesianChart.HorizontalAxis>
             <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis  MajorStep="1"/>
+                <telerik:LinearAxis MajorStep="1" />
             </telerik:RadCartesianChart.VerticalAxis>
-
         </telerik:RadCartesianChart>
 
 
