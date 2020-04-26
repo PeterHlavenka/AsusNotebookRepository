@@ -20,7 +20,7 @@ namespace RadCartesianChartTest
                 var context = chart.DataContext as DateTimeChartDataContext;
                 
                 var result = context?.AllData.FirstOrDefault(d => d.Value.Equals(bla));
-                return result?.ChannelName;               
+                return result == null ?  "NULL" : result.ChannelName;               
             }
             return "to je v pici";
         }
