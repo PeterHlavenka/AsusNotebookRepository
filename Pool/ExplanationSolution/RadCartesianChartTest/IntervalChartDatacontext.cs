@@ -46,7 +46,8 @@ namespace RadCartesianChartTest
                 Stroke = new SolidColorBrush {Color = Colors.GreenYellow},               
                 CategoryBinding = new PropertyNameDataPointBinding() {PropertyName = "XDate" },
                 ValueBinding = new PropertyNameDataPointBinding() {PropertyName = "YVal" },
-                ItemsSource = AvailableInterval
+                ItemsSource = AvailableInterval,
+                
             };
 
             LineSeries missing = new LineSeries
@@ -80,5 +81,6 @@ namespace RadCartesianChartTest
     {
         public DateTime XDate { get; set; }
         public double? YVal { get; set; }
+        
     }
 }

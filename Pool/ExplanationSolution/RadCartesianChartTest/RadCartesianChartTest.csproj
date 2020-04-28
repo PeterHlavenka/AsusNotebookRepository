@@ -79,6 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BindedSeriesChartDatacontext.cs" />
     <Compile Include="DateTimeChartDataContext.cs" />
     <Compile Include="IntervalChartDatacontext.cs" />
     <Compile Include="LabelConverter.cs" />
