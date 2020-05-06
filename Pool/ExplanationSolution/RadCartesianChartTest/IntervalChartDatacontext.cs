@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,12 @@ namespace RadCartesianChartTest
 {
     public class IntervalChartDatacontext : Screen
     {
-        private List<PlotInfo> m_missingIntervals;
-        private List<PlotInfo> m_availableInterval;
+        private ObservableCollection<PlotInfo> m_missingIntervals;
+        private ObservableCollection<PlotInfo> m_availableInterval;
 
-        public IntervalChartDatacontext(RadCartesianChart intervalChart)
+        public IntervalChartDatacontext()
         {
-            AvailableInterval = new List<PlotInfo>
+            AvailableInterval = new ObservableCollection<PlotInfo>
             {      
                 //nepotrebuju vynechani
                 new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 55, 30 ), YVal = 7,},
@@ -27,9 +28,14 @@ namespace RadCartesianChartTest
                 //dalsi interval
                 new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = 7,},
                 new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 06, 00 ), YVal = 7,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 06, 00 ), YVal = null,},
+
+                //custom = 8
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 50, 00 ), YVal = 8,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 06, 00 ), YVal = 8,},
             };
 
-            MissingInterval = new List<PlotInfo>
+            MissingInterval = new ObservableCollection<PlotInfo>
             {
                 new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 50, 00 ), YVal = 6,},
                 new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 55, 30 ), YVal = 6,},
@@ -38,39 +44,44 @@ namespace RadCartesianChartTest
                 //dalsi interval
                 new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 58, 00 ), YVal = 6,},
                 new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = 6,},
+
+                new PlotInfo {XDate = new DateTime(2013, 1, 26, 00, 03, 00 ), YVal = null,},
+                //custom = 8
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 52, 00 ), YVal = 8,},
+                new PlotInfo {XDate = new DateTime(2013, 1, 25, 23, 53, 00 ), YVal = 8,},
             };
 
 
-            LineSeries line = new LineSeries
-            {
-                Stroke = new SolidColorBrush {Color = Colors.GreenYellow},               
-                CategoryBinding = new PropertyNameDataPointBinding() {PropertyName = "XDate" },
-                ValueBinding = new PropertyNameDataPointBinding() {PropertyName = "YVal" },
-                ItemsSource = AvailableInterval,
+            //LineSeries line = new LineSeries
+            //{
+            //    Stroke = new SolidColorBrush {Color = Colors.GreenYellow},               
+            //    CategoryBinding = new PropertyNameDataPointBinding() {PropertyName = "XDate" },
+            //    ValueBinding = new PropertyNameDataPointBinding() {PropertyName = "YVal" },
+            //    ItemsSource = AvailableInterval,
                 
-            };
+            //};
 
-            LineSeries missing = new LineSeries
-            {
-                Stroke = new SolidColorBrush { Color = Colors.Red },               
-                CategoryBinding = new PropertyNameDataPointBinding() { PropertyName = "XDate" },
-                ValueBinding = new PropertyNameDataPointBinding() { PropertyName = "YVal" },
-                ItemsSource = MissingInterval
-            };
+            //LineSeries missing = new LineSeries
+            //{
+            //    Stroke = new SolidColorBrush { Color = Colors.Red },               
+            //    CategoryBinding = new PropertyNameDataPointBinding() { PropertyName = "XDate" },
+            //    ValueBinding = new PropertyNameDataPointBinding() { PropertyName = "YVal" },
+            //    ItemsSource = MissingInterval
+            //};
 
 
-            intervalChart.Series.Add(line);
-            intervalChart.Series.Add(missing);         
+            //intervalChart.Series.Add(line);
+            //intervalChart.Series.Add(missing);
         }
 
 
-        public List<PlotInfo> MissingInterval
+        public ObservableCollection<PlotInfo> MissingInterval
         {
             get { return m_missingIntervals; }
             set { m_missingIntervals = value; NotifyOfPropertyChange();}
         }
 
-        public List<PlotInfo> AvailableInterval
+        public ObservableCollection<PlotInfo> AvailableInterval
         {
             get { return m_availableInterval; }
             set { m_availableInterval = value; NotifyOfPropertyChange();}

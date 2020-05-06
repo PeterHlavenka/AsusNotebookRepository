@@ -11,14 +11,14 @@
     mc:Ignorable="d">
     <Window.Resources>
         <Style TargetType="telerik:LineSeries">
-            <Setter Property="StrokeThickness" Value="20" />
+            <Setter Property="StrokeThickness" Value="2" />
         </Style>
         <local:LabelConverter x:Key="LabelConverter" />
 
 
 
     </Window.Resources>
-    <Grid>
+    <Grid Background="AntiqueWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="40" />
@@ -30,7 +30,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <telerik:RadCartesianChart Name="chart">
+        <telerik:RadCartesianChart Name="chart" Background="White">
             <telerik:RadCartesianChart.HorizontalAxis>
                 <telerik:LinearAxis />
             </telerik:RadCartesianChart.HorizontalAxis>
@@ -85,11 +85,11 @@
         </telerik:RadCartesianChart>
 
 
-
         <telerik:RadCartesianChart
             x:Name="DateTimeChart"
             Grid.Row="0"
-            Grid.Column="2">
+            Grid.Column="2"
+            Background="White">
             <telerik:RadCartesianChart.Behaviors>
                 <telerik:ChartPanAndZoomBehavior
                     DragMode="Pan"
@@ -131,84 +131,125 @@
 
 
         <!--  VLEVO DOLE  -->
-        <telerik:RadCartesianChart
-            Name="IntervalChart"
+        <ScrollViewer
             Grid.Row="2"
-            Grid.Column="0">
-            <telerik:RadCartesianChart.Resources>
-                <ControlTemplate x:Key="TrackBallTemplate">
-                    <StackPanel>
-                        <TextBlock>Ahoj</TextBlock>
-                        <Rectangle
-                            Width="200"
-                            Height="200"
-                            Fill="Blue"
-                            Stroke="Black"
-                            StrokeThickness="1">
-                            <Rectangle.LayoutTransform>
-                                <RotateTransform Angle="0" />
-                            </Rectangle.LayoutTransform>
-                        </Rectangle>
-                    </StackPanel>
-                </ControlTemplate>
-                <DataTemplate x:Key="TrackBallInfoTemplate">
-                    <GroupBox Header="{Binding DataPoint.Category, StringFormat=Time: {0:D}}">
-                        <StackPanel
-                            Width="200"
-                            Margin="3"
-                            Background="Wheat">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontWeight="Bold" Text="X=" />
-                                <TextBlock Text="{Binding DataPoint.Category, StringFormat=''}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontWeight="Bold" Text="Y=" />
-                                <TextBlock Text="{Binding DataPoint.Value}" />
-                            </StackPanel>
+            Grid.Column="0"
+            VerticalScrollBarVisibility="Auto">
+            <telerik:RadCartesianChart
+                Name="IntervalChart"
+                MinHeight="300"
+                Background="White">
+                <telerik:RadCartesianChart.Resources>
+                    <ControlTemplate x:Key="TrackBallTemplate">
+                        <StackPanel>
+                            <TextBlock>Ahoj</TextBlock>
+                            <Rectangle
+                                Width="200"
+                                Height="200"
+                                Fill="Blue"
+                                Stroke="Black"
+                                StrokeThickness="1">
+                                <Rectangle.LayoutTransform>
+                                    <RotateTransform Angle="0" />
+                                </Rectangle.LayoutTransform>
+                            </Rectangle>
                         </StackPanel>
-                    </GroupBox>
+                    </ControlTemplate>
+                    <DataTemplate x:Key="TrackBallInfoTemplate">
+                        <GroupBox Header="{Binding DataPoint.Category, StringFormat=Time: {0:D}}">
+                            <StackPanel
+                                Width="200"
+                                Margin="3"
+                                Background="Wheat">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="X=" />
+                                    <TextBlock Text="{Binding DataPoint.Category, StringFormat=''}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="Y=" />
+                                    <TextBlock Text="{Binding DataPoint.Value}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
 
-                </DataTemplate>
-            </telerik:RadCartesianChart.Resources>
+                    </DataTemplate>
+                </telerik:RadCartesianChart.Resources>
 
-            <telerik:RadCartesianChart.TrackBallInfoStyle>
-                <Style TargetType="telerik:TrackBallInfoControl">
-                    <Setter Property="Background" Value="Bisque" />
-                    <Setter Property="Header" Value="{Binding DataPoint.Category}" />
+                <telerik:RadCartesianChart.TrackBallInfoStyle>
+                    <Style TargetType="telerik:TrackBallInfoControl">
+                        <Setter Property="Background" Value="Bisque" />
+                        <Setter Property="Header" Value="{Binding DataPoint.Category}" />
 
-                    <Setter Property="DataPointInfoTemplate" Value="{StaticResource TrackBallInfoTemplate}" />
-                </Style>
-            </telerik:RadCartesianChart.TrackBallInfoStyle>
-            <telerik:RadCartesianChart.TrackBallLineStyle>
-                <Style TargetType="Polyline">
-                    <Setter Property="Stroke" Value="Red" />
-                </Style>
-            </telerik:RadCartesianChart.TrackBallLineStyle>
-
-
-            <telerik:RadCartesianChart.Behaviors>
-                <telerik:ChartPanAndZoomBehavior
-                    DragMode="Pan"
-                    PanMode="None"
-                    ZoomMode="Horizontal" />
-                <telerik:ChartTrackBallBehavior ShowIntersectionPoints="False" SnapMode="ClosestPoint" />
-            </telerik:RadCartesianChart.Behaviors>
+                        <Setter Property="DataPointInfoTemplate" Value="{StaticResource TrackBallInfoTemplate}" />
+                    </Style>
+                </telerik:RadCartesianChart.TrackBallInfoStyle>
+                <telerik:RadCartesianChart.TrackBallLineStyle>
+                    <Style TargetType="Polyline">
+                        <Setter Property="Stroke" Value="Red" />
+                    </Style>
+                </telerik:RadCartesianChart.TrackBallLineStyle>
 
 
+                <telerik:RadCartesianChart.Behaviors>
+                    <telerik:ChartPanAndZoomBehavior
+                        DragMode="Pan"
+                        PanMode="None"
+                        ZoomMode="Horizontal" />
+                    <telerik:ChartTrackBallBehavior ShowIntersectionPoints="False" SnapMode="ClosestPoint" />
+                </telerik:RadCartesianChart.Behaviors>
 
-            <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:DateTimeContinuousAxis
-                    LabelFormat="mm:ss"
-                    MajorStep="10"
-                    MajorStepUnit="Minute" />
-            </telerik:RadCartesianChart.HorizontalAxis>
-            <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis MajorStep="1" />
-            </telerik:RadCartesianChart.VerticalAxis>
 
-        </telerik:RadCartesianChart>
 
-        <telerik:RadCartesianChart Grid.Row="2" Grid.Column="2" x:Name="BindedSeriesChart">
+                <telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:DateTimeContinuousAxis
+                        LabelFormat="mm:ss"
+                        MajorStep="10"
+                        MajorStepUnit="Minute" />
+                </telerik:RadCartesianChart.HorizontalAxis>
+
+                <telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:LinearAxis MajorStep="1" />
+                </telerik:RadCartesianChart.VerticalAxis>
+
+                <telerik:RadCartesianChart.Series>
+
+
+                    <telerik:LineSeries
+                        CategoryBinding="XDate"
+                        ItemsSource="{Binding AvailableInterval}"
+                        Stroke="Green"
+                        ValueBinding="YVal" />
+
+                    <telerik:LineSeries
+                        CategoryBinding="XDate"
+                        ItemsSource="{Binding MissingInterval}"
+                        Stroke="Red"
+                        ValueBinding="YVal" />
+                </telerik:RadCartesianChart.Series>
+
+            </telerik:RadCartesianChart>
+        </ScrollViewer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <telerik:RadCartesianChart
+            x:Name="BindedSeriesChart"
+            Grid.Row="2"
+            Grid.Column="2">
 
             <telerik:RadCartesianChart.HorizontalAxis>
                 <telerik:CategoricalAxis />
@@ -222,7 +263,7 @@
                 <telerik:BarSeries
                     CategoryBinding="Name"
                     ItemsSource="{Binding Data}"
-                    ValueBinding="QuantitySold"/>
+                    ValueBinding="QuantitySold" />
             </telerik:RadCartesianChart.Series>
         </telerik:RadCartesianChart>
     </Grid>
