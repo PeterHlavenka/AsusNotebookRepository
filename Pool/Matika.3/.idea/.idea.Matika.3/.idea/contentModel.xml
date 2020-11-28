@@ -6,33 +6,93 @@
     <e p="C:\Users\phlavenka\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\phlavenka\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="D:\AsusNotebookRepository\Pool\Matika.3" t="IncludeFlat">
+      <e p="Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="CommonAssemblyIdentificator.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Entities" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities.csproj" t="IncludeRecursive" />
+        <e p="EntitiesAssemblyIdentificator.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Entities.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Matika.3.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CoreAssemblyIdentificator.cs" t="Include" />
+        <e p="Matika.3.Core.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Matika.3.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Matika.3.Gui" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="GuiResources.cs-CZ.resx" t="Include" />
+        <e p="GuiResources.Designer.cs" t="Include" />
+        <e p="GuiResources.resx" t="Include" />
+        <e p="MainView.xaml" t="Include" />
+        <e p="MainView.xaml.cs" t="Include" />
+        <e p="MainViewModel.cs" t="Include" />
         <e p="Matika.3.Gui.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
+              <e p="MainView.g.cs" t="Include" />
               <e p="Matika.3.Gui.AssemblyInfo.cs" t="Include" />
+              <e p="SplashScreenView.g.cs" t="Include" />
             </e>
           </e>
         </e>
+        <e p="SplashScreenView.xaml" t="Include" />
+        <e p="SplashScreenView.xaml.cs" t="Include" />
+        <e p="SplashScreenViewModel.cs" t="Include" />
       </e>
       <e p="Matika.3.Shell" t="IncludeRecursive">
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="MainWindow.xaml" t="Include" />
-        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="Bootstrapper.cs" t="Include" />
+        <e p="Installers" t="Include">
+          <e p="DbAccessConfigurationBase.cs" t="Include" />
+          <e p="IMatikaConfiguration.cs" t="Include" />
+          <e p="LocalhostDbAccessInstaller.cs" t="Include" />
+          <e p="LocalhostDbConfiguration.cs" t="Include" />
+          <e p="MatikaConfiguration.cs" t="Include" />
+          <e p="ShellInstaller.cs" t="Include" />
+        </e>
+        <e p="Matika.3.Shell.Container.config" t="Include" />
         <e p="Matika.3.Shell.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="App.g.cs" t="Include" />
-              <e p="MainWindow.g.cs" t="Include" />
+              <e p="GeneratedInternalTypeHelper.g.cs" t="Include" />
               <e p="Matika.3.Shell.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Subscribers" t="Include">
+          <e p="CustomServiceActionSubscriber.cs" t="Include" />
+          <e p="InternalServicePublisher.cs" t="Include" />
+          <e p="NotificationProcessor.cs" t="Include" />
         </e>
       </e>
       <e p="Matika.3.sln" t="IncludeFlat" />

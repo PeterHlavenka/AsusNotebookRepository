@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Mediaresearch.Framework.Validation/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Mediaresearch.Framework.Validation.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Mediaresearch.Framework.Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mediaresearch.Framework.Validation/4.0.0": {
+      "sha512": "2zxeo9rcroqNdXx3gGVD0bkWWw0rYiw4pG83PFG0BDjx8FSn/1U8yEf6PE4maZpYL/cJ/eYln35ENRJa8Tc9pA==",
+      "type": "package",
+      "path": "mediaresearch.framework.validation/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net462/Mediaresearch.Framework.Validation.dll",
+        "lib/net462/Mediaresearch.Framework.Validation.pdb",
+        "mediaresearch.framework.validation.4.0.0.nupkg.sha512",
+        "mediaresearch.framework.validation.nuspec",
+        "src/Mediaresearch.Framework.Validation/FluentLikeValidator.cs",
+        "src/Mediaresearch.Framework.Validation/HouseError.cs",
+        "src/Mediaresearch.Framework.Validation/IFluentLikeValidator.cs",
+        "src/Mediaresearch.Framework.Validation/Properties/AssemblyInfo.cs",
+        "src/Mediaresearch.Framework.Validation/Properties/GlobalAssemblyInfo.cs",
+        "src/Mediaresearch.Framework.Validation/ValidationHelper.cs"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Mediaresearch.Framework.Validation >= 4.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\phlavenka\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Common\\Common.csproj",
+      "projectName": "Common",
+      "projectPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\phlavenka\\.nuget\\packages\\",
+      "outputPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\phlavenka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://tfs.mediaresearch.cz/Framework/_packaging/Framework2NugetFeed/nuget/v3/index.json": {},
+        "https://tfs.mediaresearch.cz/Framework/_packaging/FrameworkNugetFeed/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "Mediaresearch.Framework.Validation": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mediaresearch.Framework.Validation 4.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Mediaresearch.Framework.Validation",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

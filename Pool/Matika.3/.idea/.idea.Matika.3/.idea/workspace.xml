@@ -24,63 +24,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af92189f-5710-4699-b0a8-674921ba8d33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Matika.3/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/App.g.i.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/MainWindow.baml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.g.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.lref" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Matika.3.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/.idea/.idea.Matika 3.0/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/Matika 3.0.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/Matika.3.Shell.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/Matika 3.0.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0_MarkupCompile.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Debug/netcoreapp3.1/Matika 3.0_MarkupCompile.lref" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Matika 3.0.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Matika 3.0.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/Matika 3.0.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matika 3.0/obj/rider.project.restore.info" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/CommonAssemblyIdentificator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/EntitiesAssemblyIdentificator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/GuiResources.cs-cz.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/GuiResources.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/MainView.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/MainViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/SplashScreenView.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Gui/SplashScreenViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Bootstrapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/DbAccessConfigurationBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/IMatikaConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/LocalhostDbAccessInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/LocalhostDbConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/MatikaConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Installers/ShellInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Matika.3.Shell.Container.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Subscribers/CustomServiceActionSubscriber.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Subscribers/InternalServicePublisher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Matika.3.Shell/Subscribers/NotificationProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Matika.3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Matika.3/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Matika.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Matika.3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/Matika.3.Gui.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/Matika.3.Gui.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/Debug/netcoreapp3.1/Matika.3.Gui.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/Debug/netcoreapp3.1/Matika.3.Gui.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/Matika.3.Gui.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/Matika.3.Gui.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/Matika.3.Gui.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/Matika.3.Gui.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Gui/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Gui/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/MainWindow.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/MainWindow.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/Matika.3.Shell.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/Matika.3.Shell.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/bin/Debug/netcoreapp3.1/Matika.3.Shell.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/App.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/MainWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/MainWindow.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Debug/netcoreapp3.1/Matika.3.Shell_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/Matika.3.Shell.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.Shell/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.Shell/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matika.3.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Matika.3.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,24 +89,68 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B1E1F983-036B-44D0-9FCC-A5ECA08B2E2C/0d/13d6d7dd/IMediaDataDaoSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/49D37185-50A9-4829-9BEE-BC0DE6EBE9F1/3b/ad6c6771/AssemblyInstaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Matika.3.Gui/obj/Debug/netcoreapp3.1/SplashScreenView.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/49D37185-50A9-4829-9BEE-BC0DE6EBE9F1/3d/87f63bbf/WindsorContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/16B/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Matika.3.Shell/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/Matika.3.Gui/Class1.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/SplashScreenViewModel.xaml" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/SplashScreenView.xaml.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/SplashScreenView.xaml" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/GuiResources.cs-CZ.resx" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/GuiResources.resx" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/GuiResources.Designer.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Core/Class1.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Core/CoreAssemblyIdentificator.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/IMatikaConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/DbAccessConfigurationBase.cs" />
+        <option value="$PROJECT_DIR$/Entities/Class1.cs" />
+        <option value="$PROJECT_DIR$/Entities/EntitiesAssemblyIdentificator.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Subscribers/CustomServiceActionSubscriber.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Subscribers/InternalServicePublisher.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Subscribers/NotificationProcessor.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/SplashScreenViewModel.cs" />
+        <option value="$PROJECT_DIR$/Common/Class1.cs" />
+        <option value="$PROJECT_DIR$/Common/CommonAssemblyIdentificator.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/MainViewModel.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/App.xaml" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/LocalhostDbAccessConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/LocalhostDbConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/Neco.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Matika.3.Shell.Container.config" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/MatikaConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/LocalhostDbAccessInstaller.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Installers/ShellInstaller.cs" />
+        <option value="$PROJECT_DIR$/Matika.3.Gui/MainView.xaml" />
+        <option value="$PROJECT_DIR$/Matika.3.Shell/Bootstrapper.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1kt1Z94OXO1jf6fXCLqZLu8t1LT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.18181819" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.15607402" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.Matika.3.Shell">
@@ -156,7 +199,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606505126785</updated>
-      <workItem from="1606505134635" duration="375000" />
+      <workItem from="1606505134635" duration="15457000" />
     </task>
     <servers />
   </component>
@@ -180,13 +223,166 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="95" key="Rider.ProjectTemplateDialog.Size" timestamp="1606505476924">
+    <state x="1027" y="544" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606555821179">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1027" y="544" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606555821179" />
+    <state x="463" y="290" key="AddNewResourceElement" timestamp="1606508547058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728@0.0.1366.728" timestamp="1606505476924" />
+    <state x="463" y="290" key="AddNewResourceElement/0.0.1366.728@0.0.1366.728" timestamp="1606508547058" />
+    <state width="492" height="464" key="DebuggerActiveHint" timestamp="1606557891826">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="492" height="464" key="DebuggerActiveHint/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557891826" />
+    <state width="2517" height="157" key="GridCell.Tab.0.bottom" timestamp="1606557868319">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868319" />
+    <state width="2517" height="157" key="GridCell.Tab.0.center" timestamp="1606557868319">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868319" />
+    <state width="2517" height="157" key="GridCell.Tab.0.left" timestamp="1606557868319">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868319" />
+    <state width="2517" height="157" key="GridCell.Tab.0.right" timestamp="1606557868319">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868319" />
+    <state width="2517" height="157" key="GridCell.Tab.1.bottom" timestamp="1606557870389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.1.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557870389" />
+    <state width="2517" height="157" key="GridCell.Tab.1.center" timestamp="1606557870389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.1.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557870389" />
+    <state width="2517" height="157" key="GridCell.Tab.1.left" timestamp="1606557870389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.1.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557870389" />
+    <state width="2517" height="157" key="GridCell.Tab.1.right" timestamp="1606557870389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.1.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557870389" />
+    <state width="2517" height="157" key="GridCell.Tab.2.bottom" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.2.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.2.center" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.2.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.2.left" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.2.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.2.right" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.2.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.3.bottom" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.3.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.3.center" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.3.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.3.left" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.3.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.3.right" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.3.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.4.bottom" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.4.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.4.center" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.4.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.4.left" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.4.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state width="2517" height="157" key="GridCell.Tab.4.right" timestamp="1606557868205">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1323" height="162" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1606516508598" />
+    <state width="2517" height="157" key="GridCell.Tab.4.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606557868205" />
+    <state x="275" y="95" key="Rider.ProjectTemplateDialog.Size" timestamp="1606513864541">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="95" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728@0.0.1366.728" timestamp="1606513864541" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1606509423544">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606509423544" />
+    <state x="677" y="187" width="1207" height="1027" key="find.popup" timestamp="1606556031353">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="361" y="97" width="644" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606516058037" />
+    <state x="677" y="187" width="1207" height="1027" key="find.popup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1606556031353" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606505279873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606505279873" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Matika.3.Shell/Bootstrapper.cs</url>
+          <line>136</line>
+          <properties documentPath="D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Shell\Bootstrapper.cs" initialLine="127">
+            <startOffsets>
+              <option value="5310" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5333" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Matika.3.Shell/Bootstrapper.cs</url>
+          <line>126</line>
+          <properties documentPath="D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Shell\Bootstrapper.cs" initialLine="126">
+            <startOffsets>
+              <option value="5030" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5036" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

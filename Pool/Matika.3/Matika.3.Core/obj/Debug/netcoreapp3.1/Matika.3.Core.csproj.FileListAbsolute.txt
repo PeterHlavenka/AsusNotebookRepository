@@ -1,0 +1,9 @@
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\bin\Debug\netcoreapp3.1\Matika.3.Core.deps.json
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\bin\Debug\netcoreapp3.1\Matika.3.Core.dll
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\bin\Debug\netcoreapp3.1\Matika.3.Core.pdb
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.AssemblyInfoInputs.cache
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.AssemblyInfo.cs
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.dll
+D:\AsusNotebookRepository\Pool\Matika.3\Matika.3.Core\obj\Debug\netcoreapp3.1\Matika.3.Core.pdb

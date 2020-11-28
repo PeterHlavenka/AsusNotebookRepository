@@ -7,4 +7,33 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\Entities\Entities.csproj" />
+      <ProjectReference Include="..\Matika.3.Core\Matika.3.Core.csproj" />
+      <ProjectReference Include="..\Matika.3.Gui\Matika.3.Gui.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+      <PackageReference Include="Castle.Windsor" Version="5.1.0" />
+      <PackageReference Include="FluentValidation" Version="6.2.1" />
+      <PackageReference Include="log4net" Version="2.0.8" />
+      <PackageReference Include="Mediaresearch.Framework.Communication.Common" Version="4.0.0.1" />
+      <PackageReference Include="Mediaresearch.Framework.DataAccess.BLToolkit" Version="4.0.1" />
+      <PackageReference Include="Mediaresearch.Framework.DataAccess.BLToolkit.Castle" Version="4.0.0" />
+      <PackageReference Include="Mediaresearch.Framework.DataAccess.Core" Version="4.0.0" />
+      <PackageReference Include="Mediaresearch.Framework.Mapping.Castle" Version="4.0.0" />
+      <PackageReference Include="Mediaresearch.Framework.Validation" Version="4.0.0" />
+      <PackageReference Include="System.Data.Odbc" Version="5.0.0" />
+      <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Matika.3.Shell.Container.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

@@ -11,11 +11,26 @@
     ],
     "sources": {
       "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-      "https://api.nuget.org/v3/index.json": {}
+      "https://api.nuget.org/v3/index.json": {},
+      "https://tfs.mediaresearch.cz/Framework/_packaging/Framework2NugetFeed/nuget/v3/index.json": {},
+      "https://tfs.mediaresearch.cz/Framework/_packaging/FrameworkNugetFeed/nuget/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Common\\Common.csproj": {
+            "projectPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Common\\Common.csproj"
+          },
+          "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Entities\\Entities.csproj": {
+            "projectPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Entities\\Entities.csproj"
+          },
+          "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Matika.3.Core\\Matika.3.Core.csproj": {
+            "projectPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Matika.3.Core\\Matika.3.Core.csproj"
+          },
+          "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Matika.3.Gui\\Matika.3.Gui.csproj": {
+            "projectPath": "D:\\AsusNotebookRepository\\Pool\\Matika.3\\Matika.3.Gui\\Matika.3.Gui.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -26,6 +41,60 @@
   },
   "frameworks": {
     "netcoreapp3.1": {
+      "dependencies": {
+        "Caliburn.Micro": {
+          "target": "Package",
+          "version": "[3.2.0, )"
+        },
+        "Castle.Windsor": {
+          "target": "Package",
+          "version": "[5.1.0, )"
+        },
+        "FluentValidation": {
+          "target": "Package",
+          "version": "[6.2.1, )"
+        },
+        "Mediaresearch.Framework.Communication.Common": {
+          "target": "Package",
+          "version": "[4.0.0.1, )"
+        },
+        "Mediaresearch.Framework.DataAccess.BLToolkit": {
+          "target": "Package",
+          "version": "[4.0.1, )"
+        },
+        "Mediaresearch.Framework.DataAccess.BLToolkit.Castle": {
+          "target": "Package",
+          "version": "[4.0.0, )"
+        },
+        "Mediaresearch.Framework.DataAccess.Core": {
+          "target": "Package",
+          "version": "[4.0.0, )"
+        },
+        "Mediaresearch.Framework.Mapping.Castle": {
+          "target": "Package",
+          "version": "[4.0.0, )"
+        },
+        "Mediaresearch.Framework.Validation": {
+          "target": "Package",
+          "version": "[4.0.0, )"
+        },
+        "System.Data.Odbc": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "System.Data.OleDb": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "System.Data.SqlClient": {
+          "target": "Package",
+          "version": "[4.8.2, )"
+        },
+        "log4net": {
+          "target": "Package",
+          "version": "[2.0.8, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",
