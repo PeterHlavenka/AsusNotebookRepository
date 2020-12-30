@@ -32,7 +32,7 @@ namespace Matika.Gui
         //}
 
         public MatikaViewModel MatikaViewModel { get; set; }
-        public EnumeratedWordsViewModel EnumeratedWordsViewModel { get; set; }
+        //public EnumeratedWordsViewModel EnumeratedWordsViewModel { get; set; }
         public UnitConversionViewModel UnitConversionViewModel { get; set; }
     }
 }

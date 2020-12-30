@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
 using Caliburn.Micro;
@@ -13,6 +14,10 @@ namespace Shell
     {
         private IWindsorContainer m_container;
 
+        public Bootstrapper()
+        {
+            Console.WriteLine();
+        }
         protected override IEnumerable<Assembly> SelectAssemblies()
         {
             return new[] {Assembly.GetAssembly(typeof(MainViewModel))};
@@ -27,7 +32,7 @@ namespace Shell
             var root = m_container.Resolve<MainViewModel>();
             var manager = m_container.Resolve<IWindowManager>();
             manager.ShowDialog(root);
-            Application.Shutdown();
+           // Application.Shutdown();
         }
     }
 }
