@@ -126,9 +126,8 @@
                 </Button>
                 <TextBlock Margin="5,20" Text="Obtížnost:" />
                 <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
-                <TextBlock Margin="55,20,5,25" Text="Příklad číslo:" />
-                <TextBlock Margin="5,20" Text="{Binding Counter}" />
-                <TextBlock Margin="200,20,5,25" Text="Správně:" />
+
+                <TextBlock Margin="350,20,5,25" Text="Správně:" />
                 <TextBlock
                     Margin="5,20"
                     Foreground="Green"

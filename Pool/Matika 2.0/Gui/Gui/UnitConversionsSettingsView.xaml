@@ -37,14 +37,7 @@
         </Style>
     </Window.Resources>
     <StackPanel Margin="10,10,10,30">
-        <TextBlock
-            FontWeight="Bold"
-            Style="{StaticResource HeaderStyle}"
-            Text="Obtížnost" />
-        <StackPanel Orientation="Vertical">
-            <Slider Value="{Binding Difficulty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-            <TextBlock Style="{StaticResource SliderTextBlockStyle}" />
-        </StackPanel>
+
         <TextBlock
             FontWeight="Bold"
             Style="{StaticResource HeaderStyle}"
@@ -60,9 +53,17 @@
             Style="{StaticResource HeaderStyle}"
             Text="Nastavení" />
 
+        <ItemsControl ItemsSource="{Binding Path=Convertables}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Name}" IsChecked="{Binding IsEnabled}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>    
+        </ItemsControl>
+
         <StackPanel Orientation="Horizontal">
-            <TextBlock FontWeight="Bold" Text="Desetinná čísla" />
             <CheckBox IsChecked="{Binding DecimalNumbers}" />
+            <TextBlock FontWeight="Bold" Text="Desetinná čísla" />
         </StackPanel>
 
     </StackPanel>

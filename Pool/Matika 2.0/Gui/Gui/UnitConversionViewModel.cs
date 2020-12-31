@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Caliburn.Micro;
@@ -12,13 +13,14 @@ namespace Matika.Gui
         private UnitConversionsSettingsViewModel m_settings;
         public new TextBox ResultTextBox { get; set; }
 
-        public UnitConversionViewModel(int difficulty, Conversion conversion)
+        public UnitConversionViewModel(int difficulty, Conversion conversion, IEnumerable<IConvertable> convertables)
         {
             Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new UnitConversionsSettingsViewModel { Difficulty = difficulty };
+            DisplayName = "Nastavení";
+            Settings = new UnitConversionsSettingsViewModel (convertables) { Difficulty = difficulty};
             Conversion = conversion.Generate(Settings); 
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);

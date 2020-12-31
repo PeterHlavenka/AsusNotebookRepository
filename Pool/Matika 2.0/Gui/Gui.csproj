@@ -145,6 +145,7 @@
       <DependentUpon>MatikaSettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\MatikaSettingsViewModel.cs" />
+    <Compile Include="Gui\Obsah.cs" />
     <Compile Include="Gui\UnitConversionsSettingsView.xaml.cs">
       <DependentUpon>UnitConversionsSettingsView.xaml</DependentUpon>
     </Compile>

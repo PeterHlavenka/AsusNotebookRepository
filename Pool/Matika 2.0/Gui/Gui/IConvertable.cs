@@ -6,5 +6,7 @@ namespace Matika.Gui
     {
         int Step { get; }
         Dictionary<int, string> UnitsDictionary { get; }
+        bool IsEnabled { get; set; }
+        string Name { get; }
     }
 }
