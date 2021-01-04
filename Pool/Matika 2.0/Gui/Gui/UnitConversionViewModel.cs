@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Caliburn.Micro;
@@ -48,9 +49,27 @@ namespace Matika.Gui
 
         public override void DoGenerate(object obj)
         {
-            var success = double.TryParse(obj.ToString(), out var number);
+            var success = decimal.TryParse(obj.ToString().Replace(',', '.'), out var number);
+            var test = obj.ToString().Split(new[] {','});
 
-            if (success && Math.Abs(number - Conversion.Result) < double.Epsilon)
+            var result = (decimal)Conversion.Result;
+            if (test.Length > 1)
+            {
+                var len =  test[1].Length;
+                result = Math.Round(result, len); //.ToString().Replace('.', ',');
+               
+            }
+
+            var bu = double.Parse(obj.ToString());
+            if (!success || number < result || number > result)  
+            {
+                if (!string.IsNullOrEmpty(obj.ToString()))
+                {
+                    ResultBrush = Brushes.Red;
+                    Repair = true;
+                }
+            }
+            else
             {
                 if (Repair == false)
                 {
@@ -62,14 +81,6 @@ namespace Matika.Gui
                 Conversion = Conversion.Generate(Settings); 
 
                 UserResult = string.Empty;
-            }
-            else
-            {
-                if (!string.IsNullOrEmpty(obj.ToString()))
-                {
-                    ResultBrush = Brushes.Red;
-                    Repair = true;
-                }
             }
         }
 
