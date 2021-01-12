@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Caliburn.Micro;
 
 namespace Matika.Gui
 {
-    public class Obsah : PropertyChangedBase, IConvertable
+    public class Cas : PropertyChangedBase, IConvertable
     {
         private bool m_isEnabled;
-        public int Step => 100;
-        public string Name => "Obsah";
-        public int MaxDifficulty { get; set; } = 50;
+        public int Step => 60;
+        public string Name => "Čas";
+        public int MaxDifficulty { get; set; } = 5;
 
         public Dictionary<int, string> UnitsDictionary
         {
@@ -16,13 +16,9 @@ namespace Matika.Gui
             {
                 var result = new Dictionary<int, string>
                 {
-                    {0, "mm²"},
-                    {1, "cm²"},
-                    {2, "dm²"},
-                    {3, "m²"},
-                    {4, string.Empty},
-                    {5, string.Empty},
-                    {6, "km²"}
+                    {0, "s"},
+                    {1, "min"},
+                    {2, "hod"},
                 };
                 return result;
             }

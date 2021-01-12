@@ -96,5 +96,11 @@ namespace Matika.Gui
                 ResultTextBox.Focus();
             }
         }
+
+        public void TestButtonClicked()
+        {
+             var result = (decimal)Conversion.Result;
+             DoGenerate(result);
+        }
     }
 }

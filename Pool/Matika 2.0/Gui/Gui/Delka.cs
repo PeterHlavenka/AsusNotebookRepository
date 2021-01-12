@@ -8,6 +8,7 @@ namespace Matika.Gui
         private bool m_isEnabled;
         public int Step => 10;
         public string Name => "Délka";
+        public int MaxDifficulty { get; set; } = 100;
 
         public Dictionary<int, string> UnitsDictionary
         {

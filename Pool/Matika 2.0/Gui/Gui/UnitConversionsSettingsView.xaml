@@ -46,6 +46,15 @@
             <Slider Value="{Binding StepDifference, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Style="{StaticResource SliderTextBlockStyle}" />
         </StackPanel>
+        
+        <TextBlock
+            FontWeight="Bold"
+            Style="{StaticResource HeaderStyle}"
+            Text="Obtížnost" />
+        <StackPanel Orientation="Vertical">
+            <Slider Value="{Binding Difficulty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Style="{StaticResource SliderTextBlockStyle}" />
+        </StackPanel>
 
         <TextBlock
             Margin="0,30,0,0"

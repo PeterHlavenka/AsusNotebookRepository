@@ -8,5 +8,6 @@ namespace Matika.Gui
         Dictionary<int, string> UnitsDictionary { get; }
         bool IsEnabled { get; set; }
         string Name { get; }
+        int MaxDifficulty { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Matika
     public class Conversion
     {
         private Random rand = new Random();
-        public double Result { get; protected set; }
+        public double Result { get; private set; }
         public string TaskString { get; set; }
         protected static string EqualSign => " =  ";
         public string FromUnit { get; set; }
@@ -42,7 +42,9 @@ namespace Matika
             var multiplier = 1;
             if (from.Key < to.Key && !settings.DecimalNumbers) multiplier = (int) Math.Pow(step, stepsBetween);
 
-            var number = rand.Next(1, 1 + settings.Difficulty);
+
+            var number = 0;
+            number = settings.Difficulty > selectedConvertable.MaxDifficulty ? rand.Next(1, 1 + selectedConvertable.MaxDifficulty) : rand.Next(1, 1 + settings.Difficulty);
             number = number * multiplier;
 
             FromUnit = from.Value;

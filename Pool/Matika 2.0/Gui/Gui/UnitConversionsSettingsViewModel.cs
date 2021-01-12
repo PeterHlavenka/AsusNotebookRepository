@@ -6,12 +6,24 @@ namespace Matika.Gui
    public class UnitConversionsSettingsViewModel : SettingsBase
     {
         private bool m_decimalNumbers;
-        private int m_stepDifference = 3;
+        private int m_stepDifference = 2;
 
         public UnitConversionsSettingsViewModel(IEnumerable<IConvertable> convertables)
         {
             Convertables = convertables;
             Convertables.FirstOrDefault().IsEnabled = true;
+            DisplayName = "Nastavení";
+        }
+
+        public override int Difficulty
+        {
+
+            get => m_difficulty;
+            set
+            {
+                m_difficulty = value;
+                NotifyOfPropertyChange();
+            }
         }
 
         public bool DecimalNumbers
