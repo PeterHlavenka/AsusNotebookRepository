@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using Caliburn.Micro;
 
 namespace Matika.Gui
@@ -9,6 +12,8 @@ namespace Matika.Gui
         public int Step => 60;
         public string Name => "Čas";
         public int MaxDifficulty { get; set; } = 5;
+        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyCasu"];
+
 
         public Dictionary<int, string> UnitsDictionary
         {

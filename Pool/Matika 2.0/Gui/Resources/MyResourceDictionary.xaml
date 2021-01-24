@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="ZachrannyKruh" UriSource="../Resources/zachrannyKruh.png" />
+    <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
+    <BitmapImage x:Key="Monkey" UriSource="../Gifs/ShowingMonkey.gif" />
+    <BitmapImage x:Key="White" UriSource="white.jpg" />
+    <BitmapImage x:Key="JednotkyHmotnosti" UriSource="jednotkyHmotnosti.png"/>
+    <BitmapImage x:Key="JednotkyCasu" UriSource="jednotkyCasu.png"/>
+    <BitmapImage x:Key="JednotkyDelky" UriSource="jednotkyDelky.png"/>
+    <BitmapImage x:Key="JednotkyObjemu" UriSource="jednotkyObjemu.png"/>
+    <BitmapImage x:Key="JednotkyObsahu" UriSource="jednotkyObsahu.png"/>
+</ResourceDictionary>

@@ -39,6 +39,8 @@ namespace Shell.Installers
             container.Register(Component.For<IWindowManager>().ImplementedBy<WindowManager>());
             container.Register(Component.For<IConvertable>().ImplementedBy<Delka>());
             container.Register(Component.For<IConvertable>().ImplementedBy<Obsah>());
+            container.Register(Component.For<IConvertable>().ImplementedBy<Objem>());
+            container.Register(Component.For<IConvertable>().ImplementedBy<Hmotnost>());
             container.Register(Component.For<IConvertable>().ImplementedBy<Cas>());
             container.Register(Component.For<Conversion>());
             container.Register(Component.For<MatikaViewModel>().DependsOn(Dependency.OnValue("difficulty", provider.GetConfig<MatikaConfiguration>().StartDifficulty)));

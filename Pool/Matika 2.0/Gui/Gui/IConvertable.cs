@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Matika.Gui
 {
@@ -9,5 +11,6 @@ namespace Matika.Gui
         bool IsEnabled { get; set; }
         string Name { get; }
         int MaxDifficulty { get; set; }
+        BitmapImage HelpImage { get; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Matika.Gui
@@ -8,20 +9,22 @@ namespace Matika.Gui
         private bool m_decimalNumbers;
         private int m_stepDifference = 2;
 
+
         public UnitConversionsSettingsViewModel(IEnumerable<IConvertable> convertables)
         {
             Convertables = convertables;
-            Convertables.FirstOrDefault().IsEnabled = true;
+            Convertables.First().IsEnabled = true;
             DisplayName = "Nastavení";
         }
 
         public override int Difficulty
         {
-
             get => m_difficulty;
             set
             {
-                m_difficulty = value;
+                var selectedConvertables = Convertables.Where(d => d.IsEnabled).ToList();
+                var minimum = selectedConvertables.Min(d => d.MaxDifficulty);
+                m_difficulty = value > minimum ? minimum : value;
                 NotifyOfPropertyChange();
             }
         }
@@ -44,6 +47,13 @@ namespace Matika.Gui
                 m_stepDifference = value;
                 NotifyOfPropertyChange();
             }
+        }
+
+        public void Checked()
+        {
+            var selectedConvertables = Convertables.Where(d => d.IsEnabled).ToList();
+            var minimum = selectedConvertables.Min(d => d.MaxDifficulty);
+            Difficulty = Difficulty > minimum ? minimum : Difficulty;
         }
         
         public IEnumerable<IConvertable> Convertables { get; set; }

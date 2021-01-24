@@ -13,6 +13,7 @@ namespace Matika
         protected static string EqualSign => " =  ";
         public string FromUnit { get; set; }
         public string ToUnit { get; set; }
+        public IConvertable SelectedConvertable { get; set; }
 
        
 
@@ -26,9 +27,9 @@ namespace Matika
         public Conversion Generate(UnitConversionsSettingsViewModel settings)
         {
             var allowedConvertables = settings.Convertables.Where(d => d.IsEnabled).ToList();
-            var selectedConvertable = allowedConvertables.ElementAt(rand.Next(0, allowedConvertables.Count));
-            var dict = selectedConvertable.UnitsDictionary;
-            var step = selectedConvertable.Step;
+            SelectedConvertable = allowedConvertables.ElementAt(rand.Next(0, allowedConvertables.Count));
+            var dict = SelectedConvertable.UnitsDictionary;
+            var step = SelectedConvertable.Step;
             var notNulls = dict.Where(d => d.Value != string.Empty).ToList();
             var stepDifference = settings.StepDifference;
             var from = notNulls.Skip(new Random().Next(notNulls.Count)).First();
@@ -44,7 +45,7 @@ namespace Matika
 
 
             var number = 0;
-            number = settings.Difficulty > selectedConvertable.MaxDifficulty ? rand.Next(1, 1 + selectedConvertable.MaxDifficulty) : rand.Next(1, 1 + settings.Difficulty);
+            number = rand.Next(1, 1 + SelectedConvertable.MaxDifficulty);
             number = number * multiplier;
 
             FromUnit = from.Value;

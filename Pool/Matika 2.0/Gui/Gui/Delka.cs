@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using Caliburn.Micro;
 
 namespace Matika.Gui
@@ -9,6 +13,9 @@ namespace Matika.Gui
         public int Step => 10;
         public string Name => "Délka";
         public int MaxDifficulty { get; set; } = 100;
+        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyDelky"];
+
+       
 
         public Dictionary<int, string> UnitsDictionary
         {
