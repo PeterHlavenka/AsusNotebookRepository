@@ -111,6 +111,14 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
+            <TextBlock Background="Transparent"
+                     Name="ResultControlTextBox"
+                     Visibility="Collapsed"
+                     Grid.Column="1"
+                     Margin="0,0,30,0"
+                     Foreground="Gray"
+                     Text="{Binding Conversion.Result}">
+            </TextBlock>
             <TextBlock
                 Grid.Column="2"
                 MaxWidth="150"

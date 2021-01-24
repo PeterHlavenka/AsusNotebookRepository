@@ -285,8 +285,6 @@
     <Resource Include="Resources\jednotkyCasu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\jednotkyDelky.ico" />
-    <Resource Include="Resources\jednotkyDelky.jpg" />
     <Resource Include="Resources\jednotkyDelky.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
