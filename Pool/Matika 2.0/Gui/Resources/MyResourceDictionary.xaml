@@ -10,4 +10,5 @@
     <BitmapImage x:Key="JednotkyDelky" UriSource="jednotkyDelky.png"/>
     <BitmapImage x:Key="JednotkyObjemu" UriSource="jednotkyObjemu.png"/>
     <BitmapImage x:Key="JednotkyObsahu" UriSource="jednotkyObsahu.png"/>
+    <BitmapImage x:Key="Litry" UriSource="litry.png"/>
 </ResourceDictionary>

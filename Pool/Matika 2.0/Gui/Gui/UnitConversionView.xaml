@@ -111,14 +111,24 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
-            <TextBlock Background="Transparent"
-                     Name="ResultControlTextBox"
-                     Visibility="Collapsed"
-                     Grid.Column="1"
-                     Margin="0,0,30,0"
-                     Foreground="Gray"
-                     Text="{Binding Conversion.Result}">
-            </TextBlock>
+            <StackPanel Grid.Column="1" Name="Debug" Orientation="Horizontal">
+                <TextBlock Background="Transparent"
+                           Name="Napoveda"
+                           Visibility="Collapsed"
+                           Margin="0,0,30,0"
+                           Foreground="Green"
+                           Text="{Binding Conversion.Result}">
+                </TextBlock>
+                <TextBlock Background="Transparent"
+                           Name="ResultControlTextBlock"
+                           Visibility="Collapsed"
+                           Grid.Column="1"
+                           Margin="0,0,30,0"
+                           Foreground="Green"
+                           Text="{Binding ResultControlTextBlockText}">
+                </TextBlock>
+            </StackPanel>
+
             <TextBlock
                 Grid.Column="2"
                 MaxWidth="150"

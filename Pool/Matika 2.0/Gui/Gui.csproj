@@ -274,18 +274,19 @@
     <Page Include="Resources\MyResourceDictionary.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\jednotkyObjemu.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Resources\jednotkyObsahu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\jednotkyObsahu.png" />
+    <Resource Include="Resources\jednotkyDelky.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\jednotkyCasu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\jednotkyDelky.png" />
+    <Resource Include="Resources\jednotkyObjemu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\litry.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

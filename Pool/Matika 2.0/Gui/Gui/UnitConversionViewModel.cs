@@ -20,6 +20,7 @@ namespace Matika.Gui
         private Visibility m_helpImageVisibility = Visibility.Hidden ;
         private Visibility m_helpButtonVisibility = Visibility.Visible;
         private BitmapImage m_helpImage;
+        private string m_resultControlTextBlockText;
         public new TextBox ResultTextBox { get; set; }
 
         public UnitConversionViewModel(int difficulty, Conversion conversion, IEnumerable<IConvertable> convertables)
@@ -62,20 +63,22 @@ namespace Matika.Gui
             }
         }
 
+        public string ResultControlTextBlockText
+        {
+            get => m_resultControlTextBlockText;
+            set { m_resultControlTextBlockText = value; NotifyOfPropertyChange();}
+        }
+
         public override void DoGenerate(object obj)
         {
-            var success = decimal.TryParse(obj.ToString().Replace(',', '.'), out var number);
-            var test = obj.ToString().Split(new[] {','});
+            var sep = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+            var replaced = obj.ToString().Replace(',', sep[0]);
+            replaced = replaced.Replace('.', sep[0]);
+            var replace = double.TryParse(replaced, out var number);
+            ResultControlTextBlockText = number.ToString(CultureInfo.CurrentCulture);
+            bool success = number - Conversion.Result == 0;
 
-            var result = (decimal)Conversion.Result;
-            if (test.Length > 1)
-            {
-                var len =  test[1].Length;
-                result = Math.Round(result, len); //.ToString().Replace('.', ',');
-               
-            }
-            
-            if (!success || number < result || number > result)  
+            if (!success)  
             {
                 if (!string.IsNullOrEmpty(obj.ToString()))
                 {
