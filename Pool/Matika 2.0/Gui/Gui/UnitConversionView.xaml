@@ -142,7 +142,8 @@
         <!--  StatusBar  -->
         <StatusBar Grid.Row="2" Margin="0,0,0,-2">
             <Grid>
-                <Ellipse Stroke="Black" StrokeThickness="2"  Fill="Transparent" Width="10" MinHeight="50" Margin="-60,0,0,0"/>
+                <Image Width="145" Margin="-175, 0, 0, 0" Source="{StaticResource Kmen}" />
+               
                 <StackPanel Orientation="Horizontal">
                     <Button
                         Width="30"

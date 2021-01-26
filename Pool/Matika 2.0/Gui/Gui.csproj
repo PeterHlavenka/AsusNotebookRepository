@@ -288,5 +288,8 @@
   <ItemGroup>
     <Resource Include="Resources\litry.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\kmen.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
