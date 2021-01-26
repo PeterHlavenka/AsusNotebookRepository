@@ -7,12 +7,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:gui="clr-namespace:Matika.Gui"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Width="800"
     Height="450"
     d:DataContext="{d:DesignInstance gui:MainViewModel}"
     Loaded="MainView_OnLoaded"
     mc:Ignorable="d">
     <UserControl.Resources>
+        <BitmapImage x:Key="White" UriSource="../Resources/white.jpg" />
         <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
         <BitmapImage x:Key="Monkey" UriSource="../Gifs/ShowingMonkey.gif" />
         <Style TargetType="TextBox">
@@ -60,7 +60,10 @@
         </ControlTemplate>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource White}"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto" />
@@ -69,8 +72,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Orientation="Horizontal">
-            <TextBox Focusable="False" Text="{Binding Example.TaskString}" />
-            <TextBox
+            <TextBox Focusable="False" Text="{Binding Example.TaskString}" Background="Transparent"/>
+            <TextBox Background="Transparent"
                 Name="ResultTextBox"
                 Width="120"
                 Foreground="{Binding ResultBrush}"
@@ -101,9 +104,8 @@
                 </Button>
                 <TextBlock Margin="5,20" Text="Obtížnost:" />
                 <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
-                <TextBlock Margin="55,20,5,25" Text="Příklad číslo:" />
-                <TextBlock Margin="5,20" Text="{Binding Counter}" />
-                <TextBlock Margin="200,20,5,25" Text="Správně:" />
+
+                <TextBlock Margin="405,20,5,25" Text="Správně:" />
                 <TextBlock
                     Margin="5,20"
                     Foreground="Green"

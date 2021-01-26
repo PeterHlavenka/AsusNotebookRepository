@@ -14,10 +14,7 @@ namespace Shell
     {
         private IWindsorContainer m_container;
 
-        public Bootstrapper()
-        {
-            Console.WriteLine();
-        }
+
         protected override IEnumerable<Assembly> SelectAssemblies()
         {
             return new[] {Assembly.GetAssembly(typeof(MainViewModel))};

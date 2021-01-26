@@ -4,8 +4,9 @@ namespace Matika
 {
    public class SettingsBase : Screen
     {
-        private int m_difficulty;
-        public int Difficulty
+        protected int m_difficulty;
+
+        public virtual int Difficulty
         {
             get => m_difficulty;
             set
@@ -14,6 +15,5 @@ namespace Matika
                 NotifyOfPropertyChange();
             }
         }
-
     }
 }

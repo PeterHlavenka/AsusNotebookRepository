@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -7,15 +6,14 @@ using Caliburn.Micro;
 
 namespace Matika.Gui
 {
-    public class Delka : PropertyChangedBase, IConvertable
+    public class Obsah : PropertyChangedBase, IConvertable
     {
         private bool m_isEnabled;
-        public int Step => 10;
-        public string Name => "Délka";
-        public int MaxDifficulty { get; set; } = 100;
-        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyDelky"];
+        public int Step => 100;
+        public string Name => "Obsah";
+        public int MaxDifficulty { get; set; } = 50;
+        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyObsahu"];
 
-       
 
         public Dictionary<int, string> UnitsDictionary
         {
@@ -23,13 +21,13 @@ namespace Matika.Gui
             {
                 var result = new Dictionary<int, string>
                 {
-                    {0, "mm"},
-                    {1, "cm"},
-                    {2, "dm"},
-                    {3, "m"},
+                    {0, "mm²"},
+                    {1, "cm²"},
+                    {2, "dm²"},
+                    {3, "m²"},
                     {4, string.Empty},
                     {5, string.Empty},
-                    {6, "km"}
+                    {6, "km²"}
                 };
                 return result;
             }

@@ -127,11 +127,13 @@
     <Compile Include="Configurations\MatikaConfiguration.cs" />
     <Compile Include="Conversion.cs" />
     <Compile Include="Converters\CommaToDotConverter.cs" />
+    <Compile Include="Gui\Cas.cs" />
     <Compile Include="Gui\Delka.cs" />
     <Compile Include="Gui\EnumeratedWordsView.xaml.cs">
       <DependentUpon>EnumeratedWordsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\EnumeratedWordsViewModel.cs" />
+    <Compile Include="Gui\Hmotnost.cs" />
     <Compile Include="Gui\IConvertable.cs" />
     <Compile Include="Gui\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -145,6 +147,8 @@
       <DependentUpon>MatikaSettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\MatikaSettingsViewModel.cs" />
+    <Compile Include="Gui\Objem.cs" />
+    <Compile Include="Gui\Obsah.cs" />
     <Compile Include="Gui\UnitConversionsSettingsView.xaml.cs">
       <DependentUpon>UnitConversionsSettingsView.xaml</DependentUpon>
     </Compile>
@@ -250,6 +254,42 @@
       <Project>{ca8ee1af-cda1-408d-b976-7bf875cce455}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\white.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jednotkyHmotnosti.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zachrannyKruh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\MyResourceDictionary.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jednotkyObsahu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jednotkyDelky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jednotkyCasu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jednotkyObjemu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\litry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\kmen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

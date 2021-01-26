@@ -1,6 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Caliburn.Micro;
 using Mediaresearch.Framework.Gui;
 
@@ -10,18 +17,30 @@ namespace Matika.Gui
     {
         private Conversion m_conversion;
         private UnitConversionsSettingsViewModel m_settings;
+        private Visibility m_helpImageVisibility = Visibility.Hidden ;
+        private Visibility m_helpButtonVisibility = Visibility.Visible;
+        private BitmapImage m_helpImage;
+        private string m_resultControlTextBlockText;
         public new TextBox ResultTextBox { get; set; }
 
-        public UnitConversionViewModel(int difficulty, Conversion conversion)
+        public UnitConversionViewModel(int difficulty, Conversion conversion, IEnumerable<IConvertable> convertables)
         {
             Counter = 0;
             SuccesCount = 0;
             WrongCount = 0;
 
-            Settings = new UnitConversionsSettingsViewModel { Difficulty = difficulty };
-            Conversion = conversion.Generate(Settings); 
+            DisplayName = "Nastavení";
+            Settings = new UnitConversionsSettingsViewModel (convertables) { Difficulty = difficulty};
+            Conversion = conversion.Generate(Settings);
+            Settings.Difficulty = Math.Min(Settings.Difficulty,  Conversion.SelectedConvertable.MaxDifficulty);
+            HelpImage = Conversion.SelectedConvertable.HelpImage;
             GenerateCommand = new RelayCommand(DoGenerate);
             ResetCommand = new RelayCommand(DoReset);
+        }
+
+        private void SettingsSelectionChanged(object sender, EventArgs e)
+        {
+            
         }
 
         public Conversion Conversion
@@ -44,11 +63,30 @@ namespace Matika.Gui
             }
         }
 
+        public string ResultControlTextBlockText
+        {
+            get => m_resultControlTextBlockText;
+            set { m_resultControlTextBlockText = value; NotifyOfPropertyChange();}
+        }
+
         public override void DoGenerate(object obj)
         {
-            var success = double.TryParse(obj.ToString(), out var number);
+            var sep = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+            var replaced = obj.ToString().Replace(',', sep[0]);
+            replaced = replaced.Replace('.', sep[0]);
+            var replace = double.TryParse(replaced, out var number);
+            ResultControlTextBlockText = number.ToString(CultureInfo.CurrentCulture);
+            bool success = number - Conversion.Result == 0;
 
-            if (success && Math.Abs(number - Conversion.Result) < double.Epsilon)
+            if (!success)  
+            {
+                if (!string.IsNullOrEmpty(obj.ToString()))
+                {
+                    ResultBrush = Brushes.Red;
+                    Repair = true;
+                }
+            }
+            else
             {
                 if (Repair == false)
                 {
@@ -57,18 +95,15 @@ namespace Matika.Gui
 
                 Repair = false;
 
-                Conversion = Conversion.Generate(Settings); 
+                Conversion = Conversion.Generate(Settings);
+                HelpImage = Conversion.SelectedConvertable.HelpImage;
+                HelpImageVisibility = Visibility.Hidden;
+                Settings.Difficulty = Math.Min(Settings.Difficulty,  Conversion.SelectedConvertable.MaxDifficulty);
 
                 UserResult = string.Empty;
             }
-            else
-            {
-                if (!string.IsNullOrEmpty(obj.ToString()))
-                {
-                    ResultBrush = Brushes.Red;
-                    Repair = true;
-                }
-            }
+
+            
         }
 
         public void SettingsButtonClicked()
@@ -77,10 +112,63 @@ namespace Matika.Gui
 
             if (manager.ShowDialog(Settings) == false)
             {
+                if (!Settings.Convertables.Any(d => d.IsEnabled))
+                {
+                    Settings.Convertables.First().IsEnabled = true;
+                }
                 Conversion = Conversion.Generate(Settings);
-                Counter--;
-                SuccesCount--;
+                HelpImage = Conversion.SelectedConvertable.HelpImage;
+                HelpImageVisibility = Visibility.Hidden;
+                if (Counter > 0)
+                {
+                    Counter--;
+                    SuccesCount--;
+                }
+
                 ResultTextBox.Focus();
+            }
+        }
+
+        public void TestButtonClicked()
+        {
+             var result = (decimal)Conversion.Result;
+             DoGenerate(result);
+        }
+        
+        public void HelpButtonClicked()
+        {
+            
+            HelpImageVisibility = HelpImageVisibility == Visibility.Hidden ? Visibility.Visible : Visibility.Hidden;
+        }
+
+        public Visibility HelpImageVisibility
+        {
+            get => m_helpImageVisibility;
+            set
+            {
+                m_helpImageVisibility = value;
+                HelpButtonVisibility = m_helpImageVisibility == Visibility.Visible ? Visibility.Hidden : Visibility.Visible;
+                NotifyOfPropertyChange();
+            }
+        }
+        
+        public Visibility HelpButtonVisibility
+        {
+            get => m_helpButtonVisibility;
+            set
+            {
+                m_helpButtonVisibility = value; 
+                NotifyOfPropertyChange();
+            }
+        }
+
+        public BitmapImage HelpImage
+        {
+            get => m_helpImage;
+            set
+            {
+                m_helpImage = value;
+                NotifyOfPropertyChange();
             }
         }
     }

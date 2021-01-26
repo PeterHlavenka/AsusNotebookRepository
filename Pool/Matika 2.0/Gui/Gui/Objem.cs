@@ -1,4 +1,3 @@
-﻿using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,15 +6,14 @@ using Caliburn.Micro;
 
 namespace Matika.Gui
 {
-    public class Delka : PropertyChangedBase, IConvertable
+    public class Objem : PropertyChangedBase, IConvertable
     {
         private bool m_isEnabled;
-        public int Step => 10;
-        public string Name => "Délka";
-        public int MaxDifficulty { get; set; } = 100;
-        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyDelky"];
+        public int Step => 1000;
+        public string Name => "Objem";
+        public int MaxDifficulty { get; set; } = 50;
+        public BitmapImage HelpImage => (BitmapImage) Application.Current.Resources["JednotkyObjemu"];
 
-       
 
         public Dictionary<int, string> UnitsDictionary
         {
@@ -23,13 +21,13 @@ namespace Matika.Gui
             {
                 var result = new Dictionary<int, string>
                 {
-                    {0, "mm"},
-                    {1, "cm"},
-                    {2, "dm"},
-                    {3, "m"},
+                    {0, "mm³"},
+                    {1, "cm³"},
+                    {2, "dm³"},
+                    {3, "m³"},
                     {4, string.Empty},
                     {5, string.Empty},
-                    {6, "km"}
+                    {6, "km³"}
                 };
                 return result;
             }
@@ -40,7 +38,7 @@ namespace Matika.Gui
             get => m_isEnabled;
             set
             {
-                m_isEnabled = value; 
+                m_isEnabled = value;
                 NotifyOfPropertyChange();
             }
         }

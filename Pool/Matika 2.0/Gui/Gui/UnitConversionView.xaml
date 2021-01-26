@@ -6,16 +6,15 @@
     xmlns:converters="clr-namespace:Matika.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:gif="http://wpfanimatedgif.codeplex.com"
-    xmlns:local="clr-namespace:Matika.Gui"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="clr-namespace:Matika.Gui"
     d:DesignHeight="450"
     d:DesignWidth="800"
     Loaded="MainView_OnLoaded"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance model:UnitConversionViewModel}">
 
     <UserControl.Resources>
-        <BitmapImage x:Key="Settings" UriSource="../Resources/Settings.ico" />
-        <BitmapImage x:Key="Monkey" UriSource="../Gifs/ShowingMonkey.gif" />
         <converters:CommaToDotConverter x:Key="CommaToDotConverter" />
         <Style TargetType="TextBox">
             <Setter Property="FontWeight" Value="Bold" />
@@ -34,15 +33,6 @@
             <Setter Property="MinWidth" Value="150" />
         </Style>
         <!--  RepeatBehavior="Forever"  -->
-        <Storyboard x:Key="StoryboardResource">
-            <DoubleAnimation
-                AutoReverse="False"
-                Storyboard.TargetName="TheTransform"
-                Storyboard.TargetProperty="(RotateTransform.Angle)"
-                From="0"
-                To="200"
-                Duration="0:0:1" />
-        </Storyboard>
         <ControlTemplate x:Key="ButtonTemmplate" TargetType="Button">
             <Grid>
                 <Rectangle
@@ -70,30 +60,49 @@
     </UserControl.Resources>
 
 
-
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource White}" />
+        </Grid.Background>
         <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="100" />
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Margin="50,0,0,0" VerticalAlignment="Center">
+        
+        <!-- Help -->
+        <Image Grid.Row="0" Margin="0,10,0,0" Source="{Binding HelpImage}"
+               Visibility="{Binding HelpImageVisibility}" />
+        <Button Grid.Row="0" Visibility="{Binding HelpButtonVisibility}" Height="80" Width="80"
+                cal:Message.Attach="[Event Click] = [Action HelpButtonClicked()]">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Opacity="0.8"  Margin="0,10,0,0" Source="{StaticResource ZachrannyKruh}" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+
+
+        <Grid Grid.Row="0" Grid.RowSpan="2" Margin="50,0,0,0" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock
                 Grid.Column="0"
                 Focusable="False"
                 Style="{StaticResource ToUnitTextBlock}"
                 Text="{Binding Conversion.TaskString}" />
-            <TextBox
-                Name="ResultTextBox"
-                Grid.Column="1"
-                Margin="0,0,30,0"
-                HorizontalContentAlignment="Center"
-                Foreground="{Binding ResultBrush}"
-                Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CommaToDotConverter}}">
+            <TextBox Background="Transparent"
+                     Name="ResultTextBox"
+                     Grid.Column="1"
+                     Margin="0,0,30,0"
+                     HorizontalContentAlignment="Center"
+                     Foreground="{Binding ResultBrush}"
+                     Text="{Binding UserResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CommaToDotConverter}}">
                 <TextBox.InputBindings>
                     <KeyBinding
                         Key="Enter"
@@ -102,47 +111,71 @@
                     <KeyBinding Key="Back" Command="{Binding ResetCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
+            <StackPanel Grid.Column="1" Name="Debug" Orientation="Horizontal">
+                <TextBlock Background="Transparent"
+                           Name="Napoveda"
+                           Visibility="Collapsed"
+                           Margin="0,0,30,0"
+                           Foreground="Green"
+                           Text="{Binding Conversion.Result}">
+                </TextBlock>
+                <TextBlock Background="Transparent"
+                           Name="ResultControlTextBlock"
+                           Visibility="Collapsed"
+                           Grid.Column="1"
+                           Margin="0,0,30,0"
+                           Foreground="Green"
+                           Text="{Binding ResultControlTextBlockText}">
+                </TextBlock>
+            </StackPanel>
+
             <TextBlock
                 Grid.Column="2"
                 MaxWidth="150"
                 HorizontalAlignment="Right"
                 Style="{StaticResource ToUnitTextBlock}"
                 Text="{Binding Conversion.ToUnit}" />
+            <Button Grid.Column="3" Visibility="Collapsed" Content="{Binding Conversion.Result}"
+                    cal:Message.Attach="[Event Click] = [Action TestButtonClicked()]" />
         </Grid>
 
         <!--  StatusBar  -->
-        <StatusBar Grid.Row="1" Margin="0,0,0,-2">
-            <StackPanel Orientation="Horizontal">
-                <Button
-                    Width="30"
-                    Height="30"
-                    Margin="20,0"
-                    HorizontalAlignment="Center"
-                    cal:Message.Attach="[Event Click] = [Action SettingsButtonClicked()]"
-                    Template="{StaticResource ButtonTemmplate}">
-                    <Grid>
-                        <Image Source="{StaticResource Settings}" />
-                    </Grid>
-                </Button>
-                <TextBlock Margin="5,20" Text="Obtížnost:" />
-                <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
-                <TextBlock Margin="55,20,5,25" Text="Příklad číslo:" />
-                <TextBlock Margin="5,20" Text="{Binding Counter}" />
-                <TextBlock Margin="200,20,5,25" Text="Správně:" />
-                <TextBlock
-                    Margin="5,20"
-                    Foreground="Green"
-                    Text="{Binding SuccesCount}" />
-                <TextBlock Margin="35,20,5,25" Text="Nesprávně:" />
-                <TextBlock
-                    Margin="5,20"
-                    Foreground="Red"
-                    Text="{Binding WrongCount}" />
-            </StackPanel>
+        <StatusBar Grid.Row="2" Margin="0,0,0,-2">
+            <Grid>
+                <Image Width="145" Margin="-175, 0, 0, 0" Source="{StaticResource Kmen}" />
+               
+                <StackPanel Orientation="Horizontal">
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Margin="20,0"
+                        HorizontalAlignment="Center"
+                        cal:Message.Attach="[Event Click] = [Action SettingsButtonClicked()]"
+                        Template="{StaticResource ButtonTemmplate}">
+                        <Grid>
+                            <Image Source="{StaticResource Settings}" />
+                        </Grid>
+                    </Button>
+                    <TextBlock Margin="5,20" Text="Obtížnost:" />
+                    <TextBlock Margin="5,20" Text="{Binding Settings.Difficulty}" />
+
+                    <TextBlock Margin="405,20,5,25" Text="Správně:" />
+                    <TextBlock
+                        Margin="5,20"
+                        Foreground="Green"
+                        Text="{Binding SuccesCount}" />
+                    <TextBlock Margin="35,20,5,25" Text="Nesprávně:" />
+                    <TextBlock
+                        Margin="5,20"
+                        Foreground="Red"
+                        Text="{Binding WrongCount}" />
+                </StackPanel>
+            </Grid>
+
         </StatusBar>
         <Image
             Name="ShowingMonkey"
-            Grid.Row="1"
+            Grid.Row="2"
             Width="400"
             gif:ImageBehavior.AnimateInDesignMode="False"
             gif:ImageBehavior.AnimatedSource="{StaticResource Monkey}"
