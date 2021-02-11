@@ -15,6 +15,9 @@ namespace log4net_explanation
         {
             m_log.Debug($@"Starting cache maintenance for StreamStorage");
             Process externalProcess = new Process {StartInfo = {FileName = "CacheMaintenance/Mazani  prebytecnych streamu ve StreamStorage.exe"}};
+            
+            // nekdy je potreba opacny slash: 
+            //Process externalProcess = new Process {StartInfo = {FileName = "CacheMaintenance\\Mazani  prebytecnych streamu ve StreamStorage.exe"}};
             //externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
             externalProcess.Start();
             externalProcess.WaitForExit();
