@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadCartesianChartTest", "RadCartesianChartTest\RadCartesianChartTest.csproj", "{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net_explanation", "log4net_explanation\log4net_explanation.csproj", "{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -269,6 +271,10 @@ Global
 		{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
