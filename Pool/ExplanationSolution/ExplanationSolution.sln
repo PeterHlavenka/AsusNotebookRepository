@@ -101,7 +101,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadCartesianChartTest", "Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net_explanation a run external exe program", "log4net_explanation a run external exe program\log4net_explanation a run external exe program.csproj", "{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mazani  prebytecnych streamu ve StreamStorage", "Mazani  prebytecnych streamu ve StreamStorage\Mazani  prebytecnych streamu ve StreamStorage.csproj", "{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalCacheCleaner", "ExternalCacheCleaner\ExternalCacheCleaner.csproj", "{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

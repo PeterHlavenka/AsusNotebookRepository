@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using log4net;
 
-namespace Mazani__prebytecnych_streamu_ve_StreamStorage
+namespace ExternalCacheCleaner
 {
     internal class Program
     {
@@ -12,11 +12,18 @@ namespace Mazani__prebytecnych_streamu_ve_StreamStorage
 
         private static void Main(string[] args)
         {
+            int maxStreams = 3000;
+            
+            if (args.Length > 0 && int.TryParse(args[0], out var number))
+            {
+                maxStreams = number;
+            }
+            
             var path = "d:\\Cache\\MIR.Media.Catching\\StreamStorage\\";
 
             var directory = Directory.CreateDirectory(path);
 
-            var filesToRemove = directory.EnumerateFiles().OrderByDescending(d => d.LastWriteTime).Skip(3).ToList();
+            var filesToRemove = directory.EnumerateFiles().OrderByDescending(d => d.LastWriteTime).Skip(maxStreams).ToList();
 
             try
             {
