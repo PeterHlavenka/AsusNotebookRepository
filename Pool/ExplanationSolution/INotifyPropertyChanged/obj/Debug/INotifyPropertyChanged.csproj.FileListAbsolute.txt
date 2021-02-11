@@ -45,3 +45,29 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CopyComplete
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\INotifyPropertyChanged.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Diagrams.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Diagrams.Extensions.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.GridView.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Data.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Diagrams.Core.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\MainWindow.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\App.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged_MarkupCompile.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged_MarkupCompile.lref
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\MainWindow.baml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.g.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.Properties.Resources.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.GenerateResource.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.pdb

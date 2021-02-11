@@ -12,3 +12,13 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.pdb

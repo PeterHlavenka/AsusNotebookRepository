@@ -27,3 +27,21 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\DictionaryReverse.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\MainWindow.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\App.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse_MarkupCompile.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse_MarkupCompile.lref
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\MainWindow.baml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.g.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.Properties.Resources.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.GenerateResource.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb

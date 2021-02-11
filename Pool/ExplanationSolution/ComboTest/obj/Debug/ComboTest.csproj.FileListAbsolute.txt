@@ -28,3 +28,21 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\bin\Debug\ComboTest.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\MainWindow.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\App.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest_MarkupCompile.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest_MarkupCompile.lref
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\MainWindow.baml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.g.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.Properties.Resources.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.GenerateResource.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb

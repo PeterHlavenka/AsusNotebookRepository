@@ -12,3 +12,13 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\Delegate.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\Delegate.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\Delegate.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.pdb

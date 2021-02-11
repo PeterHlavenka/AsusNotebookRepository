@@ -28,3 +28,21 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\EventyPresRozhrani.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\MainWindow.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\App.g.cs
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani_MarkupCompile.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani_MarkupCompile.lref
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\MainWindow.baml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.g.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.Properties.Resources.resources
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.GenerateResource.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb

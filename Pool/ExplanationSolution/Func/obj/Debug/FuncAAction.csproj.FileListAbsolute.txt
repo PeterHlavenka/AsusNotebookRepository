@@ -12,3 +12,13 @@ C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\Explanatio
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csproj.CoreCompileInputs.cache
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\Func.exe
 C:\Users\phlavenka\OneDrive\Nielsen  prace\Moje poznamky Nielsen\Pool\ExplanationSolution\Func\obj\Debug\Func.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\bin\Debug\Func.exe.config
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\bin\Debug\Func.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\bin\Debug\Func.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\bin\Debug\log4net.dll
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\bin\Debug\log4net.xml
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csproj.CoreCompileInputs.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.csproj.CopyComplete
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\Func.exe
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\Func.pdb
