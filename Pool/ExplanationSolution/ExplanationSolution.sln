@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net_explanation a run e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalCacheCleaner", "ExternalCacheCleaner\ExternalCacheCleaner.csproj", "{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderAppendNullTest", "StringBuilderAppendNullTest\StringBuilderAppendNullTest.csproj", "{1CFE109B-C717-41A0-9215-3896634F2C99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -281,6 +283,10 @@ Global
 		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFE109B-C717-41A0-9215-3896634F2C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFE109B-C717-41A0-9215-3896634F2C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFE109B-C717-41A0-9215-3896634F2C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFE109B-C717-41A0-9215-3896634F2C99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,6 +321,7 @@ Global
 		{38D6B259-E0E5-4F70-951F-70BF5BAFA405} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{7840E327-FCD1-424D-9B12-48F4575EEF83} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
+		{11095BDC-EE70-40F4-92B5-7CF92859BA35} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
