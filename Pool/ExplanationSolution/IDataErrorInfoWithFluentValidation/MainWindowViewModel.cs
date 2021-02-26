@@ -34,7 +34,6 @@ namespace IDataErrorInfoWithFluentValidation
                 if ("ValidateInputText" == columnName)
                 {
                     if (string.IsNullOrEmpty(ValidateInputText))
-
                     {
                         return "Please enter a Name";
                     }
@@ -42,7 +41,7 @@ namespace IDataErrorInfoWithFluentValidation
 
                 else if ("Age" == columnName)
                 {
-                    if (Age < 0)
+                    if (Age <= 0)
                     {
                         return "age should be greater than 0";
                     }
