@@ -12,5 +12,13 @@ namespace INotifyDataErrorInfo
             InitializeComponent();
             DataContext = new MainViewModel();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainViewModel model)
+            {
+                model.ButtonClick();
+            }
+        }
     }
 }

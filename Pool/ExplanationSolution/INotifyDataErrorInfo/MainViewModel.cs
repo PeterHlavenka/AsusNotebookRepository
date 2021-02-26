@@ -23,7 +23,7 @@ namespace INotifyDataErrorInfo
             set
             {
                 m_userName = value;
-                ValidateUserName();
+                // ValidateProperty(nameof(UserName));
                 OnPropertyChanged();
             }
         }
@@ -43,15 +43,18 @@ namespace INotifyDataErrorInfo
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }
 
-        private void ValidateUserName()
+        private void ValidateProperty(string propertyName)
         {
-            ClearErrors(nameof(UserName));
+            ClearErrors(propertyName);
+            
             if (string.IsNullOrWhiteSpace(UserName))
-                AddError(nameof(UserName), "Username cannot be empty.");
+                AddError(propertyName, "Username cannot be empty.");
+            
             if (string.Equals(UserName, "Admin", StringComparison.OrdinalIgnoreCase))
-                AddError(nameof(UserName), "Admin is not valid username.");
+                AddError(propertyName, "Admin is not valid username.");
+            
             if (UserName == null || UserName?.Length <= 5)
-                AddError(nameof(UserName), "Username must be at least 6 characters long.");
+                AddError(propertyName, "Username must be at least 6 characters long.");
         }
 
         private void AddError(string propertyName, string error)
@@ -85,5 +88,10 @@ namespace INotifyDataErrorInfo
         }
 
         #endregion
+
+        public void ButtonClick()
+        {
+            ValidateProperty(nameof(UserName));
+        }
     }
 }

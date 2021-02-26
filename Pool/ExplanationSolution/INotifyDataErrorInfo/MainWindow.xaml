@@ -6,20 +6,13 @@
         xmlns:local="clr-namespace:INotifyDataErrorInfo"
         d:DataContext="{d:DesignInstance local:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="1000" Width="800">
     <Window.Resources>
+        <!-- ITEMS CONTROL A V NEM VSECHNY ERRORY -->
         <ControlTemplate x:Key="ErrorTemplate">
             <StackPanel>
                 <Border BorderBrush="Red" BorderThickness="1">
-                    <Border.Visibility>
-                        <Binding ElementName="placeholder" Path="AdornedElement.IsVisible">
-                            <Binding.Converter>
-                                <BooleanToVisibilityConverter/>
-                            </Binding.Converter>
-                        </Binding>
-                    </Border.Visibility>
-                
-                <AdornedElementPlaceholder/>
+                    <AdornedElementPlaceholder/>
                 </Border>
                 
                 <ItemsControl ItemsSource="{Binding}">
@@ -31,86 +24,42 @@
                 </ItemsControl>
             </StackPanel>
         </ControlTemplate>
+        
+        <ControlTemplate x:Key="ErrorTemplateJustBorder">
+            <Border BorderBrush="Red" BorderThickness="1">
+                    <AdornedElementPlaceholder/>
+                </Border>
+        </ControlTemplate>
+        
+        <Style BasedOn="{StaticResource {x:Type TextBox}}" TargetType="{x:Type TextBox}" x:Key="ValidationStyle">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
     </Window.Resources>
 
 
     <StackPanel>
-        <!-- Validace s errorama pod textBoxem -->
+        
+        <!-- Validace s pouzitim template: -->
         <StackPanel>
-            <Label Content="User name:" />
+            <Label Margin="0,50,0,0" Content="User name pouzitim template s itemsControl:" />
+            <TextBox Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate }"/>
+        </StackPanel>
+        
+        <!-- Validace pouzitim template  a tooltip stylu: -->
+        <StackPanel>
+            <Label Margin="0,50,0,0" Content="User name pouzitim template bez ItemsControl, ale s ToolTipem (jen prvni error):" />
             <TextBox
-                Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
-                <Validation.ErrorTemplate>
-                    <ControlTemplate>
-                        <StackPanel>
-                            <AdornedElementPlaceholder x:Name="textBox" />
-                            <ItemsControl ItemsSource="{Binding}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" />
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </StackPanel>
-                    </ControlTemplate>
-                </Validation.ErrorTemplate>
-            </TextBox>
-        </StackPanel>
-
-        
-        
-        <!-- Dalsi validace s cervenym rameckem a toolTipem: -->
-        <StackPanel>
-            <Label Margin="0,150,0,0" Content="User name with error ToolTip:" />
-            <TextBox
-                Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
-                <Validation.ErrorTemplate>
-                    <ControlTemplate>
-                        <DockPanel>
-                            <Border BorderBrush="Red" BorderThickness="1">
-                                <AdornedElementPlaceholder />
-                            </Border>
-                        </DockPanel>
-                    </ControlTemplate>
-                </Validation.ErrorTemplate>
-                <TextBox.Style>
-                    <Style TargetType="{x:Type TextBox}">
-                        <Style.Triggers>
-                            <Trigger Property="Validation.HasError" Value="true">
-                                <Setter Property="ToolTip"
-                                        Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TextBox.Style>
-            </TextBox>
+                Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                Validation.ErrorTemplate="{StaticResource ErrorTemplateJustBorder}" Style="{StaticResource ValidationStyle}" />
         </StackPanel>
         
-        
-        
-        <!-- Treti validace s pouzitim template: -->
-        <StackPanel>
-            <Label Margin="0,150,0,0" Content="User name using template:" />
-            <TextBox 
-                Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate }">
-
-                <TextBox.ToolTip>
-                    <ItemsControl
-                        ItemsSource="{Binding  RelativeSource={RelativeSource FindAncestor, AncestorType=TextBox}, Path=DataContext.(Validation.Errors)}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding ErrorContent}"></TextBlock>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </TextBox.ToolTip>
-            </TextBox>
-        </StackPanel>
-        
-        
-        
-        
-        
+        <Button Margin="50" Click="ButtonBase_OnClick" Content="Validate !  (Validace muze fungovat i na psani do TextBoxu -> musim odkomentovat: // ValidateProperty(nameof(UserName));)"></Button>
         
     </StackPanel>
 </Window>
