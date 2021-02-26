@@ -48,14 +48,14 @@
         <!-- Validace s pouzitim template: -->
         <StackPanel>
             <Label Margin="0,50,0,0" Content="User name pouzitim template s itemsControl:" />
-            <TextBox Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate }"/>
+            <TextBox Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate }"/>
         </StackPanel>
         
         <!-- Validace pouzitim template  a tooltip stylu: -->
         <StackPanel>
             <Label Margin="0,50,0,0" Content="User name pouzitim template bez ItemsControl, ale s ToolTipem (jen prvni error):" />
             <TextBox
-                Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
                 Validation.ErrorTemplate="{StaticResource ErrorTemplateJustBorder}" Style="{StaticResource ValidationStyle}" />
         </StackPanel>
         

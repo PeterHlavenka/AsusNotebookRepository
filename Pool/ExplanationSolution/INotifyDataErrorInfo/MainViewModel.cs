@@ -23,7 +23,7 @@ namespace INotifyDataErrorInfo
             set
             {
                 m_userName = value;
-                // ValidateProperty(nameof(UserName));
+                 // ValidateProperty(nameof(UserName));
                 OnPropertyChanged();
             }
         }
