@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using log4net;
 
-namespace ExternalCacheCleaner
+namespace ExtendedCacheCleaner
 {
     internal class Program
     {
