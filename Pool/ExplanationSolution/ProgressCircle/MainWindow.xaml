@@ -5,12 +5,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProgressCircle"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
     Title="MainWindow"
     Width="525"
     Height="350"
     mc:Ignorable="d">
 
     <Window.Resources>
+        <xcad:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        
         <Storyboard x:Key="StoryboardResource">
             <DoubleAnimation
                 AutoReverse="False"
@@ -79,8 +82,61 @@
                 </EventTrigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+        
+        
+        
+        
+        
+        <BitmapImage x:Key="Progress" UriSource="progressAnimation.gif" />
+        
+        <ControlTemplate x:Key="ProgressTemplate" TargetType="UserControl">
+            <Grid>
+                <Viewbox>
+                    <ContentPresenter Margin="{TemplateBinding Padding}" />
+                </Viewbox>
+                <Image Name="Img" Source="{StaticResource Progress}">
+                    <Image.RenderTransform>
+                        <RotateTransform x:Name="theTransform" />
+                    </Image.RenderTransform>
+                    <Image.RenderTransformOrigin>
+                        <Point X=".5" Y=".5" />
+                    </Image.RenderTransformOrigin>
+                </Image>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <EventTrigger RoutedEvent="Loaded" SourceName="Img">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                AutoReverse="False"
+                                RepeatBehavior="Forever"
+                                Storyboard.TargetName="theTransform"
+                                Storyboard.TargetProperty="(RotateTransform.Angle)"
+                                From="0"
+                                To="360"
+                                Duration="0:0:1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        
+        
     </Window.Resources>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <StackPanel>
         <Button
             Width="129"
@@ -122,6 +178,15 @@
             </StackPanel>
 
         </Button>
+        
+        <TextBlock Margin="10"> USER CONTROL NAPOJENY NA IS BUSY: </TextBlock>
+        <UserControl
+            Width="50"
+            Height="50"
+            Template="{StaticResource ProgressTemplate}"
+            Visibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+        </UserControl>
+        
 
     </StackPanel>
 </Window>
