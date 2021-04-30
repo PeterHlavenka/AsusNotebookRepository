@@ -8,6 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     Title="MainWindow"
+    x:Name="WindowName"
     mc:Ignorable="d">
     <Window.Resources>
         <Style TargetType="telerik:LineSeries">
@@ -18,6 +19,8 @@
 
 
     </Window.Resources>
+    
+    
     <Grid Background="AntiqueWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -231,40 +234,36 @@
         </ScrollViewer>
 
 
+        
+        <Grid Grid.Row="2" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Zadej pocet dat" />
+                <TextBox Margin="5,0" VerticalAlignment="Top" Width="100" Height="30" Text="{Binding ElementName=WindowName ,Path=PocetDat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </StackPanel>
+            <telerik:RadCartesianChart
+                x:Name="BindedSeriesChart">
 
+                <telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:CategoricalAxis ShowLabels="True" LabelRotationAngle="270" LabelFitMode="Rotate" />
+                </telerik:RadCartesianChart.HorizontalAxis>
 
+                <telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:LinearAxis />
+                </telerik:RadCartesianChart.VerticalAxis>
 
+                <telerik:RadCartesianChart.Series>
+                    <telerik:BarSeries
+                        CategoryBinding="Name"
+                        ItemsSource="{Binding Data}"
+                        ValueBinding="QuantitySold">
+                    </telerik:BarSeries>
+                </telerik:RadCartesianChart.Series>
 
+                <telerik:RadCartesianChart.Behaviors>
+                    <telerik:ChartPanAndZoomBehavior ZoomMode="Horizontal" DragMode="Pan" />
+                </telerik:RadCartesianChart.Behaviors>
 
-
-
-
-
-
-
-
-
-
-
-        <telerik:RadCartesianChart
-            x:Name="BindedSeriesChart"
-            Grid.Row="2"
-            Grid.Column="2">
-
-            <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:CategoricalAxis />
-            </telerik:RadCartesianChart.HorizontalAxis>
-
-            <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis />
-            </telerik:RadCartesianChart.VerticalAxis>
-
-            <telerik:RadCartesianChart.Series>
-                <telerik:BarSeries
-                    CategoryBinding="Name"
-                    ItemsSource="{Binding Data}"
-                    ValueBinding="QuantitySold" />
-            </telerik:RadCartesianChart.Series>
-        </telerik:RadCartesianChart>
+            </telerik:RadCartesianChart>
+        </Grid>
     </Grid>
 </Window>

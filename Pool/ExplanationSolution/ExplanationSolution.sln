@@ -125,6 +125,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokracujeForeeachVeKteremBy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChytiVyjimkuAzObCatch", "ChytiVyjimkuAzObCatch\ChytiVyjimkuAzObCatch.csproj", "{B6E3609F-596A-43E1-8831-E47ADFA23EFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationTokenNaAsyncAwaitu", "Thready\CancellationTokenNaAsyncAwaitu\CancellationTokenNaAsyncAwaitu.csproj", "{A310D705-8F87-4140-881A-2C3B03429770}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -339,6 +341,10 @@ Global
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A310D705-8F87-4140-881A-2C3B03429770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A310D705-8F87-4140-881A-2C3B03429770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A310D705-8F87-4140-881A-2C3B03429770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A310D705-8F87-4140-881A-2C3B03429770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -384,6 +390,7 @@ Global
 		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10} = {A10A8DCB-D2D1-4525-AB9A-654FC5E08BE0}
 		{734D60C7-7161-4908-B661-083E65FFE4BA} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
+		{A310D705-8F87-4140-881A-2C3B03429770} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
