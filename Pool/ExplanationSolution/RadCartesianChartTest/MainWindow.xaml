@@ -192,6 +192,7 @@
                     </Style>
                 </telerik:RadCartesianChart.TrackBallLineStyle>
 
+                
 
                 <telerik:RadCartesianChart.Behaviors>
                     <telerik:ChartPanAndZoomBehavior
@@ -242,13 +243,20 @@
             </StackPanel>
             <telerik:RadCartesianChart
                 x:Name="BindedSeriesChart">
+                
+                <telerik:RadCartesianChart.Annotations> 
+                    <telerik:CartesianGridLineAnnotation Axis="{Binding ElementName=VerticalAxis}"  
+                                                         Value="60" 
+                                                         Stroke="Red" 
+                                                         StrokeThickness="1"/> 
+                </telerik:RadCartesianChart.Annotations> 
 
                 <telerik:RadCartesianChart.HorizontalAxis>
                     <telerik:CategoricalAxis ShowLabels="True" LabelRotationAngle="270" LabelFitMode="Rotate" />
                 </telerik:RadCartesianChart.HorizontalAxis>
 
-                <telerik:RadCartesianChart.VerticalAxis>
-                    <telerik:LinearAxis />
+                <telerik:RadCartesianChart.VerticalAxis >
+                    <telerik:LinearAxis x:Name="VerticalAxis"/>
                 </telerik:RadCartesianChart.VerticalAxis>
 
                 <telerik:RadCartesianChart.Series>
@@ -256,11 +264,32 @@
                         CategoryBinding="Name"
                         ItemsSource="{Binding Data}"
                         ValueBinding="QuantitySold">
+                        
+                        <telerik:BarSeries.PointTemplate>
+                            <DataTemplate>
+                                <Border>
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Background" Value="#2E64A0" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#2E64D6" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                </Border>
+                            </DataTemplate>
+                        </telerik:BarSeries.PointTemplate>
+                        
                     </telerik:BarSeries>
                 </telerik:RadCartesianChart.Series>
+                
+
 
                 <telerik:RadCartesianChart.Behaviors>
                     <telerik:ChartPanAndZoomBehavior ZoomMode="Horizontal" DragMode="Pan" />
+                    <telerik:ChartTrackBallBehavior ShowIntersectionPoints="False" SnapMode="ClosestPoint" />
                 </telerik:RadCartesianChart.Behaviors>
 
             </telerik:RadCartesianChart>
