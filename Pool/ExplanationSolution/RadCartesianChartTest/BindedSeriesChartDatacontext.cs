@@ -36,7 +36,7 @@ namespace RadCartesianChartTest
         {
             for (var i = Data.Count; i < PocetMistNaOseX; i++)
             {
-                var product = new Product {Name = "" + i, QuantitySold = 0};
+                var product = new Product {Name = "" + i, QuantitySold = 0, AdditionalValue = 0};
                 Data.Add(product);
             }
 
@@ -47,7 +47,7 @@ namespace RadCartesianChartTest
         {
             for (var i = 0; i < PocetNacitanychDatDoGrafu; i++)
             {
-                var product = new Product {Name = "Product " + i, QuantitySold = rnd.Next(10, 99)};
+                var product = new Product {Name = "Product " + i, QuantitySold = rnd.Next(10, 99), AdditionalValue = 12.5};
                 Data.Add(product);
             }
         }
@@ -69,5 +69,7 @@ namespace RadCartesianChartTest
         public string Name { get; set; }
 
         public double QuantitySold { get; set; }
+        
+        public double AdditionalValue { get; set; }
     }
 }

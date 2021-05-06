@@ -222,7 +222,13 @@
                         CategoryBinding="XDate"
                         ItemsSource="{Binding AvailableInterval}"
                         Stroke="Green"
-                        ValueBinding="YVal" />
+                        ValueBinding="YVal" >
+                        <telerik:LineSeries.TrackBallInfoTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="CustomTrackBallInfoTemplate only for green line series"/>
+                            </DataTemplate>
+                        </telerik:LineSeries.TrackBallInfoTemplate>
+                    </telerik:LineSeries>
 
                     <telerik:LineSeries
                         CategoryBinding="XDate"
@@ -235,7 +241,7 @@
         </ScrollViewer>
 
 
-        
+        <!-- VPRAVO DOLE -->
         <Grid Grid.Row="2" Grid.Column="2">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Zadej pocet dat" />
@@ -281,8 +287,10 @@
                                 </Border>
                             </DataTemplate>
                         </telerik:BarSeries.PointTemplate>
-                        
                     </telerik:BarSeries>
+                    
+                    <telerik:LineSeries x:Name="series2" CategoryBinding="Name" ItemsSource="{Binding Data}" ValueBinding="AdditionalValue">
+                    </telerik:LineSeries>
                 </telerik:RadCartesianChart.Series>
                 
 
