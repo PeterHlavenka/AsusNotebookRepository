@@ -129,6 +129,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationTokenNaAsyncAwa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsComparer", "ColorsComparer\ColorsComparer.csproj", "{C384CF9E-5F08-4931-9DC1-051430C89DE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonDockingManagerWithLayoutSerializer", "AvalonDockingManagerWithLayoutSerializer\AvalonDockingManagerWithLayoutSerializer.csproj", "{7491371D-37BE-419D-A63B-7C55E10597CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -351,6 +353,10 @@ Global
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7491371D-37BE-419D-A63B-7C55E10597CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7491371D-37BE-419D-A63B-7C55E10597CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7491371D-37BE-419D-A63B-7C55E10597CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7491371D-37BE-419D-A63B-7C55E10597CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -398,6 +404,7 @@ Global
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{A310D705-8F87-4140-881A-2C3B03429770} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
+		{7491371D-37BE-419D-A63B-7C55E10597CE} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

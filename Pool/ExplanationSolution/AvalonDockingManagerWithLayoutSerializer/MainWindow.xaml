@@ -1,0 +1,50 @@
+﻿<Window x:Class="AvalonDockingManagerWithLayoutSerializer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Loaded="MainWindow_OnLoaded"
+        Closing="MainWindow_OnClosing"
+        WindowState="Maximized"
+        >
+    <Grid>
+        <!-- Staci nainstalovat Xceed.Wpf.AvalonDock -->
+        <xcad:DockingManager Name="AvalonDockingManagerWithLayoutSerializerDockingManager" Grid.Row="1">
+    
+            <xcad:LayoutRoot>
+                <xcad:LayoutPanel Orientation="Vertical">
+                    <xcad:LayoutAnchorablePane DockHeight="5*" DockMinHeight="180">
+                        <xcad:LayoutAnchorable
+                            CanClose="False"
+                            CanHide="False"
+                            ContentId="Preview">
+    
+                            <DockPanel LastChildFill="True">
+                                <Rectangle MinHeight="300" MinWidth=" 500" Fill="Red"
+                                    Margin="0,5,0,3"
+                                    DockPanel.Dock="Bottom" />
+                            </DockPanel>
+                        </xcad:LayoutAnchorable>
+                    </xcad:LayoutAnchorablePane>
+                    <xcad:LayoutAnchorablePane
+                        x:Name="_logView"
+                        DockHeight="2*"
+                        DockMinHeight="200">
+                        <xcad:LayoutAnchorable
+                            CanClose="False"
+                            CanHide="False"
+                            ContentId="BottomMenu">
+    
+                            <Rectangle MinHeight="300" MinWidth=" 500" Fill="Blue" />
+    
+                        </xcad:LayoutAnchorable>
+                    </xcad:LayoutAnchorablePane>
+                </xcad:LayoutPanel>
+            </xcad:LayoutRoot>
+        </xcad:DockingManager>
+    
+    </Grid>
+</Window>
