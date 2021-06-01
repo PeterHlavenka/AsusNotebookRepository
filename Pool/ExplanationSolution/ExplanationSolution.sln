@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsComparer", "ColorsCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonDockingManagerWithLayoutSerializer", "AvalonDockingManagerWithLayoutSerializer\AvalonDockingManagerWithLayoutSerializer.csproj", "{7491371D-37BE-419D-A63B-7C55E10597CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnikaViceViewProJedenViewModel", "TechnikaViceViewProJedenViewModel\TechnikaViceViewProJedenViewModel.csproj", "{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -357,6 +359,10 @@ Global
 		{7491371D-37BE-419D-A63B-7C55E10597CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7491371D-37BE-419D-A63B-7C55E10597CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7491371D-37BE-419D-A63B-7C55E10597CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -405,6 +411,7 @@ Global
 		{A310D705-8F87-4140-881A-2C3B03429770} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{7491371D-37BE-419D-A63B-7C55E10597CE} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
+		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
