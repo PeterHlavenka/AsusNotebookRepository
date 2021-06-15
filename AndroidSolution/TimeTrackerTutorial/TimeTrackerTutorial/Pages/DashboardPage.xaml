@@ -1,14 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TimeTrackerTutorial.Pages.DashboardPage"
-             Title="Dashboard">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Velcome to xamarin.forms Hlavac"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TimeTrackerTutorial.Pages.DashboardPage"
+            Title="Dashboard"
+            xmlns:pages="clr-namespace:TimeTrackerTutorial.Pages;assembly=TimeTrackerTutorial">
+    <TabbedPage.Children>
+        <NavigationPage Title="Time">
+            <x:Arguments>
+                <pages:TimeClockPage />
+            </x:Arguments>
+        </NavigationPage>
+        
+        <NavigationPage Title="Summary">
+            <x:Arguments>
+                <pages:SummaryPage />
+            </x:Arguments>
+        </NavigationPage>
+        
+        <NavigationPage Title="Profile">
+            <x:Arguments>
+                <pages:ProfilePage />
+            </x:Arguments>
+        </NavigationPage>
+        
+        <NavigationPage Title="Settings">
+            <x:Arguments>
+                <pages:SettingsPage />
+            </x:Arguments>
+        </NavigationPage>
+        
+    </TabbedPage.Children>
+</TabbedPage>

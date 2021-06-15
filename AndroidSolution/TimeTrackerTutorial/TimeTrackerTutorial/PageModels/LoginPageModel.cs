@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using TimeTrackerTutorial.Services.Account;
 using TimeTrackerTutorial.Services.Navigation;
 using Xamarin.Forms;
 
@@ -7,23 +8,51 @@ namespace TimeTrackerTutorial.PageModels
     public class LoginPageModel : PageModelBase
     {
         private readonly INavigationService m_navigationService;
-        private ICommand m_signInCommand;
+        private readonly IAccountService m_accountService;
+        private ICommand m_logInCommand;
+        private string m_userName;
+        private string m_password;
 
-        public LoginPageModel(INavigationService navigationService)
+        public LoginPageModel(INavigationService navigationService, IAccountService accountService)
         {
             m_navigationService = navigationService;
-            SignInCommand = new Command(OnSignInAction);
+            m_accountService = accountService;
+            
+            LogInCommand = new Command(DoLogInAction);
+        }
+        
+        public ICommand LogInCommand
+        {
+            get => m_logInCommand;
+            set => SetProperty(ref m_logInCommand, value);
         }
 
-        private void OnSignInAction(object obj)
+        public string UserName
         {
-            m_navigationService.NavigateToAsync<DashboardPageModel>();
+            get => m_userName;
+            set => SetProperty(ref m_userName, value);
         }
 
-        public ICommand SignInCommand
+        public string Password
         {
-            get => m_signInCommand;
-            set => SetProperty(ref m_signInCommand, value);
+            get => m_password;
+            set => SetProperty(ref m_password, value);
+        }
+
+        private async void DoLogInAction(object obj)
+        {
+            var loginAttempt = await m_accountService.LoginAsync(UserName, Password);
+
+            if (loginAttempt)
+            {
+                await m_navigationService.NavigateToAsync<DashboardPageModel>();
+            }
+            else
+            {
+                //todo : Display an allert for failure!
+            }
+            
+            
         }
     }
 }
