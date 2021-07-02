@@ -34,7 +34,13 @@ namespace TimeTrackerTutorial.PageModels
             set => SetProperty(ref m_settingsPageModel, value);
         }
 
-
+        public DashboardPageModel(SettingsPageModel settingsPageModel, TimeClockPageModel timeClockPageModel, SummaryPageModel summaryPageModel, ProfilePageModel profilePageModel)
+        {
+            SettingsPageModel = settingsPageModel;
+            TimeClockPageModel = timeClockPageModel;
+            SummaryPageModel = summaryPageModel;
+            ProfilePageModel = profilePageModel;
+        }
 
         public override Task InitializeAsync(object navigationData)
         {

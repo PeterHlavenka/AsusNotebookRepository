@@ -6,17 +6,30 @@ namespace TimeTrackerTutorial.Services.Navigation
 {
     public class NavigationService : INavigationService
     {
-        public async Task NavigateToAsync<TPageModelBase>(object navigationData = null, bool setRoot = false)
+        public async Task NavigateToAsync<TPageModel>(object navigationData = null, bool setRoot = false) where TPageModel : PageModelBase
         {
-            var page = PageModelLocator.CreatePageFor(typeof(TPageModelBase));
+            var page = PageModelLocator.CreatePageFor(typeof(TPageModel));
 
             if (setRoot)
             {
-                Application.Current.MainPage = new NavigationPage(page);
+                if (page is TabbedPage tabbedPage)
+                {
+                    Application.Current.MainPage = tabbedPage;
+                }
+                else
+                {
+                    Application.Current.MainPage = new NavigationPage(page);
+                }
+                
+               
             }
             else
             {
-                if (Application.Current.MainPage is NavigationPage navPage)
+                if (page is TabbedPage tabPage)
+                {
+                    Application.Current.MainPage = tabPage;
+                }
+                else if (Application.Current.MainPage is NavigationPage navPage)
                 {
                     await navPage.PushAsync(page);
                 }
