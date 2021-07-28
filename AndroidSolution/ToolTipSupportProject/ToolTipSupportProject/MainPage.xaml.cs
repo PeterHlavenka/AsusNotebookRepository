@@ -13,5 +13,17 @@ namespace ToolTipSupportProject
         {
             InitializeComponent();
         }
+
+        private void Handle_Tapped(object sender, EventArgs e)
+        {
+            foreach (var c in mainLayout.Children)
+            {
+                if (TooltipEffect.GetHasTooltip(c))
+                {
+                    TooltipEffect.SetHasTooltip(c, false);
+                    TooltipEffect.SetHasTooltip(c, true);
+                }
+            }
+        }
     }
 }

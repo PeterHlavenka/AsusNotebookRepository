@@ -39,36 +39,46 @@
         <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Mono.Android"/>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Xml"/>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012"/>
+        <PackageReference Include="Xamarin.Android.Tooltips" Version="1.0.7" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="MainActivity.cs"/>
-        <Compile Include="Resources\Resource.Designer.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="DroidTooltipEffect.cs" />
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="Resources\AboutResources.txt"/>
-        <None Include="Assets\AboutAssets.txt"/>
-        <None Include="Properties\AndroidManifest.xml"/>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="Resources\layout\Tabbar.axml"/>
-        <AndroidResource Include="Resources\layout\Toolbar.axml"/>
-        <AndroidResource Include="Resources\values\styles.xml"/>
-        <AndroidResource Include="Resources\values\colors.xml"/>
+        <AndroidResource Include="Resources\drawable\target_1.png">
+          <SubType>Designer</SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\Tabbar.axml" />
+        <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\colors.xml" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\..\TooltipCommonLibrary\TooltipCommonLibrary.csproj">
+          <Project>{f2f64cd5-d6c6-48a4-95b7-b567e67a21ac}</Project>
+          <Name>TooltipCommonLibrary</Name>
+        </ProjectReference>
         <ProjectReference Include="..\ToolTipSupportProject\ToolTipSupportProject.csproj">
             <Project>{7504791A-8364-4F48-92BE-80147E2E4188}</Project>
             <Name>ToolTipSupportProject</Name>
         </ProjectReference>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets"/>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

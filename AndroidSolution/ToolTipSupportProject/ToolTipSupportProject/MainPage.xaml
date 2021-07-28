@@ -4,11 +4,60 @@
              xmlns:local="clr-namespace:ToolTipSupportProject"
              x:Class="ToolTipSupportProject.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+   <StackLayout Spacing="60"
+                 x:Name="mainLayout"
+                 Padding="40">
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Handle_Tapped"/>
+            </StackLayout.GestureRecognizers>
+        
+        <Button x:Name="btn"
+                WidthRequest="150"
+                VerticalOptions="StartAndExpand"
+                BackgroundColor="LightBlue"
+                Text="Show Tooltip" 
+                HorizontalOptions="Center" 
+                local:TooltipEffect.Position="Bottom"
+                local:TooltipEffect.BackgroundColor="Silver"
+                local:TooltipEffect.TextColor="Teal"
+                local:TooltipEffect.Text="Here is a sample text for this tool tip that can help us later, here is more text to showcase the tooltip bottom" 
+                local:TooltipEffect.HasTooltip="True">
+        </Button>
+        
+         <BoxView x:Name="btn2"
+                 VerticalOptions="CenterAndExpand"
+                 WidthRequest="50"
+                  HeightRequest="40"
+                BackgroundColor="Pink"
+                HorizontalOptions="Start" 
+               local:TooltipEffect.Position="Right"
+               local:TooltipEffect.BackgroundColor="Blue"
+               local:TooltipEffect.Text="Here is a sample text for this tool tip that can help us later, here is more text to showcase the tooltip right" 
+               local:TooltipEffect.HasTooltip="True">
+        </BoxView>
+        
+         <Image x:Name="btn3"
+                Source="target_1.png"
+                WidthRequest="100"
+                HeightRequest="100"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="End" 
+               local:TooltipEffect.Position="Left"
+               local:TooltipEffect.BackgroundColor="Green"
+               local:TooltipEffect.Text="Here is a sample text for this tool tip that can help us later, here is more text to showcase the tooltip left" 
+               local:TooltipEffect.HasTooltip="True"/>
+        
+         <Button x:Name="btn4"
+                 VerticalOptions="EndAndExpand"
+                  WidthRequest="150"
+                  BackgroundColor="LightBlue"
+                Text="Show Tooltip" 
+                HorizontalOptions="Center"  
+               local:TooltipEffect.Position="Top"
+                   local:TooltipEffect.BackgroundColor="Navy"
+               local:TooltipEffect.Text="Here is a sample text for this tool tip that can help us later, here is more text to showcase the tooltip top" 
+               local:TooltipEffect.HasTooltip="True">
+        </Button>
     </StackLayout>
 
 </ContentPage>
