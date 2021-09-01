@@ -22,6 +22,7 @@ namespace Xamarin.Forms
                 list.Add(new CheckedItem()
                 {
                     Text = itemsSource[i],
+                    MyImageSource = ImageSource.FromFile("Zdrojak.jpeg"),
                     IsChecked = false,
                     Position = i
                 });
@@ -59,5 +60,6 @@ namespace Xamarin.Forms
         public int Position { get; set; }
         public bool IsChecked { get; set; }
         public string Text { get; set; }
+        public ImageSource MyImageSource { get; set; }
     }
 }

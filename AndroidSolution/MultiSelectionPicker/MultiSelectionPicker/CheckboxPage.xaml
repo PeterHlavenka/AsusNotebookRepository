@@ -17,6 +17,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <Label Text="{Binding Text}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                                <Image Source="{Binding MyImageSource}"></Image>
                                 <CheckBox IsChecked="{Binding IsChecked}" HorizontalOptions="EndAndExpand" Color="Black"/>
                             </StackLayout>
                         </ViewCell>
