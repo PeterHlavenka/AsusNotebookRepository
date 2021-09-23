@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DroidMatika.MainPage"
+             x:Name="ContentPageIdentifier">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="120" />
+            <Setter Property="VerticalOptions" Value="Start" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="120" />
+            <Setter Property="VerticalOptions" Value="Start" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,100,0,0">
+        <!-- Place new controls here -->
+        <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" />
+        <Label x:Name="Operator" HorizontalTextAlignment="Center" />
+        <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" />
+        <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" />
+        <Entry x:Name="UserResultLabel" 
+               Text="{Binding UserResult, Source={x:Reference ContentPageIdentifier}}"
+               Keyboard="Numeric"  
+               Completed="UserResultLabel_OnCompleted"
+               TextChanged="UserResultLabel_OnTextChanged"
+               WidthRequest="300" 
+               HorizontalTextAlignment="Start" 
+               VerticalTextAlignment="Start" />
+    </StackLayout>
+
+</ContentPage>
