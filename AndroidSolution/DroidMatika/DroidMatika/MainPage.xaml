@@ -7,12 +7,12 @@
     <ContentPage.Resources>
         <Style TargetType="Label">
             <Setter Property="TextColor" Value="Black" />
-            <Setter Property="FontSize" Value="120" />
+            <Setter Property="FontSize" Value="50" />
             <Setter Property="VerticalOptions" Value="Start" />
         </Style>
         <Style TargetType="Entry">
             <Setter Property="TextColor" Value="Black" />
-            <Setter Property="FontSize" Value="120" />
+            <Setter Property="FontSize" Value="50" />
             <Setter Property="VerticalOptions" Value="Start" />
             <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
@@ -29,7 +29,7 @@
                Keyboard="Numeric"  
                Completed="UserResultLabel_OnCompleted"
                TextChanged="UserResultLabel_OnTextChanged"
-               WidthRequest="300" 
+               WidthRequest="100" 
                HorizontalTextAlignment="Start" 
                VerticalTextAlignment="Start" />
     </StackLayout>
