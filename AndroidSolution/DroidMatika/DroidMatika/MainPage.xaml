@@ -17,21 +17,53 @@
             <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
     </ContentPage.Resources>
+    <SwipeView >
+        <SwipeView.LeftItems>
+            <SwipeItems>
+                <SwipeItemView>
+                    <Grid>
+                        <BoxView BackgroundColor="#A1A1A1" Opacity="0.2" />
+                        <StackLayout Spacing="20" Padding="30" WidthRequest="250"
+                                     BindableLayout.ItemsSource="{Binding Menu, Source={x:Reference ContentPageIdentifier}}"
+                                     VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                        </StackLayout.GestureRecognizers>
+                                        <Image Source="{Binding Icon}" HeightRequest="45" WidthRequest="45"
+                                               VerticalOptions="Center" HorizontalOptions="Center" />
+                                        <Label Text="{Binding Name}" FontSize="25" />
+                                        <CheckBox IsChecked="{Binding IsChecked}" WidthRequest="60" HeightRequest="60" BackgroundColor="White" HorizontalOptions="Center" Color="Black"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                    </Grid>
 
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,100,0,0">
-        <!-- Place new controls here -->
-        <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" />
-        <Label x:Name="Operator" HorizontalTextAlignment="Center" />
-        <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" />
-        <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" />
-        <Entry x:Name="UserResultLabel" 
-               Text="{Binding UserResult, Source={x:Reference ContentPageIdentifier}}"
-               Keyboard="Numeric"  
-               Completed="UserResultLabel_OnCompleted"
-               TextChanged="UserResultLabel_OnTextChanged"
-               WidthRequest="100" 
-               HorizontalTextAlignment="Start" 
-               VerticalTextAlignment="Start" />
-    </StackLayout>
+                </SwipeItemView>
+            </SwipeItems>
+        </SwipeView.LeftItems>
+        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="White"
+              WidthRequest="1000" HeightRequest="1000">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,100,0,0">
+                <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" />
+                <Label x:Name="Operator" HorizontalTextAlignment="Center" />
+                <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" />
+                <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" />
+                <Entry x:Name="UserResultLabel"
+                       Text="{Binding UserResult, Source={x:Reference ContentPageIdentifier}}"
+                       Keyboard="Numeric"
+                       Completed="UserResultLabel_OnCompleted"
+                       TextChanged="UserResultLabel_OnTextChanged"
+                       WidthRequest="100"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start" />
+            </StackLayout>
+        </Grid>
+
+    </SwipeView>
+
 
 </ContentPage>

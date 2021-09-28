@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -8,6 +9,8 @@ namespace DroidMatika
 {
     public partial class MainPage : ContentPage
     {
+        private List<MenuItem> m_menu;
+
         public MainPage()
         {
             InitializeComponent();
@@ -15,8 +18,24 @@ namespace DroidMatika
             Equals.Text = " = ";
             Generate();
             UserResultLabel.Focus();
+            CreateMenuItems();
         }
-        
+
+        public List<MenuItem> Menu
+        {
+            get => m_menu;
+            set
+            {
+                m_menu = value; 
+                OnPropertyChanged();
+            }
+        }
+
+        private void CreateMenuItems()
+        {
+            Menu = new List<MenuItem>() {new MenuItem("target_1.png", "target1"), new MenuItem("target_1.png", "target2")};
+        }
+
         public double UserResult { get; set; }
 
         private ExampleBase CurrentExample { get; set; }
@@ -66,6 +85,11 @@ namespace DroidMatika
             {
                 UserResultLabel.TextColor = Color.Black;
             }
+        }
+
+        private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -132,5 +156,19 @@ namespace DroidMatika
             Result = FirstNumber * SecondNumber;
             Operator = " . ";
         }
+    }
+
+    public class MenuItem
+    {
+        public MenuItem(string icon, string name, bool isChecked = false)
+        {
+            Icon = icon;
+            Name = name;
+            IsChecked = isChecked;
+        }
+        
+        public string Icon { get; set; }
+        public string Name { get; set; } 
+        public bool IsChecked { get; set; }
     }
 }
