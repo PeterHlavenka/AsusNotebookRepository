@@ -1,62 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace DroidMatika
 {
-    public partial class MainPage : ContentPage
+    public sealed partial class MainPage : ContentPage
     {
-        private List<MenuItem> m_menu;
-
         public MainPage()
         {
             InitializeComponent();
-            
             Equals.Text = " = ";
+
+            Menu = new List<MenuItem>
+            {
+                new MenuItem(Strings.Addition, ()=> new SumExample()),
+                new MenuItem(Strings.Subtraction, ()=> new DiffExample()),
+                new MenuItem(Strings.Multiplication, ()=> new ProductExample()),
+                new MenuItem(Strings.Division, ()=> new DivideExample())
+            };
+            OnPropertyChanged(nameof(Menu));
+            
             Generate();
             UserResultLabel.Focus();
-            CreateMenuItems();
         }
 
-        public List<MenuItem> Menu
-        {
-            get => m_menu;
-            set
-            {
-                m_menu = value; 
-                OnPropertyChanged();
-            }
-        }
-
-        private void CreateMenuItems()
-        {
-            Menu = new List<MenuItem>() {new MenuItem("target_1.png", "target1"), new MenuItem("target_1.png", "target2")};
-        }
-
+        public List<MenuItem> Menu { get; set; } 
         public double UserResult { get; set; }
-
         private ExampleBase CurrentExample { get; set; }
+        private List<MenuItem> AllowedOperations { get; set; } = new List<MenuItem>();
+        public int SuccessCount { get; set; }
+        public int FailedCount { get; set; }
 
         private void Generate()
         {
             UserResultLabel.TextColor = Color.Black;
+            
+            // Beru jen checknute operace
+            AllowedOperations = Menu.Any(d => d.IsChecked) ? Menu.Where(d => d.IsChecked).ToList() : Menu.Select(d => d).ToList();
+            
+            var randomInt = new Random().Next(0, AllowedOperations.Count);
+            CurrentExample = AllowedOperations.ElementAt(randomInt).GetExample();
 
-            var randomInt = new Random().Next(2, 4);
-            switch (randomInt)
-            {
-                case 1: CurrentExample = new DiffExample();
-                    break;
-                case 2: CurrentExample = new DivideExample();
-                    break;
-                case 3: CurrentExample = new ProductExample();
-                    break;
-                case 4: CurrentExample = new SumExample();
-                    break;
-            }
-           
             Operator.Text = CurrentExample.Operator;
 
             FirstNumber.Text = CurrentExample.FirstNumber.ToString();
@@ -66,109 +51,58 @@ namespace DroidMatika
             UserResultLabel.Focus();
         }
 
+        // Potvrzeni vysledku uzivatelem, validace
         private void UserResultLabel_OnCompleted(object sender, EventArgs e)
         {
             if (decimal.TryParse(UserResultLabel.Text, out var userResult))
             {
                 if (userResult == CurrentExample.Result)
+                {
+                    SuccessCount++;
+                    CountLabel.TextColor = Color.Green;
+                    CountLabel.Text = SuccessCount.ToString();
                     Generate();
+                }
                 else
+                {
+                    FailedCount++;
+                    CountLabel.TextColor = Color.Red;
+                    CountLabel.Text = FailedCount.ToString();
                     UserResultLabel.TextColor = Color.Red;
+                }
             }
 
             UserResultLabel.Focus();
         }
 
+        // Setnuti barvy pisma na cernou po vymazani textu
         private void UserResultLabel_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(UserResultLabel.Text))
+            if (string.IsNullOrWhiteSpace(UserResultLabel.Text)) UserResultLabel.TextColor = Color.Black;
+        }
+
+        // Tapnuti na MenuItem
+        private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            if (sender is StackLayout stackLayout)
             {
-                UserResultLabel.TextColor = Color.Black;
+                var checkBox = (CheckBox) stackLayout.Children.First(d => d.GetType().IsAssignableFrom(typeof(CheckBox)));
+
+                checkBox.IsChecked = !checkBox.IsChecked;
             }
         }
 
-        private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        // Po checknuti moznosti ve swipeView pregeneruj priklad
+        private void CheckBox_OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            Generate();
         }
-    }
 
-    public class ExampleBase
-    {
-        public int FirstNumber { get; set; }
-        public int SecondNumber { get; set; }
-        public decimal Result { get; set; }
-        public string Operator { get; set; }
-
-        protected int CreateNumber(int minValue, int maxValue)
+        // Po zavreni swipeView focusni at mame keyboard
+        private void TapGestureRecognizer_OnGridTapped(object sender, EventArgs e)
         {
-            return new Random().Next(minValue, maxValue);
+            UserResultLabel.Unfocus();
+            UserResultLabel.Focus();
         }
-    }
-
-    public class DivideExample : ExampleBase
-    {
-        public DivideExample()
-        {
-            var first = CreateNumber(1, 10);
-            var second = CreateNumber(5, 10);
-            var result = first * second;
-
-            // otoceni at tam nejsou desetinna mista
-            FirstNumber = result;
-            SecondNumber = first;
-            Result = second;
-            Operator = " : ";
-        }
-    }
-
-    public class SumExample : ExampleBase
-    {
-        public SumExample()
-        {
-            FirstNumber = CreateNumber(5, 10);
-            SecondNumber = CreateNumber(5, 10);
-            Result = FirstNumber + SecondNumber;
-            Operator = " + ";
-        }
-    }
-
-    public class DiffExample : ExampleBase
-    {
-        public DiffExample()
-        {
-            var first = CreateNumber(5, 10);
-            var second = CreateNumber(5, 10);
-
-            FirstNumber = Math.Max(first, second);
-            SecondNumber = Math.Min(first, second);
-            Result = FirstNumber - SecondNumber;
-            Operator = " - ";
-        }
-    }
-
-    public class ProductExample : ExampleBase
-    {
-        public ProductExample()
-        {
-            FirstNumber = CreateNumber(5, 10);
-            SecondNumber = CreateNumber(5, 10);
-            Result = FirstNumber * SecondNumber;
-            Operator = " . ";
-        }
-    }
-
-    public class MenuItem
-    {
-        public MenuItem(string icon, string name, bool isChecked = false)
-        {
-            Icon = icon;
-            Name = name;
-            IsChecked = isChecked;
-        }
-        
-        public string Icon { get; set; }
-        public string Name { get; set; } 
-        public bool IsChecked { get; set; }
     }
 }

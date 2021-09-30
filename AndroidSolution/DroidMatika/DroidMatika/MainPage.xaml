@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gui="clr-namespace:DroidMatika;assembly=DroidMatika"
              x:Class="DroidMatika.MainPage"
              x:Name="ContentPageIdentifier">
     <ContentPage.Resources>
@@ -17,26 +18,36 @@
             <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
     </ContentPage.Resources>
-    <SwipeView >
+    <SwipeView>
         <SwipeView.LeftItems>
-            <SwipeItems>
+            <!-- // Disablovani zavreni swipeView kdyz user checkne checkBox -->
+            <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
                 <SwipeItemView>
                     <Grid>
-                        <BoxView BackgroundColor="#A1A1A1" Opacity="0.2" />
+                        <BoxView BackgroundColor="#A1A1A1" Opacity="0.1" />
                         <StackLayout Spacing="20" Padding="30" WidthRequest="250"
                                      BindableLayout.ItemsSource="{Binding Menu, Source={x:Reference ContentPageIdentifier}}"
                                      VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
-                                    <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
-                                        </StackLayout.GestureRecognizers>
-                                        <Image Source="{Binding Icon}" HeightRequest="45" WidthRequest="45"
-                                               VerticalOptions="Center" HorizontalOptions="Center" />
+                                        </Grid.GestureRecognizers>
                                         <Label Text="{Binding Name}" FontSize="25" />
-                                        <CheckBox IsChecked="{Binding IsChecked}" WidthRequest="60" HeightRequest="60" BackgroundColor="White" HorizontalOptions="Center" Color="Black"/>
-                                    </StackLayout>
+                                        <CheckBox Grid.Column="1"
+                                                  Margin="30,0,0,0"
+                                                  Scale="1.5"
+                                                  CheckedChanged="CheckBox_OnCheckedChanged"
+                                                  IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                  BackgroundColor="Transparent"
+                                                  HorizontalOptions="Center"
+                                                  Color="Green" />
+                                    </Grid>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
                         </StackLayout>
@@ -46,10 +57,18 @@
             </SwipeItems>
         </SwipeView.LeftItems>
         <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="White"
-              WidthRequest="1000" HeightRequest="1000">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,100,0,0">
+              WidthRequest="1000" HeightRequest="1000" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="240"/>
+            </Grid.RowDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnGridTapped"></TapGestureRecognizer>
+            </Grid.GestureRecognizers>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,120,0,0">
                 <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" />
-                <Label x:Name="Operator" HorizontalTextAlignment="Center" />
+                <Label x:Name="Operator" HorizontalTextAlignment="Center" Margin="0,3,0,0"  />
                 <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" />
                 <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" />
                 <Entry x:Name="UserResultLabel"
@@ -60,6 +79,10 @@
                        WidthRequest="100"
                        HorizontalTextAlignment="Start"
                        VerticalTextAlignment="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Grid.Row="1" BackgroundColor="Aquamarine">
+                <Label FontSize="25" FontFamily="Bold" Text="{x:Static gui:Strings.Count}" Margin="5,0"/>
+                <Label FontSize="25" FontFamily="Bold" x:Name="CountLabel"/>
             </StackLayout>
         </Grid>
 

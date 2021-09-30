@@ -1,0 +1,29 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Division" xml:space="preserve">
+        <value>Dělení</value>
+    </data>
+    <data name="Multiplication" xml:space="preserve">
+        <value>Násobení</value>
+    </data>
+    <data name="Addition" xml:space="preserve">
+        <value>Sčítání</value>
+    </data>
+    <data name="Subtraction" xml:space="preserve">
+        <value>Odčítání</value>
+    </data>
+    <data name="Count" xml:space="preserve">
+        <value>Počet :</value>
+    </data>
+</root>
