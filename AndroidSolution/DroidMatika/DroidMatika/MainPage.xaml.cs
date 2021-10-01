@@ -11,21 +11,34 @@ namespace DroidMatika
         {
             InitializeComponent();
             Equals.Text = " = ";
+            WhiteImg.Source = "white.jpg";
+            
+            OnPropertyChanged(nameof(MySlider));
 
-            Menu = new List<MenuItem>
+            OperationMenu = new List<MenuItem>
             {
                 new MenuItem(Strings.Addition, ()=> new SumExample()),
                 new MenuItem(Strings.Subtraction, ()=> new DiffExample()),
                 new MenuItem(Strings.Multiplication, ()=> new ProductExample()),
                 new MenuItem(Strings.Division, ()=> new DivideExample())
             };
-            OnPropertyChanged(nameof(Menu));
+            
+            AllowingMenu = new List<MenuItem>
+            {
+                new MenuItem(Strings.DecimalNumbers),
+                new MenuItem(Strings.NegativeNumbers),
+            };
+            
+            OnPropertyChanged(nameof(OperationMenu));
+            OnPropertyChanged(nameof(AllowingMenu));
             
             Generate();
             UserResultLabel.Focus();
         }
 
-        public List<MenuItem> Menu { get; set; } 
+        public Slider MySlider { get; set; }
+        public List<MenuItem> OperationMenu { get; set; } 
+        public List<MenuItem> AllowingMenu { get; set; } 
         public double UserResult { get; set; }
         private ExampleBase CurrentExample { get; set; }
         private List<MenuItem> AllowedOperations { get; set; } = new List<MenuItem>();
@@ -37,7 +50,7 @@ namespace DroidMatika
             UserResultLabel.TextColor = Color.Black;
             
             // Beru jen checknute operace
-            AllowedOperations = Menu.Any(d => d.IsChecked) ? Menu.Where(d => d.IsChecked).ToList() : Menu.Select(d => d).ToList();
+            AllowedOperations = OperationMenu.Any(d => d.IsChecked) ? OperationMenu.Where(d => d.IsChecked).ToList() : OperationMenu.Select(d => d).ToList();
             
             var randomInt = new Random().Next(0, AllowedOperations.Count);
             CurrentExample = AllowedOperations.ElementAt(randomInt).GetExample();
@@ -48,7 +61,6 @@ namespace DroidMatika
             SecondNumber.Text = CurrentExample.SecondNumber.ToString();
 
             UserResultLabel.Text = string.Empty;
-            UserResultLabel.Focus();
         }
 
         // Potvrzeni vysledku uzivatelem, validace
@@ -101,8 +113,13 @@ namespace DroidMatika
         // Po zavreni swipeView focusni at mame keyboard
         private void TapGestureRecognizer_OnGridTapped(object sender, EventArgs e)
         {
-            UserResultLabel.Unfocus();
             UserResultLabel.Focus();
+        }
+
+        // Pri otevirani swipeView chceme sundat klavesnici
+        private void SwipeView_OnSwipeStarted(object sender, SwipeStartedEventArgs e)
+        {
+            UserResultLabel.Unfocus();
         }
     }
 }

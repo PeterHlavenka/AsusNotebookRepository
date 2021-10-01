@@ -79,6 +79,15 @@ namespace DroidMatika {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decimal.
+        /// </summary>
+        internal static string DecimalNumbers {
+            get {
+                return ResourceManager.GetString("DecimalNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Division.
         /// </summary>
         internal static string Division {
@@ -93,6 +102,15 @@ namespace DroidMatika {
         internal static string Multiplication {
             get {
                 return ResourceManager.GetString("Multiplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Negative.
+        /// </summary>
+        internal static string NegativeNumbers {
+            get {
+                return ResourceManager.GetString("NegativeNumbers", resourceCulture);
             }
         }
         

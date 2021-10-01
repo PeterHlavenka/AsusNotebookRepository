@@ -26,4 +26,10 @@
     <data name="Count" xml:space="preserve">
         <value>Počet :</value>
     </data>
+    <data name="NegativeNumbers" xml:space="preserve">
+        <value>Záporná</value>
+    </data>
+    <data name="DecimalNumbers" xml:space="preserve">
+        <value>Desetinná</value>
+    </data>
 </root>

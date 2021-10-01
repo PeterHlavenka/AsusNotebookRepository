@@ -4,7 +4,7 @@ namespace DroidMatika
 {
     public class MenuItem
     {
-        public MenuItem(string name, Func<ExampleBase> getExample, bool isChecked = false)
+        public MenuItem(string name, Func<ExampleBase> getExample = null, bool isChecked = false)
         {
             Name = name;
             GetExampleFunc = getExample;
