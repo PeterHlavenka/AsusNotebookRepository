@@ -1,10 +1,9 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace DroidMatika.Android
 {
@@ -13,6 +12,9 @@ namespace DroidMatika.Android
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("c4fb34f4-4d8f-4720-93d3-4c05956464dd",
+                typeof(Analytics), typeof(Crashes));
+            
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

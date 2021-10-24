@@ -5,13 +5,13 @@ using Xamarin.Forms;
 
 namespace DroidMatika
 {
-    public sealed partial class MainPage : ContentPage
+    public sealed partial class MainPage
     {
         public MainPage()
         {
             InitializeComponent();
             Equals.Text = " = ";
-            WhiteImg.Source = "white.jpg";
+            //WhiteImg.Source = "white.jpg";
             
             OnPropertyChanged(nameof(MySlider));
 
