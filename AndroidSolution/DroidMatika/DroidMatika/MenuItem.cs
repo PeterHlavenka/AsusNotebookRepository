@@ -4,7 +4,9 @@ namespace DroidMatika
 {
     public class MenuItem
     {
-        public MenuItem(string name, Func<ExampleBase> getExample = null, bool isChecked = false)
+        private int m_difficulty;
+
+        public MenuItem(string name, Func<int, ExampleBase> getExample = null, bool isChecked = false)
         {
             Name = name;
             GetExampleFunc = getExample;
@@ -12,12 +14,18 @@ namespace DroidMatika
         }
 
         public string Name { get; }
-        private Func<ExampleBase> GetExampleFunc { get; }
+        private Func<int, ExampleBase> GetExampleFunc { get; }
         public bool IsChecked { get; set; }
 
+        public void SetDifficulty(int difficulty)
+        {
+            m_difficulty = difficulty;
+        }
+        
+        
         public ExampleBase GetExample()
         {
-            return GetExampleFunc.Invoke();
+            return GetExampleFunc.Invoke(m_difficulty);
         }
     }
 }

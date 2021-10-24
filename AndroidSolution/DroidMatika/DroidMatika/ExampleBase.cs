@@ -17,7 +17,7 @@ namespace DroidMatika
 
     public class DivideExample : ExampleBase
     {
-        public DivideExample()
+        public DivideExample(int difficulty)
         {
             var first = CreateNumber(1, 10);
             var second = CreateNumber(5, 10);
@@ -33,7 +33,7 @@ namespace DroidMatika
 
     public class SumExample : ExampleBase
     {
-        public SumExample()
+        public SumExample(int difficulty)
         {
             FirstNumber = CreateNumber(5, 10);
             SecondNumber = CreateNumber(5, 10);
@@ -44,7 +44,7 @@ namespace DroidMatika
 
     public class DiffExample : ExampleBase
     {
-        public DiffExample()
+        public DiffExample(int difficulty)
         {
             var first = CreateNumber(5, 10);
             var second = CreateNumber(5, 10);
@@ -58,7 +58,7 @@ namespace DroidMatika
 
     public class ProductExample : ExampleBase
     {
-        public ProductExample()
+        public ProductExample(int difficulty)
         {
             FirstNumber = CreateNumber(5, 10);
             SecondNumber = CreateNumber(5, 10);

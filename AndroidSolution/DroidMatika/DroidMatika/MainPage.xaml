@@ -90,9 +90,10 @@
 
                     <!-- Slider -->
                     <gui:CustomSlider HeightRequest="50" x:Name="CustomSlider" Scale="1.8" Grid.Row="2" Margin="70,0"
-                                      HorizontalOptions="StartAndExpand" WidthRequest="280" />
+                                      HorizontalOptions="StartAndExpand" WidthRequest="280"
+                                      PropertyChanged="CustomSlider_OnPropertyChanged"/>
                     <Frame Grid.Row="3" HorizontalOptions="Center" BackgroundColor="Transparent">
-                        <Label BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="1000" 
+                        <Label BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="1000"
                                Text="{Binding Value, Source={x:Reference CustomSlider}}" />
                     </Frame>
                 </Grid>

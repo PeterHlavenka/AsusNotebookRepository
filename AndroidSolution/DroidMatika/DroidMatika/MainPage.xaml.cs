@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Xamarin.Forms;
 
@@ -12,15 +13,13 @@ namespace DroidMatika
             InitializeComponent();
             Equals.Text = " = ";
             //WhiteImg.Source = "white.jpg";
-            
-            OnPropertyChanged(nameof(MySlider));
 
             OperationMenu = new List<MenuItem>
             {
-                new MenuItem(Strings.Addition, ()=> new SumExample()),
-                new MenuItem(Strings.Subtraction, ()=> new DiffExample()),
-                new MenuItem(Strings.Multiplication, ()=> new ProductExample()),
-                new MenuItem(Strings.Division, ()=> new DivideExample())
+                new MenuItem(Strings.Addition,  (d)=> new SumExample(d)),
+                new MenuItem(Strings.Subtraction, (d)=> new DiffExample(d)),
+                new MenuItem(Strings.Multiplication, (d)=> new ProductExample(d)),
+                new MenuItem(Strings.Division, (d)=> new DivideExample(d))
             };
             
             AllowingMenu = new List<MenuItem>
@@ -36,7 +35,6 @@ namespace DroidMatika
             UserResultLabel.Focus();
         }
 
-        public Slider MySlider { get; set; }
         public List<MenuItem> OperationMenu { get; set; } 
         public List<MenuItem> AllowingMenu { get; set; } 
         public double UserResult { get; set; }
@@ -45,13 +43,14 @@ namespace DroidMatika
         public int SuccessCount { get; set; }
         public int FailedCount { get; set; }
 
+
         private void Generate()
         {
             UserResultLabel.TextColor = Color.Black;
             
             // Beru jen checknute operace
             AllowedOperations = OperationMenu.Any(d => d.IsChecked) ? OperationMenu.Where(d => d.IsChecked).ToList() : OperationMenu.Select(d => d).ToList();
-            
+
             var randomInt = new Random().Next(0, AllowedOperations.Count);
             CurrentExample = AllowedOperations.ElementAt(randomInt).GetExample();
 
@@ -120,6 +119,15 @@ namespace DroidMatika
         private void SwipeView_OnSwipeStarted(object sender, SwipeStartedEventArgs e)
         {
             UserResultLabel.Unfocus();
+        }
+
+        // Zmena obtiznosti
+        private void CustomSlider_OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (sender is CustomSlider slider)
+            {
+                OperationMenu?.ForEach(d => d.SetDifficulty((int)slider.Value));
+            }
         }
     }
 }
