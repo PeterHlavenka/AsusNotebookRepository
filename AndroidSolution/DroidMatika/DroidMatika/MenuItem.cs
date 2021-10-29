@@ -11,6 +11,7 @@ namespace DroidMatika
             Name = name;
             GetExampleFunc = getExample;
             IsChecked = isChecked;
+            m_difficulty = 1;
         }
 
         public string Name { get; }

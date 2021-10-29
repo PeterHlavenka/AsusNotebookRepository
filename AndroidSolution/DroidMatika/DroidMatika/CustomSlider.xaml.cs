@@ -18,6 +18,7 @@ namespace DroidMatika
             set
             {
                 m_value = value;
+                Slider.Value = value;
                 OnPropertyChanged();
             }
         }
@@ -27,7 +28,7 @@ namespace DroidMatika
             InitializeComponent();
             
             Slider.Maximum = 10;
-            Slider.Minimum = 0;
+            Slider.Minimum = 1;
             
             CreateSteps(0, 10, 1);
         }
@@ -43,6 +44,7 @@ namespace DroidMatika
 
             if (Steps.Any(d => d == value))
             {
+                Value = Slider.Value;
                 return;
             }
 

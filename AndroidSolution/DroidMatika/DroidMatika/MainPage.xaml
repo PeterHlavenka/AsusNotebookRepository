@@ -28,9 +28,10 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    
+
                     <!--<Image Grid.RowSpan="4" x:Name="WhiteImg" VerticalOptions="FillAndExpand" Aspect="Fill" />-->
                     <!-- Operace -->
                     <StackLayout Grid.Row="0" Spacing="20" Padding="30"
@@ -91,9 +92,12 @@
                     <!-- Slider -->
                     <gui:CustomSlider HeightRequest="50" x:Name="CustomSlider" Scale="1.8" Grid.Row="2" Margin="70,0"
                                       HorizontalOptions="StartAndExpand" WidthRequest="280"
-                                      PropertyChanged="CustomSlider_OnPropertyChanged"/>
-                    <Frame Grid.Row="3" HorizontalOptions="Center" BackgroundColor="Transparent">
-                        <Label BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="1000"
+                                      PropertyChanged="CustomSlider_OnPropertyChanged" />
+                    
+                    <Frame Grid.Row="3" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center"
+                           BorderColor="Black" BackgroundColor="Transparent" CornerRadius="33" >
+                        <Label BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="-25"
+                               HorizontalOptions="Center" VerticalOptions="Center"
                                Text="{Binding Value, Source={x:Reference CustomSlider}}" />
                     </Frame>
                 </Grid>

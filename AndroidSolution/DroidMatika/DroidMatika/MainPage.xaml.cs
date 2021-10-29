@@ -14,6 +14,8 @@ namespace DroidMatika
             Equals.Text = " = ";
             //WhiteImg.Source = "white.jpg";
 
+            CustomSlider.Value = 5;
+
             OperationMenu = new List<MenuItem>
             {
                 new MenuItem(Strings.Addition,  (d)=> new SumExample(d)),
@@ -119,14 +121,16 @@ namespace DroidMatika
         private void SwipeView_OnSwipeStarted(object sender, SwipeStartedEventArgs e)
         {
             UserResultLabel.Unfocus();
+            ContentPageIdentifier.Focus();
         }
 
         // Zmena obtiznosti
         private void CustomSlider_OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (sender is CustomSlider slider)
+            if (sender is CustomSlider slider && OperationMenu != null)
             {
-                OperationMenu?.ForEach(d => d.SetDifficulty((int)slider.Value));
+                OperationMenu.ForEach(d => d.SetDifficulty((int)slider.Value));
+                Generate();
             }
         }
     }

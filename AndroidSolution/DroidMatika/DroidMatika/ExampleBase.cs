@@ -11,32 +11,18 @@ namespace DroidMatika
 
         protected int CreateNumber(int minValue, int maxValue)
         {
-            return new Random().Next(minValue, maxValue);
+            return new Random().Next(minValue, maxValue + 1);
         }
     }
 
-    public class DivideExample : ExampleBase
-    {
-        public DivideExample(int difficulty)
-        {
-            var first = CreateNumber(1, 10);
-            var second = CreateNumber(5, 10);
-            var result = first * second;
 
-            // otoceni at tam nejsou desetinna mista
-            FirstNumber = result;
-            SecondNumber = first;
-            Result = second;
-            Operator = " : ";
-        }
-    }
 
     public class SumExample : ExampleBase
     {
         public SumExample(int difficulty)
         {
-            FirstNumber = CreateNumber(5, 10);
-            SecondNumber = CreateNumber(5, 10);
+            FirstNumber = CreateNumber(1, difficulty);
+            SecondNumber = CreateNumber(1, difficulty);
             Result = FirstNumber + SecondNumber;
             Operator = " + ";
         }
@@ -46,8 +32,8 @@ namespace DroidMatika
     {
         public DiffExample(int difficulty)
         {
-            var first = CreateNumber(5, 10);
-            var second = CreateNumber(5, 10);
+            var first = CreateNumber(1, difficulty);
+            var second = CreateNumber(1, difficulty);
 
             FirstNumber = Math.Max(first, second);
             SecondNumber = Math.Min(first, second);
@@ -60,10 +46,26 @@ namespace DroidMatika
     {
         public ProductExample(int difficulty)
         {
-            FirstNumber = CreateNumber(5, 10);
-            SecondNumber = CreateNumber(5, 10);
+            FirstNumber = CreateNumber(1, difficulty);
+            SecondNumber = CreateNumber(0, 10);
             Result = FirstNumber * SecondNumber;
             Operator = " . ";
+        }
+    }
+    
+    public class DivideExample : ExampleBase
+    {
+        public DivideExample(int difficulty)
+        {
+            var first = CreateNumber(1, difficulty);
+            var second = CreateNumber(1, 10);
+            var result = first * second;
+
+            // otoceni at tam nejsou desetinna mista
+            FirstNumber = result;
+            SecondNumber = first;
+            Result = second;
+            Operator = " : ";
         }
     }
 }
