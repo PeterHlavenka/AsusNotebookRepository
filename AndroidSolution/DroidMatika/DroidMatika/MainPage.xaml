@@ -3,11 +3,17 @@
 <FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:gui="clr-namespace:DroidMatika;assembly=DroidMatika"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
             x:Class="DroidMatika.MainPage"
             Title="Title"
             x:Name="ContentPageIdentifier">
     <FlyoutPage.Resources>
         <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="23" />
+            <Setter Property="VerticalOptions" Value="Start" />
+        </Style>
+        <Style x:Key="ExampleStyle" TargetType="Label">
             <Setter Property="TextColor" Value="Black" />
             <Setter Property="FontSize" Value="50" />
             <Setter Property="VerticalOptions" Value="Start" />
@@ -27,9 +33,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
                     <!--<Image Grid.RowSpan="4" x:Name="WhiteImg" VerticalOptions="FillAndExpand" Aspect="Fill" />-->
@@ -47,7 +53,7 @@
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
                                     </Grid.GestureRecognizers>
-                                    <Label Text="{Binding Name}" FontSize="25" />
+                                    <Label Text="{Binding Name}"/>
                                     <CheckBox Grid.Column="1"
                                               Margin="30,0,0,0"
                                               Scale="1.5"
@@ -75,7 +81,7 @@
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
                                     </Grid.GestureRecognizers>
-                                    <Label Text="{Binding Name}" FontSize="25" />
+                                    <Label Text="{Binding Name}" />
                                     <CheckBox Grid.Column="1"
                                               Margin="30,0,0,0"
                                               Scale="1.5"
@@ -90,16 +96,38 @@
                     </StackLayout>
 
                     <!-- Slider -->
-                    <gui:CustomSlider HeightRequest="50" x:Name="CustomSlider" Scale="1.8" Grid.Row="2" Margin="70,0"
-                                      HorizontalOptions="StartAndExpand" WidthRequest="280"
-                                      PropertyChanged="CustomSlider_OnPropertyChanged" />
-                    
-                    <Frame Grid.Row="3" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center"
-                           BorderColor="Black" BackgroundColor="Transparent" CornerRadius="33" >
-                        <Label BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="-25"
-                               HorizontalOptions="Center" VerticalOptions="Center"
-                               Text="{Binding Value, Source={x:Reference CustomSlider}}" />
-                    </Frame>
+                    <StackLayout Grid.Row="2">
+                        <Grid>
+                            <Label BackgroundColor="LightGray" HeightRequest="45" Opacity="0.5" />
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" Margin="0,-3,0,0"
+                                   Text="{xct:Translate Difficulty}" VerticalTextAlignment="Center"/>
+                        </Grid>
+
+                        <gui:CustomSlider HeightRequest="50" x:Name="CustomSlider" Scale="1.8" Margin="70,0"
+                                          HorizontalOptions="StartAndExpand" WidthRequest="280"
+                                          PropertyChanged="CustomSlider_OnPropertyChanged" />
+
+                        <Grid>
+                            <Frame Margin="0,-10,0,0" HeightRequest="12" WidthRequest="12" HorizontalOptions="Center"
+                                   BorderColor="Black" BackgroundColor="Transparent" CornerRadius="50" />
+                            <Label BackgroundColor="Transparent" HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Start" Margin="0,-13,0,0"
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                   Text="{Binding Value, Source={x:Reference CustomSlider}}" />
+                        </Grid>
+
+                    </StackLayout>
+
+                    <!-- Nastaveni jazyka -->
+                    <Line Grid.Row="3" VerticalOptions="End" WidthRequest="1000" HeightRequest="1" BackgroundColor="Black"></Line>
+                    <StackLayout  Grid.Row="4" Orientation="Horizontal" VerticalOptions="End">
+                        <Image  Source="Planet.png" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="30" WidthRequest="30" Margin="20,13,10,20"/>
+                        <Label  Text="{xct:Translate Language}" VerticalTextAlignment="Start" Margin="0,15,0,0"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LanguageButtonTapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
                 </Grid>
             </ContentPage.Content>
 
@@ -119,11 +147,16 @@
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_OnGridTapped" />
                     </Grid.GestureRecognizers>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,120,0,0">
-                        <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" />
-                        <Label x:Name="Operator" HorizontalTextAlignment="Center" Margin="0,3,0,0" />
-                        <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" />
-                        <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" />
+
+                    <ImageButton Source="hamburgerMenu.png" HorizontalOptions="Start" VerticalOptions="Start"
+                                 HeightRequest="30" WidthRequest="40"
+                                 Margin="20" BackgroundColor="Transparent" Clicked="ImageButton_OnClicked" />
+
+                    <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,120,0,0">
+                        <Label x:Name="FirstNumber" HorizontalTextAlignment="End" Margin="0,7,0,0" Style="{StaticResource ExampleStyle}"/>
+                        <Label x:Name="Operator" HorizontalTextAlignment="Center" Margin="0,3,0,0" Style="{StaticResource ExampleStyle}"/>
+                        <Label x:Name="SecondNumber" HorizontalTextAlignment="Start" Margin="0,7,0,0" Style="{StaticResource ExampleStyle}"/>
+                        <Label x:Name="Equals" HorizontalTextAlignment="Center" Margin="0,7,0,0" Style="{StaticResource ExampleStyle}"/>
                         <Entry x:Name="UserResultLabel"
                                Text="{Binding UserResult, Source={x:Reference ContentPageIdentifier}}"
                                Keyboard="Numeric"
@@ -141,7 +174,7 @@
                            BorderColor="Black">
                         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"
                                      Orientation="Horizontal" Margin="0,-12,0,0">
-                            <Label FontSize="25" FontFamily="Bold" Text="{x:Static gui:Strings.Count}" Margin="5,0" />
+                            <Label FontSize="25" FontFamily="Bold" Text="{xct:Translate Count}" Margin="5,0" />
                             <Label FontSize="25" FontFamily="Bold" x:Name="CountLabel" />
                         </StackLayout>
                     </Frame>

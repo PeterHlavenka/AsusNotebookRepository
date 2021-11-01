@@ -1,6 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.CommunityToolkit.Helpers;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -12,6 +17,12 @@ namespace DroidMatika
         {
             InitializeComponent();
 
+            // LocalizationResourceManager.Current.PropertyChanged += (sender, args) =>
+            // {
+            //     Strings.Culture = LocalizationResourceManager.Current.CurrentCulture;
+            // };
+            LocalizationResourceManager.Current.Init(Strings.ResourceManager, new CultureInfo("cs-cz"));
+            
             MainPage = new MainPage();
         }
 

@@ -19,10 +19,10 @@ namespace DroidMatika
 
     public class SumExample : ExampleBase
     {
-        public SumExample(int difficulty)
+        public SumExample(ParamsSource paramsSource)
         {
-            FirstNumber = CreateNumber(1, difficulty);
-            SecondNumber = CreateNumber(1, difficulty);
+            FirstNumber = CreateNumber(1, paramsSource.Difficulty);
+            SecondNumber = CreateNumber(1, paramsSource.Difficulty);
             Result = FirstNumber + SecondNumber;
             Operator = " + ";
         }
@@ -30,13 +30,22 @@ namespace DroidMatika
 
     public class DiffExample : ExampleBase
     {
-        public DiffExample(int difficulty)
+        public DiffExample(ParamsSource paramsSource)
         {
-            var first = CreateNumber(1, difficulty);
-            var second = CreateNumber(1, difficulty);
+            var first = CreateNumber(1, paramsSource.Difficulty);
+            var second = CreateNumber(1, paramsSource.Difficulty);
 
-            FirstNumber = Math.Max(first, second);
-            SecondNumber = Math.Min(first, second);
+            if (paramsSource.NegativeNumbersAllowed)
+            {
+                FirstNumber = first;
+                SecondNumber = second;
+            }
+            else
+            {
+                FirstNumber = Math.Max(first, second);
+                SecondNumber = Math.Min(first, second);
+            }
+
             Result = FirstNumber - SecondNumber;
             Operator = " - ";
         }
@@ -44,9 +53,9 @@ namespace DroidMatika
 
     public class ProductExample : ExampleBase
     {
-        public ProductExample(int difficulty)
+        public ProductExample(ParamsSource paramsSource)
         {
-            FirstNumber = CreateNumber(1, difficulty);
+            FirstNumber = CreateNumber(1, paramsSource.Difficulty);
             SecondNumber = CreateNumber(0, 10);
             Result = FirstNumber * SecondNumber;
             Operator = " . ";
@@ -55,9 +64,9 @@ namespace DroidMatika
     
     public class DivideExample : ExampleBase
     {
-        public DivideExample(int difficulty)
+        public DivideExample(ParamsSource paramsSource)
         {
-            var first = CreateNumber(1, difficulty);
+            var first = CreateNumber(1, paramsSource.Difficulty);
             var second = CreateNumber(1, 10);
             var result = first * second;
 

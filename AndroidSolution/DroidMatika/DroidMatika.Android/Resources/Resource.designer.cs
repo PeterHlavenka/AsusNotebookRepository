@@ -25,6 +25,3462 @@ namespace DroidMatika.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_in = global::DroidMatika.Android.Resource.Animation.abc_fade_in;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_out = global::DroidMatika.Android.Resource.Animation.abc_fade_out;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_grow_fade_in_from_bottom = global::DroidMatika.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_popup_enter = global::DroidMatika.Android.Resource.Animation.abc_popup_enter;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_popup_exit = global::DroidMatika.Android.Resource.Animation.abc_popup_exit;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_shrink_fade_out_from_bottom = global::DroidMatika.Android.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_slide_in_bottom = global::DroidMatika.Android.Resource.Animation.abc_slide_in_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_slide_in_top = global::DroidMatika.Android.Resource.Animation.abc_slide_in_top;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_slide_out_bottom = global::DroidMatika.Android.Resource.Animation.abc_slide_out_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_slide_out_top = global::DroidMatika.Android.Resource.Animation.abc_slide_out_top;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_tooltip_enter = global::DroidMatika.Android.Resource.Animation.abc_tooltip_enter;
+			global::Xamarin.CommunityToolkit.Resource.Animation.abc_tooltip_exit = global::DroidMatika.Android.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::DroidMatika.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::DroidMatika.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::Xamarin.CommunityToolkit.Resource.Animation.design_bottom_sheet_slide_in = global::DroidMatika.Android.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Xamarin.CommunityToolkit.Resource.Animation.design_bottom_sheet_slide_out = global::DroidMatika.Android.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Xamarin.CommunityToolkit.Resource.Animation.design_snackbar_in = global::DroidMatika.Android.Resource.Animation.design_snackbar_in;
+			global::Xamarin.CommunityToolkit.Resource.Animation.design_snackbar_out = global::DroidMatika.Android.Resource.Animation.design_snackbar_out;
+			global::Xamarin.CommunityToolkit.Resource.Animation.EnterFromLeft = global::DroidMatika.Android.Resource.Animation.EnterFromLeft;
+			global::Xamarin.CommunityToolkit.Resource.Animation.EnterFromRight = global::DroidMatika.Android.Resource.Animation.EnterFromRight;
+			global::Xamarin.CommunityToolkit.Resource.Animation.ExitToLeft = global::DroidMatika.Android.Resource.Animation.ExitToLeft;
+			global::Xamarin.CommunityToolkit.Resource.Animation.ExitToRight = global::DroidMatika.Android.Resource.Animation.ExitToRight;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_close_enter = global::DroidMatika.Android.Resource.Animation.fragment_close_enter;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_close_exit = global::DroidMatika.Android.Resource.Animation.fragment_close_exit;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_fade_enter = global::DroidMatika.Android.Resource.Animation.fragment_fade_enter;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_fade_exit = global::DroidMatika.Android.Resource.Animation.fragment_fade_exit;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_fast_out_extra_slow_in = global::DroidMatika.Android.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_open_enter = global::DroidMatika.Android.Resource.Animation.fragment_open_enter;
+			global::Xamarin.CommunityToolkit.Resource.Animation.fragment_open_exit = global::DroidMatika.Android.Resource.Animation.fragment_open_exit;
+			global::Xamarin.CommunityToolkit.Resource.Animation.mtrl_bottom_sheet_slide_in = global::DroidMatika.Android.Resource.Animation.mtrl_bottom_sheet_slide_in;
+			global::Xamarin.CommunityToolkit.Resource.Animation.mtrl_bottom_sheet_slide_out = global::DroidMatika.Android.Resource.Animation.mtrl_bottom_sheet_slide_out;
+			global::Xamarin.CommunityToolkit.Resource.Animation.mtrl_card_lowers_interpolator = global::DroidMatika.Android.Resource.Animation.mtrl_card_lowers_interpolator;
+			global::Xamarin.CommunityToolkit.Resource.Animator.design_appbar_state_list_animator = global::DroidMatika.Android.Resource.Animator.design_appbar_state_list_animator;
+			global::Xamarin.CommunityToolkit.Resource.Animator.design_fab_hide_motion_spec = global::DroidMatika.Android.Resource.Animator.design_fab_hide_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.design_fab_show_motion_spec = global::DroidMatika.Android.Resource.Animator.design_fab_show_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_btn_state_list_anim = global::DroidMatika.Android.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::DroidMatika.Android.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_card_state_list_anim = global::DroidMatika.Android.Resource.Animator.mtrl_card_state_list_anim;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_chip_state_list_anim = global::DroidMatika.Android.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_extended_fab_change_size_motion_spec = global::DroidMatika.Android.Resource.Animator.mtrl_extended_fab_change_size_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_extended_fab_hide_motion_spec = global::DroidMatika.Android.Resource.Animator.mtrl_extended_fab_hide_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_extended_fab_show_motion_spec = global::DroidMatika.Android.Resource.Animator.mtrl_extended_fab_show_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_extended_fab_state_list_animator = global::DroidMatika.Android.Resource.Animator.mtrl_extended_fab_state_list_animator;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_fab_hide_motion_spec = global::DroidMatika.Android.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_fab_show_motion_spec = global::DroidMatika.Android.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::DroidMatika.Android.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Xamarin.CommunityToolkit.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::DroidMatika.Android.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarDivider = global::DroidMatika.Android.Resource.Attribute.actionBarDivider;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarItemBackground = global::DroidMatika.Android.Resource.Attribute.actionBarItemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarPopupTheme = global::DroidMatika.Android.Resource.Attribute.actionBarPopupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarSize = global::DroidMatika.Android.Resource.Attribute.actionBarSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarSplitStyle = global::DroidMatika.Android.Resource.Attribute.actionBarSplitStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarStyle = global::DroidMatika.Android.Resource.Attribute.actionBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarTabBarStyle = global::DroidMatika.Android.Resource.Attribute.actionBarTabBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarTabStyle = global::DroidMatika.Android.Resource.Attribute.actionBarTabStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarTabTextStyle = global::DroidMatika.Android.Resource.Attribute.actionBarTabTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarTheme = global::DroidMatika.Android.Resource.Attribute.actionBarTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionBarWidgetTheme = global::DroidMatika.Android.Resource.Attribute.actionBarWidgetTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionButtonStyle = global::DroidMatika.Android.Resource.Attribute.actionButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionDropDownStyle = global::DroidMatika.Android.Resource.Attribute.actionDropDownStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionLayout = global::DroidMatika.Android.Resource.Attribute.actionLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionMenuTextAppearance = global::DroidMatika.Android.Resource.Attribute.actionMenuTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionMenuTextColor = global::DroidMatika.Android.Resource.Attribute.actionMenuTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeBackground = global::DroidMatika.Android.Resource.Attribute.actionModeBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeCloseButtonStyle = global::DroidMatika.Android.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeCloseDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeCloseDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeCopyDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeCopyDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeCutDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeCutDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeFindDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeFindDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModePasteDrawable = global::DroidMatika.Android.Resource.Attribute.actionModePasteDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModePopupWindowStyle = global::DroidMatika.Android.Resource.Attribute.actionModePopupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeSelectAllDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeShareDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeShareDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeSplitBackground = global::DroidMatika.Android.Resource.Attribute.actionModeSplitBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeStyle = global::DroidMatika.Android.Resource.Attribute.actionModeStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionModeWebSearchDrawable = global::DroidMatika.Android.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionOverflowButtonStyle = global::DroidMatika.Android.Resource.Attribute.actionOverflowButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionOverflowMenuStyle = global::DroidMatika.Android.Resource.Attribute.actionOverflowMenuStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionProviderClass = global::DroidMatika.Android.Resource.Attribute.actionProviderClass;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionTextColorAlpha = global::DroidMatika.Android.Resource.Attribute.actionTextColorAlpha;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.actionViewClass = global::DroidMatika.Android.Resource.Attribute.actionViewClass;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.activityChooserViewStyle = global::DroidMatika.Android.Resource.Attribute.activityChooserViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alertDialogButtonGroupStyle = global::DroidMatika.Android.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alertDialogCenterButtons = global::DroidMatika.Android.Resource.Attribute.alertDialogCenterButtons;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alertDialogStyle = global::DroidMatika.Android.Resource.Attribute.alertDialogStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alertDialogTheme = global::DroidMatika.Android.Resource.Attribute.alertDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.allowStacking = global::DroidMatika.Android.Resource.Attribute.allowStacking;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alpha = global::DroidMatika.Android.Resource.Attribute.alpha;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.alphabeticModifiers = global::DroidMatika.Android.Resource.Attribute.alphabeticModifiers;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.animationMode = global::DroidMatika.Android.Resource.Attribute.animationMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.appBarLayoutStyle = global::DroidMatika.Android.Resource.Attribute.appBarLayoutStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.arrowHeadLength = global::DroidMatika.Android.Resource.Attribute.arrowHeadLength;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.arrowShaftLength = global::DroidMatika.Android.Resource.Attribute.arrowShaftLength;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoCompleteTextViewStyle = global::DroidMatika.Android.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoSizeMaxTextSize = global::DroidMatika.Android.Resource.Attribute.autoSizeMaxTextSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoSizeMinTextSize = global::DroidMatika.Android.Resource.Attribute.autoSizeMinTextSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoSizePresetSizes = global::DroidMatika.Android.Resource.Attribute.autoSizePresetSizes;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoSizeStepGranularity = global::DroidMatika.Android.Resource.Attribute.autoSizeStepGranularity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.autoSizeTextType = global::DroidMatika.Android.Resource.Attribute.autoSizeTextType;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.background = global::DroidMatika.Android.Resource.Attribute.background;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundColor = global::DroidMatika.Android.Resource.Attribute.backgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundInsetBottom = global::DroidMatika.Android.Resource.Attribute.backgroundInsetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundInsetEnd = global::DroidMatika.Android.Resource.Attribute.backgroundInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundInsetStart = global::DroidMatika.Android.Resource.Attribute.backgroundInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundInsetTop = global::DroidMatika.Android.Resource.Attribute.backgroundInsetTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundOverlayColorAlpha = global::DroidMatika.Android.Resource.Attribute.backgroundOverlayColorAlpha;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundSplit = global::DroidMatika.Android.Resource.Attribute.backgroundSplit;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundStacked = global::DroidMatika.Android.Resource.Attribute.backgroundStacked;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundTint = global::DroidMatika.Android.Resource.Attribute.backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.backgroundTintMode = global::DroidMatika.Android.Resource.Attribute.backgroundTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.badgeGravity = global::DroidMatika.Android.Resource.Attribute.badgeGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.badgeStyle = global::DroidMatika.Android.Resource.Attribute.badgeStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.badgeTextColor = global::DroidMatika.Android.Resource.Attribute.badgeTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.barLength = global::DroidMatika.Android.Resource.Attribute.barLength;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_autoHide = global::DroidMatika.Android.Resource.Attribute.behavior_autoHide;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_autoShrink = global::DroidMatika.Android.Resource.Attribute.behavior_autoShrink;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_expandedOffset = global::DroidMatika.Android.Resource.Attribute.behavior_expandedOffset;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_fitToContents = global::DroidMatika.Android.Resource.Attribute.behavior_fitToContents;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_halfExpandedRatio = global::DroidMatika.Android.Resource.Attribute.behavior_halfExpandedRatio;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_hideable = global::DroidMatika.Android.Resource.Attribute.behavior_hideable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_overlapTop = global::DroidMatika.Android.Resource.Attribute.behavior_overlapTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_peekHeight = global::DroidMatika.Android.Resource.Attribute.behavior_peekHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_saveFlags = global::DroidMatika.Android.Resource.Attribute.behavior_saveFlags;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.behavior_skipCollapsed = global::DroidMatika.Android.Resource.Attribute.behavior_skipCollapsed;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.borderlessButtonStyle = global::DroidMatika.Android.Resource.Attribute.borderlessButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.borderWidth = global::DroidMatika.Android.Resource.Attribute.borderWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.bottomAppBarStyle = global::DroidMatika.Android.Resource.Attribute.bottomAppBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.bottomNavigationStyle = global::DroidMatika.Android.Resource.Attribute.bottomNavigationStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.bottomSheetDialogTheme = global::DroidMatika.Android.Resource.Attribute.bottomSheetDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.bottomSheetStyle = global::DroidMatika.Android.Resource.Attribute.bottomSheetStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxBackgroundColor = global::DroidMatika.Android.Resource.Attribute.boxBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxBackgroundMode = global::DroidMatika.Android.Resource.Attribute.boxBackgroundMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxCollapsedPaddingTop = global::DroidMatika.Android.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxCornerRadiusBottomEnd = global::DroidMatika.Android.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxCornerRadiusBottomStart = global::DroidMatika.Android.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxCornerRadiusTopEnd = global::DroidMatika.Android.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxCornerRadiusTopStart = global::DroidMatika.Android.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxStrokeColor = global::DroidMatika.Android.Resource.Attribute.boxStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxStrokeWidth = global::DroidMatika.Android.Resource.Attribute.boxStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.boxStrokeWidthFocused = global::DroidMatika.Android.Resource.Attribute.boxStrokeWidthFocused;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonBarButtonStyle = global::DroidMatika.Android.Resource.Attribute.buttonBarButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonBarNegativeButtonStyle = global::DroidMatika.Android.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonBarNeutralButtonStyle = global::DroidMatika.Android.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonBarPositiveButtonStyle = global::DroidMatika.Android.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonBarStyle = global::DroidMatika.Android.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonCompat = global::DroidMatika.Android.Resource.Attribute.buttonCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonGravity = global::DroidMatika.Android.Resource.Attribute.buttonGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonIconDimen = global::DroidMatika.Android.Resource.Attribute.buttonIconDimen;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonPanelSideLayout = global::DroidMatika.Android.Resource.Attribute.buttonPanelSideLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonStyle = global::DroidMatika.Android.Resource.Attribute.buttonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonStyleSmall = global::DroidMatika.Android.Resource.Attribute.buttonStyleSmall;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonTint = global::DroidMatika.Android.Resource.Attribute.buttonTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.buttonTintMode = global::DroidMatika.Android.Resource.Attribute.buttonTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardBackgroundColor = global::DroidMatika.Android.Resource.Attribute.cardBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardCornerRadius = global::DroidMatika.Android.Resource.Attribute.cardCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardElevation = global::DroidMatika.Android.Resource.Attribute.cardElevation;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardForegroundColor = global::DroidMatika.Android.Resource.Attribute.cardForegroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardMaxElevation = global::DroidMatika.Android.Resource.Attribute.cardMaxElevation;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardPreventCornerOverlap = global::DroidMatika.Android.Resource.Attribute.cardPreventCornerOverlap;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardUseCompatPadding = global::DroidMatika.Android.Resource.Attribute.cardUseCompatPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cardViewStyle = global::DroidMatika.Android.Resource.Attribute.cardViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkboxStyle = global::DroidMatika.Android.Resource.Attribute.checkboxStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedButton = global::DroidMatika.Android.Resource.Attribute.checkedButton;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedChip = global::DroidMatika.Android.Resource.Attribute.checkedChip;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedIcon = global::DroidMatika.Android.Resource.Attribute.checkedIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedIconEnabled = global::DroidMatika.Android.Resource.Attribute.checkedIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedIconTint = global::DroidMatika.Android.Resource.Attribute.checkedIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedIconVisible = global::DroidMatika.Android.Resource.Attribute.checkedIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.checkedTextViewStyle = global::DroidMatika.Android.Resource.Attribute.checkedTextViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipBackgroundColor = global::DroidMatika.Android.Resource.Attribute.chipBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipCornerRadius = global::DroidMatika.Android.Resource.Attribute.chipCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipEndPadding = global::DroidMatika.Android.Resource.Attribute.chipEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipGroupStyle = global::DroidMatika.Android.Resource.Attribute.chipGroupStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipIcon = global::DroidMatika.Android.Resource.Attribute.chipIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipIconEnabled = global::DroidMatika.Android.Resource.Attribute.chipIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipIconSize = global::DroidMatika.Android.Resource.Attribute.chipIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipIconTint = global::DroidMatika.Android.Resource.Attribute.chipIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipIconVisible = global::DroidMatika.Android.Resource.Attribute.chipIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipMinHeight = global::DroidMatika.Android.Resource.Attribute.chipMinHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipMinTouchTargetSize = global::DroidMatika.Android.Resource.Attribute.chipMinTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipSpacing = global::DroidMatika.Android.Resource.Attribute.chipSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipSpacingHorizontal = global::DroidMatika.Android.Resource.Attribute.chipSpacingHorizontal;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipSpacingVertical = global::DroidMatika.Android.Resource.Attribute.chipSpacingVertical;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipStandaloneStyle = global::DroidMatika.Android.Resource.Attribute.chipStandaloneStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipStartPadding = global::DroidMatika.Android.Resource.Attribute.chipStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipStrokeColor = global::DroidMatika.Android.Resource.Attribute.chipStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipStrokeWidth = global::DroidMatika.Android.Resource.Attribute.chipStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipStyle = global::DroidMatika.Android.Resource.Attribute.chipStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.chipSurfaceColor = global::DroidMatika.Android.Resource.Attribute.chipSurfaceColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIcon = global::DroidMatika.Android.Resource.Attribute.closeIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconEnabled = global::DroidMatika.Android.Resource.Attribute.closeIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconEndPadding = global::DroidMatika.Android.Resource.Attribute.closeIconEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconSize = global::DroidMatika.Android.Resource.Attribute.closeIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconStartPadding = global::DroidMatika.Android.Resource.Attribute.closeIconStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconTint = global::DroidMatika.Android.Resource.Attribute.closeIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeIconVisible = global::DroidMatika.Android.Resource.Attribute.closeIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.closeItemLayout = global::DroidMatika.Android.Resource.Attribute.closeItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.collapseContentDescription = global::DroidMatika.Android.Resource.Attribute.collapseContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.collapsedTitleGravity = global::DroidMatika.Android.Resource.Attribute.collapsedTitleGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.collapsedTitleTextAppearance = global::DroidMatika.Android.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.collapseIcon = global::DroidMatika.Android.Resource.Attribute.collapseIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.collectionViewStyle = global::DroidMatika.Android.Resource.Attribute.collectionViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.color = global::DroidMatika.Android.Resource.Attribute.color;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorAccent = global::DroidMatika.Android.Resource.Attribute.colorAccent;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorBackgroundFloating = global::DroidMatika.Android.Resource.Attribute.colorBackgroundFloating;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorButtonNormal = global::DroidMatika.Android.Resource.Attribute.colorButtonNormal;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorControlActivated = global::DroidMatika.Android.Resource.Attribute.colorControlActivated;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorControlHighlight = global::DroidMatika.Android.Resource.Attribute.colorControlHighlight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorControlNormal = global::DroidMatika.Android.Resource.Attribute.colorControlNormal;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorError = global::DroidMatika.Android.Resource.Attribute.colorError;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnBackground = global::DroidMatika.Android.Resource.Attribute.colorOnBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnError = global::DroidMatika.Android.Resource.Attribute.colorOnError;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnPrimary = global::DroidMatika.Android.Resource.Attribute.colorOnPrimary;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnPrimarySurface = global::DroidMatika.Android.Resource.Attribute.colorOnPrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnSecondary = global::DroidMatika.Android.Resource.Attribute.colorOnSecondary;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorOnSurface = global::DroidMatika.Android.Resource.Attribute.colorOnSurface;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorPrimary = global::DroidMatika.Android.Resource.Attribute.colorPrimary;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorPrimaryDark = global::DroidMatika.Android.Resource.Attribute.colorPrimaryDark;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorPrimarySurface = global::DroidMatika.Android.Resource.Attribute.colorPrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorPrimaryVariant = global::DroidMatika.Android.Resource.Attribute.colorPrimaryVariant;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorSecondary = global::DroidMatika.Android.Resource.Attribute.colorSecondary;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorSecondaryVariant = global::DroidMatika.Android.Resource.Attribute.colorSecondaryVariant;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorSurface = global::DroidMatika.Android.Resource.Attribute.colorSurface;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.colorSwitchThumbNormal = global::DroidMatika.Android.Resource.Attribute.colorSwitchThumbNormal;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.commitIcon = global::DroidMatika.Android.Resource.Attribute.commitIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentDescription = global::DroidMatika.Android.Resource.Attribute.contentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetEnd = global::DroidMatika.Android.Resource.Attribute.contentInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetEndWithActions = global::DroidMatika.Android.Resource.Attribute.contentInsetEndWithActions;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetLeft = global::DroidMatika.Android.Resource.Attribute.contentInsetLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetRight = global::DroidMatika.Android.Resource.Attribute.contentInsetRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetStart = global::DroidMatika.Android.Resource.Attribute.contentInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentInsetStartWithNavigation = global::DroidMatika.Android.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentPadding = global::DroidMatika.Android.Resource.Attribute.contentPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentPaddingBottom = global::DroidMatika.Android.Resource.Attribute.contentPaddingBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentPaddingLeft = global::DroidMatika.Android.Resource.Attribute.contentPaddingLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentPaddingRight = global::DroidMatika.Android.Resource.Attribute.contentPaddingRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentPaddingTop = global::DroidMatika.Android.Resource.Attribute.contentPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.contentScrim = global::DroidMatika.Android.Resource.Attribute.contentScrim;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.controlBackground = global::DroidMatika.Android.Resource.Attribute.controlBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.coordinatorLayoutStyle = global::DroidMatika.Android.Resource.Attribute.coordinatorLayoutStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerFamily = global::DroidMatika.Android.Resource.Attribute.cornerFamily;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerFamilyBottomLeft = global::DroidMatika.Android.Resource.Attribute.cornerFamilyBottomLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerFamilyBottomRight = global::DroidMatika.Android.Resource.Attribute.cornerFamilyBottomRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerFamilyTopLeft = global::DroidMatika.Android.Resource.Attribute.cornerFamilyTopLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerFamilyTopRight = global::DroidMatika.Android.Resource.Attribute.cornerFamilyTopRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerRadius = global::DroidMatika.Android.Resource.Attribute.cornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerSize = global::DroidMatika.Android.Resource.Attribute.cornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerSizeBottomLeft = global::DroidMatika.Android.Resource.Attribute.cornerSizeBottomLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerSizeBottomRight = global::DroidMatika.Android.Resource.Attribute.cornerSizeBottomRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerSizeTopLeft = global::DroidMatika.Android.Resource.Attribute.cornerSizeTopLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.cornerSizeTopRight = global::DroidMatika.Android.Resource.Attribute.cornerSizeTopRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterEnabled = global::DroidMatika.Android.Resource.Attribute.counterEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterMaxLength = global::DroidMatika.Android.Resource.Attribute.counterMaxLength;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterOverflowTextAppearance = global::DroidMatika.Android.Resource.Attribute.counterOverflowTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterOverflowTextColor = global::DroidMatika.Android.Resource.Attribute.counterOverflowTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterTextAppearance = global::DroidMatika.Android.Resource.Attribute.counterTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.counterTextColor = global::DroidMatika.Android.Resource.Attribute.counterTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.customNavigationLayout = global::DroidMatika.Android.Resource.Attribute.customNavigationLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dayInvalidStyle = global::DroidMatika.Android.Resource.Attribute.dayInvalidStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.daySelectedStyle = global::DroidMatika.Android.Resource.Attribute.daySelectedStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dayStyle = global::DroidMatika.Android.Resource.Attribute.dayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dayTodayStyle = global::DroidMatika.Android.Resource.Attribute.dayTodayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.defaultQueryHint = global::DroidMatika.Android.Resource.Attribute.defaultQueryHint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dialogCornerRadius = global::DroidMatika.Android.Resource.Attribute.dialogCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dialogPreferredPadding = global::DroidMatika.Android.Resource.Attribute.dialogPreferredPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dialogTheme = global::DroidMatika.Android.Resource.Attribute.dialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.displayOptions = global::DroidMatika.Android.Resource.Attribute.displayOptions;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.divider = global::DroidMatika.Android.Resource.Attribute.divider;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dividerHorizontal = global::DroidMatika.Android.Resource.Attribute.dividerHorizontal;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dividerPadding = global::DroidMatika.Android.Resource.Attribute.dividerPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dividerVertical = global::DroidMatika.Android.Resource.Attribute.dividerVertical;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableBottomCompat = global::DroidMatika.Android.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableEndCompat = global::DroidMatika.Android.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableLeftCompat = global::DroidMatika.Android.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableRightCompat = global::DroidMatika.Android.Resource.Attribute.drawableRightCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableSize = global::DroidMatika.Android.Resource.Attribute.drawableSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableStartCompat = global::DroidMatika.Android.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableTint = global::DroidMatika.Android.Resource.Attribute.drawableTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableTintMode = global::DroidMatika.Android.Resource.Attribute.drawableTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawableTopCompat = global::DroidMatika.Android.Resource.Attribute.drawableTopCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawerArrowStyle = global::DroidMatika.Android.Resource.Attribute.drawerArrowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.drawerLayoutStyle = global::DroidMatika.Android.Resource.Attribute.drawerLayoutStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dropdownListPreferredItemHeight = global::DroidMatika.Android.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.dropDownListViewStyle = global::DroidMatika.Android.Resource.Attribute.dropDownListViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.editTextBackground = global::DroidMatika.Android.Resource.Attribute.editTextBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.editTextColor = global::DroidMatika.Android.Resource.Attribute.editTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.editTextStyle = global::DroidMatika.Android.Resource.Attribute.editTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.elevation = global::DroidMatika.Android.Resource.Attribute.elevation;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.elevationOverlayColor = global::DroidMatika.Android.Resource.Attribute.elevationOverlayColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.elevationOverlayEnabled = global::DroidMatika.Android.Resource.Attribute.elevationOverlayEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconCheckable = global::DroidMatika.Android.Resource.Attribute.endIconCheckable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconContentDescription = global::DroidMatika.Android.Resource.Attribute.endIconContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconDrawable = global::DroidMatika.Android.Resource.Attribute.endIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconMode = global::DroidMatika.Android.Resource.Attribute.endIconMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconTint = global::DroidMatika.Android.Resource.Attribute.endIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.endIconTintMode = global::DroidMatika.Android.Resource.Attribute.endIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.enforceMaterialTheme = global::DroidMatika.Android.Resource.Attribute.enforceMaterialTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.enforceTextAppearance = global::DroidMatika.Android.Resource.Attribute.enforceTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.ensureMinTouchTargetSize = global::DroidMatika.Android.Resource.Attribute.ensureMinTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorEnabled = global::DroidMatika.Android.Resource.Attribute.errorEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorIconDrawable = global::DroidMatika.Android.Resource.Attribute.errorIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorIconTint = global::DroidMatika.Android.Resource.Attribute.errorIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorIconTintMode = global::DroidMatika.Android.Resource.Attribute.errorIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorTextAppearance = global::DroidMatika.Android.Resource.Attribute.errorTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.errorTextColor = global::DroidMatika.Android.Resource.Attribute.errorTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandActivityOverflowButtonDrawable = global::DroidMatika.Android.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expanded = global::DroidMatika.Android.Resource.Attribute.expanded;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleGravity = global::DroidMatika.Android.Resource.Attribute.expandedTitleGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleMargin = global::DroidMatika.Android.Resource.Attribute.expandedTitleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleMarginBottom = global::DroidMatika.Android.Resource.Attribute.expandedTitleMarginBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleMarginEnd = global::DroidMatika.Android.Resource.Attribute.expandedTitleMarginEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleMarginStart = global::DroidMatika.Android.Resource.Attribute.expandedTitleMarginStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleMarginTop = global::DroidMatika.Android.Resource.Attribute.expandedTitleMarginTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.expandedTitleTextAppearance = global::DroidMatika.Android.Resource.Attribute.expandedTitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.extendedFloatingActionButtonStyle = global::DroidMatika.Android.Resource.Attribute.extendedFloatingActionButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.extendMotionSpec = global::DroidMatika.Android.Resource.Attribute.extendMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabAlignmentMode = global::DroidMatika.Android.Resource.Attribute.fabAlignmentMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabAnimationMode = global::DroidMatika.Android.Resource.Attribute.fabAnimationMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabCradleMargin = global::DroidMatika.Android.Resource.Attribute.fabCradleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabCradleRoundedCornerRadius = global::DroidMatika.Android.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabCradleVerticalOffset = global::DroidMatika.Android.Resource.Attribute.fabCradleVerticalOffset;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabCustomSize = global::DroidMatika.Android.Resource.Attribute.fabCustomSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fabSize = global::DroidMatika.Android.Resource.Attribute.fabSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fastScrollEnabled = global::DroidMatika.Android.Resource.Attribute.fastScrollEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::DroidMatika.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::DroidMatika.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fastScrollVerticalThumbDrawable = global::DroidMatika.Android.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fastScrollVerticalTrackDrawable = global::DroidMatika.Android.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.firstBaselineToTopHeight = global::DroidMatika.Android.Resource.Attribute.firstBaselineToTopHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.floatingActionButtonStyle = global::DroidMatika.Android.Resource.Attribute.floatingActionButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.font = global::DroidMatika.Android.Resource.Attribute.font;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontFamily = global::DroidMatika.Android.Resource.Attribute.fontFamily;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderAuthority = global::DroidMatika.Android.Resource.Attribute.fontProviderAuthority;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderCerts = global::DroidMatika.Android.Resource.Attribute.fontProviderCerts;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderFetchStrategy = global::DroidMatika.Android.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderFetchTimeout = global::DroidMatika.Android.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderPackage = global::DroidMatika.Android.Resource.Attribute.fontProviderPackage;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontProviderQuery = global::DroidMatika.Android.Resource.Attribute.fontProviderQuery;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontStyle = global::DroidMatika.Android.Resource.Attribute.fontStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontVariationSettings = global::DroidMatika.Android.Resource.Attribute.fontVariationSettings;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.fontWeight = global::DroidMatika.Android.Resource.Attribute.fontWeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.foregroundInsidePadding = global::DroidMatika.Android.Resource.Attribute.foregroundInsidePadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.gapBetweenBars = global::DroidMatika.Android.Resource.Attribute.gapBetweenBars;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.goIcon = global::DroidMatika.Android.Resource.Attribute.goIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.headerLayout = global::DroidMatika.Android.Resource.Attribute.headerLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.height = global::DroidMatika.Android.Resource.Attribute.height;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.helperText = global::DroidMatika.Android.Resource.Attribute.helperText;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.helperTextEnabled = global::DroidMatika.Android.Resource.Attribute.helperTextEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.helperTextTextAppearance = global::DroidMatika.Android.Resource.Attribute.helperTextTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.helperTextTextColor = global::DroidMatika.Android.Resource.Attribute.helperTextTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hideMotionSpec = global::DroidMatika.Android.Resource.Attribute.hideMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hideOnContentScroll = global::DroidMatika.Android.Resource.Attribute.hideOnContentScroll;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hideOnScroll = global::DroidMatika.Android.Resource.Attribute.hideOnScroll;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hintAnimationEnabled = global::DroidMatika.Android.Resource.Attribute.hintAnimationEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hintEnabled = global::DroidMatika.Android.Resource.Attribute.hintEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hintTextAppearance = global::DroidMatika.Android.Resource.Attribute.hintTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hintTextColor = global::DroidMatika.Android.Resource.Attribute.hintTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.homeAsUpIndicator = global::DroidMatika.Android.Resource.Attribute.homeAsUpIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.homeLayout = global::DroidMatika.Android.Resource.Attribute.homeLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.hoveredFocusedTranslationZ = global::DroidMatika.Android.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.icon = global::DroidMatika.Android.Resource.Attribute.icon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconEndPadding = global::DroidMatika.Android.Resource.Attribute.iconEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconGravity = global::DroidMatika.Android.Resource.Attribute.iconGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconifiedByDefault = global::DroidMatika.Android.Resource.Attribute.iconifiedByDefault;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconPadding = global::DroidMatika.Android.Resource.Attribute.iconPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconSize = global::DroidMatika.Android.Resource.Attribute.iconSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconStartPadding = global::DroidMatika.Android.Resource.Attribute.iconStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconTint = global::DroidMatika.Android.Resource.Attribute.iconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.iconTintMode = global::DroidMatika.Android.Resource.Attribute.iconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.imageButtonStyle = global::DroidMatika.Android.Resource.Attribute.imageButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.indeterminateProgressStyle = global::DroidMatika.Android.Resource.Attribute.indeterminateProgressStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.initialActivityCount = global::DroidMatika.Android.Resource.Attribute.initialActivityCount;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.insetForeground = global::DroidMatika.Android.Resource.Attribute.insetForeground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.isLightTheme = global::DroidMatika.Android.Resource.Attribute.isLightTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.isMaterialTheme = global::DroidMatika.Android.Resource.Attribute.isMaterialTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemBackground = global::DroidMatika.Android.Resource.Attribute.itemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemFillColor = global::DroidMatika.Android.Resource.Attribute.itemFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemHorizontalPadding = global::DroidMatika.Android.Resource.Attribute.itemHorizontalPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemHorizontalTranslationEnabled = global::DroidMatika.Android.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemIconPadding = global::DroidMatika.Android.Resource.Attribute.itemIconPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemIconSize = global::DroidMatika.Android.Resource.Attribute.itemIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemIconTint = global::DroidMatika.Android.Resource.Attribute.itemIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemMaxLines = global::DroidMatika.Android.Resource.Attribute.itemMaxLines;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemPadding = global::DroidMatika.Android.Resource.Attribute.itemPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemRippleColor = global::DroidMatika.Android.Resource.Attribute.itemRippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeAppearance = global::DroidMatika.Android.Resource.Attribute.itemShapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeAppearanceOverlay = global::DroidMatika.Android.Resource.Attribute.itemShapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeFillColor = global::DroidMatika.Android.Resource.Attribute.itemShapeFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeInsetBottom = global::DroidMatika.Android.Resource.Attribute.itemShapeInsetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeInsetEnd = global::DroidMatika.Android.Resource.Attribute.itemShapeInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeInsetStart = global::DroidMatika.Android.Resource.Attribute.itemShapeInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemShapeInsetTop = global::DroidMatika.Android.Resource.Attribute.itemShapeInsetTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemSpacing = global::DroidMatika.Android.Resource.Attribute.itemSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemStrokeColor = global::DroidMatika.Android.Resource.Attribute.itemStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemStrokeWidth = global::DroidMatika.Android.Resource.Attribute.itemStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemTextAppearance = global::DroidMatika.Android.Resource.Attribute.itemTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemTextAppearanceActive = global::DroidMatika.Android.Resource.Attribute.itemTextAppearanceActive;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemTextAppearanceInactive = global::DroidMatika.Android.Resource.Attribute.itemTextAppearanceInactive;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.itemTextColor = global::DroidMatika.Android.Resource.Attribute.itemTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.keylines = global::DroidMatika.Android.Resource.Attribute.keylines;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.labelVisibilityMode = global::DroidMatika.Android.Resource.Attribute.labelVisibilityMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.lastBaselineToBottomHeight = global::DroidMatika.Android.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout = global::DroidMatika.Android.Resource.Attribute.layout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layoutManager = global::DroidMatika.Android.Resource.Attribute.layoutManager;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_anchor = global::DroidMatika.Android.Resource.Attribute.layout_anchor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_anchorGravity = global::DroidMatika.Android.Resource.Attribute.layout_anchorGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_behavior = global::DroidMatika.Android.Resource.Attribute.layout_behavior;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_collapseMode = global::DroidMatika.Android.Resource.Attribute.layout_collapseMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_collapseParallaxMultiplier = global::DroidMatika.Android.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_dodgeInsetEdges = global::DroidMatika.Android.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_insetEdge = global::DroidMatika.Android.Resource.Attribute.layout_insetEdge;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_keyline = global::DroidMatika.Android.Resource.Attribute.layout_keyline;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_scrollFlags = global::DroidMatika.Android.Resource.Attribute.layout_scrollFlags;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.layout_scrollInterpolator = global::DroidMatika.Android.Resource.Attribute.layout_scrollInterpolator;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.liftOnScroll = global::DroidMatika.Android.Resource.Attribute.liftOnScroll;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.liftOnScrollTargetViewId = global::DroidMatika.Android.Resource.Attribute.liftOnScrollTargetViewId;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.lineHeight = global::DroidMatika.Android.Resource.Attribute.lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.lineSpacing = global::DroidMatika.Android.Resource.Attribute.lineSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listChoiceBackgroundIndicator = global::DroidMatika.Android.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::DroidMatika.Android.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::DroidMatika.Android.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listDividerAlertDialog = global::DroidMatika.Android.Resource.Attribute.listDividerAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listItemLayout = global::DroidMatika.Android.Resource.Attribute.listItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listLayout = global::DroidMatika.Android.Resource.Attribute.listLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listMenuViewStyle = global::DroidMatika.Android.Resource.Attribute.listMenuViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPopupWindowStyle = global::DroidMatika.Android.Resource.Attribute.listPopupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemHeight = global::DroidMatika.Android.Resource.Attribute.listPreferredItemHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemHeightLarge = global::DroidMatika.Android.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemHeightSmall = global::DroidMatika.Android.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemPaddingEnd = global::DroidMatika.Android.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemPaddingLeft = global::DroidMatika.Android.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemPaddingRight = global::DroidMatika.Android.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.listPreferredItemPaddingStart = global::DroidMatika.Android.Resource.Attribute.listPreferredItemPaddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.logo = global::DroidMatika.Android.Resource.Attribute.logo;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.logoDescription = global::DroidMatika.Android.Resource.Attribute.logoDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialAlertDialogBodyTextStyle = global::DroidMatika.Android.Resource.Attribute.materialAlertDialogBodyTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialAlertDialogTheme = global::DroidMatika.Android.Resource.Attribute.materialAlertDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialAlertDialogTitleIconStyle = global::DroidMatika.Android.Resource.Attribute.materialAlertDialogTitleIconStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialAlertDialogTitlePanelStyle = global::DroidMatika.Android.Resource.Attribute.materialAlertDialogTitlePanelStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialAlertDialogTitleTextStyle = global::DroidMatika.Android.Resource.Attribute.materialAlertDialogTitleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialButtonOutlinedStyle = global::DroidMatika.Android.Resource.Attribute.materialButtonOutlinedStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialButtonStyle = global::DroidMatika.Android.Resource.Attribute.materialButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialButtonToggleGroupStyle = global::DroidMatika.Android.Resource.Attribute.materialButtonToggleGroupStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarDay = global::DroidMatika.Android.Resource.Attribute.materialCalendarDay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarFullscreenTheme = global::DroidMatika.Android.Resource.Attribute.materialCalendarFullscreenTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderConfirmButton = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderConfirmButton;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderDivider = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderDivider;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderLayout = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderSelection = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderSelection;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderTitle = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderTitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarHeaderToggleButton = global::DroidMatika.Android.Resource.Attribute.materialCalendarHeaderToggleButton;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarStyle = global::DroidMatika.Android.Resource.Attribute.materialCalendarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCalendarTheme = global::DroidMatika.Android.Resource.Attribute.materialCalendarTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialCardViewStyle = global::DroidMatika.Android.Resource.Attribute.materialCardViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.materialThemeOverlay = global::DroidMatika.Android.Resource.Attribute.materialThemeOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.maxActionInlineWidth = global::DroidMatika.Android.Resource.Attribute.maxActionInlineWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.maxButtonHeight = global::DroidMatika.Android.Resource.Attribute.maxButtonHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.maxCharacterCount = global::DroidMatika.Android.Resource.Attribute.maxCharacterCount;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.maxImageSize = global::DroidMatika.Android.Resource.Attribute.maxImageSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.measureWithLargestChild = global::DroidMatika.Android.Resource.Attribute.measureWithLargestChild;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.menu = global::DroidMatika.Android.Resource.Attribute.menu;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.minTouchTargetSize = global::DroidMatika.Android.Resource.Attribute.minTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.multiChoiceItemLayout = global::DroidMatika.Android.Resource.Attribute.multiChoiceItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.navigationContentDescription = global::DroidMatika.Android.Resource.Attribute.navigationContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.navigationIcon = global::DroidMatika.Android.Resource.Attribute.navigationIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.navigationMode = global::DroidMatika.Android.Resource.Attribute.navigationMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.navigationViewStyle = global::DroidMatika.Android.Resource.Attribute.navigationViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.number = global::DroidMatika.Android.Resource.Attribute.number;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.numericModifiers = global::DroidMatika.Android.Resource.Attribute.numericModifiers;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.overlapAnchor = global::DroidMatika.Android.Resource.Attribute.overlapAnchor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.paddingBottomNoButtons = global::DroidMatika.Android.Resource.Attribute.paddingBottomNoButtons;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.paddingEnd = global::DroidMatika.Android.Resource.Attribute.paddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.paddingStart = global::DroidMatika.Android.Resource.Attribute.paddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.paddingTopNoTitle = global::DroidMatika.Android.Resource.Attribute.paddingTopNoTitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.panelBackground = global::DroidMatika.Android.Resource.Attribute.panelBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.panelMenuListTheme = global::DroidMatika.Android.Resource.Attribute.panelMenuListTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.panelMenuListWidth = global::DroidMatika.Android.Resource.Attribute.panelMenuListWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.passwordToggleContentDescription = global::DroidMatika.Android.Resource.Attribute.passwordToggleContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.passwordToggleDrawable = global::DroidMatika.Android.Resource.Attribute.passwordToggleDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.passwordToggleEnabled = global::DroidMatika.Android.Resource.Attribute.passwordToggleEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.passwordToggleTint = global::DroidMatika.Android.Resource.Attribute.passwordToggleTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.passwordToggleTintMode = global::DroidMatika.Android.Resource.Attribute.passwordToggleTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.popupMenuBackground = global::DroidMatika.Android.Resource.Attribute.popupMenuBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.popupMenuStyle = global::DroidMatika.Android.Resource.Attribute.popupMenuStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.popupTheme = global::DroidMatika.Android.Resource.Attribute.popupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.popupWindowStyle = global::DroidMatika.Android.Resource.Attribute.popupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.preserveIconSpacing = global::DroidMatika.Android.Resource.Attribute.preserveIconSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.pressedTranslationZ = global::DroidMatika.Android.Resource.Attribute.pressedTranslationZ;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.progressBarPadding = global::DroidMatika.Android.Resource.Attribute.progressBarPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.progressBarStyle = global::DroidMatika.Android.Resource.Attribute.progressBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.queryBackground = global::DroidMatika.Android.Resource.Attribute.queryBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.queryHint = global::DroidMatika.Android.Resource.Attribute.queryHint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.radioButtonStyle = global::DroidMatika.Android.Resource.Attribute.radioButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.rangeFillColor = global::DroidMatika.Android.Resource.Attribute.rangeFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.ratingBarStyle = global::DroidMatika.Android.Resource.Attribute.ratingBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.ratingBarStyleIndicator = global::DroidMatika.Android.Resource.Attribute.ratingBarStyleIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.ratingBarStyleSmall = global::DroidMatika.Android.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.recyclerViewStyle = global::DroidMatika.Android.Resource.Attribute.recyclerViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.reverseLayout = global::DroidMatika.Android.Resource.Attribute.reverseLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.rippleColor = global::DroidMatika.Android.Resource.Attribute.rippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.scrimAnimationDuration = global::DroidMatika.Android.Resource.Attribute.scrimAnimationDuration;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.scrimBackground = global::DroidMatika.Android.Resource.Attribute.scrimBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.scrimVisibleHeightTrigger = global::DroidMatika.Android.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.scrollViewStyle = global::DroidMatika.Android.Resource.Attribute.scrollViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.searchHintIcon = global::DroidMatika.Android.Resource.Attribute.searchHintIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.searchIcon = global::DroidMatika.Android.Resource.Attribute.searchIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.searchViewStyle = global::DroidMatika.Android.Resource.Attribute.searchViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.seekBarStyle = global::DroidMatika.Android.Resource.Attribute.seekBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.selectableItemBackground = global::DroidMatika.Android.Resource.Attribute.selectableItemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.selectableItemBackgroundBorderless = global::DroidMatika.Android.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shapeAppearance = global::DroidMatika.Android.Resource.Attribute.shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shapeAppearanceLargeComponent = global::DroidMatika.Android.Resource.Attribute.shapeAppearanceLargeComponent;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shapeAppearanceMediumComponent = global::DroidMatika.Android.Resource.Attribute.shapeAppearanceMediumComponent;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Attribute.shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shapeAppearanceSmallComponent = global::DroidMatika.Android.Resource.Attribute.shapeAppearanceSmallComponent;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.showAsAction = global::DroidMatika.Android.Resource.Attribute.showAsAction;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.showDividers = global::DroidMatika.Android.Resource.Attribute.showDividers;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.showMotionSpec = global::DroidMatika.Android.Resource.Attribute.showMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.showText = global::DroidMatika.Android.Resource.Attribute.showText;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.showTitle = global::DroidMatika.Android.Resource.Attribute.showTitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.shrinkMotionSpec = global::DroidMatika.Android.Resource.Attribute.shrinkMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.singleChoiceItemLayout = global::DroidMatika.Android.Resource.Attribute.singleChoiceItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.singleLine = global::DroidMatika.Android.Resource.Attribute.singleLine;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.singleSelection = global::DroidMatika.Android.Resource.Attribute.singleSelection;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.snackbarButtonStyle = global::DroidMatika.Android.Resource.Attribute.snackbarButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.snackbarStyle = global::DroidMatika.Android.Resource.Attribute.snackbarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.spanCount = global::DroidMatika.Android.Resource.Attribute.spanCount;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.spinBars = global::DroidMatika.Android.Resource.Attribute.spinBars;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.spinnerDropDownItemStyle = global::DroidMatika.Android.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.spinnerStyle = global::DroidMatika.Android.Resource.Attribute.spinnerStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.splitTrack = global::DroidMatika.Android.Resource.Attribute.splitTrack;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.srcCompat = global::DroidMatika.Android.Resource.Attribute.srcCompat;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.stackFromEnd = global::DroidMatika.Android.Resource.Attribute.stackFromEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.startIconCheckable = global::DroidMatika.Android.Resource.Attribute.startIconCheckable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.startIconContentDescription = global::DroidMatika.Android.Resource.Attribute.startIconContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.startIconDrawable = global::DroidMatika.Android.Resource.Attribute.startIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.startIconTint = global::DroidMatika.Android.Resource.Attribute.startIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.startIconTintMode = global::DroidMatika.Android.Resource.Attribute.startIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_above_anchor = global::DroidMatika.Android.Resource.Attribute.state_above_anchor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_collapsed = global::DroidMatika.Android.Resource.Attribute.state_collapsed;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_collapsible = global::DroidMatika.Android.Resource.Attribute.state_collapsible;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_dragged = global::DroidMatika.Android.Resource.Attribute.state_dragged;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_liftable = global::DroidMatika.Android.Resource.Attribute.state_liftable;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.state_lifted = global::DroidMatika.Android.Resource.Attribute.state_lifted;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.statusBarBackground = global::DroidMatika.Android.Resource.Attribute.statusBarBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.statusBarForeground = global::DroidMatika.Android.Resource.Attribute.statusBarForeground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.statusBarScrim = global::DroidMatika.Android.Resource.Attribute.statusBarScrim;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.strokeColor = global::DroidMatika.Android.Resource.Attribute.strokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.strokeWidth = global::DroidMatika.Android.Resource.Attribute.strokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.subMenuArrow = global::DroidMatika.Android.Resource.Attribute.subMenuArrow;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.submitBackground = global::DroidMatika.Android.Resource.Attribute.submitBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.subtitle = global::DroidMatika.Android.Resource.Attribute.subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.subtitleTextAppearance = global::DroidMatika.Android.Resource.Attribute.subtitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.subtitleTextColor = global::DroidMatika.Android.Resource.Attribute.subtitleTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.subtitleTextStyle = global::DroidMatika.Android.Resource.Attribute.subtitleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.suggestionRowLayout = global::DroidMatika.Android.Resource.Attribute.suggestionRowLayout;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.swipeRefreshLayoutProgressSpinnerBackgroundColor = global::DroidMatika.Android.Resource.Attribute.swipeRefreshLayoutProgressSpinnerBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.switchMinWidth = global::DroidMatika.Android.Resource.Attribute.switchMinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.switchPadding = global::DroidMatika.Android.Resource.Attribute.switchPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.switchStyle = global::DroidMatika.Android.Resource.Attribute.switchStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.switchTextAppearance = global::DroidMatika.Android.Resource.Attribute.switchTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabBackground = global::DroidMatika.Android.Resource.Attribute.tabBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabContentStart = global::DroidMatika.Android.Resource.Attribute.tabContentStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabGravity = global::DroidMatika.Android.Resource.Attribute.tabGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIconTint = global::DroidMatika.Android.Resource.Attribute.tabIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIconTintMode = global::DroidMatika.Android.Resource.Attribute.tabIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicator = global::DroidMatika.Android.Resource.Attribute.tabIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicatorAnimationDuration = global::DroidMatika.Android.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicatorColor = global::DroidMatika.Android.Resource.Attribute.tabIndicatorColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicatorFullWidth = global::DroidMatika.Android.Resource.Attribute.tabIndicatorFullWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicatorGravity = global::DroidMatika.Android.Resource.Attribute.tabIndicatorGravity;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabIndicatorHeight = global::DroidMatika.Android.Resource.Attribute.tabIndicatorHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabInlineLabel = global::DroidMatika.Android.Resource.Attribute.tabInlineLabel;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabMaxWidth = global::DroidMatika.Android.Resource.Attribute.tabMaxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabMinWidth = global::DroidMatika.Android.Resource.Attribute.tabMinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabMode = global::DroidMatika.Android.Resource.Attribute.tabMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabPadding = global::DroidMatika.Android.Resource.Attribute.tabPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabPaddingBottom = global::DroidMatika.Android.Resource.Attribute.tabPaddingBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabPaddingEnd = global::DroidMatika.Android.Resource.Attribute.tabPaddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabPaddingStart = global::DroidMatika.Android.Resource.Attribute.tabPaddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabPaddingTop = global::DroidMatika.Android.Resource.Attribute.tabPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabRippleColor = global::DroidMatika.Android.Resource.Attribute.tabRippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabSelectedTextColor = global::DroidMatika.Android.Resource.Attribute.tabSelectedTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabStyle = global::DroidMatika.Android.Resource.Attribute.tabStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabTextAppearance = global::DroidMatika.Android.Resource.Attribute.tabTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabTextColor = global::DroidMatika.Android.Resource.Attribute.tabTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tabUnboundedRipple = global::DroidMatika.Android.Resource.Attribute.tabUnboundedRipple;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAllCaps = global::DroidMatika.Android.Resource.Attribute.textAllCaps;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceBody1 = global::DroidMatika.Android.Resource.Attribute.textAppearanceBody1;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceBody2 = global::DroidMatika.Android.Resource.Attribute.textAppearanceBody2;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceButton = global::DroidMatika.Android.Resource.Attribute.textAppearanceButton;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceCaption = global::DroidMatika.Android.Resource.Attribute.textAppearanceCaption;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline1 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline1;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline2 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline2;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline3 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline3;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline4 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline4;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline5 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline5;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceHeadline6 = global::DroidMatika.Android.Resource.Attribute.textAppearanceHeadline6;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceLargePopupMenu = global::DroidMatika.Android.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceLineHeightEnabled = global::DroidMatika.Android.Resource.Attribute.textAppearanceLineHeightEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceListItem = global::DroidMatika.Android.Resource.Attribute.textAppearanceListItem;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceListItemSecondary = global::DroidMatika.Android.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceListItemSmall = global::DroidMatika.Android.Resource.Attribute.textAppearanceListItemSmall;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceOverline = global::DroidMatika.Android.Resource.Attribute.textAppearanceOverline;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearancePopupMenuHeader = global::DroidMatika.Android.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceSearchResultSubtitle = global::DroidMatika.Android.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceSearchResultTitle = global::DroidMatika.Android.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceSmallPopupMenu = global::DroidMatika.Android.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceSubtitle1 = global::DroidMatika.Android.Resource.Attribute.textAppearanceSubtitle1;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textAppearanceSubtitle2 = global::DroidMatika.Android.Resource.Attribute.textAppearanceSubtitle2;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textColorAlertDialogListItem = global::DroidMatika.Android.Resource.Attribute.textColorAlertDialogListItem;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textColorSearchUrl = global::DroidMatika.Android.Resource.Attribute.textColorSearchUrl;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textEndPadding = global::DroidMatika.Android.Resource.Attribute.textEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textInputStyle = global::DroidMatika.Android.Resource.Attribute.textInputStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textLocale = global::DroidMatika.Android.Resource.Attribute.textLocale;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.textStartPadding = global::DroidMatika.Android.Resource.Attribute.textStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.theme = global::DroidMatika.Android.Resource.Attribute.theme;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.themeLineHeight = global::DroidMatika.Android.Resource.Attribute.themeLineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.thickness = global::DroidMatika.Android.Resource.Attribute.thickness;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.thumbTextPadding = global::DroidMatika.Android.Resource.Attribute.thumbTextPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.thumbTint = global::DroidMatika.Android.Resource.Attribute.thumbTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.thumbTintMode = global::DroidMatika.Android.Resource.Attribute.thumbTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tickMark = global::DroidMatika.Android.Resource.Attribute.tickMark;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tickMarkTint = global::DroidMatika.Android.Resource.Attribute.tickMarkTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tickMarkTintMode = global::DroidMatika.Android.Resource.Attribute.tickMarkTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tint = global::DroidMatika.Android.Resource.Attribute.tint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tintMode = global::DroidMatika.Android.Resource.Attribute.tintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.title = global::DroidMatika.Android.Resource.Attribute.title;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleEnabled = global::DroidMatika.Android.Resource.Attribute.titleEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMargin = global::DroidMatika.Android.Resource.Attribute.titleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMarginBottom = global::DroidMatika.Android.Resource.Attribute.titleMarginBottom;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMarginEnd = global::DroidMatika.Android.Resource.Attribute.titleMarginEnd;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMargins = global::DroidMatika.Android.Resource.Attribute.titleMargins;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMarginStart = global::DroidMatika.Android.Resource.Attribute.titleMarginStart;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleMarginTop = global::DroidMatika.Android.Resource.Attribute.titleMarginTop;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleTextAppearance = global::DroidMatika.Android.Resource.Attribute.titleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleTextColor = global::DroidMatika.Android.Resource.Attribute.titleTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.titleTextStyle = global::DroidMatika.Android.Resource.Attribute.titleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.toolbarId = global::DroidMatika.Android.Resource.Attribute.toolbarId;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.toolbarNavigationButtonStyle = global::DroidMatika.Android.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.toolbarStyle = global::DroidMatika.Android.Resource.Attribute.toolbarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tooltipForegroundColor = global::DroidMatika.Android.Resource.Attribute.tooltipForegroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tooltipFrameBackground = global::DroidMatika.Android.Resource.Attribute.tooltipFrameBackground;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.tooltipText = global::DroidMatika.Android.Resource.Attribute.tooltipText;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.track = global::DroidMatika.Android.Resource.Attribute.track;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.trackTint = global::DroidMatika.Android.Resource.Attribute.trackTint;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.trackTintMode = global::DroidMatika.Android.Resource.Attribute.trackTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.ttcIndex = global::DroidMatika.Android.Resource.Attribute.ttcIndex;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.useCompatPadding = global::DroidMatika.Android.Resource.Attribute.useCompatPadding;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.useMaterialThemeColors = global::DroidMatika.Android.Resource.Attribute.useMaterialThemeColors;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.viewInflaterClass = global::DroidMatika.Android.Resource.Attribute.viewInflaterClass;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.voiceIcon = global::DroidMatika.Android.Resource.Attribute.voiceIcon;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowActionBar = global::DroidMatika.Android.Resource.Attribute.windowActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowActionBarOverlay = global::DroidMatika.Android.Resource.Attribute.windowActionBarOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowActionModeOverlay = global::DroidMatika.Android.Resource.Attribute.windowActionModeOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowFixedHeightMajor = global::DroidMatika.Android.Resource.Attribute.windowFixedHeightMajor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowFixedHeightMinor = global::DroidMatika.Android.Resource.Attribute.windowFixedHeightMinor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowFixedWidthMajor = global::DroidMatika.Android.Resource.Attribute.windowFixedWidthMajor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowFixedWidthMinor = global::DroidMatika.Android.Resource.Attribute.windowFixedWidthMinor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowMinWidthMajor = global::DroidMatika.Android.Resource.Attribute.windowMinWidthMajor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowMinWidthMinor = global::DroidMatika.Android.Resource.Attribute.windowMinWidthMinor;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.windowNoTitle = global::DroidMatika.Android.Resource.Attribute.windowNoTitle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.yearSelectedStyle = global::DroidMatika.Android.Resource.Attribute.yearSelectedStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.yearStyle = global::DroidMatika.Android.Resource.Attribute.yearStyle;
+			global::Xamarin.CommunityToolkit.Resource.Attribute.yearTodayStyle = global::DroidMatika.Android.Resource.Attribute.yearTodayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Boolean.abc_action_bar_embed_tabs = global::DroidMatika.Android.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.CommunityToolkit.Resource.Boolean.abc_allow_stacked_button_bar = global::DroidMatika.Android.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Xamarin.CommunityToolkit.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::DroidMatika.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Xamarin.CommunityToolkit.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::DroidMatika.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_background_cache_hint_selector_material_dark = global::DroidMatika.Android.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_background_cache_hint_selector_material_light = global::DroidMatika.Android.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_btn_colored_borderless_text_material = global::DroidMatika.Android.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_btn_colored_text_material = global::DroidMatika.Android.Resource.Color.abc_btn_colored_text_material;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_color_highlight_material = global::DroidMatika.Android.Resource.Color.abc_color_highlight_material;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_decor_view_status_guard = global::DroidMatika.Android.Resource.Color.abc_decor_view_status_guard;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_decor_view_status_guard_light = global::DroidMatika.Android.Resource.Color.abc_decor_view_status_guard_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_hint_foreground_material_dark = global::DroidMatika.Android.Resource.Color.abc_hint_foreground_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_hint_foreground_material_light = global::DroidMatika.Android.Resource.Color.abc_hint_foreground_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_primary_text_disable_only_material_dark = global::DroidMatika.Android.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_primary_text_disable_only_material_light = global::DroidMatika.Android.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_primary_text_material_dark = global::DroidMatika.Android.Resource.Color.abc_primary_text_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_primary_text_material_light = global::DroidMatika.Android.Resource.Color.abc_primary_text_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_search_url_text = global::DroidMatika.Android.Resource.Color.abc_search_url_text;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_search_url_text_normal = global::DroidMatika.Android.Resource.Color.abc_search_url_text_normal;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_search_url_text_pressed = global::DroidMatika.Android.Resource.Color.abc_search_url_text_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_search_url_text_selected = global::DroidMatika.Android.Resource.Color.abc_search_url_text_selected;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_secondary_text_material_dark = global::DroidMatika.Android.Resource.Color.abc_secondary_text_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_secondary_text_material_light = global::DroidMatika.Android.Resource.Color.abc_secondary_text_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_btn_checkable = global::DroidMatika.Android.Resource.Color.abc_tint_btn_checkable;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_default = global::DroidMatika.Android.Resource.Color.abc_tint_default;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_edittext = global::DroidMatika.Android.Resource.Color.abc_tint_edittext;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_seek_thumb = global::DroidMatika.Android.Resource.Color.abc_tint_seek_thumb;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_spinner = global::DroidMatika.Android.Resource.Color.abc_tint_spinner;
+			global::Xamarin.CommunityToolkit.Resource.Color.abc_tint_switch_track = global::DroidMatika.Android.Resource.Color.abc_tint_switch_track;
+			global::Xamarin.CommunityToolkit.Resource.Color.accent_material_dark = global::DroidMatika.Android.Resource.Color.accent_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.accent_material_light = global::DroidMatika.Android.Resource.Color.accent_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.androidx_core_ripple_material_light = global::DroidMatika.Android.Resource.Color.androidx_core_ripple_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.androidx_core_secondary_text_default_material_light = global::DroidMatika.Android.Resource.Color.androidx_core_secondary_text_default_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.background_floating_material_dark = global::DroidMatika.Android.Resource.Color.background_floating_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.background_floating_material_light = global::DroidMatika.Android.Resource.Color.background_floating_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.background_material_dark = global::DroidMatika.Android.Resource.Color.background_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.background_material_light = global::DroidMatika.Android.Resource.Color.background_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_disabled_material_dark = global::DroidMatika.Android.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_disabled_material_light = global::DroidMatika.Android.Resource.Color.bright_foreground_disabled_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_inverse_material_dark = global::DroidMatika.Android.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_inverse_material_light = global::DroidMatika.Android.Resource.Color.bright_foreground_inverse_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_material_dark = global::DroidMatika.Android.Resource.Color.bright_foreground_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.bright_foreground_material_light = global::DroidMatika.Android.Resource.Color.bright_foreground_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.browser_actions_bg_grey = global::DroidMatika.Android.Resource.Color.browser_actions_bg_grey;
+			global::Xamarin.CommunityToolkit.Resource.Color.browser_actions_divider_color = global::DroidMatika.Android.Resource.Color.browser_actions_divider_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.browser_actions_text_color = global::DroidMatika.Android.Resource.Color.browser_actions_text_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.browser_actions_title_color = global::DroidMatika.Android.Resource.Color.browser_actions_title_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.button_material_dark = global::DroidMatika.Android.Resource.Color.button_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.button_material_light = global::DroidMatika.Android.Resource.Color.button_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.cardview_dark_background = global::DroidMatika.Android.Resource.Color.cardview_dark_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.cardview_light_background = global::DroidMatika.Android.Resource.Color.cardview_light_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.cardview_shadow_end_color = global::DroidMatika.Android.Resource.Color.cardview_shadow_end_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.cardview_shadow_start_color = global::DroidMatika.Android.Resource.Color.cardview_shadow_start_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.checkbox_themeable_attribute_color = global::DroidMatika.Android.Resource.Color.checkbox_themeable_attribute_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_bottom_navigation_shadow_color = global::DroidMatika.Android.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_box_stroke_color = global::DroidMatika.Android.Resource.Color.design_box_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_background = global::DroidMatika.Android.Resource.Color.design_dark_default_color_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_error = global::DroidMatika.Android.Resource.Color.design_dark_default_color_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_on_background = global::DroidMatika.Android.Resource.Color.design_dark_default_color_on_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_on_error = global::DroidMatika.Android.Resource.Color.design_dark_default_color_on_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_on_primary = global::DroidMatika.Android.Resource.Color.design_dark_default_color_on_primary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_on_secondary = global::DroidMatika.Android.Resource.Color.design_dark_default_color_on_secondary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_on_surface = global::DroidMatika.Android.Resource.Color.design_dark_default_color_on_surface;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_primary = global::DroidMatika.Android.Resource.Color.design_dark_default_color_primary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_primary_dark = global::DroidMatika.Android.Resource.Color.design_dark_default_color_primary_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_primary_variant = global::DroidMatika.Android.Resource.Color.design_dark_default_color_primary_variant;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_secondary = global::DroidMatika.Android.Resource.Color.design_dark_default_color_secondary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_secondary_variant = global::DroidMatika.Android.Resource.Color.design_dark_default_color_secondary_variant;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_dark_default_color_surface = global::DroidMatika.Android.Resource.Color.design_dark_default_color_surface;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_background = global::DroidMatika.Android.Resource.Color.design_default_color_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_error = global::DroidMatika.Android.Resource.Color.design_default_color_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_on_background = global::DroidMatika.Android.Resource.Color.design_default_color_on_background;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_on_error = global::DroidMatika.Android.Resource.Color.design_default_color_on_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_on_primary = global::DroidMatika.Android.Resource.Color.design_default_color_on_primary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_on_secondary = global::DroidMatika.Android.Resource.Color.design_default_color_on_secondary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_on_surface = global::DroidMatika.Android.Resource.Color.design_default_color_on_surface;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_primary = global::DroidMatika.Android.Resource.Color.design_default_color_primary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_primary_dark = global::DroidMatika.Android.Resource.Color.design_default_color_primary_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_primary_variant = global::DroidMatika.Android.Resource.Color.design_default_color_primary_variant;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_secondary = global::DroidMatika.Android.Resource.Color.design_default_color_secondary;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_secondary_variant = global::DroidMatika.Android.Resource.Color.design_default_color_secondary_variant;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_default_color_surface = global::DroidMatika.Android.Resource.Color.design_default_color_surface;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_error = global::DroidMatika.Android.Resource.Color.design_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_shadow_end_color = global::DroidMatika.Android.Resource.Color.design_fab_shadow_end_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_shadow_mid_color = global::DroidMatika.Android.Resource.Color.design_fab_shadow_mid_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_shadow_start_color = global::DroidMatika.Android.Resource.Color.design_fab_shadow_start_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_stroke_end_inner_color = global::DroidMatika.Android.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_stroke_end_outer_color = global::DroidMatika.Android.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_stroke_top_inner_color = global::DroidMatika.Android.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_fab_stroke_top_outer_color = global::DroidMatika.Android.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_icon_tint = global::DroidMatika.Android.Resource.Color.design_icon_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.design_snackbar_background_color = global::DroidMatika.Android.Resource.Color.design_snackbar_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.dim_foreground_disabled_material_dark = global::DroidMatika.Android.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.dim_foreground_disabled_material_light = global::DroidMatika.Android.Resource.Color.dim_foreground_disabled_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.dim_foreground_material_dark = global::DroidMatika.Android.Resource.Color.dim_foreground_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.dim_foreground_material_light = global::DroidMatika.Android.Resource.Color.dim_foreground_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.error_color_material_dark = global::DroidMatika.Android.Resource.Color.error_color_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.error_color_material_light = global::DroidMatika.Android.Resource.Color.error_color_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.foreground_material_dark = global::DroidMatika.Android.Resource.Color.foreground_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.foreground_material_light = global::DroidMatika.Android.Resource.Color.foreground_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.highlighted_text_material_dark = global::DroidMatika.Android.Resource.Color.highlighted_text_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.highlighted_text_material_light = global::DroidMatika.Android.Resource.Color.highlighted_text_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_blue_grey_800 = global::DroidMatika.Android.Resource.Color.material_blue_grey_800;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_blue_grey_900 = global::DroidMatika.Android.Resource.Color.material_blue_grey_900;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_blue_grey_950 = global::DroidMatika.Android.Resource.Color.material_blue_grey_950;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_deep_teal_200 = global::DroidMatika.Android.Resource.Color.material_deep_teal_200;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_deep_teal_500 = global::DroidMatika.Android.Resource.Color.material_deep_teal_500;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_100 = global::DroidMatika.Android.Resource.Color.material_grey_100;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_300 = global::DroidMatika.Android.Resource.Color.material_grey_300;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_50 = global::DroidMatika.Android.Resource.Color.material_grey_50;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_600 = global::DroidMatika.Android.Resource.Color.material_grey_600;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_800 = global::DroidMatika.Android.Resource.Color.material_grey_800;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_850 = global::DroidMatika.Android.Resource.Color.material_grey_850;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_grey_900 = global::DroidMatika.Android.Resource.Color.material_grey_900;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_background_disabled = global::DroidMatika.Android.Resource.Color.material_on_background_disabled;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_background_emphasis_high_type = global::DroidMatika.Android.Resource.Color.material_on_background_emphasis_high_type;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_background_emphasis_medium = global::DroidMatika.Android.Resource.Color.material_on_background_emphasis_medium;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_primary_disabled = global::DroidMatika.Android.Resource.Color.material_on_primary_disabled;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_primary_emphasis_high_type = global::DroidMatika.Android.Resource.Color.material_on_primary_emphasis_high_type;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_primary_emphasis_medium = global::DroidMatika.Android.Resource.Color.material_on_primary_emphasis_medium;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_surface_disabled = global::DroidMatika.Android.Resource.Color.material_on_surface_disabled;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_surface_emphasis_high_type = global::DroidMatika.Android.Resource.Color.material_on_surface_emphasis_high_type;
+			global::Xamarin.CommunityToolkit.Resource.Color.material_on_surface_emphasis_medium = global::DroidMatika.Android.Resource.Color.material_on_surface_emphasis_medium;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::DroidMatika.Android.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_bottom_nav_colored_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_bottom_nav_colored_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_bottom_nav_item_tint = global::DroidMatika.Android.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_bottom_nav_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_bottom_nav_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_bg_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_btn_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_stroke_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_text_btn_bg_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_btn_text_btn_bg_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_text_btn_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_text_color_disabled = global::DroidMatika.Android.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_text_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_btn_text_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_btn_transparent_bg_color = global::DroidMatika.Android.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_calendar_item_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_calendar_item_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_calendar_selected_range = global::DroidMatika.Android.Resource.Color.mtrl_calendar_selected_range;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_card_view_foreground = global::DroidMatika.Android.Resource.Color.mtrl_card_view_foreground;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_card_view_ripple = global::DroidMatika.Android.Resource.Color.mtrl_card_view_ripple;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_chip_background_color = global::DroidMatika.Android.Resource.Color.mtrl_chip_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_chip_close_icon_tint = global::DroidMatika.Android.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_chip_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_chip_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_chip_surface_color = global::DroidMatika.Android.Resource.Color.mtrl_chip_surface_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_chip_text_color = global::DroidMatika.Android.Resource.Color.mtrl_chip_text_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_choice_chip_background_color = global::DroidMatika.Android.Resource.Color.mtrl_choice_chip_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_choice_chip_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_choice_chip_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_choice_chip_text_color = global::DroidMatika.Android.Resource.Color.mtrl_choice_chip_text_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_error = global::DroidMatika.Android.Resource.Color.mtrl_error;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_fab_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_fab_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_filled_background_color = global::DroidMatika.Android.Resource.Color.mtrl_filled_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_filled_icon_tint = global::DroidMatika.Android.Resource.Color.mtrl_filled_icon_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_filled_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_filled_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_indicator_text_color = global::DroidMatika.Android.Resource.Color.mtrl_indicator_text_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_navigation_item_background_color = global::DroidMatika.Android.Resource.Color.mtrl_navigation_item_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_navigation_item_icon_tint = global::DroidMatika.Android.Resource.Color.mtrl_navigation_item_icon_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_navigation_item_text_color = global::DroidMatika.Android.Resource.Color.mtrl_navigation_item_text_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_on_primary_text_btn_text_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_on_primary_text_btn_text_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_outlined_icon_tint = global::DroidMatika.Android.Resource.Color.mtrl_outlined_icon_tint;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_outlined_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_outlined_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_popupmenu_overlay_color = global::DroidMatika.Android.Resource.Color.mtrl_popupmenu_overlay_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_scrim_color = global::DroidMatika.Android.Resource.Color.mtrl_scrim_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_tabs_colored_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_tabs_icon_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::DroidMatika.Android.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_tabs_ripple_color = global::DroidMatika.Android.Resource.Color.mtrl_tabs_ripple_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_textinput_default_box_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_textinput_disabled_color = global::DroidMatika.Android.Resource.Color.mtrl_textinput_disabled_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::DroidMatika.Android.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_textinput_focused_box_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_textinput_focused_box_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::DroidMatika.Android.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.mtrl_text_btn_text_color_selector = global::DroidMatika.Android.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Xamarin.CommunityToolkit.Resource.Color.notification_action_color_filter = global::DroidMatika.Android.Resource.Color.notification_action_color_filter;
+			global::Xamarin.CommunityToolkit.Resource.Color.notification_icon_bg_color = global::DroidMatika.Android.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.notification_material_background_media_default_color = global::DroidMatika.Android.Resource.Color.notification_material_background_media_default_color;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_dark_material_dark = global::DroidMatika.Android.Resource.Color.primary_dark_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_dark_material_light = global::DroidMatika.Android.Resource.Color.primary_dark_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_material_dark = global::DroidMatika.Android.Resource.Color.primary_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_material_light = global::DroidMatika.Android.Resource.Color.primary_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_text_default_material_dark = global::DroidMatika.Android.Resource.Color.primary_text_default_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_text_default_material_light = global::DroidMatika.Android.Resource.Color.primary_text_default_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_text_disabled_material_dark = global::DroidMatika.Android.Resource.Color.primary_text_disabled_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.primary_text_disabled_material_light = global::DroidMatika.Android.Resource.Color.primary_text_disabled_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.ripple_material_dark = global::DroidMatika.Android.Resource.Color.ripple_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.ripple_material_light = global::DroidMatika.Android.Resource.Color.ripple_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.secondary_text_default_material_dark = global::DroidMatika.Android.Resource.Color.secondary_text_default_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.secondary_text_default_material_light = global::DroidMatika.Android.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.secondary_text_disabled_material_dark = global::DroidMatika.Android.Resource.Color.secondary_text_disabled_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.secondary_text_disabled_material_light = global::DroidMatika.Android.Resource.Color.secondary_text_disabled_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_disabled_material_dark = global::DroidMatika.Android.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_disabled_material_light = global::DroidMatika.Android.Resource.Color.switch_thumb_disabled_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_material_dark = global::DroidMatika.Android.Resource.Color.switch_thumb_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_material_light = global::DroidMatika.Android.Resource.Color.switch_thumb_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_normal_material_dark = global::DroidMatika.Android.Resource.Color.switch_thumb_normal_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.switch_thumb_normal_material_light = global::DroidMatika.Android.Resource.Color.switch_thumb_normal_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Color.test_mtrl_calendar_day = global::DroidMatika.Android.Resource.Color.test_mtrl_calendar_day;
+			global::Xamarin.CommunityToolkit.Resource.Color.test_mtrl_calendar_day_selected = global::DroidMatika.Android.Resource.Color.test_mtrl_calendar_day_selected;
+			global::Xamarin.CommunityToolkit.Resource.Color.tooltip_background_dark = global::DroidMatika.Android.Resource.Color.tooltip_background_dark;
+			global::Xamarin.CommunityToolkit.Resource.Color.tooltip_background_light = global::DroidMatika.Android.Resource.Color.tooltip_background_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_content_inset_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_default_height_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_default_padding_end_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_default_padding_start_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_elevation_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_stacked_max_height = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::DroidMatika.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_button_min_height_material = global::DroidMatika.Android.Resource.Dimension.abc_action_button_min_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_button_min_width_material = global::DroidMatika.Android.Resource.Dimension.abc_action_button_min_width_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_action_button_min_width_overflow_material = global::DroidMatika.Android.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_alert_dialog_button_bar_height = global::DroidMatika.Android.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_alert_dialog_button_dimen = global::DroidMatika.Android.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_button_inset_horizontal_material = global::DroidMatika.Android.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_button_inset_vertical_material = global::DroidMatika.Android.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_button_padding_horizontal_material = global::DroidMatika.Android.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_button_padding_vertical_material = global::DroidMatika.Android.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::DroidMatika.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_config_prefDialogWidth = global::DroidMatika.Android.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_control_corner_material = global::DroidMatika.Android.Resource.Dimension.abc_control_corner_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_control_inset_material = global::DroidMatika.Android.Resource.Dimension.abc_control_inset_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_control_padding_material = global::DroidMatika.Android.Resource.Dimension.abc_control_padding_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_corner_radius_material = global::DroidMatika.Android.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_fixed_height_major = global::DroidMatika.Android.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_fixed_height_minor = global::DroidMatika.Android.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_fixed_width_major = global::DroidMatika.Android.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_fixed_width_minor = global::DroidMatika.Android.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::DroidMatika.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::DroidMatika.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_min_width_major = global::DroidMatika.Android.Resource.Dimension.abc_dialog_min_width_major;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_min_width_minor = global::DroidMatika.Android.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_padding_material = global::DroidMatika.Android.Resource.Dimension.abc_dialog_padding_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_padding_top_material = global::DroidMatika.Android.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dialog_title_divider_material = global::DroidMatika.Android.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_disabled_alpha_material_dark = global::DroidMatika.Android.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_disabled_alpha_material_light = global::DroidMatika.Android.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dropdownitem_icon_width = global::DroidMatika.Android.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dropdownitem_text_padding_left = global::DroidMatika.Android.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_dropdownitem_text_padding_right = global::DroidMatika.Android.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_edit_text_inset_bottom_material = global::DroidMatika.Android.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::DroidMatika.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_edit_text_inset_top_material = global::DroidMatika.Android.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_floating_window_z = global::DroidMatika.Android.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_list_item_height_large_material = global::DroidMatika.Android.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_list_item_height_material = global::DroidMatika.Android.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_list_item_height_small_material = global::DroidMatika.Android.Resource.Dimension.abc_list_item_height_small_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_list_item_padding_horizontal_material = global::DroidMatika.Android.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_panel_menu_list_width = global::DroidMatika.Android.Resource.Dimension.abc_panel_menu_list_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_progress_bar_height_material = global::DroidMatika.Android.Resource.Dimension.abc_progress_bar_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_search_view_preferred_height = global::DroidMatika.Android.Resource.Dimension.abc_search_view_preferred_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_search_view_preferred_width = global::DroidMatika.Android.Resource.Dimension.abc_search_view_preferred_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_seekbar_track_background_height_material = global::DroidMatika.Android.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_seekbar_track_progress_height_material = global::DroidMatika.Android.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_select_dialog_padding_start_material = global::DroidMatika.Android.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_switch_padding = global::DroidMatika.Android.Resource.Dimension.abc_switch_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_body_1_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_body_1_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_body_2_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_body_2_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_button_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_button_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_caption_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_caption_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_display_1_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_display_1_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_display_2_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_display_2_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_display_3_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_display_3_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_display_4_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_display_4_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_headline_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_headline_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_large_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_large_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_medium_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_medium_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_menu_header_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_menu_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_menu_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_small_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_small_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_subhead_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_subhead_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::DroidMatika.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_title_material = global::DroidMatika.Android.Resource.Dimension.abc_text_size_title_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.abc_text_size_title_material_toolbar = global::DroidMatika.Android.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.action_bar_size = global::DroidMatika.Android.Resource.Dimension.action_bar_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.appcompat_dialog_background_inset = global::DroidMatika.Android.Resource.Dimension.appcompat_dialog_background_inset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.browser_actions_context_menu_max_width = global::DroidMatika.Android.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.browser_actions_context_menu_min_padding = global::DroidMatika.Android.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.cardview_compat_inset_shadow = global::DroidMatika.Android.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.cardview_default_elevation = global::DroidMatika.Android.Resource.Dimension.cardview_default_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.cardview_default_radius = global::DroidMatika.Android.Resource.Dimension.cardview_default_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_button_inset_horizontal_material = global::DroidMatika.Android.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_button_inset_vertical_material = global::DroidMatika.Android.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_button_padding_horizontal_material = global::DroidMatika.Android.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_button_padding_vertical_material = global::DroidMatika.Android.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_control_corner_material = global::DroidMatika.Android.Resource.Dimension.compat_control_corner_material;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_notification_large_icon_max_height = global::DroidMatika.Android.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.compat_notification_large_icon_max_width = global::DroidMatika.Android.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.default_dimension = global::DroidMatika.Android.Resource.Dimension.default_dimension;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.def_drawer_elevation = global::DroidMatika.Android.Resource.Dimension.def_drawer_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_appbar_elevation = global::DroidMatika.Android.Resource.Dimension.design_appbar_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_active_text_size = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_elevation = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_height = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_icon_size = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_item_max_width = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_item_min_width = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_margin = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_shadow_height = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_navigation_text_size = global::DroidMatika.Android.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_sheet_elevation = global::DroidMatika.Android.Resource.Dimension.design_bottom_sheet_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_sheet_modal_elevation = global::DroidMatika.Android.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_bottom_sheet_peek_height_min = global::DroidMatika.Android.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_border_width = global::DroidMatika.Android.Resource.Dimension.design_fab_border_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_elevation = global::DroidMatika.Android.Resource.Dimension.design_fab_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_image_size = global::DroidMatika.Android.Resource.Dimension.design_fab_image_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_size_mini = global::DroidMatika.Android.Resource.Dimension.design_fab_size_mini;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_size_normal = global::DroidMatika.Android.Resource.Dimension.design_fab_size_normal;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_translation_z_hovered_focused = global::DroidMatika.Android.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_fab_translation_z_pressed = global::DroidMatika.Android.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_elevation = global::DroidMatika.Android.Resource.Dimension.design_navigation_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_icon_padding = global::DroidMatika.Android.Resource.Dimension.design_navigation_icon_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_icon_size = global::DroidMatika.Android.Resource.Dimension.design_navigation_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_item_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_item_icon_padding = global::DroidMatika.Android.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_max_width = global::DroidMatika.Android.Resource.Dimension.design_navigation_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_padding_bottom = global::DroidMatika.Android.Resource.Dimension.design_navigation_padding_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_navigation_separator_vertical_padding = global::DroidMatika.Android.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_action_inline_max_width = global::DroidMatika.Android.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_action_text_color_alpha = global::DroidMatika.Android.Resource.Dimension.design_snackbar_action_text_color_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_background_corner_radius = global::DroidMatika.Android.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_elevation = global::DroidMatika.Android.Resource.Dimension.design_snackbar_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::DroidMatika.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_max_width = global::DroidMatika.Android.Resource.Dimension.design_snackbar_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_min_width = global::DroidMatika.Android.Resource.Dimension.design_snackbar_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_padding_horizontal = global::DroidMatika.Android.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_padding_vertical = global::DroidMatika.Android.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::DroidMatika.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_snackbar_text_size = global::DroidMatika.Android.Resource.Dimension.design_snackbar_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_tab_max_width = global::DroidMatika.Android.Resource.Dimension.design_tab_max_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_tab_scrollable_min_width = global::DroidMatika.Android.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_tab_text_size = global::DroidMatika.Android.Resource.Dimension.design_tab_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_tab_text_size_2line = global::DroidMatika.Android.Resource.Dimension.design_tab_text_size_2line;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.design_textinput_caption_translate_y = global::DroidMatika.Android.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.disabled_alpha_material_dark = global::DroidMatika.Android.Resource.Dimension.disabled_alpha_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.disabled_alpha_material_light = global::DroidMatika.Android.Resource.Dimension.disabled_alpha_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.fastscroll_default_thickness = global::DroidMatika.Android.Resource.Dimension.fastscroll_default_thickness;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.fastscroll_margin = global::DroidMatika.Android.Resource.Dimension.fastscroll_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.fastscroll_minimum_range = global::DroidMatika.Android.Resource.Dimension.fastscroll_minimum_range;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.highlight_alpha_material_colored = global::DroidMatika.Android.Resource.Dimension.highlight_alpha_material_colored;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.highlight_alpha_material_dark = global::DroidMatika.Android.Resource.Dimension.highlight_alpha_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.highlight_alpha_material_light = global::DroidMatika.Android.Resource.Dimension.highlight_alpha_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.hint_alpha_material_dark = global::DroidMatika.Android.Resource.Dimension.hint_alpha_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.hint_alpha_material_light = global::DroidMatika.Android.Resource.Dimension.hint_alpha_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.hint_pressed_alpha_material_dark = global::DroidMatika.Android.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.hint_pressed_alpha_material_light = global::DroidMatika.Android.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::DroidMatika.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::DroidMatika.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::DroidMatika.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.material_emphasis_disabled = global::DroidMatika.Android.Resource.Dimension.material_emphasis_disabled;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.material_emphasis_high_type = global::DroidMatika.Android.Resource.Dimension.material_emphasis_high_type;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.material_emphasis_medium = global::DroidMatika.Android.Resource.Dimension.material_emphasis_medium;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.material_text_view_test_line_height = global::DroidMatika.Android.Resource.Dimension.material_text_view_test_line_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.material_text_view_test_line_height_override = global::DroidMatika.Android.Resource.Dimension.material_text_view_test_line_height_override;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom = global::DroidMatika.Android.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_alert_dialog_background_inset_end = global::DroidMatika.Android.Resource.Dimension.mtrl_alert_dialog_background_inset_end;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_alert_dialog_background_inset_start = global::DroidMatika.Android.Resource.Dimension.mtrl_alert_dialog_background_inset_start;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_alert_dialog_background_inset_top = global::DroidMatika.Android.Resource.Dimension.mtrl_alert_dialog_background_inset_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_alert_dialog_picker_background_inset = global::DroidMatika.Android.Resource.Dimension.mtrl_alert_dialog_picker_background_inset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_horizontal_edge_offset = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_horizontal_edge_offset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_long_text_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_long_text_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_text_size = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_badge_with_text_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_badge_with_text_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_bottomappbar_height = global::DroidMatika.Android.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_corner_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_disabled_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_disabled_z = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_focused_z = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_focused_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_hovered_z = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_icon_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_inset = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_inset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_letter_spacing = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_padding_bottom = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_padding_left = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_padding_left;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_padding_right = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_padding_right;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_padding_top = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_padding_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_pressed_z = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_stroke_size = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_text_size = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_btn_z = global::DroidMatika.Android.Resource.Dimension.mtrl_btn_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_action_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_action_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_action_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_action_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_bottom_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_bottom_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_content_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_content_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_days_of_week_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_days_of_week_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_corner = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_corner;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_today_stroke = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_today_stroke;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_vertical_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_day_width = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_day_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_dialog_background_inset = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_dialog_background_inset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_content_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_content_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_divider_thickness = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_divider_thickness;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_height_fullscreen = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_height_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_selection_line_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_selection_line_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_text_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_text_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_header_toggle_margin_top = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_header_toggle_margin_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_landscape_header_width = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_landscape_header_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_month_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_month_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_month_vertical_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_month_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_navigation_bottom_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_navigation_bottom_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_navigation_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_navigation_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_navigation_top_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_navigation_top_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_text_input_padding_top = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_text_input_padding_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_title_baseline_to_top = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_title_baseline_to_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_year_corner = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_year_corner;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_year_height = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_year_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_year_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_year_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_year_vertical_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_year_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_calendar_year_width = global::DroidMatika.Android.Resource.Dimension.mtrl_calendar_year_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_checked_icon_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_card_checked_icon_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_checked_icon_size = global::DroidMatika.Android.Resource.Dimension.mtrl_card_checked_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_corner_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_card_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_dragged_z = global::DroidMatika.Android.Resource.Dimension.mtrl_card_dragged_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_card_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_card_spacing = global::DroidMatika.Android.Resource.Dimension.mtrl_card_spacing;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_chip_pressed_translation_z = global::DroidMatika.Android.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_chip_text_size = global::DroidMatika.Android.Resource.Dimension.mtrl_chip_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset = global::DroidMatika.Android.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_bottom_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_bottom_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_corner_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_disabled_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_disabled_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_disabled_translation_z = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_disabled_translation_z;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_end_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_end_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_end_padding_icon = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_end_padding_icon;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_icon_size = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_icon_text_spacing = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_icon_text_spacing;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_min_height = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_min_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_min_width = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_min_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_start_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_start_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_start_padding_icon = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_start_padding_icon;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_top_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_top_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_translation_z_base = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_translation_z_base;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_extended_fab_translation_z_pressed = global::DroidMatika.Android.Resource.Dimension.mtrl_extended_fab_translation_z_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_fab_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_fab_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_fab_min_touch_target = global::DroidMatika.Android.Resource.Dimension.mtrl_fab_min_touch_target;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::DroidMatika.Android.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_fab_translation_z_pressed = global::DroidMatika.Android.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_high_ripple_default_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_high_ripple_default_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_high_ripple_focused_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_high_ripple_focused_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_high_ripple_hovered_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_high_ripple_hovered_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_high_ripple_pressed_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_high_ripple_pressed_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_large_touch_target = global::DroidMatika.Android.Resource.Dimension.mtrl_large_touch_target;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_low_ripple_default_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_low_ripple_default_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_low_ripple_focused_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_low_ripple_focused_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_low_ripple_hovered_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_low_ripple_hovered_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_low_ripple_pressed_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_low_ripple_pressed_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_min_touch_target_size = global::DroidMatika.Android.Resource.Dimension.mtrl_min_touch_target_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_item_icon_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_item_icon_size = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_item_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_shape_corner_size_large_component = global::DroidMatika.Android.Resource.Dimension.mtrl_shape_corner_size_large_component;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_shape_corner_size_medium_component = global::DroidMatika.Android.Resource.Dimension.mtrl_shape_corner_size_medium_component;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_shape_corner_size_small_component = global::DroidMatika.Android.Resource.Dimension.mtrl_shape_corner_size_small_component;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_snackbar_action_text_color_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_snackbar_action_text_color_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::DroidMatika.Android.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha = global::DroidMatika.Android.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_snackbar_margin = global::DroidMatika.Android.Resource.Dimension.mtrl_snackbar_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_switch_thumb_elevation = global::DroidMatika.Android.Resource.Dimension.mtrl_switch_thumb_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_end_icon_margin_start = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_end_icon_margin_start;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_textinput_start_icon_margin_end = global::DroidMatika.Android.Resource.Dimension.mtrl_textinput_start_icon_margin_end;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.mtrl_toolbar_default_height = global::DroidMatika.Android.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_action_icon_size = global::DroidMatika.Android.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_action_text_size = global::DroidMatika.Android.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_big_circle_margin = global::DroidMatika.Android.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_content_margin_start = global::DroidMatika.Android.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_large_icon_height = global::DroidMatika.Android.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_large_icon_width = global::DroidMatika.Android.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_main_column_padding_top = global::DroidMatika.Android.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_media_narrow_margin = global::DroidMatika.Android.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_right_icon_size = global::DroidMatika.Android.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_right_side_padding_top = global::DroidMatika.Android.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_small_icon_background_padding = global::DroidMatika.Android.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_small_icon_size_as_large = global::DroidMatika.Android.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_subtext_size = global::DroidMatika.Android.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_top_pad = global::DroidMatika.Android.Resource.Dimension.notification_top_pad;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.notification_top_pad_large_text = global::DroidMatika.Android.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.test_mtrl_calendar_day_cornerSize = global::DroidMatika.Android.Resource.Dimension.test_mtrl_calendar_day_cornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_corner_radius = global::DroidMatika.Android.Resource.Dimension.tooltip_corner_radius;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_horizontal_padding = global::DroidMatika.Android.Resource.Dimension.tooltip_horizontal_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_margin = global::DroidMatika.Android.Resource.Dimension.tooltip_margin;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::DroidMatika.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_precise_anchor_threshold = global::DroidMatika.Android.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_vertical_padding = global::DroidMatika.Android.Resource.Dimension.tooltip_vertical_padding;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_y_offset_non_touch = global::DroidMatika.Android.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Xamarin.CommunityToolkit.Resource.Dimension.tooltip_y_offset_touch = global::DroidMatika.Android.Resource.Dimension.tooltip_y_offset_touch;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_action_bar_item_background_material = global::DroidMatika.Android.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_borderless_material = global::DroidMatika.Android.Resource.Drawable.abc_btn_borderless_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_check_material = global::DroidMatika.Android.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_check_material_anim = global::DroidMatika.Android.Resource.Drawable.abc_btn_check_material_anim;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::DroidMatika.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::DroidMatika.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_colored_material = global::DroidMatika.Android.Resource.Drawable.abc_btn_colored_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_default_mtrl_shape = global::DroidMatika.Android.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_radio_material = global::DroidMatika.Android.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_radio_material_anim = global::DroidMatika.Android.Resource.Drawable.abc_btn_radio_material_anim;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::DroidMatika.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::DroidMatika.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::DroidMatika.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::DroidMatika.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_cab_background_internal_bg = global::DroidMatika.Android.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_cab_background_top_material = global::DroidMatika.Android.Resource.Drawable.abc_cab_background_top_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_control_background_material = global::DroidMatika.Android.Resource.Drawable.abc_control_background_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_dialog_material_background = global::DroidMatika.Android.Resource.Drawable.abc_dialog_material_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_edit_text_material = global::DroidMatika.Android.Resource.Drawable.abc_edit_text_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_ab_back_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_ab_back_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_clear_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_clear_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_go_search_api_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_overflow_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_search_api_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_search_api_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_black_16dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_black_36dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_black_48dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_half_black_16dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_half_black_36dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_star_half_black_48dp = global::DroidMatika.Android.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ic_voice_search_api_material = global::DroidMatika.Android.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_item_background_holo_dark = global::DroidMatika.Android.Resource.Drawable.abc_item_background_holo_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_item_background_holo_light = global::DroidMatika.Android.Resource.Drawable.abc_item_background_holo_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_divider_material = global::DroidMatika.Android.Resource.Drawable.abc_list_divider_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_divider_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_focused_holo = global::DroidMatika.Android.Resource.Drawable.abc_list_focused_holo;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_longpressed_holo = global::DroidMatika.Android.Resource.Drawable.abc_list_longpressed_holo;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_pressed_holo_dark = global::DroidMatika.Android.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_pressed_holo_light = global::DroidMatika.Android.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_disabled_holo_light = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_holo_dark = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_list_selector_holo_light = global::DroidMatika.Android.Resource.Drawable.abc_list_selector_holo_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::DroidMatika.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_popup_background_mtrl_mult = global::DroidMatika.Android.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ratingbar_indicator_material = global::DroidMatika.Android.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ratingbar_material = global::DroidMatika.Android.Resource.Drawable.abc_ratingbar_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_ratingbar_small_material = global::DroidMatika.Android.Resource.Drawable.abc_ratingbar_small_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::DroidMatika.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::DroidMatika.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_seekbar_thumb_material = global::DroidMatika.Android.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_seekbar_tick_mark_material = global::DroidMatika.Android.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_seekbar_track_material = global::DroidMatika.Android.Resource.Drawable.abc_seekbar_track_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::DroidMatika.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_spinner_textfield_background_material = global::DroidMatika.Android.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_switch_thumb_material = global::DroidMatika.Android.Resource.Drawable.abc_switch_thumb_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_switch_track_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_tab_indicator_material = global::DroidMatika.Android.Resource.Drawable.abc_tab_indicator_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::DroidMatika.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_textfield_search_material = global::DroidMatika.Android.Resource.Drawable.abc_textfield_search_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_cursor_material = global::DroidMatika.Android.Resource.Drawable.abc_text_cursor_material;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::DroidMatika.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.abc_vector_test = global::DroidMatika.Android.Resource.Drawable.abc_vector_test;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.avd_hide_password = global::DroidMatika.Android.Resource.Drawable.avd_hide_password;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.avd_show_password = global::DroidMatika.Android.Resource.Drawable.avd_show_password;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_checkbox_checked_mtrl = global::DroidMatika.Android.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::DroidMatika.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::DroidMatika.Android.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::DroidMatika.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_radio_off_mtrl = global::DroidMatika.Android.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::DroidMatika.Android.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_radio_on_mtrl = global::DroidMatika.Android.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::DroidMatika.Android.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_bottom_navigation_item_background = global::DroidMatika.Android.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_fab_background = global::DroidMatika.Android.Resource.Drawable.design_fab_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_ic_visibility = global::DroidMatika.Android.Resource.Drawable.design_ic_visibility;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_ic_visibility_off = global::DroidMatika.Android.Resource.Drawable.design_ic_visibility_off;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_password_eye = global::DroidMatika.Android.Resource.Drawable.design_password_eye;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.design_snackbar_background = global::DroidMatika.Android.Resource.Drawable.design_snackbar_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.ic_mtrl_checked_circle = global::DroidMatika.Android.Resource.Drawable.ic_mtrl_checked_circle;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.ic_mtrl_chip_checked_black = global::DroidMatika.Android.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.ic_mtrl_chip_checked_circle = global::DroidMatika.Android.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.ic_mtrl_chip_close_circle = global::DroidMatika.Android.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_dialog_background = global::DroidMatika.Android.Resource.Drawable.mtrl_dialog_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_dropdown_arrow = global::DroidMatika.Android.Resource.Drawable.mtrl_dropdown_arrow;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_ic_arrow_drop_down = global::DroidMatika.Android.Resource.Drawable.mtrl_ic_arrow_drop_down;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_ic_arrow_drop_up = global::DroidMatika.Android.Resource.Drawable.mtrl_ic_arrow_drop_up;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_ic_cancel = global::DroidMatika.Android.Resource.Drawable.mtrl_ic_cancel;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_ic_error = global::DroidMatika.Android.Resource.Drawable.mtrl_ic_error;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_popupmenu_background = global::DroidMatika.Android.Resource.Drawable.mtrl_popupmenu_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_popupmenu_background_dark = global::DroidMatika.Android.Resource.Drawable.mtrl_popupmenu_background_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.mtrl_tabs_default_indicator = global::DroidMatika.Android.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.navigation_empty_icon = global::DroidMatika.Android.Resource.Drawable.navigation_empty_icon;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_action_background = global::DroidMatika.Android.Resource.Drawable.notification_action_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg = global::DroidMatika.Android.Resource.Drawable.notification_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg_low = global::DroidMatika.Android.Resource.Drawable.notification_bg_low;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg_low_normal = global::DroidMatika.Android.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg_low_pressed = global::DroidMatika.Android.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg_normal = global::DroidMatika.Android.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_bg_normal_pressed = global::DroidMatika.Android.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_icon_background = global::DroidMatika.Android.Resource.Drawable.notification_icon_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_template_icon_bg = global::DroidMatika.Android.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_template_icon_low_bg = global::DroidMatika.Android.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notification_tile_bg = global::DroidMatika.Android.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.notify_panel_notification_icon_bg = global::DroidMatika.Android.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.test_custom_background = global::DroidMatika.Android.Resource.Drawable.test_custom_background;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.tooltip_frame_dark = global::DroidMatika.Android.Resource.Drawable.tooltip_frame_dark;
+			global::Xamarin.CommunityToolkit.Resource.Drawable.tooltip_frame_light = global::DroidMatika.Android.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_action_clickable_span = global::DroidMatika.Android.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_0 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_1 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_10 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_11 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_12 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_13 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_14 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_15 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_16 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_17 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_18 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_19 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_2 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_20 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_21 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_22 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_23 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_24 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_25 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_26 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_27 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_28 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_29 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_3 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_30 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_31 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_4 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_5 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_6 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_7 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_8 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.CommunityToolkit.Resource.Id.accessibility_custom_action_9 = global::DroidMatika.Android.Resource.Id.accessibility_custom_action_9;
+			global::Xamarin.CommunityToolkit.Resource.Id.action0 = global::DroidMatika.Android.Resource.Id.action0;
+			global::Xamarin.CommunityToolkit.Resource.Id.actions = global::DroidMatika.Android.Resource.Id.actions;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar = global::DroidMatika.Android.Resource.Id.action_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_activity_content = global::DroidMatika.Android.Resource.Id.action_bar_activity_content;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_container = global::DroidMatika.Android.Resource.Id.action_bar_container;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_root = global::DroidMatika.Android.Resource.Id.action_bar_root;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_spinner = global::DroidMatika.Android.Resource.Id.action_bar_spinner;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_subtitle = global::DroidMatika.Android.Resource.Id.action_bar_subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_bar_title = global::DroidMatika.Android.Resource.Id.action_bar_title;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_container = global::DroidMatika.Android.Resource.Id.action_container;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_context_bar = global::DroidMatika.Android.Resource.Id.action_context_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_divider = global::DroidMatika.Android.Resource.Id.action_divider;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_image = global::DroidMatika.Android.Resource.Id.action_image;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_menu_divider = global::DroidMatika.Android.Resource.Id.action_menu_divider;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_menu_presenter = global::DroidMatika.Android.Resource.Id.action_menu_presenter;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_mode_bar = global::DroidMatika.Android.Resource.Id.action_mode_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_mode_bar_stub = global::DroidMatika.Android.Resource.Id.action_mode_bar_stub;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_mode_close_button = global::DroidMatika.Android.Resource.Id.action_mode_close_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.action_text = global::DroidMatika.Android.Resource.Id.action_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.activity_chooser_view_content = global::DroidMatika.Android.Resource.Id.activity_chooser_view_content;
+			global::Xamarin.CommunityToolkit.Resource.Id.add = global::DroidMatika.Android.Resource.Id.add;
+			global::Xamarin.CommunityToolkit.Resource.Id.alertTitle = global::DroidMatika.Android.Resource.Id.alertTitle;
+			global::Xamarin.CommunityToolkit.Resource.Id.all = global::DroidMatika.Android.Resource.Id.all;
+			global::Xamarin.CommunityToolkit.Resource.Id.ALT = global::DroidMatika.Android.Resource.Id.ALT;
+			global::Xamarin.CommunityToolkit.Resource.Id.always = global::DroidMatika.Android.Resource.Id.always;
+			global::Xamarin.CommunityToolkit.Resource.Id.async = global::DroidMatika.Android.Resource.Id.async;
+			global::Xamarin.CommunityToolkit.Resource.Id.auto = global::DroidMatika.Android.Resource.Id.auto;
+			global::Xamarin.CommunityToolkit.Resource.Id.beginning = global::DroidMatika.Android.Resource.Id.beginning;
+			global::Xamarin.CommunityToolkit.Resource.Id.blocking = global::DroidMatika.Android.Resource.Id.blocking;
+			global::Xamarin.CommunityToolkit.Resource.Id.bottom = global::DroidMatika.Android.Resource.Id.bottom;
+			global::Xamarin.CommunityToolkit.Resource.Id.bottomtab_navarea = global::DroidMatika.Android.Resource.Id.bottomtab_navarea;
+			global::Xamarin.CommunityToolkit.Resource.Id.bottomtab_tabbar = global::DroidMatika.Android.Resource.Id.bottomtab_tabbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.BOTTOM_END = global::DroidMatika.Android.Resource.Id.BOTTOM_END;
+			global::Xamarin.CommunityToolkit.Resource.Id.BOTTOM_START = global::DroidMatika.Android.Resource.Id.BOTTOM_START;
+			global::Xamarin.CommunityToolkit.Resource.Id.browser_actions_header_text = global::DroidMatika.Android.Resource.Id.browser_actions_header_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.browser_actions_menu_items = global::DroidMatika.Android.Resource.Id.browser_actions_menu_items;
+			global::Xamarin.CommunityToolkit.Resource.Id.browser_actions_menu_item_icon = global::DroidMatika.Android.Resource.Id.browser_actions_menu_item_icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.browser_actions_menu_item_text = global::DroidMatika.Android.Resource.Id.browser_actions_menu_item_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.browser_actions_menu_view = global::DroidMatika.Android.Resource.Id.browser_actions_menu_view;
+			global::Xamarin.CommunityToolkit.Resource.Id.buttonPanel = global::DroidMatika.Android.Resource.Id.buttonPanel;
+			global::Xamarin.CommunityToolkit.Resource.Id.cameratexture = global::DroidMatika.Android.Resource.Id.cameratexture;
+			global::Xamarin.CommunityToolkit.Resource.Id.cancel_action = global::DroidMatika.Android.Resource.Id.cancel_action;
+			global::Xamarin.CommunityToolkit.Resource.Id.cancel_button = global::DroidMatika.Android.Resource.Id.cancel_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.center = global::DroidMatika.Android.Resource.Id.center;
+			global::Xamarin.CommunityToolkit.Resource.Id.center_horizontal = global::DroidMatika.Android.Resource.Id.center_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Id.center_vertical = global::DroidMatika.Android.Resource.Id.center_vertical;
+			global::Xamarin.CommunityToolkit.Resource.Id.checkbox = global::DroidMatika.Android.Resource.Id.checkbox;
+			global::Xamarin.CommunityToolkit.Resource.Id.@checked = global::DroidMatika.Android.Resource.Id.@checked;
+			global::Xamarin.CommunityToolkit.Resource.Id.chip = global::DroidMatika.Android.Resource.Id.chip;
+			global::Xamarin.CommunityToolkit.Resource.Id.chip_group = global::DroidMatika.Android.Resource.Id.chip_group;
+			global::Xamarin.CommunityToolkit.Resource.Id.chronometer = global::DroidMatika.Android.Resource.Id.chronometer;
+			global::Xamarin.CommunityToolkit.Resource.Id.clear_text = global::DroidMatika.Android.Resource.Id.clear_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.clip_horizontal = global::DroidMatika.Android.Resource.Id.clip_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Id.clip_vertical = global::DroidMatika.Android.Resource.Id.clip_vertical;
+			global::Xamarin.CommunityToolkit.Resource.Id.collapseActionView = global::DroidMatika.Android.Resource.Id.collapseActionView;
+			global::Xamarin.CommunityToolkit.Resource.Id.confirm_button = global::DroidMatika.Android.Resource.Id.confirm_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.container = global::DroidMatika.Android.Resource.Id.container;
+			global::Xamarin.CommunityToolkit.Resource.Id.content = global::DroidMatika.Android.Resource.Id.content;
+			global::Xamarin.CommunityToolkit.Resource.Id.contentPanel = global::DroidMatika.Android.Resource.Id.contentPanel;
+			global::Xamarin.CommunityToolkit.Resource.Id.coordinator = global::DroidMatika.Android.Resource.Id.coordinator;
+			global::Xamarin.CommunityToolkit.Resource.Id.CTRL = global::DroidMatika.Android.Resource.Id.CTRL;
+			global::Xamarin.CommunityToolkit.Resource.Id.custom = global::DroidMatika.Android.Resource.Id.custom;
+			global::Xamarin.CommunityToolkit.Resource.Id.customPanel = global::DroidMatika.Android.Resource.Id.customPanel;
+			global::Xamarin.CommunityToolkit.Resource.Id.cut = global::DroidMatika.Android.Resource.Id.cut;
+			global::Xamarin.CommunityToolkit.Resource.Id.date_picker_actions = global::DroidMatika.Android.Resource.Id.date_picker_actions;
+			global::Xamarin.CommunityToolkit.Resource.Id.decor_content_parent = global::DroidMatika.Android.Resource.Id.decor_content_parent;
+			global::Xamarin.CommunityToolkit.Resource.Id.default_activity_button = global::DroidMatika.Android.Resource.Id.default_activity_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.design_bottom_sheet = global::DroidMatika.Android.Resource.Id.design_bottom_sheet;
+			global::Xamarin.CommunityToolkit.Resource.Id.design_menu_item_action_area = global::DroidMatika.Android.Resource.Id.design_menu_item_action_area;
+			global::Xamarin.CommunityToolkit.Resource.Id.design_menu_item_action_area_stub = global::DroidMatika.Android.Resource.Id.design_menu_item_action_area_stub;
+			global::Xamarin.CommunityToolkit.Resource.Id.design_menu_item_text = global::DroidMatika.Android.Resource.Id.design_menu_item_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.design_navigation_view = global::DroidMatika.Android.Resource.Id.design_navigation_view;
+			global::Xamarin.CommunityToolkit.Resource.Id.dialog_button = global::DroidMatika.Android.Resource.Id.dialog_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.disableHome = global::DroidMatika.Android.Resource.Id.disableHome;
+			global::Xamarin.CommunityToolkit.Resource.Id.dropdown_menu = global::DroidMatika.Android.Resource.Id.dropdown_menu;
+			global::Xamarin.CommunityToolkit.Resource.Id.edit_query = global::DroidMatika.Android.Resource.Id.edit_query;
+			global::Xamarin.CommunityToolkit.Resource.Id.end = global::DroidMatika.Android.Resource.Id.end;
+			global::Xamarin.CommunityToolkit.Resource.Id.end_padder = global::DroidMatika.Android.Resource.Id.end_padder;
+			global::Xamarin.CommunityToolkit.Resource.Id.enterAlways = global::DroidMatika.Android.Resource.Id.enterAlways;
+			global::Xamarin.CommunityToolkit.Resource.Id.enterAlwaysCollapsed = global::DroidMatika.Android.Resource.Id.enterAlwaysCollapsed;
+			global::Xamarin.CommunityToolkit.Resource.Id.exitUntilCollapsed = global::DroidMatika.Android.Resource.Id.exitUntilCollapsed;
+			global::Xamarin.CommunityToolkit.Resource.Id.expanded_menu = global::DroidMatika.Android.Resource.Id.expanded_menu;
+			global::Xamarin.CommunityToolkit.Resource.Id.expand_activities_button = global::DroidMatika.Android.Resource.Id.expand_activities_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.fade = global::DroidMatika.Android.Resource.Id.fade;
+			global::Xamarin.CommunityToolkit.Resource.Id.fill = global::DroidMatika.Android.Resource.Id.fill;
+			global::Xamarin.CommunityToolkit.Resource.Id.filled = global::DroidMatika.Android.Resource.Id.filled;
+			global::Xamarin.CommunityToolkit.Resource.Id.fill_horizontal = global::DroidMatika.Android.Resource.Id.fill_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Id.fill_vertical = global::DroidMatika.Android.Resource.Id.fill_vertical;
+			global::Xamarin.CommunityToolkit.Resource.Id.fitToContents = global::DroidMatika.Android.Resource.Id.fitToContents;
+			global::Xamarin.CommunityToolkit.Resource.Id.@fixed = global::DroidMatika.Android.Resource.Id.@fixed;
+			global::Xamarin.CommunityToolkit.Resource.Id.flyoutcontent_appbar = global::DroidMatika.Android.Resource.Id.flyoutcontent_appbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.forever = global::DroidMatika.Android.Resource.Id.forever;
+			global::Xamarin.CommunityToolkit.Resource.Id.fragment_container_view_tag = global::DroidMatika.Android.Resource.Id.fragment_container_view_tag;
+			global::Xamarin.CommunityToolkit.Resource.Id.FUNCTION = global::DroidMatika.Android.Resource.Id.FUNCTION;
+			global::Xamarin.CommunityToolkit.Resource.Id.ghost_view = global::DroidMatika.Android.Resource.Id.ghost_view;
+			global::Xamarin.CommunityToolkit.Resource.Id.ghost_view_holder = global::DroidMatika.Android.Resource.Id.ghost_view_holder;
+			global::Xamarin.CommunityToolkit.Resource.Id.group_divider = global::DroidMatika.Android.Resource.Id.group_divider;
+			global::Xamarin.CommunityToolkit.Resource.Id.hideable = global::DroidMatika.Android.Resource.Id.hideable;
+			global::Xamarin.CommunityToolkit.Resource.Id.home = global::DroidMatika.Android.Resource.Id.home;
+			global::Xamarin.CommunityToolkit.Resource.Id.homeAsUp = global::DroidMatika.Android.Resource.Id.homeAsUp;
+			global::Xamarin.CommunityToolkit.Resource.Id.icon = global::DroidMatika.Android.Resource.Id.icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.icon_group = global::DroidMatika.Android.Resource.Id.icon_group;
+			global::Xamarin.CommunityToolkit.Resource.Id.ifRoom = global::DroidMatika.Android.Resource.Id.ifRoom;
+			global::Xamarin.CommunityToolkit.Resource.Id.image = global::DroidMatika.Android.Resource.Id.image;
+			global::Xamarin.CommunityToolkit.Resource.Id.info = global::DroidMatika.Android.Resource.Id.info;
+			global::Xamarin.CommunityToolkit.Resource.Id.italic = global::DroidMatika.Android.Resource.Id.italic;
+			global::Xamarin.CommunityToolkit.Resource.Id.item_touch_helper_previous_elevation = global::DroidMatika.Android.Resource.Id.item_touch_helper_previous_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Id.labeled = global::DroidMatika.Android.Resource.Id.labeled;
+			global::Xamarin.CommunityToolkit.Resource.Id.largeLabel = global::DroidMatika.Android.Resource.Id.largeLabel;
+			global::Xamarin.CommunityToolkit.Resource.Id.left = global::DroidMatika.Android.Resource.Id.left;
+			global::Xamarin.CommunityToolkit.Resource.Id.line1 = global::DroidMatika.Android.Resource.Id.line1;
+			global::Xamarin.CommunityToolkit.Resource.Id.line3 = global::DroidMatika.Android.Resource.Id.line3;
+			global::Xamarin.CommunityToolkit.Resource.Id.listMode = global::DroidMatika.Android.Resource.Id.listMode;
+			global::Xamarin.CommunityToolkit.Resource.Id.list_item = global::DroidMatika.Android.Resource.Id.list_item;
+			global::Xamarin.CommunityToolkit.Resource.Id.main_appbar = global::DroidMatika.Android.Resource.Id.main_appbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.main_tablayout = global::DroidMatika.Android.Resource.Id.main_tablayout;
+			global::Xamarin.CommunityToolkit.Resource.Id.main_toolbar = global::DroidMatika.Android.Resource.Id.main_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.main_viewpager = global::DroidMatika.Android.Resource.Id.main_viewpager;
+			global::Xamarin.CommunityToolkit.Resource.Id.masked = global::DroidMatika.Android.Resource.Id.masked;
+			global::Xamarin.CommunityToolkit.Resource.Id.media_actions = global::DroidMatika.Android.Resource.Id.media_actions;
+			global::Xamarin.CommunityToolkit.Resource.Id.media_controller_compat_view_tag = global::DroidMatika.Android.Resource.Id.media_controller_compat_view_tag;
+			global::Xamarin.CommunityToolkit.Resource.Id.message = global::DroidMatika.Android.Resource.Id.message;
+			global::Xamarin.CommunityToolkit.Resource.Id.META = global::DroidMatika.Android.Resource.Id.META;
+			global::Xamarin.CommunityToolkit.Resource.Id.middle = global::DroidMatika.Android.Resource.Id.middle;
+			global::Xamarin.CommunityToolkit.Resource.Id.mini = global::DroidMatika.Android.Resource.Id.mini;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_grid = global::DroidMatika.Android.Resource.Id.month_grid;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_navigation_bar = global::DroidMatika.Android.Resource.Id.month_navigation_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_navigation_fragment_toggle = global::DroidMatika.Android.Resource.Id.month_navigation_fragment_toggle;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_navigation_next = global::DroidMatika.Android.Resource.Id.month_navigation_next;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_navigation_previous = global::DroidMatika.Android.Resource.Id.month_navigation_previous;
+			global::Xamarin.CommunityToolkit.Resource.Id.month_title = global::DroidMatika.Android.Resource.Id.month_title;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_days_of_week = global::DroidMatika.Android.Resource.Id.mtrl_calendar_days_of_week;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_day_selector_frame = global::DroidMatika.Android.Resource.Id.mtrl_calendar_day_selector_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_frame = global::DroidMatika.Android.Resource.Id.mtrl_calendar_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_main_pane = global::DroidMatika.Android.Resource.Id.mtrl_calendar_main_pane;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_months = global::DroidMatika.Android.Resource.Id.mtrl_calendar_months;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_selection_frame = global::DroidMatika.Android.Resource.Id.mtrl_calendar_selection_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_text_input_frame = global::DroidMatika.Android.Resource.Id.mtrl_calendar_text_input_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_calendar_year_selector_frame = global::DroidMatika.Android.Resource.Id.mtrl_calendar_year_selector_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_card_checked_layer_id = global::DroidMatika.Android.Resource.Id.mtrl_card_checked_layer_id;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_child_content_container = global::DroidMatika.Android.Resource.Id.mtrl_child_content_container;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_internal_children_alpha_tag = global::DroidMatika.Android.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_fullscreen = global::DroidMatika.Android.Resource.Id.mtrl_picker_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_header = global::DroidMatika.Android.Resource.Id.mtrl_picker_header;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_header_selection_text = global::DroidMatika.Android.Resource.Id.mtrl_picker_header_selection_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_header_title_and_selection = global::DroidMatika.Android.Resource.Id.mtrl_picker_header_title_and_selection;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_header_toggle = global::DroidMatika.Android.Resource.Id.mtrl_picker_header_toggle;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_text_input_date = global::DroidMatika.Android.Resource.Id.mtrl_picker_text_input_date;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_text_input_range_end = global::DroidMatika.Android.Resource.Id.mtrl_picker_text_input_range_end;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_text_input_range_start = global::DroidMatika.Android.Resource.Id.mtrl_picker_text_input_range_start;
+			global::Xamarin.CommunityToolkit.Resource.Id.mtrl_picker_title_text = global::DroidMatika.Android.Resource.Id.mtrl_picker_title_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.multiply = global::DroidMatika.Android.Resource.Id.multiply;
+			global::Xamarin.CommunityToolkit.Resource.Id.navigation_header_container = global::DroidMatika.Android.Resource.Id.navigation_header_container;
+			global::Xamarin.CommunityToolkit.Resource.Id.never = global::DroidMatika.Android.Resource.Id.never;
+			global::Xamarin.CommunityToolkit.Resource.Id.none = global::DroidMatika.Android.Resource.Id.none;
+			global::Xamarin.CommunityToolkit.Resource.Id.normal = global::DroidMatika.Android.Resource.Id.normal;
+			global::Xamarin.CommunityToolkit.Resource.Id.noScroll = global::DroidMatika.Android.Resource.Id.noScroll;
+			global::Xamarin.CommunityToolkit.Resource.Id.notification_background = global::DroidMatika.Android.Resource.Id.notification_background;
+			global::Xamarin.CommunityToolkit.Resource.Id.notification_main_column = global::DroidMatika.Android.Resource.Id.notification_main_column;
+			global::Xamarin.CommunityToolkit.Resource.Id.notification_main_column_container = global::DroidMatika.Android.Resource.Id.notification_main_column_container;
+			global::Xamarin.CommunityToolkit.Resource.Id.off = global::DroidMatika.Android.Resource.Id.off;
+			global::Xamarin.CommunityToolkit.Resource.Id.on = global::DroidMatika.Android.Resource.Id.on;
+			global::Xamarin.CommunityToolkit.Resource.Id.outline = global::DroidMatika.Android.Resource.Id.outline;
+			global::Xamarin.CommunityToolkit.Resource.Id.parallax = global::DroidMatika.Android.Resource.Id.parallax;
+			global::Xamarin.CommunityToolkit.Resource.Id.parentPanel = global::DroidMatika.Android.Resource.Id.parentPanel;
+			global::Xamarin.CommunityToolkit.Resource.Id.parent_matrix = global::DroidMatika.Android.Resource.Id.parent_matrix;
+			global::Xamarin.CommunityToolkit.Resource.Id.password_toggle = global::DroidMatika.Android.Resource.Id.password_toggle;
+			global::Xamarin.CommunityToolkit.Resource.Id.peekHeight = global::DroidMatika.Android.Resource.Id.peekHeight;
+			global::Xamarin.CommunityToolkit.Resource.Id.pin = global::DroidMatika.Android.Resource.Id.pin;
+			global::Xamarin.CommunityToolkit.Resource.Id.progress_circular = global::DroidMatika.Android.Resource.Id.progress_circular;
+			global::Xamarin.CommunityToolkit.Resource.Id.progress_horizontal = global::DroidMatika.Android.Resource.Id.progress_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Id.radio = global::DroidMatika.Android.Resource.Id.radio;
+			global::Xamarin.CommunityToolkit.Resource.Id.right = global::DroidMatika.Android.Resource.Id.right;
+			global::Xamarin.CommunityToolkit.Resource.Id.right_icon = global::DroidMatika.Android.Resource.Id.right_icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.right_side = global::DroidMatika.Android.Resource.Id.right_side;
+			global::Xamarin.CommunityToolkit.Resource.Id.rounded = global::DroidMatika.Android.Resource.Id.rounded;
+			global::Xamarin.CommunityToolkit.Resource.Id.save_non_transition_alpha = global::DroidMatika.Android.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Id.save_overlay_view = global::DroidMatika.Android.Resource.Id.save_overlay_view;
+			global::Xamarin.CommunityToolkit.Resource.Id.scale = global::DroidMatika.Android.Resource.Id.scale;
+			global::Xamarin.CommunityToolkit.Resource.Id.screen = global::DroidMatika.Android.Resource.Id.screen;
+			global::Xamarin.CommunityToolkit.Resource.Id.scroll = global::DroidMatika.Android.Resource.Id.scroll;
+			global::Xamarin.CommunityToolkit.Resource.Id.scrollable = global::DroidMatika.Android.Resource.Id.scrollable;
+			global::Xamarin.CommunityToolkit.Resource.Id.scrollIndicatorDown = global::DroidMatika.Android.Resource.Id.scrollIndicatorDown;
+			global::Xamarin.CommunityToolkit.Resource.Id.scrollIndicatorUp = global::DroidMatika.Android.Resource.Id.scrollIndicatorUp;
+			global::Xamarin.CommunityToolkit.Resource.Id.scrollView = global::DroidMatika.Android.Resource.Id.scrollView;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_badge = global::DroidMatika.Android.Resource.Id.search_badge;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_bar = global::DroidMatika.Android.Resource.Id.search_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_button = global::DroidMatika.Android.Resource.Id.search_button;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_close_btn = global::DroidMatika.Android.Resource.Id.search_close_btn;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_edit_frame = global::DroidMatika.Android.Resource.Id.search_edit_frame;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_go_btn = global::DroidMatika.Android.Resource.Id.search_go_btn;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_mag_icon = global::DroidMatika.Android.Resource.Id.search_mag_icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_plate = global::DroidMatika.Android.Resource.Id.search_plate;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_src_text = global::DroidMatika.Android.Resource.Id.search_src_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.search_voice_btn = global::DroidMatika.Android.Resource.Id.search_voice_btn;
+			global::Xamarin.CommunityToolkit.Resource.Id.selected = global::DroidMatika.Android.Resource.Id.selected;
+			global::Xamarin.CommunityToolkit.Resource.Id.select_dialog_listview = global::DroidMatika.Android.Resource.Id.select_dialog_listview;
+			global::Xamarin.CommunityToolkit.Resource.Id.shellcontent_appbar = global::DroidMatika.Android.Resource.Id.shellcontent_appbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.shellcontent_toolbar = global::DroidMatika.Android.Resource.Id.shellcontent_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.SHIFT = global::DroidMatika.Android.Resource.Id.SHIFT;
+			global::Xamarin.CommunityToolkit.Resource.Id.shortcut = global::DroidMatika.Android.Resource.Id.shortcut;
+			global::Xamarin.CommunityToolkit.Resource.Id.showCustom = global::DroidMatika.Android.Resource.Id.showCustom;
+			global::Xamarin.CommunityToolkit.Resource.Id.showHome = global::DroidMatika.Android.Resource.Id.showHome;
+			global::Xamarin.CommunityToolkit.Resource.Id.showTitle = global::DroidMatika.Android.Resource.Id.showTitle;
+			global::Xamarin.CommunityToolkit.Resource.Id.skipCollapsed = global::DroidMatika.Android.Resource.Id.skipCollapsed;
+			global::Xamarin.CommunityToolkit.Resource.Id.slide = global::DroidMatika.Android.Resource.Id.slide;
+			global::Xamarin.CommunityToolkit.Resource.Id.sliding_tabs = global::DroidMatika.Android.Resource.Id.sliding_tabs;
+			global::Xamarin.CommunityToolkit.Resource.Id.smallLabel = global::DroidMatika.Android.Resource.Id.smallLabel;
+			global::Xamarin.CommunityToolkit.Resource.Id.snackbar_action = global::DroidMatika.Android.Resource.Id.snackbar_action;
+			global::Xamarin.CommunityToolkit.Resource.Id.snackbar_text = global::DroidMatika.Android.Resource.Id.snackbar_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.snap = global::DroidMatika.Android.Resource.Id.snap;
+			global::Xamarin.CommunityToolkit.Resource.Id.snapMargins = global::DroidMatika.Android.Resource.Id.snapMargins;
+			global::Xamarin.CommunityToolkit.Resource.Id.spacer = global::DroidMatika.Android.Resource.Id.spacer;
+			global::Xamarin.CommunityToolkit.Resource.Id.split_action_bar = global::DroidMatika.Android.Resource.Id.split_action_bar;
+			global::Xamarin.CommunityToolkit.Resource.Id.src_atop = global::DroidMatika.Android.Resource.Id.src_atop;
+			global::Xamarin.CommunityToolkit.Resource.Id.src_in = global::DroidMatika.Android.Resource.Id.src_in;
+			global::Xamarin.CommunityToolkit.Resource.Id.src_over = global::DroidMatika.Android.Resource.Id.src_over;
+			global::Xamarin.CommunityToolkit.Resource.Id.start = global::DroidMatika.Android.Resource.Id.start;
+			global::Xamarin.CommunityToolkit.Resource.Id.status_bar_latest_event_content = global::DroidMatika.Android.Resource.Id.status_bar_latest_event_content;
+			global::Xamarin.CommunityToolkit.Resource.Id.stretch = global::DroidMatika.Android.Resource.Id.stretch;
+			global::Xamarin.CommunityToolkit.Resource.Id.submenuarrow = global::DroidMatika.Android.Resource.Id.submenuarrow;
+			global::Xamarin.CommunityToolkit.Resource.Id.submit_area = global::DroidMatika.Android.Resource.Id.submit_area;
+			global::Xamarin.CommunityToolkit.Resource.Id.SYM = global::DroidMatika.Android.Resource.Id.SYM;
+			global::Xamarin.CommunityToolkit.Resource.Id.tabMode = global::DroidMatika.Android.Resource.Id.tabMode;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_accessibility_actions = global::DroidMatika.Android.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_accessibility_clickable_spans = global::DroidMatika.Android.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_accessibility_heading = global::DroidMatika.Android.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_accessibility_pane_title = global::DroidMatika.Android.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_screen_reader_focusable = global::DroidMatika.Android.Resource.Id.tag_screen_reader_focusable;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_transition_group = global::DroidMatika.Android.Resource.Id.tag_transition_group;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_unhandled_key_event_manager = global::DroidMatika.Android.Resource.Id.tag_unhandled_key_event_manager;
+			global::Xamarin.CommunityToolkit.Resource.Id.tag_unhandled_key_listeners = global::DroidMatika.Android.Resource.Id.tag_unhandled_key_listeners;
+			global::Xamarin.CommunityToolkit.Resource.Id.test_checkbox_android_button_tint = global::DroidMatika.Android.Resource.Id.test_checkbox_android_button_tint;
+			global::Xamarin.CommunityToolkit.Resource.Id.test_checkbox_app_button_tint = global::DroidMatika.Android.Resource.Id.test_checkbox_app_button_tint;
+			global::Xamarin.CommunityToolkit.Resource.Id.text = global::DroidMatika.Android.Resource.Id.text;
+			global::Xamarin.CommunityToolkit.Resource.Id.text2 = global::DroidMatika.Android.Resource.Id.text2;
+			global::Xamarin.CommunityToolkit.Resource.Id.textEnd = global::DroidMatika.Android.Resource.Id.textEnd;
+			global::Xamarin.CommunityToolkit.Resource.Id.textinput_counter = global::DroidMatika.Android.Resource.Id.textinput_counter;
+			global::Xamarin.CommunityToolkit.Resource.Id.textinput_error = global::DroidMatika.Android.Resource.Id.textinput_error;
+			global::Xamarin.CommunityToolkit.Resource.Id.textinput_helper_text = global::DroidMatika.Android.Resource.Id.textinput_helper_text;
+			global::Xamarin.CommunityToolkit.Resource.Id.textSpacerNoButtons = global::DroidMatika.Android.Resource.Id.textSpacerNoButtons;
+			global::Xamarin.CommunityToolkit.Resource.Id.textSpacerNoTitle = global::DroidMatika.Android.Resource.Id.textSpacerNoTitle;
+			global::Xamarin.CommunityToolkit.Resource.Id.textStart = global::DroidMatika.Android.Resource.Id.textStart;
+			global::Xamarin.CommunityToolkit.Resource.Id.text_input_end_icon = global::DroidMatika.Android.Resource.Id.text_input_end_icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.text_input_start_icon = global::DroidMatika.Android.Resource.Id.text_input_start_icon;
+			global::Xamarin.CommunityToolkit.Resource.Id.time = global::DroidMatika.Android.Resource.Id.time;
+			global::Xamarin.CommunityToolkit.Resource.Id.title = global::DroidMatika.Android.Resource.Id.title;
+			global::Xamarin.CommunityToolkit.Resource.Id.titleDividerNoCustom = global::DroidMatika.Android.Resource.Id.titleDividerNoCustom;
+			global::Xamarin.CommunityToolkit.Resource.Id.title_template = global::DroidMatika.Android.Resource.Id.title_template;
+			global::Xamarin.CommunityToolkit.Resource.Id.toolbar = global::DroidMatika.Android.Resource.Id.toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Id.top = global::DroidMatika.Android.Resource.Id.top;
+			global::Xamarin.CommunityToolkit.Resource.Id.topPanel = global::DroidMatika.Android.Resource.Id.topPanel;
+			global::Xamarin.CommunityToolkit.Resource.Id.TOP_END = global::DroidMatika.Android.Resource.Id.TOP_END;
+			global::Xamarin.CommunityToolkit.Resource.Id.TOP_START = global::DroidMatika.Android.Resource.Id.TOP_START;
+			global::Xamarin.CommunityToolkit.Resource.Id.touch_outside = global::DroidMatika.Android.Resource.Id.touch_outside;
+			global::Xamarin.CommunityToolkit.Resource.Id.transition_current_scene = global::DroidMatika.Android.Resource.Id.transition_current_scene;
+			global::Xamarin.CommunityToolkit.Resource.Id.transition_layout_save = global::DroidMatika.Android.Resource.Id.transition_layout_save;
+			global::Xamarin.CommunityToolkit.Resource.Id.transition_position = global::DroidMatika.Android.Resource.Id.transition_position;
+			global::Xamarin.CommunityToolkit.Resource.Id.transition_scene_layoutid_cache = global::DroidMatika.Android.Resource.Id.transition_scene_layoutid_cache;
+			global::Xamarin.CommunityToolkit.Resource.Id.transition_transform = global::DroidMatika.Android.Resource.Id.transition_transform;
+			global::Xamarin.CommunityToolkit.Resource.Id.@unchecked = global::DroidMatika.Android.Resource.Id.@unchecked;
+			global::Xamarin.CommunityToolkit.Resource.Id.uniform = global::DroidMatika.Android.Resource.Id.uniform;
+			global::Xamarin.CommunityToolkit.Resource.Id.unlabeled = global::DroidMatika.Android.Resource.Id.unlabeled;
+			global::Xamarin.CommunityToolkit.Resource.Id.up = global::DroidMatika.Android.Resource.Id.up;
+			global::Xamarin.CommunityToolkit.Resource.Id.useLogo = global::DroidMatika.Android.Resource.Id.useLogo;
+			global::Xamarin.CommunityToolkit.Resource.Id.view_offset_helper = global::DroidMatika.Android.Resource.Id.view_offset_helper;
+			global::Xamarin.CommunityToolkit.Resource.Id.view_tree_saved_state_registry_owner = global::DroidMatika.Android.Resource.Id.view_tree_saved_state_registry_owner;
+			global::Xamarin.CommunityToolkit.Resource.Id.visible = global::DroidMatika.Android.Resource.Id.visible;
+			global::Xamarin.CommunityToolkit.Resource.Id.visible_removing_fragment_view_tag = global::DroidMatika.Android.Resource.Id.visible_removing_fragment_view_tag;
+			global::Xamarin.CommunityToolkit.Resource.Id.withText = global::DroidMatika.Android.Resource.Id.withText;
+			global::Xamarin.CommunityToolkit.Resource.Id.wrap_content = global::DroidMatika.Android.Resource.Id.wrap_content;
+			global::Xamarin.CommunityToolkit.Resource.Integer.abc_config_activityDefaultDur = global::DroidMatika.Android.Resource.Integer.abc_config_activityDefaultDur;
+			global::Xamarin.CommunityToolkit.Resource.Integer.abc_config_activityShortDur = global::DroidMatika.Android.Resource.Integer.abc_config_activityShortDur;
+			global::Xamarin.CommunityToolkit.Resource.Integer.app_bar_elevation_anim_duration = global::DroidMatika.Android.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Xamarin.CommunityToolkit.Resource.Integer.bottom_sheet_slide_duration = global::DroidMatika.Android.Resource.Integer.bottom_sheet_slide_duration;
+			global::Xamarin.CommunityToolkit.Resource.Integer.cancel_button_image_alpha = global::DroidMatika.Android.Resource.Integer.cancel_button_image_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Integer.config_tooltipAnimTime = global::DroidMatika.Android.Resource.Integer.config_tooltipAnimTime;
+			global::Xamarin.CommunityToolkit.Resource.Integer.design_snackbar_text_max_lines = global::DroidMatika.Android.Resource.Integer.design_snackbar_text_max_lines;
+			global::Xamarin.CommunityToolkit.Resource.Integer.design_tab_indicator_anim_duration_ms = global::DroidMatika.Android.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.hide_password_duration = global::DroidMatika.Android.Resource.Integer.hide_password_duration;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_badge_max_character_count = global::DroidMatika.Android.Resource.Integer.mtrl_badge_max_character_count;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_btn_anim_delay_ms = global::DroidMatika.Android.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_btn_anim_duration_ms = global::DroidMatika.Android.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_calendar_header_orientation = global::DroidMatika.Android.Resource.Integer.mtrl_calendar_header_orientation;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_calendar_selection_text_lines = global::DroidMatika.Android.Resource.Integer.mtrl_calendar_selection_text_lines;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_calendar_year_selector_span = global::DroidMatika.Android.Resource.Integer.mtrl_calendar_year_selector_span;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_card_anim_delay_ms = global::DroidMatika.Android.Resource.Integer.mtrl_card_anim_delay_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_card_anim_duration_ms = global::DroidMatika.Android.Resource.Integer.mtrl_card_anim_duration_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_chip_anim_duration = global::DroidMatika.Android.Resource.Integer.mtrl_chip_anim_duration;
+			global::Xamarin.CommunityToolkit.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::DroidMatika.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Xamarin.CommunityToolkit.Resource.Integer.show_password_duration = global::DroidMatika.Android.Resource.Integer.show_password_duration;
+			global::Xamarin.CommunityToolkit.Resource.Integer.status_bar_notification_info_maxnum = global::DroidMatika.Android.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::DroidMatika.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::DroidMatika.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::DroidMatika.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::DroidMatika.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::DroidMatika.Android.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::DroidMatika.Android.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.fast_out_slow_in = global::DroidMatika.Android.Resource.Interpolator.fast_out_slow_in;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.mtrl_fast_out_linear_in = global::DroidMatika.Android.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.mtrl_fast_out_slow_in = global::DroidMatika.Android.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.mtrl_linear = global::DroidMatika.Android.Resource.Interpolator.mtrl_linear;
+			global::Xamarin.CommunityToolkit.Resource.Interpolator.mtrl_linear_out_slow_in = global::DroidMatika.Android.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_bar_title_item = global::DroidMatika.Android.Resource.Layout.abc_action_bar_title_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_bar_up_container = global::DroidMatika.Android.Resource.Layout.abc_action_bar_up_container;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_menu_item_layout = global::DroidMatika.Android.Resource.Layout.abc_action_menu_item_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_menu_layout = global::DroidMatika.Android.Resource.Layout.abc_action_menu_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_mode_bar = global::DroidMatika.Android.Resource.Layout.abc_action_mode_bar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_action_mode_close_item_material = global::DroidMatika.Android.Resource.Layout.abc_action_mode_close_item_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_activity_chooser_view = global::DroidMatika.Android.Resource.Layout.abc_activity_chooser_view;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_activity_chooser_view_list_item = global::DroidMatika.Android.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_alert_dialog_button_bar_material = global::DroidMatika.Android.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_alert_dialog_material = global::DroidMatika.Android.Resource.Layout.abc_alert_dialog_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_alert_dialog_title_material = global::DroidMatika.Android.Resource.Layout.abc_alert_dialog_title_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_cascading_menu_item_layout = global::DroidMatika.Android.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_dialog_title_material = global::DroidMatika.Android.Resource.Layout.abc_dialog_title_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_expanded_menu_layout = global::DroidMatika.Android.Resource.Layout.abc_expanded_menu_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_list_menu_item_checkbox = global::DroidMatika.Android.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_list_menu_item_icon = global::DroidMatika.Android.Resource.Layout.abc_list_menu_item_icon;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_list_menu_item_layout = global::DroidMatika.Android.Resource.Layout.abc_list_menu_item_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_list_menu_item_radio = global::DroidMatika.Android.Resource.Layout.abc_list_menu_item_radio;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_popup_menu_header_item_layout = global::DroidMatika.Android.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_popup_menu_item_layout = global::DroidMatika.Android.Resource.Layout.abc_popup_menu_item_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_screen_content_include = global::DroidMatika.Android.Resource.Layout.abc_screen_content_include;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_screen_simple = global::DroidMatika.Android.Resource.Layout.abc_screen_simple;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_screen_simple_overlay_action_mode = global::DroidMatika.Android.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_screen_toolbar = global::DroidMatika.Android.Resource.Layout.abc_screen_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_search_dropdown_item_icons_2line = global::DroidMatika.Android.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_search_view = global::DroidMatika.Android.Resource.Layout.abc_search_view;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_select_dialog_material = global::DroidMatika.Android.Resource.Layout.abc_select_dialog_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.abc_tooltip = global::DroidMatika.Android.Resource.Layout.abc_tooltip;
+			global::Xamarin.CommunityToolkit.Resource.Layout.BottomTabLayout = global::DroidMatika.Android.Resource.Layout.BottomTabLayout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.browser_actions_context_menu_page = global::DroidMatika.Android.Resource.Layout.browser_actions_context_menu_page;
+			global::Xamarin.CommunityToolkit.Resource.Layout.browser_actions_context_menu_row = global::DroidMatika.Android.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.CommunityToolkit.Resource.Layout.CameraFragment = global::DroidMatika.Android.Resource.Layout.CameraFragment;
+			global::Xamarin.CommunityToolkit.Resource.Layout.custom_dialog = global::DroidMatika.Android.Resource.Layout.custom_dialog;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_bottom_navigation_item = global::DroidMatika.Android.Resource.Layout.design_bottom_navigation_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_bottom_sheet_dialog = global::DroidMatika.Android.Resource.Layout.design_bottom_sheet_dialog;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_layout_snackbar = global::DroidMatika.Android.Resource.Layout.design_layout_snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_layout_snackbar_include = global::DroidMatika.Android.Resource.Layout.design_layout_snackbar_include;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_layout_tab_icon = global::DroidMatika.Android.Resource.Layout.design_layout_tab_icon;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_layout_tab_text = global::DroidMatika.Android.Resource.Layout.design_layout_tab_text;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_menu_item_action_area = global::DroidMatika.Android.Resource.Layout.design_menu_item_action_area;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_item = global::DroidMatika.Android.Resource.Layout.design_navigation_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_item_header = global::DroidMatika.Android.Resource.Layout.design_navigation_item_header;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_item_separator = global::DroidMatika.Android.Resource.Layout.design_navigation_item_separator;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_item_subheader = global::DroidMatika.Android.Resource.Layout.design_navigation_item_subheader;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_menu = global::DroidMatika.Android.Resource.Layout.design_navigation_menu;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_navigation_menu_item = global::DroidMatika.Android.Resource.Layout.design_navigation_menu_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_text_input_end_icon = global::DroidMatika.Android.Resource.Layout.design_text_input_end_icon;
+			global::Xamarin.CommunityToolkit.Resource.Layout.design_text_input_start_icon = global::DroidMatika.Android.Resource.Layout.design_text_input_start_icon;
+			global::Xamarin.CommunityToolkit.Resource.Layout.FallbackTabbarDoNotUse = global::DroidMatika.Android.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.CommunityToolkit.Resource.Layout.FallbackToolbarDoNotUse = global::DroidMatika.Android.Resource.Layout.FallbackToolbarDoNotUse;
+			global::Xamarin.CommunityToolkit.Resource.Layout.FlyoutContent = global::DroidMatika.Android.Resource.Layout.FlyoutContent;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_dialog = global::DroidMatika.Android.Resource.Layout.mtrl_alert_dialog;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_dialog_actions = global::DroidMatika.Android.Resource.Layout.mtrl_alert_dialog_actions;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_dialog_title = global::DroidMatika.Android.Resource.Layout.mtrl_alert_dialog_title;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_select_dialog_item = global::DroidMatika.Android.Resource.Layout.mtrl_alert_select_dialog_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_select_dialog_multichoice = global::DroidMatika.Android.Resource.Layout.mtrl_alert_select_dialog_multichoice;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_alert_select_dialog_singlechoice = global::DroidMatika.Android.Resource.Layout.mtrl_alert_select_dialog_singlechoice;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_day = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_day;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_days_of_week = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_days_of_week;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_day_of_week = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_day_of_week;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_horizontal = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_month = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_month;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_months = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_months;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_month_labeled = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_month_labeled;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_month_navigation = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_month_navigation;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_vertical = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_vertical;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_calendar_year = global::DroidMatika.Android.Resource.Layout.mtrl_calendar_year;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_layout_snackbar = global::DroidMatika.Android.Resource.Layout.mtrl_layout_snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_layout_snackbar_include = global::DroidMatika.Android.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_actions = global::DroidMatika.Android.Resource.Layout.mtrl_picker_actions;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_dialog = global::DroidMatika.Android.Resource.Layout.mtrl_picker_dialog;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_fullscreen = global::DroidMatika.Android.Resource.Layout.mtrl_picker_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_header_dialog = global::DroidMatika.Android.Resource.Layout.mtrl_picker_header_dialog;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_header_fullscreen = global::DroidMatika.Android.Resource.Layout.mtrl_picker_header_fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_header_selection_text = global::DroidMatika.Android.Resource.Layout.mtrl_picker_header_selection_text;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_header_title_text = global::DroidMatika.Android.Resource.Layout.mtrl_picker_header_title_text;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_header_toggle = global::DroidMatika.Android.Resource.Layout.mtrl_picker_header_toggle;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_text_input_date = global::DroidMatika.Android.Resource.Layout.mtrl_picker_text_input_date;
+			global::Xamarin.CommunityToolkit.Resource.Layout.mtrl_picker_text_input_date_range = global::DroidMatika.Android.Resource.Layout.mtrl_picker_text_input_date_range;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_action = global::DroidMatika.Android.Resource.Layout.notification_action;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_action_tombstone = global::DroidMatika.Android.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_media_action = global::DroidMatika.Android.Resource.Layout.notification_media_action;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_media_cancel_action = global::DroidMatika.Android.Resource.Layout.notification_media_cancel_action;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_big_media = global::DroidMatika.Android.Resource.Layout.notification_template_big_media;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_big_media_custom = global::DroidMatika.Android.Resource.Layout.notification_template_big_media_custom;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_big_media_narrow = global::DroidMatika.Android.Resource.Layout.notification_template_big_media_narrow;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_big_media_narrow_custom = global::DroidMatika.Android.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_custom_big = global::DroidMatika.Android.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_icon_group = global::DroidMatika.Android.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_lines_media = global::DroidMatika.Android.Resource.Layout.notification_template_lines_media;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_media = global::DroidMatika.Android.Resource.Layout.notification_template_media;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_media_custom = global::DroidMatika.Android.Resource.Layout.notification_template_media_custom;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_part_chronometer = global::DroidMatika.Android.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.CommunityToolkit.Resource.Layout.notification_template_part_time = global::DroidMatika.Android.Resource.Layout.notification_template_part_time;
+			global::Xamarin.CommunityToolkit.Resource.Layout.RootLayout = global::DroidMatika.Android.Resource.Layout.RootLayout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.select_dialog_item_material = global::DroidMatika.Android.Resource.Layout.select_dialog_item_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.select_dialog_multichoice_material = global::DroidMatika.Android.Resource.Layout.select_dialog_multichoice_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.select_dialog_singlechoice_material = global::DroidMatika.Android.Resource.Layout.select_dialog_singlechoice_material;
+			global::Xamarin.CommunityToolkit.Resource.Layout.ShellContent = global::DroidMatika.Android.Resource.Layout.ShellContent;
+			global::Xamarin.CommunityToolkit.Resource.Layout.support_simple_spinner_dropdown_item = global::DroidMatika.Android.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.CommunityToolkit.Resource.Layout.Tabbar = global::DroidMatika.Android.Resource.Layout.Tabbar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_action_chip = global::DroidMatika.Android.Resource.Layout.test_action_chip;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_design_checkbox = global::DroidMatika.Android.Resource.Layout.test_design_checkbox;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_reflow_chipgroup = global::DroidMatika.Android.Resource.Layout.test_reflow_chipgroup;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_toolbar = global::DroidMatika.Android.Resource.Layout.test_toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_toolbar_custom_background = global::DroidMatika.Android.Resource.Layout.test_toolbar_custom_background;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_toolbar_elevation = global::DroidMatika.Android.Resource.Layout.test_toolbar_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Layout.test_toolbar_surface = global::DroidMatika.Android.Resource.Layout.test_toolbar_surface;
+			global::Xamarin.CommunityToolkit.Resource.Layout.text_view_without_line_height = global::DroidMatika.Android.Resource.Layout.text_view_without_line_height;
+			global::Xamarin.CommunityToolkit.Resource.Layout.text_view_with_line_height_from_appearance = global::DroidMatika.Android.Resource.Layout.text_view_with_line_height_from_appearance;
+			global::Xamarin.CommunityToolkit.Resource.Layout.text_view_with_line_height_from_layout = global::DroidMatika.Android.Resource.Layout.text_view_with_line_height_from_layout;
+			global::Xamarin.CommunityToolkit.Resource.Layout.text_view_with_line_height_from_style = global::DroidMatika.Android.Resource.Layout.text_view_with_line_height_from_style;
+			global::Xamarin.CommunityToolkit.Resource.Layout.text_view_with_theme_line_height = global::DroidMatika.Android.Resource.Layout.text_view_with_theme_line_height;
+			global::Xamarin.CommunityToolkit.Resource.Layout.Toolbar = global::DroidMatika.Android.Resource.Layout.Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Plurals.mtrl_badge_content_description = global::DroidMatika.Android.Resource.Plurals.mtrl_badge_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_action_bar_home_description = global::DroidMatika.Android.Resource.String.abc_action_bar_home_description;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_action_bar_up_description = global::DroidMatika.Android.Resource.String.abc_action_bar_up_description;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_action_menu_overflow_description = global::DroidMatika.Android.Resource.String.abc_action_menu_overflow_description;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_action_mode_done = global::DroidMatika.Android.Resource.String.abc_action_mode_done;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_activitychooserview_choose_application = global::DroidMatika.Android.Resource.String.abc_activitychooserview_choose_application;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_activity_chooser_view_see_all = global::DroidMatika.Android.Resource.String.abc_activity_chooser_view_see_all;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_capital_off = global::DroidMatika.Android.Resource.String.abc_capital_off;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_capital_on = global::DroidMatika.Android.Resource.String.abc_capital_on;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_alt_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_alt_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_ctrl_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_delete_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_delete_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_enter_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_enter_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_function_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_function_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_meta_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_meta_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_shift_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_shift_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_space_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_space_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_menu_sym_shortcut_label = global::DroidMatika.Android.Resource.String.abc_menu_sym_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_prepend_shortcut_label = global::DroidMatika.Android.Resource.String.abc_prepend_shortcut_label;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_searchview_description_clear = global::DroidMatika.Android.Resource.String.abc_searchview_description_clear;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_searchview_description_query = global::DroidMatika.Android.Resource.String.abc_searchview_description_query;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_searchview_description_search = global::DroidMatika.Android.Resource.String.abc_searchview_description_search;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_searchview_description_submit = global::DroidMatika.Android.Resource.String.abc_searchview_description_submit;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_searchview_description_voice = global::DroidMatika.Android.Resource.String.abc_searchview_description_voice;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_search_hint = global::DroidMatika.Android.Resource.String.abc_search_hint;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_shareactionprovider_share_with = global::DroidMatika.Android.Resource.String.abc_shareactionprovider_share_with;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_shareactionprovider_share_with_application = global::DroidMatika.Android.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Xamarin.CommunityToolkit.Resource.String.abc_toolbar_collapse_description = global::DroidMatika.Android.Resource.String.abc_toolbar_collapse_description;
+			global::Xamarin.CommunityToolkit.Resource.String.appbar_scrolling_view_behavior = global::DroidMatika.Android.Resource.String.appbar_scrolling_view_behavior;
+			global::Xamarin.CommunityToolkit.Resource.String.bottom_sheet_behavior = global::DroidMatika.Android.Resource.String.bottom_sheet_behavior;
+			global::Xamarin.CommunityToolkit.Resource.String.character_counter_content_description = global::DroidMatika.Android.Resource.String.character_counter_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.character_counter_overflowed_content_description = global::DroidMatika.Android.Resource.String.character_counter_overflowed_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.character_counter_pattern = global::DroidMatika.Android.Resource.String.character_counter_pattern;
+			global::Xamarin.CommunityToolkit.Resource.String.chip_text = global::DroidMatika.Android.Resource.String.chip_text;
+			global::Xamarin.CommunityToolkit.Resource.String.clear_text_end_icon_content_description = global::DroidMatika.Android.Resource.String.clear_text_end_icon_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.copy_toast_msg = global::DroidMatika.Android.Resource.String.copy_toast_msg;
+			global::Xamarin.CommunityToolkit.Resource.String.error_icon_content_description = global::DroidMatika.Android.Resource.String.error_icon_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.exposed_dropdown_menu_content_description = global::DroidMatika.Android.Resource.String.exposed_dropdown_menu_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.fab_transformation_scrim_behavior = global::DroidMatika.Android.Resource.String.fab_transformation_scrim_behavior;
+			global::Xamarin.CommunityToolkit.Resource.String.fab_transformation_sheet_behavior = global::DroidMatika.Android.Resource.String.fab_transformation_sheet_behavior;
+			global::Xamarin.CommunityToolkit.Resource.String.fallback_menu_item_copy_link = global::DroidMatika.Android.Resource.String.fallback_menu_item_copy_link;
+			global::Xamarin.CommunityToolkit.Resource.String.fallback_menu_item_open_in_browser = global::DroidMatika.Android.Resource.String.fallback_menu_item_open_in_browser;
+			global::Xamarin.CommunityToolkit.Resource.String.fallback_menu_item_share_link = global::DroidMatika.Android.Resource.String.fallback_menu_item_share_link;
+			global::Xamarin.CommunityToolkit.Resource.String.hide_bottom_view_on_scroll_behavior = global::DroidMatika.Android.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Xamarin.CommunityToolkit.Resource.String.icon_content_description = global::DroidMatika.Android.Resource.String.icon_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_badge_numberless_content_description = global::DroidMatika.Android.Resource.String.mtrl_badge_numberless_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_chip_close_icon_content_description = global::DroidMatika.Android.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_exceed_max_badge_number_suffix = global::DroidMatika.Android.Resource.String.mtrl_exceed_max_badge_number_suffix;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_a11y_next_month = global::DroidMatika.Android.Resource.String.mtrl_picker_a11y_next_month;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_a11y_prev_month = global::DroidMatika.Android.Resource.String.mtrl_picker_a11y_prev_month;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_announce_current_selection = global::DroidMatika.Android.Resource.String.mtrl_picker_announce_current_selection;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_cancel = global::DroidMatika.Android.Resource.String.mtrl_picker_cancel;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_confirm = global::DroidMatika.Android.Resource.String.mtrl_picker_confirm;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_date_header_selected = global::DroidMatika.Android.Resource.String.mtrl_picker_date_header_selected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_date_header_title = global::DroidMatika.Android.Resource.String.mtrl_picker_date_header_title;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_date_header_unselected = global::DroidMatika.Android.Resource.String.mtrl_picker_date_header_unselected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_day_of_week_column_header = global::DroidMatika.Android.Resource.String.mtrl_picker_day_of_week_column_header;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_invalid_format = global::DroidMatika.Android.Resource.String.mtrl_picker_invalid_format;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_invalid_format_example = global::DroidMatika.Android.Resource.String.mtrl_picker_invalid_format_example;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_invalid_format_use = global::DroidMatika.Android.Resource.String.mtrl_picker_invalid_format_use;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_invalid_range = global::DroidMatika.Android.Resource.String.mtrl_picker_invalid_range;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_navigate_to_year_description = global::DroidMatika.Android.Resource.String.mtrl_picker_navigate_to_year_description;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_out_of_range = global::DroidMatika.Android.Resource.String.mtrl_picker_out_of_range;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_range_header_only_end_selected = global::DroidMatika.Android.Resource.String.mtrl_picker_range_header_only_end_selected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_range_header_only_start_selected = global::DroidMatika.Android.Resource.String.mtrl_picker_range_header_only_start_selected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_range_header_selected = global::DroidMatika.Android.Resource.String.mtrl_picker_range_header_selected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_range_header_title = global::DroidMatika.Android.Resource.String.mtrl_picker_range_header_title;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_range_header_unselected = global::DroidMatika.Android.Resource.String.mtrl_picker_range_header_unselected;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_save = global::DroidMatika.Android.Resource.String.mtrl_picker_save;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_date_hint = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_date_hint;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_date_range_end_hint = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_date_range_end_hint;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_date_range_start_hint = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_date_range_start_hint;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_day_abbr = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_day_abbr;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_month_abbr = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_month_abbr;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_text_input_year_abbr = global::DroidMatika.Android.Resource.String.mtrl_picker_text_input_year_abbr;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_toggle_to_calendar_input_mode = global::DroidMatika.Android.Resource.String.mtrl_picker_toggle_to_calendar_input_mode;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_toggle_to_day_selection = global::DroidMatika.Android.Resource.String.mtrl_picker_toggle_to_day_selection;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_toggle_to_text_input_mode = global::DroidMatika.Android.Resource.String.mtrl_picker_toggle_to_text_input_mode;
+			global::Xamarin.CommunityToolkit.Resource.String.mtrl_picker_toggle_to_year_selection = global::DroidMatika.Android.Resource.String.mtrl_picker_toggle_to_year_selection;
+			global::Xamarin.CommunityToolkit.Resource.String.overflow_tab_title = global::DroidMatika.Android.Resource.String.overflow_tab_title;
+			global::Xamarin.CommunityToolkit.Resource.String.password_toggle_content_description = global::DroidMatika.Android.Resource.String.password_toggle_content_description;
+			global::Xamarin.CommunityToolkit.Resource.String.path_password_eye = global::DroidMatika.Android.Resource.String.path_password_eye;
+			global::Xamarin.CommunityToolkit.Resource.String.path_password_eye_mask_strike_through = global::DroidMatika.Android.Resource.String.path_password_eye_mask_strike_through;
+			global::Xamarin.CommunityToolkit.Resource.String.path_password_eye_mask_visible = global::DroidMatika.Android.Resource.String.path_password_eye_mask_visible;
+			global::Xamarin.CommunityToolkit.Resource.String.path_password_strike_through = global::DroidMatika.Android.Resource.String.path_password_strike_through;
+			global::Xamarin.CommunityToolkit.Resource.String.search_menu_title = global::DroidMatika.Android.Resource.String.search_menu_title;
+			global::Xamarin.CommunityToolkit.Resource.String.status_bar_notification_info_overflow = global::DroidMatika.Android.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.AlertDialog_AppCompat = global::DroidMatika.Android.Resource.Style.AlertDialog_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.AlertDialog_AppCompat_Light = global::DroidMatika.Android.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Animation_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Animation_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Animation_AppCompat_DropDownUp = global::DroidMatika.Android.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Xamarin.CommunityToolkit.Resource.Style.Animation_AppCompat_Tooltip = global::DroidMatika.Android.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Xamarin.CommunityToolkit.Resource.Style.Animation_Design_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Animation_MaterialComponents_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Animation_MaterialComponents_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.AppCompatDialogStyle = global::DroidMatika.Android.Resource.Style.AppCompatDialogStyle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_AlertDialog_AppCompat = global::DroidMatika.Android.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_AlertDialog_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Animation_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::DroidMatika.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Animation_AppCompat_Tooltip = global::DroidMatika.Android.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_CardView = global::DroidMatika.Android.Resource.Style.Base_CardView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::DroidMatika.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_DialogWindowTitle_AppCompat = global::DroidMatika.Android.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon = global::DroidMatika.Android.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel = global::DroidMatika.Android.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text = global::DroidMatika.Android.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Button = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Large = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Small = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Title = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_MaterialComponents_Badge = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_MaterialComponents_Badge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_MaterialComponents_Button = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_MaterialComponents_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2 = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::DroidMatika.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::DroidMatika.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::DroidMatika.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V21_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V21_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::DroidMatika.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V22_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V22_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V23_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V23_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V26_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V26_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::DroidMatika.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V28_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V28_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::DroidMatika.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::DroidMatika.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::DroidMatika.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionButton = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActionMode = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Button_Small = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_EditText = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ImageButton = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ListView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_RatingBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_SearchView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_SeekBar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Spinner = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_TextView = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Toolbar = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::DroidMatika.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_Design_TabLayout = global::DroidMatika.Android.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_Chip = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_PopupMenu = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Base_Widget_MaterialComponents_TextView = global::DroidMatika.Android.Resource.Style.Base_Widget_MaterialComponents_TextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.CardView = global::DroidMatika.Android.Resource.Style.CardView;
+			global::Xamarin.CommunityToolkit.Resource.Style.CardView_Dark = global::DroidMatika.Android.Resource.Style.CardView_Dark;
+			global::Xamarin.CommunityToolkit.Resource.Style.CardView_Light = global::DroidMatika.Android.Resource.Style.CardView_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.collectionViewTheme = global::DroidMatika.Android.Resource.Style.collectionViewTheme;
+			global::Xamarin.CommunityToolkit.Resource.Style.EmptyTheme = global::DroidMatika.Android.Resource.Style.EmptyTheme;
+			global::Xamarin.CommunityToolkit.Resource.Style.MainTheme = global::DroidMatika.Android.Resource.Style.MainTheme;
+			global::Xamarin.CommunityToolkit.Resource.Style.MainTheme_Base = global::DroidMatika.Android.Resource.Style.MainTheme_Base;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked = global::DroidMatika.Android.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_AppCompat = global::DroidMatika.Android.Resource.Style.Platform_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Platform_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_MaterialComponents = global::DroidMatika.Android.Resource.Style.Platform_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_MaterialComponents_Light = global::DroidMatika.Android.Resource.Style.Platform_MaterialComponents_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::DroidMatika.Android.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_ThemeOverlay_AppCompat = global::DroidMatika.Android.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::DroidMatika.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_V21_AppCompat = global::DroidMatika.Android.Resource.Style.Platform_V21_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_V21_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_V25_AppCompat = global::DroidMatika.Android.Resource.Style.Platform_V25_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_V25_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Platform_Widget_AppCompat_Spinner = global::DroidMatika.Android.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::DroidMatika.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::DroidMatika.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::DroidMatika.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::DroidMatika.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.scrollViewScrollBars = global::DroidMatika.Android.Resource.Style.scrollViewScrollBars;
+			global::Xamarin.CommunityToolkit.Resource.Style.scrollViewTheme = global::DroidMatika.Android.Resource.Style.scrollViewTheme;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_BottomRightCut = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_BottomRightCut;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_Cut = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_Cut;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_TopLeftCut = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_TopLeftCut;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize = global::DroidMatika.Android.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearance_MaterialComponents = global::DroidMatika.Android.Resource.Style.ShapeAppearance_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent = global::DroidMatika.Android.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent = global::DroidMatika.Android.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent = global::DroidMatika.Android.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent;
+			global::Xamarin.CommunityToolkit.Resource.Style.ShapeAppearance_MaterialComponents_Test = global::DroidMatika.Android.Resource.Style.ShapeAppearance_MaterialComponents_Test;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestStyleWithLineHeight = global::DroidMatika.Android.Resource.Style.TestStyleWithLineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestStyleWithLineHeightAppearance = global::DroidMatika.Android.Resource.Style.TestStyleWithLineHeightAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestStyleWithoutLineHeight = global::DroidMatika.Android.Resource.Style.TestStyleWithoutLineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestStyleWithThemeLineHeightAttribute = global::DroidMatika.Android.Resource.Style.TestStyleWithThemeLineHeightAttribute;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestThemeWithLineHeight = global::DroidMatika.Android.Resource.Style.TestThemeWithLineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Style.TestThemeWithLineHeightDisabled = global::DroidMatika.Android.Resource.Style.TestThemeWithLineHeightDisabled;
+			global::Xamarin.CommunityToolkit.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::DroidMatika.Android.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Xamarin.CommunityToolkit.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar = global::DroidMatika.Android.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar = global::DroidMatika.Android.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day = global::DroidMatika.Android.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Xamarin.CommunityToolkit.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::DroidMatika.Android.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Body1 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Body2 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Button = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Caption = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Display1 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Display2 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Display3 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Display4 = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Headline = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Large = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Medium = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Menu = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Small = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Subhead = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Tooltip = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::DroidMatika.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Info = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Media = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Time = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::DroidMatika.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Counter = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Counter;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Counter_Overflow = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Error = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Error;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_HelperText = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_HelperText;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Hint = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Hint;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Snackbar_Message = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Design_Tab = global::DroidMatika.Android.Resource.Style.TextAppearance_Design_Tab;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Badge = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Badge;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Button = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Caption = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Chip = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Overline = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::DroidMatika.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::DroidMatika.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::DroidMatika.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::DroidMatika.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_Dark = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_AppCompat_Light = global::DroidMatika.Android.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_Design_TextInputEditText = global::DroidMatika.Android.Resource.Style.ThemeOverlay_Design_TextInputEditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface = global::DroidMatika.Android.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat = global::DroidMatika.Android.Resource.Style.Theme_AppCompat;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_CompactMenu = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Dialog = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Empty = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Empty;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_Dialog = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_AppCompat_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design = global::DroidMatika.Android.Resource.Style.Theme_Design;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design_Light = global::DroidMatika.Android.Resource.Style.Theme_Design_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design_Light_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_Design_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_Design_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_CompactMenu = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_BarSize = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_BarSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_LargeTouch = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_LargeTouch;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_NoActionBar = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::DroidMatika.Android.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionButton = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActionMode = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ActivityChooserView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ButtonBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button_Borderless = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button_Colored = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Button_Small = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_EditText = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_EditText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ImageButton = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionButton = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_SearchView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ListMenuView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ListPopupWindow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ListView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ListView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ListView_DropDown = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ListView_Menu = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_PopupMenu = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_PopupWindow = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ProgressBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_RatingBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_RatingBar_Small = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_SearchView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_SearchView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_SeekBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Spinner = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_TextView = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_TextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Toolbar = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::DroidMatika.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Compat_NotificationActionContainer = global::DroidMatika.Android.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Compat_NotificationActionText = global::DroidMatika.Android.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_AppBarLayout = global::DroidMatika.Android.Resource.Style.Widget_Design_AppBarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_BottomNavigationView = global::DroidMatika.Android.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_BottomSheet_Modal = global::DroidMatika.Android.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_CollapsingToolbar = global::DroidMatika.Android.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_FloatingActionButton = global::DroidMatika.Android.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_NavigationView = global::DroidMatika.Android.Resource.Style.Widget_Design_NavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::DroidMatika.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_Snackbar = global::DroidMatika.Android.Resource.Style.Widget_Design_Snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_TabLayout = global::DroidMatika.Android.Resource.Style.Widget_Design_TabLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Design_TextInputLayout = global::DroidMatika.Android.Resource.Style.Widget_Design_TextInputLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ActionBar_Primary = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ActionBar_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ActionBar_Surface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ActionBar_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Badge = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Badge;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomSheet = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomSheet;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_CardView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_CheckedTextView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_CheckedTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ChipGroup = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Chip_Action = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_NavigationView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_PopupMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_PopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Snackbar = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TabLayout = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_TextView = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_TextView;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Toolbar = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Toolbar_Primary = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Toolbar_Primary;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_MaterialComponents_Toolbar_Surface = global::DroidMatika.Android.Resource.Style.Widget_MaterialComponents_Toolbar_Surface;
+			global::Xamarin.CommunityToolkit.Resource.Style.Widget_Support_CoordinatorLayout = global::DroidMatika.Android.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar = global::DroidMatika.Android.Resource.Styleable.ActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBarLayout = global::DroidMatika.Android.Resource.Styleable.ActionBarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::DroidMatika.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_background = global::DroidMatika.Android.Resource.Styleable.ActionBar_background;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_backgroundSplit = global::DroidMatika.Android.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_backgroundStacked = global::DroidMatika.Android.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetEnd = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetLeft = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetRight = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetStart = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::DroidMatika.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_customNavigationLayout = global::DroidMatika.Android.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_displayOptions = global::DroidMatika.Android.Resource.Styleable.ActionBar_displayOptions;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_divider = global::DroidMatika.Android.Resource.Styleable.ActionBar_divider;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_elevation = global::DroidMatika.Android.Resource.Styleable.ActionBar_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_height = global::DroidMatika.Android.Resource.Styleable.ActionBar_height;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_hideOnContentScroll = global::DroidMatika.Android.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_homeAsUpIndicator = global::DroidMatika.Android.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_homeLayout = global::DroidMatika.Android.Resource.Styleable.ActionBar_homeLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_icon = global::DroidMatika.Android.Resource.Styleable.ActionBar_icon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::DroidMatika.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_itemPadding = global::DroidMatika.Android.Resource.Styleable.ActionBar_itemPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_logo = global::DroidMatika.Android.Resource.Styleable.ActionBar_logo;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_navigationMode = global::DroidMatika.Android.Resource.Styleable.ActionBar_navigationMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_popupTheme = global::DroidMatika.Android.Resource.Styleable.ActionBar_popupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_progressBarPadding = global::DroidMatika.Android.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_progressBarStyle = global::DroidMatika.Android.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_subtitle = global::DroidMatika.Android.Resource.Styleable.ActionBar_subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_subtitleTextStyle = global::DroidMatika.Android.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_title = global::DroidMatika.Android.Resource.Styleable.ActionBar_title;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionBar_titleTextStyle = global::DroidMatika.Android.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMenuItemView = global::DroidMatika.Android.Resource.Styleable.ActionMenuItemView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMenuItemView_android_minWidth = global::DroidMatika.Android.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMenuView = global::DroidMatika.Android.Resource.Styleable.ActionMenuView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode = global::DroidMatika.Android.Resource.Styleable.ActionMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_background = global::DroidMatika.Android.Resource.Styleable.ActionMode_background;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_backgroundSplit = global::DroidMatika.Android.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_closeItemLayout = global::DroidMatika.Android.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_height = global::DroidMatika.Android.Resource.Styleable.ActionMode_height;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_subtitleTextStyle = global::DroidMatika.Android.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActionMode_titleTextStyle = global::DroidMatika.Android.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActivityChooserView = global::DroidMatika.Android.Resource.Styleable.ActivityChooserView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::DroidMatika.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ActivityChooserView_initialActivityCount = global::DroidMatika.Android.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog = global::DroidMatika.Android.Resource.Styleable.AlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_android_layout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_android_layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_buttonIconDimen = global::DroidMatika.Android.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_listItemLayout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_listLayout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_listLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_showTitle = global::DroidMatika.Android.Resource.Styleable.AlertDialog_showTitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::DroidMatika.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableItem = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableTransition = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::DroidMatika.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout = global::DroidMatika.Android.Resource.Styleable.AppBarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayoutStates = global::DroidMatika.Android.Resource.Styleable.AppBarLayoutStates;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::DroidMatika.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::DroidMatika.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayoutStates_state_liftable = global::DroidMatika.Android.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayoutStates_state_lifted = global::DroidMatika.Android.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_android_background = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_android_background;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_elevation = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_expanded = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_expanded;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_Layout = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_liftOnScroll = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppBarLayout_statusBarForeground = global::DroidMatika.Android.Resource.Styleable.AppBarLayout_statusBarForeground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatImageView = global::DroidMatika.Android.Resource.Styleable.AppCompatImageView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatImageView_android_src = global::DroidMatika.Android.Resource.Styleable.AppCompatImageView_android_src;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatImageView_srcCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatImageView_tint = global::DroidMatika.Android.Resource.Styleable.AppCompatImageView_tint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatImageView_tintMode = global::DroidMatika.Android.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatSeekBar = global::DroidMatika.Android.Resource.Styleable.AppCompatSeekBar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatSeekBar_android_thumb = global::DroidMatika.Android.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatSeekBar_tickMark = global::DroidMatika.Android.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::DroidMatika.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::DroidMatika.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::DroidMatika.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_android_textAppearance = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableTint = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableTintMode = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_fontFamily = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_lineHeight = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_textAllCaps = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTextView_textLocale = global::DroidMatika.Android.Resource.Styleable.AppCompatTextView_textLocale;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarDivider = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarSize = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_checkboxStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorAccent = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorControlActivated = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorControlNormal = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorError = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorError;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorPrimary = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_controlBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dialogTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dividerVertical = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_editTextBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_editTextColor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_editTextStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_panelBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_searchViewStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_seekBarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_spinnerStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_switchStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_toolbarStyle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowActionBar = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.AppCompatTheme_windowNoTitle = global::DroidMatika.Android.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge = global::DroidMatika.Android.Resource.Styleable.Badge;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge_backgroundColor = global::DroidMatika.Android.Resource.Styleable.Badge_backgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge_badgeGravity = global::DroidMatika.Android.Resource.Styleable.Badge_badgeGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge_badgeTextColor = global::DroidMatika.Android.Resource.Styleable.Badge_badgeTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge_maxCharacterCount = global::DroidMatika.Android.Resource.Styleable.Badge_maxCharacterCount;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Badge_number = global::DroidMatika.Android.Resource.Styleable.Badge_number;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar = global::DroidMatika.Android.Resource.Styleable.BottomAppBar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_backgroundTint = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_elevation = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_fabAnimationMode = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_fabAnimationMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_fabCradleMargin = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomAppBar_hideOnScroll = global::DroidMatika.Android.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_backgroundTint = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_elevation = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemBackground = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemIconSize = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemIconTint = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemRippleColor = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemRippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_itemTextColor = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomNavigationView_menu = global::DroidMatika.Android.Resource.Styleable.BottomNavigationView_menu;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ButtonBarLayout = global::DroidMatika.Android.Resource.Styleable.ButtonBarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ButtonBarLayout_allowStacking = global::DroidMatika.Android.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView = global::DroidMatika.Android.Resource.Styleable.CardView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_android_minHeight = global::DroidMatika.Android.Resource.Styleable.CardView_android_minHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_android_minWidth = global::DroidMatika.Android.Resource.Styleable.CardView_android_minWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardBackgroundColor = global::DroidMatika.Android.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardCornerRadius = global::DroidMatika.Android.Resource.Styleable.CardView_cardCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardElevation = global::DroidMatika.Android.Resource.Styleable.CardView_cardElevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardMaxElevation = global::DroidMatika.Android.Resource.Styleable.CardView_cardMaxElevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardPreventCornerOverlap = global::DroidMatika.Android.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_cardUseCompatPadding = global::DroidMatika.Android.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_contentPadding = global::DroidMatika.Android.Resource.Styleable.CardView_contentPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_contentPaddingBottom = global::DroidMatika.Android.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_contentPaddingLeft = global::DroidMatika.Android.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_contentPaddingRight = global::DroidMatika.Android.Resource.Styleable.CardView_contentPaddingRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CardView_contentPaddingTop = global::DroidMatika.Android.Resource.Styleable.CardView_contentPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip = global::DroidMatika.Android.Resource.Styleable.Chip;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup = global::DroidMatika.Android.Resource.Styleable.ChipGroup;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_checkedChip = global::DroidMatika.Android.Resource.Styleable.ChipGroup_checkedChip;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_chipSpacing = global::DroidMatika.Android.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::DroidMatika.Android.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_chipSpacingVertical = global::DroidMatika.Android.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_singleLine = global::DroidMatika.Android.Resource.Styleable.ChipGroup_singleLine;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ChipGroup_singleSelection = global::DroidMatika.Android.Resource.Styleable.ChipGroup_singleSelection;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_checkable = global::DroidMatika.Android.Resource.Styleable.Chip_android_checkable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_ellipsize = global::DroidMatika.Android.Resource.Styleable.Chip_android_ellipsize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_maxWidth = global::DroidMatika.Android.Resource.Styleable.Chip_android_maxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_text = global::DroidMatika.Android.Resource.Styleable.Chip_android_text;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_textAppearance = global::DroidMatika.Android.Resource.Styleable.Chip_android_textAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_android_textColor = global::DroidMatika.Android.Resource.Styleable.Chip_android_textColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_checkedIcon = global::DroidMatika.Android.Resource.Styleable.Chip_checkedIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_checkedIconEnabled = global::DroidMatika.Android.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_checkedIconVisible = global::DroidMatika.Android.Resource.Styleable.Chip_checkedIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipBackgroundColor = global::DroidMatika.Android.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipCornerRadius = global::DroidMatika.Android.Resource.Styleable.Chip_chipCornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipEndPadding = global::DroidMatika.Android.Resource.Styleable.Chip_chipEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipIcon = global::DroidMatika.Android.Resource.Styleable.Chip_chipIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipIconEnabled = global::DroidMatika.Android.Resource.Styleable.Chip_chipIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipIconSize = global::DroidMatika.Android.Resource.Styleable.Chip_chipIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipIconTint = global::DroidMatika.Android.Resource.Styleable.Chip_chipIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipIconVisible = global::DroidMatika.Android.Resource.Styleable.Chip_chipIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipMinHeight = global::DroidMatika.Android.Resource.Styleable.Chip_chipMinHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipMinTouchTargetSize = global::DroidMatika.Android.Resource.Styleable.Chip_chipMinTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipStartPadding = global::DroidMatika.Android.Resource.Styleable.Chip_chipStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipStrokeColor = global::DroidMatika.Android.Resource.Styleable.Chip_chipStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipStrokeWidth = global::DroidMatika.Android.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_chipSurfaceColor = global::DroidMatika.Android.Resource.Styleable.Chip_chipSurfaceColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIcon = global::DroidMatika.Android.Resource.Styleable.Chip_closeIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconEnabled = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconEndPadding = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconSize = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconStartPadding = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconTint = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_closeIconVisible = global::DroidMatika.Android.Resource.Styleable.Chip_closeIconVisible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_ensureMinTouchTargetSize = global::DroidMatika.Android.Resource.Styleable.Chip_ensureMinTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_hideMotionSpec = global::DroidMatika.Android.Resource.Styleable.Chip_hideMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_iconEndPadding = global::DroidMatika.Android.Resource.Styleable.Chip_iconEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_iconStartPadding = global::DroidMatika.Android.Resource.Styleable.Chip_iconStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_rippleColor = global::DroidMatika.Android.Resource.Styleable.Chip_rippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.Chip_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.Chip_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_showMotionSpec = global::DroidMatika.Android.Resource.Styleable.Chip_showMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_textEndPadding = global::DroidMatika.Android.Resource.Styleable.Chip_textEndPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Chip_textStartPadding = global::DroidMatika.Android.Resource.Styleable.Chip_textStartPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_Layout = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_title = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::DroidMatika.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ColorStateListItem = global::DroidMatika.Android.Resource.Styleable.ColorStateListItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ColorStateListItem_alpha = global::DroidMatika.Android.Resource.Styleable.ColorStateListItem_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ColorStateListItem_android_alpha = global::DroidMatika.Android.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ColorStateListItem_android_color = global::DroidMatika.Android.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CompoundButton = global::DroidMatika.Android.Resource.Styleable.CompoundButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CompoundButton_android_button = global::DroidMatika.Android.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CompoundButton_buttonCompat = global::DroidMatika.Android.Resource.Styleable.CompoundButton_buttonCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CompoundButton_buttonTint = global::DroidMatika.Android.Resource.Styleable.CompoundButton_buttonTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CompoundButton_buttonTintMode = global::DroidMatika.Android.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_keylines = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::DroidMatika.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_barLength = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_color = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_color;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_drawableSize = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_spinBars = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerArrowToggle_thickness = global::DroidMatika.Android.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerLayout = global::DroidMatika.Android.Resource.Styleable.DrawerLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.DrawerLayout_elevation = global::DroidMatika.Android.Resource.Styleable.DrawerLayout_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_elevation = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec = global::DroidMatika.Android.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_backgroundTint = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_borderWidth = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_elevation = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_fabCustomSize = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_fabSize = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_maxImageSize = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_rippleColor = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_showMotionSpec = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FloatingActionButton_useCompatPadding = global::DroidMatika.Android.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FlowLayout = global::DroidMatika.Android.Resource.Styleable.FlowLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FlowLayout_itemSpacing = global::DroidMatika.Android.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FlowLayout_lineSpacing = global::DroidMatika.Android.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily = global::DroidMatika.Android.Resource.Styleable.FontFamily;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_android_font = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_android_font;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_android_fontStyle = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_android_fontWeight = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_font = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_font;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_fontStyle = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_fontWeight = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamilyFont_ttcIndex = global::DroidMatika.Android.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderAuthority = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderCerts = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderPackage = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FontFamily_fontProviderQuery = global::DroidMatika.Android.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ForegroundLinearLayout = global::DroidMatika.Android.Resource.Styleable.ForegroundLinearLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::DroidMatika.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::DroidMatika.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::DroidMatika.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Fragment = global::DroidMatika.Android.Resource.Styleable.Fragment;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FragmentContainerView = global::DroidMatika.Android.Resource.Styleable.FragmentContainerView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FragmentContainerView_android_name = global::DroidMatika.Android.Resource.Styleable.FragmentContainerView_android_name;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.FragmentContainerView_android_tag = global::DroidMatika.Android.Resource.Styleable.FragmentContainerView_android_tag;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Fragment_android_id = global::DroidMatika.Android.Resource.Styleable.Fragment_android_id;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Fragment_android_name = global::DroidMatika.Android.Resource.Styleable.Fragment_android_name;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Fragment_android_tag = global::DroidMatika.Android.Resource.Styleable.Fragment_android_tag;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor = global::DroidMatika.Android.Resource.Styleable.GradientColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColorItem = global::DroidMatika.Android.Resource.Styleable.GradientColorItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColorItem_android_color = global::DroidMatika.Android.Resource.Styleable.GradientColorItem_android_color;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColorItem_android_offset = global::DroidMatika.Android.Resource.Styleable.GradientColorItem_android_offset;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_centerColor = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_centerColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_centerX = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_centerX;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_centerY = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_centerY;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_endColor = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_endColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_endX = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_endX;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_endY = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_endY;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_gradientRadius = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_startColor = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_startColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_startX = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_startX;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_startY = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_startY;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_tileMode = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_tileMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.GradientColor_android_type = global::DroidMatika.Android.Resource.Styleable.GradientColor_android_type;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ItemsViewRendererTheme = global::DroidMatika.Android.Resource.Styleable.ItemsViewRendererTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::DroidMatika.Android.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_android_gravity = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_android_orientation = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_divider = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_Layout = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.LinearLayoutCompat_showDividers = global::DroidMatika.Android.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ListPopupWindow = global::DroidMatika.Android.Resource.Styleable.ListPopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::DroidMatika.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::DroidMatika.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialog = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialog;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop = global::DroidMatika.Android.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton = global::DroidMatika.Android.Resource.Styleable.MaterialButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButtonToggleGroup = global::DroidMatika.Android.Resource.Styleable.MaterialButtonToggleGroup;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButtonToggleGroup_checkedButton = global::DroidMatika.Android.Resource.Styleable.MaterialButtonToggleGroup_checkedButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButtonToggleGroup_singleSelection = global::DroidMatika.Android.Resource.Styleable.MaterialButtonToggleGroup_singleSelection;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_android_checkable = global::DroidMatika.Android.Resource.Styleable.MaterialButton_android_checkable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_android_insetBottom = global::DroidMatika.Android.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_android_insetLeft = global::DroidMatika.Android.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_android_insetRight = global::DroidMatika.Android.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_android_insetTop = global::DroidMatika.Android.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_backgroundTint = global::DroidMatika.Android.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_backgroundTintMode = global::DroidMatika.Android.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_cornerRadius = global::DroidMatika.Android.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_elevation = global::DroidMatika.Android.Resource.Styleable.MaterialButton_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_icon = global::DroidMatika.Android.Resource.Styleable.MaterialButton_icon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_iconGravity = global::DroidMatika.Android.Resource.Styleable.MaterialButton_iconGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_iconPadding = global::DroidMatika.Android.Resource.Styleable.MaterialButton_iconPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_iconSize = global::DroidMatika.Android.Resource.Styleable.MaterialButton_iconSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_iconTint = global::DroidMatika.Android.Resource.Styleable.MaterialButton_iconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_iconTintMode = global::DroidMatika.Android.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_rippleColor = global::DroidMatika.Android.Resource.Styleable.MaterialButton_rippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialButton_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.MaterialButton_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_strokeColor = global::DroidMatika.Android.Resource.Styleable.MaterialButton_strokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialButton_strokeWidth = global::DroidMatika.Android.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_android_insetBottom = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_android_insetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_android_insetLeft = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_android_insetLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_android_insetRight = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_android_insetRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_android_insetTop = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_android_insetTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemFillColor = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemStrokeColor = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendarItem_itemTextColor = global::DroidMatika.Android.Resource.Styleable.MaterialCalendarItem_itemTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_android_windowFullscreen = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_android_windowFullscreen;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_dayInvalidStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_dayInvalidStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_daySelectedStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_daySelectedStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_dayStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_dayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_dayTodayStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_dayTodayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_rangeFillColor = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_rangeFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_yearSelectedStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_yearSelectedStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_yearStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_yearStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCalendar_yearTodayStyle = global::DroidMatika.Android.Resource.Styleable.MaterialCalendar_yearTodayStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView = global::DroidMatika.Android.Resource.Styleable.MaterialCardView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_android_checkable = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_android_checkable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_cardForegroundColor = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_cardForegroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_checkedIcon = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_checkedIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_checkedIconTint = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_checkedIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_rippleColor = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_rippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_state_dragged = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_state_dragged;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_strokeColor = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCardView_strokeWidth = global::DroidMatika.Android.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCheckBox = global::DroidMatika.Android.Resource.Styleable.MaterialCheckBox;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCheckBox_buttonTint = global::DroidMatika.Android.Resource.Styleable.MaterialCheckBox_buttonTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors = global::DroidMatika.Android.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialRadioButton = global::DroidMatika.Android.Resource.Styleable.MaterialRadioButton;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors = global::DroidMatika.Android.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialShape = global::DroidMatika.Android.Resource.Styleable.MaterialShape;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialShape_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialShape_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialShape_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.MaterialShape_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextAppearance_android_lineHeight = global::DroidMatika.Android.Resource.Styleable.MaterialTextAppearance_android_lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextAppearance_lineHeight = global::DroidMatika.Android.Resource.Styleable.MaterialTextAppearance_lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextView = global::DroidMatika.Android.Resource.Styleable.MaterialTextView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextView_android_lineHeight = global::DroidMatika.Android.Resource.Styleable.MaterialTextView_android_lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextView_android_textAppearance = global::DroidMatika.Android.Resource.Styleable.MaterialTextView_android_textAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MaterialTextView_lineHeight = global::DroidMatika.Android.Resource.Styleable.MaterialTextView_lineHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup = global::DroidMatika.Android.Resource.Styleable.MenuGroup;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_checkableBehavior = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_enabled = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_enabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_id = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_id;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_menuCategory = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_orderInCategory = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuGroup_android_visible = global::DroidMatika.Android.Resource.Styleable.MenuGroup_android_visible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem = global::DroidMatika.Android.Resource.Styleable.MenuItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_actionLayout = global::DroidMatika.Android.Resource.Styleable.MenuItem_actionLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_actionProviderClass = global::DroidMatika.Android.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_actionViewClass = global::DroidMatika.Android.Resource.Styleable.MenuItem_actionViewClass;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_alphabeticModifiers = global::DroidMatika.Android.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_checkable = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_checkable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_checked = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_checked;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_enabled = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_enabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_icon = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_icon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_id = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_id;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_menuCategory = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_numericShortcut = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_onClick = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_onClick;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_orderInCategory = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_title = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_title;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_titleCondensed = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_android_visible = global::DroidMatika.Android.Resource.Styleable.MenuItem_android_visible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_contentDescription = global::DroidMatika.Android.Resource.Styleable.MenuItem_contentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_iconTint = global::DroidMatika.Android.Resource.Styleable.MenuItem_iconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_iconTintMode = global::DroidMatika.Android.Resource.Styleable.MenuItem_iconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_numericModifiers = global::DroidMatika.Android.Resource.Styleable.MenuItem_numericModifiers;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_showAsAction = global::DroidMatika.Android.Resource.Styleable.MenuItem_showAsAction;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuItem_tooltipText = global::DroidMatika.Android.Resource.Styleable.MenuItem_tooltipText;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView = global::DroidMatika.Android.Resource.Styleable.MenuView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_headerBackground = global::DroidMatika.Android.Resource.Styleable.MenuView_android_headerBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_horizontalDivider = global::DroidMatika.Android.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_itemBackground = global::DroidMatika.Android.Resource.Styleable.MenuView_android_itemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::DroidMatika.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_itemTextAppearance = global::DroidMatika.Android.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_verticalDivider = global::DroidMatika.Android.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_android_windowAnimationStyle = global::DroidMatika.Android.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_preserveIconSpacing = global::DroidMatika.Android.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.MenuView_subMenuArrow = global::DroidMatika.Android.Resource.Styleable.MenuView_subMenuArrow;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView = global::DroidMatika.Android.Resource.Styleable.NavigationView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_android_background = global::DroidMatika.Android.Resource.Styleable.NavigationView_android_background;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::DroidMatika.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_android_maxWidth = global::DroidMatika.Android.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_elevation = global::DroidMatika.Android.Resource.Styleable.NavigationView_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_headerLayout = global::DroidMatika.Android.Resource.Styleable.NavigationView_headerLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemBackground = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemHorizontalPadding = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemIconPadding = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemIconSize = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemIconSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemIconTint = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemMaxLines = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemMaxLines;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeAppearance = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeFillColor = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeFillColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeInsetBottom = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeInsetBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeInsetEnd = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeInsetStart = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemShapeInsetTop = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemShapeInsetTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemTextAppearance = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_itemTextColor = global::DroidMatika.Android.Resource.Styleable.NavigationView_itemTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.NavigationView_menu = global::DroidMatika.Android.Resource.Styleable.NavigationView_menu;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindow = global::DroidMatika.Android.Resource.Styleable.PopupWindow;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindowBackgroundState = global::DroidMatika.Android.Resource.Styleable.PopupWindowBackgroundState;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::DroidMatika.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::DroidMatika.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindow_android_popupBackground = global::DroidMatika.Android.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.PopupWindow_overlapAnchor = global::DroidMatika.Android.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecycleListView = global::DroidMatika.Android.Resource.Styleable.RecycleListView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::DroidMatika.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::DroidMatika.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView = global::DroidMatika.Android.Resource.Styleable.RecyclerView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_android_clipToPadding = global::DroidMatika.Android.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_android_descendantFocusability = global::DroidMatika.Android.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_android_orientation = global::DroidMatika.Android.Resource.Styleable.RecyclerView_android_orientation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_fastScrollEnabled = global::DroidMatika.Android.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::DroidMatika.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::DroidMatika.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::DroidMatika.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::DroidMatika.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_layoutManager = global::DroidMatika.Android.Resource.Styleable.RecyclerView_layoutManager;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_reverseLayout = global::DroidMatika.Android.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_spanCount = global::DroidMatika.Android.Resource.Styleable.RecyclerView_spanCount;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.RecyclerView_stackFromEnd = global::DroidMatika.Android.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrimInsetsFrameLayout = global::DroidMatika.Android.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::DroidMatika.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrollingViewBehavior_Layout = global::DroidMatika.Android.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::DroidMatika.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrollViewRendererTheme = global::DroidMatika.Android.Resource.Styleable.ScrollViewRendererTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle = global::DroidMatika.Android.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView = global::DroidMatika.Android.Resource.Styleable.SearchView;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_android_focusable = global::DroidMatika.Android.Resource.Styleable.SearchView_android_focusable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_android_imeOptions = global::DroidMatika.Android.Resource.Styleable.SearchView_android_imeOptions;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_android_inputType = global::DroidMatika.Android.Resource.Styleable.SearchView_android_inputType;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_android_maxWidth = global::DroidMatika.Android.Resource.Styleable.SearchView_android_maxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_closeIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_closeIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_commitIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_commitIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_defaultQueryHint = global::DroidMatika.Android.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_goIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_goIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_iconifiedByDefault = global::DroidMatika.Android.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_layout = global::DroidMatika.Android.Resource.Styleable.SearchView_layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_queryBackground = global::DroidMatika.Android.Resource.Styleable.SearchView_queryBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_queryHint = global::DroidMatika.Android.Resource.Styleable.SearchView_queryHint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_searchHintIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_searchHintIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_searchIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_searchIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_submitBackground = global::DroidMatika.Android.Resource.Styleable.SearchView_submitBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_suggestionRowLayout = global::DroidMatika.Android.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SearchView_voiceIcon = global::DroidMatika.Android.Resource.Styleable.SearchView_voiceIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerFamily = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerFamily;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerSize = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ShapeAppearance_cornerSizeTopRight = global::DroidMatika.Android.Resource.Styleable.ShapeAppearance_cornerSizeTopRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Snackbar = global::DroidMatika.Android.Resource.Styleable.Snackbar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_actionTextColorAlpha = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_actionTextColorAlpha;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_android_maxWidth = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_animationMode = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_animationMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_elevation = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_elevation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::DroidMatika.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Snackbar_snackbarButtonStyle = global::DroidMatika.Android.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Snackbar_snackbarStyle = global::DroidMatika.Android.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner = global::DroidMatika.Android.Resource.Styleable.Spinner;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner_android_dropDownWidth = global::DroidMatika.Android.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner_android_entries = global::DroidMatika.Android.Resource.Styleable.Spinner_android_entries;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner_android_popupBackground = global::DroidMatika.Android.Resource.Styleable.Spinner_android_popupBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner_android_prompt = global::DroidMatika.Android.Resource.Styleable.Spinner_android_prompt;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Spinner_popupTheme = global::DroidMatika.Android.Resource.Styleable.Spinner_popupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable = global::DroidMatika.Android.Resource.Styleable.StateListDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawableItem = global::DroidMatika.Android.Resource.Styleable.StateListDrawableItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawableItem_android_drawable = global::DroidMatika.Android.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_constantSize = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_dither = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_dither;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_variablePadding = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.StateListDrawable_android_visible = global::DroidMatika.Android.Resource.Styleable.StateListDrawable_android_visible;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwipeRefreshLayout = global::DroidMatika.Android.Resource.Styleable.SwipeRefreshLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor = global::DroidMatika.Android.Resource.Styleable.SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat = global::DroidMatika.Android.Resource.Styleable.SwitchCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_android_textOff = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_android_textOn = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_android_thumb = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_showText = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_showText;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_splitTrack = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_switchMinWidth = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_switchPadding = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_switchTextAppearance = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_thumbTextPadding = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_thumbTint = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_thumbTintMode = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_track = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_track;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_trackTint = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_trackTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchCompat_trackTintMode = global::DroidMatika.Android.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchMaterial = global::DroidMatika.Android.Resource.Styleable.SwitchMaterial;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.SwitchMaterial_useMaterialThemeColors = global::DroidMatika.Android.Resource.Styleable.SwitchMaterial_useMaterialThemeColors;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabItem = global::DroidMatika.Android.Resource.Styleable.TabItem;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabItem_android_icon = global::DroidMatika.Android.Resource.Styleable.TabItem_android_icon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabItem_android_layout = global::DroidMatika.Android.Resource.Styleable.TabItem_android_layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabItem_android_text = global::DroidMatika.Android.Resource.Styleable.TabItem_android_text;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout = global::DroidMatika.Android.Resource.Styleable.TabLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabBackground = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabBackground;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabContentStart = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabContentStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabGravity = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIconTint = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIconTintMode = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicator = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicator;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicatorColor = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicatorGravity = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabIndicatorHeight = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabInlineLabel = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabMaxWidth = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabMinWidth = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabMode = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabPadding = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabPadding;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabPaddingBottom = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabPaddingEnd = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabPaddingStart = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabPaddingTop = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabRippleColor = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabSelectedTextColor = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabTextAppearance = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabTextColor = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TabLayout_tabUnboundedRipple = global::DroidMatika.Android.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance = global::DroidMatika.Android.Resource.Styleable.TextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_fontFamily = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_shadowColor = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_shadowDx = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_shadowDy = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_shadowRadius = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textColor = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textColorHint = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textColorLink = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textFontWeight = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textSize = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textSize;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_textStyle = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_android_typeface = global::DroidMatika.Android.Resource.Styleable.TextAppearance_android_typeface;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_fontFamily = global::DroidMatika.Android.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_fontVariationSettings = global::DroidMatika.Android.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_textAllCaps = global::DroidMatika.Android.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextAppearance_textLocale = global::DroidMatika.Android.Resource.Styleable.TextAppearance_textLocale;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout = global::DroidMatika.Android.Resource.Styleable.TextInputLayout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_android_hint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_android_hint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_android_textColorHint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxStrokeColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterMaxLength = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterOverflowTextColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterOverflowTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterTextAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_counterTextColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_counterTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconCheckable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconCheckable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconContentDescription = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconDrawable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconTint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_endIconTintMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_endIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorIconDrawable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorIconTint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorIconTintMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorTextAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_errorTextColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_errorTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_helperText = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_helperText;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_helperTextEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_helperTextTextColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_helperTextTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_hintEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_hintTextAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_hintTextColor = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_hintTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_passwordToggleTint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_shapeAppearance = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_shapeAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_startIconCheckable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_startIconCheckable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_startIconContentDescription = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_startIconContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_startIconDrawable = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_startIconDrawable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_startIconTint = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_startIconTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.TextInputLayout_startIconTintMode = global::DroidMatika.Android.Resource.Styleable.TextInputLayout_startIconTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ThemeEnforcement = global::DroidMatika.Android.Resource.Styleable.ThemeEnforcement;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::DroidMatika.Android.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::DroidMatika.Android.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::DroidMatika.Android.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar = global::DroidMatika.Android.Resource.Styleable.Toolbar;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_android_gravity = global::DroidMatika.Android.Resource.Styleable.Toolbar_android_gravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_android_minHeight = global::DroidMatika.Android.Resource.Styleable.Toolbar_android_minHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_buttonGravity = global::DroidMatika.Android.Resource.Styleable.Toolbar_buttonGravity;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_collapseContentDescription = global::DroidMatika.Android.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_collapseIcon = global::DroidMatika.Android.Resource.Styleable.Toolbar_collapseIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetEnd = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetLeft = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetRight = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetStart = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::DroidMatika.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_logo = global::DroidMatika.Android.Resource.Styleable.Toolbar_logo;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_logoDescription = global::DroidMatika.Android.Resource.Styleable.Toolbar_logoDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_maxButtonHeight = global::DroidMatika.Android.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_menu = global::DroidMatika.Android.Resource.Styleable.Toolbar_menu;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_navigationContentDescription = global::DroidMatika.Android.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_navigationIcon = global::DroidMatika.Android.Resource.Styleable.Toolbar_navigationIcon;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_popupTheme = global::DroidMatika.Android.Resource.Styleable.Toolbar_popupTheme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_subtitle = global::DroidMatika.Android.Resource.Styleable.Toolbar_subtitle;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_subtitleTextAppearance = global::DroidMatika.Android.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_subtitleTextColor = global::DroidMatika.Android.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_title = global::DroidMatika.Android.Resource.Styleable.Toolbar_title;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMargin = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMargin;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMarginBottom = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMarginEnd = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMargins = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMargins;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMarginStart = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleMarginTop = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleTextAppearance = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.Toolbar_titleTextColor = global::DroidMatika.Android.Resource.Styleable.Toolbar_titleTextColor;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View = global::DroidMatika.Android.Resource.Styleable.View;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewBackgroundHelper = global::DroidMatika.Android.Resource.Styleable.ViewBackgroundHelper;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewBackgroundHelper_android_background = global::DroidMatika.Android.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::DroidMatika.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::DroidMatika.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewPager2 = global::DroidMatika.Android.Resource.Styleable.ViewPager2;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewPager2_android_orientation = global::DroidMatika.Android.Resource.Styleable.ViewPager2_android_orientation;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewStubCompat = global::DroidMatika.Android.Resource.Styleable.ViewStubCompat;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewStubCompat_android_id = global::DroidMatika.Android.Resource.Styleable.ViewStubCompat_android_id;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewStubCompat_android_inflatedId = global::DroidMatika.Android.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.ViewStubCompat_android_layout = global::DroidMatika.Android.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View_android_focusable = global::DroidMatika.Android.Resource.Styleable.View_android_focusable;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View_android_theme = global::DroidMatika.Android.Resource.Styleable.View_android_theme;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View_paddingEnd = global::DroidMatika.Android.Resource.Styleable.View_paddingEnd;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View_paddingStart = global::DroidMatika.Android.Resource.Styleable.View_paddingStart;
+			global::Xamarin.CommunityToolkit.Resource.Styleable.View_theme = global::DroidMatika.Android.Resource.Styleable.View_theme;
+			global::Xamarin.CommunityToolkit.Resource.Xml.image_share_filepaths = global::DroidMatika.Android.Resource.Xml.image_share_filepaths;
+			global::Xamarin.CommunityToolkit.Resource.Xml.standalone_badge = global::DroidMatika.Android.Resource.Xml.standalone_badge;
+			global::Xamarin.CommunityToolkit.Resource.Xml.standalone_badge_gravity_bottom_end = global::DroidMatika.Android.Resource.Xml.standalone_badge_gravity_bottom_end;
+			global::Xamarin.CommunityToolkit.Resource.Xml.standalone_badge_gravity_bottom_start = global::DroidMatika.Android.Resource.Xml.standalone_badge_gravity_bottom_start;
+			global::Xamarin.CommunityToolkit.Resource.Xml.standalone_badge_gravity_top_start = global::DroidMatika.Android.Resource.Xml.standalone_badge_gravity_top_start;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::DroidMatika.Android.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::DroidMatika.Android.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::DroidMatika.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -11490,121 +14946,130 @@ namespace DroidMatika.Android
 			public const int design_snackbar_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int ic_mtrl_checked_circle = 2131165292;
+			public const int hamburger = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int ic_mtrl_chip_checked_black = 2131165293;
+			public const int hamburgerMenu = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int ic_mtrl_chip_checked_circle = 2131165294;
+			public const int ic_mtrl_checked_circle = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int ic_mtrl_chip_close_circle = 2131165295;
+			public const int ic_mtrl_chip_checked_black = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int material_ic_calendar_black_24dp = 2131165296;
+			public const int ic_mtrl_chip_checked_circle = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int material_ic_clear_black_24dp = 2131165297;
+			public const int ic_mtrl_chip_close_circle = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int material_ic_edit_black_24dp = 2131165298;
+			public const int material_ic_calendar_black_24dp = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165299;
+			public const int material_ic_clear_black_24dp = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165300;
+			public const int material_ic_edit_black_24dp = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165301;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165302;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int mtrl_dialog_background = 2131165303;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int mtrl_dropdown_arrow = 2131165304;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int mtrl_ic_arrow_drop_down = 2131165305;
+			public const int mtrl_dialog_background = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int mtrl_ic_arrow_drop_up = 2131165306;
+			public const int mtrl_dropdown_arrow = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int mtrl_ic_cancel = 2131165307;
+			public const int mtrl_ic_arrow_drop_down = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int mtrl_ic_error = 2131165308;
+			public const int mtrl_ic_arrow_drop_up = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int mtrl_popupmenu_background = 2131165309;
+			public const int mtrl_ic_cancel = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int mtrl_popupmenu_background_dark = 2131165310;
+			public const int mtrl_ic_error = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int mtrl_tabs_default_indicator = 2131165311;
+			public const int mtrl_popupmenu_background = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int navigation_empty_icon = 2131165312;
+			public const int mtrl_popupmenu_background_dark = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int notification_action_background = 2131165313;
+			public const int mtrl_tabs_default_indicator = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int notification_bg = 2131165314;
+			public const int navigation_empty_icon = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int notification_bg_low = 2131165315;
+			public const int notification_action_background = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int notification_bg_low_normal = 2131165316;
+			public const int notification_bg = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int notification_bg_low_pressed = 2131165317;
+			public const int notification_bg_low = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int notification_bg_normal = 2131165318;
+			public const int notification_bg_low_normal = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int notification_bg_normal_pressed = 2131165319;
+			public const int notification_bg_low_pressed = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int notification_icon_background = 2131165320;
+			public const int notification_bg_normal = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int notification_template_icon_bg = 2131165321;
+			public const int notification_bg_normal_pressed = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int notification_template_icon_low_bg = 2131165322;
+			public const int notification_icon_background = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notification_tile_bg = 2131165323;
+			public const int notification_template_icon_bg = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int notify_panel_notification_icon_bg = 2131165324;
+			public const int notification_template_icon_low_bg = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int Splash = 2131165325;
+			public const int notification_tile_bg = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int Splash1024 = 2131165326;
+			public const int notify_panel_notification_icon_bg = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int SplashImageSettings = 2131165327;
+			public const int Planet = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int test_custom_background = 2131165328;
+			public const int Splash = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int tooltip_frame_dark = 2131165329;
+			public const int Splash1024 = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int tooltip_frame_light = 2131165330;
+			public const int SplashImageSettings = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int test_custom_background = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int tooltip_frame_dark = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int tooltip_frame_light = 2131165333;
 			
 			static Drawable()
 			{
@@ -11839,673 +15304,676 @@ namespace DroidMatika.Android
 			public const int buttonPanel = 2131230799;
 			
 			// aapt resource value: 0x7F080050
-			public const int cancel_action = 2131230800;
+			public const int cameratexture = 2131230800;
 			
 			// aapt resource value: 0x7F080051
-			public const int cancel_button = 2131230801;
+			public const int cancel_action = 2131230801;
 			
 			// aapt resource value: 0x7F080052
-			public const int center = 2131230802;
+			public const int cancel_button = 2131230802;
 			
 			// aapt resource value: 0x7F080053
-			public const int center_horizontal = 2131230803;
+			public const int center = 2131230803;
 			
 			// aapt resource value: 0x7F080054
-			public const int center_vertical = 2131230804;
+			public const int center_horizontal = 2131230804;
 			
 			// aapt resource value: 0x7F080055
-			public const int checkbox = 2131230805;
+			public const int center_vertical = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int @checked = 2131230806;
+			public const int checkbox = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int chip = 2131230807;
+			public const int @checked = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int chip1 = 2131230808;
+			public const int chip = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int chip2 = 2131230809;
+			public const int chip1 = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int chip3 = 2131230810;
+			public const int chip2 = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int chip_group = 2131230811;
+			public const int chip3 = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int chronometer = 2131230812;
+			public const int chip_group = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int clear_text = 2131230813;
+			public const int chronometer = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int clip_horizontal = 2131230814;
+			public const int clear_text = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int clip_vertical = 2131230815;
+			public const int clip_horizontal = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int collapseActionView = 2131230816;
+			public const int clip_vertical = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int confirm_button = 2131230817;
+			public const int collapseActionView = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int container = 2131230818;
+			public const int confirm_button = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int content = 2131230819;
+			public const int container = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int contentPanel = 2131230820;
+			public const int content = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int coordinator = 2131230821;
+			public const int contentPanel = 2131230821;
+			
+			// aapt resource value: 0x7F080066
+			public const int coordinator = 2131230822;
 			
 			// aapt resource value: 0x7F080003
 			public const int CTRL = 2131230723;
 			
-			// aapt resource value: 0x7F080066
-			public const int custom = 2131230822;
-			
 			// aapt resource value: 0x7F080067
-			public const int customPanel = 2131230823;
+			public const int custom = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int cut = 2131230824;
+			public const int customPanel = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int date_picker_actions = 2131230825;
+			public const int cut = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int decor_content_parent = 2131230826;
+			public const int date_picker_actions = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int default_activity_button = 2131230827;
+			public const int decor_content_parent = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int design_bottom_sheet = 2131230828;
+			public const int default_activity_button = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int design_menu_item_action_area = 2131230829;
+			public const int design_bottom_sheet = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int design_menu_item_action_area_stub = 2131230830;
+			public const int design_menu_item_action_area = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int design_menu_item_text = 2131230831;
+			public const int design_menu_item_action_area_stub = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int design_navigation_view = 2131230832;
+			public const int design_menu_item_text = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int dialog_button = 2131230833;
+			public const int design_navigation_view = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int disableHome = 2131230834;
+			public const int dialog_button = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int dropdown_menu = 2131230835;
+			public const int disableHome = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int edit_query = 2131230836;
+			public const int dropdown_menu = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int end = 2131230837;
+			public const int edit_query = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int end_padder = 2131230838;
+			public const int end = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int enterAlways = 2131230839;
+			public const int end_padder = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int enterAlwaysCollapsed = 2131230840;
+			public const int enterAlways = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int exitUntilCollapsed = 2131230841;
-			
-			// aapt resource value: 0x7F08007B
-			public const int expanded_menu = 2131230843;
+			public const int enterAlwaysCollapsed = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int expand_activities_button = 2131230842;
+			public const int exitUntilCollapsed = 2131230842;
 			
 			// aapt resource value: 0x7F08007C
-			public const int fade = 2131230844;
+			public const int expanded_menu = 2131230844;
+			
+			// aapt resource value: 0x7F08007B
+			public const int expand_activities_button = 2131230843;
 			
 			// aapt resource value: 0x7F08007D
-			public const int fill = 2131230845;
-			
-			// aapt resource value: 0x7F080080
-			public const int filled = 2131230848;
+			public const int fade = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int fill_horizontal = 2131230846;
-			
-			// aapt resource value: 0x7F08007F
-			public const int fill_vertical = 2131230847;
+			public const int fill = 2131230846;
 			
 			// aapt resource value: 0x7F080081
-			public const int fitToContents = 2131230849;
+			public const int filled = 2131230849;
+			
+			// aapt resource value: 0x7F08007F
+			public const int fill_horizontal = 2131230847;
+			
+			// aapt resource value: 0x7F080080
+			public const int fill_vertical = 2131230848;
 			
 			// aapt resource value: 0x7F080082
-			public const int @fixed = 2131230850;
+			public const int fitToContents = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int floating = 2131230851;
+			public const int @fixed = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int flyoutcontent_appbar = 2131230852;
+			public const int floating = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int forever = 2131230853;
+			public const int flyoutcontent_appbar = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int fragment_container_view_tag = 2131230854;
+			public const int forever = 2131230854;
+			
+			// aapt resource value: 0x7F080087
+			public const int fragment_container_view_tag = 2131230855;
 			
 			// aapt resource value: 0x7F080004
 			public const int FUNCTION = 2131230724;
 			
-			// aapt resource value: 0x7F080087
-			public const int ghost_view = 2131230855;
-			
 			// aapt resource value: 0x7F080088
-			public const int ghost_view_holder = 2131230856;
+			public const int ghost_view = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int gone = 2131230857;
+			public const int ghost_view_holder = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int group_divider = 2131230858;
+			public const int gone = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int hideable = 2131230859;
+			public const int group_divider = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int home = 2131230860;
+			public const int hideable = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int homeAsUp = 2131230861;
+			public const int home = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int icon = 2131230862;
+			public const int homeAsUp = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int icon_group = 2131230863;
+			public const int icon = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int ifRoom = 2131230864;
+			public const int icon_group = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int image = 2131230865;
+			public const int ifRoom = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int info = 2131230866;
+			public const int image = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int italic = 2131230867;
+			public const int info = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int item_touch_helper_previous_elevation = 2131230868;
+			public const int italic = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int labeled = 2131230869;
+			public const int item_touch_helper_previous_elevation = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int largeLabel = 2131230870;
+			public const int labeled = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int left = 2131230871;
+			public const int largeLabel = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int line1 = 2131230872;
+			public const int left = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int line3 = 2131230873;
+			public const int line1 = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int listMode = 2131230874;
+			public const int line3 = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int list_item = 2131230875;
+			public const int listMode = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int main_appbar = 2131230876;
+			public const int list_item = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int main_tablayout = 2131230877;
+			public const int main_appbar = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int main_toolbar = 2131230878;
+			public const int main_tablayout = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int main_viewpager = 2131230879;
+			public const int main_toolbar = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int masked = 2131230880;
+			public const int main_viewpager = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int media_actions = 2131230881;
+			public const int masked = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int media_controller_compat_view_tag = 2131230882;
+			public const int media_actions = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int message = 2131230883;
+			public const int media_controller_compat_view_tag = 2131230883;
+			
+			// aapt resource value: 0x7F0800A4
+			public const int message = 2131230884;
 			
 			// aapt resource value: 0x7F080005
 			public const int META = 2131230725;
 			
-			// aapt resource value: 0x7F0800A4
-			public const int middle = 2131230884;
-			
 			// aapt resource value: 0x7F0800A5
-			public const int mini = 2131230885;
+			public const int middle = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int month_grid = 2131230886;
+			public const int mini = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int month_navigation_bar = 2131230887;
+			public const int month_grid = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int month_navigation_fragment_toggle = 2131230888;
+			public const int month_navigation_bar = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int month_navigation_next = 2131230889;
+			public const int month_navigation_fragment_toggle = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int month_navigation_previous = 2131230890;
+			public const int month_navigation_next = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int month_title = 2131230891;
-			
-			// aapt resource value: 0x7F0800AD
-			public const int mtrl_calendar_days_of_week = 2131230893;
+			public const int month_navigation_previous = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int mtrl_calendar_day_selector_frame = 2131230892;
+			public const int month_title = 2131230892;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int mtrl_calendar_frame = 2131230894;
+			public const int mtrl_calendar_days_of_week = 2131230894;
+			
+			// aapt resource value: 0x7F0800AD
+			public const int mtrl_calendar_day_selector_frame = 2131230893;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int mtrl_calendar_main_pane = 2131230895;
+			public const int mtrl_calendar_frame = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int mtrl_calendar_months = 2131230896;
+			public const int mtrl_calendar_main_pane = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int mtrl_calendar_selection_frame = 2131230897;
+			public const int mtrl_calendar_months = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int mtrl_calendar_text_input_frame = 2131230898;
+			public const int mtrl_calendar_selection_frame = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int mtrl_calendar_year_selector_frame = 2131230899;
+			public const int mtrl_calendar_text_input_frame = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int mtrl_card_checked_layer_id = 2131230900;
+			public const int mtrl_calendar_year_selector_frame = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int mtrl_child_content_container = 2131230901;
+			public const int mtrl_card_checked_layer_id = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int mtrl_internal_children_alpha_tag = 2131230902;
+			public const int mtrl_child_content_container = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int mtrl_motion_snapshot_view = 2131230903;
+			public const int mtrl_internal_children_alpha_tag = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int mtrl_picker_fullscreen = 2131230904;
+			public const int mtrl_motion_snapshot_view = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int mtrl_picker_header = 2131230905;
+			public const int mtrl_picker_fullscreen = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int mtrl_picker_header_selection_text = 2131230906;
+			public const int mtrl_picker_header = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int mtrl_picker_header_title_and_selection = 2131230907;
+			public const int mtrl_picker_header_selection_text = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int mtrl_picker_header_toggle = 2131230908;
+			public const int mtrl_picker_header_title_and_selection = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int mtrl_picker_text_input_date = 2131230909;
+			public const int mtrl_picker_header_toggle = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int mtrl_picker_text_input_range_end = 2131230910;
+			public const int mtrl_picker_text_input_date = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int mtrl_picker_text_input_range_start = 2131230911;
+			public const int mtrl_picker_text_input_range_end = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int mtrl_picker_title_text = 2131230912;
+			public const int mtrl_picker_text_input_range_start = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int multiply = 2131230913;
+			public const int mtrl_picker_title_text = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int navigation_header_container = 2131230914;
+			public const int multiply = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int never = 2131230915;
-			
-			// aapt resource value: 0x7F0800C5
-			public const int none = 2131230917;
-			
-			// aapt resource value: 0x7F0800C6
-			public const int normal = 2131230918;
+			public const int navigation_header_container = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int noScroll = 2131230916;
+			public const int never = 2131230916;
+			
+			// aapt resource value: 0x7F0800C6
+			public const int none = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int notification_background = 2131230919;
+			public const int normal = 2131230919;
+			
+			// aapt resource value: 0x7F0800C5
+			public const int noScroll = 2131230917;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int notification_main_column = 2131230920;
+			public const int notification_background = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int notification_main_column_container = 2131230921;
+			public const int notification_main_column = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int off = 2131230922;
+			public const int notification_main_column_container = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int on = 2131230923;
+			public const int off = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int outline = 2131230924;
+			public const int on = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int parallax = 2131230925;
+			public const int outline = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int parentPanel = 2131230926;
+			public const int parallax = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int parent_matrix = 2131230927;
+			public const int parentPanel = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int password_toggle = 2131230928;
+			public const int parent_matrix = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int peekHeight = 2131230929;
+			public const int password_toggle = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int pin = 2131230930;
+			public const int peekHeight = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int progress_circular = 2131230931;
+			public const int pin = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int progress_horizontal = 2131230932;
+			public const int progress_circular = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int radio = 2131230933;
+			public const int progress_horizontal = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int right = 2131230934;
+			public const int radio = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int right_icon = 2131230935;
+			public const int right = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int right_side = 2131230936;
+			public const int right_icon = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int rounded = 2131230937;
+			public const int right_side = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int row_index_key = 2131230938;
+			public const int rounded = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int save_non_transition_alpha = 2131230939;
+			public const int row_index_key = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int save_overlay_view = 2131230940;
+			public const int save_non_transition_alpha = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int scale = 2131230941;
+			public const int save_overlay_view = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int screen = 2131230942;
+			public const int scale = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int scroll = 2131230943;
-			
-			// aapt resource value: 0x7F0800E3
-			public const int scrollable = 2131230947;
+			public const int screen = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int scrollIndicatorDown = 2131230944;
-			
-			// aapt resource value: 0x7F0800E1
-			public const int scrollIndicatorUp = 2131230945;
-			
-			// aapt resource value: 0x7F0800E2
-			public const int scrollView = 2131230946;
+			public const int scroll = 2131230944;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int search_badge = 2131230948;
+			public const int scrollable = 2131230948;
+			
+			// aapt resource value: 0x7F0800E1
+			public const int scrollIndicatorDown = 2131230945;
+			
+			// aapt resource value: 0x7F0800E2
+			public const int scrollIndicatorUp = 2131230946;
+			
+			// aapt resource value: 0x7F0800E3
+			public const int scrollView = 2131230947;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int search_bar = 2131230949;
+			public const int search_badge = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int search_button = 2131230950;
+			public const int search_bar = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int search_close_btn = 2131230951;
+			public const int search_button = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int search_edit_frame = 2131230952;
+			public const int search_close_btn = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int search_go_btn = 2131230953;
+			public const int search_edit_frame = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int search_mag_icon = 2131230954;
+			public const int search_go_btn = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int search_plate = 2131230955;
+			public const int search_mag_icon = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int search_src_text = 2131230956;
+			public const int search_plate = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int search_voice_btn = 2131230957;
-			
-			// aapt resource value: 0x7F0800EF
-			public const int selected = 2131230959;
+			public const int search_src_text = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int select_dialog_listview = 2131230958;
+			public const int search_voice_btn = 2131230958;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int shellcontent_appbar = 2131230960;
+			public const int selected = 2131230960;
+			
+			// aapt resource value: 0x7F0800EF
+			public const int select_dialog_listview = 2131230959;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int shellcontent_toolbar = 2131230961;
+			public const int shellcontent_appbar = 2131230961;
+			
+			// aapt resource value: 0x7F0800F2
+			public const int shellcontent_toolbar = 2131230962;
 			
 			// aapt resource value: 0x7F080006
 			public const int SHIFT = 2131230726;
 			
-			// aapt resource value: 0x7F0800F2
-			public const int shortcut = 2131230962;
-			
 			// aapt resource value: 0x7F0800F3
-			public const int showCustom = 2131230963;
+			public const int shortcut = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int showHome = 2131230964;
+			public const int showCustom = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int showTitle = 2131230965;
+			public const int showHome = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int skipCollapsed = 2131230966;
+			public const int showTitle = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int slide = 2131230967;
+			public const int skipCollapsed = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int sliding_tabs = 2131230968;
+			public const int slide = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int smallLabel = 2131230969;
+			public const int sliding_tabs = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int snackbar_action = 2131230970;
+			public const int smallLabel = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int snackbar_text = 2131230971;
+			public const int snackbar_action = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int snap = 2131230972;
+			public const int snackbar_text = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int snapMargins = 2131230973;
+			public const int snap = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int spacer = 2131230974;
+			public const int snapMargins = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int split_action_bar = 2131230975;
+			public const int spacer = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int src_atop = 2131230976;
+			public const int split_action_bar = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int src_in = 2131230977;
+			public const int src_atop = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int src_over = 2131230978;
+			public const int src_in = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int start = 2131230979;
+			public const int src_over = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int status_bar_latest_event_content = 2131230980;
+			public const int start = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int stretch = 2131230981;
+			public const int status_bar_latest_event_content = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int submenuarrow = 2131230982;
+			public const int stretch = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int submit_area = 2131230983;
+			public const int submenuarrow = 2131230983;
+			
+			// aapt resource value: 0x7F080108
+			public const int submit_area = 2131230984;
 			
 			// aapt resource value: 0x7F080007
 			public const int SYM = 2131230727;
 			
-			// aapt resource value: 0x7F080108
-			public const int tabMode = 2131230984;
-			
 			// aapt resource value: 0x7F080109
-			public const int tag_accessibility_actions = 2131230985;
+			public const int tabMode = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int tag_accessibility_clickable_spans = 2131230986;
+			public const int tag_accessibility_actions = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int tag_accessibility_heading = 2131230987;
+			public const int tag_accessibility_clickable_spans = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int tag_accessibility_pane_title = 2131230988;
+			public const int tag_accessibility_heading = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int tag_screen_reader_focusable = 2131230989;
+			public const int tag_accessibility_pane_title = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int tag_transition_group = 2131230990;
+			public const int tag_screen_reader_focusable = 2131230990;
 			
 			// aapt resource value: 0x7F08010F
-			public const int tag_unhandled_key_event_manager = 2131230991;
+			public const int tag_transition_group = 2131230991;
 			
 			// aapt resource value: 0x7F080110
-			public const int tag_unhandled_key_listeners = 2131230992;
+			public const int tag_unhandled_key_event_manager = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int test_checkbox_android_button_tint = 2131230993;
+			public const int tag_unhandled_key_listeners = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int test_checkbox_app_button_tint = 2131230994;
+			public const int test_checkbox_android_button_tint = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int test_radiobutton_android_button_tint = 2131230995;
+			public const int test_checkbox_app_button_tint = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int test_radiobutton_app_button_tint = 2131230996;
+			public const int test_radiobutton_android_button_tint = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int text = 2131230997;
+			public const int test_radiobutton_app_button_tint = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int text2 = 2131230998;
+			public const int text = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int textEnd = 2131230999;
-			
-			// aapt resource value: 0x7F08011D
-			public const int textinput_counter = 2131231005;
-			
-			// aapt resource value: 0x7F08011E
-			public const int textinput_error = 2131231006;
-			
-			// aapt resource value: 0x7F08011F
-			public const int textinput_helper_text = 2131231007;
-			
-			// aapt resource value: 0x7F080120
-			public const int textinput_placeholder = 2131231008;
-			
-			// aapt resource value: 0x7F080121
-			public const int textinput_prefix_text = 2131231009;
-			
-			// aapt resource value: 0x7F080122
-			public const int textinput_suffix_text = 2131231010;
+			public const int text2 = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int textSpacerNoButtons = 2131231000;
+			public const int textEnd = 2131231000;
 			
-			// aapt resource value: 0x7F080119
-			public const int textSpacerNoTitle = 2131231001;
+			// aapt resource value: 0x7F08011E
+			public const int textinput_counter = 2131231006;
 			
-			// aapt resource value: 0x7F08011A
-			public const int textStart = 2131231002;
+			// aapt resource value: 0x7F08011F
+			public const int textinput_error = 2131231007;
 			
-			// aapt resource value: 0x7F08011B
-			public const int text_input_end_icon = 2131231003;
+			// aapt resource value: 0x7F080120
+			public const int textinput_helper_text = 2131231008;
 			
-			// aapt resource value: 0x7F08011C
-			public const int text_input_start_icon = 2131231004;
+			// aapt resource value: 0x7F080121
+			public const int textinput_placeholder = 2131231009;
+			
+			// aapt resource value: 0x7F080122
+			public const int textinput_prefix_text = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int time = 2131231011;
+			public const int textinput_suffix_text = 2131231011;
+			
+			// aapt resource value: 0x7F080119
+			public const int textSpacerNoButtons = 2131231001;
+			
+			// aapt resource value: 0x7F08011A
+			public const int textSpacerNoTitle = 2131231002;
+			
+			// aapt resource value: 0x7F08011B
+			public const int textStart = 2131231003;
+			
+			// aapt resource value: 0x7F08011C
+			public const int text_input_end_icon = 2131231004;
+			
+			// aapt resource value: 0x7F08011D
+			public const int text_input_start_icon = 2131231005;
 			
 			// aapt resource value: 0x7F080124
-			public const int title = 2131231012;
+			public const int time = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int titleDividerNoCustom = 2131231013;
+			public const int title = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int title_template = 2131231014;
+			public const int titleDividerNoCustom = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int toolbar = 2131231015;
+			public const int title_template = 2131231015;
 			
 			// aapt resource value: 0x7F080128
-			public const int top = 2131231016;
+			public const int toolbar = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int topPanel = 2131231017;
+			public const int top = 2131231017;
+			
+			// aapt resource value: 0x7F08012A
+			public const int topPanel = 2131231018;
 			
 			// aapt resource value: 0x7F080008
 			public const int TOP_END = 2131230728;
@@ -12513,62 +15981,62 @@ namespace DroidMatika.Android
 			// aapt resource value: 0x7F080009
 			public const int TOP_START = 2131230729;
 			
-			// aapt resource value: 0x7F08012A
-			public const int touch_outside = 2131231018;
-			
 			// aapt resource value: 0x7F08012B
-			public const int transition_current_scene = 2131231019;
+			public const int touch_outside = 2131231019;
 			
 			// aapt resource value: 0x7F08012C
-			public const int transition_layout_save = 2131231020;
+			public const int transition_current_scene = 2131231020;
 			
 			// aapt resource value: 0x7F08012D
-			public const int transition_position = 2131231021;
+			public const int transition_layout_save = 2131231021;
 			
 			// aapt resource value: 0x7F08012E
-			public const int transition_scene_layoutid_cache = 2131231022;
+			public const int transition_position = 2131231022;
 			
 			// aapt resource value: 0x7F08012F
-			public const int transition_transform = 2131231023;
+			public const int transition_scene_layoutid_cache = 2131231023;
 			
 			// aapt resource value: 0x7F080130
-			public const int @unchecked = 2131231024;
+			public const int transition_transform = 2131231024;
 			
 			// aapt resource value: 0x7F080131
-			public const int uniform = 2131231025;
+			public const int @unchecked = 2131231025;
 			
 			// aapt resource value: 0x7F080132
-			public const int unlabeled = 2131231026;
+			public const int uniform = 2131231026;
 			
 			// aapt resource value: 0x7F080133
-			public const int up = 2131231027;
+			public const int unlabeled = 2131231027;
 			
 			// aapt resource value: 0x7F080134
-			public const int useLogo = 2131231028;
+			public const int up = 2131231028;
 			
 			// aapt resource value: 0x7F080135
-			public const int view_offset_helper = 2131231029;
+			public const int useLogo = 2131231029;
 			
 			// aapt resource value: 0x7F080136
-			public const int view_tree_saved_state_registry_owner = 2131231030;
+			public const int view_offset_helper = 2131231030;
 			
 			// aapt resource value: 0x7F080137
-			public const int visible = 2131231031;
+			public const int view_tree_saved_state_registry_owner = 2131231031;
 			
 			// aapt resource value: 0x7F080138
-			public const int visible_removing_fragment_view_tag = 2131231032;
-			
-			// aapt resource value: 0x7F08013A
-			public const int withinBounds = 2131231034;
+			public const int visible = 2131231032;
 			
 			// aapt resource value: 0x7F080139
-			public const int withText = 2131231033;
+			public const int visible_removing_fragment_view_tag = 2131231033;
 			
 			// aapt resource value: 0x7F08013B
-			public const int wrap_content = 2131231035;
+			public const int withinBounds = 2131231035;
+			
+			// aapt resource value: 0x7F08013A
+			public const int withText = 2131231034;
 			
 			// aapt resource value: 0x7F08013C
-			public const int zero_corner_chip = 2131231036;
+			public const int wrap_content = 2131231036;
+			
+			// aapt resource value: 0x7F08013D
+			public const int zero_corner_chip = 2131231037;
 			
 			static Id()
 			{
@@ -12799,256 +16267,259 @@ namespace DroidMatika.Android
 			public const int browser_actions_context_menu_row = 2131427358;
 			
 			// aapt resource value: 0x7F0B001F
-			public const int custom_dialog = 2131427359;
+			public const int CameraFragment = 2131427359;
 			
 			// aapt resource value: 0x7F0B0020
-			public const int design_bottom_navigation_item = 2131427360;
+			public const int custom_dialog = 2131427360;
 			
 			// aapt resource value: 0x7F0B0021
-			public const int design_bottom_sheet_dialog = 2131427361;
+			public const int design_bottom_navigation_item = 2131427361;
 			
 			// aapt resource value: 0x7F0B0022
-			public const int design_layout_snackbar = 2131427362;
+			public const int design_bottom_sheet_dialog = 2131427362;
 			
 			// aapt resource value: 0x7F0B0023
-			public const int design_layout_snackbar_include = 2131427363;
+			public const int design_layout_snackbar = 2131427363;
 			
 			// aapt resource value: 0x7F0B0024
-			public const int design_layout_tab_icon = 2131427364;
+			public const int design_layout_snackbar_include = 2131427364;
 			
 			// aapt resource value: 0x7F0B0025
-			public const int design_layout_tab_text = 2131427365;
+			public const int design_layout_tab_icon = 2131427365;
 			
 			// aapt resource value: 0x7F0B0026
-			public const int design_menu_item_action_area = 2131427366;
+			public const int design_layout_tab_text = 2131427366;
 			
 			// aapt resource value: 0x7F0B0027
-			public const int design_navigation_item = 2131427367;
+			public const int design_menu_item_action_area = 2131427367;
 			
 			// aapt resource value: 0x7F0B0028
-			public const int design_navigation_item_header = 2131427368;
+			public const int design_navigation_item = 2131427368;
 			
 			// aapt resource value: 0x7F0B0029
-			public const int design_navigation_item_separator = 2131427369;
+			public const int design_navigation_item_header = 2131427369;
 			
 			// aapt resource value: 0x7F0B002A
-			public const int design_navigation_item_subheader = 2131427370;
+			public const int design_navigation_item_separator = 2131427370;
 			
 			// aapt resource value: 0x7F0B002B
-			public const int design_navigation_menu = 2131427371;
+			public const int design_navigation_item_subheader = 2131427371;
 			
 			// aapt resource value: 0x7F0B002C
-			public const int design_navigation_menu_item = 2131427372;
+			public const int design_navigation_menu = 2131427372;
 			
 			// aapt resource value: 0x7F0B002D
-			public const int design_text_input_end_icon = 2131427373;
+			public const int design_navigation_menu_item = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
-			public const int design_text_input_start_icon = 2131427374;
+			public const int design_text_input_end_icon = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int FallbackTabbarDoNotUse = 2131427375;
+			public const int design_text_input_start_icon = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int FallbackToolbarDoNotUse = 2131427376;
+			public const int FallbackTabbarDoNotUse = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int FlyoutContent = 2131427377;
+			public const int FallbackToolbarDoNotUse = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int mtrl_alert_dialog = 2131427378;
+			public const int FlyoutContent = 2131427378;
 			
 			// aapt resource value: 0x7F0B0033
-			public const int mtrl_alert_dialog_actions = 2131427379;
+			public const int mtrl_alert_dialog = 2131427379;
 			
 			// aapt resource value: 0x7F0B0034
-			public const int mtrl_alert_dialog_title = 2131427380;
+			public const int mtrl_alert_dialog_actions = 2131427380;
 			
 			// aapt resource value: 0x7F0B0035
-			public const int mtrl_alert_select_dialog_item = 2131427381;
+			public const int mtrl_alert_dialog_title = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int mtrl_alert_select_dialog_multichoice = 2131427382;
+			public const int mtrl_alert_select_dialog_item = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int mtrl_alert_select_dialog_singlechoice = 2131427383;
+			public const int mtrl_alert_select_dialog_multichoice = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int mtrl_calendar_day = 2131427384;
-			
-			// aapt resource value: 0x7F0B003A
-			public const int mtrl_calendar_days_of_week = 2131427386;
+			public const int mtrl_alert_select_dialog_singlechoice = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int mtrl_calendar_day_of_week = 2131427385;
+			public const int mtrl_calendar_day = 2131427385;
 			
 			// aapt resource value: 0x7F0B003B
-			public const int mtrl_calendar_horizontal = 2131427387;
+			public const int mtrl_calendar_days_of_week = 2131427387;
+			
+			// aapt resource value: 0x7F0B003A
+			public const int mtrl_calendar_day_of_week = 2131427386;
 			
 			// aapt resource value: 0x7F0B003C
-			public const int mtrl_calendar_month = 2131427388;
-			
-			// aapt resource value: 0x7F0B003F
-			public const int mtrl_calendar_months = 2131427391;
+			public const int mtrl_calendar_horizontal = 2131427388;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int mtrl_calendar_month_labeled = 2131427389;
-			
-			// aapt resource value: 0x7F0B003E
-			public const int mtrl_calendar_month_navigation = 2131427390;
+			public const int mtrl_calendar_month = 2131427389;
 			
 			// aapt resource value: 0x7F0B0040
-			public const int mtrl_calendar_vertical = 2131427392;
+			public const int mtrl_calendar_months = 2131427392;
+			
+			// aapt resource value: 0x7F0B003E
+			public const int mtrl_calendar_month_labeled = 2131427390;
+			
+			// aapt resource value: 0x7F0B003F
+			public const int mtrl_calendar_month_navigation = 2131427391;
 			
 			// aapt resource value: 0x7F0B0041
-			public const int mtrl_calendar_year = 2131427393;
+			public const int mtrl_calendar_vertical = 2131427393;
 			
 			// aapt resource value: 0x7F0B0042
-			public const int mtrl_layout_snackbar = 2131427394;
+			public const int mtrl_calendar_year = 2131427394;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int mtrl_layout_snackbar_include = 2131427395;
+			public const int mtrl_layout_snackbar = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int mtrl_picker_actions = 2131427396;
+			public const int mtrl_layout_snackbar_include = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int mtrl_picker_dialog = 2131427397;
+			public const int mtrl_picker_actions = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int mtrl_picker_fullscreen = 2131427398;
+			public const int mtrl_picker_dialog = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int mtrl_picker_header_dialog = 2131427399;
+			public const int mtrl_picker_fullscreen = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int mtrl_picker_header_fullscreen = 2131427400;
+			public const int mtrl_picker_header_dialog = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int mtrl_picker_header_selection_text = 2131427401;
+			public const int mtrl_picker_header_fullscreen = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int mtrl_picker_header_title_text = 2131427402;
+			public const int mtrl_picker_header_selection_text = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int mtrl_picker_header_toggle = 2131427403;
+			public const int mtrl_picker_header_title_text = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int mtrl_picker_text_input_date = 2131427404;
+			public const int mtrl_picker_header_toggle = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int mtrl_picker_text_input_date_range = 2131427405;
+			public const int mtrl_picker_text_input_date = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int notification_action = 2131427406;
+			public const int mtrl_picker_text_input_date_range = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int notification_action_tombstone = 2131427407;
+			public const int notification_action = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int notification_media_action = 2131427408;
+			public const int notification_action_tombstone = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int notification_media_cancel_action = 2131427409;
+			public const int notification_media_action = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int notification_template_big_media = 2131427410;
+			public const int notification_media_cancel_action = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int notification_template_big_media_custom = 2131427411;
+			public const int notification_template_big_media = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int notification_template_big_media_narrow = 2131427412;
+			public const int notification_template_big_media_custom = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int notification_template_big_media_narrow_custom = 2131427413;
+			public const int notification_template_big_media_narrow = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int notification_template_custom_big = 2131427414;
+			public const int notification_template_big_media_narrow_custom = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int notification_template_icon_group = 2131427415;
+			public const int notification_template_custom_big = 2131427415;
 			
 			// aapt resource value: 0x7F0B0058
-			public const int notification_template_lines_media = 2131427416;
+			public const int notification_template_icon_group = 2131427416;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int notification_template_media = 2131427417;
+			public const int notification_template_lines_media = 2131427417;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int notification_template_media_custom = 2131427418;
+			public const int notification_template_media = 2131427418;
 			
 			// aapt resource value: 0x7F0B005B
-			public const int notification_template_part_chronometer = 2131427419;
+			public const int notification_template_media_custom = 2131427419;
 			
 			// aapt resource value: 0x7F0B005C
-			public const int notification_template_part_time = 2131427420;
+			public const int notification_template_part_chronometer = 2131427420;
 			
 			// aapt resource value: 0x7F0B005D
-			public const int RootLayout = 2131427421;
+			public const int notification_template_part_time = 2131427421;
 			
 			// aapt resource value: 0x7F0B005E
-			public const int select_dialog_item_material = 2131427422;
+			public const int RootLayout = 2131427422;
 			
 			// aapt resource value: 0x7F0B005F
-			public const int select_dialog_multichoice_material = 2131427423;
+			public const int select_dialog_item_material = 2131427423;
 			
 			// aapt resource value: 0x7F0B0060
-			public const int select_dialog_singlechoice_material = 2131427424;
+			public const int select_dialog_multichoice_material = 2131427424;
 			
 			// aapt resource value: 0x7F0B0061
-			public const int ShellContent = 2131427425;
+			public const int select_dialog_singlechoice_material = 2131427425;
 			
 			// aapt resource value: 0x7F0B0062
-			public const int support_simple_spinner_dropdown_item = 2131427426;
+			public const int ShellContent = 2131427426;
 			
 			// aapt resource value: 0x7F0B0063
-			public const int Tabbar = 2131427427;
+			public const int support_simple_spinner_dropdown_item = 2131427427;
 			
 			// aapt resource value: 0x7F0B0064
-			public const int test_action_chip = 2131427428;
+			public const int Tabbar = 2131427428;
 			
 			// aapt resource value: 0x7F0B0065
-			public const int test_chip_zero_corner_radius = 2131427429;
+			public const int test_action_chip = 2131427429;
 			
 			// aapt resource value: 0x7F0B0066
-			public const int test_design_checkbox = 2131427430;
+			public const int test_chip_zero_corner_radius = 2131427430;
 			
 			// aapt resource value: 0x7F0B0067
-			public const int test_design_radiobutton = 2131427431;
+			public const int test_design_checkbox = 2131427431;
 			
 			// aapt resource value: 0x7F0B0068
-			public const int test_reflow_chipgroup = 2131427432;
+			public const int test_design_radiobutton = 2131427432;
 			
 			// aapt resource value: 0x7F0B0069
-			public const int test_toolbar = 2131427433;
+			public const int test_reflow_chipgroup = 2131427433;
 			
 			// aapt resource value: 0x7F0B006A
-			public const int test_toolbar_custom_background = 2131427434;
+			public const int test_toolbar = 2131427434;
 			
 			// aapt resource value: 0x7F0B006B
-			public const int test_toolbar_elevation = 2131427435;
+			public const int test_toolbar_custom_background = 2131427435;
 			
 			// aapt resource value: 0x7F0B006C
-			public const int test_toolbar_surface = 2131427436;
-			
-			// aapt resource value: 0x7F0B0071
-			public const int text_view_without_line_height = 2131427441;
+			public const int test_toolbar_elevation = 2131427436;
 			
 			// aapt resource value: 0x7F0B006D
-			public const int text_view_with_line_height_from_appearance = 2131427437;
-			
-			// aapt resource value: 0x7F0B006E
-			public const int text_view_with_line_height_from_layout = 2131427438;
-			
-			// aapt resource value: 0x7F0B006F
-			public const int text_view_with_line_height_from_style = 2131427439;
-			
-			// aapt resource value: 0x7F0B0070
-			public const int text_view_with_theme_line_height = 2131427440;
+			public const int test_toolbar_surface = 2131427437;
 			
 			// aapt resource value: 0x7F0B0072
-			public const int Toolbar = 2131427442;
+			public const int text_view_without_line_height = 2131427442;
+			
+			// aapt resource value: 0x7F0B006E
+			public const int text_view_with_line_height_from_appearance = 2131427438;
+			
+			// aapt resource value: 0x7F0B006F
+			public const int text_view_with_line_height_from_layout = 2131427439;
+			
+			// aapt resource value: 0x7F0B0070
+			public const int text_view_with_line_height_from_style = 2131427440;
+			
+			// aapt resource value: 0x7F0B0071
+			public const int text_view_with_theme_line_height = 2131427441;
+			
+			// aapt resource value: 0x7F0B0073
+			public const int Toolbar = 2131427443;
 			
 			static Layout()
 			{

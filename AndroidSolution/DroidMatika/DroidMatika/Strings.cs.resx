@@ -12,24 +12,42 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="Division" xml:space="preserve">
-        <value>Delenie</value>
+        <value>Dělení</value>
     </data>
     <data name="Multiplication" xml:space="preserve">
-        <value>Násobenie</value>
-    </data>
-    <data name="Subtraction" xml:space="preserve">
-        <value>Odčítanie</value>
+        <value>Násobení</value>
     </data>
     <data name="Addition" xml:space="preserve">
-        <value>Sčítanie</value>
+        <value>Sčítání</value>
+    </data>
+    <data name="Subtraction" xml:space="preserve">
+        <value>Odčítání</value>
     </data>
     <data name="Count" xml:space="preserve">
         <value>Počet :</value>
     </data>
     <data name="NegativeNumbers" xml:space="preserve">
-        <value>Záporné</value>
+        <value>Záporný výsledek</value>
     </data>
     <data name="DecimalNumbers" xml:space="preserve">
-        <value>Desatinné</value>
+        <value>Desetinná</value>
+    </data>
+    <data name="Difficulty" xml:space="preserve">
+        <value>Obtížnost</value>
+    </data>
+    <data name="Czech" xml:space="preserve">
+        <value>Čeština</value>
+    </data>
+    <data name="Slovak" xml:space="preserve">
+        <value>Slovenština</value>
+    </data>
+    <data name="English" xml:space="preserve">
+        <value>Angličtina</value>
+    </data>
+    <data name="SelectLanguage" xml:space="preserve">
+        <value>Vyberte jazyk</value>
+    </data>
+    <data name="Language" xml:space="preserve">
+        <value>Jazyk</value>
     </data>
 </root>

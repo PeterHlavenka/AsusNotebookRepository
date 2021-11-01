@@ -19,7 +19,7 @@ namespace DroidMatika {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Strings {
@@ -79,11 +79,29 @@ namespace DroidMatika {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Czech.
+        /// </summary>
+        internal static string Czech {
+            get {
+                return ResourceManager.GetString("Czech", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Decimal.
         /// </summary>
         internal static string DecimalNumbers {
             get {
                 return ResourceManager.GetString("DecimalNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Difficulty.
+        /// </summary>
+        internal static string Difficulty {
+            get {
+                return ResourceManager.GetString("Difficulty", resourceCulture);
             }
         }
         
@@ -97,6 +115,24 @@ namespace DroidMatika {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Multiplication.
         /// </summary>
         internal static string Multiplication {
@@ -106,11 +142,29 @@ namespace DroidMatika {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Negative.
+        ///   Looks up a localized string similar to Negative result.
         /// </summary>
         internal static string NegativeNumbers {
             get {
                 return ResourceManager.GetString("NegativeNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select language.
+        /// </summary>
+        internal static string SelectLanguage {
+            get {
+                return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slovak.
+        /// </summary>
+        internal static string Slovak {
+            get {
+                return ResourceManager.GetString("Slovak", resourceCulture);
             }
         }
         

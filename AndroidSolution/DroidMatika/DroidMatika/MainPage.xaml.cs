@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using Xamarin.Forms;
 
@@ -8,33 +9,52 @@ namespace DroidMatika
 {
     public sealed partial class MainPage
     {
+        private readonly ParamsSource m_paramsSource;
+        private readonly LanguageManager m_languageManager;
+
         public MainPage()
         {
             InitializeComponent();
+            m_languageManager = new LanguageManager();
+
             Equals.Text = " = ";
-            //WhiteImg.Source = "white.jpg";
 
             CustomSlider.Value = 5;
-
-            OperationMenu = new List<MenuItem>
-            {
-                new MenuItem(Strings.Addition,  (d)=> new SumExample(d)),
-                new MenuItem(Strings.Subtraction, (d)=> new DiffExample(d)),
-                new MenuItem(Strings.Multiplication, (d)=> new ProductExample(d)),
-                new MenuItem(Strings.Division, (d)=> new DivideExample(d))
-            };
+            m_paramsSource = new ParamsSource {Difficulty = (int) CustomSlider.Value};
             
-            AllowingMenu = new List<MenuItem>
-            {
-                new MenuItem(Strings.DecimalNumbers),
-                new MenuItem(Strings.NegativeNumbers),
-            };
+            CreateOperationMenu();
+            
+            CreateAllowingMenu();
             
             OnPropertyChanged(nameof(OperationMenu));
             OnPropertyChanged(nameof(AllowingMenu));
             
             Generate();
             UserResultLabel.Focus();
+        }
+
+        private void CreateAllowingMenu()
+        {
+            AllowingMenu = new List<MenuItem>
+            {
+                // new MenuItem(Strings.DecimalNumbers, m_paramsSource),
+                new MenuItem(Strings.NegativeNumbers, m_paramsSource, null, true),
+            };
+            
+            OnPropertyChanged(nameof(AllowingMenu));
+        }
+
+        private void CreateOperationMenu()
+        {
+            OperationMenu = new List<MenuItem>
+            {
+                new MenuItem(Strings.Addition, m_paramsSource, (d) => new SumExample(d)),
+                new MenuItem(Strings.Subtraction, m_paramsSource, (d) => new DiffExample(d)),
+                new MenuItem(Strings.Multiplication, m_paramsSource, (d) => new ProductExample(d)),
+                new MenuItem(Strings.Division, m_paramsSource, (d) => new DivideExample(d))
+            };
+            
+            OnPropertyChanged(nameof(OperationMenu));
         }
 
         public List<MenuItem> OperationMenu { get; set; } 
@@ -129,9 +149,24 @@ namespace DroidMatika
         {
             if (sender is CustomSlider slider && OperationMenu != null)
             {
-                OperationMenu.ForEach(d => d.SetDifficulty((int)slider.Value));
+                m_paramsSource.Difficulty = (int)slider.Value;
                 Generate();
             }
+        }
+
+        // HamburgerMenuClicked - otevri menu
+        private void ImageButton_OnClicked(object sender, EventArgs e)
+        { 
+            IsPresented = true;
+        }
+
+        // Nastaveni jazyka
+        private async void LanguageButtonTapped(object sender, EventArgs e)
+        {
+            await m_languageManager.ChangeLanguage();
+
+            CreateOperationMenu();
+            CreateAllowingMenu();
         }
     }
 }

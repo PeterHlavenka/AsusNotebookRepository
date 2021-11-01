@@ -34,9 +34,27 @@
         <value>Count :</value>
     </data>
     <data name="NegativeNumbers" xml:space="preserve">
-        <value>Negative</value>
+        <value>Negative result</value>
     </data>
     <data name="DecimalNumbers" xml:space="preserve">
         <value>Decimal</value>
+    </data>
+    <data name="Difficulty" xml:space="preserve">
+        <value>Difficulty</value>
+    </data>
+    <data name="Czech" xml:space="preserve">
+        <value>Czech</value>
+    </data>
+    <data name="Slovak" xml:space="preserve">
+        <value>Slovak</value>
+    </data>
+    <data name="English" xml:space="preserve">
+        <value>English</value>
+    </data>
+    <data name="SelectLanguage" xml:space="preserve">
+        <value>Select language</value>
+    </data>
+    <data name="Language" xml:space="preserve">
+        <value>Language</value>
     </data>
 </root>
