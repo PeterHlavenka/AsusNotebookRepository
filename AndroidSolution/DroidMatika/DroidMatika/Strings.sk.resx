@@ -50,4 +50,7 @@
     <data name="Language" xml:space="preserve">
         <value>Jazyk</value>
     </data>
+    <data name="Version" xml:space="preserve">
+        <value>Verzia :</value>
+    </data>
 </root>

@@ -68,6 +68,8 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DataStorage.png" />
+    <AndroidResource Include="Resources\drawable\Directions.png" />
     <AndroidResource Include="Resources\drawable\hamburger.png" />
     <AndroidResource Include="Resources\drawable\hamburgerMenu.png" />
     <AndroidResource Include="Resources\drawable\Planet.png" />

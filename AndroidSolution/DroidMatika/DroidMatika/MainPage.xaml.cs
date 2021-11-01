@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace DroidMatika
@@ -11,12 +13,16 @@ namespace DroidMatika
     {
         private readonly ParamsSource m_paramsSource;
         private readonly LanguageManager m_languageManager;
+        private string m_version;
 
         public MainPage()
         {
             InitializeComponent();
+
             m_languageManager = new LanguageManager();
 
+            VersionLabel.Text = GetVersionFromAssembly("DroidMatika.Android");
+            
             Equals.Text = " = ";
 
             CustomSlider.Value = 5;
@@ -31,6 +37,16 @@ namespace DroidMatika
             
             Generate();
             UserResultLabel.Focus();
+        }
+
+        public string Version
+        {
+            get => m_version;
+            set
+            {
+                m_version = value;
+                VersionLabel.Text = value;
+            }
         }
 
         private void CreateAllowingMenu()
@@ -167,6 +183,13 @@ namespace DroidMatika
 
             CreateOperationMenu();
             CreateAllowingMenu();
+        }
+        
+        // Doda verzi z DroidMatika.Android.AssemblyInfo
+        string GetVersionFromAssembly(string assemblyName)
+        {
+            var assembly = AppDomain.CurrentDomain.GetAssemblies().SingleOrDefault(a => a.GetName().Name == assemblyName);
+            return assembly == null ? string.Empty : assembly.GetName().Version.ToString();
         }
     }
 }

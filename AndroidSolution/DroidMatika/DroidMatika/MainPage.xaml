@@ -29,11 +29,13 @@
     <FlyoutPage.Flyout>
         <ContentPage Title="Flyout">
             <ContentPage.Content>
-                <Grid WidthRequest="300">
+                <ScrollView>
+                     <Grid WidthRequest="300">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -128,7 +130,15 @@
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
 
+                    <!-- Verze -->
+                    <StackLayout  Grid.Row="5" Orientation="Horizontal" VerticalOptions="End">
+                        <Image  Source="Directions.png" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="30" WidthRequest="30" Margin="20,13,10,20"/>
+                        <Label  Text="{xct:Translate Version}" VerticalTextAlignment="Start" Margin="0,15,0,0"/>
+                        <Label  x:Name="VersionLabel" VerticalTextAlignment="Start" Margin="0,15,0,0"/>
+                    </StackLayout>
+                    
                 </Grid>
+                </ScrollView>
             </ContentPage.Content>
 
         </ContentPage>
