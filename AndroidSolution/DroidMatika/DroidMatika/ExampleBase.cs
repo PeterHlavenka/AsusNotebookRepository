@@ -4,14 +4,49 @@ namespace DroidMatika
 {
     public class ExampleBase
     {
-        public int FirstNumber { get; set; }
-        public int SecondNumber { get; set; }
+        public decimal FirstNumber { get; set; }
+        public decimal SecondNumber { get; set; }
         public decimal Result { get; set; }
         public string Operator { get; set; }
 
-        protected int CreateNumber(int minValue, int maxValue)
+        protected decimal CreateNumber(int minValue, ParamsSource paramsSource)
         {
+            int maxValue = paramsSource.Difficulty;
+            bool decimalNumbers = paramsSource.DecimalNumbersAllowed;
+            
+            if (decimalNumbers)  // kdyz chci desetinna cisla vynasobim si parametry randomu
+            {
+                minValue *= 10;
+                maxValue *= 10;
+                
+                var result = (decimal)
+                 new Random().Next(minValue, maxValue + 1);    // a vysledny random vydelim deseti
+
+                var test = result / 10;
+                return result / 10;
+            }
+            
             return new Random().Next(minValue, maxValue + 1);
+        }
+
+        protected ParamsSource CreateParamsSource(ParamsSource origin, int difficulty)
+        {
+            return new ParamsSource()
+            {
+                DecimalNumbersAllowed = origin.DecimalNumbersAllowed,
+                NegativeNumbersAllowed = origin.NegativeNumbersAllowed,
+                Difficulty = difficulty
+            };
+        }
+
+        protected ParamsSource CreateParamsSource(int difficulty, bool decimalNumbers, bool negativeNumbers)
+        {
+            return new ParamsSource()
+            {
+                DecimalNumbersAllowed = decimalNumbers,
+                NegativeNumbersAllowed = negativeNumbers,
+                Difficulty = difficulty
+            };
         }
     }
 
@@ -21,8 +56,8 @@ namespace DroidMatika
     {
         public SumExample(ParamsSource paramsSource)
         {
-            FirstNumber = CreateNumber(1, paramsSource.Difficulty);
-            SecondNumber = CreateNumber(1, paramsSource.Difficulty);
+            FirstNumber = CreateNumber(1, paramsSource);
+            SecondNumber = CreateNumber(1, paramsSource);
             Result = FirstNumber + SecondNumber;
             Operator = " + ";
         }
@@ -32,8 +67,8 @@ namespace DroidMatika
     {
         public DiffExample(ParamsSource paramsSource)
         {
-            var first = CreateNumber(1, paramsSource.Difficulty);
-            var second = CreateNumber(1, paramsSource.Difficulty);
+            var first = CreateNumber(1, paramsSource);
+            var second = CreateNumber(1, paramsSource);
 
             if (paramsSource.NegativeNumbersAllowed)
             {
@@ -55,10 +90,10 @@ namespace DroidMatika
     {
         public ProductExample(ParamsSource paramsSource)
         {
-            FirstNumber = CreateNumber(1, paramsSource.Difficulty);
-            SecondNumber = CreateNumber(0, 10);
+            FirstNumber = CreateNumber(1, paramsSource);
+            SecondNumber = CreateNumber(0, CreateParamsSource(paramsSource, 10));
             Result = FirstNumber * SecondNumber;
-            Operator = " . ";
+            Operator = " x ";
         }
     }
     
@@ -66,14 +101,20 @@ namespace DroidMatika
     {
         public DivideExample(ParamsSource paramsSource)
         {
-            var first = CreateNumber(1, paramsSource.Difficulty);
-            var second = CreateNumber(1, 10);
+            var first = CreateNumber(1, paramsSource);
+
+            var second = //paramsSource.DecimalNumbersAllowed ?  
+                // chci desetinne cislo:
+              //  CreateNumber(1, CreateParamsSource(paramsSource, 10)) : 
+                // chci vzdy cele cislo
+                CreateNumber(1, CreateParamsSource(paramsSource.Difficulty, false, paramsSource.NegativeNumbersAllowed));
+
             var result = first * second;
 
-            // otoceni at tam nejsou desetinna mista
+            // otoceni 
             FirstNumber = result;
-            SecondNumber = first;
-            Result = second;
+            SecondNumber = second;
+            Result = first;
             Operator = " : ";
         }
     }

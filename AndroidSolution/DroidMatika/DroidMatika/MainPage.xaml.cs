@@ -53,8 +53,8 @@ namespace DroidMatika
         {
             AllowingMenu = new List<MenuItem>
             {
-                // new MenuItem(Strings.DecimalNumbers, m_paramsSource),
-                new MenuItem(Strings.NegativeNumbers, m_paramsSource, null, true),
+                new MenuItem(Strings.DecimalNumbers, m_paramsSource, null, null, true),
+                //new MenuItem(Strings.NegativeNumbers, m_paramsSource, null, true),
             };
             
             OnPropertyChanged(nameof(AllowingMenu));
