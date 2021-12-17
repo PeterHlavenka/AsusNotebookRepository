@@ -133,6 +133,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonDockingManagerWithLay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnikaViceViewProJedenViewModel", "TechnikaViceViewProJedenViewModel\TechnikaViceViewProJedenViewModel.csproj", "{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Syncfusion", "Syncfusion", "{66A3599C-E989-4D7C-8347-A752643B4A63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SfDataGrid", "SfDataGrid\SfDataGrid.csproj", "{191F1CB8-4990-4314-9B85-F2F89F8FB221}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -363,6 +367,10 @@ Global
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -412,6 +420,7 @@ Global
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{7491371D-37BE-419D-A63B-7C55E10597CE} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
