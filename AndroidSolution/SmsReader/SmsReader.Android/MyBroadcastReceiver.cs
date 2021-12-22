@@ -38,6 +38,9 @@ namespace SmsReader.Android
                 if (m_message != null && m_message.Contains("critical:"))
                 {
                     Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+
+                    var playService = new PlaySoundService();
+                    playService.PlaySystemSound();
                 }
             }
         }
