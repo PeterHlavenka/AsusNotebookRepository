@@ -14,8 +14,8 @@ namespace SmsReader.Android
     [IntentFilter(new[] {"android.provider.Telephony.SMS_RECEIVED"}, Priority = (int) IntentFilterPriority.HighPriority)]
     public class MyBroadcastReceiver : BroadcastReceiver
     {
-        private string m_message;
-        private string m_address = "";
+        private string m_message = string.Empty;
+        private string m_address = string.Empty;
         private const string Name = "pdus";
 
         public override void OnReceive(Context context, Intent intent)
@@ -30,13 +30,15 @@ namespace SmsReader.Android
             {
                 var sms = SmsMessage.CreateFromPdu((byte[]) item, null);
 
-                if (sms != null)
-                {
-                    // m_address = sms.OriginatingAddress;
-                    m_message = sms.MessageBody;
-                }
+                if (sms == null) continue;
+                
+                // m_address = sms.OriginatingAddress;
+                m_message = sms.MessageBody;
 
-                Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+                if (m_message != null && m_message.Contains("critical:"))
+                {
+                    Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+                }
             }
         }
     }
