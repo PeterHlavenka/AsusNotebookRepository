@@ -35,13 +35,13 @@ namespace SmsReader.Android
                 // m_address = sms.OriginatingAddress;
                 m_message = sms.MessageBody;
 
-                if (m_message != null && m_message.Contains("critical:"))
-                {
+                // if (m_message != null && m_message.Contains("critical:"))
+                // {
                     Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
 
                     var playService = new PlaySoundService();
                     playService.PlaySystemSound();
-                }
+                // }
             }
         }
     }
