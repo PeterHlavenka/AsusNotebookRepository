@@ -62,10 +62,12 @@ namespace SmsReader.Android
                 // Instantiate the builder and set notification elements:
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.instance, "CHANNEL_ID")
                     .SetContentTitle ("Sample Notification")
-                    .SetContentText ("Hello World! This is my first notification!")
+                    .SetContentText (m_message)
                     .SetDefaults((int) NotificationDefaults.Sound)  // zapnuti zvuku notifikace
                     .SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Alarm))  // zvuk notifikace
-                    .SetSmallIcon (Resource.Drawable.Planet);
+                    .SetSmallIcon (Resource.Drawable.Planet)
+                    .SetPriority((int) NotificationPriority.Max)  // HeadsUp format a ma se zobrazit in a lock screenu
+                    .SetVisibility((int) NotificationVisibility.Public);  // cela zprava je viditelna na lock screenu
 
               
                 
@@ -76,13 +78,13 @@ namespace SmsReader.Android
                 NotificationManager notificationManager = MainActivity.instance.GetSystemService (Context.NotificationService) as NotificationManager;
 
                 // Publish the notification:
-                const int notificationId = 0;
+                const int notificationId = 0; 
                 notificationManager?.Notify (notificationId, notification);
                 
                 // var playService = new PlaySoundService();
                 // playService.PlaySystemSound();
                 
-                Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+                //Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
             }
         }
     }
