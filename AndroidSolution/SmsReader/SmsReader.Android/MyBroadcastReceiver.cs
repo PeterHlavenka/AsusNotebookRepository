@@ -2,8 +2,10 @@
 
 using Android.App;
 using Android.Content;
+using Android.OS;
 using Android.Telephony;
 using Android.Widget;
+using AndroidX.Core.App;
 using Java.Lang;
 
 #endregion
@@ -37,10 +39,45 @@ namespace SmsReader.Android
 
                 if (m_message == null || !m_message.Contains("critical:")) continue;
                 
-                Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+                
 
+                                        // PROBUZENI
+            
+                PowerManager pm = (PowerManager)MainActivity.instance.GetSystemService(Context.PowerService);
+                bool isScreenOn =  pm is {IsInteractive: true} ; // check if screen is on
+                
+                if (!isScreenOn)
+                {
+                    if (pm != null)
+                    {
+                        PowerManager.WakeLock wl = pm.NewWakeLock(WakeLockFlags.ScreenDim  | WakeLockFlags.AcquireCausesWakeup, "myApp:notificationLock");
+                        wl?.Acquire(3000); //set your time in milliseconds
+                    }
+                }
+                
+    
+                                        // NOTIFIKACE
+                                        
+                // Instantiate the builder and set notification elements:
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.instance, "CHANNEL_ID")
+                    .SetContentTitle ("Sample Notification")
+                    .SetContentText ("Hello World! This is my first notification!")
+                    .SetSmallIcon (Resource.Drawable.Planet);
+
+                // Build the notification:
+                Notification notification = builder.Build();
+
+                // Get the notification manager:
+                NotificationManager notificationManager = MainActivity.instance.GetSystemService (Context.NotificationService) as NotificationManager;
+
+                // Publish the notification:
+                const int notificationId = 0;
+                notificationManager?.Notify (notificationId, notification);
+                
                 var playService = new PlaySoundService();
                 playService.PlaySystemSound();
+                
+                Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
             }
         }
     }
