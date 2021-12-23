@@ -2,6 +2,7 @@
 
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.OS;
 using Android.Telephony;
 using Android.Widget;
@@ -62,8 +63,12 @@ namespace SmsReader.Android
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.instance, "CHANNEL_ID")
                     .SetContentTitle ("Sample Notification")
                     .SetContentText ("Hello World! This is my first notification!")
+                    .SetDefaults((int) NotificationDefaults.Sound)  // zapnuti zvuku notifikace
+                    .SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Alarm))  // zvuk notifikace
                     .SetSmallIcon (Resource.Drawable.Planet);
 
+              
+                
                 // Build the notification:
                 Notification notification = builder.Build();
 
@@ -74,8 +79,8 @@ namespace SmsReader.Android
                 const int notificationId = 0;
                 notificationManager?.Notify (notificationId, notification);
                 
-                var playService = new PlaySoundService();
-                playService.PlaySystemSound();
+                // var playService = new PlaySoundService();
+                // playService.PlaySystemSound();
                 
                 Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
             }
