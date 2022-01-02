@@ -6,9 +6,17 @@
 
     <StackLayout IsVisible="True">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        
+        <Frame BackgroundColor="#2196F3" Padding="24">
+            <Label Text="SmsReader" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Button x:Name="AlarmButton" Text="Alarm" Clicked="AlarmButton_OnClicked"></Button>
+        
+        <Label Text="Plugin.LocalNotifications package installed" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="EndAndExpand" />
+       
     </StackLayout>
 
 </ContentPage>

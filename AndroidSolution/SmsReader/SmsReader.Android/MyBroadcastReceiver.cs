@@ -5,7 +5,6 @@ using Android.Content;
 using Android.Media;
 using Android.OS;
 using Android.Telephony;
-using Android.Widget;
 using AndroidX.Core.App;
 using Java.Lang;
 
@@ -51,8 +50,9 @@ namespace SmsReader.Android
                 {
                     if (pm != null)
                     {
+                        
                         PowerManager.WakeLock wl = pm.NewWakeLock(WakeLockFlags.ScreenDim  | WakeLockFlags.AcquireCausesWakeup, "myApp:notificationLock");
-                        wl?.Acquire(3000); //set your time in milliseconds
+                        wl?.Acquire(0); //set your time in milliseconds
                     }
                 }
                 
@@ -70,21 +70,50 @@ namespace SmsReader.Android
                     .SetVisibility((int) NotificationVisibility.Public);  // cela zprava je viditelna na lock screenu
 
               
-                
+                     //  Notifikace maka.. 
                 // Build the notification:
-                Notification notification = builder.Build();
-
-                // Get the notification manager:
-                NotificationManager notificationManager = MainActivity.instance.GetSystemService (Context.NotificationService) as NotificationManager;
-
-                // Publish the notification:
-                const int notificationId = 0; 
-                notificationManager?.Notify (notificationId, notification);
+                // Notification notification = builder.Build();
+                //
+                // // Get the notification manager:
+                // NotificationManager notificationManager = MainActivity.instance.GetSystemService (Context.NotificationService) as NotificationManager;
+                //
+                // // Publish the notification:
+                // const int notificationId = 0; 
+                // notificationManager?.Notify (notificationId, notification);
                 
+                
+                      // PlayServica maka jen kdyz je zapnuty device
                 // var playService = new PlaySoundService();
                 // playService.PlaySystemSound();
                 
                 //Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
+
+                // // 3
+                // AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.instance);
+                // alertDialog.SetTitle("MyTitle");
+                //
+                // alertDialog.SetMessage(m_message);
+                // alertDialog.SetNeutralButton("Ok", delegate
+                // {
+                //     alertDialog.Dispose();
+                // });
+                //
+                // alertDialog.Show();
+                
+                // 4
+                // AlarmManager alarmManager = (AlarmManager) MainActivity.instance.GetSystemService(Context.AlarmService);
+                //
+                // var alarmIntent = new Intent(MainActivity.instance, typeof(MyBroadcastReceiver));
+                // alarmIntent.PutExtra("title", "Hello");
+                // alarmIntent.PutExtra("message", "World!");
+                //
+                // var pending = PendingIntent.GetBroadcast(MainActivity.instance, 0, alarmIntent, PendingIntentFlags.UpdateCurrent);
+                //
+                //
+                // alarmManager?.Set(AlarmType.RtcWakeup, SystemClock.ElapsedRealtime() + 2000, pending);
+                
+               // var intent = new Intent(this, typeof(MyBroadcastReceiver));
+             
             }
         }
     }

@@ -1,6 +1,9 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Plugin.LocalNotification;
+using Xamarin.Forms;
 
 namespace SmsReader.Android
 {
@@ -16,13 +19,23 @@ namespace SmsReader.Android
 
             base.OnCreate(savedInstanceState);
 
+            NotificationCenter.CreateNotificationChannel();  
+            
             CreateNotificationChannel();
             instance = this;
             
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+            NotificationCenter.NotifyNotificationTapped(Intent);
         }
-        
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            NotificationCenter.NotifyNotificationTapped(intent);
+            base.OnNewIntent(intent);
+        }
+
         void CreateNotificationChannel()
         {
             if (Build.VERSION.SdkInt < BuildVersionCodes.O)
@@ -43,5 +56,17 @@ namespace SmsReader.Android
             var notificationManager = (NotificationManager) GetSystemService(NotificationService);
             notificationManager?.CreateNotificationChannel(channel);
         }
+
+        // Function to check and request permission
+        // public void checkPermission(String permission, int requestCode)
+        // {
+        //     // Checking if permission is not granted
+        //     if (ContextCompat.checkSelfPermission(MainActivity.this, permission) == PackageManager.PERMISSION_DENIED) {
+        //         ActivityCompat.requestPermissions(MainActivity.this, new String[] { permission }, requestCode);
+        //     }
+        //     else {
+        //         Toast.makeText(MainActivity.this, "Permission already granted", Toast.LENGTH_SHORT).show();
+        //     }
+        // }
     }
 }
