@@ -26,24 +26,11 @@ namespace DataGrid_Themes
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : ChromelessWindow
+    public partial class OtherWindow : ChromelessWindow
     {
-        public MainWindow()
+        public OtherWindow()
         {
-           
-            SfSkinManager.ApplyStylesOnApplication = true;
-
             InitializeComponent();
-
-            var neco = Enum.GetValues(typeof(VisualStyles));
-            var test = ComboVisualStyle.Items;
-        } 
-        
-        
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            var other = new OtherWindow();
-            other.ShowDialog();
         }
     }
 }

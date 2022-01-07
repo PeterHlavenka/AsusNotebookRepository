@@ -157,6 +157,10 @@
     </ApplicationDefinition>
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="OtherWindow.xaml.cs">
+      <DependentUpon>OtherWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ViewModel\ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +174,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OtherWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
