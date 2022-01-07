@@ -6,25 +6,36 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         xmlns:sfDataGrid="clr-namespace:SfDataGrid"
         mc:Ignorable="d"
-        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        Title="MainWindow" Height="450" Width="800"
-        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}"
-        syncfusionskin:SfSkinManager.VisualStyle="MaterialDarkBlue">
+        Title="MainWindow"
+        x:Name="Window"
+        >
+        <!-- syncfusion:SfSkinManager.VisualStyle="MaterialDark"> -->
+        
+       
+
     <Window.DataContext>
         <sfDataGrid:ViewModel />
     </Window.DataContext>
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
+    <!-- <Window.Resources> -->
+    <!--     <ResourceDictionary> -->
+    <!--         <ResourceDictionary.MergedDictionaries> -->
+    <!--             <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml" /> -->
+    <!--         </ResourceDictionary.MergedDictionaries> -->
+    <!--     </ResourceDictionary> -->
+    <!-- </Window.Resources> -->
 
     <Grid x:Name="RootGrid">
-        
-        <syncfusion:SfDataGrid
-            x:Name="DataGrid" 
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <syncfusion:SfDataGrid Margin="10" 
+            x:Name="DataGrid"
             AutoGenerateColumns="True"
             AllowDraggingColumns="True"
             AllowEditing="True"
@@ -34,17 +45,36 @@
             SelectionMode="Extended"
             ColumnSizer="Auto"
             ItemsSource="{Binding Orders}"
-            AllowTriStateSorting="True" 
-            ShowGroupDropArea="True"
-        >
-            
-            <!-- <syncfusion:SfDataGrid.Columns> -->
-            <!--      <syncfusion:GridNumericColumn NumberDecimalDigits="1" MappingName="OrderID" HeaderText="OrderID" GroupMode="Display"/> -->
-            <!-- </syncfusion:SfDataGrid.Columns> -->
-            
-        </syncfusion:SfDataGrid>
+            AllowTriStateSorting="True"
+            ShowGroupDropArea="True" />
         
+        <syncfusion:CalendarEdit Grid.Row="1" Margin="10" />
+        
+        <Button Grid.Row="2" Margin="50" Height="30" Width="200">Button</Button>
+
+        
+        
+        <syncfusion:SkinPicker MouseUp="UIElement_OnMouseUp"    Grid.Row="3" Height="60" Margin="10"/>
+        
+        <Grid Name="Grid" Grid.Row="4">        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox Name="ThemeCombobox" Grid.Column="0" SelectionChanged="Themecombobox_OnSelectionChanged" Width="150" Height="30" Margin="10">
+                <ComboBoxItem> Blend </ComboBoxItem>
+                <ComboBoxItem> ShinyBlue </ComboBoxItem>
+                <ComboBoxItem> ShinyRed </ComboBoxItem>
+            </ComboBox>
+            <syncfusion:CalendarEdit Name="Calendar" Grid.Column="1" Margin="10"></syncfusion:CalendarEdit>        
+        </Grid>
+        
+        <!-- <syncfusion:SfDataGrid.Columns> -->
+        <!--      <syncfusion:GridNumericColumn NumberDecimalDigits="1" MappingName="OrderID" HeaderText="OrderID" GroupMode="Display"/> -->
+        <!-- </syncfusion:SfDataGrid.Columns> -->
+
+
     </Grid>
-    
-   
+
+
 </Window>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Syncfusion.SfSkinManager;
+using Syncfusion.Windows.Shared;
 
 namespace SfDataGrid
 {
@@ -22,7 +24,29 @@ namespace SfDataGrid
     {
         public MainWindow()
         {
+            SfSkinManager.ApplyStylesOnApplication = true;
             InitializeComponent();
+        }
+
+        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Console.WriteLine();
+        }
+
+        private void Themecombobox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ThemeCombobox.SelectedIndex == 0)
+            {
+                SkinStorage.SetVisualStyle(Window, "Blend");
+            }
+            if (ThemeCombobox.SelectedIndex == 1)
+            {
+                SkinStorage.SetVisualStyle(Window, "ShinyBlue");
+            }
+            if (ThemeCombobox.SelectedIndex == 2)
+            {
+                SkinStorage.SetVisualStyle(Window, "ShinyRed");
+            }
         }
     }
 }

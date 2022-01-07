@@ -13,5 +13,9 @@ namespace SfDataGrid
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTYwMjY1QDMxMzkyZTM0MmUzMFpNcnZCRGJZaXhDRXdsOSs3WC9UUko1ZHdpK0UxNGpRdjR0c0U1TjcxTE09");
+        }
     }
 }

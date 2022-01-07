@@ -1,5 +1,6 @@
 ﻿using System;
 using Plugin.LocalNotification;
+using Plugin.LocalNotification.AndroidOption;
 using Xamarin.Forms;
 
 namespace SmsReader
@@ -34,7 +35,13 @@ namespace SmsReader
                 Title = "Notification",
                 ReturningData = "Dummy data",
                 NotificationId = 1234 , // you can do some actions via Id for example cancell notification
-                Schedule = new NotificationRequestSchedule(){NotifyTime = DateTime.Now.AddSeconds(3)}
+                Schedule = new NotificationRequestSchedule(){NotifyTime = DateTime.Now.AddSeconds(3)},
+                Android = new AndroidOptions()
+                {
+                    Priority = NotificationPriority.Max,
+                    ChannelId = "CHANNEL_ID",
+                    
+                }
             };
 
             NotificationCenter.Current.Show(notification);

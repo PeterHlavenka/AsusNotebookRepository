@@ -1,19 +1,23 @@
 ﻿#region
 
+using System;
 using Android.App;
 using Android.Content;
 using Android.Media;
 using Android.OS;
 using Android.Telephony;
 using AndroidX.Core.App;
-using Java.Lang;
+using Plugin.LocalNotification;
+using Plugin.LocalNotification.AndroidOption;
+using NotificationPriority = Android.App.NotificationPriority;
+using Object = Java.Lang.Object;
 
 #endregion
 
 namespace SmsReader.Android
 {
     [BroadcastReceiver]
-    [IntentFilter(new[] {"android.provider.Telephony.SMS_RECEIVED"}, Priority = (int) IntentFilterPriority.HighPriority)]
+  //  [IntentFilter(new[] {"android.provider.Telephony.SMS_RECEIVED"}, Priority = (int) IntentFilterPriority.HighPriority)]
     public class MyBroadcastReceiver : BroadcastReceiver
     {
         private string m_message = string.Empty;
@@ -56,36 +60,58 @@ namespace SmsReader.Android
                     }
                 }
                 
+                                        // NOTIFIKACE PRES PLUGIN
+                var notification = new NotificationRequest()
+                {
+                    BadgeNumber = 1,
+                    Description = "TestDescription",
+                    Title = "Notification",
+                    ReturningData = "Dummy data",
+                    NotificationId = 1234 , // you can do some actions via Id for example cancell notification
+                    Schedule = new NotificationRequestSchedule(){NotifyTime = DateTime.Now.AddSeconds(3)},
+                    Sound = RingtoneManager.GetDefaultUri(RingtoneType.Alarm)?.ToString(),
+                    Android = new AndroidOptions()
+                    {
+                        Priority = Plugin.LocalNotification.NotificationPriority.Max,
+                        ChannelId = "CHANNEL_ID",
+                    
+                    }
+                };
+
+                NotificationCenter.Current.Show(notification);
+                
     
                                         // NOTIFIKACE
                                         
                 // Instantiate the builder and set notification elements:
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.instance, "CHANNEL_ID")
-                    .SetContentTitle ("Sample Notification")
-                    .SetContentText (m_message)
-                    .SetDefaults((int) NotificationDefaults.Sound)  // zapnuti zvuku notifikace
-                    .SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Alarm))  // zvuk notifikace
-                    .SetSmallIcon (Resource.Drawable.Planet)
-                    .SetPriority((int) NotificationPriority.Max)  // HeadsUp format a ma se zobrazit in a lock screenu
-                    .SetVisibility((int) NotificationVisibility.Public);  // cela zprava je viditelna na lock screenu
+                // NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.instance, "CHANNEL_ID")
+                //     .SetContentTitle ("Sample Notification")
+                //     .SetContentText (m_message)
+                //     .SetDefaults((int) NotificationDefaults.Sound)  // zapnuti zvuku notifikace
+                //     .SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Alarm))  // zvuk notifikace
+                //     .SetSmallIcon (Resource.Drawable.Planet)
+                //     .SetPriority((int) NotificationPriority.Max)  // HeadsUp format a ma se zobrazit in a lock screenu
+                //     .SetVisibility((int) NotificationVisibility.Public);  // cela zprava je viditelna na lock screenu
 
               
                      //  Notifikace maka.. 
                 // Build the notification:
                 // Notification notification = builder.Build();
-                //
+
+                
+
                 // // Get the notification manager:
                 // NotificationManager notificationManager = MainActivity.instance.GetSystemService (Context.NotificationService) as NotificationManager;
                 //
                 // // Publish the notification:
                 // const int notificationId = 0; 
                 // notificationManager?.Notify (notificationId, notification);
-                
-                
-                      // PlayServica maka jen kdyz je zapnuty device
+
+
+                // PlayServica maka jen kdyz je zapnuty device
                 // var playService = new PlaySoundService();
                 // playService.PlaySystemSound();
-                
+
                 //Toast.MakeText(context, m_message, ToastLength.Long)?.Show();
 
                 // // 3
@@ -99,7 +125,7 @@ namespace SmsReader.Android
                 // });
                 //
                 // alertDialog.Show();
-                
+
                 // 4
                 // AlarmManager alarmManager = (AlarmManager) MainActivity.instance.GetSystemService(Context.AlarmService);
                 //
@@ -111,9 +137,9 @@ namespace SmsReader.Android
                 //
                 //
                 // alarmManager?.Set(AlarmType.RtcWakeup, SystemClock.ElapsedRealtime() + 2000, pending);
-                
-               // var intent = new Intent(this, typeof(MyBroadcastReceiver));
-             
+
+                // var intent = new Intent(this, typeof(MyBroadcastReceiver));
+
             }
         }
     }

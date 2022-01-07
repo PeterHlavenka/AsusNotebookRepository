@@ -2,13 +2,20 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:SfDataGrid"
-             
+             xmlns:Syncfusion="http://schemas.syncfusion.com/wpf"
+
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml" />
+                <!-- <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml" /> -->
+                
+                <!-- ResourceDictionary path for Syncfusion themes -->
+                <!-- <ResourceDictionary  Source="/Syncfusion.Shared.WPF;Component/SkinManager/Office2010BlueStyle.xaml"/> -->
+                <ResourceDictionary  Source="/Syncfusion.Shared.WPF;Component/SkinManager/shinyredstyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+          
         </ResourceDictionary>
     </Application.Resources>
 </Application>
