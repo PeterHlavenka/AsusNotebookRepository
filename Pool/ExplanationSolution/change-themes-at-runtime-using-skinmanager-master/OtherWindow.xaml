@@ -4,7 +4,7 @@
                              xmlns:local="clr-namespace:DataGrid_Themes"
                              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
 							 xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-							 syncfusionskin:SfSkinManager.VisualStyle="{Binding ElementName=ComboVisualStyle, Path=SelectedValue, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+							 
                              Icon="App.ico"
                              Title="Getting Started"
                              WindowStartupLocation="CenterScreen">
@@ -22,10 +22,10 @@
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
-
     </syncfusion:ChromelessWindow.Resources>
 
-    <Grid>
+    <UserControl syncfusionskin:SfSkinManager.VisualStyle="{Binding ElementName=ComboVisualStyle, Path=SelectedValue, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
@@ -148,4 +148,7 @@
             </syncfusion:SfDataGrid>
         </Grid>
     </Grid>
+    </UserControl>
+    
+    
 </syncfusion:ChromelessWindow>
