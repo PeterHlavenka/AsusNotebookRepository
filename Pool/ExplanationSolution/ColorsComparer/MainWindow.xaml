@@ -5,21 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorsComparer"
         mc:Ignorable="d"
-        Title="MainWindow" >
+        Title="MainWindow" Height="400" Width="1000">
     <Window.Resources>
-        <local:ColorToArgbConverter x:Key="ColorToArgbConverter"/>
+        <local:ColorToArgbConverter x:Key="ColorToArgbConverter" />
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10,2" />
+            <Setter Property="Width" Value="400" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10,2" />
+            <Setter Property="Content" Value="Apply" />
+
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0">
-            <ComboBox Margin="10" x:Name="ComboColor">     
+            <ComboBox Margin="10" x:Name="ComboColor" SelectionChanged="ComboColor_OnSelectionChanged">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -27,16 +36,31 @@
                             <TextBlock Text="{Binding Name}" />
                         </StackPanel>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>    
+                </ComboBox.ItemTemplate>
             </ComboBox>
-            <Rectangle x:Name="R1" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor, Path=SelectedItem.Name}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R1, Path=Fill}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToArgbConverter}}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor, Path=SelectedItem}"/>
+            <Rectangle x:Name="R1" MinWidth="200" MinHeight="200" Margin="10"
+                       Fill="{Binding ElementName=ComboColor, Path=SelectedItem.Name}" />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="LeftBrushTextBox" Text="{Binding ElementName=R1, Path=Fill}" />
+                <Button Click="LeftBrushApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="LeftIntTextBox"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToArgbConverter}}" />
+                <Button Click="LeftIntApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor, Path=SelectedItem}" />
+            </StackPanel>
+
         </StackPanel>
-        
+
+
         <StackPanel Grid.Row="0" Grid.Column="1">
-            <ComboBox Margin="10" x:Name="ComboColor1">     
+            <ComboBox Margin="10" x:Name="ComboColor1" SelectionChanged="ComboColor1_OnSelectionChanged">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -44,13 +68,26 @@
                             <TextBlock Text="{Binding Name}" />
                         </StackPanel>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>    
+                </ComboBox.ItemTemplate>
             </ComboBox>
-            <Rectangle x:Name="R2" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R2, Path=Fill}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToArgbConverter}}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}"/>
+            <Rectangle x:Name="R2" MinWidth="200" MinHeight="200" Margin="10"
+                       Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}" />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="RightBrushTextBox" Text="{Binding ElementName=R2, Path=Fill}" />
+                <Button Click="RightBrushApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="RightIntTextBox"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToArgbConverter}}" />
+                <Button Click="RightIntApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}" />
+            </StackPanel>
         </StackPanel>
-        
+
     </Grid>
 </Window>

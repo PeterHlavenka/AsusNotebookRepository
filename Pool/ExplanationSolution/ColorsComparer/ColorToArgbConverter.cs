@@ -20,6 +20,7 @@ namespace ColorsComparer
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            
             if (value == null) return null;
 
             var intColor = int.TryParse(value.ToString(), out var result);
