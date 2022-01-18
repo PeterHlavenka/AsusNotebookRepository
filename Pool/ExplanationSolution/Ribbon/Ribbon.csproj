@@ -4,10 +4,10 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{C384CF9E-5F08-4931-9DC1-051430C89DE3}</ProjectGuid>
+        <ProjectGuid>{0C1A1039-C319-44D5-BD8C-35C9C2732A20}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>ColorsComparer</RootNamespace>
-        <AssemblyName>ColorsComparer</AssemblyName>
+        <RootNamespace>Ribbon</RootNamespace>
+        <AssemblyName>Ribbon</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,10 +34,29 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Syncfusion.Licensing, Version=19.2460.0.56, Culture=neutral, PublicKeyToken=632609b4d040f6b4">
+          <HintPath>..\packages\Syncfusion.Licensing.19.2.0.56\lib\net46\Syncfusion.Licensing.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.SfSkinManager.WPF, Version=19.2460.0.55, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.SfSkinManager.WPF.19.2.0.55\lib\net46\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Shared.Wpf, Version=19.2460.0.55, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Shared.WPF.19.2.0.55\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Themes.Office2013White.WPF, Version=19.2460.0.55, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Themes.Office2013White.WPF.19.2.0.55\lib\net46\Syncfusion.Themes.Office2013White.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Tools.Wpf, Version=19.2460.0.55, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Tools.WPF.19.2.0.55\lib\net46\Syncfusion.Tools.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
-        <Reference Include="System.Drawing" />
         <Reference Include="System.Xml" />
         <Reference Include="System.Xaml">
             <RequiredTargetFramework>4.0</RequiredTargetFramework>
@@ -59,8 +78,6 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Include="ColorToArgbConverter.cs" />
-        <Compile Include="ColorToSolidBrushConverter.cs" />
         <Compile Include="MainWindow.xaml.cs">
             <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
@@ -82,6 +99,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Assets\Microsoft.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -139,6 +139,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SfDataGrid", "SfDataGrid\Sf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid_Themes", "change-themes-at-runtime-using-skinmanager-master\DataGrid_Themes.csproj", "{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ribbon", "Ribbon\Ribbon.csproj", "{0C1A1039-C319-44D5-BD8C-35C9C2732A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsComparer", "ColorsComparer\ColorsComparer.csproj", "{C384CF9E-5F08-4931-9DC1-051430C89DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsComparer", "ColorsComparer\ColorsComparer.csproj", "{C384CF9E-5F08-4931-9DC1-051430C89DE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -377,6 +383,10 @@ Global
 		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1A1039-C319-44D5-BD8C-35C9C2732A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1A1039-C319-44D5-BD8C-35C9C2732A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1A1039-C319-44D5-BD8C-35C9C2732A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1A1039-C319-44D5-BD8C-35C9C2732A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -428,6 +438,7 @@ Global
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{191F1CB8-4990-4314-9B85-F2F89F8FB221} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{0C1A1039-C319-44D5-BD8C-35C9C2732A20} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

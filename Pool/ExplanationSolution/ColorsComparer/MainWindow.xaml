@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:ColorsComparer"
         mc:Ignorable="d"
         Title="MainWindow" >
+    <Window.Resources>
+        <local:ColorToArgbConverter x:Key="ColorToArgbConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -28,6 +31,7 @@
             </ComboBox>
             <Rectangle x:Name="R1" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor, Path=SelectedItem.Name}"/>
             <TextBox Margin="10,0" Text="{Binding ElementName=R1, Path=Fill}"/>
+            <TextBox Margin="10,0" Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToArgbConverter}}"/>
             <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor, Path=SelectedItem}"/>
         </StackPanel>
         
@@ -44,6 +48,7 @@
             </ComboBox>
             <Rectangle x:Name="R2" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}"/>
             <TextBox Margin="10,0" Text="{Binding ElementName=R2, Path=Fill}"/>
+            <TextBox Margin="10,0" Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToArgbConverter}}"/>
             <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}"/>
         </StackPanel>
         
