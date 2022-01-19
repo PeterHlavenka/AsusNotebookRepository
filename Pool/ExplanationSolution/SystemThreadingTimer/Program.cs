@@ -13,6 +13,8 @@ namespace SystemThreadingTimer
 
         private static void Main(string[] args)
         {
+            Console.WriteLine("Starting");
+            
             Timer = new Timer(delegate // operace ktera se vykona v danem intervalu
                 {
                     Result++;
@@ -26,7 +28,7 @@ namespace SystemThreadingTimer
                 }
                 , null // object is useful for providing the additional information required for the Timer operation. However, this State object is not mandatory and hence we can set it as null 
                 , 0 // delay - o kolik se odlozi start timeru
-                , 1000); // interval provadeni
+                , 1000); // interval provadeni. Pokud chceme aby se callBack provedl jen jednou dame sem -1
 
             Console.ReadLine();
         }
