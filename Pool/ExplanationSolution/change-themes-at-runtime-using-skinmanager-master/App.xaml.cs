@@ -21,7 +21,7 @@ namespace DataGrid_Themes
     {
         public App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTYwOTA3QDMxMzgyZTMyMmUzMEFpcThsNld5c0l4YSs5MDUxRU1kZHlKbzZjN1c5RG9JQmdXVTVBUURZT0E9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTcyMDM1QDMxMzgyZTMyMmUzMG5xUW43bnl5YlBhMmg4ejlFV2wxaG12MVFiQ2Exc1Y1YjQ4dmpsRm54amM9");
         }
     }
 }

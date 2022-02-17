@@ -23,9 +23,6 @@ namespace DataGrid_Themes
             SfSkinManager.ApplyStylesOnApplication = true;
 
             InitializeComponent();
-
-            var neco = Enum.GetValues(typeof(VisualStyles));
-            var test = ComboVisualStyle.Items;
         } 
         
         

@@ -10,6 +10,76 @@
                              Title="Getting Started"
                              WindowStartupLocation="CenterScreen">
     <syncfusion:ChromelessWindow.Resources>
+
+
+        <!-- <Style TargetType="syncfusion:FilterToggleButton"> -->
+        <!--     <Setter Property="Template"> -->
+        <!--         <Setter.Value> -->
+        <!--             <ControlTemplate TargetType="syncfusion:FilterToggleButton"> -->
+        <!--                 <Rectangle Height="15" Width="15" Fill="Red"></Rectangle> -->
+        <!--             </ControlTemplate> -->
+        <!--         </Setter.Value> -->
+        <!--     </Setter> -->
+        <!-- </Style> -->
+
+         <Style TargetType="syncfusion:FilterToggleButton">
+                        <Setter Property="Height" Value="18" />
+                        <Setter Property="Width" Value="20" />
+                        <Setter Property="Foreground" Value="DeepSkyBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="syncfusion:FilterToggleButton">
+         
+                                    <Grid SnapsToDevicePixels="True">
+                                        <Border>
+                                            <Path
+                                                Name="PART_FilterToggleButtonIndicator"
+                                                Margin="3"
+                                                Data="M -1,-0.7 -0.9,-1 0.9,-1 1,-0.7 0.25,0.4 0.25,1 -0.25,1 -0.25,0.4"
+                                                Stretch="Fill">
+                                                <Path.Fill>
+                                                    <SolidColorBrush x:Name="PathFillColor" Color="DeepSkyBlue" />
+                                                </Path.Fill>
+                                            </Path>
+                                        </Border>
+                                        <Rectangle
+                                            Width="30"
+                                            Height="30"
+                                            Fill="Transparent" />
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="FilterStates">
+                                                <VisualState x:Name="Filtered">
+                                                    <Storyboard>
+                                                        <ColorAnimation
+                                                            Storyboard.TargetName="PathFillColor"
+                                                            Storyboard.TargetProperty="Color"
+                                                            To="#FFCC3333" />
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="UnFiltered">
+                                                    <Storyboard>
+                                                        <ColorAnimation
+                                                            Storyboard.TargetName="PathFillColor"
+                                                            Storyboard.TargetProperty="Color"
+                                                            To="DeepSkyBlue" />
+                                                    </Storyboard>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+        
+        
+        <Style x:Key="CustomButtonAdvStyle" TargetType="syncfusion:ButtonAdv" BasedOn="{StaticResource SyncfusionButtonAdvStyle}" >
+            <Setter Property="Foreground" Value="Red"/>
+        </Style>
+        
+        <!-- <Style TargetType="syncfusion:SfDataGrid" BasedOn="{StaticResource SyncfusionSfDataGridStyle}"> -->
+        <!-- </Style> -->
+        
         <local:ViewModel x:Key="viewmodel" />
         <local:SelectedImageConverter x:Key="selectedImageConverter"/>
         <local:StatusConverter        x:Key="statusConverter"/>
@@ -31,12 +101,13 @@
                 <x:Type TypeName="syncfusionskin:VisualStyles" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
+            
     </syncfusion:ChromelessWindow.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ComboBox
@@ -46,8 +117,18 @@
                 Margin="5"
                 ItemsSource="{Binding Source={StaticResource Themes}}"
                 SelectedIndex="18" />
-        
-        <Button Grid.Row="1" Margin="10" Click="ButtonBase_OnClick"> Open OtherWindow </Button>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <syncfusion:ButtonAdv Grid.Column="0"  Label="ButtonAdv ma overridnuty styl (neaplikuje se styl z theme)"
+                                  Margin="10" Click="ButtonBase_OnClick" SmallIcon="{x:Null}"
+                                  Style="{StaticResource CustomButtonAdvStyle}" />
+            <syncfusion:ButtonAdv Grid.Column="1" Label="ButtonAdv bez stylu ( aplikuje se styl z theme)"
+                                  Margin="10" Click="ButtonBase_OnClick" SmallIcon="{x:Null}"/>
+        </Grid>
         
         <Grid Grid.Row="2" DataContext="{StaticResource viewmodel}">
             <syncfusion:SfDataGrid Name="sfgrid" Margin="5"

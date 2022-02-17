@@ -26,7 +26,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        
+        <!-- Left side -->
         <StackPanel Grid.Row="0" Grid.Column="0">
             <ComboBox Margin="10" x:Name="ComboColor" SelectionChanged="ComboColor_OnSelectionChanged">
                 <ComboBox.ItemTemplate>
@@ -59,6 +62,7 @@
         </StackPanel>
 
 
+        <!-- Middle -->
         <StackPanel Grid.Row="0" Grid.Column="1">
             <ComboBox Margin="10" x:Name="ComboColor1" SelectionChanged="ComboColor1_OnSelectionChanged">
                 <ComboBox.ItemTemplate>
@@ -74,12 +78,12 @@
                        Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}" />
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="RightBrushTextBox" Text="{Binding ElementName=R2, Path=Fill}" />
+                <TextBox x:Name="MiddleBrushTextBox" Text="{Binding ElementName=R2, Path=Fill}" />
                 <Button Click="RightBrushApply" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="RightIntTextBox"
+                <TextBox x:Name="MiddleIntTextBox"
                          Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToArgbConverter}}" />
                 <Button Click="RightIntApply" />
             </StackPanel>
@@ -89,5 +93,35 @@
             </StackPanel>
         </StackPanel>
 
+        
+        <!-- Right side - commonBrushes syncfusion themes  <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful.WPF;component/Common/Brushes.xaml" /> -->
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <StackPanel.Resources>
+                <XmlDataProvider x:Key="XmlData" XPath="Colors" Source="Brushes.xml"></XmlDataProvider>
+            </StackPanel.Resources>
+            <ComboBox Margin="10" x:Name="DictionaryCombo" 
+                      ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Color}" DisplayMemberPath="@Key"
+                      SelectionChanged="ComboColor1_OnSelectionChanged">
+         
+            </ComboBox>
+            <Rectangle x:Name="R3" MinWidth="200" MinHeight="200" Margin="10"
+                       Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}" />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="RightBrushTextBox" Text="{Binding ElementName=R3, Path=Fill}" />
+                <Button Click="RightBrushApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="RightIntTextBox"
+                         Text="{Binding ElementName=R3, Path=Fill, Converter={StaticResource ColorToArgbConverter}}" />
+                <Button Click="RightIntApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}" />
+            </StackPanel>
+        </StackPanel>
+        
     </Grid>
 </Window>

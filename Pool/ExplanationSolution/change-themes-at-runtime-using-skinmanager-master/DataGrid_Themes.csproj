@@ -44,8 +44,9 @@
     <Reference Include="Syncfusion.GridCommon.WPF">
       <HintPath>packages\Syncfusion.GridCommon.Wpf.18.2.0.44\lib\net46\Syncfusion.GridCommon.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing">
-      <HintPath>packages\Syncfusion.Licensing.18.2.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.Licensing, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=632609b4d040f6b4">
+      <HintPath>..\packages\Syncfusion.Licensing.18.2.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Syncfusion.Linq.Base">
       <HintPath>packages\Syncfusion.Linq.Base.18.2.0.44\lib\net46\Syncfusion.Linq.Base.dll</HintPath>

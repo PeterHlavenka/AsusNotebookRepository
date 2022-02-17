@@ -22,6 +22,7 @@ namespace ColorsComparer
 
             ComboColor.ItemsSource = typeof(Colors).GetProperties();
             ComboColor1.ItemsSource = typeof(Colors).GetProperties();
+            var test = TryFindResource("RibbonBrushes");
         }
 
         private void LeftBrushApply(object sender, RoutedEventArgs e)
@@ -49,12 +50,12 @@ namespace ColorsComparer
 
         private void RightBrushApply(object sender, RoutedEventArgs e)
         {
-            ComboColor1.SelectedItem = ComboColor1.ItemsSource.Cast<PropertyInfo>().FirstOrDefault(d => d.GetValue(d).ToString() == RightBrushTextBox.Text);
+            ComboColor1.SelectedItem = ComboColor1.ItemsSource.Cast<PropertyInfo>().FirstOrDefault(d => d.GetValue(d).ToString() == MiddleBrushTextBox.Text);
         }
 
         private void RightIntApply(object sender, RoutedEventArgs e)
         {
-            if (int.TryParse(RightIntTextBox.Text, out var result))
+            if (int.TryParse(MiddleIntTextBox.Text, out var result))
             {
                 var color = Color.FromArgb(result);
 
