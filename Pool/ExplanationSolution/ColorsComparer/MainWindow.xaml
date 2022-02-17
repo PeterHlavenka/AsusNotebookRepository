@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorsComparer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="1000">
+        Title="MainWindow" Height="400" Width="1000"  >
     <Window.Resources>
         <local:ColorToArgbConverter x:Key="ColorToArgbConverter" />
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="10,2" />
-            <Setter Property="Width" Value="400" />
+            <Setter Property="Width" Value="200" />
         </Style>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10,2" />
@@ -31,7 +31,7 @@
         
         <!-- Left side -->
         <StackPanel Grid.Row="0" Grid.Column="0">
-            <ComboBox Margin="10" x:Name="ComboColor" SelectionChanged="ComboColor_OnSelectionChanged">
+            <ComboBox Margin="10" x:Name="ComboColor" SelectionChanged="ComboColor_OnSelectionChanged" IsEditable="True" >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -64,7 +64,7 @@
 
         <!-- Middle -->
         <StackPanel Grid.Row="0" Grid.Column="1">
-            <ComboBox Margin="10" x:Name="ComboColor1" SelectionChanged="ComboColor1_OnSelectionChanged">
+            <ComboBox Margin="10" x:Name="ComboColor1" SelectionChanged="ComboColor1_OnSelectionChanged" IsEditable="True" >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -99,28 +99,13 @@
             <StackPanel.Resources>
                 <XmlDataProvider x:Key="XmlData" XPath="Colors" Source="Brushes.xml"></XmlDataProvider>
             </StackPanel.Resources>
-            <ComboBox Margin="10" x:Name="DictionaryCombo" 
+            <ComboBox Margin="10" x:Name="DictionaryCombo" IsEditable="True" 
                       ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Color}" DisplayMemberPath="@Key"
-                      SelectionChanged="ComboColor1_OnSelectionChanged">
-         
+                      SelectedValue="{Binding DictionaryComboSelectedValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             </ComboBox>
             <Rectangle x:Name="R3" MinWidth="200" MinHeight="200" Margin="10"
-                       Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}" />
-
-            <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="RightBrushTextBox" Text="{Binding ElementName=R3, Path=Fill}" />
-                <Button Click="RightBrushApply" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="RightIntTextBox"
-                         Text="{Binding ElementName=R3, Path=Fill, Converter={StaticResource ColorToArgbConverter}}" />
-                <Button Click="RightIntApply" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}" />
-            </StackPanel>
+                       Fill="{Binding ElementName=DictionaryCombo, Path=SelectedValue}" />
+ 
         </StackPanel>
         
     </Grid>
