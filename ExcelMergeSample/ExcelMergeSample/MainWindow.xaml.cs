@@ -28,12 +28,16 @@ namespace ExcelMergeSample
                 application.DefaultVersion = ExcelVersion.Excel2016;
 
                 //Load the existing Excel workbook into IWorkbook
-                var destinationWorkbook = application.Workbooks.Open("Rovning_months.xlsx");
+                var destinationWorkbook = application.Workbooks.Open("11h dayparts.xlsx");
 
-                var workbookToAdd = application.Workbooks.Open("Rovning_weeks.xlsx");
-
+                var workbookToAdd = application.Workbooks.Open("11h kids.xlsx");
                 destinationWorkbook.Worksheets.AddCopy(workbookToAdd.Worksheets);
+                workbookToAdd.Close();
 
+                MergeAnalysesInWorksheet.Merge(destinationWorkbook, settings.Report.EntityHandle.EntityName);
+                destinationWorkbook.SaveAs(tempName);
+                destinationWorkbook.Close();
+                
                 //Save the Excel document
                 destinationWorkbook.SaveAs("Output.xlsx");
             }

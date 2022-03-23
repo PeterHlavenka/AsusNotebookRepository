@@ -10,12 +10,22 @@
         <StackPanel HorizontalAlignment="Center" Margin="50" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
                 <TextBlock Text="File_1:" />
-                <TextBlock Text="Rovning_months.xlsx" Margin="50,0,0,0"/>
+                <TextBlock Text="11h dayparts.xlsx" Margin="50,0,0,0"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
                 <TextBlock Text="File_2:" />
-                <TextBlock Text="Rovning_weeks.xlsx" Margin="50,0,0,0"/>
+                <TextBlock Text="11h kids.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_3:" />
+                <TextBlock Text="11h telegrid.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_4:" />
+                <TextBlock Text="11h ttv.xlsx" Margin="50,0,0,0"/>
             </StackPanel>
 
             <Button Height="30" Width="100" Content="Merge" Click="ButtonBase_OnClick" Margin="30"/>
