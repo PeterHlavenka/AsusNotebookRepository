@@ -1,6 +1,7 @@
 ﻿#region
 
 using System.Windows;
+using Adwind.Export;
 using Syncfusion.XlsIO;
 
 #endregion
@@ -32,14 +33,21 @@ namespace ExcelMergeSample
 
                 var workbookToAdd = application.Workbooks.Open("11h kids.xlsx");
                 destinationWorkbook.Worksheets.AddCopy(workbookToAdd.Worksheets);
+                
+                workbookToAdd = application.Workbooks.Open("11h telegrid.xlsx");
+                destinationWorkbook.Worksheets.AddCopy(workbookToAdd.Worksheets);
+                
+                workbookToAdd = application.Workbooks.Open("11h ttv.xlsx");
+                destinationWorkbook.Worksheets.AddCopy(workbookToAdd.Worksheets);
+
+                
                 workbookToAdd.Close();
 
-                MergeAnalysesInWorksheet.Merge(destinationWorkbook, settings.Report.EntityHandle.EntityName);
-                destinationWorkbook.SaveAs(tempName);
-                destinationWorkbook.Close();
-                
+                MergeAnalysesInWorksheet.Merge(destinationWorkbook, "nazev listu");
+
                 //Save the Excel document
                 destinationWorkbook.SaveAs("Output.xlsx");
+                destinationWorkbook.Close();
             }
         }
     }

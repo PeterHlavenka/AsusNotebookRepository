@@ -107,5 +107,11 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Libraries\Adwind.Export\Adwind.Export.csproj">
+        <Project>{8d20cd36-c5cb-4e9a-b939-6dde9add3f33}</Project>
+        <Name>Adwind.Export</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
