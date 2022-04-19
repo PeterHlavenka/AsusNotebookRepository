@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+  <Canvas Name="svg16" Width="1985760" Height="509614">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="0" Y="0"/>
+    </Canvas.RenderTransform>
+    <Canvas.Resources/>
+    <!--Unknown tag: metadata-->
+    <!--Unknown tag: sodipodi:namedview-->
+    <Canvas Name="Layer_x0020_1">
+      <!--Unknown tag: metadata-->
+      <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="476429" Canvas.Top="-3" Width="509620" Height="509620" Name="circle7" Fill="#1e3c78"/>
+      <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path9" Fill="#1e3c78">
+        <Path.Data>
+          <PathGeometry Figures="M208883 3907l-208883 0 0 499933 208883 0c137487 0 249976 -112480 249976 -249966l0 0c0 -137487 -112489 -249967 -249976 -249967z" FillRule="EvenOdd"/>
+        </Path.Data>
+      </Path>
+      <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path11" Fill="#1e3c78">
+        <Path.Data>
+          <PathGeometry Figures="M1776877 503840l208893 0 0 -499933 -208893 0c-137477 0 -249967 112480 -249967 249967l0 0c0 137486 112490 249966 249967 249966z" FillRule="EvenOdd"/>
+        </Path.Data>
+      </Path>
+      <Polygon xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Points="1001669,503758 1499580,503758 1499580,5856 1381939,5856 1350390,57461 1250620,220641 1150858,57461 1119309,5856 1001669,5856 " Name="polygon13" FillRule="EvenOdd" Fill="#1e3c78"/>
+    </Canvas>
+  </Canvas>
+</Viewbox>
