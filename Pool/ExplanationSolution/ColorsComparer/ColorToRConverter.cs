@@ -3,19 +3,22 @@
 using System;
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Media;
 
 #endregion
 
 namespace ColorsComparer
 {
-    public class ColorToArgbConverter : IValueConverter
+    public class ColorToRConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null) return 0;
-            var stringColor = value?.ToString();
+            if (value is SolidColorBrush solidColorBrush)
+            {
+                return solidColorBrush.Color.R;
+            }
 
-            return int.Parse(stringColor.Replace("#", ""), NumberStyles.HexNumber);
+            return null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

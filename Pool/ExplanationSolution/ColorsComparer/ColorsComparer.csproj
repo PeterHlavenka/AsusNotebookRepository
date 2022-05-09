@@ -59,7 +59,11 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Include="ColorToArgbConverter.cs" />
+        <Compile Include="ColorToAConverter.cs" />
+        <Compile Include="ColorToBConverter.cs" />
+        <Compile Include="ColorToGConverter.cs" />
+        <Compile Include="ColorToIntConverter.cs" />
+        <Compile Include="ColorToRConverter.cs" />
         <Compile Include="ColorToSolidBrushConverter.cs" />
         <Compile Include="MainWindow.xaml.cs">
             <DependentUpon>MainWindow.xaml</DependentUpon>

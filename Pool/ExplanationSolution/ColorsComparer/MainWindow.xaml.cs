@@ -70,5 +70,27 @@ namespace ColorsComparer
         {
             if (ComboColor1.SelectedItem is PropertyInfo info) R2.Fill = new SolidColorBrush((System.Windows.Media.Color) info.GetValue(ComboColor1.SelectedItem));
         }
+
+        private void ARGB_Apply(object sender, RoutedEventArgs e)
+        {
+            // seru na try
+            var A = byte.Parse(A_TextBox.Text);
+            var R = byte.Parse(R_TextBox.Text);
+            var G = byte.Parse(G_TextBox.Text);
+            var B = byte.Parse(B_TextBox.Text);
+
+            R1.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(A, R, G, B ));
+        }
+
+        private void ARGB_LeftApply(object sender, RoutedEventArgs e)
+        {
+            // seru na try
+            var A = byte.Parse(A_LeftTextBox.Text);
+            var R = byte.Parse(R_LeftTextBox.Text);
+            var G = byte.Parse(G_LeftTextBox.Text);
+            var B = byte.Parse(B_LeftTextBox.Text);
+
+            R2.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(A, R, G, B));
+        }
     }
 }
