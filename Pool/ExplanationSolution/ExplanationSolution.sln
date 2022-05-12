@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ribbon", "Ribbon\Ribbon.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cancellation_UpdateView_Adwind", "Thready\Cancellation_UpdateView_Adwind\Cancellation_UpdateView_Adwind.csproj", "{7877369D-7367-474B-874F-84B54A190651}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToPdfExporter", "ExcelToPdfExporter\ExcelToPdfExporter.csproj", "{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -389,6 +391,10 @@ Global
 		{7877369D-7367-474B-874F-84B54A190651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7877369D-7367-474B-874F-84B54A190651}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7877369D-7367-474B-874F-84B54A190651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -442,6 +448,7 @@ Global
 		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{0C1A1039-C319-44D5-BD8C-35C9C2732A20} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{7877369D-7367-474B-874F-84B54A190651} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
