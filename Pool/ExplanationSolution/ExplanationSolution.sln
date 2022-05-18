@@ -145,6 +145,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cancellation_UpdateView_Adw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToPdfExporter", "ExcelToPdfExporter\ExcelToPdfExporter.csproj", "{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmfToPdfExporter", "EmfToPdfExporter\EmfToPdfExporter.csproj", "{AEAF94D3-F457-4D83-8BD1-E3CF01858213}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -395,6 +397,10 @@ Global
 		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -449,6 +455,7 @@ Global
 		{0C1A1039-C319-44D5-BD8C-35C9C2732A20} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{7877369D-7367-474B-874F-84B54A190651} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
