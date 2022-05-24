@@ -1,0 +1,28 @@
+﻿<syncfusion:Ribbon x:Class="RibbonCustomThemeTest.MyRibbon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:RibbonCustomThemeTest"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             mc:Ignorable="d"
+             IsBackStageVisible="True"
+             BackStageHeader="Domu"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+            <syncfusion:Ribbon.BackStage>
+                <syncfusion:Backstage>
+                    <syncfusion:BackStageCommandButton Header="Save"  />
+                    <syncfusion:BackStageCommandButton Header="Close" />
+                </syncfusion:Backstage>
+            </syncfusion:Ribbon.BackStage>
+            <syncfusion:Ribbon.QuickAccessToolBar>
+                <syncfusion:QuickAccessToolBar/>
+            </syncfusion:Ribbon.QuickAccessToolBar>
+            <syncfusion:RibbonTab Caption="Vyjebana kokotina">
+                <syncfusion:RibbonBar Header="Clipboard">
+                </syncfusion:RibbonBar>
+            </syncfusion:RibbonTab>
+        
+   
+</syncfusion:Ribbon>
