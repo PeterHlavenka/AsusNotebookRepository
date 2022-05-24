@@ -26,15 +26,15 @@ namespace RibbonBackstageCustomTheme
 
         private void CmbTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cmbTheme.SelectedIndex == 1)
+            if (cmbTheme.SelectedIndex == 0)
             {
                 SfSkinManager.SetVisualStyle(this, VisualStyles.Office2019Colorful);
             }
-            else if(cmbTheme.SelectedIndex == 2)
+            else if(cmbTheme.SelectedIndex == 1)
             {
                 SfSkinManager.SetVisualStyle(this, VisualStyles.Office2016Colorful);
             }
-            else if (cmbTheme.SelectedIndex == 3)
+            else if (cmbTheme.SelectedIndex == 2)
             {
                 SfSkinManager.SetVisualStyle(this, VisualStyles.Office2013DarkGray);
             }
