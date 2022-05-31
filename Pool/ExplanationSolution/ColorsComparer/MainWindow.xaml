@@ -204,6 +204,7 @@
                 <Rectangle x:Name="R3" MinWidth="200" MinHeight="200" 
                        Fill="{Binding ElementName=DictionaryCombo, Path=SelectedValue}" />
             </Border>
+            <TextBlock  Text="{Binding ElementName=R3, Path=Fill}" />
 
         </StackPanel>
         
