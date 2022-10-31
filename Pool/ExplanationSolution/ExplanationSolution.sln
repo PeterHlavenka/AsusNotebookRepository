@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmfToPdfExporter", "EmfToPd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonBackstageCustomTheme", "RibbonBackstageCustomTheme\RibbonBackstageCustomTheme.csproj", "{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncfusionGridControl", "SyncfusionGridControl\SyncfusionGridControl\SyncfusionGridControl.csproj", "{CF9293BD-49EE-4C5C-901A-3BBA651473AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -401,6 +403,10 @@ Global
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -456,6 +462,7 @@ Global
 		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{AEAF94D3-F457-4D83-8BD1-E3CF01858213} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
