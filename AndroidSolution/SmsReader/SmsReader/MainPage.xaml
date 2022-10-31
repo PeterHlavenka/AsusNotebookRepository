@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SmsReader"
+             x:Class="SmsReader.MainPage">
+
+    <StackLayout IsVisible="True">
+        <!-- Place new controls here -->
+        
+        <Frame BackgroundColor="#2196F3" Padding="24">
+            <Label Text="SmsReader" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Button x:Name="AlarmButton" Text="Alarm" Clicked="AlarmButton_OnClicked"></Button>
+        
+        <Label Text="Plugin.LocalNotifications package installed" 
+           HorizontalOptions="Center"
+           VerticalOptions="EndAndExpand" />
+       
+    </StackLayout>
+
+</ContentPage>

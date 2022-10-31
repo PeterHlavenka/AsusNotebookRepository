@@ -4,35 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorsComparer"
-        mc:Ignorable="d"
-        Title="MainWindow" >
+        mc:Ignorable="d" Background="#FFFAFAFA"
+        Title="MainWindow" Height="500" Width="1000"  >
+    <Window.Resources>
+        <local:ColorToIntConverter x:Key="ColorToIntConverter" />
+        <local:ColorToAConverter x:Key="ColorToAConverter" />
+        <local:ColorToRConverter x:Key="ColorToRConverter" />
+        <local:ColorToGConverter x:Key="ColorToGConverter" />
+        <local:ColorToBConverter x:Key="ColorToBConverter" />
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10,2" />
+            <Setter Property="Width" Value="200" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,2" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10,2" />
+            <Setter Property="Content" Value="Apply" />
+
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0">
-            <ComboBox Margin="10" x:Name="ComboColor">     
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
-                            <TextBlock Text="{Binding Name}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>    
-            </ComboBox>
-            <Rectangle x:Name="R1" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor, Path=SelectedItem.Name}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R1, Path=Fill}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor, Path=SelectedItem}"/>
-        </StackPanel>
         
-        <StackPanel Grid.Row="0" Grid.Column="1">
-            <ComboBox Margin="10" x:Name="ComboColor1">     
+        <!-- Left side -->
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <ComboBox Margin="10" x:Name="ComboColor" SelectionChanged="ComboColor_OnSelectionChanged" IsEditable="True" >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -40,11 +47,165 @@
                             <TextBlock Text="{Binding Name}" />
                         </StackPanel>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>    
+                </ComboBox.ItemTemplate>
             </ComboBox>
-            <Rectangle x:Name="R2" MinWidth="200" MinHeight="200" Margin="10" Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=R2, Path=Fill}"/>
-            <TextBox Margin="10,0" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}"/>
+
+            <Border BorderThickness="0.5" BorderBrush="LightGray"  Margin="10">
+                <Rectangle x:Name="R1" MinWidth="200" MinHeight="200"
+                       Fill="{Binding ElementName=ComboColor, Path=SelectedItem.Name}" />
+            </Border>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="LeftBrushTextBox" Text="{Binding ElementName=R1, Path=Fill}" ToolTip="#FF556B2F"/>
+                <Button Click="LeftBrushApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="LeftIntTextBox"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToIntConverter}}" ToolTip="-11179217"/>
+                <Button Click="LeftIntApply" />
+            </StackPanel>
+
+            <Grid  Margin="10,2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="180"/>
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock Text="A : " Width="140"  Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal"  Grid.Column="1">
+                    <TextBox x:Name="A_TextBox" Width="60"  Margin="0,2" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToAConverter}}" />
+                    <TextBlock Text="  Pruhlednost max 255"/>
+                </StackPanel>
+                <!-- <Button Click="A_Apply" /> -->
+                          
+                    <TextBlock  Text="R : " Grid.Row="1" Grid.Column="0"/>
+                <TextBox x:Name="R_TextBox" Width="60"  Margin="0,2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToRConverter}}" />
+                    <!-- <Button Click="R_Apply" /> -->
+
+
+                <TextBlock Text="G : " Grid.Row="2" Grid.Column="0"/>
+                <TextBox x:Name="G_TextBox" Width="60"  Margin="0,2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToGConverter}}" />
+                    <!-- <Button Click="G_Apply" /> -->
+
+                <TextBlock Text="B : " Grid.Row="3" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                    <TextBox x:Name="B_TextBox" Width="60"  Margin="0,2"  HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R1, Path=Fill, Converter={StaticResource ColorToBConverter}}" />
+                    <Button Click="ARGB_Apply" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor, Path=SelectedItem}" />
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <!-- Middle -->
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <ComboBox Margin="10" x:Name="ComboColor1" SelectionChanged="ComboColor1_OnSelectionChanged" IsEditable="True" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                            <TextBlock Text="{Binding Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Border BorderThickness="0.5" BorderBrush="LightGray"  Margin="10">
+                <Rectangle x:Name="R2" MinWidth="200" MinHeight="200" 
+                       Fill="{Binding ElementName=ComboColor1, Path=SelectedItem.Name}" />
+            </Border>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="MiddleBrushTextBox" Text="{Binding ElementName=R2, Path=Fill}" />
+                <Button Click="RightBrushApply" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="MiddleIntTextBox"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToIntConverter}}" />
+                <Button Click="RightIntApply" />
+            </StackPanel>
+
+            <Grid  Margin="10,2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="180"/>
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock Text="A : " Width="140"  Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal"  Grid.Column="1">
+                    <TextBox x:Name="A_LeftTextBox" Width="60"  Margin="0,2" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToAConverter}}" />
+                    <TextBlock Text="  Pruhlednost max 255"/>
+                </StackPanel>
+                <!-- <Button Click="A_Apply" /> -->
+
+                <TextBlock  Text="R : " Grid.Row="1" Grid.Column="0"/>
+                <TextBox x:Name="R_LeftTextBox" Width="60"  Margin="0,2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToRConverter}}" />
+                <!-- <Button Click="R_Apply" /> -->
+
+
+                <TextBlock Text="G : " Grid.Row="2" Grid.Column="0"/>
+                <TextBox x:Name="G_LeftTextBox" Width="60"  Margin="0,2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToGConverter}}" />
+                <!-- <Button Click="G_Apply" /> -->
+
+                <TextBlock Text="B : " Grid.Row="3" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                    <TextBox x:Name="B_LeftTextBox" Width="60"  Margin="0,2"  HorizontalAlignment="Left"
+                         Text="{Binding ElementName=R2, Path=Fill, Converter={StaticResource ColorToBConverter}}" />
+                    <Button Click="ARGB_LeftApply" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox IsEnabled="False" Text="{Binding ElementName=ComboColor1, Path=SelectedItem}" />
+            </StackPanel>
+        </StackPanel>
+
+        
+        <!-- Right side - commonBrushes syncfusion themes  <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful.WPF;component/Common/Brushes.xaml" /> -->
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <StackPanel.Resources>
+                <XmlDataProvider x:Key="XmlData" XPath="Colors" Source="Brushes.xml"></XmlDataProvider>
+            </StackPanel.Resources>
+            <ComboBox Margin="10" x:Name="DictionaryCombo" IsEditable="True" ToolTip="Brushes.xml - Syncfusion barvicky"
+                      ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Color}" DisplayMemberPath="@Key"
+                      SelectedValue="{Binding DictionaryComboSelectedValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </ComboBox>
+
+            <Border BorderThickness="0.5" BorderBrush="LightGray"  Margin="10">
+                <Rectangle x:Name="R3" MinWidth="200" MinHeight="200" 
+                       Fill="{Binding ElementName=DictionaryCombo, Path=SelectedValue}" />
+            </Border>
+            <TextBlock  Text="{Binding ElementName=R3, Path=Fill}" />
+
         </StackPanel>
         
     </Grid>

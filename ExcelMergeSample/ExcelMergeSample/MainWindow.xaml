@@ -1,0 +1,36 @@
+﻿<Window x:Class="ExcelMergeSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Center" Margin="50" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_1:" />
+                <TextBlock Text="11h dayparts.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_2:" />
+                <TextBlock Text="11h kids.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_3:" />
+                <TextBlock Text="11h telegrid.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="50,0">
+                <TextBlock Text="File_4:" />
+                <TextBlock Text="11h ttv.xlsx" Margin="50,0,0,0"/>
+            </StackPanel>
+
+            <Button Height="30" Width="100" Content="Merge" Click="ButtonBase_OnClick" Margin="30"/>
+        </StackPanel>
+
+        
+    </Grid>
+</Window>

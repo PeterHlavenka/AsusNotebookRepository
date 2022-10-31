@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>ExcelToPdfExporter</RootNamespace>
+        <AssemblyName>ExcelToPdfExporter</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
+        <Reference Include="Syncfusion.Compression.Base, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Compression.Base.20.1.0.52\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.ExcelChartToImageConverter.Wpf, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.ExcelChartToImageConverter.WPF.20.1.0.52\lib\net46\Syncfusion.ExcelChartToImageConverter.Wpf.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.ExcelToPDFConverter.Base, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.ExcelToPdfConverter.Wpf.20.1.0.52\lib\net46\Syncfusion.ExcelToPdfConverter.Base.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Licensing, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=632609b4d040f6b4">
+          <HintPath>..\packages\Syncfusion.Licensing.20.1.0.52\lib\net46\Syncfusion.Licensing.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Pdf.Base, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Pdf.WinForms.20.1.0.52\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.PdfViewer.Windows, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.PdfViewer.Windows.20.1.0.52\lib\net46\Syncfusion.PdfViewer.Windows.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.SfChart.WPF, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.SfChart.WPF.20.1.0.52\lib\net46\Syncfusion.SfChart.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Shared.Base, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Shared.Base.20.1.0.52\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.Shared.Wpf, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.Shared.WPF.20.1.0.52\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Syncfusion.XlsIO.Base, Version=20.1460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+          <HintPath>..\packages\Syncfusion.XlsIO.Wpf.20.1.0.52\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+        <Reference Include="WindowsBase" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

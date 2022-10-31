@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "WpfApp1\AsyncAwait.csproj", "{B7EEF213-995A-4E93-B72C-117D7AF03D08}"
 EndProject
@@ -75,9 +75,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBlockWithLongTextRightA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataErrorInfoWithFluentValidation", "IDataErrorInfoWithFluentValidation\IDataErrorInfoWithFluentValidation.csproj", "{68E8B2D9-8F4F-48DD-B25F-7A4222F770CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnifierDemoShell", "..\..\..\..\Projects\Funkcni projekty NEMAZAT\MagnifierDemoWithMouseWheelZoom\MagnifierDemoShell\MagnifierDemoShell.csproj", "{A21C5332-3694-4B67-9B1B-B631BA53CBB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnifierDemoShell", "..\..\..\Projects\Funkcni projekty NEMAZAT\MagnifierDemoWithMouseWheelZoom\MagnifierDemoShell\MagnifierDemoShell.csproj", "{A21C5332-3694-4B67-9B1B-B631BA53CBB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnifierDemoGui", "..\..\..\..\Projects\Funkcni projekty NEMAZAT\MagnifierDemoWithMouseWheelZoom\MagnifierDemoGui\MagnifierDemoGui.csproj", "{BF7567D3-39B7-42A3-A600-19FF80967287}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnifierDemoGui", "..\..\..\Projects\Funkcni projekty NEMAZAT\MagnifierDemoWithMouseWheelZoom\MagnifierDemoGui\MagnifierDemoGui.csproj", "{BF7567D3-39B7-42A3-A600-19FF80967287}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Magnifiers", "Magnifiers", "{2C66E4E0-A9EF-4E44-8D4A-F43A3F512410}"
 EndProject
@@ -89,7 +89,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Magnifier", "Magnifier", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadGrid_Podbarvovani_radku", "RadGrid_Podbarvovani_radku\RadGrid_Podbarvovani_radku.csproj", "{1C9CA2C1-C224-4075-BF6C-3D73623754C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediaresearch.Framework.Gui.Telerik", "..\..\..\..\..\..\..\Pool\GitFramework\src\Mediaresearch.Framework.Gui.Telerik\Mediaresearch.Framework.Gui.Telerik.csproj", "{A9C74A0F-4F06-4032-AC37-978E25C1B0A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediaresearch.Framework.Gui.Telerik", "..\..\..\Pool\GitFramework\src\Mediaresearch.Framework.Gui.Telerik\Mediaresearch.Framework.Gui.Telerik.csproj", "{A9C74A0F-4F06-4032-AC37-978E25C1B0A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{11095BDC-EE70-40F4-92B5-7CF92859BA35}"
 EndProject
@@ -99,23 +99,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadCartesianChartTest", "RadCartesianChartTest\RadCartesianChartTest.csproj", "{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net_explanation a run external exe program", "log4net_explanation a run external exe program\log4net_explanation a run external exe program.csproj", "{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "log4net_explanation a run external exe program", "log4net_explanation a run external exe program\log4net_explanation a run external exe program.csproj", "{E23BF53C-CEA6-47BC-82AF-E8704218AEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalCacheCleaner", "ExternalCacheCleaner\ExternalCacheCleaner.csproj", "{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalCacheCleaner", "ExternalCacheCleaner\ExternalCacheCleaner.csproj", "{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderAppendNullTest", "StringBuilderAppendNullTest\StringBuilderAppendNullTest.csproj", "{1CFE109B-C717-41A0-9215-3896634F2C99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringBuilderAppendNullTest", "StringBuilderAppendNullTest\StringBuilderAppendNullTest.csproj", "{1CFE109B-C717-41A0-9215-3896634F2C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataErrorInfoAlaValidaceDocx", "IDataErrorInfoAlaValidaceDocx\IDataErrorInfoAlaValidaceDocx.csproj", "{8CEDECE9-0EE0-4548-AAE9-CCB1A05AD917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDataErrorInfoAlaValidaceDocx", "IDataErrorInfoAlaValidaceDocx\IDataErrorInfoAlaValidaceDocx.csproj", "{8CEDECE9-0EE0-4548-AAE9-CCB1A05AD917}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Validace", "Validace", "{F9EA50E0-B5A7-4540-AC00-4806F07792E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INotifyDataErrorInfo", "INotifyDataErrorInfo\INotifyDataErrorInfo.csproj", "{66C2085F-A6EE-4026-9333-DA51B0192F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INotifyDataErrorInfo", "INotifyDataErrorInfo\INotifyDataErrorInfo.csproj", "{66C2085F-A6EE-4026-9333-DA51B0192F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrowIfCancellationRequestedTest", "ThrowIfCancellationRequestedTest\ThrowIfCancellationRequestedTest.csproj", "{F7984C7A-84E6-4F3F-B1C4-D92259A076CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThrowIfCancellationRequestedTest", "ThrowIfCancellationRequestedTest\ThrowIfCancellationRequestedTest.csproj", "{F7984C7A-84E6-4F3F-B1C4-D92259A076CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTest", "Thready\QueueTest\QueueTest.csproj", "{4FE3E857-7175-48AA-9D2B-05BE536A358E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueTest", "Thready\QueueTest\QueueTest.csproj", "{4FE3E857-7175-48AA-9D2B-05BE536A358E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskQueueTest", "Thready\TaskQueueTest\TaskQueueTest.csproj", "{ECDAF199-946B-4226-A8DC-915D0ACA2BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskQueueTest", "Thready\TaskQueueTest\TaskQueueTest.csproj", "{ECDAF199-946B-4226-A8DC-915D0ACA2BB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externi procesy spusteni batky nebo exace", "Externi procesy spusteni batky nebo exace", "{A10A8DCB-D2D1-4525-AB9A-654FC5E08BE0}"
 EndProject
@@ -132,6 +132,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonDockingManagerWithLayoutSerializer", "AvalonDockingManagerWithLayoutSerializer\AvalonDockingManagerWithLayoutSerializer.csproj", "{7491371D-37BE-419D-A63B-7C55E10597CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnikaViceViewProJedenViewModel", "TechnikaViceViewProJedenViewModel\TechnikaViceViewProJedenViewModel.csproj", "{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Syncfusion", "Syncfusion", "{66A3599C-E989-4D7C-8347-A752643B4A63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SfDataGrid", "SfDataGrid\SfDataGrid.csproj", "{191F1CB8-4990-4314-9B85-F2F89F8FB221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid_Themes", "change-themes-at-runtime-using-skinmanager-master\DataGrid_Themes.csproj", "{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cancellation_UpdateView_Adwind", "Thready\Cancellation_UpdateView_Adwind\Cancellation_UpdateView_Adwind.csproj", "{7877369D-7367-474B-874F-84B54A190651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToPdfExporter", "ExcelToPdfExporter\ExcelToPdfExporter.csproj", "{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmfToPdfExporter", "EmfToPdfExporter\EmfToPdfExporter.csproj", "{AEAF94D3-F457-4D83-8BD1-E3CF01858213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonBackstageCustomTheme", "RibbonBackstageCustomTheme\RibbonBackstageCustomTheme.csproj", "{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncfusionGridControl", "SyncfusionGridControl\SyncfusionGridControl\SyncfusionGridControl.csproj", "{CF9293BD-49EE-4C5C-901A-3BBA651473AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +379,34 @@ Global
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7877369D-7367-474B-874F-84B54A190651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7877369D-7367-474B-874F-84B54A190651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7877369D-7367-474B-874F-84B54A190651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7877369D-7367-474B-874F-84B54A190651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,30 +432,37 @@ Global
 		{1D881ECA-9039-4E11-809F-4D1ADBDE64FD} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{2CAFA786-9343-4C45-9796-4729CAF07996} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{97C3CE85-C6DF-44F4-935E-1359C7F307EF} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{68E8B2D9-8F4F-48DD-B25F-7A4222F770CC} = {F9EA50E0-B5A7-4540-AC00-4806F07792E4}
 		{A21C5332-3694-4B67-9B1B-B631BA53CBB7} = {F6282C65-E991-4306-B0C2-74666F0C5405}
 		{BF7567D3-39B7-42A3-A600-19FF80967287} = {F6282C65-E991-4306-B0C2-74666F0C5405}
 		{20CAB3BF-5DCD-4DE0-BBE0-89C9E709D9A4} = {2C66E4E0-A9EF-4E44-8D4A-F43A3F512410}
 		{DC0AE17B-F5AF-443F-977F-8E8DD96A1DEB} = {20CAB3BF-5DCD-4DE0-BBE0-89C9E709D9A4}
 		{F6282C65-E991-4306-B0C2-74666F0C5405} = {2C66E4E0-A9EF-4E44-8D4A-F43A3F512410}
 		{1C9CA2C1-C224-4075-BF6C-3D73623754C8} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
+		{11095BDC-EE70-40F4-92B5-7CF92859BA35} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{38D6B259-E0E5-4F70-951F-70BF5BAFA405} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{7840E327-FCD1-424D-9B12-48F4575EEF83} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
 		{F1E65C5C-4E2A-4F6D-97F0-97767EA8FB7C} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
-		{11095BDC-EE70-40F4-92B5-7CF92859BA35} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
+		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10} = {A10A8DCB-D2D1-4525-AB9A-654FC5E08BE0}
 		{8CEDECE9-0EE0-4548-AAE9-CCB1A05AD917} = {F9EA50E0-B5A7-4540-AC00-4806F07792E4}
-		{68E8B2D9-8F4F-48DD-B25F-7A4222F770CC} = {F9EA50E0-B5A7-4540-AC00-4806F07792E4}
 		{66C2085F-A6EE-4026-9333-DA51B0192F43} = {F9EA50E0-B5A7-4540-AC00-4806F07792E4}
 		{F7984C7A-84E6-4F3F-B1C4-D92259A076CA} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{4FE3E857-7175-48AA-9D2B-05BE536A358E} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{ECDAF199-946B-4226-A8DC-915D0ACA2BB9} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{8AF4465F-0F4A-4261-9CB6-0E9C1703D5A4} = {A10A8DCB-D2D1-4525-AB9A-654FC5E08BE0}
-		{94ADFAA1-4CA6-475E-B1F4-A9577A52EA10} = {A10A8DCB-D2D1-4525-AB9A-654FC5E08BE0}
 		{734D60C7-7161-4908-B661-083E65FFE4BA} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{B6E3609F-596A-43E1-8831-E47ADFA23EFC} = {7CD29E40-8AE3-4BA0-9D6A-158D5202E4B2}
 		{A310D705-8F87-4140-881A-2C3B03429770} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
 		{C384CF9E-5F08-4931-9DC1-051430C89DE3} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{7491371D-37BE-419D-A63B-7C55E10597CE} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
 		{1634CBFA-ABB7-4EC1-A794-A48B221AE34E} = {9D5DFFC4-0219-4DF4-9011-1B656791DC59}
+		{191F1CB8-4990-4314-9B85-F2F89F8FB221} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{F27DFE2C-2F0C-4030-9FF8-F56EF696CB0F} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{7877369D-7367-474B-874F-84B54A190651} = {FC3CF8BF-3BC9-48DB-BECB-75D119A28C44}
+		{BE26A248-1ECB-4312-B9CF-B0F5A19415FF} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{AEAF94D3-F457-4D83-8BD1-E3CF01858213} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{CF9293BD-49EE-4C5C-901A-3BBA651473AD} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

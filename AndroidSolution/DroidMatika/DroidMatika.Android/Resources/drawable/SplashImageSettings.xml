@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="@android:color/background_light"/>
+<!--            <gradient-->
+<!--                    android:centerX="0.5"-->
+<!--                    android:centerY="0.3"-->
+<!--                    -->
+<!--                    android:gradientRadius="1200dp"-->
+<!--                    android:startColor="#ffffff"-->
+<!--                    android:endColor="#10ffff"-->
+<!--                    android:type="radial" />-->
+        </shape>
+    </item>
+    
+    <item
+            android:width="200dp"
+            android:height="200dp"
+            android:gravity="center"
+            android:left="0dp"
+            android:top="0dp">
+        <bitmap android:src="@drawable/Splash1024" />
+    </item>
+</layer-list>
