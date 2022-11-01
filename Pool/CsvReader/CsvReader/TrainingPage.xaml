@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CsvReader.TrainingPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Loaded="MainWindow_OnLoaded"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="30" ShowGridLines="True" Name="TrainingPageGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Name="TextBlock" HorizontalAlignment="Center" TextAlignment="Center" FontSize="40"
+                       Height="50" />
+            <Grid>
+                <Button Name="Button" IsDefault="True" Click="Count_OnClick" Height="50" Width="150" FontSize="40">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Border CornerRadius="20" BorderBrush="Blue" BorderThickness="2" Height="50"
+                                        Width="150" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock VerticalAlignment="Center" Name="CounterTextBlock" TextAlignment="Center"
+                           HorizontalAlignment="Center" FontSize="30" />
+            </Grid>
+        </StackPanel>
+
+
+
+    </Grid>
+</UserControl>

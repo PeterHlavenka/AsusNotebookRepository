@@ -1,0 +1,28 @@
+﻿<Window x:Class="CsvReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:csvReader="clr-namespace:CsvReader"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance csvReader:MainWindow}"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <csvReader:TrainingPage />
+        <csvReader:AddContentUserControl Grid.Row="0" Visibility="{Binding AddControlVisibility}" />
+
+        <Button Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="50"
+                Click="ButtonBase_OnClick" IsDefault="False">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding ButtonImageSource}" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
