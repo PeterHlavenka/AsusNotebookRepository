@@ -1,0 +1,103 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <Color x:Key="DropShadow.Static.Background">#AA000000</Color>
+    
+    <DropShadowEffect x:Key="Default.ShadowDepth1" BlurRadius="5" ShadowDepth="1" Direction="270" Color="{StaticResource DropShadow.Static.Background}" Opacity=".42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth2" BlurRadius="8" ShadowDepth="1.5" Direction="270" Color="{StaticResource DropShadow.Static.Background}" Opacity=".42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth3" BlurRadius="5" ShadowDepth="1" Direction="270" Color="{StaticResource DropShadow.Static.Background}" Opacity=".22" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth4" BlurRadius="25" ShadowDepth="8" Direction="270" Color="{StaticResource DropShadow.Static.Background}" Opacity=".42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth5" BlurRadius="35" ShadowDepth="13" Direction="270" Color="{StaticResource DropShadow.Static.Background}" Opacity=".42" RenderingBias="Performance" po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth6" BlurRadius="5" ShadowDepth="1" Color="{StaticResource DropShadow.Static.Background}" Opacity=".22" RenderingBias="Performance" po:Freeze="True" />
+    
+
+<sys:Double x:Key="Office2019Colorful_Kite.HeaderTextStyle">16</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.SubHeaderTextStyle">14</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.TitleTextStyle">14</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.SubTitleTextStyle">12</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.BodyTextStyle">12</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.CaptionText">10</sys:Double>
+<FontFamily x:Key="Office2019Colorful_Kite.ThemeFontFamily">Microsoft Sans Serif</FontFamily> 
+<FontWeight x:Key="Office2019Colorful_Kite.FontWeightNormal">Normal</FontWeight> 
+<FontWeight x:Key="Office2019Colorful_Kite.FontWeightMedium">Medium</FontWeight> 
+<Thickness x:Key="Office2019Colorful_Kite.BorderThickness">0,0,0,0</Thickness> 
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness1">1</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness2">2</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0001">0,0,0,1</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0002">0,0,0,2</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness1000">1,0,0,0</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0100">0,1,0,0</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0010">0,0,1,0</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness1110">1,1,1,0</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness1101">1,1,0,1</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness1011">1,0,1,1</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0111">0,1,1,1</Thickness>
+	<Thickness x:Key="Office2019Colorful_Kite.BorderThickness0011">0,0,1,1</Thickness>
+<Thickness x:Key="Office2019Colorful_Kite.ThemeBorderThicknessVariant1">1,1,1,1</Thickness> 
+<Thickness x:Key="Office2019Colorful_Kite.ThemeBorderThicknessVariant2">1,1,1,1</Thickness> 
+<Thickness x:Key="Office2019Colorful_Kite.FocusMargin">2,2,2,2</Thickness> 
+<sys:Double x:Key="Office2019Colorful_Kite.StrokeThickness">0</sys:Double>
+	<sys:Double x:Key="Office2019Colorful_Kite.StrokeThickness1">1</sys:Double>
+	<sys:Double x:Key="Office2019Colorful_Kite.StrokeThickness2">2</sys:Double>
+<DoubleCollection x:Key="Office2019Colorful_Kite.StrokeDashArray">1 2</DoubleCollection> 
+<CornerRadius x:Key="Office2019Colorful_Kite.ThemeCornerRadiusVariant1">0,0,0,0</CornerRadius> 
+<CornerRadius x:Key="Office2019Colorful_Kite.ThemeCornerRadiusVariant2">0,0,0,0</CornerRadius> 
+<CornerRadius x:Key="Office2019Colorful_Kite.CornerRadius2">2,2,2,2</CornerRadius> 
+<CornerRadius x:Key="Office2019Colorful_Kite.CornerRadius4">4,4,4,4</CornerRadius> 
+<CornerRadius x:Key="Office2019Colorful_Kite.CornerRadius8">8,8,8,8</CornerRadius> 
+	<sys:Double x:Key="TouchMode.MinHeight">32</sys:Double>
+	<sys:Double x:Key="TouchMode.MinWidth">32</sys:Double>
+	<sys:Double x:Key="TouchMode.MinSize">24</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.MinHeight">22</sys:Double>
+	<sys:Double x:Key="Office2019Colorful_Kite.MinHeight1">24</sys:Double>
+<sys:Double x:Key="Office2019Colorful_Kite.IconPanelSize">32</sys:Double>
+    <Style x:Key="KeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-1" BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFABABAB">
+                        <Border BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFF8F8F8"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="CheckKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-2" BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFABABAB">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FlatKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFABABAB">
+                        <Border BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFF8F8F8"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CircleKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-1" BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFABABAB" CornerRadius="100">
+                        <Border BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1}" BorderBrush="#FFF8F8F8" CornerRadius="100"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
