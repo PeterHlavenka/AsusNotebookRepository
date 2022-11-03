@@ -40,14 +40,14 @@ public partial class TrainingPage : UserControl
     private void Count_OnClick(object sender, RoutedEventArgs e)
     {
         CurrentPositon += 1;
-        var newWord = Words.FirstOrDefault(d => d.Position == CurrentPositon);
+        var newWord = Words.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
 
         if (newWord == null)
         {
             CurrentPositon = 1;
         }
             
-        newWord = Words.First(d => d.Position == CurrentPositon);
+        newWord = Words.First(d => int.Parse(d.Position) == CurrentPositon);
         TextBlock.Text = newWord.Cz;
         CounterTextBlock.Text = newWord.Position.ToString();
     }

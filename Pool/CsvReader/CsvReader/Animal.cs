@@ -2,7 +2,7 @@
 
 public class Animal
 {
-    public Animal(int position, string cz, string en, string de)
+    public Animal(string position, string cz, string en, string de)
     {
         Position = position;
         Cz = cz;
@@ -10,7 +10,7 @@ public class Animal
         De = de;
     }
     
-    public int Position { get; set; }
+    public string Position { get; set; }
     public string Cz { get; set; }
     public string En { get; set; }
     public string De { get; set; }
