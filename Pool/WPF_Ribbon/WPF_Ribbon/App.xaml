@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!-- <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/ribbon/ribbon.xaml" /> -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful.WPF;component/common/brushes.xaml"/>
+                <!-- <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/ribbon/ribbon.xaml" /> -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

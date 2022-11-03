@@ -6,9 +6,9 @@
     xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
     >
     <Grid Name="ContentGrid">   
-        <syncfusion:Ribbon x:Name="Ribbon" VerticalAlignment="Top">
+        <syncfusion:Ribbon x:Name="Ribbon" VerticalAlignment="Top"  RibbonState="Hide">
             <syncfusion:RibbonTab Caption="HOME"  IsChecked="True"/>
-            <syncfusion:RibbonTab Caption="SEND/RCEIVE"  IsChecked="False"/>
+            <syncfusion:RibbonTab Caption="SEND/RECEIVE"  IsChecked="False"/>
             <syncfusion:RibbonTab Caption="FOLDER"  IsChecked="False"/>
             <syncfusion:RibbonTab Caption="VIEW"  IsChecked="False"/>
             
@@ -17,10 +17,10 @@
             </syncfusion:Ribbon.BackStage>
         </syncfusion:Ribbon>
         
-        <syncfusion:DockingManager x:Name="SyncDockingManager" UseDocumentContainer="True"
+        <syncfusion:DockingManager x:Name="SyncDockingManager" UseDocumentContainer="True" Margin="5,10"
                                    PersistState="True">
                            
-            <ContentControl x:Name="SolutionExplorer" syncfusion:DockingManager.Header="Solution Explorer"
+            <ContentControl x:Name="SolutionExplorer" syncfusion:DockingManager.Header="Solution Explorer" 
                             syncfusion:DockingManager.SideInDockedMode="Right"/>
 
             <ContentControl x:Name="ToolBox" syncfusion:DockingManager.Header="Toolbox"
@@ -36,9 +36,11 @@
             </ContentControl>
             <ContentControl x:Name="StartPage" syncfusion:DockingManager.Header="Start Page"
                             syncfusion:DockingManager.State="Document" >
-                <StackPanel>
-                    <TextBlock Text="Any built-in themes can applied to the required control by VisualStyle attached property of the SfSkinManager." />
-                    <Button Name="Button" Margin="220" Height="30" Content="Custom theme applied, when button mouseOver is red"/>
+                <StackPanel Margin="20,100,20,0">
+                    <TextBlock Text="Kdyz mas vsechny dll-ky ve stejne verzi, tak si to nestezuje na to, ze ribbonWindow neni spravny targetType." />
+                    <TextBlock Text="Aby to prestalo hledat brushe, musim do App.xamlu pridat dictionary ktera bude odkazovat na brushe z defaultni theme." />
+                    <TextBlock Text="Pak mi funguje i setnuti theme registratorem rovnou na this."></TextBlock>
+                    <Button Name="Button" Margin="120" Height="30" Content="V tomto projekdu je nareferencovana theme verze 0.47 z Kitu - zluty mouseOver"/>
                 </StackPanel>
 
             </ContentControl>
