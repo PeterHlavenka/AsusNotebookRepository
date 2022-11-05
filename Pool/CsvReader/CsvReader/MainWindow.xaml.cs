@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
-using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Xml.Linq;
-using CsvHelper;
+using Syncfusion.Windows.Controls.Grid.Converter;
 
 namespace CsvReader;
 
@@ -25,18 +21,21 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         InitializeComponent();
         DataContext = this;
-        
+
         ButtonImageSource = new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative));
         
-        Words = new List<Animal>();
+        Words = new List<TranslatedObject>();
 
         for (int i = 1; i < 100; i++)
         {
-            Words.Add(new Animal(i.ToString(), string.Empty, String.Empty, String.Empty));
+            Words.Add(new TranslatedObject(i.ToString(), string.Empty, String.Empty, String.Empty));
         }
         
-        DataGrid.ItemsSource = Words;
+        // DataGrid.ItemsSource = Words;
     }
+
+    public TrainingView TrainingView { get; set; }
+    public AddContentView AddContentView { get; set; }
 
     public Visibility AddControlVisibility
     {
@@ -73,28 +72,30 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
     }
 
-    private void Save()
+    public void Save()
     {
-        if (NameTextBox.Text == String.Empty)
-        {
-            MessageBox.Show("Vyplňte název souboru");
-        }
-        
-        string fileName = string.Concat(NameTextBox.Text, ".csv");
-        string path = Directory.GetCurrentDirectory();
-
-        var together = string.Concat(path, "\\");
-        together = string.Concat(together, fileName);
-        
-        using (var writer = new StreamWriter(together))
-        using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-        {
-            csv.WriteRecords(Words);
-        }
+        // need to install 	Syncfusion.GridExcelExport.Wpf
+        AddContentView.GridControl.Model.ExportToCSV("Sample.csv");
+        // if (NameTextBox.Text == String.Empty)
+        // {
+        //     MessageBox.Show("Vyplňte název souboru");
+        // }
+        //
+        // string fileName = string.Concat(NameTextBox.Text, ".csv");
+        // string path = Directory.GetCurrentDirectory();
+        //
+        // var together = string.Concat(path, "\\");
+        // together = string.Concat(together, fileName);
+        //
+        // using (var writer = new StreamWriter(together))
+        // using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+        // {
+        //     csv.WriteRecords(Words);
+        // }
     }
 
 
-    public List<Animal> Words { get; set; }
+    public List<TranslatedObject> Words { get; set; }
 
 
 
@@ -104,6 +105,14 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-    
-    
+
+
+    private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+    {
+        if (sender is MainWindow mainWindow)
+        {
+            TrainingView = mainWindow.TrainingView;
+            AddContentView = mainWindow.AddContentControl;
+        }
+    }
 }

@@ -1,8 +1,8 @@
 ﻿namespace CsvReader;
 
-public class Animal
+public class TranslatedObject
 {
-    public Animal(string position, string cz, string en, string de)
+    public TranslatedObject(string position, string cz, string en, string de)
     {
         Position = position;
         Cz = cz;

@@ -8,9 +8,9 @@ using CsvHelper.Configuration;
 
 namespace CsvReader;
 
-public partial class TrainingPage : UserControl
+public partial class TrainingView : UserControl
 {
-    public TrainingPage()
+    public TrainingView()
     {
         InitializeComponent();
     }
@@ -27,13 +27,13 @@ public partial class TrainingPage : UserControl
         using var reader = new StreamReader(files[0]);
         using var csv = new CsvHelper.CsvReader(reader, config);
             
-        Words = csv.GetRecords<Animal>().ToList();
+        Words = csv.GetRecords<TranslatedObject>().ToList();
         CurrentPositon = 0;
         TextBlock.Text = Words.ElementAt(CurrentPositon).Cz;
         CounterTextBlock.Text = Words.ElementAt(CurrentPositon).Position.ToString();
     }
 
-    private List<Animal> Words { get; set; }
+    private List<TranslatedObject> Words { get; set; }
        
     private int CurrentPositon { get; set; }
 

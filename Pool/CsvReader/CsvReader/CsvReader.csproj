@@ -25,6 +25,8 @@
     <ItemGroup>
       <PackageReference Include="CsvHelper" Version="30.0.0" />
       <PackageReference Include="CsvReader.dll" Version="1.0.0" />
+      <PackageReference Include="Syncfusion.Grid.WPF" Version="20.3.0.52" />
+      <PackageReference Include="Syncfusion.GridExcelExport.Wpf" Version="20.3.0.52" />
     </ItemGroup>
 
 </Project>
