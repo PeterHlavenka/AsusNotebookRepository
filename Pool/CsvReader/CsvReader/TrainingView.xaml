@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              Loaded="MainWindow_OnLoaded"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Margin="30" ShowGridLines="True" Name="TrainingViewGrid">
+    <Grid Margin="30" ShowGridLines="False" Name="TrainingViewGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -14,8 +14,12 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="1">
+            
+            
             <TextBlock Name="TextBlock" HorizontalAlignment="Center" TextAlignment="Center" FontSize="40"
                        Height="50" />
+            
+            <!-- COUNT BUTTON -->
             <Grid>
                 <Button Name="Button" IsDefault="True" Click="Count_OnClick" Height="50" Width="150" FontSize="40">
                     <Button.Template>
