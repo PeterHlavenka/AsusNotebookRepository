@@ -29,6 +29,7 @@
         </Setter>
     </Style>
 
+    <!-- Adwind: ShowInTaskbar, UseLayoutRounding-->
     <Style x:Key="WPFWindowStyle"
        TargetType="{x:Type Window}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource WindowFocusVisual}"/>
@@ -38,6 +39,8 @@
         <Setter Property="FontSize" Value="{StaticResource Office2019Colorful_Kite.SubHeaderTextStyle}"/>
         <Setter Property="FontFamily" Value="{StaticResource Office2019Colorful_Kite.ThemeFontFamily}"/>
         <Setter Property="FontWeight" Value="{StaticResource Office2019Colorful_Kite.FontWeightNormal}"/>
+        <Setter Property="ShowInTaskbar" Value="False"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>

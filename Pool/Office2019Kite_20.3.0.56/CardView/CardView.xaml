@@ -271,21 +271,25 @@
                 <ControlTemplate TargetType="{x:Type tools_controls:CardViewItem}">
                     <Grid SnapsToDevicePixels="True">
                         <Border
-                            x:Name="CardViewItemBorder"  CornerRadius="{StaticResource Office2019Colorful_Kite.ThemeCornerRadiusVariant1}"
+                            x:Name="CardViewItemBorder"
+                            CornerRadius="{StaticResource Office2019Colorful_Kite.ThemeCornerRadiusVariant1}"
                             Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            />
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Border
-                                    x:Name="headerBackground" BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1110}"
-                                    Grid.Row="0" CornerRadius="{StaticResource Office2019Colorful_Kite.ThemeCornerRadiusVariant1}"
-                                    Background="{StaticResource ContentBackgroundAlt1}"
-                                    BorderBrush="{StaticResource BorderAlt}">
+                            BorderBrush="{StaticResource BorderAlt}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid x:Name="CardViewItemGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <!-- Bug 54147: Doladit Office2019Colorful_Kite theme  puvodne: Background="{StaticResource ContentBackgroundAlt1}"  -->
+                                <Border
+                                    x:Name="headerBackground"
+                                    BorderThickness="{StaticResource Office2019Colorful_Kite.BorderThickness1110}"
+                                    Grid.Row="0"
+                                    CornerRadius="{StaticResource Office2019Colorful_Kite.ThemeCornerRadiusVariant1}"
+                                    Background="Transparent"
+                                    BorderBrush="Transparent"
+                                    Height="7">
                                     <ContentPresenter
                                         x:Name="PART_HeaderPresenter"
                                         Margin="8"
@@ -307,6 +311,7 @@
                                     ContentTemplate="{Binding Path=ItemTemplate, RelativeSource={RelativeSource AncestorType={x:Type tools_controls:CardView}}}"
                                     TextElement.FontSize="{Binding Path=FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tools_controls:CardView}}}" />
                             </Grid>
+                        </Border>
 
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -314,10 +319,11 @@
                             <Setter Property="MinHeight" TargetName="headerBackground" Value="{StaticResource TouchMode.MinHeight}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="headerBackground" Property="Background" Value="{StaticResource ContentBackgroundAlt1}" />
-                            <Setter TargetName="headerBackground" Property="BorderBrush" Value="{StaticResource BorderAlt2}" />
+                            <Setter TargetName="headerBackground" Property="Background" Value="Transparent" />
+                            <Setter TargetName="headerBackground" Property="BorderBrush" Value="Transparent" />
                             <Setter Property="Foreground" Value="{StaticResource HoveredForeground}" />
-                            <Setter Property="BorderBrush" TargetName="CardViewItemBorder" Value="{StaticResource BorderAlt2}"/>
+                            <Setter TargetName="CardViewItemBorder" Property="BorderBrush" Value="{StaticResource Adwind_BorderBrush}"/>
+                            <Setter TargetName="CardViewItemGrid" Property="Background" Value="{StaticResource AdwindButtonMouseOverBackground}"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="headerBackground" Property="Background" Value="{StaticResource ContentBackgroundAlt1}" />

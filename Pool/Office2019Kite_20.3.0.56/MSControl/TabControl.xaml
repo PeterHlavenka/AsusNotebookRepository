@@ -114,13 +114,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="WPFTabItemStyle" TargetType="{x:Type TabItem}">
+    <!-- MouseOver a Selected templata na foreground zalozek - promenne-->
+    <DataTemplate x:Key="CustomHeaderTemplate">
+        <TextBlock Text="{Binding }"
+                   Foreground="{StaticResource PrimaryBackground}" />
+    </DataTemplate>
+
+    <!-- WPFTabItemBorderedStyle -->
+    <Style x:Key="WPFTabItemBorderedStyle" TargetType="{x:Type TabItem}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource TabItemFocusVisual}"/>
         <Setter Property="Foreground" Value="{StaticResource ContentForegroundAlt1}"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Gray100}"/>
         <Setter Property="BorderThickness" Value="{StaticResource Office2019Colorful_Kite.BorderThickness}"/>
-        <Setter Property="Padding" Value="6,4,6,4"/>
+        <Setter Property="Padding" Value="8,6"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         <Setter Property="Template">
@@ -131,12 +138,13 @@
                         <Border x:Name="mainBorder" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
                                 BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="0"
                                 Background="{TemplateBinding Background}">
                             <Border.Margin>
-                                <Thickness>6,0,6,0</Thickness>
+                                <Thickness>3,2,3,0</Thickness>
                             </Border.Margin>
                         </Border>
-                        <ContentPresenter x:Name="contentPresenter" 
+                        <ContentPresenter x:Name="contentPresenter"
                                           ContentSource="Header"
                                           Focusable="False"
 		                                  HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" 
@@ -150,20 +158,19 @@
                             <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/>
-                            <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource BorderAlt}"/> 
-                            <Setter Property="Foreground" Value="{StaticResource PrimaryColorForeground}"/>
+                        <!--     <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/> -->
+                        <!--     <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource BorderAlt}"/>  -->
+                        <!-- #54177 bod 7 -->
+                        <Setter Property="Foreground" Value="{StaticResource PrimaryColorForeground}"/>
+                        <Setter Property="HeaderTemplate" Value="{StaticResource CustomHeaderTemplate}"/>
                         </Trigger>
 
                         <Trigger Property="IsSelected" Value="true">
-                            <Setter Property="BorderThickness" TargetName="mainBorder">
-							  <Setter.Value>
-                                    <Thickness>0,0,0,2.5</Thickness>
-                                </Setter.Value>
-								</Setter>
-                            <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/>
-                            <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource PrimaryBackground}"/>
-                            <Setter Property="Foreground" Value="{StaticResource PrimaryColorForeground}"/>
+                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="1,1,1,2.5"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryBackground}"/>
+                            <Setter Property="Background" TargetName="mainBorder" Value="{StaticResource AdwindContentBackground}"/>
+                            <!-- #54177 bod 7 -->
+                            <Setter Property="HeaderTemplate" Value="{StaticResource CustomHeaderTemplate}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/>
@@ -192,7 +199,142 @@
         </Style.Triggers>
     </Style>
 
+    <!-- WPFTabItemUnBorderedStyle -->
+    <Style x:Key="WPFTabItemUnBorderedStyle" TargetType="{x:Type TabItem}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource TabItemFocusVisual}"/>
+        <Setter Property="Foreground" Value="{StaticResource ContentForegroundAlt1}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Gray100}"/>
+        <Setter Property="BorderThickness" Value="{StaticResource Office2019Colorful_Kite.BorderThickness}"/>
+        <Setter Property="Padding" Value="6,4,6,4"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid x:Name="templateRoot"
+                          SnapsToDevicePixels="true">
+                        <Border x:Name="mainBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="0"
+                                Background="{TemplateBinding Background}">
+                            <Border.Margin>
+                                <Thickness>6,0,6,0</Thickness>
+                            </Border.Margin>
+                        </Border>
+                        <ContentPresenter x:Name="contentPresenter"
+                                          ContentSource="Header"
+                                          Focusable="False"
+		                                  HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                          VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          Margin="{TemplateBinding Padding}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        <!--     <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/> -->
+                        <!--     <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource BorderAlt}"/>  -->
+                        <!-- #54177 bod 7 -->
+                        <Setter Property="Foreground" Value="{StaticResource PrimaryColorForeground}"/>
+                        <Setter Property="HeaderTemplate" Value="{StaticResource CustomHeaderTemplate}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="BorderThickness" TargetName="mainBorder" Value="0,0,0,2.5"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryBackground}"/>
+                            <Setter Property="Background" TargetName="mainBorder" Value="{StaticResource AdwindContentBackground}"/>
+                            <!-- #54177 bod 7 -->
+                            <Setter Property="HeaderTemplate" Value="{StaticResource CustomHeaderTemplate}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="mainBorder" Value="Transparent"/>
+                            <Setter Property="BorderBrush" TargetName="mainBorder" Value="{StaticResource BorderAlt}"/>
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForeground}"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false"/>
+                                <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="BorderThickness" TargetName="mainBorder">
+							  <Setter.Value>
+                                    <Thickness>0,0,0,2.5</Thickness>
+                                </Setter.Value>
+								</Setter>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource FlatKeyboardFocusVisualStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Pouzito v CurvesView na zobrazeni kulatych zalozek ala previous Kite -->
+    <Style x:Key="AdwindTabControlStyle" TargetType="{x:Type TabControl}">
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="{x:Type TabItem}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type TabItem}">
+                                    <Border CornerRadius="4,4,0,0"
+                                            Padding="8,4"
+                                            Margin="2,0"
+                                            BorderThickness="0"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            Background="{TemplateBinding Background}"
+                                            Name="Bd">
+                                        <ContentPresenter ContentSource="Header"
+                                                          HorizontalAlignment="Stretch"
+                                                          Name="Content"
+                                                          VerticalAlignment="Stretch"
+                                                          SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                                          ContentTemplate="{TemplateBinding HeaderedContentControl.HeaderTemplate}"
+                                                          RecognizesAccessKey="True"
+                                                          Content="{TemplateBinding HeaderedContentControl.Header}" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="Selector.IsSelected" Value="True">
+                                            <Setter TargetName="Bd" Property="Border.BorderThickness" Value="1,1,1,0" />
+                                            <Setter TargetName="Bd" Property="Border.BorderBrush" Value="{StaticResource Gray500}" />
+                                        </Trigger>
+
+                                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                                            <Setter TargetName="Bd" Property="BorderBrush"
+                                                    Value="{StaticResource Gray500}" />
+                                            <Setter TargetName="Bd" Property="Border.BorderThickness" Value="1,1,1,0" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="{StaticResource Gray100}" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="Background" Value="Transparent" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     <Style BasedOn="{StaticResource WPFTabControlStyle}" TargetType="{x:Type TabControl}"/>
-    <Style BasedOn="{StaticResource WPFTabItemStyle}" TargetType="{x:Type TabItem}"/>
+    <Style BasedOn="{StaticResource WPFTabItemUnBorderedStyle}" TargetType="{x:Type TabItem}"/>
     
 </ResourceDictionary>

@@ -1163,18 +1163,20 @@
         </Style.Triggers>
     </Style>
 
+    <!-- Adwind: BorderBrush Transparent -> {StaticResource PrimaryBackground} -->
+    <!-- Adwind: BorderThickness StaticResource Office2019Colorful_Kite.BorderThickness0002} -> 1,1,1,2.5 -->
     <Style x:Key="SyncfusionTabItemExtStyle" TargetType="{x:Type tools_controls:TabItemExt}">
         <Setter Property="TextElement.Foreground" Value="{StaticResource ContentForeground}" />
         <Setter Property="TabItemContextMenuStyle" Value="{StaticResource TabItemContextMenu}" />
         <Setter Property="TabItemContextMenuItemStyle" Value="{StaticResource SyncfusionCustomMenuItemStyle}" />
         <Setter Property="FontSize" Value="{StaticResource Office2019Colorful_Kite.BodyTextStyle}" />
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBackground}" />
+        <Setter Property="BorderThickness" Value="1,1,1,2.5" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="MinHeight" Value="24" />
         <Setter Property="HeaderMargin" Value="6 0" />
         <Setter Property="IconMargin" Value="6 0" />
-        <Setter Property="BorderThickness" Value="{StaticResource Office2019Colorful_Kite.BorderThickness0002}"/>
         <Setter Property="Control.HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Control.VerticalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
@@ -1340,6 +1342,7 @@
                             <Setter Property="BorderBrush" Value="{Binding Path=TabItemHoverBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tools_controls:TabControlExt}}, FallbackValue=Transparent}" />
                             <Setter Property="Foreground" Value="{Binding Path=TabItemHoverForeground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tools_controls:TabControlExt}}, FallbackValue=Transparent}" />
                         </Trigger>
+<!--                         Adwind: BorderBrush maybe {StaticResource.PrimaryBackground} -->
                         <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource Self}}" Value="True">
                             <Setter Property="Background" Value="{Binding Path=TabItemSelectedBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tools_controls:TabControlExt}}, FallbackValue=Transparent}" />
                             <Setter Property="BorderBrush" Value="{Binding Path=TabItemSelectedBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tools_controls:TabControlExt}}, FallbackValue=Transparent}" />

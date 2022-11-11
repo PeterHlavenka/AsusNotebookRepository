@@ -30,8 +30,8 @@
                 Source="{Binding Path=Icon, RelativeSource={RelativeSource AncestorType={x:Type local:ColorPickerPalette}}, UpdateSourceTrigger=PropertyChanged}" />
             <Border 
                 x:Name="color_border" 
-                Grid.Row="1" 
-                BorderThickness="1" 
+                Grid.Row="1"
+                BorderThickness="0"
                 MinHeight="5" 
                 Background="{Binding Path=Color, RelativeSource={RelativeSource AncestorType={x:Type local:ColorPickerPalette}},Converter={StaticResource ColorToBrushConverterKey}, UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
@@ -261,11 +261,12 @@
 
                                 <Border
                                     x:Name="ColorPickerBorder"
-                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1"
+                                    BorderBrush="{StaticResource Gray500}"
                                     Background="{TemplateBinding Background}"
                                     FocusVisualStyle="{x:Null}"
-                                    CornerRadius="0">
+                                    CornerRadius="0"
+                                    Margin="1,0,1,2">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
@@ -275,7 +276,8 @@
                                             x:Name="ColorBorder"
                                             FocusVisualStyle="{x:Null}"
                                             Grid.Column="0"
-                                            Padding="2"
+                                            Margin="0"
+                                            Padding="0"
                                             SnapsToDevicePixels="True">
                                             <ContentPresenter x:Name="Header" ContentTemplate="{TemplateBinding HeaderTemplate}" />
                                         </Border>
@@ -536,7 +538,7 @@
                                 <Condition Property="IsMouseOver" Value="True" />
                                 <Condition Property="Mode" Value="DropDown" />
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" Value="{StaticResource ContentBackgroundHovered}" />
+                            <Setter Property="Background" Value="{StaticResource AdwindYellow_Background_Hovered}" />
                             <Setter Property="BorderBrush" Value="{StaticResource BorderAlt2}" />
                             <Setter TargetName="Txt" Property="Stroke" Value="{StaticResource IconColor}" />
                         </MultiTrigger>

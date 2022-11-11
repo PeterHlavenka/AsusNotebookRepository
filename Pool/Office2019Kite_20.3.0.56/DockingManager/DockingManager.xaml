@@ -625,6 +625,8 @@
         <Setter Property="TabItemSelectedBackground" Value="{StaticResource PrimaryBackground}" />
         <Setter Property="TabItemSelectedForeground" Value="{StaticResource PrimaryForeground}" />
         <Setter Property="TabItemSelectedBorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="TabPanelBackground" Value="{StaticResource Gray100}" />
+        <Setter Property="TabListContextMenuOptions" Value="None"/>
     </Style>
     <Style BasedOn="{StaticResource SyncfusionDocumentTabControlExtStyle}" TargetType="{x:Type tools_controls:TabControlExt}" />
 

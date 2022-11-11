@@ -17,7 +17,7 @@
                 Value="{x:Null}"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="Background"                                
-                Value="{StaticResource SecondaryBackground}"/>
+                Value="{StaticResource AdwindButtonBackground}"/>
         <Setter Property="BorderBrush"
                 Value="{StaticResource SecondaryBorder}"/>
         <Setter Property="BorderThickness" 
@@ -37,14 +37,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="border" 
+                    <!-- Adwind: Padding="2,0" -->
+                    <Border x:Name="border"
                             SnapsToDevicePixels="true" 
                             Background="{TemplateBinding Background}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             BorderBrush="{TemplateBinding BorderBrush}" 
                             CornerRadius="{StaticResource Office2019Colorful_Kite.ThemeCornerRadiusVariant1}"
-                            
-                            >
+                            Padding="2,0">
                         <ContentPresenter x:Name="contentPresenter" Margin="{TemplateBinding Padding}" 
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -60,27 +60,27 @@
                             <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}"/>
                         </Trigger>
                         <Trigger Property="Button.IsDefaulted" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="true">
                             <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackground}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
                             <Setter Property="Foreground" Value="{StaticResource SecondaryForeground}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackgroundHovered}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource AdwindButtonMouseOverBackground}"/>
                             <Setter Property="Foreground" Value="{StaticResource SecondaryForegroundHovered}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource PrimaryBackground}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource PrimaryColorDark2}"/>
-                            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource AdwindYellow}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_BorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Adwind_Foreground}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource PrimaryBackground}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource PrimaryColorDark2}"/>
-                            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource AdwindYellow}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_BorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Adwind_Foreground}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackgroundDisabled}"/>

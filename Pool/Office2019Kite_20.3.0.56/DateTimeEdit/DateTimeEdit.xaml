@@ -102,6 +102,7 @@
         <Setter Property="FontWeight" Value="{StaticResource Office2019Colorful_Kite.FontWeightNormal}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CalendarStyle" Value="{StaticResource SyncfusionCalendarStyle}" />
         <Setter Property="BorderThickness" Value="{StaticResource Office2019Colorful_Kite.ThemeBorderThicknessVariant1}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="AllowDrop" Value="true" />

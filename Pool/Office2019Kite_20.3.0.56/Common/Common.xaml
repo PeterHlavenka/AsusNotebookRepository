@@ -19,7 +19,7 @@
 <sys:Double x:Key="Office2019Colorful_Kite.SubTitleTextStyle">12</sys:Double>
 <sys:Double x:Key="Office2019Colorful_Kite.BodyTextStyle">12</sys:Double>
 <sys:Double x:Key="Office2019Colorful_Kite.CaptionText">10</sys:Double>
-<FontFamily x:Key="Office2019Colorful_Kite.ThemeFontFamily">Microsoft Sans Serif</FontFamily> 
+<FontFamily x:Key="Office2019Colorful_Kite.ThemeFontFamily">Segoe UI</FontFamily>
 <FontWeight x:Key="Office2019Colorful_Kite.FontWeightNormal">Normal</FontWeight> 
 <FontWeight x:Key="Office2019Colorful_Kite.FontWeightMedium">Medium</FontWeight> 
 <Thickness x:Key="Office2019Colorful_Kite.BorderThickness">0,0,0,0</Thickness> 

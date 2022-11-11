@@ -36,22 +36,22 @@
                 <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}"/>
             </Trigger>
             <Trigger Property="IsDefaulted" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackground}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
                 <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource SecondaryForeground}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackgroundHovered}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderHovered}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource AdwindButtonMouseOverBackground}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
                 <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource SecondaryForegroundHovered}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackgroundSelected}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource SecondaryBorderSelected}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource SecondaryForegroundSelected}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource AdwindYellow}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Adwind_BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Adwind_Foreground}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource SecondaryBackgroundDisabled}"/>
@@ -65,14 +65,15 @@
            TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" 
                 Value="{x:Null}"/>
-        <Setter Property="Background" 
-                Value="{StaticResource SecondaryBackground}"/>
+        <Setter Property="MinHeight" Value="21"/>
+        <Setter Property="Background"
+                Value="{StaticResource AdwindButtonBackground}"/>
         <Setter Property="BorderThickness" 
                 Value="{StaticResource Office2019Colorful_Kite.BorderThickness1}"/>
         <Setter Property="BorderBrush"
                 Value="{StaticResource SecondaryBorder}"/>
         <Setter Property="Foreground"
-                Value="{StaticResource SecondaryForeground}"/>
+                Value="{StaticResource Adwind_Foreground}"/>
         <Setter Property="FontFamily"
                 Value="{StaticResource Office2019Colorful_Kite.ThemeFontFamily}"/>
         <Setter Property="FontSize"

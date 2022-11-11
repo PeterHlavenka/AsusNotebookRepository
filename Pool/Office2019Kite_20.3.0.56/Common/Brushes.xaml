@@ -167,38 +167,39 @@
 <SolidColorBrush x:Key="LightBluePrimaryBackground" Color="#FF2E6DB8" />
 <SolidColorBrush x:Key="LightBluePrimaryForeground" Color="#FFFFFFFF" />
 
-<SolidColorBrush x:Key="AdwindRed" Color="#FFCC3333" />
-<SolidColorBrush x:Key="AdwindYellow" Color="#FFFDDE82" />
+    <SolidColorBrush x:Key="AdwindRed" Color="#FFCC3333" />
+    <SolidColorBrush x:Key="AdwindYellow" Color="#FFFDDE82" />
 
-<SolidColorBrush x:Key="Adwind_Foreground" Color="Black" />
-<SolidColorBrush x:Key="AdwindYellow_Background_Hovered" Color="#FFFDDE82" Opacity="0.6" />
-<SolidColorBrush x:Key="Adwind_BorderBrush" Color="DarkGoldenrod" />
-<SolidColorBrush x:Key="Adwind_Secondary_Border_Hovered" Color="DarkGoldenrod" Opacity="0.6" />
-<SolidColorBrush x:Key="AdwindPrimaryBacground09" Color="#FF2A579A" Opacity="0.7" />
+    <SolidColorBrush x:Key="Adwind_Foreground" Color="Black" />
+    <SolidColorBrush x:Key="AdwindYellow_Background_Hovered" Color="#FFFDDE82" Opacity="0.6" />
+    <SolidColorBrush x:Key="Adwind_BorderBrush" Color="DarkGoldenrod" />
+    <SolidColorBrush x:Key="Adwind_Secondary_Border_Hovered" Color="DarkGoldenrod" Opacity="0.6" />
+    <SolidColorBrush x:Key="AdwindPrimaryBacground09" Color="#FF2A579A" Opacity="0.7" />
 
-<!-- Adwind button mouse over -->
-<LinearGradientBrush x:Key="AdwindButtonMouseOverBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#8CFDDE82" Offset="0" />
-    <GradientStop Color="#F0FDDE82" Offset="0.3" />
-    <GradientStop Color="#F0FDDE82" Offset="0.5" />
-    <GradientStop Color="#B4FDDE82" Offset="0.8" />
-    <GradientStop Color="White" Offset="1" />
-</LinearGradientBrush>
+    <!-- Adwind button mouse over -->
+    <LinearGradientBrush x:Key="AdwindButtonMouseOverBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#8CFDDE82" Offset="0" />
+        <GradientStop Color="#F0FDDE82" Offset="0.3" />
+        <GradientStop Color="#F0FDDE82" Offset="0.5" />
+        <GradientStop Color="#B4FDDE82" Offset="0.8" />
+        <GradientStop Color="White" Offset="1" />
+    </LinearGradientBrush>
 
-<!-- Background pod CardView na z�lo�ce Nov� anal�za -->
-<LinearGradientBrush x:Key="AdwindTaskBarItemBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#FFFAFAFA" Offset="0" />
-    <GradientStop Color="#FFF4F7F9" Offset="0.5" />
-    <GradientStop Color="#FFEEF0F2" Offset="1" />
-</LinearGradientBrush>
+    <!-- Background pod CardView na záložce Nová analýza -->
+    <LinearGradientBrush x:Key="AdwindTaskBarItemBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFAFAFA" Offset="0" />
+        <GradientStop Color="#FFF4F7F9" Offset="0.5" />
+        <GradientStop Color="#FFEEF0F2" Offset="1" />
+    </LinearGradientBrush>
 
-<!-- Adwind button default background -->
-<LinearGradientBrush x:Key="AdwindButtonBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#FFEEF0F2" Offset="0" />
-    <GradientStop Color="#FFE9ECEF" Offset="0.5" />
-    <GradientStop Color="#FFE3E6E8" Offset="1" />
-</LinearGradientBrush>
+    <!-- Adwind button default background -->
+    <LinearGradientBrush x:Key="AdwindButtonBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEEF0F2" Offset="0" />
+        <GradientStop Color="#FFE9ECEF" Offset="0.5" />
+        <GradientStop Color="#FFE3E6E8" Offset="1" />
+    </LinearGradientBrush>
 
-<!-- Pou�ito mimo jin� v AdwindWindowStyle a AdwindControlStyle-->
-<SolidColorBrush x:Key="AdwindContentBackground" Color="#FFF7FAFC" />
+    <!-- Použito mimo jiné v AdwindWindowStyle a AdwindControlStyle-->
+    <SolidColorBrush x:Key="AdwindContentBackground" Color="#FFF7FAFC" />
+
 </ResourceDictionary>

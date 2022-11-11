@@ -26,6 +26,18 @@
         <Setter Property="BorderThickness" Value="{StaticResource Office2019Colorful_Kite.ThemeBorderThicknessVariant1}" />
         <Setter Property="AllowDrop" Value="False" />
         <Setter Property="Padding" Value="0" />
+
+        <!-- Adwind -->
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="AllowNull" Value="False" />
+        <Setter Property="MaxValue" Value="1:00:00:00" />
+        <Setter Property="MinValue" Value="0:00:00" />
+        <Setter Property="TextAlignment" Value="Right" />
+        <Setter Property="Format" Value="hh:mm:ss" />
+        <Setter Property="Margin" Value="2,1" />
+        <Setter Property="MinWidth" Value="70" />
+        <Setter Property="Height" Value="21"/>
+
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
         <Setter Property="Template">

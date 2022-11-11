@@ -38,18 +38,18 @@
                 Value="{StaticResource Office2019Colorful_Kite.FontWeightNormal}"/>
         <Setter Property="BorderThickness" 
                 Value="{StaticResource Office2019Colorful_Kite.BorderThickness}"/>
-        <Setter Property="Padding" Value="4,3"/>
-        <Setter Property="MinHeight" Value="{StaticResource Office2019Colorful_Kite.MinHeight}"/>
+        <Setter Property="MinHeight" Value="16"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Border x:Name="Bd" 
-                            BorderBrush="{TemplateBinding BorderBrush}" 
-                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
                             Background="{TemplateBinding Background}" 
-                            Padding="{TemplateBinding Padding}" 
+                            Padding="2,0"
                             SnapsToDevicePixels="true"
-                            >
+                            CornerRadius="3">
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" >
@@ -63,19 +63,25 @@
                             <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <!-- V dimensionSetViews chceme vlastni ramecek kolem itemu -->
                             <Setter Property="Background" TargetName="Bd"
-                                    Value="{StaticResource ContentBackgroundHovered}"/>
+                                    Value="{StaticResource AdwindButtonMouseOverBackground}"/>
                             <Setter Property="BorderBrush" TargetName="Bd"
-                                    Value="{StaticResource BorderAlt}"/>
+                                    Value="{StaticResource Adwind_Secondary_Border_Hovered}"/>
+                            <Setter Property="BorderThickness" TargetName="Bd"
+                                    Value="1"/>
                             <Setter Property="Foreground"
                                     Value="{StaticResource HoveredForeground}"/>
                         </Trigger>
                         <Trigger Property="IsSelected"
                                  Value="true">
+                            <!-- V dimensionSetViews chceme vlastni ramecek kolem itemu -->
                             <Setter Property="Background" TargetName="Bd"
-                                    Value="{StaticResource ContentBackgroundSelected}"/>
+                                    Value="{StaticResource AdwindYellow}"/>
                             <Setter Property="BorderBrush" TargetName="Bd"
-                                    Value="{StaticResource BorderAlt}"/>
+                                    Value="{StaticResource Adwind_BorderBrush}"/>
+                            <Setter Property="BorderThickness" TargetName="Bd"
+                                    Value="1"/>
                             <Setter Property="Foreground"
                                     Value="{StaticResource SelectedForeground}"/>
                         </Trigger>
@@ -87,9 +93,11 @@
                                            Value="true"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" TargetName="Bd"
-                                    Value="{StaticResource ContentBackgroundSelected}"/>
+                                    Value="{StaticResource AdwindYellow}"/>
                             <Setter Property="BorderBrush" TargetName="Bd"
-                                    Value="{StaticResource BorderAlt}"/>
+                                    Value="{StaticResource Adwind_BorderBrush}"/>
+                            <Setter Property="BorderThickness" TargetName="Bd"
+                                    Value="1"/>
                             <Setter Property="Foreground"
                                     Value="{StaticResource SelectedForeground}"/>
                         </MultiTrigger>
@@ -101,7 +109,7 @@
                                            Value="false"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" TargetName="Bd"
-                                    Value="{StaticResource ContentBackgroundInactive}"/>
+                                    Value="{StaticResource AdwindYellow_Background_Hovered}"/>
                             <Setter Property="BorderBrush" TargetName="Bd"
                                     Value="{StaticResource ContentBackgroundInactive}"/>
                             <Setter Property="Foreground"

@@ -861,16 +861,19 @@
                                     <Setter TargetName="PART_ImageBorder" Property="Visibility" Value="Collapsed" />
                                 </Trigger>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="{StaticResource ContentBackgroundHovered}" />
+                                    <!-- Adwind: {StaticResource ContentBackgroundHovered} -->
+                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="Transparent" />
                                 </Trigger>
 
                                 <Trigger Property="IsPressed" Value="True">
-                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="{StaticResource ContentBackgroundSelected}" />
+                                    <!-- Adwind: {StaticResource ContentBackgroundSelected} -->
+                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="Transparent" />
                                 </Trigger>
 
                                 <Trigger Property="IsDropDownOpen" Value="True">
-                                    <Setter Property="Foreground" Value="{StaticResource IconColorHovered}"/>
-                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="{StaticResource ContentBackgroundSelected}" />
+								    <Setter TargetName="label" Property="Foreground" Value="{StaticResource IconColorHovered}"/>
+                                    <!-- Adwind: {StaticResource ContentBackgroundSelected} -->
+                                    <Setter TargetName="PART_ToggleButton" Property="Background" Value="Transparent" />
                                     <Setter Property="ToolTipService.IsEnabled" Value="False" />
                                 </Trigger>
 
@@ -8878,11 +8881,12 @@
     <Style BasedOn="{StaticResource SyncfusionBackStageSeparatorStyle}" TargetType="{x:Type tools:BackStageSeparator}" />
     
     <!--  BackStage TabItem Style  -->
+    <!--  Adwind: MinWidth -->
     <Style x:Key="SyncfusionBackstageTabItemStyle" TargetType="{x:Type tools:BackstageTabItem}">
         <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}" />
         <Setter Property="FontFamily" Value="{StaticResource Office2019Colorful_Kite.ThemeFontFamily}" />
         <Setter Property="MinHeight" Value="38" />
-        <Setter Property="MinWidth" Value="125" />
+        <Setter Property="MinWidth" Value="145" />
         <Setter Property="Margin" Value="0,2,0,1" />
 
         <Setter Property="Template">
