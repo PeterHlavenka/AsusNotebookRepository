@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -10,17 +14,33 @@ namespace CsvReader;
 /// <summary>
 ///     Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window, INotifyPropertyChanged
+public partial class MainWindow : INotifyPropertyChanged
 {
-    private Visibility m_addControlVisibility;
+    private AddContentView m_addContentView;
+    private Visibility m_addControlVisibility = Visibility.Collapsed;
     private ImageSource m_buttonImageSource = new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative));
     private TrainingView m_trainingView;
-    private AddContentView m_addContentView;
+    private FileInfo m_selectedFileInfo;
+    private Visibility m_trainingControlVisibility;
+    private bool m_czLanguageChecked;
 
     public MainWindow()
     {
         InitializeComponent();
         DataContext = this;
+        CreateComboItemsSource();
+    }
+    public ObservableCollection<FileInfo> FileInfos { get; set; }
+
+    public FileInfo SelectedFileInfo
+    {
+        get => m_selectedFileInfo;
+        set
+        {
+            m_selectedFileInfo = value; 
+            m_trainingView.Initialize(m_selectedFileInfo);
+            MainGrid.Focus();
+        }
     }
 
     public Visibility AddControlVisibility
@@ -30,6 +50,17 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         {
             if (value == m_addControlVisibility) return;
             m_addControlVisibility = value;
+            OnPropertyChanged();
+        }
+    }
+    
+    public Visibility TrainingControlVisibility
+    {
+        get => m_trainingControlVisibility;
+        set
+        {
+            if (value == m_trainingControlVisibility) return;
+            m_trainingControlVisibility = value;
             OnPropertyChanged();
         }
     }
@@ -45,7 +76,35 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
     }
 
+    public bool CzLanguageChecked
+    {
+        get => m_czLanguageChecked;
+        set
+        {
+            m_czLanguageChecked = value;
+            m_trainingView.AllowedLanguages.remov
+            
+            
+            if (m_czLanguageChecked && m_trainingView.AllowedLanguages.All(d => d.Name != LanguageInfo.CzName))
+            {
+                m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.CzName});
+            }
+            else
+            {
+                m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.CzName});
+            }
+        }
+    }
+
     public event PropertyChangedEventHandler? PropertyChanged;
+
+    private void CreateComboItemsSource()
+    {
+        var path = Directory.GetCurrentDirectory();
+        var directory = new DirectoryInfo(path);
+        FileInfos = new ObservableCollection<FileInfo>(
+            directory.EnumerateFiles("*.xlsx*", SearchOption.AllDirectories));
+    }
 
     // Zmeni Image na buttonu a pro AddContentView zavola Save
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -53,11 +112,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         if (AddControlVisibility == Visibility.Visible) m_addContentView.Save();
 
         AddControlVisibility = AddControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-        ButtonImageSource = AddControlVisibility == Visibility.Visible ? 
-            new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative)) : 
-            new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
+        TrainingControlVisibility = TrainingControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+        ButtonImageSource = AddControlVisibility == Visibility.Visible ? new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative)) : new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
     }
-    
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -71,5 +129,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             m_trainingView = mainWindow.TrainingControl;
             m_addContentView = mainWindow.AddContentControl;
         }
+    }
+
+    private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
+    {
+        m_trainingView.DoNext();
     }
 }

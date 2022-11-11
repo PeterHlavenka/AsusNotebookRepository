@@ -8,19 +8,42 @@
         Loaded="MainWindow_OnLoaded"
         d:DataContext="{d:DesignInstance csvReader:MainWindow}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <Style TargetType="CheckBox">
+            <Setter Property="MinHeight" Value="30" />
+            <Setter Property="Margin" Value="10,0" />
+        </Style>
+    </Window.Resources>
+
+    <Grid KeyDown="UIElement_OnKeyDown" x:Name="MainGrid">
+
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ComboBox ItemsSource="{Binding Files}" Margin="20"/>
-        <csvReader:TrainingView x:Name="TrainingControl" />
-        <csvReader:AddContentView x:Name="AddContentControl" Grid.Row="0" Margin="0,50,0,0"
+        <ComboBox ItemsSource="{Binding FileInfos}" Margin="50,20" Width="250"
+                  HorizontalAlignment="Left"
+                  SelectedItem="{Binding SelectedFileInfo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  DisplayMemberPath="Name" />
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="40"
+                    MinWidth="100" HorizontalAlignment="Right">
+            <CheckBox  HorizontalAlignment="Right" Content="CZ" 
+                       IsChecked="{Binding CzLanguageChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox  HorizontalAlignment="Right" Content="EN" />
+            <CheckBox  HorizontalAlignment="Right" Content="DE" />
+        </StackPanel>
+
+
+        <csvReader:TrainingView x:Name="TrainingControl" Grid.Row="1"
+                                Visibility="{Binding TrainingControlVisibility}" />
+        <csvReader:AddContentView x:Name="AddContentControl" Grid.Row="1"
                                   HorizontalAlignment="Center" VerticalAlignment="Center"
                                   Visibility="{Binding AddControlVisibility}" />
 
-        <Button Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="50"
+        <Button Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="50"
                 Click="ButtonBase_OnClick" IsDefault="False">
             <Button.Template>
                 <ControlTemplate>

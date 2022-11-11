@@ -2,6 +2,7 @@
 
 public class TranslatedObject
 {
+    public TranslatedObject(){}
     public TranslatedObject(string position, string cz, string en, string de)
     {
         Position = position;
@@ -14,4 +15,8 @@ public class TranslatedObject
     public string Cz { get; set; }
     public string En { get; set; }
     public string De { get; set; }
+
+    public bool IsEmpty => string.IsNullOrWhiteSpace(Cz) &&
+                           string.IsNullOrWhiteSpace(En) &&
+                           string.IsNullOrWhiteSpace(De);
 }

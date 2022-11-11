@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Windows;
 using System.Windows.Controls;
-using CsvHelper.Configuration;
+using Syncfusion.Data.Extensions;
+using Syncfusion.XlsIO;
 
 namespace CsvReader;
 
@@ -14,41 +14,63 @@ public partial class TrainingView : UserControl
     {
         InitializeComponent();
     }
-    
-    private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+
+    public void DoNext()
     {
+	    CurrentPositon += 1;
+	    var newWord = Words.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
 
-        string path = Directory.GetCurrentDirectory();
-        string[] files = Directory.GetFiles(path, "*.csv");
-
-           
+	    if (newWord == null)
+	    {
+		    CurrentPositon = 1;
+	    }
             
-        var config = new CsvConfiguration(CultureInfo.InvariantCulture) {HasHeaderRecord = false, DetectDelimiter = true};
-        using var reader = new StreamReader(files[0]);
-        using var csv = new CsvHelper.CsvReader(reader, config);
-            
-        Words = csv.GetRecords<TranslatedObject>().ToList();
-        CurrentPositon = 0;
-        TextBlock.Text = Words.ElementAt(CurrentPositon).Cz;
-        CounterTextBlock.Text = Words.ElementAt(CurrentPositon).Position.ToString();
+	    newWord = Words.First(d => int.Parse(d.Position) == CurrentPositon);
+	    TextBlock.Text = newWord.Cz;
+	    CounterTextBlock.Text = newWord.Position;
     }
-
-    private List<TranslatedObject> Words { get; set; }
-       
+    
+    private ObservableCollection<TranslatedObject> Words { get; set; }
     private int CurrentPositon { get; set; }
+    public List<LanguageInfo> AllowedLanguages { get; set; } = new();
 
-    private void Count_OnClick(object sender, RoutedEventArgs e)
+    public void Initialize(FileInfo inputFileName)
     {
-        CurrentPositon += 1;
-        var newWord = Words.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
+	    using (ExcelEngine excelEngine = new ExcelEngine())
+	    {
+		    //Initialize application
+		    IApplication app = excelEngine.Excel;
 
-        if (newWord == null)
-        {
-            CurrentPositon = 1;
-        }
-            
-        newWord = Words.First(d => int.Parse(d.Position) == CurrentPositon);
-        TextBlock.Text = newWord.Cz;
-        CounterTextBlock.Text = newWord.Position.ToString();
+		    //Set default application version as Xlsx
+		    app.DefaultVersion = ExcelVersion.Xlsx;
+
+		    //Open existing Excel workbook from the specified location
+		    IWorkbook workbook = app.Workbooks.Open(inputFileName.FullName, ExcelOpenType.Automatic);
+
+		    //Access the first worksheet
+		    IWorksheet worksheet = workbook.Worksheets[0];
+		    
+			//Access the used range of the Excel file
+		    IRange usedRange = worksheet.UsedRange;                
+		    int lastRow = usedRange.LastRow;
+		    int lastColumn = usedRange.LastColumn;
+		    //Iterate the cells in the used range and print the cell values
+		    var translatedObjects = new List<TranslatedObject>();
+		    var obj = new TranslatedObject();
+		    for (int row = 2; row <= lastRow; row++)  // indexy od 1 + preskakuju header row
+		    {
+			    for (int col = 1; col <= lastColumn; col++)
+			    {
+				    var propertyInfo = obj.GetType().GetProperties().ElementAt(col - 1);
+				    propertyInfo.SetValue(obj, worksheet[row, col].Value);
+			    }
+			    translatedObjects.Add(new TranslatedObject(obj.Position, obj.Cz, obj.En, obj.De));
+		    }
+
+		    Words = translatedObjects.Where(d => !d.IsEmpty).ToObservableCollection();
+		    CurrentPositon = 0;
+		    TextBlock.Text = Words.ElementAt(CurrentPositon).Cz;
+		    CounterTextBlock.Text = Words.ElementAt(CurrentPositon).Position;
+	    }
     }
 }
