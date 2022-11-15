@@ -23,12 +23,15 @@ public partial class MainWindow : INotifyPropertyChanged
     private FileInfo m_selectedFileInfo;
     private Visibility m_trainingControlVisibility;
     private bool m_czLanguageChecked;
+    private bool m_enLanguageChecked;
+    private bool m_deLanguageChecked;
 
     public MainWindow()
     {
         InitializeComponent();
         DataContext = this;
         CreateComboItemsSource();
+        
     }
     public ObservableCollection<FileInfo> FileInfos { get; set; }
 
@@ -82,17 +85,42 @@ public partial class MainWindow : INotifyPropertyChanged
         set
         {
             m_czLanguageChecked = value;
-            m_trainingView.AllowedLanguages.remov
-            
-            
+
             if (m_czLanguageChecked && m_trainingView.AllowedLanguages.All(d => d.Name != LanguageInfo.CzName))
-            {
                 m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.CzName});
-            }
-            else
-            {
-                m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.CzName});
-            }
+            else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.CzName))
+                m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.CzName));
+            MainGrid.Focus();
+        }
+    }
+    
+    public bool EnLanguageChecked
+    {
+        get => m_enLanguageChecked;
+        set
+        {
+            m_enLanguageChecked = value;
+
+            if (m_enLanguageChecked && m_trainingView.AllowedLanguages.All(d => d.Name != LanguageInfo.EnName))
+                m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.EnName});
+            else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.EnName))
+                m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.EnName));
+            MainGrid.Focus();
+        }
+    }
+    
+    public bool DeLanguageChecked
+    {
+        get => m_deLanguageChecked;
+        set
+        {
+            m_deLanguageChecked = value;
+
+            if (m_deLanguageChecked && m_trainingView.AllowedLanguages.All(d => d.Name != LanguageInfo.DeName))
+                m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.DeName});
+            else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.DeName))
+                m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.DeName));
+            MainGrid.Focus();
         }
     }
 
@@ -133,6 +161,9 @@ public partial class MainWindow : INotifyPropertyChanged
 
     private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
     {
-        m_trainingView.DoNext();
+        if (e.Key == Key.Space)
+        {
+            m_trainingView.DoNext();
+        }
     }
 }

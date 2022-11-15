@@ -18,8 +18,6 @@ public partial class AddContentView : UserControl
             m_list.Add(new TranslatedObject(i.ToString(), string.Empty, String.Empty, String.Empty));
         }
 
-        m_list.First().Cz = "ceskyNazev";
-
         SfDataGrid.ItemsSource = m_list;
     }
 

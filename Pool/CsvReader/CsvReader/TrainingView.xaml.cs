@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -15,62 +16,72 @@ public partial class TrainingView : UserControl
         InitializeComponent();
     }
 
-    public void DoNext()
-    {
-	    CurrentPositon += 1;
-	    var newWord = Words.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
-
-	    if (newWord == null)
-	    {
-		    CurrentPositon = 1;
-	    }
-            
-	    newWord = Words.First(d => int.Parse(d.Position) == CurrentPositon);
-	    TextBlock.Text = newWord.Cz;
-	    CounterTextBlock.Text = newWord.Position;
-    }
-    
-    private ObservableCollection<TranslatedObject> Words { get; set; }
+    private ObservableCollection<TranslatedObject> AllowedWords { get; set; }
+    private List<TranslatedObject> AllWords { get; set; } = new();
     private int CurrentPositon { get; set; }
     public List<LanguageInfo> AllowedLanguages { get; set; } = new();
 
+    public void DoNext()
+    {
+        CurrentPositon += 1;
+        var newWord = AllowedWords.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
+
+        if (newWord == null) CurrentPositon = 1;
+
+        newWord = AllowedWords.First(d => int.Parse(d.Position) == CurrentPositon);
+        var language = AllowedLanguages.ElementAt(new Random().Next(AllowedLanguages.Count));
+        
+        if (language.Name == LanguageInfo.CzName)
+            TextBlock.Text = newWord.Cz;
+        if (language.Name == LanguageInfo.EnName)
+            TextBlock.Text = newWord.En;
+        if (language.Name == LanguageInfo.DeName)
+            TextBlock.Text = newWord.De;
+        
+        CounterTextBlock.Text = newWord.Position;
+    }
+
     public void Initialize(FileInfo inputFileName)
     {
-	    using (ExcelEngine excelEngine = new ExcelEngine())
-	    {
-		    //Initialize application
-		    IApplication app = excelEngine.Excel;
+        using (var excelEngine = new ExcelEngine())
+        {
+            //Initialize application
+            var app = excelEngine.Excel;
 
-		    //Set default application version as Xlsx
-		    app.DefaultVersion = ExcelVersion.Xlsx;
+            //Set default application version as Xlsx
+            app.DefaultVersion = ExcelVersion.Xlsx;
 
-		    //Open existing Excel workbook from the specified location
-		    IWorkbook workbook = app.Workbooks.Open(inputFileName.FullName, ExcelOpenType.Automatic);
+            //Open existing Excel workbook from the specified location
+            var workbook = app.Workbooks.Open(inputFileName.FullName, ExcelOpenType.Automatic);
 
-		    //Access the first worksheet
-		    IWorksheet worksheet = workbook.Worksheets[0];
-		    
-			//Access the used range of the Excel file
-		    IRange usedRange = worksheet.UsedRange;                
-		    int lastRow = usedRange.LastRow;
-		    int lastColumn = usedRange.LastColumn;
-		    //Iterate the cells in the used range and print the cell values
-		    var translatedObjects = new List<TranslatedObject>();
-		    var obj = new TranslatedObject();
-		    for (int row = 2; row <= lastRow; row++)  // indexy od 1 + preskakuju header row
-		    {
-			    for (int col = 1; col <= lastColumn; col++)
-			    {
-				    var propertyInfo = obj.GetType().GetProperties().ElementAt(col - 1);
-				    propertyInfo.SetValue(obj, worksheet[row, col].Value);
-			    }
-			    translatedObjects.Add(new TranslatedObject(obj.Position, obj.Cz, obj.En, obj.De));
-		    }
+            //Access the first worksheet
+            var worksheet = workbook.Worksheets[0];
 
-		    Words = translatedObjects.Where(d => !d.IsEmpty).ToObservableCollection();
-		    CurrentPositon = 0;
-		    TextBlock.Text = Words.ElementAt(CurrentPositon).Cz;
-		    CounterTextBlock.Text = Words.ElementAt(CurrentPositon).Position;
-	    }
+            //Access the used range of the Excel file
+            var usedRange = worksheet.UsedRange;
+            var lastRow = usedRange.LastRow;
+            var lastColumn = usedRange.LastColumn;
+            //Iterate the cells in the used range and print the cell values
+            var translatedObjects = new List<TranslatedObject>();
+            var obj = new TranslatedObject();
+            for (var row = 2; row <= lastRow; row++) // indexy od 1 + preskakuju header row
+            {
+                for (var col = 1; col <= lastColumn; col++)
+                {
+                    var propertyInfo = obj.GetType().GetProperties().ElementAt(col - 1);
+                    propertyInfo.SetValue(obj, worksheet[row, col].Value);
+                }
+
+                translatedObjects.Add(new TranslatedObject(obj.Position, obj.Cz, obj.En, obj.De));
+            }
+
+            AllWords = translatedObjects.Where(d => !(string.IsNullOrWhiteSpace(d.Cz) &&
+                                                       string.IsNullOrWhiteSpace(d.En) &&
+                                                       string.IsNullOrWhiteSpace(d.De))).ToList();
+            AllowedWords = AllWords.ToObservableCollection();
+            CurrentPositon = 0;
+            TextBlock.Text = AllowedWords.ElementAt(CurrentPositon).Cz;
+            CounterTextBlock.Text = AllowedWords.ElementAt(CurrentPositon).Position;
+        }
     }
 }

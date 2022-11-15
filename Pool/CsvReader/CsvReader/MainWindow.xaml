@@ -32,8 +32,10 @@
                     MinWidth="100" HorizontalAlignment="Right">
             <CheckBox  HorizontalAlignment="Right" Content="CZ" 
                        IsChecked="{Binding CzLanguageChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <CheckBox  HorizontalAlignment="Right" Content="EN" />
-            <CheckBox  HorizontalAlignment="Right" Content="DE" />
+            <CheckBox  HorizontalAlignment="Right" Content="EN" 
+                       IsChecked="{Binding EnLanguageChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox  HorizontalAlignment="Right" Content="DE" 
+                       IsChecked="{Binding DeLanguageChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
 
 
