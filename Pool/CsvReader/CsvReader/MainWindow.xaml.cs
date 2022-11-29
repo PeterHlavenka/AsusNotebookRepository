@@ -39,8 +39,15 @@ public partial class MainWindow : INotifyPropertyChanged
         get => m_selectedFileInfo;
         set
         {
-            m_selectedFileInfo = value; 
-            m_trainingView.Initialize(m_selectedFileInfo);
+            m_selectedFileInfo = value;
+            if (string.IsNullOrWhiteSpace(m_selectedFileInfo?.Name)) return;
+
+            if (m_trainingView.IsVisible)
+                m_trainingView.Initialize(m_selectedFileInfo);
+
+            if (m_addContentView.IsVisible)
+                m_addContentView.OpenFile(m_selectedFileInfo);
+            
             MainGrid.Focus();
         }
     }
@@ -141,13 +148,18 @@ public partial class MainWindow : INotifyPropertyChanged
     // Zmeni Image na buttonu a pro AddContentView zavola Save
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
-        if (AddControlVisibility == Visibility.Visible) m_addContentView.Save();
+        if (AddControlVisibility == Visibility.Visible)
+            m_addContentView.Save();
+        
+        ComboBox.SelectedIndex = -1;
 
         AddControlVisibility = AddControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         TrainingControlVisibility = TrainingControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         ButtonImageSource = AddControlVisibility == Visibility.Visible ? 
             new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative)) : 
             new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
+
+        MainGrid.Focus();
     }
 
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)

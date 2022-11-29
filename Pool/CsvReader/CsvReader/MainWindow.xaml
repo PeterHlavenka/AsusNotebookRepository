@@ -23,7 +23,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ComboBox ItemsSource="{Binding FileInfos}" Margin="50,20" Width="250"
+        <ComboBox x:Name="ComboBox" ItemsSource="{Binding FileInfos}" Margin="50,20" Width="250"
                   HorizontalAlignment="Left"
                   SelectedItem="{Binding SelectedFileInfo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                   DisplayMemberPath="Name" />
