@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
+using Microsoft.Win32;
 using Syncfusion.UI.Xaml.Grid.Converter;
 
 namespace CsvReader;
@@ -23,10 +24,16 @@ public partial class AddContentView : UserControl
 
     public void Save()
     {
-        var options = new ExcelExportingOptions();
-        var excelEngine = SfDataGrid.ExportToExcel(SfDataGrid.View, options);
-        var workBook = excelEngine.Excel.Workbooks[0];
-        workBook.SaveAs("Sample.xlsx");
-        // workBook.SaveAs("Sample.csv", ",");
+        var saveFileDialog = new SaveFileDialog();
+        saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+        string path;
+        if (saveFileDialog.ShowDialog() == true)
+        {
+            path = saveFileDialog.FileName;
+            var options = new ExcelExportingOptions();
+            var excelEngine = SfDataGrid.ExportToExcel(SfDataGrid.View, options);
+            var workBook = excelEngine.Excel.Workbooks[0];
+            workBook.SaveAs(path);
+        }
     }
 }

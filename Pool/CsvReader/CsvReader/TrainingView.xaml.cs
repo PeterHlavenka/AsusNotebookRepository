@@ -16,13 +16,16 @@ public partial class TrainingView : UserControl
         InitializeComponent();
     }
 
-    private ObservableCollection<TranslatedObject> AllowedWords { get; set; }
+    private ObservableCollection<TranslatedObject> AllowedWords { get; set; } 
     private List<TranslatedObject> AllWords { get; set; } = new();
     private int CurrentPositon { get; set; }
     public List<LanguageInfo> AllowedLanguages { get; set; } = new();
 
     public void DoNext()
     {
+        if (!AllowedWords.Any())
+            return;
+        
         CurrentPositon += 1;
         var newWord = AllowedWords.FirstOrDefault(d => int.Parse(d.Position) == CurrentPositon);
 
@@ -78,9 +81,27 @@ public partial class TrainingView : UserControl
             AllWords = translatedObjects.Where(d => !(string.IsNullOrWhiteSpace(d.Cz) &&
                                                        string.IsNullOrWhiteSpace(d.En) &&
                                                        string.IsNullOrWhiteSpace(d.De))).ToList();
-            AllowedWords = AllWords.ToObservableCollection();
-            CurrentPositon = 0;
-            TextBlock.Text = AllowedWords.ElementAt(CurrentPositon).Cz;
+            InitializeAllowedWords();
+        }
+    }
+
+    public void InitializeAllowedWords()
+    {
+        AllowedWords = AllWords.ToObservableCollection();
+        CurrentPositon = 0;
+        if (AllowedWords.Any() && AllowedLanguages.Any())
+        {
+            var newWord = AllowedWords.ElementAt(CurrentPositon);
+            var language = AllowedLanguages.ElementAt(new Random().Next(AllowedLanguages.Count));
+        
+            if (language.Name == LanguageInfo.CzName)
+                TextBlock.Text = newWord.Cz;
+            if (language.Name == LanguageInfo.EnName)
+                TextBlock.Text = newWord.En;
+            if (language.Name == LanguageInfo.DeName)
+                TextBlock.Text = newWord.De;
+        
+            CounterTextBlock.Text = newWord.Position;
             CounterTextBlock.Text = AllowedWords.ElementAt(CurrentPositon).Position;
         }
     }

@@ -15,7 +15,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid KeyDown="UIElement_OnKeyDown" x:Name="MainGrid">
+    <Grid  x:Name="MainGrid">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -29,6 +29,7 @@
                   DisplayMemberPath="Name" />
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Height="40"
+                    KeyDown="UIElement_OnKeyDown"
                     MinWidth="100" HorizontalAlignment="Right">
             <CheckBox  HorizontalAlignment="Right" Content="CZ" 
                        IsChecked="{Binding CzLanguageChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>

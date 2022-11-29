@@ -18,7 +18,7 @@ public partial class MainWindow : INotifyPropertyChanged
 {
     private AddContentView m_addContentView;
     private Visibility m_addControlVisibility = Visibility.Collapsed;
-    private ImageSource m_buttonImageSource = new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative));
+    private ImageSource m_buttonImageSource = new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
     private TrainingView m_trainingView;
     private FileInfo m_selectedFileInfo;
     private Visibility m_trainingControlVisibility;
@@ -31,7 +31,6 @@ public partial class MainWindow : INotifyPropertyChanged
         InitializeComponent();
         DataContext = this;
         CreateComboItemsSource();
-        
     }
     public ObservableCollection<FileInfo> FileInfos { get; set; }
 
@@ -90,6 +89,9 @@ public partial class MainWindow : INotifyPropertyChanged
                 m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.CzName});
             else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.CzName))
                 m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.CzName));
+            
+            m_trainingView.InitializeAllowedWords();
+            OnPropertyChanged();
             MainGrid.Focus();
         }
     }
@@ -105,6 +107,7 @@ public partial class MainWindow : INotifyPropertyChanged
                 m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.EnName});
             else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.EnName))
                 m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.EnName));
+            m_trainingView.InitializeAllowedWords();
             MainGrid.Focus();
         }
     }
@@ -120,6 +123,7 @@ public partial class MainWindow : INotifyPropertyChanged
                 m_trainingView.AllowedLanguages.Add(new LanguageInfo(){Name = LanguageInfo.DeName});
             else if(m_trainingView.AllowedLanguages.Any(d => d.Name == LanguageInfo.DeName))
                 m_trainingView.AllowedLanguages.Remove(m_trainingView.AllowedLanguages.First(d => d.Name == LanguageInfo.DeName));
+            m_trainingView.InitializeAllowedWords();
             MainGrid.Focus();
         }
     }
@@ -141,7 +145,9 @@ public partial class MainWindow : INotifyPropertyChanged
 
         AddControlVisibility = AddControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         TrainingControlVisibility = TrainingControlVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-        ButtonImageSource = AddControlVisibility == Visibility.Visible ? new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative)) : new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
+        ButtonImageSource = AddControlVisibility == Visibility.Visible ? 
+            new BitmapImage(new Uri(".\\Icons\\Ok.png", UriKind.Relative)) : 
+            new BitmapImage(new Uri(".\\Icons\\Plus.png", UriKind.Relative));
     }
 
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
@@ -155,13 +161,14 @@ public partial class MainWindow : INotifyPropertyChanged
         if (sender is MainWindow mainWindow)
         {
             m_trainingView = mainWindow.TrainingControl;
+            CzLanguageChecked = true;
             m_addContentView = mainWindow.AddContentControl;
         }
     }
 
     private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
     {
-        if (e.Key == Key.Space)
+        if (e.Key == Key.Enter)
         {
             m_trainingView.DoNext();
         }

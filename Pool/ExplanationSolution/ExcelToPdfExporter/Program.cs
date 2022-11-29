@@ -21,8 +21,17 @@ namespace ExcelToPdfExporter
             {
                 var application = excelEngine.Excel;
                 application.DefaultVersion = ExcelVersion.Xlsx;
-                var workbook = application.Workbooks.Open(@"c:\Users\phlavenka\Documents\Průběhová analýza.xlsx", ExcelOpenType.Automatic);
-
+               // var workbook = application.Workbooks.Open(@"c:\Users\phlavenka\Documents\Průběhová analýza.xlsx", ExcelOpenType.Automatic);
+var workbook = application.Workbooks.Open(@"c:\Users\phlavenka\Documents\ResizeExportTest.xlsx", ExcelOpenType.Automatic);
+               
+               
+                // test autoresize
+                IWorksheet sheet = workbook.Worksheets[0];
+                
+                IRange range = sheet.UsedRange.IntersectWith(sheet.Range[1, 1, 100, 255]);
+                if (range != null)
+                    range.AutofitColumns();
+                
 
                 //Tuning chart image quality
 
