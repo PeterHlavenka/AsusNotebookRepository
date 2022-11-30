@@ -1,7 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System.IO;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using Syncfusion.Licensing;
 using Syncfusion.Windows.Controls.Grid;
+using Syncfusion.XlsIO;
 
 namespace SyncfusionGridControl
 {
@@ -30,7 +33,17 @@ namespace SyncfusionGridControl
             
             
             // 2.You can populate data by handling the QueryCellInfo event of gridControl. This will load the data in and on-demand basis, ensuring optimized performance.
-            GridControl.QueryCellInfo += GridControlQueryCellInfo;
+            // GridControl.QueryCellInfo += GridControlQueryCellInfo;
+            
+            
+            // 3.Naplnim bunky explicitne (Syncfusni indexuji explicitne)  [row, column]:
+            GridControl.Model[1, 1].CellValue = "KFC_2";
+            GridControl.Model[2, 1].CellValue = "KFC_1";
+            
+            GridControl.Model[1, 2].CellValue = "";
+            GridControl.Model[2, 2].CellValue = "";
+            
+            
             GridControl.PrepareRenderCell += new GridPrepareRenderCellEventHandler(GridPrepareRenderCell);  // obarvim bunku
             
             
@@ -48,6 +61,17 @@ namespace SyncfusionGridControl
             {
                 e.Style.Background = Brushes.GreenYellow;
             }
+        }
+
+        private void DoExport(object sender, RoutedEventArgs e)
+        {
+            ExcelEngine excelEngine = new ExcelEngine();
+            IApplication application = excelEngine.Excel;
+            IWorkbook myWorkbook = excelEngine.Excel.Workbooks.Add();
+            IWorksheet  mySheet = myWorkbook.Worksheets[0];
+
+            var range = mySheet.UsedRange;
+            GridControl.Model.ExportToExcel(range, excelEngine, 0, mySheet.Range[5,5], @"Sample.xlsx", ExcelVersion.Excel2016);
         }
     }
 }
