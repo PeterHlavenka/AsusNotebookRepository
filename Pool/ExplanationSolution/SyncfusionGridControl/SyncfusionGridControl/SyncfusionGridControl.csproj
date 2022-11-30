@@ -37,20 +37,29 @@
         <Reference Include="Syncfusion.Compression.Base, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
           <HintPath>..\..\packages\Syncfusion.Compression.Base.20.3.0.59\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
         </Reference>
-        <Reference Include="Syncfusion.Grid.Wpf, Version=20.1460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-          <HintPath>..\packages\Syncfusion.Grid.WPF.20.1.0.58\lib\net46\Syncfusion.Grid.WPF.dll</HintPath>
+        <Reference Include="Syncfusion.Grid.Wpf, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.Grid.WPF.20.3.0.59\lib\net46\Syncfusion.Grid.WPF.dll</HintPath>
         </Reference>
-        <Reference Include="Syncfusion.GridCommon.Wpf, Version=20.1460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-          <HintPath>..\packages\Syncfusion.GridCommon.Wpf.20.1.0.58\lib\net46\Syncfusion.GridCommon.WPF.dll</HintPath>
+        <Reference Include="Syncfusion.GridCommon.Wpf, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.GridCommon.Wpf.20.3.0.59\lib\net46\Syncfusion.GridCommon.WPF.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.GridConverter.Wpf">
+          <HintPath>..\..\packages\Syncfusion.GridExcelExport.Wpf.20.3.0.59\lib\net46\Syncfusion.GridConverter.WPF.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.GridConverter.Wpf, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.GridExcelExport.Wpf.20.3.0.59\lib\net46\Syncfusion.GridConverter.WPF.dll</HintPath>
         </Reference>
         <Reference Include="Syncfusion.Licensing, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
           <HintPath>..\..\packages\Syncfusion.Licensing.20.3.0.59\lib\net46\Syncfusion.Licensing.dll</HintPath>
         </Reference>
-        <Reference Include="Syncfusion.Linq.Base, Version=20.1460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-          <HintPath>..\packages\Syncfusion.Linq.Base.20.1.0.58\lib\net46\Syncfusion.Linq.Base.dll</HintPath>
+        <Reference Include="Syncfusion.Linq.Base, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.Linq.Base.20.3.0.59\lib\net46\Syncfusion.Linq.Base.dll</HintPath>
         </Reference>
-        <Reference Include="Syncfusion.Shared.Wpf, Version=20.1460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-          <HintPath>..\packages\Syncfusion.Shared.WPF.20.1.0.58\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+        <Reference Include="Syncfusion.Pdf.Base, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.Pdf.Wpf.20.3.0.59\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+        </Reference>
+        <Reference Include="Syncfusion.Shared.Wpf, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\Syncfusion.Shared.WPF.20.3.0.59\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
         </Reference>
         <Reference Include="Syncfusion.XlsIO.Base, Version=20.3460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
           <HintPath>..\..\packages\Syncfusion.XlsIO.Wpf.20.3.0.59\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
