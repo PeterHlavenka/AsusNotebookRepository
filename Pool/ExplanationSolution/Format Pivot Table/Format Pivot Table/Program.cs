@@ -7,6 +7,9 @@ namespace Format_Pivot_Table
     {
         static void Main(string[] args)
         {
+            // Nacte kontingencku ze zvoleneho excelu s kontingenckou a vyexportuje ji. Syncfusni example.
+            
+            
             using (ExcelEngine excelEngine = new ExcelEngine())
             {
                 IApplication application = excelEngine.Excel;
@@ -19,6 +22,10 @@ namespace Format_Pivot_Table
                 //Set BuiltInStyle
                 pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleDark12;
 
+                IRange range = worksheet.UsedRange.IntersectWith(worksheet.Range[1, 1, 100, 255]);
+                range.AutofitColumns();
+                
+                
                 #region Save
                 //Saving the workbook
                 FileStream outputStream = new FileStream("PivotTable.xlsx", FileMode.Create, FileAccess.Write);
