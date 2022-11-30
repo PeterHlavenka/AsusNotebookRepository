@@ -149,6 +149,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonBackstageCustomTheme"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncfusionGridControl", "SyncfusionGridControl\SyncfusionGridControl\SyncfusionGridControl.csproj", "{CF9293BD-49EE-4C5C-901A-3BBA651473AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PivotTable", "PivotTable", "{A4009568-4C83-4B7C-A280-84413BD2FB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Format Pivot Table", "Format Pivot Table\Format Pivot Table\Format Pivot Table.csproj", "{F13937DE-A510-4276-A858-4814EF89C8A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -407,6 +411,10 @@ Global
 		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF9293BD-49EE-4C5C-901A-3BBA651473AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13937DE-A510-4276-A858-4814EF89C8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13937DE-A510-4276-A858-4814EF89C8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13937DE-A510-4276-A858-4814EF89C8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13937DE-A510-4276-A858-4814EF89C8A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -463,6 +471,8 @@ Global
 		{AEAF94D3-F457-4D83-8BD1-E3CF01858213} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{CF9293BD-49EE-4C5C-901A-3BBA651473AD} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{A4009568-4C83-4B7C-A280-84413BD2FB96} = {66A3599C-E989-4D7C-8347-A752643B4A63}
+		{F13937DE-A510-4276-A858-4814EF89C8A3} = {A4009568-4C83-4B7C-A280-84413BD2FB96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
