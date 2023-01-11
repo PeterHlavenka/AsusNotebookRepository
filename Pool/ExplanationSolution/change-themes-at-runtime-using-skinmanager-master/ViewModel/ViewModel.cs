@@ -91,12 +91,22 @@ namespace DataGrid_Themes
             Random random = new Random();
             ObservableCollection<Employee> ordersDetails = new ObservableCollection<Employee>();
 
-            for (int i = 10000; i < count + 10000; i++)
+            for (int i = 1; i < count + 1; i++)
             {
                 var name = employees[random.Next(25)];
                 int index = Array.IndexOf(employees, name);
                 string gender = genders[index];
-                ordersDetails.Add(new Employee(i % 2 == -1, name, designation[random.Next(6)], name.ToLower() + "@" + mail[random.Next(4)], location[random.Next(8)], trust[random.Next(3)],random.Next(1,5), status[random.Next(2)], random.Next(1, 100), random.Next(100000, 400000), address[random.Next(1, 25)], gender));
+                var result = 
+                new Employee(id:i,i % 2 == -1, name, designation[random.Next(6)], name.ToLower() + "@" + mail[random.Next(4)], location[random.Next
+                (8)], 
+                    trust[random.Next(3)],random.Next(1,5), status[random.Next(2)], random.Next(1, 100), random.Next(100000, 400000), address[random.Next(1, 25)], gender);
+
+                if (i < 4)
+                {
+                    result.Reason = "Optimalizace";
+                    result.Selected = true;
+                }
+                ordersDetails.Add(result);
             }
 
             return ordersDetails;

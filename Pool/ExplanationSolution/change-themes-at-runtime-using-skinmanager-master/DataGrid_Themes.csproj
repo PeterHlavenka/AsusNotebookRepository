@@ -156,6 +156,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ColumnFactory.cs" />
+    <Compile Include="Controls\SelectionFilterView.xaml.cs">
+      <DependentUpon>SelectionFilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThreeStateToggleButtons.xaml.cs">
+      <DependentUpon>ThreeStateToggleButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomRenderers\SelectionFilterRowRenderer.cs" />
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="OtherWindow.xaml.cs">
@@ -163,6 +171,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\ViewModel.cs" />
+    <Page Include="Controls\SelectionFilterView.xaml" />
+    <Page Include="Controls\ThreeStateToggleButtons.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -219,6 +229,12 @@
     <Resource Include="Images\Male.png" />
     <Resource Include="Images\Perfect.png" />
     <Resource Include="Images\Sufficient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Submit24.png" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

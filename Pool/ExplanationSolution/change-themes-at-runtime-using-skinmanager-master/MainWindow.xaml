@@ -5,6 +5,7 @@
                              xmlns:system="clr-namespace:System;assembly=mscorlib"
                              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
 							 xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+							 xmlns:controls="clr-namespace:DataGrid_Themes.Controls"
 							 syncfusionskin:SfSkinManager.VisualStyle="{Binding ElementName=ComboVisualStyle, Path=SelectedValue, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                              Icon="App.ico"
                              Title="Getting Started"
@@ -77,6 +78,14 @@
             <Setter Property="Foreground" Value="Red"/>
         </Style>
         
+        <!--  Použito v code behindu  -->
+        <DataTemplate x:Key="SelectionTemplate">
+            <controls:ThreeStateToggleButtons
+                Margin="0"
+                syncfusion:FocusManagerHelper.FocusedElement="True"
+                Value="{Binding Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </DataTemplate>
+        
         <!-- <Style TargetType="syncfusion:SfDataGrid" BasedOn="{StaticResource SyncfusionSfDataGridStyle}"> -->
         <!-- </Style> -->
         
@@ -116,7 +125,7 @@
                 Width="250"
                 Margin="5"
                 ItemsSource="{Binding Source={StaticResource Themes}}"
-                SelectedIndex="18" />
+                SelectedIndex="22" />
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -131,14 +140,14 @@
         </Grid>
         
         <Grid Grid.Row="2" DataContext="{StaticResource viewmodel}">
-            <syncfusion:SfDataGrid Name="sfgrid" Margin="5"
+            <syncfusion:SfDataGrid Name="AdwDataGrid" Margin="5"
                                        AutoGenerateColumns="False"
                                        AllowDraggingColumns="True"
                                        AllowEditing="True"
                                        LiveDataUpdateMode="AllowDataShaping"
                                        AllowFiltering="True"
                                        HeaderRowHeight="26"
-                                       SelectionMode="Extended"
+                                       SelectionMode="Multiple"
                                        ColumnSizer="Auto"
                                        ItemsSource="{Binding EmployeeDetails}">
                 <syncfusion:SfDataGrid.Columns>
@@ -162,6 +171,7 @@
                             </DataTemplate>
                         </syncfusion:GridTemplateColumn.CellTemplate>
                     </syncfusion:GridTemplateColumn>
+                    <syncfusion:GridTextColumn  MappingName="Reason" HeaderText="Reason"/>
                     <syncfusion:GridTextColumn  MappingName="Designation" HeaderText="Designation"/>
                     <syncfusion:GridTextColumn  MappingName="Mail"        HeaderText="Mail"/>
                     <syncfusion:GridTemplateColumn MappingName="Location" Width="100"

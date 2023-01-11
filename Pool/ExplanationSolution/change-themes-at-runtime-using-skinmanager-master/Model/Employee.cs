@@ -29,12 +29,15 @@ namespace DataGrid_Themes
         private int _salary;
         private string _address;
         private string _gender;
-
+        private string m_variableId;
+        private string m_reason;
 
         #endregion
 
-        public Employee(bool selected, string name, string designation, string mail, string location, string trust, int rating, string status, double proficiency, int salary, string address, string gender)
+        public Employee(int id, bool selected, string name, string designation, string mail, string location, string trust, int rating, string status, 
+        double proficiency, int salary, string address, string gender)
         {
+            Id = id;
             Selected = selected;
             EmployeeName = name;
             Designation = designation;
@@ -49,18 +52,33 @@ namespace DataGrid_Themes
             Gender = gender;
         }
 
+        public int Id { get; set; }
+
+        public string Reason
+        {
+            get => m_reason;
+            set
+            {
+                if (value == m_reason) return;
+                m_reason = value; // Kdyz tohle nenotifikuju, tak se mi rozbije filtr
+                RaisePropertyChanged(nameof(Reason));
+            }
+        } // reason
+
         public bool Selected
         {
-            get
-            {
-                return _selected;
-            }
+            get => _selected;
             set
             {
                 _selected = value;
-                RaisePropertyChanged("Selected");
+                RaisePropertyChanged("Selected");   // notifikace UI
+                SelectionChanged?.Invoke(Id, value);
             }
         }
+        
+        public event Action<int, bool?> SelectionChanged;
+        
+        
         /// <summary>
         /// Gets or sets the employee name.
         /// </summary>        
