@@ -17,7 +17,8 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAw
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\AsyncAwait2.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\log4net.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\bin\Debug\log4net.xml
-D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.AssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.SuggestedBindingRedirects.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.CoreCompileInputs.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AsyncAwait2\obj\Debug\AsyncAwait2.exe

@@ -17,7 +17,8 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\bin\Debug\Delegate2
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\bin\Debug\Delegate2.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\bin\Debug\log4net.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\bin\Debug\log4net.xml
-D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csprojAssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csproj.AssemblyReference.cache
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csproj.SuggestedBindingRedirects.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csproj.CoreCompileInputs.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate2\obj\Debug\Delegate2.exe
