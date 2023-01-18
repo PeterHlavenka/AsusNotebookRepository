@@ -140,9 +140,10 @@
         </Grid>
         
         <Grid Grid.Row="2" DataContext="{StaticResource viewmodel}">
-            <syncfusion:SfDataGrid Name="AdwDataGrid" Margin="5"
+            <syncfusion:SfDataGrid Name="AdwDataGrid" Margin="5" ScrollMode="None"  MouseWheel="AdwDataGrid_OnMouseWheel" PreviewMouseDown="AdwDataGrid_PreviewMouseDown" PreviewMouseWheel="AdwDataGrid_PreviewMouseWheel"
+                                   FilterRowPosition="FixedTop"
                                        AutoGenerateColumns="False"
-                                       AllowDraggingColumns="True"
+                                       AllowDraggingColumns="True" CanMaintainScrollPosition="True"
                                        AllowEditing="True"
                                        LiveDataUpdateMode="AllowDataShaping"
                                        AllowFiltering="True"

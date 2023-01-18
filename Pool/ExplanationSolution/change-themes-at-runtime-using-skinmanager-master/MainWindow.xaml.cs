@@ -9,6 +9,7 @@ using Syncfusion.Windows.Shared;
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Input;
 using Syncfusion.Data.Extensions;
 using Syncfusion.SfSkinManager;
 using Syncfusion.UI.Xaml.Grid;
@@ -83,5 +84,24 @@ namespace DataGrid_Themes
             var other = new OtherWindow();
             other.ShowDialog();
         }
+
+        private void AdwDataGrid_OnMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            var test = e.Delta;
+            Console.WriteLine();
+        }
+
+        private void AdwDataGrid_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Console.WriteLine();
+        }
+
+        private void AdwDataGrid_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            
+            Console.WriteLine();
+        }
+
+
     }
 }
