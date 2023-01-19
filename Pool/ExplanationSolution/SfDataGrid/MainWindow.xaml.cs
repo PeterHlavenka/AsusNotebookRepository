@@ -35,18 +35,18 @@ namespace SfDataGrid
 
         private void Themecombobox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ThemeCombobox.SelectedIndex == 0)
-            {
-                SkinStorage.SetVisualStyle(Window, "Blend");
-            }
-            if (ThemeCombobox.SelectedIndex == 1)
-            {
-                SkinStorage.SetVisualStyle(Window, "ShinyBlue");
-            }
-            if (ThemeCombobox.SelectedIndex == 2)
-            {
-                SkinStorage.SetVisualStyle(Window, "ShinyRed");
-            }
+            // if (ThemeCombobox.SelectedIndex == 0)
+            // {
+            //     SkinStorage.SetVisualStyle(Window, "Blend");
+            // }
+            // if (ThemeCombobox.SelectedIndex == 1)
+            // {
+            //     SkinStorage.SetVisualStyle(Window, "ShinyBlue");
+            // }
+            // if (ThemeCombobox.SelectedIndex == 2)
+            // {
+            //     SkinStorage.SetVisualStyle(Window, "ShinyRed");
+            // }
         }
     }
 }

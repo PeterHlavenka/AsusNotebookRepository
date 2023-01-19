@@ -27,11 +27,11 @@
     <Grid x:Name="RootGrid">
 
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition  Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <syncfusion:SfDataGrid Margin="10" 
@@ -48,26 +48,26 @@
             AllowTriStateSorting="True"
             ShowGroupDropArea="True" />
         
-        <syncfusion:CalendarEdit Grid.Row="1" Margin="10" />
-        
-        <Button Grid.Row="2" Margin="50" Height="30" Width="200">Button</Button>
+        <!-- <syncfusion:CalendarEdit Grid.Row="1" Margin="10" /> -->
+        <!-- -->
+        <!-- <Button Grid.Row="2" Margin="50" Height="30" Width="200">Button</Button> -->
 
         
         
         <syncfusion:SkinPicker MouseUp="UIElement_OnMouseUp"    Grid.Row="3" Height="60" Margin="10"/>
         
-        <Grid Name="Grid" Grid.Row="4">        
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <ComboBox Name="ThemeCombobox" Grid.Column="0" SelectionChanged="Themecombobox_OnSelectionChanged" Width="150" Height="30" Margin="10">
-                <ComboBoxItem> Blend </ComboBoxItem>
-                <ComboBoxItem> ShinyBlue </ComboBoxItem>
-                <ComboBoxItem> ShinyRed </ComboBoxItem>
-            </ComboBox>
-            <syncfusion:CalendarEdit Name="Calendar" Grid.Column="1" Margin="10"></syncfusion:CalendarEdit>        
-        </Grid>
+        <!-- <Grid Name="Grid" Grid.Row="4">         -->
+        <!--     <Grid.ColumnDefinitions> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--     </Grid.ColumnDefinitions> -->
+        <!--     <ComboBox Name="ThemeCombobox" Grid.Column="0" SelectionChanged="Themecombobox_OnSelectionChanged" Width="150" Height="30" Margin="10"> -->
+        <!--         <ComboBoxItem> Blend </ComboBoxItem> -->
+        <!--         <ComboBoxItem> ShinyBlue </ComboBoxItem> -->
+        <!--         <ComboBoxItem> ShinyRed </ComboBoxItem> -->
+        <!--     </ComboBox> -->
+        <!--     <syncfusion:CalendarEdit Name="Calendar" Grid.Column="1" Margin="10"></syncfusion:CalendarEdit>         -->
+        <!-- </Grid> -->
         
         <!-- <syncfusion:SfDataGrid.Columns> -->
         <!--      <syncfusion:GridNumericColumn NumberDecimalDigits="1" MappingName="OrderID" HeaderText="OrderID" GroupMode="Display"/> -->

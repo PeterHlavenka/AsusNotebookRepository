@@ -32,7 +32,7 @@ namespace SyncfusionGridControl
 
 
             // 2.You can populate data by handling the QueryCellInfo event of gridControl. This will load the data in and on-demand basis, ensuring optimized performance.
-            // GridControl.QueryCellInfo += GridControlQueryCellInfo;
+            GridControl.QueryCellInfo += GridControlQueryCellInfo;
 
 
             // 3.Naplnim bunky explicitne (Syncfusni indexuji explicitne)  [row, column]:
