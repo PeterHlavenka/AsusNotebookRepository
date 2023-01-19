@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridControlSample", "GridControlSample.csproj", "{28B797B2-9EF8-4BD9-9F2D-09DFD48D3431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncfusionThemeRegistrator", "..\..\..\..\Pool\Adwind_Kite\Adwind\AllProjects\SyncfusionThemeRegistrator\SyncfusionThemeRegistrator.csproj", "{DF1ACB4B-916F-465B-B5D3-C9BDE581EC4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28B797B2-9EF8-4BD9-9F2D-09DFD48D3431}.Debug|x86.ActiveCfg = Debug|x86
+		{28B797B2-9EF8-4BD9-9F2D-09DFD48D3431}.Debug|x86.Build.0 = Debug|x86
+		{28B797B2-9EF8-4BD9-9F2D-09DFD48D3431}.Release|x86.ActiveCfg = Release|x86
+		{28B797B2-9EF8-4BD9-9F2D-09DFD48D3431}.Release|x86.Build.0 = Release|x86
+		{DF1ACB4B-916F-465B-B5D3-C9BDE581EC4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF1ACB4B-916F-465B-B5D3-C9BDE581EC4A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DF1ACB4B-916F-465B-B5D3-C9BDE581EC4A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF1ACB4B-916F-465B-B5D3-C9BDE581EC4A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
