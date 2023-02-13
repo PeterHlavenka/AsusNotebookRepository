@@ -177,15 +177,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientskaCast", "KlientskaC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppDomainsInDotNetCore", "AppDomainsInDotNetCore", "{B6CB3E0D-0BFB-42F9-9B60-36122B847007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyLoadContextProject", "AssemblyLoadContextProject\AssemblyLoadContextProject.csproj", "{FBA80F8A-7A6E-4F13-A3A5-6BC9559C45C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyLoadContextProjectCore", "AssemblyLoadContextProjectCore\AssemblyLoadContextProjectCore.csproj", "{FBA80F8A-7A6E-4F13-A3A5-6BC9559C45C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryAsDll", "ClassLibraryAsDll\ClassLibraryAsDll.csproj", "{B9534202-4FF4-4076-AE07-9D85AF3E634F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryAsDllCore", "ClassLibraryAsDllCore\ClassLibraryAsDllCore.csproj", "{B9534202-4FF4-4076-AE07-9D85AF3E634F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KomunikacePresTcpChannel", "KomunikacePresTcpChannel", "{01D44415-A6CC-4417-A87C-288ABA0F8DAE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host_HostedService_StartStop", "Host_HostedService_StartStop", "{B3874DE6-A865-43E1-803E-1B6979EA0473}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkerNaJineDomenePresIsolatedAlaKite", "WorkerNaJineDomenePresIsolatedAlaKite", "{6BFD6CD0-B9F2-4E55-A8C7-F8871600F7AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingWindow48", "PricingWindow48\PricingWindow48.csproj", "{C7F6521D-7A2C-46B7-B510-813B60816995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -489,6 +491,10 @@ Global
 		{B9534202-4FF4-4076-AE07-9D85AF3E634F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9534202-4FF4-4076-AE07-9D85AF3E634F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9534202-4FF4-4076-AE07-9D85AF3E634F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F6521D-7A2C-46B7-B510-813B60816995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F6521D-7A2C-46B7-B510-813B60816995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F6521D-7A2C-46B7-B510-813B60816995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F6521D-7A2C-46B7-B510-813B60816995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -564,6 +570,7 @@ Global
 		{6BFD6CD0-B9F2-4E55-A8C7-F8871600F7AC} = {87CC9458-C3B1-47A9-B351-7EC3AC6ABA71}
 		{D049B27C-4B20-47F8-9428-E2031C2EC679} = {6BFD6CD0-B9F2-4E55-A8C7-F8871600F7AC}
 		{6E4D669C-8933-4FD9-8128-3B5F4218F4FE} = {6BFD6CD0-B9F2-4E55-A8C7-F8871600F7AC}
+		{C7F6521D-7A2C-46B7-B510-813B60816995} = {6BFD6CD0-B9F2-4E55-A8C7-F8871600F7AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

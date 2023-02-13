@@ -16,6 +16,8 @@ namespace ConsoleApplication4_48
             // m_isolatedLogin.Object.Start(m_loginService, configText, PathUtils.DefaultLogsDirectory);
 
             Console.WriteLine();
+            
+            _isolatedLogin.Object.Start();
         }
     }
 }
