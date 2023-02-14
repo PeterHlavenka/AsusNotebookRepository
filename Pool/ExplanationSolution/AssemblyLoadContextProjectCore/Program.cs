@@ -1,4 +1,5 @@
-﻿using System.Runtime.Loader;
+﻿using System.IO.Pipes;
+using System.Runtime.Loader;
 
 // V tomto projektu musim mit nareferencovanou dll. Viz cesta nize:
 var context = new AssemblyLoadContext("IsolatedPlace", true); 
@@ -52,6 +53,16 @@ if (parameters != null)
         parameterTypes[i] = parameters[i].ParameterType;
     }
 }
+
+// Spusteni okna v tezkem .netu
+var wpfWindowContext = new AssemblyLoadContext("IsolatedPlace1", true); 
+var wpfWindowAssembly = wpfWindowContext.LoadFromAssemblyPath(@"d:\AsusNotebookRepository\Pool\ExplanationSolution\ApplicationLibrary48\bin\Debug\ApplicationLibrary48.dll");
+var wpfWindowStarter = wpfWindowAssembly.GetType("ApplicationLibrary48.Starter");
+if (wpfWindowStarter == null) return;
+// Metoda bez parametru
+var starter = Activator.CreateInstance(wpfWindowStarter);
+var starterMethodInfo = wpfWindowStarter.GetMethod("Start");
+starterMethodInfo?.Invoke(starter, null);
 
 
 // Tato trida, resp. jeji metoda se pouzije jako handler pro ChangedEvent ze tridy RSEval, jejiz instanci jsme si vyse vytvorili pomoci Activatoru.
