@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.ComponentModel;
+using System.Threading;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,27 +14,17 @@ public partial class Server : Window
 {
     private readonly Communicator m_communicator;
     private IHost m_host;
-    private ExternalPricingService m_externalPricingService;
     private Worker m_pipeMesasageSender;
 
     public Server()
     {
         InitializeComponent();
         m_communicator = new Communicator();
-VyjebanaRobota();
-        // CreateHost();
-    }
-
-    private async void VyjebanaRobota()
-    {
-        m_externalPricingService = new ExternalPricingService();
         m_pipeMesasageSender = new Worker(m_communicator);
-
-        //await m_pipeMesasageSender.Execute();  // startuju pipu
+        CreateHost();
     }
-    
-    
-    
+
+
     /// <summary>
     ///     Nastartuje host (pokud nebezi) a spusti registrovane servicy.
     /// </summary>
@@ -46,13 +37,13 @@ VyjebanaRobota();
                
                 // services.AddSingleton<ExternalPricingService>(p => p.GetRequiredService<ExternalPricingService>());
                 // services.AddSingleton<IHostedService>(p => p.GetRequiredService<ExternalPricingService>());
-                services.AddHostedService<Worker>();
+                //services.AddHostedService<Worker>();
                 services.AddHostedService<ExternalPricingService>();// cannot retrieve instance of service
-                services.AddSingleton(m_communicator); // pro dependency injection
+                //services.AddSingleton(m_communicator); // pro dependency injection
             })
             .Build();
 
-        await m_host.StartAsync();
+        // await m_host.StartAsync();
     }
     
     
@@ -68,10 +59,13 @@ VyjebanaRobota();
         // await worker.StartAsync(new CancellationToken());
 
 
-        await m_externalPricingService.Execute();
+
+        
+        var pricingService = m_host.Services.GetService<IHostedService>();
+        if (pricingService is null) return;
+        
+        await pricingService.StartAsync(new CancellationToken());
         await m_pipeMesasageSender.Execute();
-        // var pricingService = m_host.Services.GetService<IHostedService>();
-        // pricingService?.StartAsync(new CancellationToken());
     }
     
     /// <summary>
@@ -79,13 +73,20 @@ VyjebanaRobota();
     /// </summary>
     private void StopPricing_OnClick(object sender, RoutedEventArgs e)
     {
-        m_externalPricingService?.StopAsync(new CancellationToken());
+        ClosePricing(); 
+    }
+
+    private void ClosePricing()
+    {
         m_pipeMesasageSender.CloseConnection();
-        // var test = m_host.Services.GetService<IHostedService>();
-        // test?.StopAsync(new CancellationToken());
+        var test = m_host.Services.GetService<IHostedService>();
+        test?.StopAsync(new CancellationToken());
+        
+        
         //m_host.StopAsync();
         // m_host.Dispose();
     }
+    
     
     /// <summary>
     ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
@@ -93,5 +94,10 @@ VyjebanaRobota();
     private void SendMessage_OnClick(object sender, RoutedEventArgs e)
     {
         m_communicator.OnOnSendMessage();
+    }
+
+    private void Server_OnClosing(object? sender, CancelEventArgs e)
+    {
+        ClosePricing();
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System.Diagnostics;
-using System.IO;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -13,7 +10,8 @@ public class ExternalPricingService : BackgroundService
     private Process? m_pricingProcess;
 
     /// <summary>
-    /// Will be invoked when Host started;
+    /// This method is called when the <see cref="IHostedService"/> starts. The implementation should return a task that represents
+    /// the lifetime of the long running operation(s) being performed.
     /// </summary>
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {

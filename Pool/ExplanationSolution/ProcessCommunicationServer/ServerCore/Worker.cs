@@ -68,8 +68,10 @@ public class Worker : BackgroundService
 
     public void CloseConnection()
     {
-        m_pipeServer.Disconnect();
-        m_pipeServer.DisposeAsync();
+        if (m_pipeServer is { IsConnected: true })
+            m_pipeServer.Disconnect();
+
+        m_pipeServer?.DisposeAsync();
     }
 
     public override void Dispose()
