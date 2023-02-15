@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Threading;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,80 +12,77 @@ namespace ServerCore;
 /// <summary>
 ///     Interaction logic for Server.xaml
 /// </summary>
-public partial class Server : Window
+public partial class Server
 {
     private readonly Communicator m_communicator;
     private IHost m_host;
-    private Worker m_pipeMesasageSender;
+    private List<IHostedService> m_hostedServices;
+    private bool m_pricingIsRunning;
 
     public Server()
     {
         InitializeComponent();
         m_communicator = new Communicator();
-        m_pipeMesasageSender = new Worker(m_communicator);
+        
         CreateHost();
     }
 
+    private Worker Worker => m_hostedServices.OfType<Worker>().Single();
+    private ExternalPricingService PricingService => m_hostedServices.OfType<ExternalPricingService>().Single();
 
     /// <summary>
     ///     Nastartuje host (pokud nebezi) a spusti registrovane servicy.
     /// </summary>
-    private async void CreateHost()
+    private void CreateHost()
     {
         m_host = Host.CreateDefaultBuilder(null)
             .ConfigureLogging((context, builder) => builder.AddConsole())
             .ConfigureServices(services =>
             {
-               
-                // services.AddSingleton<ExternalPricingService>(p => p.GetRequiredService<ExternalPricingService>());
-                // services.AddSingleton<IHostedService>(p => p.GetRequiredService<ExternalPricingService>());
-                //services.AddHostedService<Worker>();
-                services.AddHostedService<ExternalPricingService>();// cannot retrieve instance of service
-                //services.AddSingleton(m_communicator); // pro dependency injection
+                services.AddHostedService<Worker>();
+                services.AddHostedService<ExternalPricingService>();
+                services.AddSingleton(m_communicator); // pro dependency injection
             })
             .Build();
 
-        // await m_host.StartAsync();
+        m_hostedServices = m_host.Services.GetServices<IHostedService>().ToList();
+        
     }
-    
-    
-    
-    private async void StartPricing_OnClick(object sender, RoutedEventArgs e)
+
+    private async void OpenPricing_OnClick(object sender, RoutedEventArgs e)
     {
-        // Check if the host is running
-        // var appLifetime = m_host?.Services.GetRequiredService<IHostApplicationLifetime>();
-        // if (appLifetime is { ApplicationStarted.IsCancellationRequested: false }) return;
+        try
+        {
+            if (m_pricingIsRunning) return;
 
-
-        // var worker = new Worker(m_communicator);
-        // await worker.StartAsync(new CancellationToken());
-
-
-
-        
-        var pricingService = m_host.Services.GetService<IHostedService>();
-        if (pricingService is null) return;
-        
-        await pricingService.StartAsync(new CancellationToken());
-        await m_pipeMesasageSender.Execute();
+            m_pricingIsRunning = true;
+            
+            // start of all registered services doesnt work - second service will be cancelled by same token
+            // await m_host.StartAsync(CancellationToken.None);  
+            await PricingService.StartAsync(new CancellationToken()); // start of just one service
+            await Worker.StartAsync(new CancellationToken());
+        }
+        finally
+        {
+            m_pricingIsRunning = false;
+        }
     }
-    
+
     /// <summary>
     ///     Spusti StopAsync pro vsechny zaregistrovane IHostedService (Pricing, Pipe..)
     /// </summary>
-    private void StopPricing_OnClick(object sender, RoutedEventArgs e)
+    private void ClosePricing_OnClick(object sender, RoutedEventArgs e)
     {
-        ClosePricing(); 
+        ClosePricingWindow();
     }
 
-    private void ClosePricing()
+    private void ClosePricingWindow()
     {
-        m_pipeMesasageSender.CloseConnection();
-        var pricingService = m_host.Services.GetService<IHostedService>();
-        pricingService?.StopAsync(new CancellationToken());
+        Worker?.StopAsync(CancellationToken.None);  // stop just one service
+        PricingService?.StopAsync(CancellationToken.None);
     }
-    
-    
+
+
     /// <summary>
     ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
     /// </summary>
@@ -94,8 +93,8 @@ public partial class Server : Window
 
     private void Server_OnClosing(object? sender, CancelEventArgs e)
     {
-        ClosePricing();
-        
+        ClosePricingWindow();
+
         m_host.StopAsync();
         m_host.Dispose();
     }

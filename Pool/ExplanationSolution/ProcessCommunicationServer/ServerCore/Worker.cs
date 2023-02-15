@@ -36,37 +36,21 @@ public class Worker : BackgroundService
             throw;
         }
     }
-
-    public async Task Execute()
-    {
-        m_pipeServer = new NamedPipeServerStream("testPipe", PipeDirection.Out);
-
-            await m_pipeServer.WaitForConnectionAsync();
-            await Task.Delay(TimeSpan.FromHours(10));
-    }
     
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        // if (m_pipeServer.IsConnected)
-        // {
-        //     // m_pipeServer.Disconnect();
-        //     return;
-        // }
+        m_pipeServer = new NamedPipeServerStream("testPipe", PipeDirection.Out);
+
+        await m_pipeServer.WaitForConnectionAsync(stoppingToken);
+        await Task.Delay(TimeSpan.FromHours(10), stoppingToken);
     }
 
-    public void CloseConnection()
+    public override async Task StopAsync(CancellationToken cancellationToken)
     {
         if (m_pipeServer is { IsConnected: true })
             m_pipeServer.Disconnect();
 
-        m_pipeServer?.DisposeAsync();
-    }
-
-    public override void Dispose()
-    {
-        base.Dispose();
-        m_pipeServer.Close();
-        m_pipeServer.Disconnect();
-        m_pipeServer.Dispose();
+        m_pipeServer?.Close();
+        await base.StopAsync(cancellationToken);
     }
 }
