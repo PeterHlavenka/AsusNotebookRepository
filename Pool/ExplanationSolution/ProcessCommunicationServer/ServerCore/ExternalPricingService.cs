@@ -22,7 +22,7 @@ public class ExternalPricingService : BackgroundService
     
     private Task LaunchDotNet48WpfApplication()
     {
-        var pathToDotNet48WpfApplication = @"d:\AsusNotebookRepository\Pool\ExplanationSolution\ProcessCommunicationClient\Client\bin\Debug\Client.exe";
+        var pathToDotNet48WpfApplication = @"d:\AsusNotebookRepository\Pool\ExplanationSolution\ProcessCommunicationClient\Client48\bin\Debug\Client48.exe";
         var startInfo = new ProcessStartInfo(pathToDotNet48WpfApplication)
         {
             UseShellExecute = true,
