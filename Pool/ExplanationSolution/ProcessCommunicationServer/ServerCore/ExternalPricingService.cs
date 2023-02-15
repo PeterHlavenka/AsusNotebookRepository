@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +7,8 @@ namespace ServerCore;
 
 public class ExternalPricingService : BackgroundService
 {
+    private Process? m_pricingProcess;
+
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
         return LaunchDotNet48WpfApplication();
@@ -21,8 +22,14 @@ public class ExternalPricingService : BackgroundService
             UseShellExecute = true,
             Verb = "runas"
         };
-        var pricing = Process.Start(startInfo);
+        m_pricingProcess = Process.Start(startInfo);
         // pricing?.CloseMainWindow();
         return Task.CompletedTask;
+    }
+
+    public override async Task StopAsync(CancellationToken cancellationToken)
+    {
+        m_pricingProcess?.CloseMainWindow();
+        await base.StopAsync(cancellationToken);
     }
 }
