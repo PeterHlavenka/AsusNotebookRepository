@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Threading;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -17,22 +18,14 @@ namespace ServerCore
         {
             InitializeComponent();
             
-            LaunchDotNet48WpfApplication();
+            // LaunchDotNet48WpfApplication();
             
             m_communicator = new Communicator();
             
             StartHost();
         }
 
-        private void LaunchDotNet48WpfApplication()
-        {
-            
-            string pathToDotNet48WpfApplication = @"c:\Pool\Adwind_Kite\Adwind\Apps\Process_Communication\Client\bin\Debug\Client.exe";
-            ProcessStartInfo startInfo = new ProcessStartInfo(pathToDotNet48WpfApplication);
-            startInfo.UseShellExecute = true;
-            startInfo.Verb = "runas";
-            Process.Start(startInfo);
-        }
+
         
         private async void StartHost()
         {
@@ -41,12 +34,18 @@ namespace ServerCore
             IHost host = Host.CreateDefaultBuilder(null)
                 .ConfigureServices(services =>
                 {
+                    services.AddHostedService<ExternalPricingService>();
                     services.AddHostedService<Worker>();
                     services.AddSingleton(m_communicator);// not needed
                 })
                 .Build();
 
-            await host.RunAsync();
+            await host.RunAsync();  // run all services
+            
+            // var ser = host.Services.GetService<ExternalPricingService>();  // run just one service
+            // if (ser is not null)
+            //     await ser.StartAsync(CancellationToken.None);
+            
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

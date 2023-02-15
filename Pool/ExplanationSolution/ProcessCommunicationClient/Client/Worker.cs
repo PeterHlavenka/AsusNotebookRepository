@@ -7,43 +7,44 @@ using System.Windows.Controls;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Client;
-
-public class Worker : BackgroundService
+namespace Client
 {
-    private readonly ILogger<Worker> m_logger;
-    private readonly TextBox m_textBox;
-
-    public Worker(ILogger<Worker> logger, TextBox clientTextBox)
+    public class Worker : BackgroundService
     {
-        m_logger = logger;
-        m_textBox = clientTextBox;
-    }
+        private readonly ILogger<Worker> m_logger;
+        private readonly TextBox m_textBox;
 
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-    {
-        while (!stoppingToken.IsCancellationRequested)
+        public Worker(ILogger<Worker> logger, TextBox clientTextBox)
         {
-            m_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+            m_logger = logger;
+            m_textBox = clientTextBox;
+        }
 
-            using var pipeClient = new NamedPipeClientStream(".", "testPipe", PipeDirection.In);
-
-            // Connect to the pipe or wait until the pipe is available.
-            m_logger.LogInformation("Attempting to connect to pipe...");
-            await pipeClient.ConnectAsync(stoppingToken);
-
-            m_logger.LogInformation("Connected to pipe.");
-
-            using var sr = new StreamReader(pipeClient);
-            while (await sr.ReadLineAsync() is { } temp)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (!stoppingToken.IsCancellationRequested)
             {
-                m_textBox.Text = temp;
-                m_logger.LogInformation("Received from server: {0}", temp);
-            }
-            
-            // this
+                m_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
-            // await Task.Delay(10000, stoppingToken);
+                using var pipeClient = new NamedPipeClientStream(".", "testPipe", PipeDirection.In);
+
+                // Connect to the pipe or wait until the pipe is available.
+                m_logger.LogInformation("Attempting to connect to pipe...");
+                await pipeClient.ConnectAsync(stoppingToken);
+
+                m_logger.LogInformation("Connected to pipe.");
+
+                using var sr = new StreamReader(pipeClient);
+                while (await sr.ReadLineAsync() is { } temp)
+                {
+                    m_textBox.Text = temp;
+                    m_logger.LogInformation("Received from server: {0}", temp);
+                }
+            
+                // this
+
+                // await Task.Delay(10000, stoppingToken);
+            }
         }
     }
 }
