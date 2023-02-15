@@ -79,6 +79,7 @@ public partial class Server
     /// </summary>
     private void SendMessage_OnClick(object sender, RoutedEventArgs e)
     {
+        if (!PricingService.IsOpen) return;
         m_communicator.OnOnSendMessage();
     }
 

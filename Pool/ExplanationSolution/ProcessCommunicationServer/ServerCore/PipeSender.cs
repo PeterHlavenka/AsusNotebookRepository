@@ -20,6 +20,7 @@ public class PipeSender : BackgroundService
 
     private async void SendMessage(object? sender, EventArgs e)
     {
+        if (!m_pipeServer.IsConnected) { return; }
         try
         {
             // Read user input and send that to the client process.
