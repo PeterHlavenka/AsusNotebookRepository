@@ -18,6 +18,8 @@ public class ExternalPricingService : BackgroundService
         return LaunchDotNet48WpfApplication();
     }
 
+    public bool IsOpen => m_pricingProcess is { HasExited: false };
+    
     private Task LaunchDotNet48WpfApplication()
     {
         var pathToDotNet48WpfApplication = @"d:\AsusNotebookRepository\Pool\ExplanationSolution\ProcessCommunicationClient\Client\bin\Debug\Client.exe";
@@ -27,6 +29,7 @@ public class ExternalPricingService : BackgroundService
             Verb = "runas"
         };
         m_pricingProcess = Process.Start(startInfo);
+       
         return Task.CompletedTask;
     }
 
@@ -34,10 +37,5 @@ public class ExternalPricingService : BackgroundService
     {
         m_pricingProcess?.CloseMainWindow();
         await base.StopAsync(cancellationToken);
-    }
-
-    public Task Execute()
-    {
-        return ExecuteAsync(new CancellationToken());
     }
 }

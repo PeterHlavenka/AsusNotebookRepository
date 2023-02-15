@@ -17,17 +17,17 @@ public partial class Server
     private readonly Communicator m_communicator;
     private IHost m_host;
     private List<IHostedService> m_hostedServices;
-    private bool m_pricingIsRunning;
 
     public Server()
     {
         InitializeComponent();
+        DataContext = this;
         m_communicator = new Communicator();
         
         CreateHost();
     }
 
-    private Worker Worker => m_hostedServices.OfType<Worker>().Single();
+    private PipeSender PipeSender => m_hostedServices.OfType<PipeSender>().Single();
     private ExternalPricingService PricingService => m_hostedServices.OfType<ExternalPricingService>().Single();
 
     /// <summary>
@@ -39,7 +39,7 @@ public partial class Server
             .ConfigureLogging((context, builder) => builder.AddConsole())
             .ConfigureServices(services =>
             {
-                services.AddHostedService<Worker>();
+                services.AddHostedService<PipeSender>();
                 services.AddHostedService<ExternalPricingService>();
                 services.AddSingleton(m_communicator); // pro dependency injection
             })
@@ -51,21 +51,12 @@ public partial class Server
 
     private async void OpenPricing_OnClick(object sender, RoutedEventArgs e)
     {
-        try
-        {
-            if (m_pricingIsRunning) return;
+        if (PricingService.IsOpen) return;
 
-            m_pricingIsRunning = true;
-            
-            // start of all registered services doesnt work - second service will be cancelled by same token
-            // await m_host.StartAsync(CancellationToken.None);  
-            await PricingService.StartAsync(new CancellationToken()); // start of just one service
-            await Worker.StartAsync(new CancellationToken());
-        }
-        finally
-        {
-            m_pricingIsRunning = false;
-        }
+        // start of all registered services doesnt work - second service will be cancelled by same token
+        // await m_host.StartAsync(CancellationToken.None);  
+        await PricingService.StartAsync(new CancellationToken()); // start of just one service
+        await PipeSender.StartAsync(new CancellationToken());
     }
 
     /// <summary>
@@ -78,7 +69,7 @@ public partial class Server
 
     private void ClosePricingWindow()
     {
-        Worker?.StopAsync(CancellationToken.None);  // stop just one service
+        PipeSender?.StopAsync(CancellationToken.None);  // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
     }
 

@@ -7,13 +7,13 @@ using Microsoft.Extensions.Hosting;
 
 namespace ServerCore;
 
-public class Worker : BackgroundService
+public class PipeSender : BackgroundService
 {
 
     private NamedPipeServerStream m_pipeServer;
     private StreamWriter m_sw;
 
-    public Worker(Communicator communicator)
+    public PipeSender(Communicator communicator)
     {
         communicator.OnSendMessage += SendMessage;
     }
