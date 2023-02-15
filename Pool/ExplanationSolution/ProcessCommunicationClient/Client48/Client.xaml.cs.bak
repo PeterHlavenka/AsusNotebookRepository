@@ -1,0 +1,13 @@
+﻿namespace Client48
+{
+    /// <summary>
+    /// Interaction logic for Client.xaml
+    /// </summary>
+    public partial class Client
+    {
+        public Client()
+        {
+            InitializeComponent();
+        }
+    }
+}
