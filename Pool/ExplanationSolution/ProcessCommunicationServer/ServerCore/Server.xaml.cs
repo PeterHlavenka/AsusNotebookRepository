@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Threading;
+﻿using System.Threading;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,70 +13,85 @@ public partial class Server : Window
 {
     private readonly Communicator m_communicator;
     private IHost m_host;
-    private Process? m_pricingProcess;
+    private ExternalPricingService m_externalPricingService;
+    private Worker m_pipeMesasageSender;
 
     public Server()
     {
         InitializeComponent();
-
         m_communicator = new Communicator();
-
-        StartHost();
+VyjebanaRobota();
+        // CreateHost();
     }
 
-    private async void StartHost()
+    private async void VyjebanaRobota()
     {
-        var args = new string[3];
+        m_externalPricingService = new ExternalPricingService();
+        m_pipeMesasageSender = new Worker(m_communicator);
 
+        //await m_pipeMesasageSender.Execute();  // startuju pipu
+    }
+    
+    
+    
+    /// <summary>
+    ///     Nastartuje host (pokud nebezi) a spusti registrovane servicy.
+    /// </summary>
+    private async void CreateHost()
+    {
         m_host = Host.CreateDefaultBuilder(null)
             .ConfigureLogging((context, builder) => builder.AddConsole())
             .ConfigureServices(services =>
             {
-                // services.AddHostedService<ExternalPricingService>();
+               
+                // services.AddSingleton<ExternalPricingService>(p => p.GetRequiredService<ExternalPricingService>());
+                // services.AddSingleton<IHostedService>(p => p.GetRequiredService<ExternalPricingService>());
                 services.AddHostedService<Worker>();
-                services.AddSingleton(m_communicator); // not needed
+                services.AddHostedService<ExternalPricingService>();// cannot retrieve instance of service
+                services.AddSingleton(m_communicator); // pro dependency injection
             })
             .Build();
 
-        var startAsyncTask = m_host.StartAsync();
-        await startAsyncTask; // Wait for the host to start and services to start
-
-        // var pricingService = m_host.Services.GetService<ExternalPricingService>(); // Retrieve the ExternalPricingService from the container
-
-
-        // does not work ser is null
-        var ser = m_host.Services.GetService<ExternalPricingService>();
-        if (ser is not null) // still null
-            await ser.StartAsync(CancellationToken.None);
+        await m_host.StartAsync();
     }
+    
+    
+    
+    private async void StartPricing_OnClick(object sender, RoutedEventArgs e)
+    {
+        // Check if the host is running
+        // var appLifetime = m_host?.Services.GetRequiredService<IHostApplicationLifetime>();
+        // if (appLifetime is { ApplicationStarted.IsCancellationRequested: false }) return;
 
+
+        // var worker = new Worker(m_communicator);
+        // await worker.StartAsync(new CancellationToken());
+
+
+        await m_externalPricingService.Execute();
+        await m_pipeMesasageSender.Execute();
+        // var pricingService = m_host.Services.GetService<IHostedService>();
+        // pricingService?.StartAsync(new CancellationToken());
+    }
+    
+    /// <summary>
+    ///     Spusti StopAsync pro vsechny zaregistrovane IHostedService (Pricing, Pipe..)
+    /// </summary>
+    private void StopPricing_OnClick(object sender, RoutedEventArgs e)
+    {
+        m_externalPricingService?.StopAsync(new CancellationToken());
+        m_pipeMesasageSender.CloseConnection();
+        // var test = m_host.Services.GetService<IHostedService>();
+        // test?.StopAsync(new CancellationToken());
+        //m_host.StopAsync();
+        // m_host.Dispose();
+    }
+    
+    /// <summary>
+    ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
+    /// </summary>
     private void SendMessage_OnClick(object sender, RoutedEventArgs e)
     {
         m_communicator.OnOnSendMessage();
-    }
-
-    private void StopPricing_OnClick(object sender, RoutedEventArgs e)
-    {
-        // var ser = m_host.Services.GetService<ExternalPricingService>();  
-        // if (ser is not null)
-        //     await ser.StopAsync(CancellationToken.None);
-
-        m_pricingProcess?.CloseMainWindow(); //
-        m_pricingProcess?.Kill();
-        m_pricingProcess = null;
-    }
-
-    private void LaunchDotNet48WpfApplication(object sender, RoutedEventArgs e)
-    {
-        if (m_pricingProcess is not null) return;
-
-        var pathToDotNet48WpfApplication = @"d:\AsusNotebookRepository\Pool\ExplanationSolution\ProcessCommunicationClient\Client\bin\Debug\Client.exe";
-        var startInfo = new ProcessStartInfo(pathToDotNet48WpfApplication)
-        {
-            UseShellExecute = true,
-            Verb = "runas"
-        };
-        m_pricingProcess = Process.Start(startInfo);
-        // pricing?.CloseMainWindow();
     }
 }

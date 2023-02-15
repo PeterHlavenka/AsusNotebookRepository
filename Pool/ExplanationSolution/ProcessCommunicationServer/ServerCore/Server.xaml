@@ -23,7 +23,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Content="Start Pricing" Click="LaunchDotNet48WpfApplication" />
+        <Button Grid.Row="0" Content="Start Pricing" Click="StartPricing_OnClick" />
         <TextBox Grid.Row="1" Name="ServerTextBox" />
         <Button Grid.Row="2" Content="Send" Click="SendMessage_OnClick" />
         <Button Grid.Row="3" Content="Stop Pricing" Click="StopPricing_OnClick" />
