@@ -4,7 +4,6 @@ using System.IO.Pipes;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace ServerCore;
 
@@ -16,8 +15,6 @@ public class Worker : BackgroundService
 
     public Worker(Communicator communicator)
     {
-    
-        
         communicator.OnSendMessage += SendMessage;
     }
 
@@ -43,15 +40,9 @@ public class Worker : BackgroundService
     public async Task Execute()
     {
         m_pipeServer = new NamedPipeServerStream("testPipe", PipeDirection.Out);
-        // while (true)
-        // {
-            // await using
-            // Wait for a client to connect
+
             await m_pipeServer.WaitForConnectionAsync();
             await Task.Delay(TimeSpan.FromHours(10));
-            // await Task.Delay(100000, stoppingToken);  // Pipa se sama closne
-        // }
-        // return ExecuteAsync(new CancellationToken());
     }
     
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -61,9 +52,6 @@ public class Worker : BackgroundService
         //     // m_pipeServer.Disconnect();
         //     return;
         // }
-        
-        
-
     }
 
     public void CloseConnection()

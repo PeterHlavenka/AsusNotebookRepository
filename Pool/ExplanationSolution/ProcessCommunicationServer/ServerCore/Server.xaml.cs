@@ -79,12 +79,8 @@ public partial class Server : Window
     private void ClosePricing()
     {
         m_pipeMesasageSender.CloseConnection();
-        var test = m_host.Services.GetService<IHostedService>();
-        test?.StopAsync(new CancellationToken());
-        
-        
-        //m_host.StopAsync();
-        // m_host.Dispose();
+        var pricingService = m_host.Services.GetService<IHostedService>();
+        pricingService?.StopAsync(new CancellationToken());
     }
     
     
@@ -99,5 +95,8 @@ public partial class Server : Window
     private void Server_OnClosing(object? sender, CancelEventArgs e)
     {
         ClosePricing();
+        
+        m_host.StopAsync();
+        m_host.Dispose();
     }
 }
