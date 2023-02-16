@@ -81,6 +81,7 @@ public partial class Server
 
     private void ClosePricingWindow()
     {
+        // m_host.StopAsync(CancellationToken.None); // not possible durring cancellation
         MessageSender?.StopAsync(CancellationToken.None); // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
         ObjectReceiver?.StopAsync(CancellationToken.None);
