@@ -7,20 +7,20 @@ using Microsoft.Extensions.Hosting;
 
 namespace ServerCore;
 
-public class PipeSender : BackgroundService
+public class MesasageSender : BackgroundService
 {
     private NamedPipeServerStream m_pipeServer;
     private StreamWriter m_sw;
 
-    public PipeSender(Communicator communicator)
+    public MesasageSender(Communicator communicator)
     {
-        communicator.OnSendMessage += SendMessage;  // not needed
+        communicator.OnSendMessage += SendMessage; // not needed
     }
 
     public async void SendMessage(object? sender, EventArgs e)
     {
         if (!m_pipeServer.IsConnected) return;
-        
+
         m_sw = new StreamWriter(m_pipeServer);
         m_sw.AutoFlush = true;
 
@@ -30,7 +30,7 @@ public class PipeSender : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        m_pipeServer = new NamedPipeServerStream("testPipe", PipeDirection.Out);
+        m_pipeServer = new NamedPipeServerStream("stringPipe", PipeDirection.Out);
 
         await m_pipeServer.WaitForConnectionAsync(stoppingToken);
         await Task.Delay(TimeSpan.FromHours(10), stoppingToken);

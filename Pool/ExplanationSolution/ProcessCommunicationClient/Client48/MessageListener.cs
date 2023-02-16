@@ -26,7 +26,7 @@ namespace Client48
             {
                 m_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
-                using var pipeClient = new NamedPipeClientStream(".", "testPipe", PipeDirection.In);
+                using var pipeClient = new NamedPipeClientStream(".", "stringPipe", PipeDirection.In);
 
                 // Connect to the pipe or wait until the pipe is available.
                 m_logger.LogInformation("Attempting to connect to pipe...");

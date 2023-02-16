@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO.Pipes;
 using System.Linq;
-using System.Text;
-using System.Text.Json;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,8 +16,8 @@ namespace ServerCore;
 public partial class Server
 {
     private readonly Communicator m_communicator;
-    private List<IHostedService> m_hostedServices;
     private IHost m_host;
+    private List<IHostedService> m_hostedServices;
 
     public Server()
     {
@@ -32,8 +28,9 @@ public partial class Server
         CreateHost();
     }
 
-    private PipeSender PipeSender => m_hostedServices.OfType<PipeSender>().Single();
+    private MesasageSender MessageSender => m_hostedServices.OfType<MesasageSender>().Single();
     private ExternalPricingService PricingService => m_hostedServices.OfType<ExternalPricingService>().Single();
+    private ObjectReceiver ObjectReceiver => m_hostedServices.OfType<ObjectReceiver>().Single();
 
     /// <summary>
     ///     Nastartuje host (pokud nebezi) a spusti registrovane servicy.
@@ -44,9 +41,11 @@ public partial class Server
             .ConfigureLogging((context, builder) => builder.AddConsole())
             .ConfigureServices(services =>
             {
-                services.AddHostedService<PipeSender>();
+                services.AddHostedService<MesasageSender>();
                 services.AddHostedService<ExternalPricingService>();
+                services.AddHostedService<ObjectReceiver>();
                 services.AddSingleton(m_communicator); // pro dependency injection
+                services.AddSingleton(ServerTextBox);
             })
             .Build();
 
@@ -60,39 +59,15 @@ public partial class Server
         // start of all registered services doesnt work - second service will be cancelled by same token
         // await m_host.StartAsync(CancellationToken.None);  
         await PricingService.StartAsync(new CancellationToken()); // start of just one service
-        await PipeSender.StartAsync(new CancellationToken());
-
-        var pipeClient = new NamedPipeClientStream(".", "ObjectPipe", PipeDirection.In);
-        while (true)
-        {
-            // Connect to the pipe or wait until the pipe is available.
-            if (!pipeClient.IsConnected)
-                await pipeClient.ConnectAsync(new CancellationToken());
-
-            try
-            {
-                var buffer = new byte[1024];
-                var read = await pipeClient.ReadAsync(buffer, 0, buffer.Length);
-
-                var jsonString2 = Encoding.UTF8.GetString(buffer).TrimEnd('\0');
-                var obj = JsonSerializer.Deserialize<CommonObject>(jsonString2);
-
-                ServerTextBox.Text = obj?.Id.ToString();
-            }
-            catch (Exception exception) // kdyz se pipa zavre a JsonSerializer je v pulce procesu
-            {
-                Console.WriteLine(exception);
-            }
-        }
+        await MessageSender.StartAsync(new CancellationToken());
+        await ObjectReceiver.StartAsync(new CancellationToken());
     }
 
-    /// <summary>
-    ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
-    /// </summary>
+
     private void SendMessage_OnClick(object sender, RoutedEventArgs e)
     {
         if (!PricingService.IsOpen) return;
-        PipeSender.SendMessage(this, EventArgs.Empty);
+        MessageSender.SendMessage(this, EventArgs.Empty);
         // m_communicator.OnOnSendMessage(); // stejne tak by to slo zavolat na instanci 
     }
 
@@ -106,8 +81,9 @@ public partial class Server
 
     private void ClosePricingWindow()
     {
-        PipeSender?.StopAsync(CancellationToken.None); // stop just one service
+        MessageSender?.StopAsync(CancellationToken.None); // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
+        ObjectReceiver?.StopAsync(CancellationToken.None);
     }
 
     private void Server_OnClosing(object? sender, CancelEventArgs e)
