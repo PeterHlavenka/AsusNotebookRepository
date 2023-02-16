@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO.Pipes;
 using System.Linq;
+using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,28 +20,16 @@ namespace ServerCore;
 public partial class Server
 {
     private readonly Communicator m_communicator;
-    private IHost m_host;
     private List<IHostedService> m_hostedServices;
+    private IHost m_host;
 
     public Server()
     {
         InitializeComponent();
         DataContext = this;
         m_communicator = new Communicator();
-        
+
         CreateHost();
-
-        
-        TryToReceiveObject();
-    }
-
-    private Task TryToReceiveObject()
-    {
-        Task.Run(() =>
-        {
-           
-        });
-return Task.CompletedTask;
     }
 
     private PipeSender PipeSender => m_hostedServices.OfType<PipeSender>().Single();
@@ -62,7 +51,6 @@ return Task.CompletedTask;
             .Build();
 
         m_hostedServices = m_host.Services.GetServices<IHostedService>().ToList();
-        
     }
 
     private async void OpenPricing_OnClick(object sender, RoutedEventArgs e)
@@ -83,19 +71,29 @@ return Task.CompletedTask;
 
             try
             {
-                byte[] buffer = new byte[1024];
+                var buffer = new byte[1024];
                 var read = await pipeClient.ReadAsync(buffer, 0, buffer.Length);
 
-                string jsonString2 = System.Text.Encoding.UTF8.GetString(buffer).TrimEnd('\0');
+                var jsonString2 = Encoding.UTF8.GetString(buffer).TrimEnd('\0');
                 var obj = JsonSerializer.Deserialize<CommonObject>(jsonString2);
 
                 ServerTextBox.Text = obj?.Id.ToString();
             }
-            catch (Exception exception)  // kdyz se pipa zavre a JsonSerializer je v pulce procesu
+            catch (Exception exception) // kdyz se pipa zavre a JsonSerializer je v pulce procesu
             {
                 Console.WriteLine(exception);
             }
         }
+    }
+
+    /// <summary>
+    ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
+    /// </summary>
+    private void SendMessage_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (!PricingService.IsOpen) return;
+        PipeSender.SendMessage(this, EventArgs.Empty);
+        // m_communicator.OnOnSendMessage(); // stejne tak by to slo zavolat na instanci 
     }
 
     /// <summary>
@@ -108,18 +106,8 @@ return Task.CompletedTask;
 
     private void ClosePricingWindow()
     {
-        PipeSender?.StopAsync(CancellationToken.None);  // stop just one service
+        PipeSender?.StopAsync(CancellationToken.None); // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
-    }
-
-
-    /// <summary>
-    ///     Invokne event na tride Communicator. Tento event posloucha ExternalPricingService,
-    /// </summary>
-    private void SendMessage_OnClick(object sender, RoutedEventArgs e)
-    {
-        if (!PricingService.IsOpen) return;
-        m_communicator.OnOnSendMessage();
     }
 
     private void Server_OnClosing(object? sender, CancelEventArgs e)

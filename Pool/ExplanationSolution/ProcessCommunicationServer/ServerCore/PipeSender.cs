@@ -9,35 +9,25 @@ namespace ServerCore;
 
 public class PipeSender : BackgroundService
 {
-
     private NamedPipeServerStream m_pipeServer;
     private StreamWriter m_sw;
 
     public PipeSender(Communicator communicator)
     {
-        communicator.OnSendMessage += SendMessage;
+        communicator.OnSendMessage += SendMessage;  // not needed
     }
 
-    private async void SendMessage(object? sender, EventArgs e)
+    public async void SendMessage(object? sender, EventArgs e)
     {
-        if (!m_pipeServer.IsConnected) { return; }
-        try
-        {
-            // Read user input and send that to the client process.
-            m_sw = new StreamWriter(m_pipeServer);
-            m_sw.AutoFlush = true;
-           
-            var nce = new Random().Next();
-            await m_sw.WriteLineAsync(nce.ToString());
-        }
-        // Catch the IOException that is raised if the pipe is broken
-        // or disconnected.
-        catch (IOException exc)
-        {
-            throw;
-        }
+        if (!m_pipeServer.IsConnected) return;
+        
+        m_sw = new StreamWriter(m_pipeServer);
+        m_sw.AutoFlush = true;
+
+        var nce = new Random().Next();
+        await m_sw.WriteLineAsync(nce.ToString());
     }
-    
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         m_pipeServer = new NamedPipeServerStream("testPipe", PipeDirection.Out);
