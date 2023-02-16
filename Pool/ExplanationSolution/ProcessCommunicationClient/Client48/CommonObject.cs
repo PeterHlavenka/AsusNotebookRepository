@@ -6,5 +6,4 @@ namespace Client48;
 public class CommonObject
 {
     public int Id { get; set; }
-    public string Name { get; set; }
 }

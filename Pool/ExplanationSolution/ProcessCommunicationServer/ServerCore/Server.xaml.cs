@@ -21,7 +21,6 @@ public partial class Server
     private readonly Communicator m_communicator;
     private IHost m_host;
     private List<IHostedService> m_hostedServices;
-    // private NamedPipeServerStream pipeServer; // = new NamedPipeServerStream("ObjectPipe", PipeDirection.In);
 
     public Server()
     {
@@ -78,15 +77,9 @@ return Task.CompletedTask;
         var pipeClient = new NamedPipeClientStream(".", "ObjectPipe", PipeDirection.In);
         while (true)
         {
-            
-
-             
-
             // Connect to the pipe or wait until the pipe is available.
             if (!pipeClient.IsConnected)
-            {
                 await pipeClient.ConnectAsync(new CancellationToken());
-            }
 
             try
             {
@@ -98,42 +91,11 @@ return Task.CompletedTask;
 
                 ServerTextBox.Text = obj?.Id.ToString();
             }
-            catch (Exception exception)
+            catch (Exception exception)  // kdyz se pipa zavre a JsonSerializer je v pulce procesu
             {
                 Console.WriteLine(exception);
-              
             }
-            
         }
-
-        // while (true)
-        // {
-        //     await using (pipeServer = new NamedPipeServerStream("ObjectPipe", PipeDirection.In))
-        //     {
-        //         await pipeServer.WaitForConnectionAsync();
-        //
-        //         while (pipeServer.IsConnected)
-        //         {
-        //             byte[] buffer = new byte[1024];
-        //             var read = await pipeServer.ReadAsync(buffer, 0, buffer.Length);
-        //
-        //             if (read == 0)
-        //             {
-        //                 break; // End of stream
-        //             }
-        //
-        //             string jsonString2 = System.Text.Encoding.UTF8.GetString(buffer).TrimEnd('\0');
-        //             var obj = JsonSerializer.Deserialize<CommonObject>(jsonString2);
-        //
-        //             var random = new Random().Next();
-        //             ServerTextBox.Text = obj?.Name + random;
-        //             Console.WriteLine("Received object with Id = {0} and Name = {1}", obj?.Id, obj?.Name);
-        //         }
-        //
-        //         pipeServer.Disconnect();
-        //     }
-        // }
-     
     }
 
     /// <summary>
@@ -146,12 +108,6 @@ return Task.CompletedTask;
 
     private void ClosePricingWindow()
     {
-        // if (pipeServer.IsConnected)
-        // {
-        //     pipeServer.Disconnect();//.EndWaitForConnection(null);
-        // }
-        // pipeServer.Close();
-        
         PipeSender?.StopAsync(CancellationToken.None);  // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
     }

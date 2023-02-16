@@ -56,7 +56,7 @@
             <SubType>Designer</SubType>
         </ApplicationDefinition>
         <Compile Include="CommonObject.cs" />
-        <Compile Include="Worker.cs" />
+        <Compile Include="MessageListener.cs" />
         <Page Include="Client.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>

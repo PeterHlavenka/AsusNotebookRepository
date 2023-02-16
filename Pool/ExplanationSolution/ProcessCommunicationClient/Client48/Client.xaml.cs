@@ -1,7 +1,7 @@
 ﻿using System;
-using System.IO;
+using System.ComponentModel;
 using System.IO.Pipes;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,17 +17,18 @@ namespace Client48;
 public partial class Client
 {
     private NamedPipeServerStream m_pipeServer;
+
     public Client()
     {
         InitializeComponent();
         ClientTextBox.Text = "After initialize";
 
-        StartHost();
+        CreateHost();
 
-        VytvorPipuACekejNaSpojeni(new CancellationToken());
+        CreatePipeAndWaitForConnection(new CancellationToken());
     }
 
-    private async Task VytvorPipuACekejNaSpojeni(CancellationToken stoppingToken)
+    private async Task CreatePipeAndWaitForConnection(CancellationToken stoppingToken)
     {
         m_pipeServer = new NamedPipeServerStream("ObjectPipe", PipeDirection.Out);
 
@@ -35,48 +36,33 @@ public partial class Client
         await Task.Delay(TimeSpan.FromHours(10), stoppingToken);
     }
 
-    private async void StartHost()
+    private async void CreateHost()
     {
         ClientTextBox.Text = "Starting";
 
         var host = Host.CreateDefaultBuilder(null)
             .ConfigureServices(services =>
             {
-                services.AddHostedService<Worker>();
+                services.AddHostedService<MessageListener>();
                 services.AddSingleton(ClientTextBox);
             })
             .Build();
 
-        await host.RunAsync();
+        await host.RunAsync();  // runs all registered services
     }
 
     private void SendObject_OnClick(object sender, RoutedEventArgs e)
     {
         // create a new instance of MyObject
-        CommonObject obj = new CommonObject { Id = new Random().Next(), Name = "John" };
+        var obj = new CommonObject { Id = new Random().Next() };
 
         // serialize the object into a JSON string
-        string jsonString = JsonSerializer.Serialize(obj);
-        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(jsonString);
-
-        //
-        // // open the named pipe and send the byte array
-        // using NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "ObjectPipe", PipeDirection.Out);
-        // pipeClient.Connect();
-        // pipeClient.Write(buffer, 0, buffer.Length);
-        // pipeClient.Flush();
+        var jsonString = JsonSerializer.Serialize(obj);
+        var buffer = Encoding.UTF8.GetBytes(jsonString);
         
-        if (!m_pipeServer.IsConnected) { return; }
-        // try
-        // {
-            m_pipeServer.Write(buffer, 0, buffer.Length);
-            m_pipeServer.Flush();
-            // Read user input and send that to the client process.
-            // m_sw = new StreamWriter(m_pipeServer);
-            // m_sw.AutoFlush = true;
-            //
-            // var nce = new Random().Next();
-            // await m_sw.WriteLineAsync(nce.ToString());
-        // }
+        if (!m_pipeServer.IsConnected) return;
+
+        m_pipeServer.Write(buffer, 0, buffer.Length);
+        m_pipeServer.Flush();
     }
 }

@@ -9,12 +9,12 @@ using Microsoft.Extensions.Logging;
 
 namespace Client48
 {
-    public class Worker : BackgroundService
+    public class MessageListener : BackgroundService
     {
-        private readonly ILogger<Worker> m_logger;
+        private readonly ILogger<MessageListener> m_logger;
         private readonly TextBox m_textBox;
 
-        public Worker(ILogger<Worker> logger, TextBox clientTextBox)
+        public MessageListener(ILogger<MessageListener> logger, TextBox clientTextBox)
         {
             m_logger = logger;
             m_textBox = clientTextBox;
@@ -40,10 +40,6 @@ namespace Client48
                     m_textBox.Text = temp;
                     m_logger.LogInformation("Received from server: {0}", temp);
                 }
-            
-                // this
-
-                // await Task.Delay(10000, stoppingToken);
             }
         }
     }
