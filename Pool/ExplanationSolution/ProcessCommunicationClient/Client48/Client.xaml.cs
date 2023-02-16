@@ -1,10 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO.Pipes;
-using System.Text;
-using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,53 +12,47 @@ namespace Client48;
 /// </summary>
 public partial class Client
 {
-    private NamedPipeServerStream m_pipeServer;
+    private IHost m_host;
+    private List<IHostedService> m_hostedServices;
+
 
     public Client()
     {
         InitializeComponent();
-        ClientTextBox.Text = "After initialize";
 
         CreateHost();
-
-        CreatePipeAndWaitForConnection(new CancellationToken());
     }
 
-    private async Task CreatePipeAndWaitForConnection(CancellationToken stoppingToken)
-    {
-        m_pipeServer = new NamedPipeServerStream("ObjectPipe", PipeDirection.Out);
-
-        await m_pipeServer.WaitForConnectionAsync(stoppingToken);
-        await Task.Delay(TimeSpan.FromHours(10), stoppingToken);
-    }
+    private MessageListener MessageListener => m_hostedServices.OfType<MessageListener>().Single();
+    private ObjectSender ObjectSender => m_hostedServices.OfType<ObjectSender>().Single();
 
     private async void CreateHost()
     {
-        ClientTextBox.Text = "Starting";
+        
 
-        var host = Host.CreateDefaultBuilder(null)
+        m_host = Host.CreateDefaultBuilder(null)
             .ConfigureServices(services =>
             {
                 services.AddHostedService<MessageListener>();
+                services.AddHostedService<ObjectSender>();
                 services.AddSingleton(ClientTextBox);
             })
             .Build();
 
-        await host.RunAsync();  // runs all registered services
+        m_hostedServices = m_host.Services.GetServices<IHostedService>().ToList();
+        
+        ClientTextBox.Text = "Host created";
+        await m_host.RunAsync();  // runs all registered 
     }
 
     private void SendObject_OnClick(object sender, RoutedEventArgs e)
     {
-        // create a new instance of MyObject
-        var obj = new CommonObject { Id = new Random().Next() };
+        ObjectSender.SendObject();
+    }
 
-        // serialize the object into a JSON string
-        var jsonString = JsonSerializer.Serialize(obj);
-        var buffer = Encoding.UTF8.GetBytes(jsonString);
-        
-        if (!m_pipeServer.IsConnected) return;
-
-        m_pipeServer.Write(buffer, 0, buffer.Length);
-        m_pipeServer.Flush();
+    private void Client_OnClosing(object sender, CancelEventArgs e)
+    {
+        m_host.StopAsync();
+        m_host.Dispose();
     }
 }
