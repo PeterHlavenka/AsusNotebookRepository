@@ -28,7 +28,7 @@ public class PipeSender : BackgroundService
             m_sw.AutoFlush = true;
            
             var nce = new Random().Next();
-            await m_sw.WriteLineAsync("Testg"+nce);
+            await m_sw.WriteLineAsync(nce.ToString());
         }
         // Catch the IOException that is raised if the pipe is broken
         // or disconnected.
