@@ -1,22 +1,22 @@
 ﻿using System;
 using System.IO;
 using System.IO.Pipes;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using log4net;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Client48
 {
     public class MessageListener : BackgroundService
     {
-        private readonly ILogger<MessageListener> m_logger;
+        private static readonly ILog m_log = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType?.Name);
         private readonly TextBox m_textBox;
 
-        public MessageListener(ILogger<MessageListener> logger, TextBox clientTextBox)
+        public MessageListener(TextBox clientTextBox)
         {
-            m_logger = logger;
             m_textBox = clientTextBox;
         }
 
@@ -24,21 +24,21 @@ namespace Client48
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                m_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                m_log.DebugFormat(@"Worker running at: {0}", DateTimeOffset.Now);
 
                 using var pipeClient = new NamedPipeClientStream(".", "stringPipe", PipeDirection.In);
 
                 // Connect to the pipe or wait until the pipe is available.
-                m_logger.LogInformation("Attempting to connect to pipe...");
+                m_log.Debug("Attempting to connect to pipe...");
                 await pipeClient.ConnectAsync(stoppingToken);
 
-                m_logger.LogInformation("Connected to pipe.");
+                m_log.Debug("Connected to pipe.");
 
                 using var sr = new StreamReader(pipeClient);
                 while (await sr.ReadLineAsync() is { } temp)
                 {
                     m_textBox.Text = temp;
-                    m_logger.LogInformation("Received from server: {0}", temp);
+                    m_log.DebugFormat("Received from server: {0}", temp);
                 }
             }
         }

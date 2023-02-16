@@ -87,8 +87,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+        <None Include="log4net.config">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
     <ItemGroup>
+      <PackageReference Include="log4net" Version="2.0.15" />
       <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
@@ -105,13 +109,6 @@
       <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.EventSource" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Primitives" Version="7.0.0" />

@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
+using log4net;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace Client48;
 
@@ -14,7 +17,7 @@ public partial class Client
 {
     private IHost m_host;
     private List<IHostedService> m_hostedServices;
-
+    private static readonly ILog m_log = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType?.Name);
 
     public Client()
     {
@@ -28,8 +31,7 @@ public partial class Client
 
     private async void CreateHost()
     {
-        
-
+        m_log.Debug($@" Creating host");
         m_host = Host.CreateDefaultBuilder(null)
             .ConfigureServices(services =>
             {
