@@ -1,5 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -33,11 +35,15 @@ public class ExternalPricingService : BackgroundService
         var pathToDotNet48WpfApplication = Path.Combine(dir, @"ProcessCommunicationClient\Client48\bin\Debug\Client48.exe");
         var startInfo = new ProcessStartInfo(pathToDotNet48WpfApplication)
         {
-            UseShellExecute = true,
+            UseShellExecute = false,
             Verb = "runas"
         };
+        
+        // signing of application
+        var certificate = new X509Certificate2(@"c:\Pool\Adwind_Kite\Adwind\Apps\Wind\Publish\Adwind_Code_Signing_Cert2020.pfx", "vetricek");
+        startInfo.EnvironmentVariables["ClickOnceCert"] = Convert.ToBase64String(certificate.RawData);
+        
         m_pricingProcess = Process.Start(startInfo);
-       
         return Task.CompletedTask;
     }
 
