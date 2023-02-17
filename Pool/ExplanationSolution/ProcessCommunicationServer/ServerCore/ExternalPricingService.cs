@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -22,7 +23,14 @@ public class ExternalPricingService : BackgroundService
     
     private Task LaunchDotNet48WpfApplication()
     {
-        var pathToDotNet48WpfApplication = @"d:\AsusNotebookRepository\Pool\ExplanationSolution\ProcessCommunicationClient\Client48\bin\Debug\Client48.exe";
+        var dir = Directory.GetCurrentDirectory();
+        for (var i = 0; i < 5; i++)
+        {
+            if (dir != null) dir = Directory.GetParent(dir)?.FullName;
+        }
+
+        if (dir == null) { return Task.CompletedTask; }
+        var pathToDotNet48WpfApplication = Path.Combine(dir, @"ProcessCommunicationClient\Client48\bin\Debug\Client48.exe");
         var startInfo = new ProcessStartInfo(pathToDotNet48WpfApplication)
         {
             UseShellExecute = true,
@@ -39,3 +47,6 @@ public class ExternalPricingService : BackgroundService
         await base.StopAsync(cancellationToken);
     }
 }
+
+// to asam
+// z:\srendl\ProcessCommunicationServer\ServerCore\bin\Debug\net6.0-windows\ServerCore.exe
