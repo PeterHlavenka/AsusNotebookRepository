@@ -1,17 +1,25 @@
 using System;
+using System.IO;
 using System.IO.Pipes;
+using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Pricing.Core;
+using Pricing.Core.Serialization;
 
 namespace Client48;
 
 public class ObjectSender : BackgroundService
 {
     private NamedPipeServerStream m_pipeServer;
+    private readonly DataContractSerializer m_serializer = new(typeof(PriceList), XmlPriceListItemSerializer.KnownTypes.Union(new[]
+    {
+        typeof(PriceListItemWrapper)
+    }));
     
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -27,14 +35,38 @@ public class ObjectSender : BackgroundService
         var obj = GetEmptyPriceList();
 
         // serialize the object into a JSON string
-        var jsonString = JsonSerializer.Serialize(obj);
-        var buffer = Encoding.UTF8.GetBytes(jsonString);
+        // var jsonString = JsonSerializer.Serialize(obj);
+        // var buffer = Encoding.UTF8.GetBytes(jsonString);
+
+        var str = SerializeWholePriceList(GetEmptyPriceList());
+        var buffer = Encoding.UTF8.GetBytes(str);
         
         if (!m_pipeServer.IsConnected) return;
 
         m_pipeServer.Write(buffer, 0, buffer.Length);
         m_pipeServer.Flush();
     }
+
+    private string SerializeWholePriceList(PriceList priceList)
+    {
+        using (MemoryStream memoryStream = new MemoryStream())
+        {
+            m_serializer.WriteObject(memoryStream, priceList);
+            memoryStream.Flush();
+
+            memoryStream.Seek(0, SeekOrigin.Begin);
+
+            string serializedPriceList = Encoding.UTF8.GetString(memoryStream.ToArray());
+            return serializedPriceList;
+        }
+    }
+    
+    // private static PriceListItemWrapper GetPriceListItemWrapper()
+    // {
+    //     var wrapper = new PriceListItemWrapper {Name = "New pricelist"};
+    //     wrapper.PriceListItem = new PriceListItem(wrapper.Id);
+    //     return wrapper;
+    // }
     
     private static PriceList GetEmptyPriceList()
     {
