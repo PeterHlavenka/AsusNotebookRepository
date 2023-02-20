@@ -112,6 +112,7 @@
       <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Primitives" Version="7.0.0" />
+      <PackageReference Include="Pricing.Service.Core" Version="14.1.1" />
       <PackageReference Include="System.Buffers" Version="4.5.1" />
       <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="7.0.1" />
       <PackageReference Include="System.IO" Version="4.3.0" />

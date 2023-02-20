@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
+using Pricing.Core;
 
 namespace Client48;
 
@@ -23,7 +24,7 @@ public class ObjectSender : BackgroundService
     public void SendObject()
     {
         // create a new instance of MyObject
-        var obj = new CommonObject { Id = new Random().Next() };
+        var obj = GetEmptyPriceList();
 
         // serialize the object into a JSON string
         var jsonString = JsonSerializer.Serialize(obj);
@@ -33,5 +34,16 @@ public class ObjectSender : BackgroundService
 
         m_pipeServer.Write(buffer, 0, buffer.Length);
         m_pipeServer.Flush();
+    }
+    
+    private static PriceList GetEmptyPriceList()
+    {
+        var pl = new PriceList(Guid.NewGuid(), true) {Name = "New empty pricelist"};
+        var group = new PriceListItemGroup {Name = "New group"};
+        var wrapper = new PriceListItemWrapper {Name = "New pricelist"};
+        wrapper.PriceListItem = new PriceListItem(wrapper.Id);
+        group.Items.Add(wrapper);
+        pl.Items.Add(group);
+        return pl;
     }
 }

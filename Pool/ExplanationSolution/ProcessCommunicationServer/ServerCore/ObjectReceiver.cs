@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Microsoft.Extensions.Hosting;
+using Pricing.Core;
 
 namespace ServerCore;
 
@@ -29,13 +30,13 @@ public class ObjectReceiver : BackgroundService
 
             try
             {
-                var buffer = new byte[1024];
+                var buffer = new byte[30000];
                 var read = await pipeClient.ReadAsync(buffer, 0, buffer.Length);
 
                 var jsonString2 = Encoding.UTF8.GetString(buffer).TrimEnd('\0');
-                var obj = JsonSerializer.Deserialize<CommonObject>(jsonString2);
+                var obj = JsonSerializer.Deserialize<PriceList>(jsonString2);
 
-                m_serverTextBox.Text = obj?.Id.ToString();
+                m_serverTextBox.Text = obj?.Name + " "+ new Random().Next();
             }
             catch (Exception exception) // kdyz se pipa zavre a JsonSerializer je v pulce procesu
             {
