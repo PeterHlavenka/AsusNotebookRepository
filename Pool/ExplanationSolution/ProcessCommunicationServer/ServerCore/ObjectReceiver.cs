@@ -40,7 +40,7 @@ public class ObjectReceiver : BackgroundService
             try
             {
                 var buffer = new byte[30000];
-                var read = await pipeClient.ReadAsync(buffer, 0, buffer.Length);
+                var read = await pipeClient.ReadAsync(buffer, 0, buffer.Length); // nesmi tu byt await !!
 
                 var jsonString2 = Encoding.UTF8.GetString(buffer).TrimEnd('\0');
 
@@ -56,16 +56,15 @@ public class ObjectReceiver : BackgroundService
         }
     }
     
-    private PriceList GetDeserializedPriceList(string serializedPriceList)
+    private PriceList? GetDeserializedPriceList(string serializedPriceList)
     {
-        using (StringReader stringReader = new StringReader(serializedPriceList))
+        using StringReader stringReader = new StringReader(serializedPriceList);
+        using XmlReader xmlReader = XmlReader.Create(stringReader);
+
+        if (m_serializer.ReadObject(xmlReader) is PriceList priceList)
         {
-            using (XmlReader xmlReader = XmlReader.Create(stringReader))
-            {
-                PriceList deserializedPriceList = (PriceList)m_serializer.ReadObject(xmlReader);
-                
-                return deserializedPriceList;
-            }
+            return priceList;
         }
+        throw new ArgumentException();
     }
 }

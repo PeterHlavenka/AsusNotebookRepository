@@ -32,12 +32,6 @@ public class ObjectSender : BackgroundService
     public void SendObject()
     {
         // create a new instance of MyObject
-        var obj = GetEmptyPriceList();
-
-        // serialize the object into a JSON string
-        // var jsonString = JsonSerializer.Serialize(obj);
-        // var buffer = Encoding.UTF8.GetBytes(jsonString);
-
         var str = SerializeWholePriceList(GetEmptyPriceList());
         var buffer = Encoding.UTF8.GetBytes(str);
         
@@ -49,25 +43,15 @@ public class ObjectSender : BackgroundService
 
     private string SerializeWholePriceList(PriceList priceList)
     {
-        using (MemoryStream memoryStream = new MemoryStream())
-        {
-            m_serializer.WriteObject(memoryStream, priceList);
-            memoryStream.Flush();
+        using MemoryStream memoryStream = new MemoryStream();
+        m_serializer.WriteObject(memoryStream, priceList);
+        memoryStream.Flush();
+        memoryStream.Seek(0, SeekOrigin.Begin);
 
-            memoryStream.Seek(0, SeekOrigin.Begin);
-
-            string serializedPriceList = Encoding.UTF8.GetString(memoryStream.ToArray());
-            return serializedPriceList;
-        }
+        string serializedPriceList = Encoding.UTF8.GetString(memoryStream.ToArray());
+        return serializedPriceList;
     }
-    
-    // private static PriceListItemWrapper GetPriceListItemWrapper()
-    // {
-    //     var wrapper = new PriceListItemWrapper {Name = "New pricelist"};
-    //     wrapper.PriceListItem = new PriceListItem(wrapper.Id);
-    //     return wrapper;
-    // }
-    
+
     private static PriceList GetEmptyPriceList()
     {
         var pl = new PriceList(Guid.NewGuid(), true) {Name = "New empty pricelist"};
