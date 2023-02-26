@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
+using CommonLibs.XSerialization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -24,13 +27,17 @@ public partial class Server
         InitializeComponent();
         DataContext = this;
         m_communicator = new Communicator();
+        XSerializator.RegisterAssembly(Assembly.GetAssembly(typeof(CommonObject)), true);
 
         CreateHost();
+        
+        AfterStartSender.StartAsync(new CancellationToken()); // will create a pipe 
     }
 
     private MesasageSender MessageSender => m_hostedServices.OfType<MesasageSender>().Single();
     private ExternalPricingService PricingService => m_hostedServices.OfType<ExternalPricingService>().Single();
     private ObjectReceiver ObjectReceiver => m_hostedServices.OfType<ObjectReceiver>().Single();
+    private ObjectSender AfterStartSender => m_hostedServices.OfType<ObjectSender>().Single();
 
     /// <summary>
     ///     Nastartuje host (pokud nebezi) a spusti registrovane servicy.
@@ -44,6 +51,7 @@ public partial class Server
                 services.AddHostedService<MesasageSender>();
                 services.AddHostedService<ExternalPricingService>();
                 services.AddHostedService<ObjectReceiver>();
+                services.AddHostedService<ObjectSender>();
                 services.AddSingleton(m_communicator); // pro dependency injection
                 services.AddSingleton(ServerTextBox);
             })
@@ -59,15 +67,27 @@ public partial class Server
         // start of all registered services doesnt work - second service will be cancelled by same token
         // await m_host.StartAsync(CancellationToken.None);  
         await PricingService.StartAsync(new CancellationToken()); // start of just one service
+        
+        CommonObjectsHolder commonObjectsHolder = null;
+        await PricingCodebooksInitializator.InitializeCodebooks(out commonObjectsHolder);
+        await AfterStartSender.SendObject(commonObjectsHolder);  // poslu holder
+        await AfterStartSender.SendObject(); // will send object immediatelly after start
         await MessageSender.StartAsync(new CancellationToken());
         await ObjectReceiver.StartAsync(new CancellationToken());
     }
 
 
-    private void SendMessage_OnClick(object sender, RoutedEventArgs e)
+    private async void SendMessage_OnClick(object sender, RoutedEventArgs e)
     {
         if (!PricingService.IsOpen) return;
-        MessageSender.SendMessage(this, EventArgs.Empty);
+        
+        CommonObjectsHolder commonObjectsHolder = null;
+        await PricingCodebooksInitializator.InitializeCodebooks(out commonObjectsHolder);
+        await AfterStartSender.SendObject(commonObjectsHolder);  // poslu holder
+        
+        // await AfterStartSender.SendObject(); 
+        // MessageSender.SendMessage(this, EventArgs.Empty);  // jiz pouzivam ObjectSender
+       
         // m_communicator.OnOnSendMessage(); // stejne tak by to slo zavolat na instanci 
     }
 
@@ -85,6 +105,7 @@ public partial class Server
         MessageSender?.StopAsync(CancellationToken.None); // stop just one service
         PricingService?.StopAsync(CancellationToken.None);
         ObjectReceiver?.StopAsync(CancellationToken.None);
+        AfterStartSender?.StopAsync(CancellationToken.None);
     }
 
     private void Server_OnClosing(object? sender, CancelEventArgs e)
@@ -94,4 +115,4 @@ public partial class Server
         m_host.StopAsync();
         m_host.Dispose();
     }
-}
+} 

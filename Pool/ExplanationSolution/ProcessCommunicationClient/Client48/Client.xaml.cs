@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
+using CommonLibs.XSerialization;
 using log4net;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +24,7 @@ public partial class Client
     {
         InitializeComponent();
 
+        XSerializator.RegisterAssembly(Assembly.GetAssembly(typeof(CommonObject)), true);
         CreateHost();
     }
 
@@ -38,6 +40,7 @@ public partial class Client
                 services.AddHostedService<MessageListener>();
                 services.AddHostedService<ObjectSender>();
                 services.AddSingleton(ClientTextBox);
+                services.AddHostedService<ObjectReceiver>();
             })
             .Build();
 

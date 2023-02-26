@@ -13,6 +13,7 @@
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
       <PackageReference Include="Pricing.Service.Core" Version="14.1.1" />
+      <PackageReference Include="XSerialization" Version="3.0.1" />
     </ItemGroup>
 
 </Project>
