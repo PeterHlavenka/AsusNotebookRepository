@@ -6,9 +6,10 @@ using System.Windows.Media;
 using Syncfusion.Windows.Controls.Grid;
 using System.Reflection;
 using Syncfusion.SfSkinManager;
-using SyncfusionThemeRegistrator;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using Syncfusion.Licensing;
+using Syncfusion.UI.Xaml.Charts;
 
 namespace GridControlSample
 {
@@ -21,6 +22,7 @@ namespace GridControlSample
 
         public MainWindow()
         {
+            SyncfusionLicenseProvider.RegisterLicense("MjQ5NDI1N0AzMjMyMmUzMDJlMzBPdnZkdEw4L1haUDk3MlJ6UUxFSXUvcEROUVFVeWI1WWplRGlycEg5QjhBPQ==");
             InitializeComponent();
 
             SfThemeRegistrator.RegisterTheme(VisualStyles.Office2019Colorful);
@@ -54,6 +56,23 @@ namespace GridControlSample
             
             if (int.TryParse(obj?.ToString(), out var result) && result > 0)
                 m_scrollJump = result;
+            
+            // sfchart v bunce [1,1]
+            var chart = new SfChart();
+            chart.Width = 200;
+            chart.Height = 200;
+            chart.PrimaryAxis = new DateTimeAxis();
+            chart.SecondaryAxis = new NumericalAxis();
+            chart.SecondaryAxis.FontSize = 30;
+            //var value = new GridControlCellBinding(chart, HorizontalAlignment.Center, VerticalAlignment.Center);
+   
+            GridStyleInfo info = grid.Model[1, 1];
+            //info.CellType = GridControlCellBinding.CellType;
+            //          info.CellItemTemplateKey = GridControlCellBinding.CellTemplate;
+            //info.CellValue = value;
+            grid.Model.ColumnWidths[1] = chart.Width;
+            grid.Model.RowHeights[1] = chart.Height;
+            grid.Model[1, 1].CellValue = chart;
         }
 
         private void Model_SelectionChanged(object sender, GridSelectionChangedEventArgs e)
@@ -118,6 +137,26 @@ namespace GridControlSample
                     grid.InvalidateArrange();
                 }
             }
+        }
+
+        private void HideColumn(object sender, RoutedEventArgs e)
+        {
+            grid.Model.ColumnWidths.SetHidden(0, 0, true);
+        }
+        
+        private void ShowColumn(object sender, RoutedEventArgs e)
+        {
+            grid.Model.ColumnWidths.SetHidden(0, 0, false);
+        }
+        
+        private void HideRow(object sender, RoutedEventArgs e)
+        {
+            grid.Model.RowHeights.SetHidden(2, grid.Model.RowCount -1, true);
+        }
+        
+        private void ShowRow(object sender, RoutedEventArgs e)
+        {
+            grid.Model.RowHeights.SetHidden(2, grid.Model.RowCount -1, false);
         }
     }
 }

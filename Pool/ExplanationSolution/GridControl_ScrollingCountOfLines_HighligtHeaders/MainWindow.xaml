@@ -3,19 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         Title="MainWindow"
-        Width="820"
-        Height="530">
-
+        WindowState="Maximized">
+<Window.Resources>
+    <Style TargetType="Button">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="150"/>
+    </Style>
+</Window.Resources>
     <Grid Name="ParentGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
         <Button Width="200" Margin="10" Height="30">AdwindStyledButton</Button>
-        <ScrollViewer Grid.Row="1" CanContentScroll="True" x:Name="scrollViewer"
+        <ScrollViewer Grid.Row="1" Grid.Column="0" CanContentScroll="True" x:Name="scrollViewer"
                       HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto">
-            <syncfusion:GridControl x:Name="grid" PreviewMouseWheel="Grid_OnPreviewMouseWheel"/>
+            <syncfusion:GridControl x:Name="grid" PreviewMouseWheel="Grid_OnPreviewMouseWheel" />
         </ScrollViewer>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <Button Content="Hide first column" Click="HideColumn"/>
+            <Button Content="Show first column" Click="ShowColumn"/>
+            <Button Content="Hide row" Click="HideRow"/>
+            <Button Content="Show row" Click="ShowRow"/>
+        </StackPanel>
     </Grid>
 </Window>
