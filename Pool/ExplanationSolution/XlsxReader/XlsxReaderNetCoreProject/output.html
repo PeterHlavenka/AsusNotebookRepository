@@ -1,0 +1,54 @@
+﻿<html>
+  <head />
+  <style id="tabpart" type="text/css">
+.X1{color:rgb(0,0,0);font-family:Calibri, sans-serif;font-size:11pt;white-space:nowrap;border-top-color:rgb(0,0,0);border-bottom-color:rgb(0,0,0);border-left-color:rgb(0,0,0);border-right-color:rgb(0,0,0);vertical-align:bottom;}</style>
+  <body id="bg_img" style="overflow: hidden">
+    <div>
+      <div style="overflow:auto;position:absolute;width:100%;left:2;top:2;bottom:35px;">
+        <div id="link1_content" style="display:inline-block;overflow:hidden;">
+          <table cellspacing="0" width="192" style="table-layout:fixed;border-collapse:collapse;width:144pt">
+            <Col width="64" />
+            <Col width="64" />
+            <Col width="64" />
+            <tr height="20">
+              <td class="X1" style="text-align:left;">
+                <span>ahoj</span>
+              </td>
+              <td class="X1" style="text-align:left;">
+                <span>nazdar</span>
+              </td>
+              <td class="X1" style="text-align:left;">
+                <span>cao</span>
+              </td>
+            </tr>
+            <tr height="20">
+              <td class="X1" style="text-align:right;">
+                <span>1</span>
+              </td>
+              <td class="X1" style="text-align:right;">
+                <span>2</span>
+              </td>
+              <td class="X1" style="text-align:right;">
+                <span>3</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="footer" style="position: absolute; overflow:auto; bottom: 0px;left:0; width:100%; background-color:#808080; background-repeat:repeat-x ; height:35px ">
+        <table border="0" bgColor="#808080">
+          <tr>
+            <td id="td1" nowrap="" style="background-color:#FFFFFF">
+              <b>
+                <small>
+                  <small>&nbsp;<a id="link1" onclick="hyperclick(this)" href="#" style="text-decoration:none"><font face="Verdana" color="#000000" font-size="13Px">List1</font></a>&nbsp;</small>
+                </small>
+              </b>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript"> function hyperclick(test) {var content = test.id; content = content + "_content";var count =1;var images =["data:image/;base64,"];for (var i = 1;i <= count; i++) {var formatName = "link" + i + "_content";if (content == formatName) {document.getElementById(formatName).style.display = "block";document.getElementById("td" + i).style.backgroundColor = "FFFFFF";var divChildrenCount = document.getElementById(formatName).childNodes.length;for (var j = 0; j <  divChildrenCount; j++){if(document.getElementById(formatName).childNodes[j].nodeName.toLocaleUpperCase() == "TABLE"){document.getElementById(formatName).style.height = document.getElementById(formatName).childNodes[j].scrollHeight+"px";document.getElementById(formatName).style.width = document.getElementById(formatName).childNodes[j].scrollWidth+"px";break;}} var img_Id = document.getElementById('bg_img');var k=i-1;img_Id.style.backgroundImage="url('"+images[k]+"')";}else {document.getElementById(formatName).style.display = "none";document.getElementById("td" + i).style.backgroundColor = "gray";}}}window.onload = function(){var count =1;var images =["data:image/;base64,"];for (var i = 1; i <= count; i++){var formatName = "link" + i + "_content";if("block" == document.getElementById(formatName).style.display ){var divChildrenCount = document.getElementById(formatName).childNodes.length;for (var j = 0; j <  divChildrenCount; j++){if(document.getElementById(formatName).childNodes[j].nodeName.toLocaleUpperCase() == "TABLE"){document.getElementById(formatName).style.height = document.getElementById(formatName).childNodes[j].scrollHeight+"px";document.getElementById(formatName).style.width = document.getElementById(formatName).childNodes[j].scrollWidth+"px";}}var img_Id = document.getElementById('bg_img');var k=i-1;img_Id.style.backgroundImage ="url('"+images[k]+"')";}}}</script>
+    </div>
+  </body>
+</html>

@@ -2,8 +2,11 @@
 
 using System;
 using System.IO;
+using Syncfusion.Licensing;
 using Syncfusion.XlsIO;
 using XlsxReaderNetCoreProject;
+
+SyncfusionLicenseProvider.RegisterLicense("MjQ5NDI1N0AzMjMyMmUzMDJlMzBPdnZkdEw4L1haUDk3MlJ6UUxFSXUvcEROUVFVeWI1WWplRGlycEg5QjhBPQ==");
 
 var helper = new Helper();
 string directory = Directory.GetCurrentDirectory();
@@ -33,5 +36,9 @@ for (var row = 1; row <= lastRow; row++)
 
 //Save workbook
 string outputFileName = Path.Combine(directory, "output.xlsx");
-using var fileStream = new FileStream(outputFileName, FileMode.Create);
+using var fileStream = new FileStream(outputFileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
 workbook.SaveAs(fileStream);
+
+outputFileName = Path.Combine(directory, "output.html");
+using var htmlFileStream = new FileStream(outputFileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+workbook.SaveAsHtml(htmlFileStream);
