@@ -36,7 +36,7 @@ namespace SyncfusionGridControl
 
 
             // 3.Naplnim bunky explicitne (Syncfusni indexuji explicitne)  [row, column]:
-            GridControl.Model[1, 1].CellValue = "KFC_2";
+            GridControl.Model[1, 1].CellValue = "KFC_2razdvatrictyri";
             GridControl.Model[2, 1].CellValue = "KFC_1";
 
             GridControl.Model[1, 2].CellValue = "";
@@ -82,7 +82,9 @@ namespace SyncfusionGridControl
             {
                 var mySheet = workbook.Worksheets[0];
                 var range = mySheet.UsedRange.IntersectWith(mySheet.Range[1, 1, 100, 255]);
+                
                 range.AutofitColumns();
+                range.IndentLevel = 5; // posunu se o 5, ale sirka sloupce je mi jedno - kus stringu nebude videt.. 
             }
 
 
