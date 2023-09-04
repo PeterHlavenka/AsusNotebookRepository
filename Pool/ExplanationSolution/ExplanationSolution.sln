@@ -211,6 +211,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SfDataGrid", "SfDataGrid", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RibbonAndBackstage", "RibbonAndBackstage", "{191E7C60-2FF2-4100-BEB9-3E80769A77DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoExcelFilesAndConvertItToPdf", "MergeTwoExcelFilesAndConvertItToPdf\MergeTwoExcelFilesAndConvertItToPdf.csproj", "{C5268CC1-CE78-455F-B779-DC54313E4C18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -541,6 +543,10 @@ Global
 		{F4CB0181-B085-403B-B09E-067C0723B76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4CB0181-B085-403B-B09E-067C0723B76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4CB0181-B085-403B-B09E-067C0723B76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5268CC1-CE78-455F-B779-DC54313E4C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5268CC1-CE78-455F-B779-DC54313E4C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5268CC1-CE78-455F-B779-DC54313E4C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5268CC1-CE78-455F-B779-DC54313E4C18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -626,6 +632,7 @@ Global
 		{191E7C60-2FF2-4100-BEB9-3E80769A77DC} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{DD9265AF-FF4E-4B41-9F13-27FF6FBCFF39} = {191E7C60-2FF2-4100-BEB9-3E80769A77DC}
 		{3DD0B248-CEAF-4220-A260-3FB311BA02D0} = {A945145E-EFB2-4257-8ED9-B0A66806C910}
+		{C5268CC1-CE78-455F-B779-DC54313E4C18} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
