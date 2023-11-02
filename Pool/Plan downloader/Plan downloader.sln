@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan downloader", "Plan downloader\Plan downloader.csproj", "{FFF537B0-64C3-43EF-AFD5-904E8374601E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF537B0-64C3-43EF-AFD5-904E8374601E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF537B0-64C3-43EF-AFD5-904E8374601E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF537B0-64C3-43EF-AFD5-904E8374601E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF537B0-64C3-43EF-AFD5-904E8374601E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

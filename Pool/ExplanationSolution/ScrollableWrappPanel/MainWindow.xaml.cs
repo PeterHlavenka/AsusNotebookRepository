@@ -23,7 +23,7 @@ public partial class MainWindow
         
         var wrapPanelFactory = new FrameworkElementFactory(typeof(WrapPanel));
         wrapPanelFactory.SetValue(MaxWidthProperty, 600d);
-        wrapPanelFactory.SetValue(MaxHeightProperty, 800d);
+        // wrapPanelFactory.SetValue(MaxHeightProperty, 800d);
 
         // scrollFactory.AppendChild(wrapPanelFactory);
         // stackFactory.AppendChild(scrollFactory);  // nejde
