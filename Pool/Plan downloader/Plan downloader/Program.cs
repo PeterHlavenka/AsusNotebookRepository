@@ -6,7 +6,7 @@ static async Task Main()
 {
     var url = "https://www.zsplesivec.cz/data/files/343plan-8.a.pdf";
     var baseFileName = "Plan-8A.pdf"; // The base filename
-    var folderPath = @"C:\Users\phlavenka\Documents\PlanyPlesivec\"; // Folder where the file will be saved
+    var folderPath = @"C:\Users\phlavenka\Google Drive\PlanyPlesivec\"; // Folder where the file will be saved
     var emailRecipient = "peter.x.hlavenka.consultant@nielsen.com";
 
     try

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6to8upgrade", "6to8upgrade\6to8upgrade.csproj", "{0FE03AC4-4B32-4C75-8A21-C2950083ED3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FE03AC4-4B32-4C75-8A21-C2950083ED3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE03AC4-4B32-4C75-8A21-C2950083ED3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE03AC4-4B32-4C75-8A21-C2950083ED3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE03AC4-4B32-4C75-8A21-C2950083ED3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
