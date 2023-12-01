@@ -59,7 +59,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\De
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\Telerik.Windows.Diagrams.Core.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\bin\Debug\log4net.xml
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.AssemblyReference.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.SuggestedBindingRedirects.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\MainWindow.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\App.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged_MarkupCompile.cache

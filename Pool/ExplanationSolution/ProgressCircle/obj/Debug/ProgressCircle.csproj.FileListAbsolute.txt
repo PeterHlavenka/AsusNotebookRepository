@@ -60,7 +60,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\bin\Debug\ru\X
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.AssemblyReference.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.SuggestedBindingRedirects.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\MainWindow.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\App.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle_MarkupCompile.cache

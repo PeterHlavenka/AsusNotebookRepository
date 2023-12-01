@@ -34,7 +34,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\log4net.dll
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\bin\Debug\log4net.xml
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.AssemblyReference.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.SuggestedBindingRedirects.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\MainWindow.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\App.g.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani_MarkupCompile.cache
