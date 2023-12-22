@@ -16,6 +16,6 @@ namespace SfChartFontInReview
     public partial class App : Application
     {
      
-        // SyncfusionLicenseProvider.RegisterLicense("NzUzNDc0QDMyMzAyZTMzMmUzMFU1cGpYVCtsc3hialpNMU9yM082a1BhUktzbU1tV252bHJkaFlkVk5rMEE9");
+       
     }
 }

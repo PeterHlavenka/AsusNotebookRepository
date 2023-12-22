@@ -5,45 +5,40 @@ using Syncfusion.UI.Xaml.Charts;
 
 namespace SfChartFontInReview;
 
-/// <summary>
-///     Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+public partial class LineChart : UserControl
 {
     private const Orientation LegendOrientation = Orientation.Horizontal;
     private const double MaxLegendHeight = 200d;
     private const double MaxLegendWidth = 150d;
 
-    public MainWindow()
+    public LineChart()
     {
         InitializeComponent();
 
         // Create a new chart control
-        SfChart chart = new SfChart();
+        var chart = new SfChart();
         chart.Margin = new Thickness(20);
-        chart.Width = 200;
-        chart.Height = 200;
+        chart.Width = 800;
+        chart.Height = 500;
 
         // Create a primary axis (X-axis)
-        CategoryAxis primaryAxis = new CategoryAxis();
+        var primaryAxis = new CategoryAxis();
         chart.PrimaryAxis = primaryAxis;
 
         // Create a secondary axis (Y-axis)
-        NumericalAxis secondaryAxis = new NumericalAxis();
+        var secondaryAxis = new NumericalAxis();
         chart.SecondaryAxis = secondaryAxis;
 
         // Create a series (LineSeries in this example)
-        LineSeries series = new LineSeries();
+        var series = new LineSeries();
         series.ItemsSource = GetChartData(); // Provide your data source here
-        series.XBindingPath = "XValue";     // Property for X-values
-        series.YBindingPath = "YValue";     // Property for Y-values
+        series.XBindingPath = "XValue"; // Property for X-values
+        series.YBindingPath = "YValue"; // Property for Y-values
         chart.Series.Add(series);
         chart.Legend = CreateLegend();
-        // Add the chart to the content of the page
-        // Content = chart;
 
-         Grid.Children.Add(chart);
-         Content = chart.Legend;
+        // Add the chart to the Grid
+        Grid.Children.Add(chart);
     }
 
     private ChartLegend CreateLegend()
