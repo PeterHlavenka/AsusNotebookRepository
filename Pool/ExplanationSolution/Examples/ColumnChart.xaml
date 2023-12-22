@@ -11,12 +11,12 @@
         <syncfusion:SfChart Header="Chart" Height="300" Width="500">
             <!--Initialize the horizontal axis for SfChart-->
             <syncfusion:SfChart.PrimaryAxis>
-                <syncfusion:CategoryAxis Header="Name" FontSize="14" />
+                <syncfusion:CategoryAxis Margin="00,0,0,0" Header="Name" FontSize="14" PlotOffsetStart="50"/>
             </syncfusion:SfChart.PrimaryAxis>
 
             <!--Initialize the vertical axis for SfChart-->
-            <syncfusion:SfChart.SecondaryAxis>
-                <syncfusion:NumericalAxis Header="Height(in cm)" FontSize="14" />
+            <syncfusion:SfChart.SecondaryAxis >
+                <syncfusion:NumericalAxis Header="Height(in cm)" FontSize="14" Margin="-0,0,0,0"/>
             </syncfusion:SfChart.SecondaryAxis>
 
             <!--Adding Legend to the SfChart-->
@@ -25,10 +25,10 @@
             </syncfusion:SfChart.Legend>
 
             <!--Initialize the series for SfChart-->
-            <syncfusion:ColumnSeries Label="Heights" x:Name="ColumnSeries"
+            <syncfusion:ColumnSeries Label="Heights" x:Name="ColumnSeries" Margin="-50,0,0,0"  
                                      XBindingPath="Name" YBindingPath="Height" ShowTooltip="True">
                 <syncfusion:ColumnSeries.AdornmentsInfo>
-                    <syncfusion:ChartAdornmentInfo ShowLabel="True" />
+                    <syncfusion:ChartAdornmentInfo ShowLabel="True"  Background="Orange" LabelPosition="Inner"/>
                 </syncfusion:ColumnSeries.AdornmentsInfo>
             </syncfusion:ColumnSeries>
 
