@@ -1,0 +1,28 @@
+﻿<Window x:Class="Diagram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diagram"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        WindowState="Maximized">
+   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <syncfusion:SfDiagramRibbon Grid.Row="0" DataContext="{Binding ElementName=diagram}"/>
+
+        
+        <!--Initializes the SfDiagram in XMAL window-->
+        <syncfusion:SfDiagram Grid.Row="1" x:Name="diagram">
+            <syncfusion:SfDiagram.Theme>
+                <syncfusion:OfficeTheme/>                
+            </syncfusion:SfDiagram.Theme>
+        </syncfusion:SfDiagram>
+    </Grid>
+</Window>

@@ -223,6 +223,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2dbTests2", "Linq2dbTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject5", "TestProject5\TestProject5.csproj", "{4A565D27-2F7E-46F2-99A9-457C860AE233}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagram", "Diagram\Diagram.csproj", "{CB454D19-B039-43F5-AB24-77CA8C771444}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -577,6 +579,10 @@ Global
 		{4A565D27-2F7E-46F2-99A9-457C860AE233}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A565D27-2F7E-46F2-99A9-457C860AE233}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A565D27-2F7E-46F2-99A9-457C860AE233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB454D19-B039-43F5-AB24-77CA8C771444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB454D19-B039-43F5-AB24-77CA8C771444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB454D19-B039-43F5-AB24-77CA8C771444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB454D19-B039-43F5-AB24-77CA8C771444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -669,6 +675,7 @@ Global
 		{73E3E052-A443-4ABD-97EC-7BEDDE353ECF} = {441D2628-A4C2-40F2-A979-4AFFFAB2465F}
 		{503B75D6-271A-4F38-972F-61F4F7325A74} = {441D2628-A4C2-40F2-A979-4AFFFAB2465F}
 		{4A565D27-2F7E-46F2-99A9-457C860AE233} = {441D2628-A4C2-40F2-A979-4AFFFAB2465F}
+		{CB454D19-B039-43F5-AB24-77CA8C771444} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

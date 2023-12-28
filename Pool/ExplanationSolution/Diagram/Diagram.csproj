@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Syncfusion.Licensing" Version="24.1.43" />
+      <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="24.1.43" />
+      <PackageReference Include="Syncfusion.SfDiagramRibbon.WPF" Version="24.1.43" />
+    </ItemGroup>
+
+</Project>
