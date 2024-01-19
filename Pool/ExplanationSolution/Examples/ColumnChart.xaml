@@ -5,13 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:converters="clr-namespace:SfChartFontInReview"
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance converters:ColumnChart }">
+    <UserControl.Resources>
+        <converters:OffsetConverter x:Key="OffsetConverter"/>
+    </UserControl.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        <syncfusion:SfChart Header="Chart" Height="300" Width="500">
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Add column" Margin="5" Click="AddButton_Click"/>
+            <Button Content="Remove column" Margin="5" Click="RemoveButton_Click"/>
+        </StackPanel>
+
+        <syncfusion:SfChart Grid.Row="1" Header="Chart" Height="500" Width="1000">
             <!--Initialize the horizontal axis for SfChart-->
             <syncfusion:SfChart.PrimaryAxis>
-                <syncfusion:CategoryAxis Margin="00,0,0,0" Header="Name" FontSize="14" PlotOffsetStart="50"/>
+                <syncfusion:CategoryAxis Name="CategoryAxis" Margin="0,0,0,0" Header="Name" FontSize="14" PlotOffsetStart="100" Interval="1"/>
             </syncfusion:SfChart.PrimaryAxis>
 
             <!--Initialize the vertical axis for SfChart-->
@@ -25,8 +39,16 @@
             </syncfusion:SfChart.Legend>
 
             <!--Initialize the series for SfChart-->
-            <syncfusion:ColumnSeries Label="Heights" x:Name="ColumnSeries" Margin="-50,0,0,0"  
+            <syncfusion:ColumnSeries Label="Heights" x:Name="ColumnSeries" 
+                                    
+                                     syncfusion:ChartSeriesBase.Spacing="0" SegmentSpacing="0.2"                                   
                                      XBindingPath="Name" YBindingPath="Height" ShowTooltip="True">
+                <syncfusion:ColumnSeries.Margin>
+                    <MultiBinding Converter="{StaticResource OffsetConverter}">
+                        <Binding ElementName="ColumnSeries" Path="ItemsSource.Count"/>
+                        <Binding ElementName="CategoryAxis" Path="PlotOffsetStart"/>
+                    </MultiBinding>
+                </syncfusion:ColumnSeries.Margin>
                 <syncfusion:ColumnSeries.AdornmentsInfo>
                     <syncfusion:ChartAdornmentInfo ShowLabel="True"  Background="Orange" LabelPosition="Inner"/>
                 </syncfusion:ColumnSeries.AdornmentsInfo>
