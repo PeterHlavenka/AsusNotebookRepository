@@ -2,7 +2,7 @@
 using Syncfusion.Licensing;
 using Syncfusion.XlsIO;
 
-SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF1cWWhIf0x0Qnxbf1xzZFFMZFlbRHJPMyBoS35RdURiW31edHBQRmReVk1+");
+SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF1cWWhIfEx1RHxQdld5ZFRHallYTnNWUj0eQnxTdEFjX35ZcHNQTmVUUkN2Vg==");
 
 using var excelEngine = new ExcelEngine();
 var application = excelEngine.Excel;
@@ -65,6 +65,9 @@ iconSet.IconCriteria[1].Value = "50";
 iconSet.IconCriteria[2].Type = ConditionValueType.Percent;
 iconSet.IconCriteria[2].Value = "50";
 iconSet.ShowIconOnly = true;
+
+var usedRange = worksheet.UsedRange;
+usedRange.AutofitColumns();
 
 //Saving the workbook as stream
 var stream = new FileStream("ConditionalFormatting.xlsx", FileMode.Create, FileAccess.ReadWrite);
