@@ -1,6 +1,7 @@
 ﻿// Create a worksheet.        
 
 using System.Diagnostics;
+using System.Globalization;
 using Syncfusion.Licensing;
 using Syncfusion.XlsIO;
 
@@ -12,36 +13,35 @@ var workbook = application.Workbooks.Create(1);
 var worksheet = workbook.Worksheets[0];
 
 // Load data to Apply Conditional Formatting.
-worksheet["A1"].Text = "ColorScale";
-worksheet["A2"].Number = 10;
-worksheet["A3"].Number = 20;
-worksheet["A4"].Number = 30;
-worksheet["A5"].Number = 40;
-worksheet["A6"].Number = 50;
-worksheet["A7"].Number = 60;
-worksheet["A8"].Number = 70;
-worksheet["A9"].Number = 80;
-worksheet["A10"].Number = 90;
-worksheet["A11"].Number = 100;
+worksheet["A1"].Value = "4:06:31";
+worksheet["A2"].Value = "4:06:31";
+worksheet["A3"].Value = "3:55:43";
+worksheet["A4"].Value = "3:42:42";
+worksheet["A5"].Value = "3:27:04";
+worksheet["A6"].Value = "3:28:56";
+worksheet["A7"].Value = "3:13:14";
+worksheet["B1"].Value = "0:13:54";
+worksheet["B2"].Value = "0:13:27";
+worksheet["B3"].Value = "0:12:48";
+worksheet["B4"].Value = "0:11:43";
 
 // Create instance of IConditonalFormat and IConditionalFormats.
-var formats = worksheet["A2:A11"].ConditionalFormats;
+var formats = worksheet["A1:A7"].ConditionalFormats;
 var format = formats.AddCondition();
-
-// Set FormatType as ColorScale.
 format.FormatType = ExcelCFType.ColorScale;
 var colorScale = format.ColorScale;
-
-// Set 3 as count for color scale
 colorScale.SetConditionCount(3);
 
 colorScale.Criteria[0].Type = ConditionValueType.Number;
-colorScale.Criteria[0].Value = "10";
-// Change Threshold value for 2nd object in Critera list.
-// colorScale.Criteria[1].Value = "20";
-
+colorScale.Criteria[1].Type = ConditionValueType.Number;
 colorScale.Criteria[2].Type = ConditionValueType.Number;
-colorScale.Criteria[2].Value = "90";
+
+colorScale.Criteria[0].Value = (TimeSpan.Parse("03:13:14").TotalSeconds / 84600).ToString(CultureInfo.InvariantCulture);
+colorScale.Criteria[1].Value = (TimeSpan.Parse("03:28:56").TotalSeconds / 84600).ToString(CultureInfo.InvariantCulture);
+colorScale.Criteria[2].Value = (TimeSpan.Parse("04:06:31").TotalSeconds / 84600).ToString(CultureInfo.InvariantCulture);
+
+
+
 
 // Save and Dispose.
 var outputStream = new FileStream("ConditionalFormat.xlsx", FileMode.Create, FileAccess.Write);

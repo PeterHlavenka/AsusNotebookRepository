@@ -231,6 +231,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Export", "Export", "{0B4B20
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorScaleExport", "ColorScaleExport\ColorScaleExport.csproj", "{F040277B-6462-4483-A194-35ABBE249CC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorScaleExportTimeSpan", "ColorScaleExportTimeSpan\ColorScaleExportTimeSpan.csproj", "{50D0F89B-5E49-467F-87C4-96647269AEAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -597,6 +599,10 @@ Global
 		{F040277B-6462-4483-A194-35ABBE249CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F040277B-6462-4483-A194-35ABBE249CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F040277B-6462-4483-A194-35ABBE249CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D0F89B-5E49-467F-87C4-96647269AEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D0F89B-5E49-467F-87C4-96647269AEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D0F89B-5E49-467F-87C4-96647269AEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D0F89B-5E49-467F-87C4-96647269AEAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -693,6 +699,7 @@ Global
 		{0B4B20B3-8E03-4DAD-B1AE-81182AB35E45} = {66A3599C-E989-4D7C-8347-A752643B4A63}
 		{F040277B-6462-4483-A194-35ABBE249CC1} = {0B4B20B3-8E03-4DAD-B1AE-81182AB35E45}
 		{4830A17B-78C9-40A8-AD82-4061B7885C17} = {0B4B20B3-8E03-4DAD-B1AE-81182AB35E45}
+		{50D0F89B-5E49-467F-87C4-96647269AEAD} = {0B4B20B3-8E03-4DAD-B1AE-81182AB35E45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
