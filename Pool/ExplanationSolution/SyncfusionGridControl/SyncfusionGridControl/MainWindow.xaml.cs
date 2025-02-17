@@ -59,6 +59,8 @@ namespace SyncfusionGridControl
             GridControl.Model.HeaderStyle.TextWrapping = TextWrapping.Wrap;
             GridControl.Model.HeaderStyle.TextTrimming = TextTrimming.None;
             // GridControl.Model.ResizeRowsToFit(GridRangeInfo.Row(0), GridResizeToFitOptions.None);
+            
+            GridControl.Model.Options.ActivateCurrentCellBehavior = GridCellActivateAction.SelectAll;
         }
 
         private void GridPrepareRenderCell(object sender, GridPrepareRenderCellEventArgs e)

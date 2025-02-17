@@ -34,7 +34,7 @@ namespace GridControlSample
             grid.Model.HeaderRows = 2;
             grid.Model.HeaderColumns = 3;
             grid.Model.HeaderStyle.Background = new SolidColorBrush(Colors.WhiteSmoke);
-            grid.Model.Options.ActivateCurrentCellBehavior = GridCellActivateAction.DblClickOnCell;
+            grid.Model.Options.ActivateCurrentCellBehavior = GridCellActivateAction.SetCurrent;
 
             grid.Model.QueryCellInfo += Model_QueryCellInfo;
             grid.Model.SelectionChanged += Model_SelectionChanged;
@@ -102,6 +102,8 @@ namespace GridControlSample
                 {
                     e.Style.Background = new SolidColorBrush(Colors.Chartreuse);
                     e.Style.Font.FontWeight = FontWeights.Bold;
+                    e.Style.ShowTooltip = true;
+                    e.Style.ToolTip = "Selected";
                 }
                 
             }

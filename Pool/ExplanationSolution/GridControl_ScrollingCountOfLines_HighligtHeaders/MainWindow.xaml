@@ -23,7 +23,8 @@
         <ScrollViewer Grid.Row="1" Grid.Column="0" CanContentScroll="True" x:Name="scrollViewer"
                       HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto">
-            <syncfusion:GridControl x:Name="grid" PreviewMouseWheel="Grid_OnPreviewMouseWheel" />
+            <syncfusion:GridControl x:Name="grid" PreviewMouseWheel="Grid_OnPreviewMouseWheel" syncfusion:GridTooltipService.ShowTooltips="True"
+                                    />
         </ScrollViewer>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
             <Button Content="Hide first column" Click="HideColumn"/>
