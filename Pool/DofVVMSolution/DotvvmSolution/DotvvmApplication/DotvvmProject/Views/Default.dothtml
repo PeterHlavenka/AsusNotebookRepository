@@ -1,4 +1,4 @@
-﻿@viewModel DotvvmApplication.ViewModels.DefaultViewModel, DotvvmApplication
+﻿@viewModel DotvvmProject.ViewModels.DefaultViewModel, DotvvmProject
 @masterPage Views/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
 

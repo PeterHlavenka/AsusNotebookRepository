@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Routing;
 
-namespace DotvvmApplication
+namespace DotvvmProject
 {
     public class Startup
     {

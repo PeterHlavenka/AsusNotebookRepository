@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DotVVM.Framework.ViewModel;
 
-namespace DotvvmApplication.ViewModels
+namespace DotvvmProject.ViewModels
 {
     public class MasterPageViewModel : DotvvmViewModelBase
     {
