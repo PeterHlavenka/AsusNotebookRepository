@@ -14,6 +14,13 @@ namespace DotvvmProject.ViewModels
 		public DefaultViewModel()
 		{
 			Title = "Hello from DotVVM!";
+			// zde je k dispozici trida Context, diky ktere muzeme provadet treba redirect na jinou stranku
+		}
+		
+		// zde jsou napriklad commandy
+		public void SayHello()
+		{
+			Title = "Hello world";
 		}
 
     }

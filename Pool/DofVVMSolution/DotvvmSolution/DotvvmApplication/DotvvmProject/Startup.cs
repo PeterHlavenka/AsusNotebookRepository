@@ -10,6 +10,9 @@ using DotVVM.Framework.Routing;
 
 namespace DotvvmProject
 {
+    /// <summary>
+    /// Stara se o nastartovani a zavedeni cele aplikace
+    /// </summary>
     public class Startup
     {
 
@@ -70,7 +73,7 @@ namespace DotvvmProject
             var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(env.ContentRootPath);
             dotvvmConfiguration.AssertConfigurationIsValid();
             
-            // use static files
+            // Aby fungovaly staticke javascriptove soubory obrazky atd, zaregistrujeme middleware
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(env.WebRootPath)

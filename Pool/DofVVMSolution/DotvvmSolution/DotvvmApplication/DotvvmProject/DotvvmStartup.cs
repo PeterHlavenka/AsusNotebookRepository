@@ -5,6 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DotvvmProject
 {
+    /// <summary>
+    /// Obsahuje konfiguraci samotneho dotVVM
+    /// </summary>
     public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
     {
         // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
@@ -16,8 +19,12 @@ namespace DotvvmProject
             ConfigureResources(config, applicationPath);
         }
 
+        /// V parametru (DotvvmConfiguration) nastavujeme ruzne soucasti dotVVM
         private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)
         {
+            // Radek kde se nastavuje rautovaci tabulka - mame zde nejakou rautu (cestu) ktera se jmenuje Default
+            // ten prazdny retezec je url adresa teto stranky www.domena. ""
+            // a ze tato cesta je mapovana na Views/Default.dothtml
             config.RouteTable.Add("Default", "", "Views/Default.dothtml");
             config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));    
         }
