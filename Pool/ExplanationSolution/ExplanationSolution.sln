@@ -237,6 +237,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClickOnce", "ClickOnce", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitePin2", "KitePin2\KitePin2.csproj", "{579705DF-A86C-438A-88F3-40B1A3873AC6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{7852A442-CE77-4B70-B4F3-E6A255846B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotvvmAcademy.Course.Counter", "DotvvmCounter\Counter\DotvvmAcademy.Course.Counter.csproj", "{22B2C1DB-B500-46B7-B4E6-B99BD111E84C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -611,6 +615,10 @@ Global
 		{579705DF-A86C-438A-88F3-40B1A3873AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579705DF-A86C-438A-88F3-40B1A3873AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579705DF-A86C-438A-88F3-40B1A3873AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B2C1DB-B500-46B7-B4E6-B99BD111E84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B2C1DB-B500-46B7-B4E6-B99BD111E84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B2C1DB-B500-46B7-B4E6-B99BD111E84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B2C1DB-B500-46B7-B4E6-B99BD111E84C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -709,6 +717,7 @@ Global
 		{F040277B-6462-4483-A194-35ABBE249CC1} = {0B4B20B3-8E03-4DAD-B1AE-81182AB35E45}
 		{50D0F89B-5E49-467F-87C4-96647269AEAD} = {0B4B20B3-8E03-4DAD-B1AE-81182AB35E45}
 		{579705DF-A86C-438A-88F3-40B1A3873AC6} = {C7374309-F422-4DD8-A745-A4C47EDFC465}
+		{22B2C1DB-B500-46B7-B4E6-B99BD111E84C} = {7852A442-CE77-4B70-B4F3-E6A255846B10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
