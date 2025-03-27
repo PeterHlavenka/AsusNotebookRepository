@@ -8,6 +8,7 @@ var channel = await connection.CreateChannelAsync();
 
 // aby se fronta neztratila pri restartu serveru, nastavime durable na true
 await channel.QueueDeclareAsync(queue: "persistent_Letterbox", durable: true, exclusive: false, autoDelete: false, arguments: null);
+await channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false);
 
 var consumer = new AsyncEventingBasicConsumer(channel);
 consumer.ReceivedAsync += async (model, ea) =>
