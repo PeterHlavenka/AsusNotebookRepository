@@ -4,7 +4,15 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 await using var connection = await factory.CreateConnectionAsync();
 var channel = await connection.CreateChannelAsync();
 
+// 1) Deklarujeme exchange
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
+// 2) Deklarace front:
+await channel.QueueDeclareAsync("CZ_Production_defaultConsumerQueue", true, false, false);
+await channel.QueueDeclareAsync("CZ_Production_AggregationsQueue", true, false, false);
+
+// 3) Bind fronty na exchange
+await channel.QueueBindAsync("CZ_Production_defaultConsumerQueue", "importExchange", "CZ.production");
+await channel.QueueBindAsync("CZ_Production_AggregationsQueue", "importExchange", "CZ.production");
 
 
 // Sending part:

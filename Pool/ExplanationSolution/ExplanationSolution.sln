@@ -279,6 +279,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzRCConsumer", "CzRCConsume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkProductionConsumer", "SkProductionConsumer\SkProductionConsumer.csproj", "{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzProductionAggregations", "CzProductionAggregations\CzProductionAggregations.csproj", "{216D899B-6661-4BD3-A514-1621E6F88FBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -705,6 +707,10 @@ Global
 		{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216D899B-6661-4BD3-A514-1621E6F88FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216D899B-6661-4BD3-A514-1621E6F88FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216D899B-6661-4BD3-A514-1621E6F88FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216D899B-6661-4BD3-A514-1621E6F88FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -823,6 +829,7 @@ Global
 		{CD2D5523-4B78-4B80-9F6A-DE5B3136C555} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 		{631ED60D-0825-4D88-944E-EBA21299385A} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 		{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D} = {C2D26630-16CE-4E4E-9012-9F2FBF5C98E5}
+		{216D899B-6661-4BD3-A514-1621E6F88FBB} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

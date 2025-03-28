@@ -7,7 +7,7 @@ var channel = await connection.CreateChannelAsync();
 
 // 1) deklarujeme exchange
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
-const string queueName = "CZ_Production_defaultConsumerQueue";
+const string queueName = "CZ_Production_AggregationsQueue";
 await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
 // 3) musime frontu nabindovat na exchange
