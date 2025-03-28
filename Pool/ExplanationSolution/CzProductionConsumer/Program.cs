@@ -7,6 +7,8 @@ var channel = await connection.CreateChannelAsync();
 
 // 1) deklarujeme exchange
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
+
+// 2) deklarace fronty
 const string queueName = "CZ_Production_defaultConsumerQueue";
 await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 

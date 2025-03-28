@@ -7,7 +7,10 @@ var channel = await connection.CreateChannelAsync();
 
 // 1) deklarujeme exchange
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
-var queueName = (await channel.QueueDeclareAsync()).QueueName;
+
+// 2) deklarace fronty
+const string queueName = "SK_Production_defaultConsumerQueue";
+await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
 // 3) musime frontu nabindovat na exchange
 await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "SK.production");

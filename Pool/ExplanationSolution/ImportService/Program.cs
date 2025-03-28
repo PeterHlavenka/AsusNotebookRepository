@@ -4,26 +4,42 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 await using var connection = await factory.CreateConnectionAsync();
 var channel = await connection.CreateChannelAsync();
 
-// 1) Deklarujeme exchange
-await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
-// 2) Deklarace front:
+                                // 1) Deklarujeme exchange
+var exchangeName = "importExchange";
+await channel.ExchangeDeclareAsync(exchangeName, ExchangeType.Topic, true, false);
+
+
+                                // 2) Deklarace front:
+// Production:
 await channel.QueueDeclareAsync("CZ_Production_defaultConsumerQueue", true, false, false);
 await channel.QueueDeclareAsync("CZ_Production_AggregationsQueue", true, false, false);
+await channel.QueueDeclareAsync("SK_Production_defaultConsumerQueue", true, false, false);
+// RC:
+await channel.QueueDeclareAsync("CZ_RC_defaultConsumerQueue", true, false, false);
+await channel.QueueDeclareAsync("SK_RC_defaultConsumerQueue", true, false, false);
 
-// 3) Bind fronty na exchange
-await channel.QueueBindAsync("CZ_Production_defaultConsumerQueue", "importExchange", "CZ.production");
-await channel.QueueBindAsync("CZ_Production_AggregationsQueue", "importExchange", "CZ.production");
+
+                            // 3) Bind fronty na exchange
+// Production:
+await channel.QueueBindAsync("CZ_Production_defaultConsumerQueue", exchangeName, "CZ.production");
+await channel.QueueBindAsync("CZ_Production_AggregationsQueue", exchangeName, "CZ.production");
+await channel.QueueBindAsync("SK_Production_defaultConsumerQueue", exchangeName, "SK.production");
+// RC:
+await channel.QueueBindAsync("CZ_RC_defaultConsumerQueue", exchangeName, "CZ.RC");
+await channel.QueueBindAsync("SK_RC_defaultConsumerQueue", exchangeName, "SK.RC");
 
 
 // Sending part:
+var dateTime = GenerateRandomDateTime();
+
 // CZ
-await SendMessage("CZ", "production");
-await SendMessage("CZ", "production");
-await SendMessage("CZ", "RC");
+await SendMessage("CZ", "production", dateTime);
+await SendMessage("CZ", "production", dateTime);
+await SendMessage("CZ", "RC", dateTime);
 
 // SK
-await SendMessage("SK", "production");
-await SendMessage("SK", "RC");
+await SendMessage("SK", "production", dateTime);
+await SendMessage("SK", "RC", dateTime);
 
 Console.ReadLine();
 
@@ -44,13 +60,12 @@ DateTime GenerateRandomDateTime()
     return new DateTime(year, month, day, hour, minute, second);
 }
 
-async Task SendMessage(string environment, string country)
+async Task SendMessage(string environment, string country, DateTime importDateTime)
 {
     // Send message to the exchange with routing key "import.{environment}.{country}"
     var routingKey = $"{environment}.{country}";
-    var importDateTime = GenerateRandomDateTime();
     var message = $"Imported date {importDateTime:yyyy-MM-dd HH:mm:ss} for {routingKey}";
     var body = System.Text.Encoding.UTF8.GetBytes(message);
-    await channel.BasicPublishAsync("importExchange", routingKey, body);
+    await channel.BasicPublishAsync(exchangeName, routingKey, body);
     Console.WriteLine($@"Sending message: {message}");
 }
