@@ -249,6 +249,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstConsumer", "FirstConsu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondConsumer", "SecondConsumer\SecondConsumer.csproj", "{914F1C19-21D8-4D37-8889-836D104FE55C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Original RabbitMQ tutorial", "Original RabbitMQ tutorial", "{1E2E97F0-766C-446C-AF76-B9CE20D45B2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQMessageSender", "RabbitMQMessageSender\RabbitMQMessageSender.csproj", "{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -639,6 +643,10 @@ Global
 		{914F1C19-21D8-4D37-8889-836D104FE55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{914F1C19-21D8-4D37-8889-836D104FE55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{914F1C19-21D8-4D37-8889-836D104FE55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -742,6 +750,8 @@ Global
 		{B570EFEC-2E1A-480D-9B03-F1C85E97EDBC} = {689C863E-2CDF-43BF-AC62-2F8E2334E305}
 		{5E297360-2854-4812-A572-1E950330FC23} = {689C863E-2CDF-43BF-AC62-2F8E2334E305}
 		{914F1C19-21D8-4D37-8889-836D104FE55C} = {689C863E-2CDF-43BF-AC62-2F8E2334E305}
+		{1E2E97F0-766C-446C-AF76-B9CE20D45B2A} = {7852A442-CE77-4B70-B4F3-E6A255846B10}
+		{0ACD3629-A8D3-4FD2-ABE1-C790C2899B80} = {689C863E-2CDF-43BF-AC62-2F8E2334E305}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
