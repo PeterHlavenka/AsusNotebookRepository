@@ -42,6 +42,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\D
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\Dictiona.CC0021F3.Up2Date

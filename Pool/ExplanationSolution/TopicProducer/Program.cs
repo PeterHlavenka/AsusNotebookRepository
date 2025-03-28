@@ -6,17 +6,16 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 await using var connection = await factory.CreateConnectionAsync();
 var channel = await connection.CreateChannelAsync();
 
-await channel.ExchangeDeclareAsync("myroutingexchange", ExchangeType.Direct, true, false);
+await channel.ExchangeDeclareAsync("mytopicexchange", ExchangeType.Topic, true, false);
 
-var analyticsMessage = "Message for analytics";
-var analyticsBody = System.Text.Encoding.UTF8.GetBytes(analyticsMessage);
-var paymentsMessage = "Message for payments";
-var paymentsBody = System.Text.Encoding.UTF8.GetBytes(paymentsMessage);
+var userPaymentMessage = "CZ user paid for someting";
+var userpaymentsBody = System.Text.Encoding.UTF8.GetBytes(userPaymentMessage);
+await channel.BasicPublishAsync("mytopicexchange", "user.CZ.payments", userpaymentsBody);
+Console.WriteLine($@"Send message: {userpaymentsBody}");
 
-await channel.BasicPublishAsync("myroutingexchange", "analyticsonly", analyticsBody);
-
-await channel.BasicPublishAsync("myroutingexchange", "paymentsonly", paymentsBody);
-await channel.BasicPublishAsync("myroutingexchange", "paymentsonly", paymentsBody);
-Console.WriteLine($" [x] Sent.. ");
+var bussinesOrderMessage = "CZ user bussines ordered goods";
+var bussinesOrderBody = System.Text.Encoding.UTF8.GetBytes(bussinesOrderMessage);
+await channel.BasicPublishAsync("mytopicexchange", "user.CZ.order", bussinesOrderBody);
+Console.WriteLine($@"Send message: {bussinesOrderBody}");
 
 Console.ReadLine();

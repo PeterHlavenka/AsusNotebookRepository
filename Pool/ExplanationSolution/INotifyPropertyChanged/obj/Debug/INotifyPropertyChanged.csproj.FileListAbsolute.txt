@@ -68,6 +68,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\De
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyP.73442795.Up2Date

@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\Animate
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\Animated.416FA3D9.Up2Date

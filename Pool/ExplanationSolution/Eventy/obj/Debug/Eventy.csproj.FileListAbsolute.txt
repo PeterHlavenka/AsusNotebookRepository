@@ -52,6 +52,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.g.res
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.csproj.Up2Date

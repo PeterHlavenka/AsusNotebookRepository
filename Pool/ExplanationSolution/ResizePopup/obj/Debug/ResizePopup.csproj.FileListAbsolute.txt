@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizeP
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePo.35FD443C.Up2Date

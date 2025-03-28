@@ -19,6 +19,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\log4net.dl
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\bin\Debug\log4net.xml
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.AssemblyReference.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.Up2Date

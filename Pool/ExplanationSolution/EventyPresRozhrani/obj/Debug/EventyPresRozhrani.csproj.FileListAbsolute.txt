@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPr.23812C00.Up2Date

@@ -10,7 +10,7 @@ await channel.ExchangeDeclareAsync("mytopicexchange", ExchangeType.Topic, true, 
 var queueName = (await channel.QueueDeclareAsync()).QueueName;
 
 // 3) musime frontu nabindovat na exchange
-await channel.QueueBindAsync(queue: queueName, exchange: "mytopicexchange", routingKey: "#   .payments");
+await channel.QueueBindAsync(queue: queueName, exchange: "mytopicexchange", routingKey: "user.#");
 
 var consumer = new AsyncEventingBasicConsumer(channel);
 
@@ -18,7 +18,7 @@ consumer.ReceivedAsync += async (model, ea) =>
 {
     var body = ea.Body.ToArray();
     var message = System.Text.Encoding.UTF8.GetString(body);
-    Console.WriteLine($"Payments - Received {message}");
+    Console.WriteLine($"User - Received {message}");
     await Task.Delay(1000);
     await channel.BasicAckAsync(deliveryTag: ea.DeliveryTag, multiple: false);
 };

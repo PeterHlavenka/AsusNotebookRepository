@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.Up2Date

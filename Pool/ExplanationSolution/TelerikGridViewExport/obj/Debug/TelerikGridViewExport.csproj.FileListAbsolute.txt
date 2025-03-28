@@ -118,6 +118,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Deb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikG.415E847D.Up2Date

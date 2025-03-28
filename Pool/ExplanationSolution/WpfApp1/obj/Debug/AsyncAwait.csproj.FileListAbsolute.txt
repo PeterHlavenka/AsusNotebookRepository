@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.g.r
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.Up2Date

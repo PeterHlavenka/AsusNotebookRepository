@@ -43,6 +43,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.Up2Date

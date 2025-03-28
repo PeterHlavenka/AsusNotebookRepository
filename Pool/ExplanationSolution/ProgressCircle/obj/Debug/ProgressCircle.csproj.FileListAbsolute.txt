@@ -69,6 +69,6 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\Prog
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.Properties.Resources.resources
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.GenerateResource.cache
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.CoreCompileInputs.cache
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.csproj.CopyComplete
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.pdb
+D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\Progress.8160FA17.Up2Date
