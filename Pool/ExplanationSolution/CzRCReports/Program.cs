@@ -9,11 +9,11 @@ var channel = await connection.CreateChannelAsync();
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
 
 // 2) deklarace fronty
-const string queueName = "SK_RC_defaultConsumerQueue";
+const string queueName = "CZ_RC_reportsQueue";
 await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
 // 3) musime frontu nabindovat na exchange
-await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "SK.RC");
+await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "CZ.RC.reports");
 
 var consumer = new AsyncEventingBasicConsumer(channel);
 consumer.ReceivedAsync += async (model, ea) =>

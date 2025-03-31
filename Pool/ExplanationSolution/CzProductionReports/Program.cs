@@ -9,11 +9,11 @@ var channel = await connection.CreateChannelAsync();
 await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
 
 // 2) deklarace fronty
-const string queueName = "CZ_Production_defaultConsumerQueue";
+const string queueName = "CZ_Production_reportsQueue";
 await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
 // 3) musime frontu nabindovat na exchange
-await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "CZ.production");
+await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "CZ.Production.reports");
 
 var consumer = new AsyncEventingBasicConsumer(channel);
 consumer.ReceivedAsync += async (model, ea) =>
@@ -21,7 +21,7 @@ consumer.ReceivedAsync += async (model, ea) =>
     var body = ea.Body.ToArray();
     var message = System.Text.Encoding.UTF8.GetString(body);
     Console.WriteLine($"User - Received {message}");
-    await Task.Delay(1000);
+    await Task.Delay(100);
     await channel.BasicAckAsync(deliveryTag: ea.DeliveryTag, multiple: false);
 };
 
