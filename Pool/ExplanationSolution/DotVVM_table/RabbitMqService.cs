@@ -10,10 +10,19 @@ namespace DotVVM_table;
 public class RabbitMqService
 {
     private readonly ConcurrentQueue<string> m_messages = new();
-
+    private string[] AllQueues { get; } = 
+    {
+        // "CZ_Production_defaultConsumerQueue",
+        // "CZ_Production_AggregationsQueue",
+        // "SK_Production_defaultConsumerQueue",
+        // "CZ_RC_defaultConsumerQueue",
+        // "SK_RC_defaultConsumerQueue",
+        "webPageQueue"
+    };
+    
     public RabbitMqService()
     {
-        Initialize();
+        Initialize(); // todo fireandforget
     }
 
     public ObservableCollection<string> Messages { get; set; }
@@ -36,17 +45,16 @@ public class RabbitMqService
 
 
         var consumer = new AsyncEventingBasicConsumer(channel);
-        consumer.ReceivedAsync += async (model, ea) =>
+        consumer.ReceivedAsync += (model, ea) =>
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
             m_messages.Enqueue(message);
-            await Task.Delay(1000);
             Messages.Add(message);
-            await channel.BasicAckAsync(deliveryTag: ea.DeliveryTag, multiple: false);
+            return Task.CompletedTask;
         };
 
-        await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
+        await channel.BasicConsumeAsync(queue: queueName, autoAck: true, consumer: consumer);
     }
 
     public ConcurrentQueue<string> GetMessages()

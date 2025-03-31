@@ -5,8 +5,12 @@ await using var connection = await factory.CreateConnectionAsync();
 var channel = await connection.CreateChannelAsync();
 
                                 // 1) Deklarujeme exchange
-var exchangeName = "importExchange";
+var exchangeName = "importExchange";  // exchange na jednotlive sluzby - routing key rekne ktera sluzba ma zpracovat zpravu
 await channel.ExchangeDeclareAsync(exchangeName, ExchangeType.Topic, true, false);
+
+// webPage
+var webExchangeName = "webPageExchange"; // exchange na webovou stranku - routing key bude # a vsechny zpravu pujdou i sem, ale jen jednou..
+await channel.ExchangeDeclareAsync(webExchangeName, ExchangeType.Topic, true, false);
 
 
                                 // 2) Deklarace front:
@@ -18,7 +22,7 @@ await channel.QueueDeclareAsync("SK_Production_defaultConsumerQueue", true, fals
 await channel.QueueDeclareAsync("CZ_RC_defaultConsumerQueue", true, false, false);
 await channel.QueueDeclareAsync("SK_RC_defaultConsumerQueue", true, false, false);
 // webPage
-await channel.QueueDeclareAsync("webPageQueue", true, false, false);
+// await channel.QueueDeclareAsync("webPageQueue", true, false, false);
 
 
                             // 3) Bind fronty na exchange
@@ -30,24 +34,18 @@ await channel.QueueBindAsync("SK_Production_defaultConsumerQueue", exchangeName,
 await channel.QueueBindAsync("CZ_RC_defaultConsumerQueue", exchangeName, "CZ.RC");
 await channel.QueueBindAsync("SK_RC_defaultConsumerQueue", exchangeName, "SK.RC");
 // webPage
-await channel.QueueBindAsync("webPageQueue", exchangeName, "webPage");
+// await channel.QueueBindAsync("webPageQueue", exchangeName, "webPage");
 
 // Sending part:
 var dateTime = GenerateRandomDateTime();
 
 // // CZ
-// await SendMessage("CZ", "production", dateTime);
-// await SendMessage("CZ", "production", dateTime);
-// await SendMessage("CZ", "RC", dateTime);
-//
-// // SK
-// await SendMessage("SK", "production", dateTime);
-// await SendMessage("SK", "RC", dateTime);
+await SendMessage("CZ", "production", dateTime);
+await SendMessage("CZ", "RC", dateTime);
 
-// webPage
-await SendMessage("webPage", "webPage", dateTime);
-await SendMessage("webPage", "webPage", dateTime);
-await SendMessage("webPage", "webPage", dateTime);
+// SK
+await SendMessage("SK", "production", dateTime);
+await SendMessage("SK", "RC", dateTime);
 
 Console.ReadLine();
 
@@ -76,4 +74,8 @@ async Task SendMessage(string environment, string country, DateTime importDateTi
     var body = System.Text.Encoding.UTF8.GetBytes(message);
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
     Console.WriteLine($@"Sending message: {message}");
+    
+    // a stejnou zpravu poslu na webovou stranku
+    // var webRoutingKey = "webPage";
+    // await channel.BasicPublishAsync(webExchangeName, webRoutingKey, body);
 }
