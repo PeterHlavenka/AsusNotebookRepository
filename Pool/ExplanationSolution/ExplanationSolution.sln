@@ -283,6 +283,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkRCConsumer", "SkRCConsume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM_table", "DotVVM_table\DotVVM_table.csproj", "{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{12814990-9963-443F-9AE0-9F29CD796CEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -721,6 +723,10 @@ Global
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12814990-9963-443F-9AE0-9F29CD796CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12814990-9963-443F-9AE0-9F29CD796CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12814990-9963-443F-9AE0-9F29CD796CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12814990-9963-443F-9AE0-9F29CD796CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

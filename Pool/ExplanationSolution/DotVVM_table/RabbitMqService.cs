@@ -2,30 +2,23 @@
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Threading;
 
 namespace DotVVM_table;
 
 public class RabbitMqService
 {
+    private static readonly ILogger<RabbitMqService> m_log = new Logger<RabbitMqService>(new LoggerFactory());
     private readonly ConcurrentQueue<string> m_messages = new();
-    private string[] AllQueues { get; } = 
-    {
-        // "CZ_Production_defaultConsumerQueue",
-        // "CZ_Production_AggregationsQueue",
-        // "SK_Production_defaultConsumerQueue",
-        // "CZ_RC_defaultConsumerQueue",
-        // "SK_RC_defaultConsumerQueue",
-        "webPageQueue"
-    };
-    
     public RabbitMqService()
     {
-        Initialize(); // todo fireandforget
+        Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
-    public ObservableCollection<string> Messages { get; set; }
+    public ObservableCollection<string> Messages { get; set; } = new();
     
     private async Task Initialize()
     {
