@@ -27,25 +27,26 @@ await channel.QueueDeclareAsync("SK_RC_defaultConsumerQueue", true, false, false
 
                             // 3) Bind fronty na exchange
 // Production:
-await channel.QueueBindAsync("CZ_Production_defaultConsumerQueue", exchangeName, "CZ.production");
-await channel.QueueBindAsync("CZ_Production_AggregationsQueue", exchangeName, "CZ.production");
-await channel.QueueBindAsync("SK_Production_defaultConsumerQueue", exchangeName, "SK.production");
+await channel.QueueBindAsync("CZ_Production_defaultConsumerQueue", exchangeName, "CZ.production.default");
+await channel.QueueBindAsync("CZ_Production_AggregationsQueue", exchangeName, "CZ.production.aggregations");
+await channel.QueueBindAsync("SK_Production_defaultConsumerQueue", exchangeName, "SK.production.default");
 // RC:
-await channel.QueueBindAsync("CZ_RC_defaultConsumerQueue", exchangeName, "CZ.RC");
-await channel.QueueBindAsync("SK_RC_defaultConsumerQueue", exchangeName, "SK.RC");
+await channel.QueueBindAsync("CZ_RC_defaultConsumerQueue", exchangeName, "CZ.RC.default");
+await channel.QueueBindAsync("SK_RC_defaultConsumerQueue", exchangeName, "SK.RC.default");
 // webPage
-// await channel.QueueBindAsync("webPageQueue", exchangeName, "webPage");
+await channel.QueueBindAsync("webPageQueue", exchangeName, "#.webPage"); 
 
 // Sending part:
 var dateTime = GenerateRandomDateTime();
 
 // // CZ
-await SendMessage("CZ", "production", dateTime);
-await SendMessage("CZ", "RC", dateTime);
+await SendMessage("CZ", "production", "aggregations", dateTime);
+await SendMessage("CZ", "production", "default", dateTime);
+await SendMessage("CZ", "RC", "default", dateTime);
 
 // SK
-await SendMessage("SK", "production", dateTime);
-await SendMessage("SK", "RC", dateTime);
+await SendMessage("SK", "production", "default", dateTime);
+await SendMessage("SK", "RC", "default", dateTime);
 
 Console.ReadLine();
 
@@ -66,16 +67,17 @@ DateTime GenerateRandomDateTime()
     return new DateTime(year, month, day, hour, minute, second);
 }
 
-async Task SendMessage(string environment, string country, DateTime importDateTime)
+async Task SendMessage(string environment, string country, string consumerName, DateTime importDateTime)
 {
     // Send message to the exchange with routing key "import.{environment}.{country}"
-    var routingKey = $"{environment}.{country}";
+    var routingKey = $"{environment}.{country}.{consumerName}";
     var message = $"Imported date {importDateTime:yyyy-MM-dd HH:mm:ss} for {routingKey}";
     var body = System.Text.Encoding.UTF8.GetBytes(message);
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
     Console.WriteLine($@"Sending message: {message}");
     
     // a stejnou zpravu poslu na webovou stranku
-    // var webRoutingKey = "webPage";
-    // await channel.BasicPublishAsync(webExchangeName, webRoutingKey, body);
+    var web = "webPage";
+    routingKey = $"{environment}.{country}.{web}";
+    await channel.BasicPublishAsync(exchangeName, routingKey, body);
 }

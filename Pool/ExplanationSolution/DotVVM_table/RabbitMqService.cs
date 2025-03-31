@@ -41,7 +41,7 @@ public class RabbitMqService
         await channel.QueueDeclareAsync(queueName, true, false, false);
 
         // 3) musime frontu nabindovat na exchange
-        await channel.QueueBindAsync(queueName, "importExchange", "#");
+        await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
 
 
         var consumer = new AsyncEventingBasicConsumer(channel);
