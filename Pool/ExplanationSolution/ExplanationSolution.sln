@@ -281,6 +281,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzProductionAggregations", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkRCConsumer", "SkRCConsumer\SkRCConsumer.csproj", "{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM_table", "DotVVM_table\DotVVM_table.csproj", "{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -715,6 +717,10 @@ Global
 		{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -834,6 +840,7 @@ Global
 		{AFD5FE8A-B5B0-47FF-9D21-1AAB025E2E3D} = {C2D26630-16CE-4E4E-9012-9F2FBF5C98E5}
 		{216D899B-6661-4BD3-A514-1621E6F88FBB} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 		{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53} = {C2D26630-16CE-4E4E-9012-9F2FBF5C98E5}
+		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
