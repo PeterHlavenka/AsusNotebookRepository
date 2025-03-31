@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.Framework.Routing;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +20,8 @@ public class Startup
         services.AddAuthorization();
         services.AddWebEncoders();
 
+        // dotvvm and rabbitmq registration
+        services.AddSingleton<RabbitMqService>();
         services.AddDotVVM<DotvvmStartup>();
     }
 
@@ -42,6 +45,7 @@ public class Startup
 
         // use DotVVM
         var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(env.ContentRootPath);
+        dotvvmConfiguration.AssertConfigurationIsValid();
 
         // use static files
         app.UseStaticFiles();

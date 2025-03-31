@@ -17,6 +17,8 @@ await channel.QueueDeclareAsync("SK_Production_defaultConsumerQueue", true, fals
 // RC:
 await channel.QueueDeclareAsync("CZ_RC_defaultConsumerQueue", true, false, false);
 await channel.QueueDeclareAsync("SK_RC_defaultConsumerQueue", true, false, false);
+// webPage
+await channel.QueueDeclareAsync("webPageQueue", true, false, false);
 
 
                             // 3) Bind fronty na exchange
@@ -27,19 +29,25 @@ await channel.QueueBindAsync("SK_Production_defaultConsumerQueue", exchangeName,
 // RC:
 await channel.QueueBindAsync("CZ_RC_defaultConsumerQueue", exchangeName, "CZ.RC");
 await channel.QueueBindAsync("SK_RC_defaultConsumerQueue", exchangeName, "SK.RC");
-
+// webPage
+await channel.QueueBindAsync("webPageQueue", exchangeName, "webPage");
 
 // Sending part:
 var dateTime = GenerateRandomDateTime();
 
-// CZ
-await SendMessage("CZ", "production", dateTime);
-await SendMessage("CZ", "production", dateTime);
-await SendMessage("CZ", "RC", dateTime);
+// // CZ
+// await SendMessage("CZ", "production", dateTime);
+// await SendMessage("CZ", "production", dateTime);
+// await SendMessage("CZ", "RC", dateTime);
+//
+// // SK
+// await SendMessage("SK", "production", dateTime);
+// await SendMessage("SK", "RC", dateTime);
 
-// SK
-await SendMessage("SK", "production", dateTime);
-await SendMessage("SK", "RC", dateTime);
+// webPage
+await SendMessage("webPage", "webPage", dateTime);
+await SendMessage("webPage", "webPage", dateTime);
+await SendMessage("webPage", "webPage", dateTime);
 
 Console.ReadLine();
 
@@ -49,7 +57,7 @@ Console.ReadLine();
 
 DateTime GenerateRandomDateTime()
 {
-    // generata random date and time between 2023-01-01 and 2023-12-31
+    // generata random date and time between 2023-01-01 and 2023-12-31 
     Random random = new Random();
     int year = 2023;
     int month = random.Next(1, 13);

@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1>{{value: Title}}</h1>
+     
+     <dot:Repeater DataSource="{value: ItemsList}">
+       <ItemTemplate>
+         {{value: _this}}<br />
+       </ItemTemplate>
+     </dot:Repeater>
+     
+     <dot:Repeater DataSource="{value: Messages}">
+            <ItemTemplate>
+              {{value: _this}}<br />
+            </ItemTemplate>
+     </dot:Repeater>
 </body>
 </html>
