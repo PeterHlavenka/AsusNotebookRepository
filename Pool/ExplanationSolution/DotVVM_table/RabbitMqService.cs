@@ -1,5 +1,5 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -11,19 +11,43 @@ namespace DotVVM_table;
 
 public class RabbitMqService
 {
+    private const string Separator = "_";
     private static readonly ILogger<RabbitMqService> m_log = new Logger<RabbitMqService>(new LoggerFactory());
-    private readonly ConcurrentQueue<string> m_messages = new();
+    private ObservableCollection<string> m_messages1 = new();
+
     public RabbitMqService()
     {
         Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
-    public ObservableCollection<string> Messages { get; set; } = new();
-    
+    public ObservableCollection<string> Messages
+    {
+        get => m_messages1;
+        set
+        {
+            m_messages1 = value;
+
+            RabbitMessages = new ObservableCollection<RabbitMessage>(m_messages1.Select(m =>
+            {
+                var parts = m.Split(Separator);
+                return new RabbitMessage
+                {
+                    Country = parts[0],
+                    Environment = parts[1],
+                    ServiceName = parts[2],
+                    ImportDate = parts[3],
+                    DataType = parts[4]
+                };
+            }));
+        }
+    }
+
+    public ObservableCollection<RabbitMessage> RabbitMessages { get; set; } = new();
+
     private async Task Initialize()
     {
         var factory = new ConnectionFactory { HostName = "localhost" };
-        var connection = await factory.CreateConnectionAsync();  // todo dispose / close connection
+        var connection = await factory.CreateConnectionAsync(); // todo dispose / close connection
         var channel = await connection.CreateChannelAsync();
 
         // 1) deklarujeme exchange
@@ -42,16 +66,21 @@ public class RabbitMqService
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            m_messages.Enqueue(message);
             Messages.Add(message);
+            
+            var parts = message.Split(Separator);
+            RabbitMessages.Add(new RabbitMessage
+            {
+                ImportDate = parts[0],
+                Country = parts[1],
+                Environment = parts[2],
+                ServiceName = parts[3],
+                DataType = parts[4]
+            });
+            
             return Task.CompletedTask;
         };
 
-        await channel.BasicConsumeAsync(queue: queueName, autoAck: true, consumer: consumer);
-    }
-
-    public ConcurrentQueue<string> GetMessages()
-    {
-        return m_messages;
+        await channel.BasicConsumeAsync(queueName, true, consumer);
     }
 }

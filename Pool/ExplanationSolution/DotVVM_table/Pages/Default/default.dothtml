@@ -20,5 +20,18 @@
               {{value: _this}}<br />
             </ItemTemplate>
      </dot:Repeater>
+     
+ 
+     
+     
+<dot:GridView DataSource="{value: RabbitMessages}" border="0">
+    <Columns>
+     <dot:GridViewTextColumn HeaderText="Country" ValueBinding="{value: Country}" />
+     <dot:GridViewTextColumn HeaderText="Environment" ValueBinding="{value: Environment}" />
+     <dot:GridViewTextColumn HeaderText="Service name" ValueBinding="{value: ServiceName}" />
+     <dot:GridViewTextColumn HeaderText="Import date" ValueBinding="{value: ImportDate}" />
+     <dot:GridViewTextColumn HeaderText="Data type" ValueBinding="{value: DataType}" />
+    </Columns>
+</dot:GridView>
 </body>
 </html>

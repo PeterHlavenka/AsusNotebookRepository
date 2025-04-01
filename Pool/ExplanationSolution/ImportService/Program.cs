@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using ImportService;
+using RabbitMQ.Client;
 
 // country, environment, dataType, service
 string[][] queues =
@@ -29,13 +30,13 @@ await DeclareAndBindQueues();
 // Sending part:
 var dateTime = GenerateRandomDateTime();
 // CZ
-await SendMessage("CZ", "Production", "aggregations", dateTime);
-await SendMessage("CZ", "Production", "reports", dateTime);
-await SendMessage("CZ", "Production", "pricing", dateTime);
-await SendMessage("CZ", "RC", "reports", dateTime);
+await SendMessage("CZ", "Production", "aggregations", dateTime, AdwDataIds.DataCzCsProTrend2);
+await SendMessage("CZ", "Production", "reports", dateTime, AdwDataIds.DataCzMrTvIndivid);
+await SendMessage("CZ", "Production", "pricing", dateTime, AdwDataIds.DataCzPemd);
+await SendMessage("CZ", "RC", "reports", dateTime, AdwDataIds.DataCzAdCross);
 // SK
-await SendMessage("SK", "Production", "pricing", dateTime);
-await SendMessage("SK", "RC", "aggregations", dateTime);
+await SendMessage("SK", "Production", "pricing", dateTime, AdwDataIds.DataSkKantarMonitoring);
+await SendMessage("SK", "RC", "aggregations", dateTime, AdwDataIds.DataSkKantarTvIndivid);
 Console.ReadLine();
 
 
@@ -55,11 +56,11 @@ DateTime GenerateRandomDateTime()
     return new DateTime(year, month, day, hour, minute, second);
 }
 
-async Task SendMessage(string environment, string country, string consumerName, DateTime importDateTime)
+async Task SendMessage(string environment, string country, string consumerName, DateTime importDateTime, string adwDataId)
 {
     // Send message to the exchange with routing key "import.{environment}.{country}"
     var routingKey = $"{environment}.{country}.{consumerName}";
-    var message = $"Imported date {importDateTime:yyyy-MM-dd HH:mm:ss} for {routingKey}";
+    var message = $"{importDateTime:yyyy-MM-dd HH:mm:ss}_{environment}_{country}_{consumerName}_{adwDataId}";
     var body = System.Text.Encoding.UTF8.GetBytes(message);
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
     Console.WriteLine($@"Sending message: {message}");

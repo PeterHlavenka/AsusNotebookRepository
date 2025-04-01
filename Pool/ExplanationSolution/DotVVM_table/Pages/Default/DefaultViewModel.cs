@@ -13,6 +13,8 @@ public class DefaultViewModel : DotvvmViewModelBase
     public string Title { get; set; }
     public ObservableCollection<string> Messages => RabbitMqService.Messages;
     
+    public ObservableCollection<RabbitMessage> RabbitMessages => RabbitMqService.RabbitMessages;
+    
     public string[] Items { get; set; } = { "First", "Second", "Third" };
     public List<string> ItemsList { get; set; }
 
@@ -28,13 +30,5 @@ public class DefaultViewModel : DotvvmViewModelBase
         ItemsList = new List<string>(){ "ItemsList from constructor", "Second", "Third" };
        // Messages.Add("V PreRenderu se mi to smaze");
         ItemsList.Add("jak notifikovat");
-    }
-
-
-
-    public override Task PreRender()
-    {
-        RabbitMqService.Messages = new ObservableCollection<string>(RabbitMqService.GetMessages());
-        return base.PreRender();
     }
 }
