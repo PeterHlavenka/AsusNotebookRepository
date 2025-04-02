@@ -17,4 +17,22 @@ public class DefaultViewModel : DotvvmViewModelBase
         RabbitMqService = rabbitMqService;
         Title = "RabbitMQ messages";
     }
+    
+    public string[] Environments { get; set; } = { "Apple", "Banana", "IceCream", "Orange" };
+
+    public string SelectedEnvironment { get; set; }
+
+    public string Message { get; set; }
+
+    public void IsItReallyFruit()
+    {
+        if (SelectedEnvironment == "IceCream")
+        {
+            Message = "Ice cream isn't a fruit!";
+        }
+        else
+        {
+            Message = "Yes, it's a fruit!";
+        }
+    }
 }
