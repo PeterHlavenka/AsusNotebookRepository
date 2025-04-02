@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,36 +14,14 @@ public class RabbitMqService
 {
     private const string Separator = "_";
     private static readonly ILogger<RabbitMqService> m_log = new Logger<RabbitMqService>(new LoggerFactory());
-    private ObservableCollection<string> m_messages1 = new();
 
     public RabbitMqService()
     {
         Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
-    public ObservableCollection<string> Messages
-    {
-        get => m_messages1;
-        set
-        {
-            m_messages1 = value;
-
-            RabbitMessages = new ObservableCollection<RabbitMessage>(m_messages1.Select(m =>
-            {
-                var parts = m.Split(Separator);
-                return new RabbitMessage
-                {
-                    Country = parts[0],
-                    Environment = parts[1],
-                    ServiceName = parts[2],
-                    ImportDate = parts[3],
-                    DataType = parts[4]
-                };
-            }));
-        }
-    }
-
-    public ObservableCollection<RabbitMessage> RabbitMessages { get; set; } = new();
+    public ObservableCollection<string> RawMessages { get; set; } = new();
+    public List<RabbitMessage> RabbitMessages { get; set; } = new();
 
     private async Task Initialize()
     {
@@ -66,9 +45,13 @@ public class RabbitMqService
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            Messages.Add(message);
+            RawMessages.Add(message);
             
+            // todo co by se melo zobrazovat - datum z posledni prijate message, nebo nejnovejsi message?  (co kdyz se bude preimportovat starsi den ?)
             var parts = message.Split(Separator);
+            var same = RabbitMessages.SingleOrDefault(d => d.Country == parts[1] && d.Environment == parts[2] && d.ServiceName == parts[3] && d.DataType == parts[4]);
+            if(same != null)
+                RabbitMessages.Remove(same);
             RabbitMessages.Add(new RabbitMessage
             {
                 ImportDate = parts[0],

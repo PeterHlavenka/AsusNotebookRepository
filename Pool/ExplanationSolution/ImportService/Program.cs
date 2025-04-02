@@ -27,19 +27,15 @@ await DeclareAndBindQueues();
 
 
 
-// Sending part:
-var dateTime = GenerateRandomDateTime();
-// CZ
-await SendMessage("CZ", "Production", "aggregations", dateTime, AdwDataIds.DataCzCsProTrend2);
-await SendMessage("CZ", "Production", "reports", dateTime, AdwDataIds.DataCzMrTvIndivid);
-await SendMessage("CZ", "Production", "pricing", dateTime, AdwDataIds.DataCzPemd);
-await SendMessage("CZ", "RC", "reports", dateTime, AdwDataIds.DataCzAdCross);
-// SK
-await SendMessage("SK", "Production", "pricing", dateTime, AdwDataIds.DataSkKantarMonitoring);
-await SendMessage("SK", "RC", "aggregations", dateTime, AdwDataIds.DataSkKantarTvIndivid);
-Console.ReadLine();
+await SendMultipleMessages();
 
-
+while (true)
+{
+    if (Console.ReadLine()?.ToLower() == "n")
+        await SendMessage("CZ", "Production", "aggregations", GenerateRandomDateTime(), AdwDataIds.DataCzCsProTrend2);
+    if (Console.ReadLine()?.ToLower() == "m")
+        await SendMultipleMessages();
+}
 
 
 
@@ -69,6 +65,19 @@ async Task SendMessage(string environment, string country, string consumerName, 
     var web = "webPage";
     routingKey = $"{environment}.{country}.{web}";
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
+}
+
+async Task SendMultipleMessages()
+{
+    var dateTime = GenerateRandomDateTime();
+    // CZ
+    await SendMessage("CZ", "Production", "aggregations", dateTime, AdwDataIds.DataCzCsProTrend2);
+    await SendMessage("CZ", "Production", "reports", dateTime, AdwDataIds.DataCzMrTvIndivid);
+    await SendMessage("CZ", "Production", "pricing", dateTime, AdwDataIds.DataCzPemd);
+    await SendMessage("CZ", "RC", "reports", dateTime, AdwDataIds.DataCzAdCross);
+    // SK
+    await SendMessage("SK", "Production", "pricing", dateTime, AdwDataIds.DataSkKantarMonitoring);
+    await SendMessage("SK", "RC", "aggregations", dateTime, AdwDataIds.DataSkKantarTvIndivid);
 }
 
 async Task DeclareAndBindQueues()

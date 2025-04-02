@@ -88,15 +88,25 @@
         <div class="content">
             <h1>{{value: Title}}</h1>
                                   
-            <div class="table-wrapper" Visible="{value: RabbitMqService.RabbitMessages.Count > 0}">
-            
-                    
-                     <div >
-                         <dot:ComboBox DataSource="{value: Environments}" 
-                                       SelectedValue="{value: SelectedEnvironment}" 
-                                       SelectionChanged="{command: IsItReallyFruit()}"
-                                       CssClass="custom-combobox-wrapper" />
-                     </div>
+            <div class="table-wrapper" Visible="{value: RabbitMqService.RabbitMessages.Count > 0}">                               
+              <div style="margin-bottom: 2rem;">
+                    <dot:ComboBox DataSource="{value: Countries}" 
+                                  SelectedValue="{value: SelectedCountry}" 
+                                  SelectionChanged="{command: FilterChanged("Country")}"
+                                  CssClass="custom-combobox-wrapper" />
+                    <dot:ComboBox DataSource="{value: Environments}" 
+                                  SelectedValue="{value: SelectedEnvironment}" 
+                                  SelectionChanged="{command: FilterChanged("Environment")}"
+                                  CssClass="custom-combobox-wrapper" />
+                    <dot:ComboBox DataSource="{value: Services}" 
+                                  SelectedValue="{value: SelectedService}" 
+                                  SelectionChanged="{command: FilterChanged("Service")}"
+                                  CssClass="custom-combobox-wrapper" />
+                    <dot:ComboBox DataSource="{value: DataTypes}" 
+                                  SelectedValue="{value: SelectedDataType}" 
+                                  SelectionChanged="{command: FilterChanged("DataType")}"
+                                  CssClass="custom-combobox-wrapper" />
+                </div>
 
                 <!-- Header table -->
                 <table>
@@ -105,7 +115,7 @@
                             <th style="width: 100px;">Country</th>
                             <th style="width: 100px;">Environment</th>
                             <th style="width: 150px;">Service name</th>
-                            <th style="width: 150px;">Import date</th>
+                            <th style="width: 150px;">Last import date</th>
                             <th >Data type</th>
                         </tr>
                     </thead>
@@ -114,7 +124,7 @@
                 <!-- Data-only table -->
                 <table>
                     <tbody>
-                        <dot:Repeater DataSource="{value: RabbitMqService.RabbitMessages}">
+                        <dot:Repeater DataSource="{value: DisplayedRabbitMessages}">
                             <ItemTemplate>
                                 <tr>
                                    <td style="width: 100px;">{{value: Country}}</td>
@@ -134,7 +144,7 @@
             </div>
 
             <div class="messages">
-                <dot:Repeater DataSource="{value: RabbitMqService.Messages}">
+                <dot:Repeater DataSource="{value: DisplayedRawMessages}">
                     <ItemTemplate>
                         {{value: _this}}<br />
                     </ItemTemplate>
