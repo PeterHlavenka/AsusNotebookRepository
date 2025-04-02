@@ -20,7 +20,7 @@ public class RabbitMqService
         Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
-    public ObservableCollection<string> RawMessages { get; set; } = new();
+    public List<string> RawMessages { get; set; } = new();
     public List<RabbitMessage> RabbitMessages { get; set; } = new();
 
     private async Task Initialize()

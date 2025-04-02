@@ -11,18 +11,17 @@ public class DefaultViewModel : DotvvmViewModelBase
         RabbitMqService = rabbitMqService;
         DisplayedRabbitMessages = new ObservableCollection<RabbitMessage>(RabbitMqService.RabbitMessages);
         DisplayedRawMessages = new ObservableCollection<string>(RabbitMqService.RawMessages.TakeLast(50).Reverse());
-        Title = "RabbitMQ messages";
     }
 
-    public string Title { get; set; }
+    public string Title => "RabbitMQ messages";
     public RabbitMqService RabbitMqService { get; set; }
     public ObservableCollection<RabbitMessage> DisplayedRabbitMessages { get; set; }
     public ObservableCollection<string> DisplayedRawMessages { get; set; }
-    public string? SelectedEnvironment { get; set; }
+    public string? SelectedEnvironment { get; set; } = "Production";
     public string? SelectedCountry { get; set; }
     public string? SelectedService { get; set; }
     public string? SelectedDataType { get; set; }
-    
+
     public string[] Countries
     {
         get
@@ -70,7 +69,7 @@ public class DefaultViewModel : DotvvmViewModelBase
             return dataTypes.Prepend("All").ToArray();
         }
     }
-    
+
     public void FilterChanged(string parameter)
     {
         DisplayedRabbitMessages = new ObservableCollection<RabbitMessage>(
@@ -81,7 +80,7 @@ public class DefaultViewModel : DotvvmViewModelBase
                 (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataType == SelectedDataType)
             )
         );
-        
+
         DisplayedRawMessages = new ObservableCollection<string>(
             RabbitMqService.RawMessages.TakeLast(50).Where(m =>
                 (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Split('_')[1] == SelectedCountry) &&
