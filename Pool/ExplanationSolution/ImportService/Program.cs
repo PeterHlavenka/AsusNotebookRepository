@@ -4,6 +4,7 @@ using RabbitMQ.Client;
 // country, environment, dataType, service
 string[][] queues =
 [
+    // fronty musi byt definovany vcetne sluzby, ktera to ma vzit..
     ["CZ","Production", "aggregations"],
     ["CZ","Production", "reports"],
     ["CZ","Production", "pricing"],
@@ -32,7 +33,7 @@ await SendMultipleMessages();
 while (true)
 {
     if (Console.ReadLine()?.ToLower() == "n")
-        await SendMessage("CZ", "Production", "aggregations", GenerateRandomDateTime(), AdwDataIds.DataCzCsProTrend2);
+        await SendMessage("CZ", "Production", GenerateRandomDateTime(), AdwDataIds.DataCzCsProTrend2);
     if (Console.ReadLine()?.ToLower() == "m")
         await SendMultipleMessages();
 }
@@ -52,11 +53,11 @@ DateTime GenerateRandomDateTime()
     return new DateTime(year, month, day, hour, minute, second);
 }
 
-async Task SendMessage(string environment, string country, string consumerName, DateTime importDateTime, string adwDataId)
+async Task SendMessage(string environment, string country, DateTime importDateTime, string adwDataId)
 {
     // Send message to the exchange with routing key "import.{environment}.{country}"
-    var routingKey = $"{environment}.{country}.{consumerName}";
-    var message = $"{importDateTime:yyyy-MM-dd HH:mm:ss}_{environment}_{country}_{consumerName}_{adwDataId}";
+    var routingKey = $"{environment}.{country}";
+    var message = $"{importDateTime:yyyy-MM-dd HH:mm:ss}_{environment}_{country}_{adwDataId}";
     var body = System.Text.Encoding.UTF8.GetBytes(message);
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
     Console.WriteLine($@"Sending message: {message}");
@@ -71,13 +72,13 @@ async Task SendMultipleMessages()
 {
     var dateTime = GenerateRandomDateTime();
     // CZ
-    await SendMessage("CZ", "Production", "aggregations", dateTime, AdwDataIds.DataCzCsProTrend2);
-    await SendMessage("CZ", "Production", "reports", dateTime, AdwDataIds.DataCzMrTvIndivid);
-    await SendMessage("CZ", "Production", "pricing", dateTime, AdwDataIds.DataCzPemd);
-    await SendMessage("CZ", "RC", "reports", dateTime, AdwDataIds.DataCzAdCross);
+    await SendMessage("CZ", "Production", dateTime, AdwDataIds.DataCzCsProTrend2);
+    await SendMessage("CZ", "Production", dateTime, AdwDataIds.DataCzMrTvIndivid);
+    await SendMessage("CZ", "Production", dateTime, AdwDataIds.DataCzPemd);
+    await SendMessage("CZ", "RC", dateTime, AdwDataIds.DataCzAdCross);
     // SK
-    await SendMessage("SK", "Production", "pricing", dateTime, AdwDataIds.DataSkKantarMonitoring);
-    await SendMessage("SK", "RC", "aggregations", dateTime, AdwDataIds.DataSkKantarTvIndivid);
+    await SendMessage("SK", "Production", dateTime, AdwDataIds.DataSkKantarMonitoring);
+    await SendMessage("SK", "RC", dateTime, AdwDataIds.DataSkKantarTvIndivid);
 }
 
 async Task DeclareAndBindQueues()
@@ -86,7 +87,8 @@ async Task DeclareAndBindQueues()
     {
         var queueName = $"{queue[0]}_{queue[1]}_{queue[2]}Queue";
         await channel.QueueDeclareAsync(queueName, true, false, false);
-        var routingKey = $"{queue[0]}.{queue[1]}.{queue[2]}";
+        // v routovacim klici nebude definovany consumer (to je zname v deklaraci fronty). Message jde na vsechny consumery.
+        var routingKey = $"{queue[0]}.{queue[1]}"; 
         await channel.QueueBindAsync(queueName, exchangeName, routingKey);
     }
 }

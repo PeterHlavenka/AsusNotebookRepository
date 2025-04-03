@@ -13,13 +13,12 @@ public class DefaultViewModel : DotvvmViewModelBase
         DisplayedRawMessages = new ObservableCollection<string>(RabbitMqService.RawMessages.TakeLast(50).Reverse());
     }
 
-    public string Title => "RabbitMQ messages";
+    public string Title => "Adwind RabbitMQ messages";
     public RabbitMqService RabbitMqService { get; set; }
     public ObservableCollection<RabbitMessage> DisplayedRabbitMessages { get; set; }
     public ObservableCollection<string> DisplayedRawMessages { get; set; }
-    public string? SelectedEnvironment { get; set; } = "Production";
+    public string? SelectedEnvironment { get; set; }
     public string? SelectedCountry { get; set; }
-    public string? SelectedService { get; set; }
     public string? SelectedDataType { get; set; }
 
     public string[] Countries
@@ -46,18 +45,6 @@ public class DefaultViewModel : DotvvmViewModelBase
         }
     }
 
-    public string[] Services
-    {
-        get
-        {
-            var serviceNames = RabbitMqService.RabbitMessages
-                .Select(m => m.ServiceName)
-                .Distinct()
-                .ToArray();
-            return serviceNames.Prepend("All").ToArray();
-        }
-    }
-
     public string[] DataTypes
     {
         get
@@ -76,7 +63,6 @@ public class DefaultViewModel : DotvvmViewModelBase
             RabbitMqService.RabbitMessages.Where(m =>
                 (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Country == SelectedCountry) &&
                 (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Environment == SelectedEnvironment) &&
-                (string.IsNullOrEmpty(SelectedService) || SelectedService == "All" || m.ServiceName == SelectedService) &&
                 (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataType == SelectedDataType)
             )
         );
@@ -85,8 +71,7 @@ public class DefaultViewModel : DotvvmViewModelBase
             RabbitMqService.RawMessages.TakeLast(50).Where(m =>
                 (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Split('_')[1] == SelectedCountry) &&
                 (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Split('_')[2] == SelectedEnvironment) &&
-                (string.IsNullOrEmpty(SelectedService) || SelectedService == "All" || m.Split('_')[3] == SelectedService) &&
-                (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.Split('_')[4] == SelectedDataType)
+                (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.Split('_')[3] == SelectedDataType)
             ).Reverse()
         );
     }

@@ -27,21 +27,21 @@ public class RabbitMqService
     {
         var factory = new ConnectionFactory
         {
-            // HostName = "localhost:31361/adw-test" ,
-            Uri = new Uri("amqp://phlavenka:LLykoat3J9HbDBUAjVW3@localhost:55350/adw-test")
+            HostName = "localhost" ,
+            //Uri = new Uri("amqp://phlavenka:LLykoat3J9HbDBUAjVW3@localhost:55350/adw-test")
         };
-        var connection = await factory.CreateConnectionAsync(); // todo dispose / close connection
+        var connection = await factory.CreateConnectionAsync();
         var channel = await connection.CreateChannelAsync();
 
         // 1) deklarujeme exchange
-        // await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
-        //
+        await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
+        
         // // 2) deklarace fronty
         const string queueName = "webPageQueue";
-        // await channel.QueueDeclareAsync(queueName, true, false, false);
-        //
+        await channel.QueueDeclareAsync(queueName, true, false, false);
+        
         // // 3) musime frontu nabindovat na exchange
-        // await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
+        await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
 
 
         var consumer = new AsyncEventingBasicConsumer(channel);
@@ -51,18 +51,22 @@ public class RabbitMqService
             var message = Encoding.UTF8.GetString(body);
             RawMessages.Add(message);
 
-            // todo co by se melo zobrazovat - datum z posledni prijate message, nebo nejnovejsi message?  (co kdyz se bude preimportovat starsi den ?)
+            
             var parts = message.Split(Separator);
-            var same = RabbitMessages.SingleOrDefault(d => d.Country == parts[1] && d.Environment == parts[2] && d.ServiceName == parts[3] && d.DataType == parts[4]);
+            var importDate = parts[0];
+            var same = RabbitMessages.SingleOrDefault(d => d.Country == parts[1] && d.Environment == parts[2] && d.DataType == parts[3]);
             if (same != null)
+            {
                 RabbitMessages.Remove(same);
+                importDate = DateTime.Parse(parts[0]) > DateTime.Parse(same.ImportDate) ? importDate : same.ImportDate;
+            }
+            
             RabbitMessages.Add(new RabbitMessage
             {
-                ImportDate = parts[0],
+                ImportDate = importDate,
                 Country = parts[1],
                 Environment = parts[2],
-                ServiceName = parts[3],
-                DataType = parts[4]
+                DataType = parts[3]
             });
 
             return Task.CompletedTask;

@@ -77,10 +77,36 @@
             text-align: center;
             color: #999;
             margin-top: 2rem;
-        }       
-}
-
-
+        }    
+        
+        .filters {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .filters dot\\:ComboBox {
+            min-width: 160px;
+        }
+        
+        dot\\:ComboBox select {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #333;
+            transition: border-color 0.2s;
+        }
+        
+        dot\\:ComboBox select:focus {
+            outline: none;
+            border-color: #888;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+        }          
+    }
     </style>
 </head>
 <body>
@@ -90,33 +116,25 @@
                                   
             <div class="table-wrapper" Visible="{value: RabbitMqService.RabbitMessages.Count > 0}">                               
               <div style="margin-bottom: 2rem;">
-                    <dot:ComboBox DataSource="{value: Countries}" 
+                    <dot:ComboBox DataSource="{value: Countries}" style="width: 160px;" 
                                   SelectedValue="{value: SelectedCountry}" 
-                                  SelectionChanged="{command: FilterChanged("Country")}"
-                                  CssClass="custom-combobox-wrapper" />
-                    <dot:ComboBox DataSource="{value: Environments}" 
+                                  SelectionChanged="{command: FilterChanged("Country")}"/>
+                    <dot:ComboBox DataSource="{value: Environments}" style="width: 160px; margin-left: 1.3rem;"
                                   SelectedValue="{value: SelectedEnvironment}" 
-                                  SelectionChanged="{command: FilterChanged("Environment")}"
-                                  CssClass="custom-combobox-wrapper" />
-                    <dot:ComboBox DataSource="{value: Services}" 
-                                  SelectedValue="{value: SelectedService}" 
-                                  SelectionChanged="{command: FilterChanged("Service")}"
-                                  CssClass="custom-combobox-wrapper" />
-                    <dot:ComboBox DataSource="{value: DataTypes}" 
+                                  SelectionChanged="{command: FilterChanged("Environment")}"/>                   
+                    <dot:ComboBox DataSource="{value: DataTypes}" style="width: 420px; margin-left: 1.3rem;"
                                   SelectedValue="{value: SelectedDataType}" 
-                                  SelectionChanged="{command: FilterChanged("DataType")}"
-                                  CssClass="custom-combobox-wrapper" />
+                                  SelectionChanged="{command: FilterChanged("DataType")}"/>
                 </div>
 
                 <!-- Header table -->
                 <table>
                     <thead>
                         <tr>
-                            <th style="width: 100px;">Country</th>
-                            <th style="width: 100px;">Environment</th>
-                            <th style="width: 150px;">Service name</th>
-                            <th style="width: 150px;">Last import date</th>
-                            <th >Data type</th>
+                            <th style="width: 160px;">Country</th>
+                            <th style="width: 160px;">Environment</th>    
+                            <th >Data type</th>                       
+                            <th style="width: 160px;">Last import date</th>                           
                         </tr>
                     </thead>
                 </table>
@@ -127,11 +145,10 @@
                         <dot:Repeater DataSource="{value: DisplayedRabbitMessages}">
                             <ItemTemplate>
                                 <tr>
-                                   <td style="width: 100px;">{{value: Country}}</td>
-                                   <td style="width: 100px;">{{value: Environment}}</td>
-                                   <td style="width: 150px;">{{value: ServiceName}}</td>
-                                   <td style="width: 150px;">{{value: ImportDate}}</td>                                 
-                                   <td style="width: 40%;">{{value: DataType}}</td>
+                                   <td style="width: 160px;">{{value: Country}}</td>
+                                   <td style="width: 160px;">{{value: Environment}}</td>  
+                                   <td style="width: 420px;">{{value: DataType}}</td>                               
+                                   <td style="width: 160px;">{{value: ImportDate}}</td>                                                                    
                                 </tr>
                             </ItemTemplate>
                         </dot:Repeater>

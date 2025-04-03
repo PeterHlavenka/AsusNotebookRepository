@@ -13,7 +13,7 @@ const string queueName = "CZ_Production_aggregationsQueue";
 await channel.QueueDeclareAsync(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
 // 3) musime frontu nabindovat na exchange
-await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "CZ.Production.aggregations");
+await channel.QueueBindAsync(queue: queueName, exchange: "importExchange", routingKey: "CZ.Production");
 
 var consumer = new AsyncEventingBasicConsumer(channel);
 consumer.ReceivedAsync += async (model, ea) =>
