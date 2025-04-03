@@ -21,7 +21,7 @@ consumer.ReceivedAsync += async (model, ea) =>
     var body = ea.Body.ToArray();
     var message = System.Text.Encoding.UTF8.GetString(body);
     Console.WriteLine($"User - Received {message}");
-    await Task.Delay(1000);
+    await Task.Delay(10);
     await channel.BasicAckAsync(deliveryTag: ea.DeliveryTag, multiple: false);
 };
 
