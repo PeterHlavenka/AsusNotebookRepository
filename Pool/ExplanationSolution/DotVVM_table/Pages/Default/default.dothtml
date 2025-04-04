@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8" />
     <title>{{value: Title}}</title>
 
@@ -115,16 +116,16 @@
             <h1>{{value: Title}}</h1>
                                   
             <div class="table-wrapper" Visible="{value: RabbitMqService.RabbitMessages.Count > 0}">                               
-              <div style="margin-bottom: 2rem;">
-                    <dot:ComboBox DataSource="{value: Countries}" style="width: 160px;" 
-                                  SelectedValue="{value: SelectedCountry}" 
-                                  SelectionChanged="{command: FilterChanged("Country")}"/>
-                    <dot:ComboBox DataSource="{value: Environments}" style="width: 160px; margin-left: 1.3rem;"
-                                  SelectedValue="{value: SelectedEnvironment}" 
-                                  SelectionChanged="{command: FilterChanged("Environment")}"/>                   
-                    <dot:ComboBox DataSource="{value: DataTypes}" style="width: 420px; margin-left: 1.3rem;"
-                                  SelectedValue="{value: SelectedDataType}" 
-                                  SelectionChanged="{command: FilterChanged("DataType")}"/>
+                <div style="margin-bottom: 2rem; display: flex;">
+                <dot:ComboBox DataSource="{value: Countries}" class="form-control" style="width: 150px; margin-right: 10px;"
+                  SelectedValue="{value: SelectedCountry}" 
+                  SelectionChanged="{command: FilterChanged('Country')}" />
+                <dot:ComboBox DataSource="{value: Environments}" class="form-control" style="width: 150px; margin-right: 10px;"
+                    SelectedValue="{value: SelectedEnvironment}" 
+                    SelectionChanged="{command: FilterChanged('Environment')}" />
+                <dot:ComboBox DataSource="{value: DataTypes}" class="form-control" style="width: 420px; margin-right: 10px;"
+                    SelectedValue="{value: SelectedDataType}" 
+                    SelectionChanged="{command: FilterChanged('DataType')}" />
                 </div>
 
                 <!-- Header table -->
@@ -134,7 +135,7 @@
                             <th style="width: 160px;">Country</th>
                             <th style="width: 160px;">Environment</th>    
                             <th >Data type</th>                       
-                            <th style="width: 160px;">Last import date</th>                           
+                            <th style="width: 180px;">Last import date</th>                           
                         </tr>
                     </thead>
                 </table>
@@ -147,8 +148,8 @@
                                 <tr>
                                    <td style="width: 160px;">{{value: Country}}</td>
                                    <td style="width: 160px;">{{value: Environment}}</td>  
-                                   <td style="width: 420px;">{{value: DataType}}</td>                               
-                                   <td style="width: 160px;">{{value: ImportDate}}</td>                                                                    
+                                   <td style="width: 435px;">{{value: DataType}}</td>                               
+                                   <td style="width: 180px;">{{value: ImportDate}}</td>                                                                    
                                 </tr>
                             </ItemTemplate>
                         </dot:Repeater>

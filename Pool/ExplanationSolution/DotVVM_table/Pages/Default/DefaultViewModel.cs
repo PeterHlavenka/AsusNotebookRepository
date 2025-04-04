@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using DotVVM.Framework.ViewModel;
+using RabbitCommon;
 
 namespace DotVVM_table.Pages.Default;
 
@@ -10,7 +11,7 @@ public class DefaultViewModel : DotvvmViewModelBase
     {
         RabbitMqService = rabbitMqService;
         DisplayedRabbitMessages = new ObservableCollection<RabbitMessage>(RabbitMqService.RabbitMessages);
-        DisplayedRawMessages = new ObservableCollection<string>(RabbitMqService.RawMessages.TakeLast(50).Reverse());
+        DisplayedRawMessages = new ObservableCollection<string>(RabbitMqService.RawMessages.TakeLast(50).Reverse().Select(m => m.ToString()));
     }
 
     public string Title => "Adwind RabbitMQ messages";
@@ -68,11 +69,12 @@ public class DefaultViewModel : DotvvmViewModelBase
         );
 
         DisplayedRawMessages = new ObservableCollection<string>(
-            RabbitMqService.RawMessages.TakeLast(50).Where(m =>
-                (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Split('_')[1] == SelectedCountry) &&
-                (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Split('_')[2] == SelectedEnvironment) &&
-                (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.Split('_')[3] == SelectedDataType)
-            ).Reverse()
+            RabbitMqService.RawMessages.TakeLast(50)
+                .Where(m => (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Country == SelectedCountry) &&
+                            (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Environment == SelectedEnvironment) &&
+                            (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataType == SelectedDataType))
+                .Reverse()
+                .Select(m => m.ToString())
         );
     }
 }

@@ -285,6 +285,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM_table", "DotVVM_tabl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{12814990-9963-443F-9AE0-9F29CD796CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitCommon", "RabbitCommon\RabbitCommon.csproj", "{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -727,6 +729,10 @@ Global
 		{12814990-9963-443F-9AE0-9F29CD796CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12814990-9963-443F-9AE0-9F29CD796CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12814990-9963-443F-9AE0-9F29CD796CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -847,6 +853,7 @@ Global
 		{216D899B-6661-4BD3-A514-1621E6F88FBB} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 		{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53} = {C2D26630-16CE-4E4E-9012-9F2FBF5C98E5}
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C} = {E7CA378E-4FC9-4218-800B-B9072A289551}
+		{89AD574B-F465-4AE7-8447-FD1D9B2E8CED} = {E7CA378E-4FC9-4218-800B-B9072A289551}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}

@@ -1,4 +1,6 @@
-﻿using ImportService;
+﻿using System.Text.Json;
+using ImportService;
+using RabbitCommon;
 using RabbitMQ.Client;
 
 // country, environment, dataType, service
@@ -53,18 +55,25 @@ DateTime GenerateRandomDateTime()
     return new DateTime(year, month, day, hour, minute, second);
 }
 
-async Task SendMessage(string environment, string country, DateTime importDateTime, string adwDataId)
+async Task SendMessage(string country, string environment, DateTime importDateTime, string adwDataId)
 {
     // Send message to the exchange with routing key "import.{environment}.{country}"
     var routingKey = $"{environment}.{country}";
-    var message = $"{importDateTime:yyyy-MM-dd HH:mm:ss}_{environment}_{country}_{adwDataId}";
+    var rabbitMessage = new RabbitMessage
+    {
+        Country = country, 
+        Environment = environment, 
+        DataType = adwDataId, 
+        ImportDate = importDateTime.ToString("yyyy-MM-dd HH:mm:ss")
+    };
+    var message = JsonSerializer.Serialize(rabbitMessage);
     var body = System.Text.Encoding.UTF8.GetBytes(message);
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
-    Console.WriteLine($@"Sending message: {message}");
     
     // a stejnou zpravu poslu na webovou stranku
     var web = "webPage";
     routingKey = $"{environment}.{country}.{web}";
+    Console.WriteLine("Sending message to web page");
     await channel.BasicPublishAsync(exchangeName, routingKey, body);
 }
 
