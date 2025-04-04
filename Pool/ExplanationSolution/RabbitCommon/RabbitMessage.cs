@@ -11,13 +11,15 @@ public class RabbitMessage
     public required string Environment { get; init; }
 
     [JsonPropertyName("data_type")] 
-    public required string DataType { get; init; }
+    public required string[] DataTypes { get; init; }
 
     [JsonPropertyName("import_date")] 
     public required string ImportDate { get; set; }
 
+    public string DataTypesString => string.Join(", ", DataTypes);
+    
     public override string ToString()
     {
-        return $"{Country} {Environment} {DataType} {ImportDate}";
+        return $"{Country} {Environment} {DataTypesString} {ImportDate}";
     }
 }

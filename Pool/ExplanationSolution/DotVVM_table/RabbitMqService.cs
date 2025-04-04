@@ -58,7 +58,7 @@ public class RabbitMqService
                 return Task.CompletedTask;
             }
             RawMessages.Add(rabbitMessage);
-            var same = RabbitMessages.SingleOrDefault(d => d.Country == rabbitMessage.Country && d.Environment == rabbitMessage.Environment && d.DataType == rabbitMessage.DataType);
+            var same = RabbitMessages.SingleOrDefault(d => d.Country == rabbitMessage.Country && d.Environment == rabbitMessage.Environment && d.DataTypes == rabbitMessage.DataTypes);
             if (same != null)
             {
                 RabbitMessages.Remove(same);

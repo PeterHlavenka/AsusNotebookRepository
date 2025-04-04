@@ -148,7 +148,7 @@
                                 <tr>
                                    <td style="width: 160px;">{{value: Country}}</td>
                                    <td style="width: 160px;">{{value: Environment}}</td>  
-                                   <td style="width: 435px;">{{value: DataType}}</td>                               
+                                   <td style="width: 435px;">{{value: DataTypesString}}</td>                               
                                    <td style="width: 180px;">{{value: ImportDate}}</td>                                                                    
                                 </tr>
                             </ItemTemplate>

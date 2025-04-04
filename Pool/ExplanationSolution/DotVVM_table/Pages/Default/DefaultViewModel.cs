@@ -51,9 +51,9 @@ public class DefaultViewModel : DotvvmViewModelBase
         get
         {
             var dataTypes = RabbitMqService.RabbitMessages
-                .Select(m => m.DataType)
+                .SelectMany(m => m.DataTypes)
                 .Distinct()
-                .ToArray();
+                .ToList();
             return dataTypes.Prepend("All").ToArray();
         }
     }
@@ -64,7 +64,7 @@ public class DefaultViewModel : DotvvmViewModelBase
             RabbitMqService.RabbitMessages.Where(m =>
                 (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Country == SelectedCountry) &&
                 (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Environment == SelectedEnvironment) &&
-                (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataType == SelectedDataType)
+                (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataTypes.Contains(SelectedDataType))
             )
         );
 
@@ -72,7 +72,7 @@ public class DefaultViewModel : DotvvmViewModelBase
             RabbitMqService.RawMessages.TakeLast(50)
                 .Where(m => (string.IsNullOrEmpty(SelectedCountry) || SelectedCountry == "All" || m.Country == SelectedCountry) &&
                             (string.IsNullOrEmpty(SelectedEnvironment) || SelectedEnvironment == "All" || m.Environment == SelectedEnvironment) &&
-                            (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataType == SelectedDataType))
+                            (string.IsNullOrEmpty(SelectedDataType) || SelectedDataType == "All" || m.DataTypes.Contains(SelectedDataType)))
                 .Reverse()
                 .Select(m => m.ToString())
         );
