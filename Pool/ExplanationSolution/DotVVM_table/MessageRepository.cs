@@ -76,7 +76,7 @@ public class MessageRepository
             var timestamp = DateTime.UtcNow.ToString("o");
             insertCmd.CommandText =
                 @"
-                INSERT INTO RabbitMessages (Timestamp, TimeCountry, Environment, DataTypes, ImportDate)
+                INSERT INTO RabbitMessages (Timestamp, Country, Environment, DataTypes, ImportDate)
                 VALUES ($timestamp, $country, $environment, $dataTypes, $importDate);
             ";
 
