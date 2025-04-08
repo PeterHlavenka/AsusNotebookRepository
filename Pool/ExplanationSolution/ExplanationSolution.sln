@@ -287,7 +287,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Thre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitCommon", "RabbitCommon\RabbitCommon.csproj", "{89AD574B-F465-4AE7-8447-FD1D9B2E8CED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender", "RabbitSender\RabbitSender.csproj", "{81B31888-B6FB-4AED-8ACD-9355FD021B90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.RabbitSender", "Adwind.RabbitSender\Adwind.RabbitSender.csproj", "{81B31888-B6FB-4AED-8ACD-9355FD021B90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

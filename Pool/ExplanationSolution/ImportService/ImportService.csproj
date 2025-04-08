@@ -13,7 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RabbitCommon\RabbitCommon.csproj" />
-      <ProjectReference Include="..\RabbitSender\RabbitSender.csproj" />
+      <ProjectReference Include="..\Adwind.RabbitSender\Adwind.RabbitSender.csproj" />
     </ItemGroup>
 
 </Project>

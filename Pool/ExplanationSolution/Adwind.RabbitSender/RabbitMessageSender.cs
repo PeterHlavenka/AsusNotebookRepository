@@ -3,7 +3,7 @@ using System.Text.Json;
 using RabbitCommon;
 using RabbitMQ.Client;
 
-namespace RabbitSender;
+namespace Adwind.RabbitSender;
 
 public class RabbitMessageSender : IDisposable
 {

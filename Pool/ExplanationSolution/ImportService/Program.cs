@@ -3,7 +3,7 @@ using System.Text.Json;
 using ImportService;
 using RabbitCommon;
 using RabbitMQ.Client;
-using RabbitSender;
+using Adwind.RabbitSender;
 
 // country, environment, dataType, service
 string[][] queues =
