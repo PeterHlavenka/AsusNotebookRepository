@@ -131,18 +131,27 @@ public class MessageRepository
 
         return messages;
     }
-    
+
+    // Removes messages and logs older than 1 year
     private void PerformMaintenance()
     {
         using var connection = new SqliteConnection($"Data Source={m_dbPath}");
         connection.Open();
-        
-        var deleteOldRecordsCmd = connection.CreateCommand();
-        deleteOldRecordsCmd.CommandText =
+
+        var deleteOldMessagesCmd = connection.CreateCommand();
+        deleteOldMessagesCmd.CommandText =
             @"
-                DELETE FROM RabbitMessages
-                WHERE Timestamp < datetime('now', '-1 year');
-                ";
-        deleteOldRecordsCmd.ExecuteNonQuery();
+            DELETE FROM RabbitMessages
+            WHERE Timestamp < datetime('now', '-1 year');
+        ";
+        deleteOldMessagesCmd.ExecuteNonQuery();
+
+        var deleteOldLogsCmd = connection.CreateCommand();
+        deleteOldLogsCmd.CommandText =
+            @"
+            DELETE FROM Logs
+            WHERE Timestamp < datetime('now', '-1 year');
+        ";
+        deleteOldLogsCmd.ExecuteNonQuery();
     }
 }
