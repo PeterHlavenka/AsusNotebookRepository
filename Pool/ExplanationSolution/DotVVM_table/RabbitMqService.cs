@@ -5,57 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using RabbitCommon;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Threading;
 
-
 namespace DotVVM_table;
 
 public class RabbitMqService
 {
-    private static readonly ILogger<RabbitMqService> m_log = new Logger<RabbitMqService>(new LoggerFactory()); // todo
-    private readonly string m_dbPath;
-
-    public RabbitMqService()
-    {
-        m_dbPath = GetDatabasePath();
-        InitializeDatabase();
-        Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
-    }
+    private readonly DatabaseLogger<MessageRepository> m_log;
+    private readonly MessageRepository m_messageRepository;
 
     public List<RabbitMessage> RawMessages { get; } = new();
     public List<RabbitMessage> RabbitMessages { get; } = new();
 
-    private static string GetDatabasePath()
+    public RabbitMqService()
     {
-        var folder = Path.Combine(AppContext.BaseDirectory, "Data");
-        Directory.CreateDirectory(folder);
-        return Path.Combine(folder, "messages.db");
-    }
-
-    private void InitializeDatabase()
-    {
-        if (File.Exists(m_dbPath)) return;
-        SQLitePCL.Batteries.Init();
-        using var connection = new SqliteConnection($"Data Source={m_dbPath}");
-        connection.Open();
-
-        var tableCmd = connection.CreateCommand();
-        tableCmd.CommandText =
-            @"
-                CREATE TABLE RabbitMessages (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Country TEXT,
-                    Environment TEXT,
-                    DataTypes TEXT,
-                    ImportDate TEXT
-                );
-            ";
-        tableCmd.ExecuteNonQuery();
+        SQLitePCL.Batteries.Init(); 
+        m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
+        m_messageRepository = new MessageRepository(m_log);
+        m_messageRepository.Load();
+        Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
     private async Task Initialize()
@@ -100,36 +72,9 @@ public class RabbitMqService
             }
 
             RabbitMessages.Add(rabbitMessage);
-            await SaveMessageToDatabase(rabbitMessage);
+            await m_messageRepository.Save(rabbitMessage);
         };
 
         await channel.BasicConsumeAsync(queueName, true, consumer);
-    }
-
-    private async Task SaveMessageToDatabase(RabbitMessage message)
-    {
-        try
-        {
-            await using var connection = new SqliteConnection($"Data Source={m_dbPath}");
-            await connection.OpenAsync();
-
-            var insertCmd = connection.CreateCommand();
-            insertCmd.CommandText =
-                @"
-                INSERT INTO RabbitMessages (Country, Environment, DataTypes, ImportDate)
-                VALUES ($country, $environment, $dataTypes, $importDate);
-            ";
-
-            insertCmd.Parameters.AddWithValue("$country", message.Country);
-            insertCmd.Parameters.AddWithValue("$environment", message.Environment);
-            insertCmd.Parameters.AddWithValue("$dataTypes", message.DataTypesString);
-            insertCmd.Parameters.AddWithValue("$importDate", message.ImportDate);
-
-            await insertCmd.ExecuteNonQueryAsync();
-        }
-        catch (Exception ex)
-        {
-            m_log.LogError(ex, "Failed to save message to database");
-        }
     }
 }
