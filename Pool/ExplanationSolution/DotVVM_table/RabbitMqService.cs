@@ -85,9 +85,15 @@ public class RabbitMqService
     private List<RabbitMessage> GetLatestMessages()
     {
         var distinctMessages = RawMessages
-            .SelectMany(m => m.DataTypes.Select(dataType => new { Message = m, DataType = dataType }))
-            .GroupBy(m => new { m.Message.Country, m.Message.Environment, m.DataType })
-            .Select(g => g.OrderByDescending(m => m.Message.ImportDate).First().Message)
+            .SelectMany(m => m.DataTypes.Select(dataType => new RabbitMessage
+            {
+                Country = m.Country,
+                Environment = m.Environment,
+                DataTypes = new[] { dataType },
+                ImportDate = m.ImportDate
+            }))
+            .GroupBy(m => new { m.Country, m.Environment, m.DataTypesString })
+            .Select(g => g.OrderByDescending(m => m.ImportDate).First())
             .ToList();
 
         return distinctMessages;
