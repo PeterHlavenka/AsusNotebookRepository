@@ -31,7 +31,11 @@ public class MessageRepository
 
     private void InitializeDatabase()
     {
-        if (File.Exists(m_dbPath)) return;
+        if (File.Exists(m_dbPath))
+        {
+            PerformMaintenance();
+            return;
+        }
 
         Batteries.Init();
         using var connection = new SqliteConnection($"Data Source={m_dbPath}");
@@ -126,5 +130,19 @@ public class MessageRepository
         }
 
         return messages;
+    }
+    
+    private void PerformMaintenance()
+    {
+        using var connection = new SqliteConnection($"Data Source={m_dbPath}");
+        connection.Open();
+        
+        var deleteOldRecordsCmd = connection.CreateCommand();
+        deleteOldRecordsCmd.CommandText =
+            @"
+                DELETE FROM RabbitMessages
+                WHERE Timestamp < datetime('now', '-1 year');
+                ";
+        deleteOldRecordsCmd.ExecuteNonQuery();
     }
 }

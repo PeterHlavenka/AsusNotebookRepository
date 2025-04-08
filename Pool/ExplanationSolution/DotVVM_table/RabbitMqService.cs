@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -9,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using RabbitCommon;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using SQLitePCL;
 using Threading;
 
 namespace DotVVM_table;
@@ -18,17 +18,19 @@ public class RabbitMqService
     private readonly DatabaseLogger<MessageRepository> m_log;
     private readonly MessageRepository m_messageRepository;
 
-    public List<RabbitMessage> RawMessages { get; } = new();
-    public List<RabbitMessage> RabbitMessages { get; } = new();
-
     public RabbitMqService()
     {
-        SQLitePCL.Batteries.Init(); 
+        Batteries.Init();
         m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
         m_messageRepository = new MessageRepository(m_log);
-        m_messageRepository.Load();
+        RawMessages = m_messageRepository.Load();
+        RabbitMessages = GetLatestMessages();
         Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
     }
+
+    public List<RabbitMessage> RawMessages { get; }
+    public List<RabbitMessage> RabbitMessages { get; private set; } = new();
+    public event Action MessagesChanged;
 
     private async Task Initialize()
     {
@@ -70,11 +72,24 @@ public class RabbitMqService
                     ? rabbitMessage.ImportDate
                     : same.ImportDate;
             }
-
-            RabbitMessages.Add(rabbitMessage);
+            
             await m_messageRepository.Save(rabbitMessage);
+            RabbitMessages = GetLatestMessages();
+            MessagesChanged?.Invoke();
         };
 
         await channel.BasicConsumeAsync(queueName, true, consumer);
+    }
+
+    /// Provides filtered messages for the view, where only the latest message for each combination of country, environment, and data type is shown.
+    private List<RabbitMessage> GetLatestMessages()
+    {
+        var distinctMessages = RawMessages
+            .SelectMany(m => m.DataTypes.Select(dataType => new { Message = m, DataType = dataType }))
+            .GroupBy(m => new { m.Message.Country, m.Message.Environment, m.DataType })
+            .Select(g => g.OrderByDescending(m => m.Message.ImportDate).First().Message)
+            .ToList();
+
+        return distinctMessages;
     }
 }

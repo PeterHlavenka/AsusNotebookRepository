@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using DotVVM.Framework.ViewModel;
@@ -12,15 +13,16 @@ public class DefaultViewModel : DotvvmViewModelBase
         RabbitMqService = rabbitMqService;
         DisplayedRabbitMessages = new ObservableCollection<RabbitMessage>(RabbitMqService.RabbitMessages);
         DisplayedRawMessages = new ObservableCollection<string>(RabbitMqService.RawMessages.TakeLast(50).Reverse().Select(m => m.ToString()));
+        rabbitMqService.MessagesChanged += OnMessagesChanged;
     }
 
     public string Title => "Adwind RabbitMQ messages";
     public RabbitMqService RabbitMqService { get; set; }
     public ObservableCollection<RabbitMessage> DisplayedRabbitMessages { get; set; }
     public ObservableCollection<string> DisplayedRawMessages { get; set; }
-    public string? SelectedEnvironment { get; set; }
-    public string? SelectedCountry { get; set; }
-    public string? SelectedDataType { get; set; }
+    public string SelectedEnvironment { get; set; }
+    public string SelectedCountry { get; set; }
+    public string SelectedDataType { get; set; }
 
     public string[] Countries
     {
@@ -76,5 +78,10 @@ public class DefaultViewModel : DotvvmViewModelBase
                 .Reverse()
                 .Select(m => m.ToString())
         );
+    }
+    
+    private void OnMessagesChanged()
+    {
+        DisplayedRabbitMessages = new ObservableCollection<RabbitMessage>(RabbitMqService.RabbitMessages);
     }
 }
