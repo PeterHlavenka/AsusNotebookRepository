@@ -15,6 +15,7 @@ namespace DotVVM_table;
 
 public class RabbitMqService
 {
+    private const string DataQueueName = "webPageQueue";
     private readonly DatabaseLogger<MessageRepository> m_log;
     private readonly MessageRepository m_messageRepository;
 
@@ -29,28 +30,29 @@ public class RabbitMqService
     }
 
     public List<RabbitMessage> RawMessages { get; }
-    public List<RabbitMessage> RabbitMessages { get; private set; } = new();
+    public List<RabbitMessage> RabbitMessages { get; private set; }
     public event Action MessagesChanged;
 
     private async Task Initialize()
     {
         var factory = new ConnectionFactory
         {
-            HostName = "localhost"
+            // HostName = "localhost"
+            Uri = new Uri("amqp://phlavenka:LLykoat3J9HbDBUAjVW3@localhost:55350/adw-test")
         };
         var connection = await factory.CreateConnectionAsync();
         var channel = await connection.CreateChannelAsync();
 
-        await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
-        const string queueName = "webPageQueue";
-        await channel.QueueDeclareAsync(queueName, true, false, false);
-        await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
+        // await channel.ExchangeDeclareAsync("importExchange", ExchangeType.Topic, true, false);
+
+        // await channel.QueueDeclareAsync(queueName, true, false, false);
+        // await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
 
         var consumer = new AsyncEventingBasicConsumer(channel);
         consumer.ReceivedAsync += async (model, ea) =>
         {
             var body = ea.Body.ToArray();
-            var message = Encoding.UTF8.GetString(body);
+             var message = Encoding.UTF8.GetString(body);
 
             var rabbitMessage = JsonSerializer.Deserialize<RabbitMessage>(message);
             if (rabbitMessage == null)
@@ -72,13 +74,13 @@ public class RabbitMqService
                     ? rabbitMessage.ImportDate
                     : same.ImportDate;
             }
-            
+
             await m_messageRepository.Save(rabbitMessage);
             RabbitMessages = GetLatestMessages();
             MessagesChanged?.Invoke();
         };
 
-        await channel.BasicConsumeAsync(queueName, true, consumer);
+        await channel.BasicConsumeAsync(DataQueueName, true, consumer);
     }
 
     /// Provides filtered messages for the view, where only the latest message for each combination of country, environment, and data type is shown.
@@ -89,7 +91,7 @@ public class RabbitMqService
             {
                 Country = m.Country,
                 Environment = m.Environment,
-                DataTypes = new[] { dataType },
+                DataTypes = [dataType],
                 ImportDate = m.ImportDate
             }))
             .GroupBy(m => new { m.Country, m.Environment, m.DataTypesString })
