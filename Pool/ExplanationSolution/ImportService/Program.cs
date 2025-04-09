@@ -1,9 +1,5 @@
-﻿using System.Text;
-using System.Text.Json;
+﻿using Adwind.RabbitSender;
 using ImportService;
-using RabbitCommon;
-using RabbitMQ.Client;
-using Adwind.RabbitSender;
 
 // country, environment, dataType, service
 string[][] queues =
@@ -28,7 +24,7 @@ while (true)
     var pismeno = Console.ReadLine();
     if (pismeno == "m")
         await SendMultipleMessages(neco);
-    
+
     if (pismeno == "n")
         await neco.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
 }
@@ -46,7 +42,6 @@ DateTime GenerateRandomDateTime()
     var second = random.Next(0, 60);
     return new DateTime(year, month, day, hour, minute, second);
 }
-
 
 
 async Task SendMultipleMessages(RabbitMessageSender sender)

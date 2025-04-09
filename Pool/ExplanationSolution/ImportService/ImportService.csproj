@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -12,8 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\RabbitCommon\RabbitCommon.csproj" />
-      <ProjectReference Include="..\Adwind.RabbitSender\Adwind.RabbitSender.csproj" />
+      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitSender\Adwind.RabbitSender.csproj" />
     </ItemGroup>
 
 </Project>

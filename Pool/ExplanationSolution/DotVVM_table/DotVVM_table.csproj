@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>disable</Nullable>
     </PropertyGroup>
 
@@ -22,6 +22,13 @@
     <ItemGroup>
       <ProjectReference Include="..\RabbitCommon\RabbitCommon.csproj" />
       <ProjectReference Include="..\Threading\Threading.csproj" />
+      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitCommon\Adwind.RabbitCommon.csproj" />
+      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitCommon\RabbitCommon.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="RabbitCommon">
+        <HintPath>bin\Debug\net7.0\RabbitCommon.dll</HintPath>
+      </Reference>
     </ItemGroup>
     <Target Name="CreateWWWRoot" AfterTargets="AfterPublish">
         <MakeDir Directories="$(PublishDir)wwwroot" Condition="!Exists('$(PublishDir)wwwroot')"/>

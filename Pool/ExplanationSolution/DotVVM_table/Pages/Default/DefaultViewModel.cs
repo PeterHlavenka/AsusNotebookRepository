@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Adwind.RabbitCommon;
 using DotVVM.Framework.ViewModel;
-using RabbitCommon;
 
 namespace DotVVM_table.Pages.Default;
 
