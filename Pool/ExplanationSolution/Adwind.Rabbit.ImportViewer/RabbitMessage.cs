@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DotVVM_table;
+namespace Adwind.Rabbit.ImportViewer;
 
 public class RabbitMessage
 {

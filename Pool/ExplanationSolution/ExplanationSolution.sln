@@ -281,7 +281,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzProductionAggregations", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkRCAggregations", "SkRCAggregations\SkRCAggregations.csproj", "{8B0ACF97-78A8-47E2-94D2-923DB1E1DF53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVVM_table", "DotVVM_table\DotVVM_table.csproj", "{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.ImportViewer", "Adwind.Rabbit.ImportViewer\Adwind.Rabbit.ImportViewer.csproj", "{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{12814990-9963-443F-9AE0-9F29CD796CEE}"
 EndProject

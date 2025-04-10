@@ -3,7 +3,7 @@ using DotVVM.Framework.Hosting;
 using DotVVM.Framework.ViewModel;
 using Microsoft.AspNetCore.Diagnostics;
 
-namespace DotVVM_table.Pages.Error;
+namespace Adwind.Rabbit.ImportViewer.Pages.Error;
 
 public class ErrorViewModel : DotvvmViewModelBase
 {

@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using DotVVM.Framework.ViewModel;
 
-namespace DotVVM_table.Pages.Default;
+namespace Adwind.Rabbit.ImportViewer.Pages.Default;
 
 public class DefaultViewModel : DotvvmViewModelBase
 {

@@ -4,7 +4,7 @@ using DotVVM.Framework.Compilation;
 using DotVVM.Framework.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DotVVM_table;
+namespace Adwind.Rabbit.ImportViewer;
 
 public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
 {

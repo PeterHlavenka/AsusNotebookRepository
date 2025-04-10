@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore;
 
-namespace DotVVM_table;
+namespace Adwind.Rabbit.ImportViewer;
 
 public class Program
 {

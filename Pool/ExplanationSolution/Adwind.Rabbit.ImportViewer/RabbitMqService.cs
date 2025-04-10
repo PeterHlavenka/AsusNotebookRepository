@@ -8,9 +8,9 @@ using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using SQLitePCL;
-using Threading;
 
-namespace DotVVM_table;
+
+namespace Adwind.Rabbit.ImportViewer;
 
 public class RabbitMqService
 {
@@ -22,13 +22,13 @@ public class RabbitMqService
     {
         Batteries.Init();
         m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
-        m_messageRepository = new MessageRepository(m_log);
-        RawMessages = m_messageRepository.Load();
+        // m_messageRepository = new MessageRepository(m_log);
+        // RawMessages = m_messageRepository.Load();
         RabbitMessages = GetLatestMessages();
-        Initialize().FireAndForgetSafeAsync(m_log.LogError, false);
+        Initialize(); //.FireAndForgetSafeAsync(m_log.LogError, false);
     }
 
-    public List<RabbitMessage> RawMessages { get; }
+    public List<RabbitMessage> RawMessages { get; } = [];
     public List<RabbitMessage> RabbitMessages { get; private set; }
     public event Action MessagesChanged;
 
@@ -48,7 +48,7 @@ public class RabbitMqService
         // await channel.QueueBindAsync(queueName, "importExchange", "#.webPage");
 
         var consumer = new AsyncEventingBasicConsumer(channel);
-        consumer.ReceivedAsync += async (model, ea) =>
+        consumer.ReceivedAsync += (_, ea) =>
         {
             var body = ea.Body.ToArray();
              var message = Encoding.UTF8.GetString(body);
@@ -57,7 +57,7 @@ public class RabbitMqService
             if (rabbitMessage == null)
             {
                 m_log.LogError("Failed to deserialize RabbitMessage: {Message}", message);
-                return;
+                return Task.CompletedTask;
             }
 
             RawMessages.Add(rabbitMessage);
@@ -74,9 +74,10 @@ public class RabbitMqService
                     : same.ImportDate;
             }
 
-            await m_messageRepository.Save(rabbitMessage);
+            //await m_messageRepository.Save(rabbitMessage);
             RabbitMessages = GetLatestMessages();
             MessagesChanged?.Invoke();
+            return Task.CompletedTask;
         };
 
         await channel.BasicConsumeAsync(DataQueueName, true, consumer);

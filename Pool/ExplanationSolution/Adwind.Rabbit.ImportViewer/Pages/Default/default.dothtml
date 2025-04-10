@@ -1,4 +1,4 @@
-@viewModel DotVVM_table.Pages.Default.DefaultViewModel, DotVVM_table
+@viewModel Adwind.Rabbit.ImportViewer.Pages.Default.DefaultViewModel, Adwind.Rabbit.ImportViewer
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>

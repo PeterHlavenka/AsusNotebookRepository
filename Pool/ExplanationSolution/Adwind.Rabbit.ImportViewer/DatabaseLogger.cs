@@ -2,7 +2,7 @@
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 
-namespace DotVVM_table;
+namespace Adwind.Rabbit.ImportViewer;
 
 public class DatabaseLogger<T> : ILogger<T>
 {

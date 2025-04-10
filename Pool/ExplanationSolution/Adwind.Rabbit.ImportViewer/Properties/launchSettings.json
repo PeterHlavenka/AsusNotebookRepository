@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DotVVM_table": {
+    "Adwind.Rabbit.ImportViewer": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

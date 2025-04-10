@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DotVVM_table;
+namespace Adwind.Rabbit.ImportViewer;
 
 public class Startup
 {

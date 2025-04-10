@@ -12,11 +12,11 @@ COPY . .
 RUN dotnet restore
 
 # Publikuj výstup
-RUN dotnet publish DotVVM_table.csproj -c Release -o /app/out
+RUN dotnet publish Adwind.Rabbit.ImportViewer.csproj -c Release -o /app/out
 
 # Fáze 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out .
 
-ENTRYPOINT ["dotnet", "DotVVM_table.dll"]
+ENTRYPOINT ["dotnet", "Adwind.Rabbit.ImportViewer.dll"]
