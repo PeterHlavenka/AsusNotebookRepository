@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitSender\Adwind.RabbitSender.csproj" />
+      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Sender\Adwind.Rabbit.Sender.csproj" />
     </ItemGroup>
 
 </Project>

@@ -9,7 +9,6 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using SQLitePCL;
 
-
 namespace Adwind.Rabbit.ImportViewer;
 
 public class RabbitMqService
@@ -21,9 +20,9 @@ public class RabbitMqService
     public RabbitMqService()
     {
         Batteries.Init();
-        //m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
-        // m_messageRepository = new MessageRepository(m_log);
-        // RawMessages = m_messageRepository.Load();
+        m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
+        m_messageRepository = new MessageRepository(m_log);
+        RawMessages = m_messageRepository.Load();
         RabbitMessages = GetLatestMessages();
         Initialize(); //.FireAndForgetSafeAsync(m_log.LogError, false);
     }
@@ -51,7 +50,7 @@ public class RabbitMqService
         consumer.ReceivedAsync += (_, ea) =>
         {
             var body = ea.Body.ToArray();
-             var message = Encoding.UTF8.GetString(body);
+            var message = Encoding.UTF8.GetString(body);
 
             var rabbitMessage = JsonSerializer.Deserialize<RabbitMessage>(message);
             if (rabbitMessage == null)

@@ -285,9 +285,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.ImportViewer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{12814990-9963-443F-9AE0-9F29CD796CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.RabbitSender", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitSender\Adwind.RabbitSender.csproj", "{94A05D62-EB60-44B6-9959-D271D5137003}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.Sender", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Sender\Adwind.Rabbit.Sender.csproj", "{94A05D62-EB60-44B6-9959-D271D5137003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.RabbitCommon", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitCommon\Adwind.RabbitCommon.csproj", "{C24CC90B-7908-4B62-94E7-FA290F4E955D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.Common", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Common\Adwind.Rabbit.Common.csproj", "{C24CC90B-7908-4B62-94E7-FA290F4E955D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotVVM", "DotVVM", "{F18B6347-E8E9-47EB-88A9-C8D0B44015D1}"
 EndProject

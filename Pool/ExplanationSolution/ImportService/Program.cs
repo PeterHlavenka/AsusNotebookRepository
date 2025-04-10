@@ -1,5 +1,5 @@
 ﻿
-using Adwind.RabbitSender;
+using Adwind.Rabbit.Sender;
 using ImportService;
 
 // country, environment, dataType, service
