@@ -21,7 +21,7 @@ public class RabbitMqService
     public RabbitMqService()
     {
         Batteries.Init();
-        m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
+        //m_log = new DatabaseLogger<MessageRepository>(MessageRepository.GetDatabasePath());
         // m_messageRepository = new MessageRepository(m_log);
         // RawMessages = m_messageRepository.Load();
         RabbitMessages = GetLatestMessages();
