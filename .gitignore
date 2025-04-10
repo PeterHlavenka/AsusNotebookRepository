@@ -260,3 +260,4 @@ installer/
 .vs
 installer/SimProducer/LogConverter_InnoSetup/Output/
 *.nvuser
+Pool/ExplanationSolution/DotVVM_table/my_image.tar

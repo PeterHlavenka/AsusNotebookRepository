@@ -7,11 +7,11 @@ namespace DotVVM_table.Pages.Error;
 
 public class ErrorViewModel : DotvvmViewModelBase
 {
-    [Bind(Direction.None)] public string? RequestId { get; set; }
+    [Bind(Direction.None)] public string RequestId { get; set; }
 
-    [Bind(Direction.None)] public string? ExceptionType { get; set; }
+    [Bind(Direction.None)] public string ExceptionType { get; set; }
 
-    [Bind(Direction.None)] public string? RequestPath { get; set; }
+    [Bind(Direction.None)] public string RequestPath { get; set; }
 
 
     public ErrorViewModel()

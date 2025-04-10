@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Adwind.RabbitCommon;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using SQLitePCL;

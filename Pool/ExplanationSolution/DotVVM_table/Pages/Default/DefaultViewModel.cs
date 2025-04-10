@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Adwind.RabbitCommon;
 using DotVVM.Framework.ViewModel;
 
 namespace DotVVM_table.Pages.Default;

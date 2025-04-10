@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Adwind.RabbitCommon;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -37,8 +36,8 @@ public class RabbitMqService
     {
         var factory = new ConnectionFactory
         {
-            // HostName = "localhost"
-            Uri = new Uri("amqp://phlavenka:LLykoat3J9HbDBUAjVW3@localhost:55350/adw-test")
+            HostName = "localhost"
+            // Uri = new Uri("amqp://phlavenka:LLykoat3J9HbDBUAjVW3@localhost:55350/adw-test")
         };
         var connection = await factory.CreateConnectionAsync();
         var channel = await connection.CreateChannelAsync();
