@@ -289,6 +289,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.RabbitSender", "C:\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.RabbitCommon", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.RabbitCommon\Adwind.RabbitCommon.csproj", "{C24CC90B-7908-4B62-94E7-FA290F4E955D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotVVM", "DotVVM", "{F18B6347-E8E9-47EB-88A9-C8D0B44015D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultDotVVMProject", "DefaultDotVVMProject\DefaultDotVVMProject.csproj", "{76C3B298-EB17-440E-AD1B-D808D58283DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -739,6 +743,10 @@ Global
 		{C24CC90B-7908-4B62-94E7-FA290F4E955D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24CC90B-7908-4B62-94E7-FA290F4E955D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24CC90B-7908-4B62-94E7-FA290F4E955D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C3B298-EB17-440E-AD1B-D808D58283DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C3B298-EB17-440E-AD1B-D808D58283DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C3B298-EB17-440E-AD1B-D808D58283DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C3B298-EB17-440E-AD1B-D808D58283DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -861,6 +869,7 @@ Global
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C} = {E7CA378E-4FC9-4218-800B-B9072A289551}
 		{94A05D62-EB60-44B6-9959-D271D5137003} = {E7CA378E-4FC9-4218-800B-B9072A289551}
 		{C24CC90B-7908-4B62-94E7-FA290F4E955D} = {E7CA378E-4FC9-4218-800B-B9072A289551}
+		{76C3B298-EB17-440E-AD1B-D808D58283DB} = {F18B6347-E8E9-47EB-88A9-C8D0B44015D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
