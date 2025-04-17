@@ -1,33 +1,22 @@
-﻿
-using Adwind.Rabbit.Sender;
+﻿using Adwind.Rabbit.Messaging;
 using ImportService;
 
 // country, environment, dataType, service
-string[][] queues =
-[
-    // fronty musi byt definovany vcetne sluzby, ktera to ma vzit..
-    ["CZ", "Production", "aggregations"],
-    ["CZ", "Production", "reports"],
-    ["CZ", "Production", "pricing"],
-    ["SK", "Production", "pricing"],
-    ["CZ", "RC", "reports"],
-    ["SK", "RC", "aggregations"]
-    // web is autmatically added in SendMessage
-];
 
-var neco = new RabbitMessageSender();
-await neco.Initialize(queues);
 
-await neco.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+var producer = new RabbitMessageProducer();
+await producer.Initialize();
+
+await producer.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
 
 while (true)
 {
     var pismeno = Console.ReadLine();
     if (pismeno == "m")
-        await SendMultipleMessages(neco);
+        await SendMultipleMessages(producer);
 
     if (pismeno == "n")
-        await neco.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+        await producer.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
 }
 
 
@@ -45,7 +34,7 @@ DateTime GenerateRandomDateTime()
 }
 
 
-async Task SendMultipleMessages(RabbitMessageSender sender)
+async Task SendMultipleMessages(RabbitMessageProducer sender)
 {
     var dateTime = GenerateRandomDateTime();
     // CZ
