@@ -291,6 +291,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultDotVVMProject", "Def
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.Messaging", "C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj", "{C883FB96-84D1-4699-A0DD-D40460A7BD89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CzProductionPricing", "CzProductionPricing\CzProductionPricing.csproj", "{460E2E58-42AA-4D51-ADD4-95D445723B01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -741,6 +743,10 @@ Global
 		{C883FB96-84D1-4699-A0DD-D40460A7BD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C883FB96-84D1-4699-A0DD-D40460A7BD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C883FB96-84D1-4699-A0DD-D40460A7BD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460E2E58-42AA-4D51-ADD4-95D445723B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460E2E58-42AA-4D51-ADD4-95D445723B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460E2E58-42AA-4D51-ADD4-95D445723B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460E2E58-42AA-4D51-ADD4-95D445723B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -863,6 +869,7 @@ Global
 		{418CEB7B-4C9D-4C3B-A9DF-07FFE5E0692C} = {E7CA378E-4FC9-4218-800B-B9072A289551}
 		{76C3B298-EB17-440E-AD1B-D808D58283DB} = {F18B6347-E8E9-47EB-88A9-C8D0B44015D1}
 		{C883FB96-84D1-4699-A0DD-D40460A7BD89} = {E7CA378E-4FC9-4218-800B-B9072A289551}
+		{460E2E58-42AA-4D51-ADD4-95D445723B01} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
