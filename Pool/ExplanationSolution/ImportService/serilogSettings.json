@@ -1,0 +1,20 @@
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Console", "Serilog.Enrichers.ShortTypeName" ],
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Information",
+        "System": "Information",
+        "Microsoft.AspNetCore" : "Information"
+      }
+    },
+    "WriteTo": [
+      { "Name": "Console", "Args": {
+        "outputTemplate" : "{Timestamp:HH:mm:ss.fff} [{Level:u3}] ({ShortTypeName}): {Message:lj}{NewLine}{Exception}"
+      }
+      }
+    ],
+    "Enrich": [ "WithShortTypeName" ]
+  }
+}

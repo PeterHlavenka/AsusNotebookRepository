@@ -1,48 +1,48 @@
 ﻿using Adwind.Rabbit.Messaging;
 using ImportService;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
-// country, environment, dataType, service
-
-
-var producer = new RabbitMessageProducer();
-await producer.Initialize();
-
-await producer.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
-
-while (true)
+try
 {
-    var pismeno = Console.ReadLine();
-    if (pismeno == "m")
-        await SendMultipleMessages(producer);
+    var builder = Host.CreateDefaultBuilder(args);
 
-    if (pismeno == "n")
-        await producer.SendMessage("CZ", "Production", GenerateRandomDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+    builder.ConfigureAppConfiguration((hostingContext, config) =>
+    {
+        config.AddJsonFile("appsettings.json", true, true);
+        config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true);
+        config.AddJsonFile("serilogSettings.json", false, true);
+        hostingContext.Configuration = config.Build();
+    });
+
+    builder.ConfigureServices((context, services) =>
+    {
+        var logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(context.Configuration)
+            .CreateLogger();
+        var loggerFactory = LoggerFactory.Create(bld => { bld.AddSerilog(logger); });
+        services.AddSingleton(loggerFactory);
+        
+        // Producer musi dostat connection string na rabbita vystaveneho ven z clusteru
+        services.Configure<Options>(context.Configuration.GetSection("Options").Bind);
+        services.AddSingleton<RabbitMessageProducer>(_ => new RabbitMessageProducer(
+            context.Configuration.GetSection("Options:ConnString").Value,
+            loggerFactory.CreateLogger<RabbitMessageProducer>()));
+        services.AddHostedService<Sender>();
+    });
+
+    var app = builder.Build();
+    Log.Information("Starting Import service simulation");
+    app.Run();
 }
-
-
-DateTime GenerateRandomDateTime()
-{
-    // generata random date and time between 2023-01-01 and 2023-12-31 
-    var random = new Random();
-    var year = 2025;
-    var month = random.Next(1, 13);
-    var day = random.Next(1, DateTime.DaysInMonth(year, month) + 1);
-    var hour = random.Next(0, 24);
-    var minute = random.Next(0, 60);
-    var second = random.Next(0, 60);
-    return new DateTime(year, month, day, hour, minute, second);
+catch (Exception ex)
+{ 
+    Log.Fatal(ex, "Application start-up failed");
 }
-
-
-async Task SendMultipleMessages(RabbitMessageProducer sender)
+finally
 {
-    var dateTime = GenerateRandomDateTime();
-    // CZ
-    await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
-    await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzMrTvIndivid]);
-    await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzPemd]);
-    await sender.SendMessage("CZ", "RC", dateTime, [AdwDataIds.DataCzAdCross]);
-// neco.
-    await sender.SendMessage("SK", "Production", dateTime, [AdwDataIds.DataSkKantarMonitoring]);
-    await sender.SendMessage("SK", "RC", dateTime, [AdwDataIds.DataSkKantarTvIndivid]);
+    Log.CloseAndFlush();
 }
