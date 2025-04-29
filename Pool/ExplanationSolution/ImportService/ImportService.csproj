@@ -37,4 +37,10 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Adwind.Rabbit.Messaging">
+        <HintPath>..\CzProductionAggregations\bin\Release\net9.0\Adwind.Rabbit.Messaging.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

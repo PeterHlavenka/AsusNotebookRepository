@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj" />
+      <ProjectReference Include="C:\Pool\Drak\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj" />
     </ItemGroup>
 
     <ItemGroup>

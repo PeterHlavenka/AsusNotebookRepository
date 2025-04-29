@@ -29,7 +29,7 @@ try
         // Producer musi dostat connection string na rabbita vystaveneho ven z clusteru
         services.Configure<Options>(context.Configuration.GetSection("Options").Bind);
         services.AddSingleton<RabbitMessageProducer>(_ => new RabbitMessageProducer(
-            context.Configuration.GetSection("Options:ConnString").Value,
+            "amqp://phlavenka:LLykoat3J9HbDBUAjVW3@rmq.prod:5672/adw-test",
             loggerFactory.CreateLogger<RabbitMessageProducer>()));
         services.AddHostedService<Sender>();
     });
