@@ -23,9 +23,10 @@
                 <!-- <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/textblock.xaml" /> -->
                 <!-- <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/cardview/cardview.xaml" /> -->
                 <!-- <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/ComboBoxAdv\ComboBoxAdv.xaml" /> -->
-                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/button.xaml" />
+                <!-- <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/mscontrol/button.xaml" /> -->
 
-                <!-- <ResourceDictionary Source="/Styles/DefaultStyle.xaml" /> -->
+                <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/mscontrol/button.xaml" />
+                <ResourceDictionary Source="/Styles/DefaultStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

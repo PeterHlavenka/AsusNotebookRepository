@@ -1,0 +1,209 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:skinmanager="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <Color x:Key="DropShadow.Static.Background">#CC000000</Color>
+
+    <DropShadowEffect x:Key="Default.ShadowDepth1"
+                      BlurRadius="4" 
+                      ShadowDepth="0" 
+                      Direction="270" 
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity="0.42" 
+                      RenderingBias="Performance" 
+                      po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth2" 
+                      BlurRadius="6" 
+                      ShadowDepth="1" 
+                      Direction="270"
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity="0.42" 
+                      RenderingBias="Performance"
+                      po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth3" 
+                      BlurRadius="8"
+                     ShadowDepth="0" 
+                      Direction="270"
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity="0.42" 
+                      RenderingBias="Performance"
+                      po:Freeze="True" />
+    <DropShadowEffect x:Key="Default.ShadowDepth4" 
+                      BlurRadius="16" 
+                      ShadowDepth="7" 
+                      Direction="270"
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity="0.17"
+                      RenderingBias="Performance" 
+                      po:Freeze="True" />
+
+    <!--Used this shadow for ribbon DropDownButton popup in implemented themes-->
+    <DropShadowEffect x:Key="Default.ShadowDepth5" 
+                     BlurRadius="64" 
+                      ShadowDepth="0"
+                      Direction="270"
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity="0.42" 
+                      RenderingBias="Performance" 
+                      po:Freeze="True" />
+
+    <!--Used this shadow for NavigationDrawer popup in implemented themes-->
+    <DropShadowEffect x:Key="Default.ShadowDepth6"
+                      BlurRadius="14" 
+                      ShadowDepth="4.5"
+                      Color="{StaticResource DropShadow.Static.Background}" 
+                      Opacity=".42" 
+                      RenderingBias="Performance" 
+                      po:Freeze="True" />
+
+    <!--Used for MS Button, ComboBox(Non-editable mode), CheckBox, RadioButton, Hyperlink, slider controls-->
+
+<sys:Double x:Key="Windows11Light.HeaderTextStyle">16</sys:Double>
+<sys:Double x:Key="Windows11Light.SubHeaderTextStyle">14</sys:Double>
+<sys:Double x:Key="Windows11Light.TitleTextStyle">14</sys:Double>
+<sys:Double x:Key="Windows11Light.SubTitleTextStyle">12</sys:Double>
+<sys:Double x:Key="Windows11Light.BodyTextStyle">12</sys:Double>
+<sys:Double x:Key="Windows11Light.CaptionText">10</sys:Double>
+<FontFamily x:Key="Windows11Light.ThemeFontFamily">Segoe UI Variable</FontFamily> 
+<FontWeight x:Key="Windows11Light.FontWeightNormal">Normal</FontWeight> 
+<FontWeight x:Key="Windows11Light.FontWeightMedium">Medium</FontWeight> 
+<Thickness x:Key="Windows11Light.BorderThickness">0,0,0,0</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1">1,1,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness2">2,2,2,2</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0001">0,0,0,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0002">0,0,0,2</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1000">1,0,0,0</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0100">0,1,0,0</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0010">0,0,1,0</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1110">1,1,1,0</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1101">1,1,0,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1011">1,0,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0111">0,1,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness0011">0,0,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.BorderThickness1112">1,1,1,2</Thickness> 
+<Thickness x:Key="Windows11Light.ThemeBorderThicknessVariant1">1,1,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.ThemeBorderThicknessVariant2">1,1,1,1</Thickness> 
+<Thickness x:Key="Windows11Light.FocusMargin">2,2,2,2</Thickness> 
+<sys:Double x:Key="Windows11Light.StrokeThickness">0</sys:Double>
+<sys:Double x:Key="Windows11Light.StrokeThickness1">1</sys:Double>
+<sys:Double x:Key="Windows11Light.StrokeThickness2">2</sys:Double>
+<DoubleCollection x:Key="Windows11Light.StrokeDashArray">1 2</DoubleCollection> 
+<CornerRadius x:Key="Windows11Light.ThemeCornerRadiusVariant1">0,0,0,0</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.ThemeCornerRadiusVariant2">0,0,0,0</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.CornerRadius2">2,2,2,2</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.CornerRadius4">4,4,4,4</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.CornerRadius6">6,6,6,6</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.CornerRadius7">7,7,7,7</CornerRadius> 
+<CornerRadius x:Key="Windows11Light.CornerRadius8">8,8,8,8</CornerRadius> 
+	<sys:Double x:Key="TouchMode.MinHeight">32</sys:Double>
+	<sys:Double x:Key="TouchMode.MinWidth">32</sys:Double>
+	<sys:Double x:Key="TouchMode.MinSize">24</sys:Double>
+<sys:Double x:Key="Windows11Light.MinHeight">24</sys:Double>
+<sys:Double x:Key="Windows11Light.MinHeight1">24</sys:Double>
+<sys:Double x:Key="Windows11Light.IconPanelSize">32</sys:Double>
+    <Style x:Key="KeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-3"
+                            SnapsToDevicePixels="True"
+                            CornerRadius="{StaticResource Windows11Light.CornerRadius6}"
+                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                            BorderBrush="#E4000000">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Used for MS List type controls-->
+    <Style x:Key="CheckKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-3,-2,-2,-2"
+                            SnapsToDevicePixels="True"
+                            CornerRadius="{StaticResource Windows11Light.CornerRadius4}"
+                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                            BorderBrush="#E4000000">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Used for MS DataGrid, Expander type controls-->
+    <Style x:Key="FlatKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border SnapsToDevicePixels="True"
+                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                            BorderBrush="#E4000000" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Used for MS Rounded button type controls-->
+    <Style x:Key="CircleKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-3"
+                            SnapsToDevicePixels="True"
+                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                            BorderBrush="#E4000000"
+                            CornerRadius="100">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Used for MS Corner Rounded button type controls-->
+    <Style x:Key="CurveKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border SnapsToDevicePixels="True"
+                            CornerRadius="{StaticResource Windows11Light.CornerRadius4}"
+                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                            BorderBrush="#E4000000" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="DottedKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Stroke="#E4000000"
+                               StrokeThickness="{StaticResource Windows11Light.StrokeThickness1}" 
+                               StrokeDashArray="{StaticResource Windows11Light.StrokeDashArray}"
+                               SnapsToDevicePixels="true"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DottedCircleKeyboardFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Stroke="#E4000000"
+                               StrokeThickness="{StaticResource Windows11Light.StrokeThickness1}" 
+                               StrokeDashArray="{StaticResource Windows11Light.StrokeDashArray}"
+                               SnapsToDevicePixels="true"
+                               RadiusX="100"
+                               RadiusY="100"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

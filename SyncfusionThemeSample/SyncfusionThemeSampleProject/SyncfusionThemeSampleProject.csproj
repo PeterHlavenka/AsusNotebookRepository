@@ -12,9 +12,6 @@
       <PackageReference Include="Syncfusion.SfSkinManager.WPF">
         <Version>29.2.10</Version>
       </PackageReference>
-      <PackageReference Include="Syncfusion.Tools.WPF">
-        <Version>29.2.10</Version>
-      </PackageReference>
     </ItemGroup>
 
     <ItemGroup>

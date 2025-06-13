@@ -6,6 +6,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Hello" HorizontalAlignment="Center" Height="50" Width="200" Style="{StaticResource WPFButtonStyle}"/>
+        <StackPanel HorizontalAlignment="Center">
+            <Button Content="Hello" Height="50" Width="200"/>
+            <CheckBox Content="Check"></CheckBox>
+            <TextBox Text="TextBox"></TextBox>
+        </StackPanel>
     </Grid>
 </Window>

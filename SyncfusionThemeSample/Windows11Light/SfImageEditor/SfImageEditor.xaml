@@ -1,0 +1,1505 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:sharedWpf="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Shared.WPF"
+                    
+                    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:imageEditor="clr-namespace:Syncfusion.UI.Xaml.ImageEditor;assembly=Syncfusion.SfImageEditor.WPF" 
+                    xmlns:effect="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+                    xmlns:toolsWpf="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Tools.WPF">
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11Light"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11Light"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/SplitButtonAdv/SplitButtonAdv.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/DropDownButtonAdv/DropDownButtonAdv.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/MSControl/GlyphButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/MSControl/GlyphPrimaryToggleButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/ColorPickerPalette/ColorPickerPalette.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/MSControl/ComboBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="SyncfusionSfImageEditorToolbarMenuItemStyle"
+           TargetType="imageEditor:ToolbarMenuItem">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="ContentTemplate"
+                Value="{Binding IconTemplate}"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="imageEditor:ToolbarMenuItem">
+                    <Grid Margin="5"
+                          Background="{Binding ItemBackground}">
+                        <ContentPresenter  x:Name="itemPanel"></ContentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ToolbarStyle"
+           TargetType="Border">
+        <Setter Property="Background"
+                Value="{StaticResource ContentBackgroundAlt1}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource BorderAlt}"></Setter>
+        <Style.Triggers>
+            <DataTrigger  Binding="{Binding RelativeSource={RelativeSource TemplatedParent},Path=ToolbarSettings.IsToolbarVisiblity}"
+                          Value="True">
+                <Setter Property="Visibility"
+                        Value="Visible"></Setter>
+            </DataTrigger>
+            <DataTrigger  Binding="{Binding RelativeSource={RelativeSource TemplatedParent},Path=ToolbarSettings.IsToolbarVisiblity}"
+                          Value="False">
+                <Setter Property="Visibility"
+                        Value="Collapsed"></Setter>
+            </DataTrigger>
+            <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                <Setter Property="MinHeight" Value="45"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SyncfusionSfImageEditorStyle"
+           TargetType="imageEditor:SfImageEditor">
+        <Setter Property="Background"
+                Value="{StaticResource ContentBackgroundAlt3}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource BorderAlt}" />
+        <Setter Property="BorderThickness"
+                Value="1,0,1,0" />
+        <Setter Property="FontFamily"
+                Value="{StaticResource Windows11Light.ThemeFontFamily}" />
+        <Setter Property="FontWeight"
+                Value="{StaticResource Windows11Light.FontWeightNormal}" />
+        <Setter Property="FontSize"
+                Value="{StaticResource Windows11Light.BodyTextStyle}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource ContentForeground}" />
+        <Setter Property="ToolbarItemSelectionBackground"
+                Value="{StaticResource ContentBackgroundSelected}" />
+        <Setter Property="EditorResourceDictionary">
+            <Setter.Value>
+                <ResourceDictionary Source="/Syncfusion.Themes.Windows11Light.WPF;component/SfImageEditor/SfImageEditor.xaml" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{StaticResource Windows11Light.CornerRadius4}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid  KeyboardNavigation.ControlTabNavigation="None">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Border x:Name="PART_HeaderToolbarPanel"
+                                    Grid.Row="0"
+                                    Width="Auto"
+                                    Background="{StaticResource ContentBackgroundAlt1}"
+                                    BorderBrush="{StaticResource BorderAlt}"
+                                    BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                    Path = ToolbarSettings.BorderThickness}"
+                                    Style="{StaticResource ToolbarStyle}"
+                                    Height="{Binding RelativeSource={RelativeSource TemplatedParent},Path=ToolbarSettings.HeaderToolbarHeight}">
+                                <Border.CornerRadius>
+                                    <CornerRadius>4,4,0,0</CornerRadius>
+                                </Border.CornerRadius>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*" />
+                                        <ColumnDefinition Width="0.6*" />
+                                        <ColumnDefinition Width="0.2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0"
+                                                HorizontalAlignment="Left"
+                                                Orientation="Horizontal">
+
+                                        <Button x:Name="PART_OpenFolderIcon"
+                                                Style="{StaticResource WPFGlyphButtonStyle}"
+                                                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=BrowseImage}}"
+                                                Margin="10,0,0,0"
+                                                Height="24"
+                                                Width="24"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.BrowseImage}}">
+                                            <Path x:Name="OpenFolder"
+                                                  Fill="{Binding ElementName=PART_OpenFolderIcon, Path=Foreground}"
+                                                  HorizontalAlignment="Center"
+                                                  Height="12"
+                                                  Stretch="Fill"
+                                                  VerticalAlignment="Center"
+                                                  Width="12">
+                                                <Path.Data>
+                                                    <PathGeometry>M1.15829 1.1451C1.06937 1.26157 1 1.44431 1 1.66667V9.21281L1.62142 5.95664C1.74734 5.2968 2.24256 4.66667 2.97656 4.66667H12.4684V4C12.4684 3.77765 12.399 3.59491 12.3101 3.47843C12.2216 3.3624 12.1349 3.33333 12.0778 3.33333H7.10311C6.68402 3.33333 6.31985 3.11455 6.07592 2.79502L4.81642 1.1451C4.7263 1.02705 4.63742 1 4.58411 1H1.3906C1.33355 1 1.24686 1.02906 1.15829 1.1451ZM13.4684 4.66667V4C13.4684 3.57802 13.3384 3.17743 13.105 2.87165C12.8712 2.56544 12.5126 2.33333 12.0778 2.33333H7.10311C7.04979 2.33333 6.96091 2.30629 6.87079 2.18823L5.61129 0.538318C5.36737 0.218787 5.0032 0 4.58411 0H1.3906C0.955791 0 0.597172 0.232104 0.363417 0.538318C0.129995 0.844095 0 1.24469 0 1.66667V13.3333C0 13.7553 0.129995 14.1559 0.363417 14.4617C0.597172 14.7679 0.955791 15 1.3906 15H12.5231C12.835 15 13.0823 14.8332 13.2354 14.6325C13.3125 14.5316 13.3711 14.4168 13.4102 14.2943C13.5154 14.1141 13.5894 13.9135 13.6282 13.71L14.9641 6.71002C15.0566 6.22523 14.9661 5.73791 14.7404 5.35936C14.5162 4.98307 14.1219 4.66667 13.609 4.66667H13.4684ZM12.2731 14C12.3564 14 12.5736 13.9014 12.6459 13.5226L13.9818 6.52256C14.0298 6.27102 13.9781 6.03352 13.8814 5.87134C13.7834 5.7069 13.6754 5.66667 13.609 5.66667H2.97656C2.89323 5.66667 2.676 5.76523 2.60369 6.1441L1.26779 13.1441C1.21978 13.3957 1.27152 13.6331 1.36818 13.7953C1.46619 13.9598 1.57422 14 1.64066 14H12.2731Z</PathGeometry>
+                                                </Path.Data>
+                                            </Path>
+                                        </Button>
+
+                                        <Button x:Name="PART_SaveIcon"
+                                                Style="{StaticResource WPFGlyphButtonStyle}"
+                                                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Save}}"
+                                                Margin="10,0,0,0"
+                                                Height="24"
+                                                Width="24"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Save}}">
+                                            <Path  Fill="{Binding ElementName=PART_SaveIcon, Path=Foreground}"
+                                                   HorizontalAlignment="Center"
+                                                   Height="12"
+                                                   Stretch="Fill"
+                                                   VerticalAlignment="Center"
+                                                   Width="12">
+                                                <Path.Data>
+                                                    <PathGeometry>M1.5 1C1.22386 1 1 1.22386 1 1.5V13.5C1 13.7761 1.22386 14 1.5 14H2L2 9.5C2 8.67157 2.67157 8 3.5 8L11.5 8C12.3284 8 13 8.67157 13 9.5V14H13.5C13.7761 14 14 13.7761 14 13.5V3.45993C14 3.31397 13.9362 3.1753 13.8254 3.08031L11.5388 1.12037C11.4482 1.0427 11.3328 1 11.2134 1H11V3.5C11 4.32843 10.3284 5 9.5 5H5.5C4.67157 5 4 4.32843 4 3.5V1H1.5ZM5 1V3.5C5 3.77614 5.22386 4 5.5 4H9.5C9.77614 4 10 3.77614 10 3.5V1H5ZM12 14V9.5C12 9.22386 11.7761 9 11.5 9L3.5 9C3.22386 9 3 9.22386 3 9.5L3 14H12ZM0 1.5C0 0.671574 0.671573 0 1.5 0H11.2134C11.5715 0 11.9177 0.128088 12.1896 0.361115L14.4762 2.32105C14.8087 2.60602 15 3.02205 15 3.45993V13.5C15 14.3284 14.3284 15 13.5 15H1.5C0.671574 15 0 14.3284 0 13.5V1.5Z</PathGeometry>
+                                                </Path.Data>
+                                            </Path>
+                                        </Button>
+
+                                        <Rectangle Fill="{StaticResource BorderAlt}"
+                                                   Height="18"
+                                                   Width="1"
+                                                   Margin="10,0,0,0"></Rectangle>
+
+                                        <Button x:Name="PART_UndoIcon"
+                                                Style="{StaticResource WPFGlyphButtonStyle}"
+                                                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Undo}}"
+                                                ToolTipService.ShowOnDisabled="True"
+                                                Margin="10,0,0,0"
+                                                Height="24"
+                                                Width="24"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Undo}}"
+                                                IsEnabled="False">
+                                            <Path Fill="{Binding ElementName=PART_UndoIcon, Path=Foreground}"
+                                                  HorizontalAlignment="Center"
+                                                  Stretch="Fill"
+                                                  VerticalAlignment="Center"
+                                                  Width="10">
+                                                <Path.Height>
+                                                    <system:Double>12</system:Double>
+                                                </Path.Height>
+                                                <Path.Data>
+                                                    <PathGeometry>M0.538903 0C0.836531 0 1.07781 0.246722 1.07781 0.551068V4.27103L4.69865 1.63569C6.54937 0.288678 9.08301 0.516809 10.6751 2.17381C12.5995 4.17674 12.4016 7.4436 10.2502 9.18841L1.99844 15.8807C1.76525 16.0698 1.42628 16.0298 1.24134 15.7913C1.0564 15.5529 1.09551 15.2063 1.3287 15.0171L9.58048 8.32489C11.2301 6.987 11.3819 4.48204 9.90625 2.94622C8.68549 1.67567 6.74274 1.50074 5.32364 2.5336L2.22539 4.78859H5.5999C5.89753 4.78859 6.13881 5.03531 6.13881 5.33966C6.13881 5.64401 5.89753 5.89073 5.5999 5.89073H0.538903C0.241275 5.89073 0 5.64401 0 5.33966V0.551068C0 0.246722 0.241275 0 0.538903 0Z</PathGeometry>
+                                                </Path.Data>
+                                            </Path>
+                                        </Button>
+
+                                        <Button x:Name="PART_RedoIcon"
+                                                Style="{StaticResource WPFGlyphButtonStyle}"
+                                                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Redo}}"
+                                                ToolTipService.ShowOnDisabled="True"
+                                                Margin="10,0,0,0"
+                                                Height="24"
+                                                Width="24"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Redo}}"
+                                                IsEnabled="False">
+                                            <Path Fill="{Binding ElementName=PART_RedoIcon, Path=Foreground}"
+                                                  HorizontalAlignment="Center"
+                                                  Stretch="Fill"
+                                                  VerticalAlignment="Center"
+                                                  Width="10">
+                                                <Path.Height>
+                                                    <system:Double>12</system:Double>
+                                                </Path.Height>
+                                                <Path.Data>
+                                                    <PathGeometry>M11.4611 0C11.7587 0 12 0.246722 12 0.551068V5.33966C12 5.64401 11.7587 5.89073 11.4611 5.89073H6.4001C6.10247 5.89073 5.86119 5.64401 5.86119 5.33966C5.86119 5.03531 6.10247 4.78859 6.4001 4.78859H9.77461L6.67636 2.5336C5.25726 1.50074 3.31451 1.67567 2.09375 2.94622C0.618137 4.48204 0.769851 6.987 2.41951 8.32489L10.6713 15.0171C10.9045 15.2063 10.9436 15.5529 10.7587 15.7913C10.5737 16.0298 10.2347 16.0698 10.0016 15.8807L1.74977 9.18841C-0.401641 7.4436 -0.599501 4.17674 1.32493 2.17381C2.91698 0.516809 5.45063 0.288678 7.30135 1.63569L10.9222 4.27103V0.551068C10.9222 0.246722 11.1635 0 11.4611 0Z</PathGeometry>
+                                                </Path.Data>
+                                            </Path>
+                                        </Button>
+                                    </StackPanel>
+
+                                    <Grid Grid.Column="1"
+                                          HorizontalAlignment="Center">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.2*" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0"
+                                                    Orientation="Horizontal">
+
+                                            <Button x:Name="PART_SelectIcon"
+                                                    Margin="0,0,10,0"
+                                                    BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                    Style="{StaticResource WPFGlyphButtonStyle}"
+                                                    Height="24"
+                                                    Width="24"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Select}}"
+                                                    Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Select}}">
+                                                <Path Fill="{Binding ElementName=PART_SelectIcon, Path=Foreground}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="12"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="9">
+                                                    <Path.Data>
+                                                        <PathGeometry>M3.5023 9.01595C3.81023 9.08416 4.06795 9.29364 4.19762 9.58116L5.73589 12.9919L5.73681 12.9936C5.73779 12.9946 5.74076 12.997 5.74438 12.9984C5.74801 12.9998 5.75086 13.0001 5.7522 13.0001L5.75503 12.9993L7.18506 12.3792L5.76574 9.23219C5.63213 8.93593 5.65082 8.59322 5.81586 8.31325C5.98089 8.03327 6.27169 7.85097 6.5956 7.82441L8.98434 7.62855L1.65069 1.00636C1.64692 1.00295 1.64424 1.00103 1.64272 1.00005C1.64268 1.00006 1.64276 1.00005 1.64272 1.00005L1.00027 10.6218C1.00201 10.623 1.00408 10.6242 1.00647 10.6254C1.00963 10.627 1.01258 10.6281 1.01508 10.6288C1.01525 10.6287 1.01489 10.629 1.01508 10.6288L2.63334 9.23467C2.87229 9.02881 3.19436 8.94774 3.5023 9.01595ZM9.08816 8.62339C9.95993 8.55191 10.3185 7.48595 9.66835 6.89883L2.32088 0.264165C1.69767 -0.298584 0.700968 0.092453 0.645628 0.92142L0.00238517 10.5568C-0.0567039 11.4419 0.995503 11.9656 1.66832 11.386L3.28604 9.99228L4.82431 13.403C5.05137 13.9065 5.64619 14.1365 6.15288 13.9168L7.59632 13.2908C8.10302 13.0711 8.32971 12.4848 8.10265 11.9814L6.67732 8.82106L9.08816 8.62339Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+
+                                            <Button x:Name="PART_PanIcon"
+                                                    Margin="0,0,10,0"
+                                                    BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                    Style="{StaticResource WPFGlyphButtonStyle}"
+                                                    Height="24"
+                                                    Width="24"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Pan}}"
+                                                    Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Pan}}"
+                                                    ToolTipService.ShowOnDisabled="True">
+
+                                                <Path Fill="{Binding ElementName=PART_PanIcon, Path=Foreground}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="12"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="12">
+                                                    <Path.Data>
+                                                        <PathGeometry>M5.64644 2.64645C5.45119 2.84171 5.45119 3.15829 5.64644 3.35355C5.8417 3.54882 6.15829 3.54882 6.35355 3.35355L7.5 2.20711V6C7.5 6.27614 7.72385 6.5 8 6.5C8.27614 6.5 8.5 6.27614 8.5 6V2.20711L9.64644 3.35355C9.8417 3.54882 10.1583 3.54882 10.3536 3.35355C10.5488 3.15829 10.5488 2.84171 10.3536 2.64645L8.35355 0.646447C8.15829 0.451184 7.8417 0.451184 7.64644 0.646447L5.64644 2.64645ZM10.3536 13.3536C10.5488 13.1583 10.5488 12.8417 10.3536 12.6464C10.1583 12.4512 9.8417 12.4512 9.64644 12.6464L8.5 13.7929V10C8.5 9.72386 8.27614 9.5 8 9.5C7.72385 9.5 7.5 9.72386 7.5 10V13.7929L6.35355 12.6464C6.15829 12.4512 5.8417 12.4512 5.64644 12.6464C5.45119 12.8417 5.45119 13.1583 5.64644 13.3536L7.64644 15.3536C7.8417 15.5488 8.15829 15.5488 8.35355 15.3536L10.3536 13.3536ZM3.35355 10.3536C3.15829 10.5488 2.8417 10.5488 2.64644 10.3536L0.646444 8.35355C0.451185 8.15829 0.451185 7.84171 0.646444 7.64645L2.64644 5.64645C2.8417 5.45118 3.15829 5.45118 3.35355 5.64645C3.54881 5.84171 3.54881 6.15829 3.35355 6.35355L2.20711 7.5H6C6.27614 7.5 6.5 7.72386 6.5 8C6.5 8.27614 6.27614 8.5 6 8.5H2.20711L3.35355 9.64645C3.54881 9.84171 3.54881 10.1583 3.35355 10.3536ZM13.3536 10.3536C13.1583 10.5488 12.8417 10.5488 12.6464 10.3536C12.4512 10.1583 12.4512 9.84171 12.6464 9.64645L13.7929 8.5H10C9.72385 8.5 9.5 8.27614 9.5 8C9.5 7.72386 9.72385 7.5 10 7.5H13.7929L12.6464 6.35355C12.4512 6.15829 12.4512 5.84171 12.6464 5.64645C12.8417 5.45118 13.1583 5.45118 13.3536 5.64645L15.3536 7.64645C15.5488 7.84171 15.5488 8.15829 15.3536 8.35355L13.3536 10.3536Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+
+                                            <Rectangle IsHitTestVisible="False"
+                                                       Margin="0,0,5,0"
+                                                       Width="1"
+                                                       Height="18"
+                                                       Fill="{StaticResource BorderAlt}"
+                                                       VerticalAlignment="Center"></Rectangle>
+
+                                        </StackPanel>
+
+                                        <ScrollViewer x:Name="PART_HeaderScrollViewer"
+                                                      HorizontalScrollBarVisibility="Auto"
+                                                      Grid.Column="1"
+                                                      VerticalScrollBarVisibility="Disabled"
+                                                      HorizontalAlignment="Center">
+                                            <ItemsControl x:Name="PART_CenterHeaderToolbarItems"
+                                                          HorizontalAlignment="Center"
+                                                          ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent},Path=ToolbarSettings.ToolbarItems}"
+                                                          IsTabStop="False">
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Orientation="Horizontal"></StackPanel>
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <imageEditor:ToolbarMenuItem HorizontalAlignment="Center"
+                                                                               VerticalAlignment="Center" />
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </ScrollViewer>
+                                    </Grid>
+
+                                    <Button  x:Name="PART_ResetIcon"
+                                             Grid.Column="2"
+                                             BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                             VerticalAlignment="Center"
+                                             Style="{StaticResource WPFGlyphButtonStyle}"
+                                             Padding="5"
+                                             Content="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Reset}}"
+                                             HorizontalContentAlignment="Center"
+                                             VerticalContentAlignment="Center"
+                                             IsEnabled="False"
+                                             HorizontalAlignment="Right"
+                                             Margin="0,0,10,0"
+                                             Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.Reset}}"
+                                             ToolTipService.ShowOnDisabled="True"
+                                             ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Reset}}">
+                                    </Button>
+                                </Grid>
+                            </Border>
+
+                            <Grid  x:Name="PART_ImageViewer"
+                                   Grid.Row="2" />
+
+                            <Grid x:Name="PART_CroppingPanel"
+                                  Background="Transparent"
+                                  Grid.Row="2"
+                                  Visibility="Collapsed"
+                                  Margin="10" />
+
+                            <Border x:Name="PART_SubToolbarPanel"
+                                    Grid.Row="2"
+                                    Background="{StaticResource ContentBackgroundAlt1}"
+                                    BorderBrush="{StaticResource BorderAlt}"
+                                    Visibility="Collapsed"
+                                    Height="{Binding RelativeSource={RelativeSource TemplatedParent},Path=ToolbarSettings.SubItemToolbarHeight}"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Stretch"
+                                    BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                    Path = ToolbarSettings.BorderThickness}">
+
+                                <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                              VerticalScrollBarVisibility="Hidden">
+                                    <Grid Grid.Row="2"
+                                          HorizontalAlignment="Center">
+
+                                        <StackPanel x:Name="PART_TextSubItemPanel"
+                                                    Orientation="Horizontal"
+                                                    Visibility="Collapsed"
+                                                    VerticalAlignment="Center">
+
+                                            <ComboBox x:Name="PART_FontFamilyIcon"
+                                                      Style="{StaticResource WPFComboBoxStyle}"
+                                                      ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Font}}"
+                                                      ItemsSource="{Binding Source={x:Static Fonts.SystemFontFamilies}}">
+                                                <ComboBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding}"
+                                                                   FontFamily="{Binding}"></TextBlock>
+                                                    </DataTemplate>
+                                                </ComboBox.ItemTemplate>
+                                            </ComboBox>
+
+                                            <ComboBox x:Name="PART_FontSizeIcon"
+                                                      Style="{StaticResource WPFComboBoxStyle}"
+                                                      Margin="10,0,0,0"
+                                                      MinWidth="48"
+                                                      ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=FontSize}}">
+                                            </ComboBox>
+
+                                            <sharedWpf:ColorPickerPalette x:Name="PART_TextColorPicker"
+                                                                          Margin="10,0,0,0"
+                                                                          MoreColorOptionVisibility="Collapsed"
+                                                                          Style="{StaticResource SyncfusionColorPickerPaletteStyle}"
+                                                                          Color="Red"
+                                                                          IsExpanded="False"
+                                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=FontColor}}">
+                                                <sharedWpf:ColorPickerPalette.IconSize>
+                                                    <Size>10,14</Size>
+                                                </sharedWpf:ColorPickerPalette.IconSize>
+                                                <sharedWpf:ColorPickerPalette.Icon>
+                                                    <DrawingImage>
+                                                        <DrawingImage.Drawing>
+                                                            <DrawingGroup>
+                                                                <DrawingGroup.Transform>
+                                                                    <ScaleTransform ScaleX="0.2"
+                                                                                    ScaleY="0.17"
+                                                                                    CenterX="6"
+                                                                                    CenterY="8" />
+                                                                </DrawingGroup.Transform>
+                                                                <GeometryDrawing Brush="{StaticResource ContentForeground}">
+                                                                    <GeometryDrawing.Geometry>
+                                                                        <PathGeometry>M8.0357 9.61282C8.12764 9.84642 8.35313 10 8.60418 10C9.03463 10 9.3301 9.56675 9.17294 9.16602L5.78709 0.532229C5.66119 0.211186 5.35153 0 5.00668 0C4.6622 0 4.3528 0.210734 4.22664 0.531275L0.82072 9.18511C0.6667 9.57645 0.955178 10 1.37573 10C1.62169 10 1.84243 9.84902 1.93161 9.61979L2.98276 6.91771H6.97492L8.0357 9.61282ZM5.32445 2.38494C5.39028 2.58019 5.4373 2.71502 5.46552 2.7894L6.59404 5.80195H3.40596L4.54859 2.7894C4.58621 2.67782 4.62853 2.543 4.67555 2.38494C4.73198 2.22687 4.7837 2.05486 4.83072 1.8689L4.85396 1.78782C4.89476 1.64424 5.08888 1.64089 5.12696 1.78522C5.19279 1.98977 5.25862 2.18968 5.32445 2.38494ZM1 11C0.447715 11 0 11.4477 0 12C0 12.5523 0.447715 13 1 13H9C9.55229 13 10 12.5523 10 12C10 11.4477 9.55229 11 9 11H7H6H1Z</PathGeometry>
+                                                                    </GeometryDrawing.Geometry>
+                                                                </GeometryDrawing>
+                                                            </DrawingGroup>
+                                                        </DrawingImage.Drawing>
+                                                    </DrawingImage>
+                                                </sharedWpf:ColorPickerPalette.Icon>
+                                            </sharedWpf:ColorPickerPalette>
+
+                                            <ToggleButton x:Name="PART_BoldIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          CommandParameter="BoldIcon"
+                                                          Height="24"
+                                                          Width="24"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Bold}}"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="12"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="8">
+                                                    <Path.Data>
+                                                        <PathGeometry>M1.27746 14C1.10388 14 0.938432 13.9685 0.781123 13.9056C0.629238 13.8427 0.493626 13.7562 0.374288 13.6461C0.260374 13.536 0.168158 13.4075 0.0976404 13.2607C0.0325468 13.1139 0 12.9566 0 12.7888V1.30562C0 1.13258 0.035259 0.967416 0.105777 0.810112C0.18172 0.652809 0.282072 0.513858 0.406835 0.393258C0.531597 0.272659 0.675346 0.178277 0.83808 0.110112C1.00081 0.0367041 1.17168 0 1.35069 0H4.99593C5.57092 0 6.11066 0.107491 6.61513 0.322472C7.11961 0.53221 7.55899 0.820599 7.93328 1.18764C8.31299 1.54944 8.61134 1.97416 8.82832 2.4618C9.05072 2.94944 9.16192 3.47116 9.16192 4.02697C9.16192 4.47266 9.08869 4.89738 8.94223 5.30112C8.80119 5.69963 8.59778 6.07977 8.33198 6.44157C8.87442 6.85056 9.28668 7.34082 9.56876 7.91236C9.85625 8.48389 10 9.10262 10 9.76854C10 10.1828 9.94847 10.5891 9.8454 10.9876C9.74234 11.3809 9.56876 11.7506 9.32465 12.0966C9.11852 12.3903 8.87714 12.6551 8.60049 12.891C8.32926 13.1217 8.03363 13.321 7.71359 13.4888C7.39354 13.6513 7.05452 13.7772 6.6965 13.8663C6.34391 13.9502 5.9859 13.9921 5.62246 13.9921C4.89558 13.9921 4.17141 13.9948 3.44996 14C2.72851 14 2.00434 14 1.27746 14ZM4.89829 5.53708C5.11527 5.53708 5.31869 5.49775 5.50854 5.4191C5.6984 5.34045 5.86385 5.23296 6.00488 5.09663C6.14592 4.9603 6.25712 4.80037 6.33849 4.61685C6.41985 4.43333 6.46054 4.2367 6.46054 4.02697C6.46054 3.81723 6.41985 3.6206 6.33849 3.43708C6.25712 3.25356 6.14592 3.09363 6.00488 2.9573C5.86385 2.82097 5.6984 2.71348 5.50854 2.63483C5.31869 2.55618 5.11527 2.51685 4.89829 2.51685H2.60374V5.53708H4.89829ZM5.51668 11.5775C5.77163 11.5775 6.00759 11.533 6.22457 11.4438C6.44155 11.3494 6.6287 11.2236 6.786 11.0663C6.94331 10.909 7.06536 10.7255 7.15216 10.5157C7.24437 10.3007 7.29048 10.07 7.29048 9.8236C7.29048 9.59288 7.24166 9.37266 7.14402 9.16292C7.0518 8.94794 6.92433 8.75918 6.76159 8.59663C6.60429 8.42884 6.41714 8.29775 6.20016 8.20337C5.98861 8.10374 5.76078 8.05393 5.51668 8.05393H2.60374V11.5775H5.51668Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                            <ToggleButton x:Name="PART_ItalicIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          Height="24"
+                                                          Width="24"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Italic}}"
+                                                          CommandParameter="ItalicIcon"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding ElementName=PART_ItalicIcon, Path=Foreground}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="11"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="12">
+                                                    <Path.Data>
+                                                        <PathGeometry>M12.5 0C12.6354 0 12.7526 0.0494792 12.8516 0.148438C12.9505 0.247396 13 0.364583 13 0.5C13 0.635417 12.9505 0.752604 12.8516 0.851562C12.7526 0.950521 12.6354 1 12.5 1H9.34375L4.72656 13H8C8.13542 13 8.2526 13.0495 8.35156 13.1484C8.45052 13.2474 8.5 13.3646 8.5 13.5C8.5 13.6354 8.45052 13.7526 8.35156 13.8516C8.2526 13.9505 8.13542 14 8 14H0.5C0.364583 14 0.247396 13.9505 0.148438 13.8516C0.0494792 13.7526 0 13.6354 0 13.5C0 13.3646 0.0494792 13.2474 0.148438 13.1484C0.247396 13.0495 0.364583 13 0.5 13H3.65625L8.27344 1H5C4.86458 1 4.7474 0.950521 4.64844 0.851562C4.54948 0.752604 4.5 0.635417 4.5 0.5C4.5 0.364583 4.54948 0.247396 4.64844 0.148438C4.7474 0.0494792 4.86458 0 5 0H12.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                            <ToggleButton x:Name="PART_UnderlineIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          CommandParameter="UnderlineIcon"
+                                                          Height="24"
+                                                          Width="24"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Underline}}"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding ElementName=PART_UnderlineIcon, Path=Foreground}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="12"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="8">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0 6.95312V0.5C0 0.364583 0.0494792 0.247396 0.148438 0.148438C0.247396 0.0494792 0.364583 0 0.5 0C0.635417 0 0.752604 0.0494792 0.851562 0.148438C0.950521 0.247396 1 0.364583 1 0.5V7.03125C1 7.57292 1.10677 8.08594 1.32031 8.57031C1.53385 9.04948 1.82292 9.46875 2.1875 9.82812C2.55208 10.1875 2.97656 10.474 3.46094 10.6875C3.94531 10.8958 4.45833 11 5 11C5.55729 11 6.07812 10.8932 6.5625 10.6797C7.05208 10.4661 7.47656 10.1771 7.83594 9.8125C8.19531 9.44271 8.47917 9.01302 8.6875 8.52344C8.89583 8.03385 9 7.51042 9 6.95312V0.5C9 0.364583 9.04948 0.247396 9.14844 0.148438C9.2474 0.0494792 9.36458 0 9.5 0C9.63542 0 9.7526 0.0494792 9.85156 0.148438C9.95052 0.247396 10 0.364583 10 0.5V6.95312C10 7.41667 9.9401 7.86198 9.82031 8.28906C9.70573 8.71615 9.53906 9.11719 9.32031 9.49219C9.10677 9.86719 8.84635 10.2083 8.53906 10.5156C8.23698 10.8229 7.90104 11.0859 7.53125 11.3047C7.16146 11.5234 6.76302 11.6953 6.33594 11.8203C5.90885 11.9401 5.46354 12 5 12C4.53646 12 4.09115 11.9401 3.66406 11.8203C3.23698 11.6953 2.83854 11.5234 2.46875 11.3047C2.09896 11.0859 1.76042 10.8229 1.45312 10.5156C1.15104 10.2083 0.890625 9.86719 0.671875 9.49219C0.458333 9.11719 0.291667 8.71615 0.171875 8.28906C0.0572917 7.85677 0 7.41146 0 6.95312ZM0.5 14C0.364583 14 0.247396 13.9505 0.148438 13.8516C0.0494792 13.7526 0 13.6354 0 13.5C0 13.3646 0.0494792 13.2474 0.148438 13.1484C0.247396 13.0495 0.364583 13 0.5 13H9.5C9.63542 13 9.7526 13.0495 9.85156 13.1484C9.95052 13.2474 10 13.3646 10 13.5C10 13.6354 9.95052 13.7526 9.85156 13.8516C9.7526 13.9505 9.63542 14 9.5 14H0.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                            <Rectangle  Fill="{StaticResource BorderAlt}"
+                                                        Height="18"
+                                                        Width="1"
+                                                        Margin="10,0,0,0"></Rectangle>
+
+                                            <ToggleButton x:Name="PART_LeftAlignIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          CommandParameter="LeftAlignIcon"
+                                                          Height="24"
+                                                          Width="24"
+                                                          IsChecked="True"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=AlignLeft}}"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="9"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="12">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0.5 1C0.364583 1 0.247396 0.950521 0.148438 0.851562C0.0494792 0.752604 0 0.635417 0 0.5C0 0.364583 0.0494792 0.247396 0.148438 0.148438C0.247396 0.0494792 0.364583 0 0.5 0H11.5C11.6354 0 11.7526 0.0494792 11.8516 0.148438C11.9505 0.247396 12 0.364583 12 0.5C12 0.635417 11.9505 0.752604 11.8516 0.851562C11.7526 0.950521 11.6354 1 11.5 1H0.5ZM0.5 6C0.364583 6 0.247396 5.95052 0.148438 5.85156C0.0494792 5.7526 0 5.63542 0 5.5C0 5.36458 0.0494792 5.2474 0.148438 5.14844C0.247396 5.04948 0.364583 5 0.5 5H15.5C15.6354 5 15.7526 5.04948 15.8516 5.14844C15.9505 5.2474 16 5.36458 16 5.5C16 5.63542 15.9505 5.7526 15.8516 5.85156C15.7526 5.95052 15.6354 6 15.5 6H0.5ZM0.5 11C0.364583 11 0.247396 10.9505 0.148438 10.8516C0.0494792 10.7526 0 10.6354 0 10.5C0 10.3646 0.0494792 10.2474 0.148438 10.1484C0.247396 10.0495 0.364583 10 0.5 10H9.5C9.63542 10 9.7526 10.0495 9.85156 10.1484C9.95052 10.2474 10 10.3646 10 10.5C10 10.6354 9.95052 10.7526 9.85156 10.8516C9.7526 10.9505 9.63542 11 9.5 11H0.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                            <ToggleButton x:Name="PART_CenterAlignIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          CommandParameter="CenterAlignIcon"
+                                                          Height="24"
+                                                          Width="24"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Center}}"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="9"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="12">
+                                                    <Path.Data>
+                                                        <PathGeometry>M2.5 1C2.36458 1 2.2474 0.950521 2.14844 0.851562C2.04948 0.752604 2 0.635417 2 0.5C2 0.364583 2.04948 0.247396 2.14844 0.148438C2.2474 0.0494792 2.36458 0 2.5 0H13.5C13.6354 0 13.7526 0.0494792 13.8516 0.148438C13.9505 0.247396 14 0.364583 14 0.5C14 0.635417 13.9505 0.752604 13.8516 0.851562C13.7526 0.950521 13.6354 1 13.5 1H2.5ZM0.5 6C0.364583 6 0.247396 5.95052 0.148438 5.85156C0.0494792 5.7526 0 5.63542 0 5.5C0 5.36458 0.0494792 5.2474 0.148438 5.14844C0.247396 5.04948 0.364583 5 0.5 5H15.5C15.6354 5 15.7526 5.04948 15.8516 5.14844C15.9505 5.2474 16 5.36458 16 5.5C16 5.63542 15.9505 5.7526 15.8516 5.85156C15.7526 5.95052 15.6354 6 15.5 6H0.5ZM4.5 11C4.36458 11 4.2474 10.9505 4.14844 10.8516C4.04948 10.7526 4 10.6354 4 10.5C4 10.3646 4.04948 10.2474 4.14844 10.1484C4.2474 10.0495 4.36458 10 4.5 10H11.5C11.6354 10 11.7526 10.0495 11.8516 10.1484C11.9505 10.2474 12 10.3646 12 10.5C12 10.6354 11.9505 10.7526 11.8516 10.8516C11.7526 10.9505 11.6354 11 11.5 11H4.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                            <ToggleButton x:Name="PART_RightAlignIcon"
+                                                          Style="{StaticResource WPFGlyphPrimaryToggleButtonStyle}"
+                                                          Margin="10,0,0,0"
+                                                          CommandParameter="RightAlignIcon"
+                                                          Height="24"
+                                                          Width="24"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=AlignRight}}"
+                                                          Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextCommand}">
+                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}"
+                                                      HorizontalAlignment="Center"
+                                                      Height="9"
+                                                      Stretch="Fill"
+                                                      VerticalAlignment="Center"
+                                                      Width="12">
+                                                    <Path.Data>
+                                                        <PathGeometry>M4.5 1C4.36458 1 4.2474 0.950521 4.14844 0.851562C4.04948 0.752604 4 0.635417 4 0.5C4 0.364583 4.04948 0.247396 4.14844 0.148438C4.2474 0.0494792 4.36458 0 4.5 0H15.5C15.6354 0 15.7526 0.0494792 15.8516 0.148438C15.9505 0.247396 16 0.364583 16 0.5C16 0.635417 15.9505 0.752604 15.8516 0.851562C15.7526 0.950521 15.6354 1 15.5 1H4.5ZM0.5 6C0.364583 6 0.247396 5.95052 0.148438 5.85156C0.0494792 5.7526 0 5.63542 0 5.5C0 5.36458 0.0494792 5.2474 0.148438 5.14844C0.247396 5.04948 0.364583 5 0.5 5H15.5C15.6354 5 15.7526 5.04948 15.8516 5.14844C15.9505 5.2474 16 5.36458 16 5.5C16 5.63542 15.9505 5.7526 15.8516 5.85156C15.7526 5.95052 15.6354 6 15.5 6H0.5ZM7.5 11C7.36458 11 7.2474 10.9505 7.14844 10.8516C7.04948 10.7526 7 10.6354 7 10.5C7 10.3646 7.04948 10.2474 7.14844 10.1484C7.2474 10.0495 7.36458 10 7.5 10H15.5C15.6354 10 15.7526 10.0495 15.8516 10.1484C15.9505 10.2474 16 10.3646 16 10.5C16 10.6354 15.9505 10.7526 15.8516 10.8516C15.7526 10.9505 15.6354 11 15.5 11H7.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </ToggleButton>
+
+                                        </StackPanel>
+
+                                        <StackPanel x:Name="PART_ShapeSubItemPanel"
+                                                    Orientation="Horizontal"
+                                                    Visibility="Collapsed"
+                                                    VerticalAlignment="Center">
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="10,0,0,0">
+                                                <TextBlock  VerticalAlignment="Center"
+                                                            Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Fill}}">
+                                                    <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <sharedWpf:ColorPickerPalette x:Name="PART_ShapeFillIcon"
+                                                                               MoreColorOptionVisibility="Collapsed"
+                                                                               Style="{StaticResource SyncfusionColorPickerPaletteStyle}"
+                                                                               Color="Red"
+                                                                               IsExpanded="False"
+                                                                               ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Fill}}">
+                                                    <sharedWpf:ColorPickerPalette.IconSize>
+                                                        <Size>16,2</Size>
+                                                    </sharedWpf:ColorPickerPalette.IconSize>
+                                                    
+                                                    <sharedWpf:ColorPickerPalette.Icon>
+                                                        <x:Null />
+                                                    </sharedWpf:ColorPickerPalette.Icon>
+                                                </sharedWpf:ColorPickerPalette>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="10,0,0,0">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ShapeStroke}}">
+                                                    <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <sharedWpf:ColorPickerPalette x:Name="PART_ShapeStrokeIcon"
+                                                                               MoreColorOptionVisibility="Collapsed"
+                                                                               Style="{StaticResource SyncfusionColorPickerPaletteStyle}"
+                                                                               IsExpanded="False"
+                                                                               Color="Red"
+                                                                               ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Stroke}}">
+                                                    <sharedWpf:ColorPickerPalette.IconSize>
+                                                        <Size>16,2</Size>
+                                                    </sharedWpf:ColorPickerPalette.IconSize>
+
+                                                    <sharedWpf:ColorPickerPalette.Icon>
+                                                        <x:Null />
+                                                    </sharedWpf:ColorPickerPalette.Icon>
+                                                </sharedWpf:ColorPickerPalette>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="10,0,0,0">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ShapeStrokeWidth}}">
+                                                    <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <ComboBox MinWidth="48"
+                                                          SelectedIndex="2"
+                                                          x:Name="PART_ShapeStrokeWidth"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=StrokeWidth}}"
+                                                          Style="{StaticResource WPFComboBoxStyle}">
+                                                </ComboBox>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                        <StackPanel x:Name="PART_CropSubItemPanel"
+                                                    Orientation="Horizontal"
+                                                    Visibility="Collapsed">
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="20,0,0,0"
+                                                        VerticalAlignment="Center">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Width}}">
+                                                     <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <TextBox x:Name="PART_CropWidth"
+                                                         Width="50"
+                                                         Height="24"
+                                                         VerticalContentAlignment="Center"
+                                                         ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=CropWidth}}"
+                                                         BorderThickness="1"
+                                                         Text="400" />
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="20,0,0,0"
+                                                        VerticalAlignment="Center">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Height}}">
+                                                     <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <TextBox x:Name="PART_CropHeight"
+                                                         Width="50"
+                                                         Height="24"
+                                                         VerticalContentAlignment="Center"
+                                                         BorderThickness="1"
+                                                         Text="400"
+                                                         ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=CropHeight}}" />
+                                            </StackPanel>
+
+                                            <Grid Margin="20,0,0,0"
+                                                  VerticalAlignment="Center">
+                                                <Button x:Name="PART_CropOkIcon"
+                                                        BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                                        Height="24"
+                                                        Width="24"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Crop}}">
+                                                    <Path x:Name="ok"
+                                                          Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                          HorizontalAlignment="Center"
+                                                          Height="10"
+                                                          Stretch="Fill"
+                                                          VerticalAlignment="Center"
+                                                          Width="12">
+                                                        <Path.Data>
+                                                            <PathGeometry>M11.8558 0.78353C12.0409 0.611105 12.0488 0.323752 11.8735 0.141745C11.6982 -0.0402617 11.4061 -0.0480132 11.2211 0.124411L3.74352 7.09194L0.778918 4.32949C0.59386 4.15706 0.301746 4.16482 0.126453 4.34682C-0.0488403 4.52883 -0.0409057 4.81618 0.144153 4.98861L3.10912 7.75136C3.46556 8.08358 4.02281 8.08236 4.37841 7.75106L11.8558 0.78353Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                            </Grid>
+
+                                            <Grid Margin="10,0,0,0"
+                                                  VerticalAlignment="Center">
+                                                <Button x:Name="PART_CropCancelIcon"
+                                                        BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                                        Height="24"
+                                                        Width="24"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Cancel}}">
+                                                    <Path x:Name="Cancel"
+                                                          Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                          HorizontalAlignment="Center"
+                                                          Height="10"
+                                                          Stretch="Fill"
+                                                          VerticalAlignment="Center"
+                                                          Width="10">
+                                                        <Path.Data>
+                                                            <PathGeometry>M0.854492 9.85352L5 5.70801L9.14551 9.85352C9.24316 9.95117 9.36194 10 9.50195 10C9.57031 10 9.63538 9.987 9.69727 9.96094C9.72681 9.94849 9.75415 9.93384 9.77917 9.91693C9.80664 9.89844 9.83142 9.87732 9.85352 9.85352C9.89905 9.80792 9.93494 9.75421 9.96094 9.69238C9.98694 9.63055 10 9.56543 10 9.49707C10 9.44122 9.99182 9.38861 9.97559 9.33923C9.95203 9.26782 9.91125 9.20325 9.85352 9.14551L5.70801 5L9.85352 0.854492C9.90344 0.804626 9.94055 0.749207 9.96497 0.688293C9.98828 0.629944 10 0.566528 10 0.498047C10 0.429688 9.98694 0.366211 9.96094 0.307617C9.93494 0.245789 9.89905 0.192078 9.85352 0.146484C9.83984 0.132751 9.82532 0.119873 9.81006 0.10791C9.77478 0.0802002 9.7356 0.057251 9.69238 0.0390625C9.63379 0.0130005 9.57031 0 9.50195 0C9.36194 0 9.24316 0.0488281 9.14551 0.146484L5 4.29199L0.854492 0.146484C0.756836 0.0488281 0.639648 0 0.50293 0C0.43457 0 0.369507 0.0130005 0.307617 0.0390625C0.25708 0.0603638 0.212036 0.0881348 0.172363 0.122437C0.163452 0.130127 0.154785 0.138123 0.146484 0.146484C0.100952 0.188782 0.0650635 0.240906 0.0390625 0.302734C0.0130615 0.364563 0 0.429688 0 0.498047C0 0.638 0.0488281 0.756836 0.146484 0.854492L4.29199 5L0.146484 9.14551C0.0488281 9.24316 0 9.36035 0 9.49707C0 9.64032 0.0472412 9.76074 0.141602 9.8584C0.239258 9.95282 0.359741 10 0.50293 10C0.639648 10 0.756836 9.95117 0.854492 9.85352Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                            </Grid>
+
+                                        </StackPanel>
+
+                                        <StackPanel x:Name="PART_PathSubItemPanel"
+                                                    Orientation="Horizontal"
+                                                    Visibility="Collapsed"
+                                                    VerticalAlignment="Center">
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="10,0,0,0">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Stroke}}">
+                                                    <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <sharedWpf:ColorPickerPalette x:Name="PART_PathStrokePicker"
+                                                                               MoreColorOptionVisibility="Collapsed"
+                                                                               Style="{StaticResource SyncfusionColorPickerPaletteStyle}"
+                                                                               IconSize="12,12"
+                                                                               IsExpanded="False"
+                                                                               Color="Red"
+                                                                               ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Stroke}}">
+                                                    <sharedWpf:ColorPickerPalette.Icon>
+                                                        <DrawingImage>
+                                                            <DrawingImage.Drawing>
+                                                                <GeometryDrawing Brush="{StaticResource ContentForeground}">
+                                                                    <GeometryDrawing.Geometry>
+                                                                        <PathGeometry>M11.8394 2.78063C11.9465 2.51186 12 2.23518 12 1.95059C12 1.67787 11.9504 1.42292 11.8513 1.18577C11.7521 0.948617 11.6133 0.743083 11.4348 0.56917C11.2603 0.391304 11.054 0.252964 10.8161 0.15415C10.5781 0.0513834 10.3223 0 10.0486 0C9.78681 0 9.53099 0.0513834 9.28111 0.15415C9.0352 0.252964 8.81904 0.395257 8.63262 0.581028L0.945959 8.24111C0.898364 8.28854 0.858701 8.34387 0.826971 8.40711C0.79524 8.4664 0.76946 8.52964 0.749628 8.59684L0.0118989 11.5316C0.00396629 11.5711 0 11.6028 0 11.6265C0 11.7292 0.0376797 11.8182 0.113039 11.8933C0.188399 11.9644 0.27764 12 0.380764 12C0.400595 12 0.430342 11.996 0.470005 11.9881L3.41497 11.253C3.4824 11.2332 3.54586 11.2075 3.60535 11.1759C3.66881 11.1443 3.72434 11.1047 3.77194 11.0573L11.3753 3.48024C11.5776 3.27866 11.7323 3.04545 11.8394 2.78063ZM11.1492 1.5C11.2087 1.64625 11.2385 1.80435 11.2385 1.97431C11.2385 2.12451 11.2186 2.25692 11.179 2.37154C11.1433 2.48617 11.0917 2.59289 11.0243 2.6917C10.9608 2.79051 10.8855 2.88538 10.7982 2.97628C10.711 3.06719 10.6177 3.16008 10.5186 3.25494L8.77541 1.51779C8.87457 1.41897 8.96777 1.32411 9.05503 1.2332C9.14229 1.14229 9.23351 1.06126 9.32871 0.990119C9.42786 0.918972 9.53495 0.863636 9.64997 0.824111C9.765 0.780632 9.89787 0.758893 10.0486 0.758893C10.2231 0.758893 10.3837 0.790514 10.5305 0.853755C10.6772 0.913043 10.8022 0.998024 10.9053 1.1087C11.0124 1.21937 11.0937 1.3498 11.1492 1.5ZM3.23054 10.5178L0.904313 11.0988L1.48736 8.78063L8.23996 2.05138L9.98314 3.78854L3.23054 10.5178ZM1 13C0.447715 13 0 13.4477 0 14C0 14.5523 0.447715 15 1 15H7H8H11C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13H1Z</PathGeometry>
+                                                                    </GeometryDrawing.Geometry>
+                                                                </GeometryDrawing>
+                                                            </DrawingImage.Drawing>
+                                                        </DrawingImage>
+                                                    </sharedWpf:ColorPickerPalette.Icon>
+                                                </sharedWpf:ColorPickerPalette>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="10,0,0,0">
+                                                <TextBlock VerticalAlignment="Center"
+                                                           Text="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=StrokeWidth}}">
+                                                    <Run Text=":  "></Run>
+                                                </TextBlock>
+                                                <ComboBox x:Name="PART_PathStrokeWidth"
+                                                          MinWidth="48"
+                                                          SelectedIndex="2"
+                                                          ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=StrokeWidth}}"
+                                                          Style="{StaticResource WPFComboBoxStyle}">
+                                                </ComboBox>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                    </Grid>
+                                </ScrollViewer>
+                            </Border>
+
+                            <Border x:Name="PART_FooterToolbarPanel"
+                                    Grid.Row="3"
+                                    Background="{StaticResource ContentBackgroundAlt1}"
+                                    Style="{StaticResource ToolbarStyle}"
+                                    BorderBrush="{StaticResource BorderAlt}"
+                                    BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                    Path = ToolbarSettings.BorderThickness}"
+                                    Height="{Binding RelativeSource={RelativeSource TemplatedParent},Path= ToolbarSettings.FooterToolbarHeight}">
+                                <Border.CornerRadius>
+                                    <CornerRadius>0,0,4,4</CornerRadius>
+                                </Border.CornerRadius>
+
+                                <Grid HorizontalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="5*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button x:Name="PART_ResetZoomIcon"
+                                            Grid.Column="0"
+                                            Style="{StaticResource WPFGlyphButtonStyle}"
+                                            BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                            ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ResetZoom}}"
+                                            Height="24"
+                                            Width="24"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            ToolTipService.ShowOnDisabled="True"
+                                            Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.ResetZoom}}">
+                                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                              HorizontalAlignment="Center"
+                                              Height="12"
+                                              Stretch="Fill"
+                                              VerticalAlignment="Center"
+                                              Width="12">
+                                            <Path.Data>
+                                                <PathGeometry>M9.1879 0.568471C9.1879 0.254513 9.44241 0 9.75637 0H13.4315C13.7455 0 14 0.254513 14 0.568471V4.24362C14 4.55758 13.7455 4.8121 13.4315 4.8121C13.1176 4.8121 12.8631 4.55758 12.8631 4.24362V1.96749L9.71067 5.20607C9.49168 5.43104 9.13178 5.4359 8.90681 5.21691C8.68183 4.99792 8.67698 4.63802 8.89596 4.41304L12.0849 1.13694H9.75637C9.44241 1.13694 9.1879 0.882429 9.1879 0.568471ZM1.13695 1.94089V4.24364C1.13695 4.55759 0.882438 4.81211 0.56848 4.81211C0.254521 4.81211 8.0304e-06 4.55759 8.06429e-06 4.24364L8.2337e-06 0.568482C8.26759e-06 0.254524 0.254522 1.09444e-05 0.56848 1.09105e-05L4.24364 1.07411e-05C4.55759 1.07072e-05 4.81211 0.254524 4.81211 0.568482C4.81211 0.88244 4.55759 1.13695 4.24364 1.13695L1.9409 1.13695L5.21155 4.40759C5.43355 4.62959 5.43355 4.98952 5.21155 5.21153C4.98955 5.43353 4.62961 5.43353 4.40761 5.21153L1.13695 1.94089ZM8.90134 8.90133C9.12334 8.67933 9.48328 8.67933 9.70528 8.90133L12.863 12.0591V9.75638C12.863 9.44242 13.1175 9.1879 13.4315 9.1879C13.7455 9.1879 14 9.44242 14 9.75638V13.4315C14 13.7455 13.7455 14 13.4315 14H9.75635C9.44239 14 9.18788 13.7455 9.18788 13.4315C9.18788 13.1176 9.44239 12.8631 9.75635 12.8631H12.0591L8.90133 9.70527C8.67933 9.48327 8.67933 9.12333 8.90134 8.90133ZM5.21692 8.90679C5.43591 9.13177 5.43106 9.49167 5.20608 9.71066L1.96749 12.863H4.24363C4.55759 12.863 4.8121 13.1176 4.8121 13.4315C4.8121 13.7455 4.55759 14 4.24363 14H0.568472C0.254513 14 0 13.7455 0 13.4315V9.75636C0 9.44241 0.254513 9.18789 0.568472 9.18789C0.88243 9.18789 1.13694 9.44241 1.13694 9.75636V12.0849L4.41306 8.89595C4.63803 8.67696 4.99793 8.68182 5.21692 8.90679Z</PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                    </Button>
+
+                                    <Rectangle Grid.Column="1"
+                                               Fill="{StaticResource BorderAlt}"
+                                               Height="18"
+                                               Width="1"
+                                               Margin="5,0,0,0"></Rectangle>
+
+                                    <Button  x:Name="PART_DecreaseZoomIcon"
+                                             Grid.Column="2"
+                                             ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ZoomOut}}"
+                                             Style="{StaticResource WPFGlyphButtonStyle}"
+                                             BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                             Height="24"
+                                             Width="24"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             Margin="5,0,0,0"
+                                             Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.DecreaseZoom}}">
+                                        <Path x:Name="Zoomout"
+                                              Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                              HorizontalAlignment="Center"
+                                              Height="12"
+                                              Stretch="Fill"
+                                              VerticalAlignment="Center"
+                                              Width="12">
+                                            <Path.Data>
+                                                <PathGeometry>M10.5 7C10.5 7.27614 10.2761 7.5 10 7.5L4 7.5C3.72386 7.5 3.5 7.27614 3.5 7C3.5 6.72386 3.72386 6.5 4 6.5L10 6.5C10.2761 6.5 10.5 6.72386 10.5 7ZM7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13ZM7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z</PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                    </Button>
+
+                                    <Slider x:Name="PART_ZoomFactorIcon"
+                                            Foreground="#007AFF"
+                                            Grid.Column="3"
+                                            Width="189"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Zoom}}"
+                                            Minimum="50"
+                                            Maximum="400"
+                                            Value="100">
+                                    </Slider>
+
+                                    <Button  x:Name="PART_IncreaseZoomIcon"
+                                             Grid.Column="4"
+                                             Style="{StaticResource WPFGlyphButtonStyle}"
+                                             BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                                             Height="24"
+                                             Width="24"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ZoomIn}}"
+                                             Command="{Binding Source={x:Static imageEditor:ImageEditorCommands.IncreaseZoom}}">
+                                        <Path x:Name="Zoomin"
+                                              Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                              HorizontalAlignment="Center"
+                                              Height="12"
+                                              Stretch="Fill"
+                                              VerticalAlignment="Center"
+                                              Width="12">
+                                            <Path.Data>
+                                                <PathGeometry>M7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1ZM0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM7.5 4C7.77614 4 8 4.22386 8 4.5V7H10.5C10.7761 7 11 7.22386 11 7.5C11 7.77614 10.7761 8 10.5 8H8V10.5C8 10.7761 7.77614 11 7.5 11C7.22386 11 7 10.7761 7 10.5V8H4.5C4.22386 8 4 7.77614 4 7.5C4 7.22386 4.22386 7 4.5 7H7V4.5C7 4.22386 7.22386 4 7.5 4Z</PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                    </Button>
+
+                                    <TextBlock Grid.Column="5"
+                                               Margin="3,0,0,0"
+                                               Text="{Binding ElementName=PART_ZoomFactorIcon, Path=Value, StringFormat={}{0}%}"
+                                               Height="15"
+                                               ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=ZoomLevel}}"
+                                               MinWidth="30"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center">
+                                    </TextBlock>
+
+                                </Grid>
+                            </Border>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SyncfusionDropDownButtonStyle"
+           TargetType="{x:Type toolsWpf:DropDownButton}">
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Label"
+                Value="New Button" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="SizeForm"
+                     Value="Small">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolsWpf:DropDownButton}">
+                            <Border x:Name="PART_ToggleButton"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="{StaticResource Windows11Light.CornerRadius4}"
+                                    MinHeight="22"
+                                    Opacity="{TemplateBinding Opacity}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Border x:Name="PART_ImageBorder"
+                                            Grid.Column="0"
+                                            Margin="2,3">
+                                        <Grid>
+                                            <Viewbox x:Name="VectorImage"
+                                                     Height="16"
+                                                     Width="16">
+                                                <Grid x:Name="PathGrid" />
+                                            </Viewbox>
+                                            <Image x:Name="PART_Image"
+                                                   RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                   Height="16"
+                                                   Source="{Binding SmallIcon, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                                   Stretch="{Binding IconStretch, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                                   Width="16" />
+                                        </Grid>
+                                    </Border>
+                                    <TextBlock x:Name="label"
+                                               Grid.Column="1"
+                                               Foreground="{TemplateBinding Foreground}"
+                                               FontFamily="Calibri"
+                                               HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                               Margin="2,3,4,0"
+                                               Text="{TemplateBinding Label}"
+                                               VerticalAlignment="{TemplateBinding VerticalAlignment}" />
+                                    <Viewbox Grid.Column="2"
+                                             Height="4"
+                                             Margin="3"
+                                             Stretch="Fill"
+                                             SnapsToDevicePixels="True"
+                                             Width="7">
+                                        <Path x:Name="path"
+                                              Data="M0,0L4,4 8,0z"
+                                              Focusable="False"
+                                              Fill="{StaticResource IconColor}"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                                    </Viewbox>
+                                    <Popup x:Name="PART_Popup"
+                                           AllowsTransparency="True"
+                                           Focusable="False"
+                                           IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type toolsWpf:DropDownButton}}}"
+                                           PopupAnimation="Slide"
+                                           Placement="Bottom"
+                                           StaysOpen="False">
+
+                                        <Border x:Name="PART_Shadow"
+                                                BorderBrush="{StaticResource BorderAlt}"
+                                                BorderThickness="{StaticResource Windows11Light.BorderThickness1}"
+                                                Background="{StaticResource PopupBackground}"
+                                                MinWidth="28"
+                                                MinHeight="14"
+                                                Padding="2"
+                                                CornerRadius="{StaticResource Windows11Light.CornerRadius4}"
+                                                Effect="{StaticResource Default.ShadowDepth4}">
+                                            <Border.Margin>
+                                                <Thickness>16,1,16,16</Thickness>
+                                            </Border.Margin>
+                                            <ScrollViewer CanContentScroll="True"
+                                                          Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                                <ItemsPresenter  x:Name="Presenter"
+                                                                 KeyboardNavigation.DirectionalNavigation="Cycle"
+                                                                 Grid.IsSharedSizeScope="True"
+                                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                 KeyboardNavigation.TabNavigation="Cycle" />
+                                            </ScrollViewer>
+                                        </Border>
+                                    </Popup>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSmallImageVisible"
+                                         Value="False">
+                                    <Setter Property="Visibility"
+                                            TargetName="PART_ImageBorder"
+                                            Value="Collapsed" />
+                                </Trigger>
+                                <Trigger Property="IsDropDownOpen"
+                                         Value="True">
+                                    <Setter Property="ToolTipService.IsEnabled"
+                                            Value="False" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="True">
+                                    <Setter Property="Background"
+                                            TargetName="PART_ToggleButton"
+                                            Value="{StaticResource ContentBackgroundHovered}" />
+                                    <Setter Property="BorderBrush"
+                                            TargetName="PART_ToggleButton"
+                                            Value="{StaticResource ContentBackgroundHovered}" />
+                                    <Setter Property="Foreground"
+                                            Value="{StaticResource HoveredForeground}" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="True">
+                                    <Setter Property="BorderBrush"
+                                            TargetName="PART_ToggleButton"
+                                            Value="#DEDEDE" />
+                                    <Setter Property="Background"
+                                            TargetName="PART_ToggleButton"
+                                            Value="#DEDEDE" />
+                                    <Setter Property="Foreground"
+                                            TargetName="label"
+                                            Value="Black" />
+                                    <Setter Property="Fill"
+                                            TargetName="path"
+                                            Value="{StaticResource IconColor}" />
+                                </Trigger>
+                                <Trigger Property="IsDropDownOpen"
+                                         Value="True">
+                                    <Setter Property="BorderBrush"
+                                            TargetName="PART_ToggleButton"
+                                            Value="Black" />
+                                    <Setter Property="Background"
+                                            TargetName="PART_ToggleButton"
+                                            Value="{StaticResource ContentBackgroundSelected}" />
+                                    <Setter Property="Foreground"
+                                            TargetName="label"
+                                            Value="Black" />
+                                    <Setter Property="Fill"
+                                            TargetName="path"
+                                            Value="{StaticResource IconColor}" />
+                                    <Setter Property="ToolTipService.IsEnabled"
+                                            Value="False" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled"
+                                         Value="False">
+                                    <Setter Property="Effect"
+                                            TargetName="PART_Image">
+                                        <Setter.Value>
+                                            <effect:DisableEffect />
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="BorderBrush"
+                                            TargetName="PART_ToggleButton"
+                                            Value="Transparent" />
+                                    <Setter Property="Foreground"
+                                            Value="{StaticResource IconColorDisabled}" />
+                                    <Setter Property="Opacity"
+                                            Value="0.7" />
+                                </Trigger>
+                                <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                                    <Setter Property="Padding"
+                                            Value="5" />
+                                    <Setter Property="MinHeight" 
+                                            TargetName="PART_ToggleButton" 
+                                            Value="{StaticResource TouchMode.MinHeight}"/>
+                                    <Setter Property="Height"
+                                            TargetName="PART_Image"
+                                            Value="20" />
+                                    <Setter Property="Width"
+                                            TargetName="PART_Image"
+                                            Value="20" />
+                                </Trigger>
+                                <Trigger Property="IconType"
+                                         Value="VectorImage">
+                                    <Setter Property="Visibility"
+                                            TargetName="VectorImage"
+                                            Value="Visible" />
+                                    <Setter Property="Visibility"
+                                            TargetName="PART_Image"
+                                            Value="Collapsed" />
+                                </Trigger>
+                                <Trigger Property="IconType"
+                                         Value="Icon">
+                                    <Setter Property="Visibility"
+                                            TargetName="VectorImage"
+                                            Value="Collapsed" />
+                                    <Setter Property="Visibility"
+                                            TargetName="PART_Image"
+                                            Value="Visible" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <DataTemplate x:Key="Text">
+        <Button Style="{StaticResource WPFGlyphButtonStyle}"
+                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                Height="24"
+                Width="24"
+                CommandParameter="Text"
+                Command="{Binding ToolbarItemCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=AddText}}">
+            <Path x:Name="Addtext"
+                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                  HorizontalAlignment="Center"
+                  Height="12"
+                  Stretch="Fill"
+                  VerticalAlignment="Center"
+                  Width="12">
+                <Path.Data>
+                    <PathGeometry>M0.538462 0L13.4615 4.49327e-07C13.7589 4.81422e-07 14 0.241078 14 0.538461C14 0.835846 13.7589 1.07692 13.4615 1.07692L7.53846 1.07692V13.4615C7.53846 13.7589 7.29738 14 7 14C6.70261 14 6.46154 13.7589 6.46154 13.4615V1.07692L0.538462 1.07692C0.241077 1.07692 0 0.835846 0 0.538461C0 0.241077 0.241077 0 0.538462 0Z</PathGeometry>
+                </Path.Data>
+            </Path>
+        </Button>
+    </DataTemplate>
+
+    <Style x:Key="SyncfusionImageEditorDropDownMenuItemStyle"
+           BasedOn="{StaticResource SyncfusionDropDownMenuItemStyle}"
+           TargetType="sharedWpf:DropDownMenuItem">
+    </Style>
+
+    <DataTemplate x:Key="Shape">
+        <toolsWpf:DropDownButton  Label=""
+                                    IconType="VectorImage"
+                                    Style="{StaticResource SyncfusionDropDownButtonStyle}"
+                                    ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=AddShape}}">
+            <toolsWpf:DropDownButton.VectorImage>
+                <Path x:Name="Addshapes"
+                      Fill="{StaticResource IconColor}"
+                      HorizontalAlignment="Center"
+                      Height="12"
+                      Stretch="Fill"
+                      VerticalAlignment="Center"
+                      Width="12">
+                    <Path.Data>
+                        <PathGeometry>M4.26667 1.6C4.26667 0.716344 4.98301 0 5.86667 0H14.4C15.2837 0 16 0.716344 16 1.6V10.1333C16 11.017 15.2837 11.7333 14.4 11.7333H11.5125C10.816 14.1957 8.55206 16 5.86667 16C2.6266 16 0 13.3734 0 10.1333C0 7.44794 1.80426 5.18396 4.26667 4.4875V1.6ZM5.33333 4.29058C5.50899 4.27475 5.68689 4.26667 5.86667 4.26667C9.10674 4.26667 11.7333 6.89326 11.7333 10.1333C11.7333 10.3131 11.7252 10.491 11.7094 10.6667H14.4C14.6946 10.6667 14.9333 10.4279 14.9333 10.1333V1.6C14.9333 1.30545 14.6946 1.06667 14.4 1.06667H5.86667C5.57212 1.06667 5.33333 1.30545 5.33333 1.6V4.29058ZM5.86667 5.33333C3.2157 5.33333 1.06667 7.48237 1.06667 10.1333C1.06667 12.7843 3.2157 14.9333 5.86667 14.9333C8.51763 14.9333 10.6667 12.7843 10.6667 10.1333C10.6667 7.48237 8.51763 5.33333 5.86667 5.33333Z</PathGeometry>
+                    </Path.Data>
+                </Path>
+            </toolsWpf:DropDownButton.VectorImage>
+
+            <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Circle}}"
+                                         CommandParameter="Circle"
+                                         Command="{Binding ShapesCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                <sharedWpf:DropDownMenuItem.Icon>
+                    <Path x:Name="Circle"
+                          Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="12"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="12">
+                        <Path.Data>
+                            <PathGeometry>M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13ZM7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </sharedWpf:DropDownMenuItem.Icon>
+            </sharedWpf:DropDownMenuItem>
+
+            <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Rectangle}}"
+                                         CommandParameter="Rectangle"
+                                         Command="{Binding ShapesCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                <sharedWpf:DropDownMenuItem.Icon>
+                    <Path x:Name="Rectangle"
+                          Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="12"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="12">
+                        <Path.Data>
+                            <PathGeometry>M15 1H1V11H15V1ZM1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H15C15.5523 12 16 11.5523 16 11V1C16 0.447715 15.5523 0 15 0H1Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </sharedWpf:DropDownMenuItem.Icon>
+            </sharedWpf:DropDownMenuItem>
+
+            <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Arrow}}"
+                                         CommandParameter="Arrow"
+                                         Command="{Binding ShapesCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                <sharedWpf:DropDownMenuItem.Icon>
+                    <Path x:Name="Arrow"
+                          Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="12"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="12">
+                        <Path.Data>
+                            <PathGeometry>M8.5 0.5H13C13.2761 0.5 13.5 0.723858 13.5 1V5.5C13.5 5.77614 13.2761 6 13 6C12.7239 6 12.5 5.77614 12.5 5.5V2.20711L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L11.7929 1.5H8.5C8.22386 1.5 8 1.27614 8 1C8 0.723858 8.22386 0.5 8.5 0.5Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </sharedWpf:DropDownMenuItem.Icon>
+            </sharedWpf:DropDownMenuItem>
+        </toolsWpf:DropDownButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Crop">
+        <sharedWpf:SplitButtonAdv Style="{StaticResource SyncfusionToolbarSplitButtonAdvStyle}"
+                                   Label=""
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   CommandParameter="Crop"
+                                   ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Crop}}"
+                                   Command="{Binding ToolbarItemCommand, 
+                                    RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}">
+            <sharedWpf:SplitButtonAdv.IconTemplate>
+                <DataTemplate>
+                    <Path x:Name="Crop" 
+                          Fill="{StaticResource IconColor}" 
+                          HorizontalAlignment="Center" 
+                          Stretch="Fill" 
+                          VerticalAlignment="Center"
+                          Height="14"
+                          Width="14">
+                        <Path.Data>
+                            <PathGeometry>M3.73333 0C4.02789 0 4.26667 0.238781 4.26667 0.533333V10.1333C4.26667 11.017 4.98301 11.7333 5.86667 11.7333H15.4667C15.7612 11.7333 16 11.9721 16 12.2667C16 12.5612 15.7612 12.8 15.4667 12.8H13.8667V15.4667C13.8667 15.7612 13.6279 16 13.3333 16C13.0388 16 12.8 15.7612 12.8 15.4667V12.8H5.86667C4.39391 12.8 3.2 11.6061 3.2 10.1333V3.2H0.533333C0.238781 3.2 0 2.96122 0 2.66667C0 2.37211 0.238781 2.13333 0.533333 2.13333H3.2V0.533333C3.2 0.238781 3.43878 0 3.73333 0ZM5.81818 2.66667C5.81818 2.37211 6.05696 2.13333 6.35152 2.13333H11.2C12.6728 2.13333 13.8667 3.32724 13.8667 4.8V9.34493C13.8667 9.63948 13.6279 9.87826 13.3333 9.87826C13.0388 9.87826 12.8 9.63948 12.8 9.34493V4.8C12.8 3.91634 12.0837 3.2 11.2 3.2H6.35152C6.05696 3.2 5.81818 2.96122 5.81818 2.66667Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </DataTemplate>
+            </sharedWpf:SplitButtonAdv.IconTemplate>
+            <sharedWpf:DropDownMenuGroup>
+
+                <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Rectangle}}"
+                                         CommandParameter="RectangleCrop"  Command="{Binding ToolbarItemCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type imageEditor:ToolbarMenuItem}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                    <sharedWpf:DropDownMenuItem.Icon>
+                        <Path x:Name="Rectangle"
+                          Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="12"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="12">
+                            <Path.Data>
+                                <PathGeometry>M15 1H1V11H15V1ZM1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H15C15.5523 12 16 11.5523 16 11V1C16 0.447715 15.5523 0 15 0H1Z</PathGeometry>
+                            </Path.Data>
+                        </Path>
+                    </sharedWpf:DropDownMenuItem.Icon>
+                </sharedWpf:DropDownMenuItem>
+
+                <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Ellipse}}"
+                                         CommandParameter="CircleCrop"  
+                                         Command="{Binding ToolbarItemCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type imageEditor:ToolbarMenuItem}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                    <sharedWpf:DropDownMenuItem.Icon>
+                        <Path x:Name="Circle"
+                              Fill="{StaticResource IconColor}"
+                              HorizontalAlignment="Center"
+                              Height="12"
+                              Stretch="Fill"
+                              VerticalAlignment="Center"
+                              Width="12">
+                            <Path.Data>
+                                <PathGeometry>M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13ZM7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14Z</PathGeometry>
+                            </Path.Data>
+                        </Path>
+                    </sharedWpf:DropDownMenuItem.Icon>
+                </sharedWpf:DropDownMenuItem>
+
+            </sharedWpf:DropDownMenuGroup>
+        </sharedWpf:SplitButtonAdv>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="Flip">
+        <toolsWpf:DropDownButton Label=""
+                                   IconType="VectorImage"
+                                   Style="{StaticResource SyncfusionDropDownButtonStyle}"
+                                   ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Flip}}">
+            <toolsWpf:DropDownButton.VectorImage>
+                <Path x:Name="Flip_Horizontal"
+                      Fill="{StaticResource IconColor}"
+                      HorizontalAlignment="Center"
+                      Height="12"
+                      Stretch="Fill"
+                      VerticalAlignment="Center"
+                      Width="12">
+                    <Path.Data>
+                        <PathGeometry>M7 0.5C7 0.223858 7.22385 0 7.5 0C7.77615 0 8 0.223858 8 0.5V13.5C8 13.7761 7.77615 14 7.5 14C7.22385 14 7 13.7761 7 13.5V0.5ZM0.792603 3.24188L5.4382 6.59456C5.71473 6.79413 5.71473 7.20587 5.4382 7.40544L0.792603 10.7581C0.461922 10.9968 0 10.7605 0 10.3527V3.64733C0 3.23952 0.461922 3.00323 0.792603 3.24188ZM13 4.62478L9.7088 7L13 9.37522V4.62478ZM8.5618 6.59456C8.28526 6.79412 8.28526 7.20588 8.5618 7.40544L13.2074 10.7581C13.5381 10.9968 14 10.7605 14 10.3527V3.64733C14 3.23952 13.5381 3.00324 13.2074 3.24188L8.5618 6.59456Z</PathGeometry>
+                    </Path.Data>
+                </Path>
+            </toolsWpf:DropDownButton.VectorImage>
+
+            <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=FlipHorizontal}}"
+                                         CommandParameter="FlipHorizontal"
+                                         Command="{Binding ToolbarItemCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                <sharedWpf:DropDownMenuItem.Icon>
+                    <Path Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="14"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="14">
+                        <Path.Data>
+                            <PathGeometry>M7 0.5C7 0.223858 7.22385 0 7.5 0C7.77615 0 8 0.223858 8 0.5V13.5C8 13.7761 7.77615 14 7.5 14C7.22385 14 7 13.7761 7 13.5V0.5ZM0.792603 3.24188L5.4382 6.59456C5.71473 6.79413 5.71473 7.20587 5.4382 7.40544L0.792603 10.7581C0.461922 10.9968 0 10.7605 0 10.3527V3.64733C0 3.23952 0.461922 3.00323 0.792603 3.24188ZM13 4.62478L9.7088 7L13 9.37522V4.62478ZM8.5618 6.59456C8.28526 6.79412 8.28526 7.20588 8.5618 7.40544L13.2074 10.7581C13.5381 10.9968 14 10.7605 14 10.3527V3.64733C14 3.23952 13.5381 3.00324 13.2074 3.24188L8.5618 6.59456Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </sharedWpf:DropDownMenuItem.Icon>
+            </sharedWpf:DropDownMenuItem>
+
+            <sharedWpf:DropDownMenuItem Header="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=FlipVertical}}"
+                                         CommandParameter="FlipVertical"
+                                         Command="{Binding ToolbarItemCommand, 
+                                         RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}"
+                                         Style="{StaticResource SyncfusionImageEditorDropDownMenuItemStyle}">
+                <sharedWpf:DropDownMenuItem.Icon>
+                    <Path x:Name="FlipVertical"
+                          Fill="{StaticResource IconColor}"
+                          HorizontalAlignment="Center"
+                          Height="14"
+                          Stretch="Fill"
+                          VerticalAlignment="Center"
+                          Width="14">
+                        <Path.RenderTransform>
+                            <RotateTransform Angle="90"
+                                             CenterX="8"
+                                             CenterY="8" />
+                        </Path.RenderTransform>
+                        <Path.Data>
+                            <PathGeometry>M7 0.5C7 0.223858 7.22385 0 7.5 0C7.77615 0 8 0.223858 8 0.5V13.5C8 13.7761 7.77615 14 7.5 14C7.22385 14 7 13.7761 7 13.5V0.5ZM0.792603 3.24188L5.4382 6.59456C5.71473 6.79413 5.71473 7.20587 5.4382 7.40544L0.792603 10.7581C0.461922 10.9968 0 10.7605 0 10.3527V3.64733C0 3.23952 0.461922 3.00323 0.792603 3.24188ZM13 4.62478L9.7088 7L13 9.37522V4.62478ZM8.5618 6.59456C8.28526 6.79412 8.28526 7.20588 8.5618 7.40544L13.2074 10.7581C13.5381 10.9968 14 10.7605 14 10.3527V3.64733C14 3.23952 13.5381 3.00324 13.2074 3.24188L8.5618 6.59456Z</PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </sharedWpf:DropDownMenuItem.Icon>
+            </sharedWpf:DropDownMenuItem>
+        </toolsWpf:DropDownButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Rotate">
+        <Button Style="{StaticResource WPFGlyphButtonStyle}"
+                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                Height="24"
+                Width="24"
+                CommandParameter="Rotate"
+                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Rotate}}"
+                Command="{Binding ToolbarItemCommand, 
+                RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}">
+            <Path x:Name="RotateRight"
+                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                  HorizontalAlignment="Center"
+                  Height="12"
+                  Stretch="Fill"
+                  VerticalAlignment="Center"
+                  Width="11">
+                <Path.Data>
+                    <PathGeometry>M12.4128 0C12.6765 0 12.8902 0.216138 12.8902 0.482758V4.34482C12.8902 4.61144 12.6765 4.82758 12.4128 4.82758H8.59348C8.32981 4.82758 8.11607 4.61144 8.11607 4.34482C8.11607 4.0782 8.32981 3.86207 8.59348 3.86207H11.3371C10.626 2.8608 9.61625 2.11346 8.45352 1.73159C7.22766 1.329 5.90336 1.35615 4.69465 1.80868C3.48594 2.26121 2.46345 3.11267 1.79244 4.22544C1.12143 5.3382 0.84111 6.64727 0.996778 7.94104C1.15245 9.23482 1.73501 10.4377 2.65032 11.3553C3.56562 12.2729 4.76019 12.8516 6.04094 12.9979C7.32169 13.1441 8.6138 12.8494 9.70843 12.1613C10.8031 11.4732 11.6362 10.432 12.0733 9.20591C12.1627 8.95509 12.4363 8.82505 12.6844 8.91547C12.9324 9.00588 13.061 9.28251 12.9716 9.53333C12.4616 10.9638 11.4896 12.1785 10.2125 12.9813C8.93546 13.7841 7.42801 14.1279 5.93379 13.9573C4.43958 13.7867 3.04592 13.1115 1.97807 12.041C0.910209 10.9704 0.230551 9.56707 0.0489378 8.05766C-0.132675 6.54825 0.19437 5.02101 0.977214 3.72278C1.76006 2.42455 2.95296 1.43119 4.36312 0.903235C5.77328 0.375285 7.3183 0.343599 8.74847 0.813297C10.0111 1.22797 11.1191 2.01204 11.9354 3.06055V0.482758C11.9354 0.216138 12.1491 0 12.4128 0Z</PathGeometry>
+                </Path.Data>
+            </Path>
+        </Button>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Path">
+        <Button Style="{StaticResource WPFGlyphButtonStyle}"
+                BorderThickness="{StaticResource Windows11Light.BorderThickness2}"
+                Height="24"
+                Width="24"
+                CommandParameter="Path"
+                ToolTip="{Binding Source={imageEditor:ImageEditorLocalizationResourceExtension ResourceName=Path}}"
+                Command="{Binding ToolbarItemCommand, 
+                RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ContentControl}}}">
+            <Path x:Name="Freehand"
+                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                  HorizontalAlignment="Center"
+                  Height="12"
+                  Stretch="Fill"
+                  VerticalAlignment="Center"
+                  Width="12">
+                <Path.Data>
+                    <PathGeometry>M1.0874 1.00563L1.08222 1.00596C0.810917 1.02602 0.574549 0.819262 0.554597 0.543973C0.534637 0.268575 0.739422 0.0288343 1.01086 0.00858257C1.01086 0.00858257 1.00993 0.0086508 1.04607 0.507304L1.01086 0.00858257L1.01215 0.00848932L1.01582 0.00823323L1.02741 0.00748119C1.037 0.00688792 1.05027 0.00612975 1.06697 0.0053247C1.10034 0.0037154 1.14748 0.00191412 1.20627 0.000873215C1.32363 -0.00120502 1.48852 -0.000273042 1.68365 0.0114847C2.06972 0.0347478 2.5938 0.101459 3.10719 0.283004C3.6184 0.463781 4.16058 0.773486 4.52274 1.31058C4.8941 1.86133 5.02897 2.5806 4.84851 3.47598C4.71975 4.11483 4.31265 4.52323 3.86462 4.80469C3.48892 5.04072 3.03696 5.21543 2.63801 5.36964C2.58029 5.39195 2.52368 5.41383 2.46857 5.43541C2.00102 5.61848 1.62483 5.78471 1.36094 6.00699C1.12531 6.20547 0.985608 6.44224 0.985608 6.81803C0.985607 7.5901 1.23877 7.92474 1.47217 8.08984C1.69544 8.24776 1.75025 8.55942 1.5946 8.78594C1.43895 9.01247 1.13178 9.06809 0.908512 8.91016C0.35795 8.52074 0 7.84587 0 6.81803C0 6.10954 0.298378 5.60231 0.731369 5.23759C1.13611 4.89666 1.65909 4.68048 2.11372 4.50247C2.17427 4.47876 2.23372 4.45568 2.29205 4.43304L2.29207 4.43303L2.29209 4.43302C2.70204 4.27386 3.05631 4.13632 3.34576 3.95448C3.65842 3.75805 3.8275 3.55043 3.88288 3.27564C4.02124 2.58915 3.90057 2.15891 3.70927 1.87522C3.50878 1.57786 3.1812 1.36818 2.78281 1.22729C2.38659 1.08718 1.9612 1.02997 1.62522 1.00973C1.45932 0.99973 1.32002 0.999011 1.22347 1.00072C1.17529 1.00157 1.13804 1.00303 1.11375 1.0042L1.0874 1.00563ZM12.6229 1.61861C11.9997 0.877059 10.8842 0.836323 10.2101 1.5305L4.08295 7.84015L6.21299 10.1214L12.5196 3.88674C13.1372 3.2762 13.1824 2.28435 12.6229 1.61861ZM9.50805 0.828664C10.5879 -0.283298 12.3747 -0.218044 13.3729 0.969805C14.2691 2.03621 14.1967 3.62498 13.2074 4.60297L6.43401 11.2991L2.5494 11.9924C2.38436 12.0219 2.21586 11.9642 2.10212 11.8394C1.98837 11.7145 1.94496 11.5395 1.98688 11.3749L2.95375 7.57814L9.50805 0.828664Z</PathGeometry>
+                </Path.Data>
+            </Path>
+        </Button>
+    </DataTemplate>
+
+    <Style x:Key="RotationHandleStyle"
+           TargetType="Thumb">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Viewbox>
+                        <Grid>
+                            <Ellipse StrokeThickness="0.5"
+                                     Fill="{StaticResource PrimaryBackground}"
+                                     Height="18"
+                                     Width="18"
+                                     Stroke="{StaticResource PrimaryBackground}" />
+                            <Path  Data="M7.7858534,0 C10.039561,0 12.113272,0.9472501 13.564026,2.5650002 L13.728631,2.7551407 15.005966,1.4778181 C15.372972,1.1108079 15.999999,1.3708196 15.999999,1.8888363 L15.999999,5.7239757 C15.999999,6.0449867 15.739001,6.3059978 15.417972,6.3059978 L11.583797,6.3059978 C11.064776,6.3059978 10.804769,5.6789761 11.17179,5.3119578 L13.018051,3.4657147 12.977344,3.4152377 C11.707679,1.8959963 9.8319086,1.0000001 7.7858534,1.0000002 4.0439239,1.0000001 0.99998093,4.0530002 0.99998093,7.8060007 0.99998093,11.559001 4.0439239,14.613001 7.7858534,14.613001 10.519802,14.613001 12.973756,12.981001 14.038736,10.456 14.145734,10.201001 14.440728,10.084001 14.693723,10.189001 14.948719,10.297001 15.067716,10.590001 14.960718,10.844001 13.738741,13.741001 10.922794,15.613001 7.7858534,15.613001 3.4929342,15.613001 0,12.111001&#xd;&#xa;0,7.8060007 0,3.5020003 3.4929342,0 7.7858534,0 z"
+                                   Fill="{StaticResource PrimaryForeground}"
+                                   HorizontalAlignment="Center"
+                                   Height="10"
+                                   Stretch="Fill"
+                                   VerticalAlignment="Center"
+                                   Width="10" />
+                        </Grid>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RotateResizerHandleStyle"
+           TargetType="Thumb">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Viewbox>
+                        <Grid  Height="16"
+                               Width="16">
+                            <Ellipse StrokeThickness="0.5"
+                                     Fill="White"
+                                     Height="16"
+                                     Width="16"
+                                     Stroke="LightGray" />
+                            <Path Data="M8,0 C12.417999,0 16,3.5820007 16,8 C16,12.417999 12.417999,16 8,16 C3.5820007,16 0,12.417999 0,8 C0,3.5820007 3.5820007,0 8,0 z"
+                                  Fill="#FFF4F5F7"
+                                  Stretch="Fill"
+                                  UseLayoutRounding="False" />
+                            <Path Data="M1.4289437E-06,7.020977 L6.7460012,7.020977 L3.3730011,10.654977 z M3.3729997,0 L6.7459998,3.4360001 L0,3.4360001 z"
+                                  Fill="#FF0A0A09"
+                                  Margin="4.627,2.746,4.627,2.599"
+                                  Opacity="0.5"
+                                  Stretch="Fill"
+                                  UseLayoutRounding="False" />
+                        </Grid>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LineStyle"
+           TargetType="Line">
+        <Setter Property="Stroke"
+                Value="{StaticResource Black}" />
+        <Setter Property="StrokeThickness"
+                Value="1" />
+    </Style>
+
+    <Style x:Key="textBorderStyle"
+           TargetType="Path">
+        <Setter Property="Fill"
+                Value="Transparent" />
+        <Setter Property="Stroke"
+                Value="{StaticResource Black}" />
+    </Style>
+
+    <Style x:Key="CropPannelCenterRectStyle"
+           TargetType="Rectangle">
+        <Setter Property="Fill"
+                Value="Transparent" />
+        <Setter Property="StrokeThickness"
+                Value="1" />
+        <Setter Property="StrokeDashArray"
+                Value="2,2" />
+        <Setter Property="Stroke"
+                Value="{StaticResource Black}"></Setter>
+    </Style>
+
+    <Style x:Key="CropPannelShadowRectStyle"
+           TargetType="Rectangle">
+        <Setter Property="Fill"
+                Value="Gray" />
+        <Setter Property="Opacity"
+                Value="0.5"></Setter>
+    </Style>
+
+    <Style x:Key="CropPannelLineStyle"
+           TargetType="Line">
+        <Setter Property="Stroke"
+                Value="Transparent" />
+        <Setter Property="StrokeThickness"
+                Value="1"></Setter>
+    </Style>
+
+    <Style x:Key="CropPannelEllipseHandlerStyle"
+           TargetType="Ellipse">
+        <Setter Property="Stroke"
+                Value="{StaticResource White}" />
+        <Setter Property="StrokeThickness"
+                Value="1"></Setter>
+        <Setter Property="Fill"
+                Value="{StaticResource PrimaryBackground}"></Setter>
+    </Style>
+
+    <Style x:Key="CropPannelRectHandlerStyle"
+           TargetType="Rectangle">
+        <Setter Property="Fill"
+                Value="{StaticResource PrimaryBackground}" />
+    </Style>
+
+    <Style TargetType="imageEditor:SfImageEditor"
+           BasedOn="{StaticResource SyncfusionSfImageEditorStyle}" />
+
+    <Style TargetType="imageEditor:ToolbarMenuItem"
+           BasedOn="{StaticResource SyncfusionSfImageEditorToolbarMenuItemStyle}" />
+
+</ResourceDictionary>
