@@ -19,7 +19,7 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Button Width="200" Margin="10" Height="30">AdwindStyledButton</Button>
+        <Button Width="200" Margin="10" Height="30" Style="{StaticResource WPFButtonStyle}">AdwindStyledButton</Button>
         <ScrollViewer Grid.Row="1" Grid.Column="0" CanContentScroll="True" x:Name="scrollViewer"
                       HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto">

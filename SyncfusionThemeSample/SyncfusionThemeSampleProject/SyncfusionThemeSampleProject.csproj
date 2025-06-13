@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Syncfusion.Themes.Office2019Colorful_Kite.WPF">
+        <HintPath>..\Syncfusion.Themes.Office2019Colorful_Kite.WPF.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Syncfusion.SfSkinManager.WPF">
+        <Version>29.2.10</Version>
+      </PackageReference>
+      <PackageReference Include="Syncfusion.Tools.WPF">
+        <Version>29.2.10</Version>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>

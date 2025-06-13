@@ -1,0 +1,177 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    mc:Ignorable="d">
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <SolidColorBrush x:Key="SelectedBrush" Color="#FFFFFF"/>
+    
+    <Style x:Key="ToggleTextBlock" TargetType="TextBlock">
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="DarkGray" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MicrosoftDefaultListBoxStyle" TargetType="ListBox"/>
+    
+    <Style x:Key="Button18Style" BasedOn="{StaticResource WPFButtonStyle}" TargetType="Button">
+        <Setter Property="MinHeight" Value="18"/>
+    </Style>
+    
+    <Style
+        x:Key="RadioToggleButton"
+        BasedOn="{StaticResource WPFToggleButtonStyle}"
+        TargetType="RadioButton" />
+
+    <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Template">
+
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="Chrome" Background="{TemplateBinding Background}">
+                        <ContentPresenter
+                            Width="auto"
+                            Height="auto"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#ADADAD" />
+                            <Setter TargetName="Chrome" Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ListBox" TargetType="ListBox">
+        <Setter Property="BorderBrush" Value="{StaticResource Border}" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="SelectionMode" Value="Single" />
+    </Style>
+    <Style TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+    </Style>
+
+    <Style x:Key="AdwindControlStyle" TargetType="UserControl">
+        <Setter Property="Background" Value="{StaticResource AdwindContentBackground}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+    </Style>
+
+    <!--  Nastavení defaultních stylů itemů - odstraňuje binding warningy v Outputu  -->
+    <Style TargetType="ListBoxItem">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="MenuItem">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="ComboBoxItem">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <!-- <Style TargetType="syncfusion:DockingManager"> -->
+    <!--     <Setter Property="AutoHideAnimationMode" Value="Slide" /> -->
+    <!-- </Style> -->
+
+    <!--  Plus minus rozklikávací tlačítko pro stromy a tabulku  -->
+    <Style x:Key="ExpandToggleButton" BasedOn="{StaticResource WPFToggleButtonStyle}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Width" Value="18" />
+        <Setter Property="Height" Value="18" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border
+                        Width="12"
+                        Height="12"
+                        Padding="0"
+                        Background="{StaticResource AdwindContentBackground}"
+                        BorderBrush="{StaticResource PrimaryColorLight1}"
+                        BorderThickness="1">
+                        <Canvas Width="12" Height="12">
+                            <Line
+                                Stroke="{StaticResource PrimaryColorLight1}"
+                                StrokeThickness="2"
+                                X1="2"
+                                X2="8"
+                                Y1="5"
+                                Y2="5" />
+                            <Line
+                                Name="minus"
+                                Stroke="{StaticResource PrimaryColorLight1}"
+                                StrokeThickness="2"
+                                X1="5"
+                                X2="5"
+                                Y1="2"
+                                Y2="8" />
+                        </Canvas>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter TargetName="minus" Property="StrokeThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Thumb">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Border
+                        Background="{TemplateBinding Panel.Background}"
+                        BorderBrush="{TemplateBinding Border.BorderBrush}"
+                        BorderThickness="{TemplateBinding Border.BorderThickness}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Panel.Background}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="Line" x:Key="AdwindLineStyle">
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Stroke" Value="LightGray"/>
+    </Style>
+    
+    <Style TargetType="Button" x:Key="PricingButtonStyle"
+           BasedOn="{StaticResource WPFButtonStyle}">
+        <Setter Property="Margin"
+                Value="10,5,2,5" />
+        <Setter Property="Height"
+                Value="30" />
+        <Setter Property="Width"
+                Value="150" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+    </Style>
+</ResourceDictionary>

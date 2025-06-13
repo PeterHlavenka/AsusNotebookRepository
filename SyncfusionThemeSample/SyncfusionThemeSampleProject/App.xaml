@@ -1,0 +1,32 @@
+﻿<Application x:Class="SyncfusionThemeSampleProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  Vsechny skiny pouzivaji stejne commonBrushe.  -->
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/common/brushes.xaml" />
+
+                <!--  Styly z theme Office2019Colorful_Kite, ktere slouzi ve stylech jako source pro BasedOn.  -->
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/dockingmanager/dockingmanager.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/ribbon/ribbon.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/colorpickerpalette/colorpickerpalette.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/timespanedit/timespanedit.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/updown/updown.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/datepicker.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/tabcontrol.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/tabcontrolext/tabcontrolext.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/window.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/togglebutton.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/listbox.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/textblock.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/cardview/cardview.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/ComboBoxAdv\ComboBoxAdv.xaml" />
+                <ResourceDictionary Source="/Syncfusion.Themes.Office2019Colorful_Kite.WPF;component/mscontrol/button.xaml" />
+
+                <ResourceDictionary Source="/Styles/DefaultStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
