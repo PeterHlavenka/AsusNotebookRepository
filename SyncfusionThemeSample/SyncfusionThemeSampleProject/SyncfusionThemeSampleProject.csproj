@@ -9,19 +9,22 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Reference Include="Syncfusion.SfSkinManager.WPF">
-        <HintPath>D:\Pool\MintLight\lib\Syncfusion.SfSkinManager.WPF.dll</HintPath>
-      </Reference>
       <Reference Include="Syncfusion.Themes.Office2019Colorful_Kite.WPF">
         <HintPath>..\Syncfusion.Themes.Office2019Colorful_Kite.WPF.dll</HintPath>
       </Reference>
       <Reference Include="Syncfusion.Themes.Windows11MintLight.WPF">
-        <HintPath>D:\Pool\MintLight\bin\Release\net6.0-windows\Syncfusion.Themes.Windows11MintLight.WPF.dll</HintPath>
+        <HintPath>..\Syncfusion.Themes.Windows11MintLight.WPF.dll</HintPath>
       </Reference>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\SyncfusionThemeRegistrator\SyncfusionThemeRegistrator.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Syncfusion.SfSkinManager.WPF">
+        <Version>29.2.10</Version>
+      </PackageReference>
     </ItemGroup>
 
 </Project>
