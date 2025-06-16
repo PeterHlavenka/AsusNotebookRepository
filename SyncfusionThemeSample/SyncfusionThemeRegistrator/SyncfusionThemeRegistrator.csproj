@@ -8,11 +8,8 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Syncfusion.SfSkinManager.WPF">
-            <Version>29.2.4</Version>
+            <Version>29.2.10</Version>
         </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\..\Libraries\Logging\Logging.csproj"/>
     </ItemGroup>
 
 </Project>

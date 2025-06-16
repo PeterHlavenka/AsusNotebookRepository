@@ -8,8 +8,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center">
             <Button Content="Hello" Height="50" Width="200"/>
-            <CheckBox Content="Check"></CheckBox>
-            <TextBox Text="TextBox"></TextBox>
+        
         </StackPanel>
     </Grid>
 </Window>
