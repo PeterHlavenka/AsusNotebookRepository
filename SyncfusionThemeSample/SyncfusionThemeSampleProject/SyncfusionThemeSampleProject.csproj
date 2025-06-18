@@ -13,7 +13,7 @@
         <HintPath>..\Syncfusion.Themes.Office2019Colorful_Kite.WPF.dll</HintPath>
       </Reference>
       <Reference Include="Syncfusion.Themes.Windows11MintLight.WPF">
-        <HintPath>..\Syncfusion.Themes.Windows11MintLight.WPF.dll</HintPath>
+        <HintPath>..\..\..\Pool\DrakTwo\Syncfusion\MintLight\bin\Release\net6.0-windows\Syncfusion.Themes.Windows11MintLight.WPF.dll</HintPath>
       </Reference>
     </ItemGroup>
 
