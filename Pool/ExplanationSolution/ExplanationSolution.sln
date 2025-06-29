@@ -293,6 +293,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.Viewer", "C:\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adwind.Rabbit.Messaging", "C:\Pool\Drak\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj", "{E5BA9913-3971-42A8-95B9-8CAB3C64F3E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Svg a Xaml jako ikony", "Svg a Xaml jako ikony", "{588D04A5-FD6F-4B12-B0AB-7FB8DC11CCF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvgXamlTest", "SvgXamlTest\SvgXamlTest.csproj", "{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -747,6 +751,10 @@ Global
 		{E5BA9913-3971-42A8-95B9-8CAB3C64F3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5BA9913-3971-42A8-95B9-8CAB3C64F3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5BA9913-3971-42A8-95B9-8CAB3C64F3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -870,6 +878,7 @@ Global
 		{460E2E58-42AA-4D51-ADD4-95D445723B01} = {3911AD29-4B14-42BC-A949-E7E7923DA234}
 		{61540C64-93B1-4DA3-AFB5-C216999F667D} = {E7CA378E-4FC9-4218-800B-B9072A289551}
 		{E5BA9913-3971-42A8-95B9-8CAB3C64F3E7} = {E7CA378E-4FC9-4218-800B-B9072A289551}
+		{5CDFAAE2-8ED5-4DC8-B430-623D0A9A0A75} = {588D04A5-FD6F-4B12-B0AB-7FB8DC11CCF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F928BCC-1965-4DFB-92DE-E8D14D612E5C}
