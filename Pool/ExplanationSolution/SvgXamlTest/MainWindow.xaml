@@ -3,20 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SvgXamlTest"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!-- <Button x:Name="SvgButton" Width="100" Height="100" Click="SvgButton_Click"> -->
-        <!--     <svgc:SvgViewbox x:Name="SvgIcon" Source="/Images/signal.svg" /> -->
-        <!-- </Button> -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button x:Name="SvgButton" Width="100" Height="100" Click="SvgButton_Click">
+            <svgc:SvgViewbox x:Name="SvgIcon" Source="/Images/signal.svg" />
+        </Button>
         <ToggleButton x:Name="SvgToggle"
+                      Grid.Row="1"
                       Width="100"
                       Height="100"
                       Checked="SvgToggle_Checked"
                       Unchecked="SvgToggle_Unchecked">
-            <svgc:SvgViewbox x:Name="SvgIcon" Source="/Images/signal.svg" />
+            <svgc:SvgViewbox x:Name="SvgToggleIcon" Source="/Images/signal.svg" />
         </ToggleButton>
 
 

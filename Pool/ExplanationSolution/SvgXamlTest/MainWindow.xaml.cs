@@ -21,39 +21,24 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        SvgToggle.IsChecked = true;
+        SvgToggle.IsChecked = false;
     }
 
 
-// BUTTON
-    // private void SvgButton_Click(object sender, RoutedEventArgs e)
-    // {
-    //     if (SvgIcon.Drawings is { } drawingGroup)
-    //     {
-    //         ChangeFillBrushRecursive(drawingGroup, Brushes.Red); // Change to any brush
-    //     }
-    // }
-    //
-    // private void ChangeFillBrushRecursive(DrawingGroup group, Brush newBrush)
-    // {
-    //     foreach (Drawing drawing in group.Children)
-    //     {
-    //         switch (drawing)
-    //         {
-    //             case GeometryDrawing geometryDrawing:
-    //                 geometryDrawing.Brush = newBrush;
-    //                 break;
-    //             case DrawingGroup childGroup:
-    //                 ChangeFillBrushRecursive(childGroup, newBrush);
-    //                 break;
-    //         }
-    //     }
-    // }
-    
+    // BUTTON
+    private void SvgButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (SvgIcon.Drawings is { } drawingGroup)
+        {
+            ChangeFillBrushRecursive(drawingGroup, Brushes.Red); // Change to any brush
+        }
+    }
     
     // TOGGLE BUTTON
     private void SvgToggle_Checked(object sender, RoutedEventArgs e)
     {
-        if (SvgIcon.Drawings is { } drawingGroup)
+        if (SvgToggleIcon.Drawings is { } drawingGroup)
         {
             ChangeFillBrushRecursive(drawingGroup, Brushes.Green);
         }
@@ -61,12 +46,13 @@ public partial class MainWindow : Window
 
     private void SvgToggle_Unchecked(object sender, RoutedEventArgs e)
     {
-        if (SvgIcon.Drawings is { } drawingGroup)
+        if (SvgToggleIcon.Drawings is { } drawingGroup)
         {
             ChangeFillBrushRecursive(drawingGroup, Brushes.Gray);
         }
     }
-
+    
+    // Used by both button and toggle button
     private void ChangeFillBrushRecursive(DrawingGroup group, Brush newBrush)
     {
         foreach (Drawing drawing in group.Children)
@@ -82,5 +68,4 @@ public partial class MainWindow : Window
             }
         }
     }
-
 }
