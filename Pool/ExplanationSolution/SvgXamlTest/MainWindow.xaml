@@ -4,10 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:svgXamlTest="clr-namespace:SvgXamlTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -22,7 +25,63 @@
                       Unchecked="SvgToggle_Unchecked">
             <svgc:SvgViewbox x:Name="SvgToggleIcon" Source="/Images/signal.svg" />
         </ToggleButton>
+        <!-- custom control: -->
+        <svgXamlTest:ToggleSvgButton Grid.Row="2" Width="100"
+                                     Height="100"
+                                     SvgSource="/Images/signal.svg"
+                                     IsChecked="True"
+                                     FillChecked="#007B66"
+                                     FillUnchecked="Magenta" />
 
+        <Button Grid.Row="3" Width="100"
+                Foreground="#FF007B66"
+                Height="100" Background="Transparent" BorderThickness="0">
+            <Image>
+                <Image.Source>
+                    <DrawingImage>
+                        <DrawingImage.Drawing>
+                            <DrawingGroup>
+                                <GeometryDrawing
+                                    Brush="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}">
+                                    <GeometryDrawing.Geometry>
+                                        <GeometryGroup>
+                                            <PathGeometry
+                                                Figures="M76.601,35.008 L34.892,76.484 36.312,78.012 C43.099,85.011 48.997,92.011 59.011,107.001 L63.011,103.001 50.011,89.001 52.011,87.001 66.011,101.001 71.011,95.001 58.011,81.001 60.011,79.001 74.011,93.001 79.011,87.001 66.011,73.001 68.011,71.001 82.011,85.001 87.011,79.001 74.011,65.001 76.011,63.001 90.011,77.001 95.011,71.001 82.011,57.001 84.011,55.001 98.011,69.001 103.011,63.001 90.011,49.001 92.011,47.001 106.011,61.001 111.011,55.001 98.011,41.001 100.011,39.001 114.011,53.001 119.011,47.001 C106.011,39.001 95.011,32.001 81.011,24.001 z M63.011,27.001 C58.011,27.001 53.011,29.001 49.011,33.001 L34.011,48.001 C28.011,54.001 27.011,62.001 31.011,69.001 L31.011,70.001 67.011,30.001 66.011,29.001 C63.011,27.001 60.011,27.001 63.011,27.001 z M6.011,0 L37.011,32.001 42.011,27.001 C47.011,22.001 53.011,19.001 59.011,19.001 65.011,19.001 71.011,21.001 75.011,25.001 L76.011,26.001 77.011,27.001 C93.011,41.001 104.011,48.001 122.011,60.001 123.011,61.001 124.011,62.001 124.011,63.001 124.011,64.001 123.011,65.001 122.011,66.001 L67.011,127.001 C66.011,128.001 65.011,128.001 64.011,128.001 64.011,128.001 63.011,128.001 63.011,128.001 62.011,128.001 61.011,127.001 60.011,126.001 46.011,104.001 38.011,92.001 26.011,79.001 L26.011,79.001 25.011,78.001 C16.011,68.001 16.011,52.001 26.011,42.001 L31.011,37.001 0,6.011 z" />
+                                        </GeometryGroup>
+                                    </GeometryDrawing.Geometry>
+                                </GeometryDrawing>
+                            </DrawingGroup>
+                        </DrawingImage.Drawing>
+                    </DrawingImage>
+                </Image.Source>
+            </Image>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="Foreground.Color"
+                                                        To="Magenta"
+                                                        Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="Foreground.Color"
+                                                        To="#FF007B66"
+                                                        Duration="0:0:0.5" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>
