@@ -29,10 +29,10 @@ public partial class MainWindow : Window
     // BUTTON
     private void SvgButton_Click(object sender, RoutedEventArgs e)
     {
-        if (SvgIcon.Drawings is { } drawingGroup)
-        {
-            ChangeFillBrushRecursive(drawingGroup, Brushes.Red); // Change to any brush
-        }
+        // if (SvgIcon.Drawings is { } drawingGroup)
+        // {
+        //     ChangeFillBrushRecursive(drawingGroup, Brushes.Red); // Change to any brush
+        // }
     }
     
     // TOGGLE BUTTON
