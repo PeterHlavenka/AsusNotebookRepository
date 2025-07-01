@@ -2,86 +2,112 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace SvgXamlTest
+namespace SvgXamlTest;
+
+public partial class ToggleSvgButton : UserControl
 {
-    public partial class ToggleSvgButton : UserControl
+    public static readonly DependencyProperty SvgSourceProperty =
+        DependencyProperty.Register(nameof(SvgSource), typeof(Uri), typeof(ToggleSvgButton), new PropertyMetadata(null));
+
+    public static readonly DependencyProperty PrimaryColorProperty =
+        DependencyProperty.Register(nameof(PrimaryColor), typeof(Brush), typeof(ToggleSvgButton), new PropertyMetadata(Brushes.Green));
+
+    public static readonly DependencyProperty SecondaryColorProperty =
+        DependencyProperty.Register(nameof(SecondaryColor), typeof(Brush), typeof(ToggleSvgButton), new PropertyMetadata(Brushes.Gray));
+
+    public static readonly DependencyProperty IsCheckedProperty =
+        DependencyProperty.Register(nameof(IsChecked), typeof(bool?), typeof(ToggleSvgButton),
+            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnIsCheckedChanged));
+
+    public ToggleSvgButton()
     {
-        public static readonly DependencyProperty SvgSourceProperty =
-            DependencyProperty.Register(nameof(SvgSource), typeof(Uri), typeof(ToggleSvgButton), new PropertyMetadata(null));
+        InitializeComponent();
 
-        public static readonly DependencyProperty FillCheckedProperty =
-            DependencyProperty.Register(nameof(FillChecked), typeof(Brush), typeof(ToggleSvgButton), new PropertyMetadata(Brushes.Green));
-
-        public static readonly DependencyProperty FillUncheckedProperty =
-            DependencyProperty.Register(nameof(FillUnchecked), typeof(Brush), typeof(ToggleSvgButton), new PropertyMetadata(Brushes.Gray));
-
-        public static readonly DependencyProperty IsCheckedProperty =
-            DependencyProperty.Register(nameof(IsChecked), typeof(bool?), typeof(ToggleSvgButton),
-                new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnIsCheckedChanged));
-
-        public ToggleSvgButton()
+        Toggle.Loaded += (s, e) =>
         {
-            InitializeComponent();
+            var brush = Toggle.IsChecked == true ? PrimaryColor : SecondaryColor;
+            UpdateBrush(brush);
+        };
 
-            Toggle.Checked += (s, e) => UpdateBrush(FillChecked);
-            Toggle.Unchecked += (s, e) => UpdateBrush(FillUnchecked);
+        Toggle.Checked += (s, e) => UpdateBrush(PrimaryColor);
+        Toggle.Unchecked += (s, e) => UpdateBrush(SecondaryColor);
+    }
+
+    public Uri SvgSource
+    {
+        get => (Uri)GetValue(SvgSourceProperty);
+        set => SetValue(SvgSourceProperty, value);
+    }
+
+    /// <summary>
+    /// Checked state color.
+    /// </summary>
+    public Brush PrimaryColor
+    {
+        get => (Brush)GetValue(PrimaryColorProperty);
+        set => SetValue(PrimaryColorProperty, value);
+    }
+
+    /// <summary>
+    /// Unchecked state color.
+    /// </summary>
+    public Brush SecondaryColor
+    {
+        get => (Brush)GetValue(SecondaryColorProperty);
+        set => SetValue(SecondaryColorProperty, value);
+    }
+
+    public bool? IsChecked
+    {
+        get => (bool?)GetValue(IsCheckedProperty);
+        set => SetValue(IsCheckedProperty, value);
+    }
+
+    private static void OnIsCheckedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is ToggleSvgButton control)
+        {
+            control.Toggle.IsChecked = (bool?)e.NewValue;
+            var brush = control.Toggle.IsChecked == true ? control.PrimaryColor : control.SecondaryColor;
+            control.UpdateBrush(brush);
         }
+    }
 
-        public Uri SvgSource
-        {
-            get => (Uri)GetValue(SvgSourceProperty);
-            set => SetValue(SvgSourceProperty, value);
-        }
+    private void UpdateBrush(Brush brush)
+    {
+        if (SvgIcon?.Drawings is { } group) ChangeFillBrushRecursive(group, brush);
+    }
 
-        public Brush FillChecked
-        {
-            get => (Brush)GetValue(FillCheckedProperty);
-            set => SetValue(FillCheckedProperty, value);
-        }
-
-        public Brush FillUnchecked
-        {
-            get => (Brush)GetValue(FillUncheckedProperty);
-            set => SetValue(FillUncheckedProperty, value);
-        }
-
-        public bool? IsChecked
-        {
-            get => (bool?)GetValue(IsCheckedProperty);
-            set => SetValue(IsCheckedProperty, value);
-        }
-
-        private static void OnIsCheckedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            if (d is ToggleSvgButton control)
+    private static void ChangeFillBrushRecursive(DrawingGroup group, Brush newBrush)
+    {
+        foreach (var drawing in group.Children)
+            switch (drawing)
             {
-                control.Toggle.IsChecked = (bool?)e.NewValue;
-                var brush = control.Toggle.IsChecked == true ? control.FillChecked : control.FillUnchecked;
-                control.UpdateBrush(brush);
+                case GeometryDrawing geometry:
+                    geometry.Brush = newBrush;
+                    break;
+                case DrawingGroup subgroup:
+                    ChangeFillBrushRecursive(subgroup, newBrush);
+                    break;
             }
-        }
-
-        private void UpdateBrush(Brush brush)
+    }
+    
+    private static void ChangeFillBrushById(DrawingGroup group, string id, Brush newBrush)
+    {
+        foreach (var drawing in group.Children)
         {
-            if (SvgIcon?.Drawings is DrawingGroup group)
+            switch (drawing)
             {
-                ChangeFillBrushRecursive(group, brush);
-            }
-        }
-
-        private void ChangeFillBrushRecursive(DrawingGroup group, Brush newBrush)
-        {
-            foreach (var drawing in group.Children)
-            {
-                switch (drawing)
-                {
-                    case GeometryDrawing geometry:
-                        geometry.Brush = newBrush;
-                        break;
-                    case DrawingGroup subgroup:
-                        ChangeFillBrushRecursive(subgroup, newBrush);
-                        break;
-                }
+                case GeometryDrawing geometry when geometry.GetValue(NameProperty) as string == id:
+                    geometry.Brush = newBrush;
+                    break;
+                case DrawingGroup subgroup when subgroup.GetValue(NameProperty) as string == id:
+                    // If the id is on a group, update all its children
+                    ChangeFillBrushById(subgroup, id, newBrush);
+                    break;
+                case DrawingGroup subgroup:
+                    ChangeFillBrushById(subgroup, id, newBrush);
+                    break;
             }
         }
     }
