@@ -6,6 +6,9 @@ namespace SvgXamlTest;
 
 public partial class ToggleSvgButton : UserControl
 {
+    public static readonly DependencyProperty AppNameProperty = 
+        DependencyProperty.Register(nameof(AppName), typeof(string), typeof(ToggleSvgButton), new PropertyMetadata(default(string)));
+
     public static readonly DependencyProperty SvgSourceProperty =
         DependencyProperty.Register(nameof(SvgSource), typeof(Uri), typeof(ToggleSvgButton), new PropertyMetadata(null));
 
@@ -61,6 +64,12 @@ public partial class ToggleSvgButton : UserControl
     {
         get => (bool?)GetValue(IsCheckedProperty);
         set => SetValue(IsCheckedProperty, value);
+    }
+
+    public object AppName
+    {
+        get => (object)GetValue(AppNameProperty);
+        set => SetValue(AppNameProperty, value);
     }
 
     private static void OnIsCheckedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)

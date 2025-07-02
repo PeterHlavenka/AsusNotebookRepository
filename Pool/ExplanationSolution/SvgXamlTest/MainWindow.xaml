@@ -30,10 +30,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <!-- <svgXamlTest:ToggleSvgButton x:Name="ToggleSvgButton" Width="100" -->
-            <!--                              Height="100" -->
-            <!--                              SvgSource="/svgs/signal.svg" -->
-            <!--                              IsChecked="False" /> -->
+            <svgXamlTest:ToggleSvgButton x:Name="ToggleSvgButton" Width="100"
+                                         Height="100"
+                                         AppName="WpfTestSampleResources"
+                                         SvgSource="/Resources/Imperial_Seal_of_Japan.svg"
+                                         IsChecked="False" />
+
             <!-- <svgXamlTest:ToggleSvgButton Grid.Column="1" Width="100" -->
             <!--                              Height="100" -->
             <!--                              SvgSource="/Images;Component/svgs/signal.svg" -->
@@ -62,8 +64,8 @@
                     </StackPanel>
                 </TabItem.Header>
                 
-                <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Dva.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <!-- <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Imperial_Seal_of_Japan.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+                <!-- <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Images/clock.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+                <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Imperial_Seal_of_Japan.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </TabItem>
             </TabControl>
 
