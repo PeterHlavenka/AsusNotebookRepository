@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:SvgXamlTest"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+           
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryBrush">#FF0000FF</SolidColorBrush>
+            <SolidColorBrush x:Key="SecondaryBrush">Orange</SolidColorBrush>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

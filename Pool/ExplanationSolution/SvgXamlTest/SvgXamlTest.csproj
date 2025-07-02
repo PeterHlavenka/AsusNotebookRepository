@@ -10,13 +10,19 @@
 
     <ItemGroup>
       <None Remove="Images\signal.svg" />
-      <Resource Include="Images\signal.svg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Resource>
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="SharpVectors.Wpf" Version="1.8.4.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Images\Images.csproj" />
+      <ProjectReference Include="..\WpfTestSampleResources\WpfTestSampleResources.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="svgs\signal.svg" />
     </ItemGroup>
 
 </Project>

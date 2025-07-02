@@ -9,8 +9,8 @@
         Title="MainWindow" Height="800" Width="800">
     <Window.Resources>
         <Style TargetType="svgXamlTest:ToggleSvgButton">
-            <Setter Property="PrimaryColor" Value="Blue" />
-            <Setter Property="SecondaryColor" Value="Gray" />
+            <Setter Property="PrimaryColor" Value="{StaticResource PrimaryBrush}" />
+            <Setter Property="SecondaryColor" Value="{StaticResource SecondaryBrush}" />
         </Style>
     </Window.Resources>
     <Grid>
@@ -22,10 +22,50 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <!-- row 0 -->
-        <svgXamlTest:ToggleSvgButton Width="100"
-                                     Height="100"
-                                     SvgSource="/Images/signal.svg"
-                                     IsChecked="False" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <svgXamlTest:ToggleSvgButton x:Name="ToggleSvgButton" Width="100"
+                                         Height="100"
+                                         SvgSource="/svgs/signal.svg"
+                                         IsChecked="False" />
+            <svgXamlTest:ToggleSvgButton Grid.Column="1" Width="100"
+                                         Height="100"
+                                         SvgSource="/Images;Component/svgs/signal.svg"
+                                         IsChecked="False" />
+            <Button Grid.Column="2" Width="100" Height="100">
+                <Image Source="/Images;Component/icons/ADWdracek32.png"></Image>
+            </Button>
+            <!-- <Button Grid.Column="3" Width="100" Height="100"> -->
+            <!--     <svgc:SvgIcon Width="100" -->
+            <!--                   Height="100" Source="svgs/signal.svg" AppName="SvgXamlTest" -->
+            <!--                   ></svgc:SvgIcon> -->
+            <!--     </Button> -->
+            
+            
+            <!-- <Button Grid.Column="4" Width="100" Height="100" ToolTip="Open Svg File"> -->
+            <!--     <Image Source="{svgc:SvgImage Source=/svgs/signal.svg, AppName=SvgXamlTest}"/> -->
+            <!-- </Button> -->
+            
+            <TabControl Grid.Column="4">
+            <TabItem x:Name="tabSvgViewbox">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" Height="32">
+                        <Image Height="24px" Width="24px" Source="{svgc:SvgImage Source=/Images/clapperboard.svg, AppName=WpfTestSampleResources}" />
+                        <TextBlock Text="SvgViewbox Control" Margin="3" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Emblem_of_Ethiopia.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </TabItem>
+            </TabControl>
+            <!-- <svgc:SvgViewbox Grid.Column="4" AppName="Images" Source="/svgs/signal.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+        </Grid>
+        
 
 
         <!-- row 1 -->
@@ -35,7 +75,7 @@
                       Height="100"
                       Checked="SvgToggle_Checked"
                       Unchecked="SvgToggle_Unchecked">
-            <svgc:SvgViewbox x:Name="SvgToggleIcon" Source="/Images/signal.svg" />
+            <svgc:SvgViewbox x:Name="SvgToggleIcon" Source="/Images;Component/svgs/signal.svg" />
         </ToggleButton>
 
         <!-- row 2 custom control: WINNER -->
