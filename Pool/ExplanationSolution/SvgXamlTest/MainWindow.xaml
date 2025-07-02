@@ -30,17 +30,17 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <svgXamlTest:ToggleSvgButton x:Name="ToggleSvgButton" Width="100"
-                                         Height="100"
-                                         SvgSource="/svgs/signal.svg"
-                                         IsChecked="False" />
-            <svgXamlTest:ToggleSvgButton Grid.Column="1" Width="100"
-                                         Height="100"
-                                         SvgSource="/Images;Component/svgs/signal.svg"
-                                         IsChecked="False" />
-            <Button Grid.Column="2" Width="100" Height="100">
-                <Image Source="/Images;Component/icons/ADWdracek32.png"></Image>
-            </Button>
+            <!-- <svgXamlTest:ToggleSvgButton x:Name="ToggleSvgButton" Width="100" -->
+            <!--                              Height="100" -->
+            <!--                              SvgSource="/svgs/signal.svg" -->
+            <!--                              IsChecked="False" /> -->
+            <!-- <svgXamlTest:ToggleSvgButton Grid.Column="1" Width="100" -->
+            <!--                              Height="100" -->
+            <!--                              SvgSource="/Images;Component/svgs/signal.svg" -->
+            <!--                              IsChecked="False" /> -->
+            <!-- <Button Grid.Column="2" Width="100" Height="100"> -->
+            <!--     <Image Source="/Images;Component/icons/ADWdracek32.png"></Image> -->
+            <!-- </Button> -->
             <!-- <Button Grid.Column="3" Width="100" Height="100"> -->
             <!--     <svgc:SvgIcon Width="100" -->
             <!--                   Height="100" Source="svgs/signal.svg" AppName="SvgXamlTest" -->
@@ -52,6 +52,7 @@
             <!--     <Image Source="{svgc:SvgImage Source=/svgs/signal.svg, AppName=SvgXamlTest}"/> -->
             <!-- </Button> -->
             
+            
             <TabControl Grid.Column="4">
             <TabItem x:Name="tabSvgViewbox">
                 <TabItem.Header>
@@ -60,10 +61,12 @@
                         <TextBlock Text="SvgViewbox Control" Margin="3" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem.Header>
-                <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Emblem_of_Ethiopia.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                
+                <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Dva.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <!-- <svgc:SvgViewbox AppName="WpfTestSampleResources" Source="/Resources/Imperial_Seal_of_Japan.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
             </TabItem>
             </TabControl>
-            <!-- <svgc:SvgViewbox Grid.Column="4" AppName="Images" Source="/svgs/signal.svg" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+
         </Grid>
         
 
