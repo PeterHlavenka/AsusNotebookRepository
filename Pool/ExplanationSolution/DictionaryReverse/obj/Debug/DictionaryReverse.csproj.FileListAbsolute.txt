@@ -45,3 +45,4 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\D
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\Dictiona.CC0021F3.Up2Date
+D:\AsusNotebookRepository\Pool\ExplanationSolution\DictionaryReverse\obj\Debug\DictionaryReverse.exe.config

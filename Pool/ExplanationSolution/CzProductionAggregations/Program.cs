@@ -1,4 +1,6 @@
-﻿using Adwind.Rabbit.Messaging;
+﻿
+
+using Rabbit.Messaging;
 
 const string connString = "amqp://phlavenka:LLykoat3J9HbDBUAjVW3@rmq.prod:5672/adw-test";
 var consumer = new RabbitMessageConsumer(connString);

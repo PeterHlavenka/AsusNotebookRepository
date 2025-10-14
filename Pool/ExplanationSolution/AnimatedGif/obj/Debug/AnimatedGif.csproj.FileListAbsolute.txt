@@ -46,3 +46,4 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\Animate
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\Animated.416FA3D9.Up2Date
+D:\AsusNotebookRepository\Pool\ExplanationSolution\AnimatedGif\obj\Debug\AnimatedGif.exe.config

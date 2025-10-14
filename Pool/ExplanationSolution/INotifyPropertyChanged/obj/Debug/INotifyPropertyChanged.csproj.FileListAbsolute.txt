@@ -71,3 +71,4 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\De
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyP.73442795.Up2Date
+D:\AsusNotebookRepository\Pool\ExplanationSolution\INotifyPropertyChanged\obj\Debug\INotifyPropertyChanged.exe.config

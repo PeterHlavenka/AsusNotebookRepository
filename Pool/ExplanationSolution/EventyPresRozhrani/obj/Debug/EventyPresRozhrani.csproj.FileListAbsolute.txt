@@ -46,3 +46,4 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPr.23812C00.Up2Date
+D:\AsusNotebookRepository\Pool\ExplanationSolution\EventyPresRozhrani\obj\Debug\EventyPresRozhrani.exe.config

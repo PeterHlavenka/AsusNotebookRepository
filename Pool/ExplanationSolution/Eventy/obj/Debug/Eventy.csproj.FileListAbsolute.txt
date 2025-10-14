@@ -55,3 +55,4 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.cspro
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.csproj.Up2Date
+D:\AsusNotebookRepository\Pool\ExplanationSolution\Eventy\obj\Debug\Eventy.exe.config

@@ -21,7 +21,10 @@ namespace RibbonBackstageCustomTheme
     {
         public MainWindow()
         {
-            InitializeComponent();   
+            // SfThemeRegistrator.RegisterTheme(VisualStyles.Windows11Dark, "Windows11MintDark");
+            // SfThemeRegistrator.SetVisualStyle(this, VisualStyles.Windows11Dark);
+            InitializeComponent();
+            SfThemeRegistrator.SetTheme(this);
         }
 
         private void CmbTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)

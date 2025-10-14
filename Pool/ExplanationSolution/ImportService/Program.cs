@@ -1,9 +1,10 @@
-﻿using Adwind.Rabbit.Messaging;
+﻿
 using ImportService;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Rabbit.Messaging;
 using Serilog;
 
 try
@@ -29,8 +30,7 @@ try
         // Producer musi dostat connection string na rabbita vystaveneho ven z clusteru
         services.Configure<Options>(context.Configuration.GetSection("Options").Bind);
         services.AddSingleton<RabbitMessageProducer>(_ => new RabbitMessageProducer(
-            "amqp://phlavenka:LLykoat3J9HbDBUAjVW3@rmq.prod:5672/adw-test",
-            loggerFactory.CreateLogger<RabbitMessageProducer>()));
+            "amqp://default_user_B1BeQMkdhd6tF3Atabz:voIhR72Tmr1MyG4u8sn9Ndki28O9mh7b@10.255.240.241:5672/"));
         services.AddHostedService<Sender>();
     });
 
