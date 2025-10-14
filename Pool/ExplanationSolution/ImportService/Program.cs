@@ -28,9 +28,7 @@ try
         services.AddSingleton(loggerFactory);
         
         // Producer musi dostat connection string na rabbita vystaveneho ven z clusteru
-        services.Configure<Options>(context.Configuration.GetSection("Options").Bind);
-        services.AddSingleton<RabbitMessageProducer>(_ => new RabbitMessageProducer(
-            "amqp://default_user_B1BeQMkdhd6tF3Atabz:voIhR72Tmr1MyG4u8sn9Ndki28O9mh7b@10.255.240.241:5672/"));
+        services.AddSingleton<RabbitMessageProducer>(_ => new RabbitMessageProducer());
         services.AddHostedService<Sender>();
     });
 

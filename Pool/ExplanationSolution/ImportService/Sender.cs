@@ -18,7 +18,8 @@ public class Sender : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        await m_producer.Initialize(MessagingBase.LoggerFactory.CreateLogger<RabbitMessageProducer>());
+        var loggerFactory = new LoggerFactory();
+        await m_producer.Initialize(loggerFactory.CreateLogger<RabbitMessageProducer>());
 
         await m_producer.SendMessage("CZ", "Production", GetActualDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
 

@@ -22,4 +22,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\FuncAAction.cs
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\Func.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\Func.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\FuncAAct.83BC0DDD.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\Func\obj\Debug\Func.exe.config

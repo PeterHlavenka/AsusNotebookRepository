@@ -46,4 +46,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.csproj.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ComboTest\obj\Debug\ComboTest.exe.config

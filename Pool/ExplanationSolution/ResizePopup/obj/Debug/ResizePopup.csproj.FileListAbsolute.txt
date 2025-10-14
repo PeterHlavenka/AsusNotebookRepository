@@ -46,4 +46,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizeP
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePo.35FD443C.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ResizePopup\obj\Debug\ResizePopup.exe.config

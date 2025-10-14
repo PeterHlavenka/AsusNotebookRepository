@@ -46,4 +46,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.csproj.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\PopupTest\obj\Debug\PopupTest.exe.config

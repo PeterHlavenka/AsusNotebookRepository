@@ -72,4 +72,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\Prog
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\Progress.8160FA17.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\ProgressCircle\obj\Debug\ProgressCircle.exe.config

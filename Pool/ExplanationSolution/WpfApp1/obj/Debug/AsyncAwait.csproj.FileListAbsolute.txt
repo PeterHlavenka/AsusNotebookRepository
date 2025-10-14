@@ -46,4 +46,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\AsyncAwait.csproj.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\WpfApp1\obj\Debug\WpfApp1.exe.config

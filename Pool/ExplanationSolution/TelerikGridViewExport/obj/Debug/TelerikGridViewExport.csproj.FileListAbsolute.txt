@@ -121,4 +121,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Deb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikG.415E847D.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\TelerikGridViewExport\obj\Debug\TelerikGridViewExport.exe.config

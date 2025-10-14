@@ -22,4 +22,3 @@ D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.c
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.exe
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.pdb
 D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.csproj.Up2Date
-D:\AsusNotebookRepository\Pool\ExplanationSolution\Delegate\obj\Debug\Delegate.exe.config
