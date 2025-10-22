@@ -7,7 +7,7 @@ using Rabbit.Messaging;
 Environment.SetEnvironmentVariable("ConnString", "value z meho work keepassu");
 var consumer = new RabbitMessageConsumer();
 consumer.Worker = DoSomeWork;
-await consumer.StartConsumingAsync(RabbitCommons.GetQueueInfo(ImportConsumer.Pricing, "CZ", "Production"));
+// await consumer.StartConsumingAsync(RabbitCommons.GetQueueInfo("Pricing", "CZ", "Production"));
 
 Console.WriteLine("Consuming.");
 Console.ReadLine();
