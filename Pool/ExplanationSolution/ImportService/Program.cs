@@ -4,8 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Rabbit.Messaging;
 using Serilog;
+using Visentio.RabbitMessaging;
 
 try
 {

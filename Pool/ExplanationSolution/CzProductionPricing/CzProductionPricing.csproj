@@ -8,13 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="C:\Pool\Adwind_Kite\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj" />
-      <ProjectReference Include="C:\Pool\Drak\Adwind\Apps\Adwind.Rabbit.Messaging\Adwind.Rabbit.Messaging.csproj" />
-      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Rabbit.Messaging\Rabbit.Messaging.csproj" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.4" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.4" />
+      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Visentio.RabbitMessaging\Visentio.RabbitMessaging.csproj" />
     </ItemGroup>
 
 </Project>

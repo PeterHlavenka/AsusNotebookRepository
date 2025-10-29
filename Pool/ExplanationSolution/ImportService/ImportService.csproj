@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Rabbit.Messaging\Rabbit.Messaging.csproj" />
+      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Visentio.RabbitMessaging\Visentio.RabbitMessaging.csproj" />
     </ItemGroup>
 
 </Project>

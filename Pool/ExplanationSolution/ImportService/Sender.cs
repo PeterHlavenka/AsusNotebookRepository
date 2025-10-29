@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Rabbit.Messaging;
+using Visentio.RabbitMessaging;
 
 namespace ImportService;
 
