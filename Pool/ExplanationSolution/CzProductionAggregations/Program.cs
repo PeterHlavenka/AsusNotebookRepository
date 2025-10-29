@@ -9,8 +9,8 @@ var consumer = new RabbitMessageConsumer();
 consumer.Worker = DoSomeWork;
 
 var queueInfo = new string[] { "CZ", "Production", "Testovaci consumer" };
-var queueName = QueueInfo.CreateQueueName(queueInfo[0], queueInfo[1], queueInfo[2]);
-var routingKey = QueueInfo.CreateRoutingKey(queueInfo[0], queueInfo[1], queueInfo[2]);
+var queueName = consumer.CreateQueueName(queueInfo[0], queueInfo[1], queueInfo[2]);
+var routingKey = consumer.CreateRoutingKey(queueInfo[0], queueInfo[1], queueInfo[2]);
 await consumer.StartConsumingAsync(queueName, routingKey);
 
 // Preposlani zpravy na dalsi sluzby

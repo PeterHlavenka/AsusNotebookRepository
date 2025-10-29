@@ -13,8 +13,6 @@ try
 
     builder.ConfigureAppConfiguration((hostingContext, config) =>
     {
-        config.AddJsonFile("appsettings.json", true, true);
-        config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true);
         config.AddJsonFile("serilogSettings.json", false, true);
         hostingContext.Configuration = config.Build();
     });
