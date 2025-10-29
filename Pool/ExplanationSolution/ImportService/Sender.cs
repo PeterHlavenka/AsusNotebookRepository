@@ -18,17 +18,31 @@ public class Sender : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        const string consumerName = "nejakyconsumer";
+        const string country = "CZ";
+        const string environment = "Production";
+        var importDateTime = GetActualDateTime();
+        string[] adwDataIds = [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross];
+        
         Environment.SetEnvironmentVariable("RabbitConnectionString", "amqp://default_user_B1BeQMkdhd6tF3Atabz:voIhR72Tmr1MyG4u8sn9Ndki28O9mh7b@10.255.240.241:5672/");
-        await m_producer.SendMessage("CZ", "Production", GetActualDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+        
+        var message = new RabbitMessage
+        {
+            Country = country,
+            Environment = environment,
+            DataTypes = adwDataIds,
+            ImportDate = importDateTime.ToString("yyyy-MM-dd HH:mm:ss")
+        };
+        await m_producer.SendMessage(consumerName, country, environment, message);
 
         while (true)
         {
             var pismeno = Console.ReadLine();
             if (pismeno == "m")
-                await SendMultipleMessages(m_producer);
+                await SendMultipleMessages(m_producer, consumerName);
 
             if (pismeno == "n")
-                await m_producer.SendMessage("CZ", "Production", GetActualDateTime(), [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+                await m_producer.SendMessage(consumerName, country, environment, message);
         }
     }
 
@@ -51,16 +65,28 @@ public class Sender : BackgroundService
     }
 
 
-    private async Task SendMultipleMessages(RabbitMessageProducer sender)
+    private async Task SendMultipleMessages(RabbitMessageProducer producer, string consumerName)
     {
         var dateTime = GetActualDateTime();
         // CZ
-        await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
-        await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzMrTvIndivid]);
-        await sender.SendMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzPemd]);
-        await sender.SendMessage("CZ", "RC", dateTime, [AdwDataIds.DataCzAdCross]);
-// neco.
-        await sender.SendMessage("SK", "Production", dateTime, [AdwDataIds.DataSkKantarMonitoring]);
-        await sender.SendMessage("SK", "RC", dateTime, [AdwDataIds.DataSkKantarTvIndivid]);
+        var message = CreateRabbitMessage("CZ", "Production", dateTime, [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross]);
+        await producer.SendMessage(consumerName, "CZ", "Production", message);
+        message = CreateRabbitMessage("CZ", "RC", dateTime, [AdwDataIds.DataCzAdCross]);
+        await producer.SendMessage(consumerName, "CZ", "RC", message);
+        message = CreateRabbitMessage("SK", "Production", dateTime, [AdwDataIds.DataSkKantarMonitoring]);
+        await producer.SendMessage(consumerName, "SK", "Production", message);
+        message = CreateRabbitMessage("SK", "RC", dateTime, [AdwDataIds.DataSkKantarTvIndivid]);
+        await producer.SendMessage(consumerName, "SK", "RC", message);
+    }
+    
+    private RabbitMessage CreateRabbitMessage(string country, string environment, DateTime importDate, string[] dataTypes)
+    {
+        return new RabbitMessage
+        {
+            Country = country,
+            Environment = environment,
+            ImportDate = importDate.ToString("yyyy-MM-dd HH:mm:ss"),
+            DataTypes = dataTypes
+        };
     }
 }

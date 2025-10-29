@@ -8,7 +8,7 @@ Environment.SetEnvironmentVariable("RabbitConnectionString", "amqp://default_use
 var consumer = new RabbitMessageConsumer();
 consumer.Worker = DoSomeWork;
 
-var queueInfo = new string[] { "CZ", "Production", "Testovaci consumer" };
+var queueInfo = new string[] { "Testovaci consumer", "CZ", "Production" };
 var queueName = consumer.CreateQueueName(queueInfo[0], queueInfo[1], queueInfo[2]);
 var routingKey = consumer.CreateRoutingKey(queueInfo[0], queueInfo[1], queueInfo[2]);
 await consumer.StartConsumingAsync(queueName, routingKey);
