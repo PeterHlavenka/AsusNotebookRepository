@@ -21,7 +21,7 @@ Console.ReadLine();
 return;
 
 
-
+ 
 
 async Task DoSomeWork(RabbitMessage message)
 {

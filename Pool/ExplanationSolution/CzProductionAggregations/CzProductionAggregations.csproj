@@ -10,10 +10,7 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.4" />
       <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Visentio.RabbitMessaging\Visentio.RabbitMessaging.csproj" />
+      <PackageReference Include="Visentio.RabbitMessaging" Version="1.0.1" />
     </ItemGroup>
 
 </Project>

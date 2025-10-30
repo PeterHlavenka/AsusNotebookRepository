@@ -16,6 +16,7 @@
       <PackageReference Include="Serilog.Extensions.Logging" Version="9.0.1" />
       <PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+      <PackageReference Include="visentio.rabbitmessaging" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -25,10 +26,6 @@
       </Content>
       <None Remove="appsettings.json" />
       <None Remove="appsettings.production.json" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="C:\Pool\Vidra\Src\Apps\Visentio.RabbitMessaging\Visentio.RabbitMessaging.csproj" />
     </ItemGroup>
 
 </Project>

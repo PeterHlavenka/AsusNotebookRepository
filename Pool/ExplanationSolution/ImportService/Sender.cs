@@ -42,7 +42,17 @@ public class Sender : BackgroundService
                 await SendMultipleMessages(m_producer, consumerName);
 
             if (pismeno == "n")
+            {
+                message = new RabbitMessage
+                {
+                    Country = country,
+                    Environment = environment,
+                    DataTypes = adwDataIds,
+                    ImportDate = GetActualDateTime().ToString("yyyy-MM-dd HH:mm:ss")
+                };
                 await m_producer.SendMessage(consumerName, country, environment, message);
+            }
+                
         }
     }
 
