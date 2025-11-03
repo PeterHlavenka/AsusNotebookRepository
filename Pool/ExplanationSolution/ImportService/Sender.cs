@@ -1,58 +1,48 @@
-﻿using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+﻿using System.Text.Json;
+using Microsoft.Extensions.Hosting;
 using Visentio.RabbitMessaging;
 
 namespace ImportService;
 
-public class Sender : BackgroundService
+public class Sender(RabbitMessageProducer producer) : BackgroundService
 {
-    private readonly ILogger<Sender> m_logger;
-    private readonly RabbitMessageProducer m_producer;
-
-    public Sender(RabbitMessageProducer producer, ILogger<Sender> logger)
-    {
-        m_producer = producer;
-        m_logger = logger;
-    }
-
-
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        const string consumerName = "nejakyconsumer";
-        const string country = "CZ";
-        const string environment = "Production";
-        var importDateTime = GetActualDateTime();
-        string[] adwDataIds = [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross];
-        
+        // Na dev rabbita:   (prod-adw je jiny a je ve VisPassu)
         Environment.SetEnvironmentVariable("RabbitConnectionString", "amqp://default_user_B1BeQMkdhd6tF3Atabz:voIhR72Tmr1MyG4u8sn9Ndki28O9mh7b@10.255.240.241:5672/");
         
-        var message = new RabbitMessage
+        // V proměnných prostředí musí být RabbitConnectionString
+        
+        const string consumerName = "Nazev consumera";
+        const string country = "CZ";
+        const string environment = "Production";
+        var importDateTime = GetActualDateTime().ToString("yyyy-MM-dd HH:mm:ss");
+        string[] adwDataIds = [AdwDataIds.DataCzCsProTrend2, AdwDataIds.DataCzAdCross];
+
+        var messageInfo = new MessageInfo
         {
-            Country = country,
-            Environment = environment,
             DataTypes = adwDataIds,
-            ImportDate = importDateTime.ToString("yyyy-MM-dd HH:mm:ss")
+            ImportDate = importDateTime
         };
-        await m_producer.SendMessage(consumerName, country, environment, message);
+        var message = RabbitMessage.Create(country, environment, messageInfo);
+        await producer.SendMessage(consumerName, country, environment, message);
 
         while (true)
         {
             var pismeno = Console.ReadLine();
             if (pismeno == "m")
-                await SendMultipleMessages(m_producer, consumerName);
+                await SendMultipleMessages(producer, consumerName);
 
             if (pismeno == "n")
             {
-                message = new RabbitMessage
+                messageInfo = new MessageInfo
                 {
-                    Country = country,
-                    Environment = environment,
                     DataTypes = adwDataIds,
                     ImportDate = GetActualDateTime().ToString("yyyy-MM-dd HH:mm:ss")
                 };
-                await m_producer.SendMessage(consumerName, country, environment, message);
+                message = RabbitMessage.Create(country, environment, messageInfo);
+                await producer.SendMessage(consumerName, country, environment, message);
             }
-                
         }
     }
 
@@ -91,12 +81,11 @@ public class Sender : BackgroundService
     
     private RabbitMessage CreateRabbitMessage(string country, string environment, DateTime importDate, string[] dataTypes)
     {
-        return new RabbitMessage
+        var messageInfo = new MessageInfo
         {
-            Country = country,
-            Environment = environment,
-            ImportDate = importDate.ToString("yyyy-MM-dd HH:mm:ss"),
-            DataTypes = dataTypes
+            DataTypes = dataTypes,
+            ImportDate = importDate.ToString("yyyy-MM-dd HH:mm:ss")
         };
+        return RabbitMessage.Create(country, environment, messageInfo);
     }
 }
