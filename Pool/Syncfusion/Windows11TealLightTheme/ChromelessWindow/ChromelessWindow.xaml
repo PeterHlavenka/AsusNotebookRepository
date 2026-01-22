@@ -1,0 +1,942 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Sync_Resources="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+    xmlns:local="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+    xmlns:shell="clr-namespace:Syncfusion.Windows;assembly=Syncfusion.Shared.WPF"
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealLightTheme.WPF"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealLightTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealLightTheme"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/GlyphButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/ToolTip.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <local:CornerRadiusConverter x:Key="CRConvert" />
+    <local:IcoFileSizeSelectorConverter x:Key="IcoFileSizeSelector" />
+    
+    <Style x:Key="SyncfusionChromlessWindowTitleBarStyle" TargetType="{x:Type local:TitleBar}">
+        <Setter Property="Focusable" Value="False" />
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionChromlessWindowTitleBarStyle}" TargetType="{x:Type local:TitleBar}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.Windows.Shared.TitleBar}" BasedOn="{StaticResource SyncfusionChromlessWindowTitleBarStyle}" TargetType="{x:Type local:TitleBar}"/>
+    
+    <Style x:Key="SyncfusionChromelessWindowTitleButtonStyle" TargetType="{x:Type local:TitleButton}">
+        <Setter Property="Focusable" Value="False" />
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionChromelessWindowTitleButtonStyle}" TargetType="{x:Type local:TitleButton}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.Windows.Shared.TitleButton}" BasedOn="{StaticResource SyncfusionChromelessWindowTitleButtonStyle}" TargetType="{x:Type local:TitleButton}"/>
+
+    <Style x:Key="SyncfusionResizeGripStyle" TargetType="{x:Type local:ResizeGripStyle}">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="Visibility" Value="Collapsed" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="Cursor" Value="SizeNWSE" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ResizeGripStyle}">
+                    <Grid x:Name="gripper">
+                        <Path
+                            x:Name="ResizeGripper"
+                            Width="10"
+                            Height="10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Data="M8,8 L10,8 10,10 8,10 z M4.0000001,8 L6,8 6,10 4.0000001,10 z M0,8 L2,8 2,10 0,10 z M8,4.0000001 L10,4.0000001 10,6 8,6 z M4.0000001,4.0000001 L6,4.0000001 6,6 4.0000001,6 z M8,0 L10,0 10,2.0000002 8,2.0000002 z"
+                            Fill="{TemplateBinding Foreground}"
+                            Stretch="Fill" />
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="SyncfusionWindows11TitleBarCloseButtonTemplate" TargetType="{x:Type local:TitleButton}">
+        <Border x:Name="PART_Border"
+                Panel.ZIndex="100"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <Path x:Name="closepath"
+                  Width="10"
+                  Height="10"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Data="M5.70801 5.11182L10 9.40381L9.29199 10.1118L5 5.81982L0.708008 10.1118L0 9.40381L4.29199 5.11182L0 0.819824L0.708008 0.111816L5 4.40381L9.29199 0.111816L10 0.819824L5.70801 5.11182Z"
+                  Fill="{StaticResource IconColor}"
+                  Stretch="Fill" />
+        </Border>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=IsActive}" Value="False">
+                <Setter TargetName="closepath" Property="Fill" Value="{StaticResource IconColorDisabled}" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="PART_Border" Property="Background" Value="{StaticResource ErrorBackground}" />
+                <Setter TargetName="PART_Border" Property="BorderBrush" Value="{StaticResource ErrorBackground}" />
+                <Setter TargetName="closepath" Property="Fill" Value="{StaticResource White}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="PART_Border" Property="Background" Value="{StaticResource ErrorBackground}" />
+                <Setter TargetName="PART_Border" Property="BorderBrush" Value="{StaticResource ErrorBackground}" />
+                <Setter TargetName="closepath" Property="Fill" Value="{StaticResource White}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="SyncfusionTitleBarControlTemplate" TargetType="{x:Type local:TitleBar}">
+        <Border
+            Name="border"
+            Width="Auto"
+            Background="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type local:ChromelessWindow}}, Path=TitleBarBackground}"
+            BorderThickness="{StaticResource Windows11TealLightTheme.BorderThickness}"
+            CornerRadius="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius,Converter={StaticResource CRConvert},ConverterParameter=Top}">
+            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                <Setter TargetName="border" Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="SyncfusionChromelessWindowControlTemplate" TargetType="{x:Type local:ChromelessWindow}">
+        <AdornerDecorator x:Name="Part_AdornerDecorator">
+            <Border
+                Name="OuterBorder"
+                Margin="{TemplateBinding Margin}"
+                Background="{TemplateBinding ResizeBorderBrush}"
+                BorderBrush="{TemplateBinding ResizeBorderBrush}"
+                BorderThickness="{TemplateBinding ResizeBorderThickness}">
+                <Grid x:Name="RootGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border Name="InnerBorder"
+                            Grid.RowSpan="2"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius}"/>
+                    <Border
+                            Name="ContentAreaBorder"
+                            Grid.Row="1"
+                            CornerRadius="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius,Converter={StaticResource CRConvert},ConverterParameter=Bottom}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid x:Name="ChildGrid" ClipToBounds="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Border x:Name="BorderMask" Background="{TemplateBinding Background}"/>
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                            <local:ResizeGripStyle
+                                    x:Name="PART_Resizegrip"
+                                    Margin="0,0,3,3"
+                                    HorizontalAlignment="right"
+                                    VerticalAlignment="Bottom"
+                                    Cursor="SizeNWSE"
+                                    IsTabStop="False"
+                                    Style="{TemplateBinding ResizeGripStyle}"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter Name="contentpresenter" />
+                        </Grid>
+                    </Border>
+                    <Border Name="TitleBarBorder" Grid.Row="0">
+                        <local:TitleBar
+                                x:Name="PART_TitleBar"
+                                VerticalAlignment="Top"
+                                Template="{TemplateBinding TitleBarTemplate}"
+                                Height="{TemplateBinding TitleBarHeight}"
+                                Background="{TemplateBinding TitleBarBackground}"
+                                Foreground="{TemplateBinding Foreground}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                        x:Name="PART_IconLeft"
+                                        Grid.Column="0"
+                                        MinWidth="16"
+                                        MinHeight="16"
+                                        MaxWidth="16"
+                                        MaxHeight="16"
+                                        Margin="6,0,6,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=Icon,Converter={StaticResource IcoFileSizeSelector},ConverterParameter=16}"
+                                        Visibility="{Binding Path=ShowIcon, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <ItemsControl
+                                        x:Name="PART_LeftHeaderItems"
+                                        shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Grid.Column="1"
+                                        Focusable = "False"
+                                        VerticalAlignment="Center"
+                                        ItemTemplate="{TemplateBinding LeftHeaderItemTemplate}"
+                                        ItemsSource="{Binding LeftHeaderItemsSource, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                                <TextBlock
+                                        x:Name="TitlePresenter"
+                                        Grid.Column="2"
+                                        Margin="5,5,5,5"
+                                        HorizontalAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=TitleTextAlignment}"
+                                        VerticalAlignment="Center"
+										Visibility="{Binding Path=ShowTitle, Converter={StaticResource BooleanToVisibilityConverter},RelativeSource={RelativeSource TemplatedParent}}"
+                                        Focusable="False"
+                                        FontSize="{TemplateBinding TitleFontSize}"
+                                        FontFamily="{TemplateBinding FontFamily}"
+                                        Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=TitleBarForeground}"
+                                        Text="{TemplateBinding Title}"
+                                        TextTrimming="CharacterEllipsis" />
+                                <ItemsControl
+                                        x:Name="PART_RightHeaderItems"
+                                        shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Grid.Column="3"
+                                        VerticalAlignment="Center"
+                                        Focusable = "False"
+                                        ItemTemplate="{TemplateBinding RightHeaderItemTemplate}"
+                                        ItemsSource="{Binding RightHeaderItemsSource, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                                <Image
+                                        x:Name="PART_Icon"
+                                        Grid.Column="4"
+                                        MinWidth="16"
+                                        MinHeight="16"
+                                        MaxWidth="16"
+                                        MaxHeight="16"
+                                        Margin="6,0,6,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=Icon,Converter={StaticResource IcoFileSizeSelector},ConverterParameter=16}"
+                                        Visibility="{Binding Path=ShowIcon, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <StackPanel
+                                        x:Name="MinMaxCloseStackPanel"
+                                        Grid.Column="5"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                    <StackPanel.Margin>
+                                        <Thickness>0,0,4,0</Thickness>
+                                    </StackPanel.Margin>
+                                    <local:TitleButton
+                                            x:Name="MinimizeButton"
+                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Command="local:ChromelessWindow.ToggleMinimizedState"
+                                            Style="{StaticResource WPFGlyphButtonStyle}"
+                                            Template="{TemplateBinding MinimizeButtonTemplate}"
+                                            Width="32"
+                                            Height="24"
+                                            ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=MinimizeTooltip}">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                x:Name="minimizePath"
+                                                Width="10"
+                                                Height="1"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M10 0.11084V1.11182H0V0.11084H10Z"
+                                                Fill="{Binding Foreground, ElementName=MinimizeButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0" />
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                            x:Name="PART_MaximizeButton"
+                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Command="local:ChromelessWindow.ToggleMaximizedState"
+                                            Style="{StaticResource WPFGlyphButtonStyle}"
+                                            Template="{TemplateBinding MaximizeButtonTemplate}"
+                                            Width="32"
+                                            Height="24"
+                                            ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=MaximizeTooltip}"
+                                            Visibility="Collapsed">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                Name="maximizePath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M10 0.111816V10.1118H0V0.111816H10ZM8.99902 1.11279H1.00098V9.11084H8.99902V1.11279Z"
+                                                Fill="{Binding Foreground, ElementName=PART_MaximizeButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0" />
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                            x:Name="PART_RestoreButton"
+                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Command="local:ChromelessWindow.ToggleMaximizedState"
+                                            Style="{StaticResource WPFGlyphButtonStyle}"
+                                            Template="{TemplateBinding RestoreButtonTemplate}"
+                                            Width="32"
+                                            Height="24"
+                                            ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=RestoreTooltip}"
+                                            Visibility="Collapsed">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                Name="restoreRectPath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M10 7.99805H7.99805V10H0V2.00195H2.00195V0H10V7.99805ZM7.00195 2.99805H1.00098V8.99902H7.00195V2.99805ZM8.99902 1.00098H2.99805V2.00195H7.99805V7.00195H8.99902V1.00098Z"
+                                                Fill="{Binding Foreground, ElementName=PART_RestoreButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0" />
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                            x:Name="CloseButton"
+                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Command="local:ChromelessWindow.CloseWindow"
+                                            Style="{StaticResource WPFGlyphButtonStyle}"
+                                            Template="{TemplateBinding CloseButtonTemplate}"
+                                            Width="32"
+                                            Height="24"
+                                            ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=CloseTooltip}">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                Name="closePath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M5.70801 5.11182L10 9.40381L9.29199 10.1118L5 5.81982L0.708008 10.1118L0 9.40381L4.29199 5.11182L0 0.819824L0.708008 0.111816L5 4.40381L9.29199 0.111816L10 0.819824L5.70801 5.11182Z"
+                                                Fill="{Binding Foreground, ElementName=CloseButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0" />
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                </StackPanel>
+                            </Grid>
+                        </local:TitleBar>
+                    </Border>
+                    <Grid.OpacityMask>
+                        <VisualBrush Visual="{Binding Source={x:Reference BorderMask}}"/>
+                    </Grid.OpacityMask>
+                </Grid>
+            </Border>
+        </AdornerDecorator>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ResizeBorderBrush" Value="Transparent">
+                <Setter TargetName="OuterBorder" Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="100" Opacity="0.01" RenderingBias="Performance" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="TitleBarHeight" Value="0" >
+                <Setter Property="CornerRadius" TargetName="ContentAreaBorder" Value="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius}" />
+            </Trigger>
+            <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                <Setter TargetName="PART_TitleBar" Property="MinHeight" Value="40" />
+                <Setter TargetName="PART_Icon" Property="MinHeight" Value="{StaticResource Windows11TealLightTheme.MinHeight}" />
+                <Setter TargetName="PART_Icon" Property="MinWidth" Value="{StaticResource Windows11TealLightTheme.MinHeight}" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IconAlignment" Value="Left" />
+                    <Condition Property="ShowIcon" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_IconLeft" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_Icon" Property="Visibility" Value="Collapsed" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IconAlignment" Value="Right" />
+                    <Condition Property="ShowIcon" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_IconLeft" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_Icon" Property="Visibility" Value="Visible" />
+            </MultiTrigger>
+            <Trigger Property="UseNativeChrome" Value="False">
+                <Setter TargetName="OuterBorder" Property="CornerRadius" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius}" />
+            </Trigger>
+            <Trigger Property="ResizeMode" Value="NoResize">
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="ResizeBorderThickness" Value="{StaticResource Windows11TealLightTheme.BorderThickness1}" />
+                <Setter TargetName="ContentAreaBorder" Property="BorderThickness">
+                    <Setter.Value>
+                        <Thickness>0,1,0,0.5</Thickness>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanMinimize" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="IsEnabled" Value="False" />
+                <Setter TargetName="PART_RestoreButton" Property="IsEnabled" Value="False" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanMinimize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="IsEnabled" Value="False" />
+                <Setter TargetName="PART_RestoreButton" Property="IsEnabled" Value="False" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResize" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_MaximizeButton" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_RestoreButton" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_Resizegrip" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_MaximizeButton" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_Resizegrip" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_RestoreButton" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="NoResize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="OuterBorder" Property="Margin" Value="0" />
+            </MultiTrigger>
+
+			<Trigger Property="ShowMaximizeButton" Value="False">
+                <Setter Property="Visibility" Value="Collapsed" TargetName="PART_MaximizeButton" />
+				 <Setter Property="Visibility" Value="Collapsed" TargetName="PART_RestoreButton" />
+            </Trigger>
+
+            <Trigger Property="ShowMinimizeButton" Value="False">
+                <Setter Property="Visibility" Value="Collapsed" TargetName="MinimizeButton" />
+            </Trigger>
+
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter TargetName="InnerBorder" Property="CornerRadius" Value="0" />
+            </Trigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="WindowStyle" Value="None" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                    <Condition Property="HideTaskBar" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="TitleBarBorder" Property="Visibility" Value="Collapsed" />
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="SyncfusionChromelessWindowWindows11Template" TargetType="{x:Type local:ChromelessWindow}">
+        <AdornerDecorator x:Name="Part_AdornerDecorator">
+            <Border
+                Name="OuterBorder"
+                Margin="{TemplateBinding Margin}"
+                Background="{TemplateBinding ResizeBorderBrush}"
+                BorderBrush="{TemplateBinding ResizeBorderBrush}"
+                BorderThickness="{TemplateBinding ResizeBorderThickness}">
+                <Grid x:Name="RootGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border Name="InnerBorder"
+                        Grid.RowSpan="2"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius}"/>
+                    <Border
+                        Name="ContentAreaBorder"
+                        Grid.Row="1"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid x:Name="ChildGrid" ClipToBounds="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Border x:Name="BorderMask" Background="{TemplateBinding Background}"/>
+                            <Border Background="{TemplateBinding Background}"/>
+                            <local:ResizeGripStyle
+                                x:Name="PART_Resizegrip"
+                                Margin="0,0,3,3"
+                                HorizontalAlignment="right"
+                                VerticalAlignment="Bottom"
+                                Cursor="SizeNWSE"
+                                IsTabStop="False"
+                                Style="{TemplateBinding ResizeGripStyle}"
+                                Visibility="Collapsed" />
+                            <ContentPresenter Name="contentpresenter" />
+                        </Grid>
+                    </Border>
+                    <Border Name="TitleBarBorder" Grid.Row="0">
+                        <local:TitleBar
+                            x:Name="PART_TitleBar"
+                            VerticalAlignment="Top"
+                            Template="{TemplateBinding TitleBarTemplate}"
+                            Height="{TemplateBinding TitleBarHeight}"
+                            Background="{TemplateBinding TitleBarBackground}"
+                            Foreground="{TemplateBinding Foreground}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    x:Name="PART_IconLeft"
+                                    Grid.Column="0"
+                                    MinWidth="16"
+                                    MinHeight="16"
+                                    MaxWidth="16"
+                                    MaxHeight="16"
+                                    Margin="6,0,6,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=Icon}"
+                                    Visibility="{Binding Path=ShowIcon, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <ItemsControl
+                                    x:Name="PART_LeftHeaderItems"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Grid.Column="1"
+                                    Focusable = "False"
+                                    VerticalAlignment="Center"
+                                    ItemTemplate="{TemplateBinding LeftHeaderItemTemplate}"
+                                    ItemsSource="{Binding LeftHeaderItemsSource, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                                <TextBlock
+                                    x:Name="TitlePresenter"
+                                    Grid.Column="2"
+                                    FontWeight="Bold"
+                                    Margin="5,5,5,5"
+                                    HorizontalAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=TitleTextAlignment}"
+                                    VerticalAlignment="Center"
+										    Visibility="{Binding Path=ShowTitle, Converter={StaticResource BooleanToVisibilityConverter},RelativeSource={RelativeSource TemplatedParent}}"
+                                    Focusable="False"
+                                    FontSize="{TemplateBinding TitleFontSize}"
+                                    FontFamily="{TemplateBinding FontFamily}"
+                                    Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=TitleBarForeground}"
+                                    Text="{TemplateBinding Title}"
+                                    TextTrimming="CharacterEllipsis" />
+                                <ItemsControl
+                                    x:Name="PART_RightHeaderItems"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Grid.Column="3"
+                                    Focusable = "False"
+                                    VerticalAlignment="Center"
+                                    ItemTemplate="{TemplateBinding RightHeaderItemTemplate}"
+                                    ItemsSource="{Binding RightHeaderItemsSource, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                                <Image
+                                    x:Name="PART_Icon"
+                                    Grid.Column="4"
+                                    MinWidth="16"
+                                    MinHeight="16"
+                                    MaxWidth="16"
+                                    MaxHeight="16"
+                                    Margin="6,0,6,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=Icon}"
+                                    Visibility="{Binding Path=ShowIcon, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <StackPanel
+                                    x:Name="MinMaxCloseStackPanel"
+                                    Grid.Column="5"
+                                    Margin="0"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <local:TitleButton
+                                        x:Name="MinimizeButton"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Command="local:ChromelessWindow.ToggleMinimizedState"
+                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                        Template="{TemplateBinding MinimizeButtonTemplate}"
+                                        Width="40"
+                                        Height="32"
+                                        ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=MinimizeTooltip}">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                x:Name="minimizePath"
+                                                Width="10"
+                                                Height="1"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M0.302734 1.07275C0.364563 1.09888 0.429688 1.11182 0.498047 1.11182H9.50195C9.5415 1.11182 9.57947 1.10742 9.61578 1.09863C9.64215 1.09229 9.66772 1.08374 9.69238 1.07275C9.75421 1.04663 9.80792 1.01099 9.85352 0.965332C9.87006 0.94873 9.88525 0.931396 9.89923 0.913086C9.92377 0.881104 9.94434 0.846436 9.96094 0.809082C9.9751 0.775635 9.98541 0.740967 9.99188 0.705322C9.99731 0.675537 10 0.64502 10 0.61377C10 0.576172 9.99603 0.540039 9.9881 0.505371C9.98169 0.477051 9.9726 0.449707 9.96094 0.42334C9.93488 0.361572 9.89911 0.307861 9.85352 0.262207C9.80792 0.213379 9.75421 0.176025 9.69238 0.149902C9.63379 0.123779 9.57031 0.11084 9.50195 0.11084H0.498047C0.429688 0.11084 0.364563 0.123779 0.302734 0.149902C0.260437 0.168701 0.221619 0.193359 0.186096 0.224121C0.172363 0.23584 0.15918 0.248535 0.146484 0.262207C0.100891 0.307861 0.0651245 0.361572 0.0390625 0.42334C0.0215454 0.462646 0.00994873 0.504395 0.00421143 0.54834C0.00140381 0.56958 0 0.591309 0 0.61377C0 0.682129 0.0130005 0.747314 0.0390625 0.809082C0.0651245 0.867676 0.100891 0.919678 0.146484 0.965332C0.192078 1.01099 0.244141 1.04663 0.302734 1.07275Z"
+                                                Fill="{Binding Foreground, ElementName=MinimizeButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0" />
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                        x:Name="PART_MaximizeButton"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Command="local:ChromelessWindow.ToggleMaximizedState"
+                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                        Template="{TemplateBinding MaximizeButtonTemplate}"
+                                        Width="40"
+                                        Height="32"
+                                        ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=MaximizeTooltip}"
+                                        Visibility="Collapsed">
+                                        <local:TitleButton.Content>
+                                            <Path 
+                                                Name="maximizePath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M0.913086 9.99463C1.0921 10.0728 1.2793 10.1118 1.47461 10.1118H8.52539C8.7207 10.1118 8.9079 10.0728 9.08691 9.99463C9.26593 9.91333 9.42218 9.80591 9.55566 9.67236C9.69238 9.53564 9.7998 9.37769 9.87793 9.19873C9.95929 9.01978 10 8.83252 10 8.63721V1.58643C10 1.39111 9.95929 1.20386 9.87793 1.0249C9.7998 0.845947 9.69238 0.689697 9.55566 0.556152C9.42218 0.419434 9.26593 0.312012 9.08691 0.233887C8.9079 0.152588 8.7207 0.111816 8.52539 0.111816H1.47461C1.2793 0.111816 1.0921 0.152588 0.913086 0.233887C0.73407 0.312012 0.576172 0.419434 0.439453 0.556152C0.305969 0.689697 0.198547 0.845947 0.117188 1.0249C0.0390625 1.20386 0 1.39111 0 1.58643V8.63721C0 8.83252 0.0390625 9.01978 0.117188 9.19873C0.160828 9.29468 0.211975 9.38477 0.270691 9.46875C0.32135 9.54126 0.377625 9.60913 0.439453 9.67236C0.576172 9.80591 0.73407 9.91333 0.913086 9.99463ZM8.58026 9.10474C8.55463 9.10889 8.5282 9.11084 8.50098 9.11084H1.49902C1.43066 9.11084 1.36554 9.0979 1.30371 9.07178C1.24512 9.04565 1.19305 9.01001 1.14746 8.96436C1.10187 8.9187 1.0661 8.8667 1.04004 8.80811C1.01398 8.74634 1.00098 8.68115 1.00098 8.61279V1.61084C1.00098 1.54248 1.01398 1.479 1.04004 1.42041C1.0661 1.35864 1.10187 1.30493 1.14746 1.25928C1.19305 1.21362 1.24512 1.17798 1.30371 1.15186C1.36554 1.12573 1.43066 1.11279 1.49902 1.11279H8.50098C8.56934 1.11279 8.63281 1.12573 8.69141 1.15186C8.75323 1.17798 8.80695 1.21362 8.85254 1.25928C8.89813 1.30493 8.9339 1.35864 8.95996 1.42041C8.98602 1.479 8.99902 1.54248 8.99902 1.61084V8.61279C8.99902 8.68115 8.98602 8.74634 8.95996 8.80811C8.9339 8.8667 8.89813 8.9187 8.85254 8.96436C8.82629 8.99072 8.79736 9.01367 8.76575 9.03345C8.74243 9.04785 8.71765 9.06079 8.69141 9.07178C8.65613 9.0874 8.61908 9.09839 8.58026 9.10474Z"
+                                                Fill="{Binding Foreground, ElementName=PART_MaximizeButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0"/>
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                        x:Name="PART_RestoreButton"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Command="local:ChromelessWindow.ToggleMaximizedState"
+                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                        Template="{TemplateBinding RestoreButtonTemplate}"
+                                        Width="40"
+                                        Height="32"
+                                        ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=RestoreTooltip}"
+                                        Visibility="Collapsed">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                Name="restoreRectPath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M2 1H6.50019C7.88091 1 9.00019 2.11929 9.00019 3.5V8C9.55248 8 10.0002 7.55228 10.0002 7V3.5C10.0002 1.567 8.43319 0 6.50019 0H3C2.44772 0 2 0.447715 2 1ZM1.5 3H6.5C6.77614 3 7 3.22386 7 3.5V8.5C7 8.77614 6.77614 9 6.5 9H1.5C1.22386 9 1 8.77614 1 8.5V3.5C1 3.22386 1.22386 3 1.5 3ZM0 3.5C0 2.67157 0.671573 2 1.5 2H6.5C7.32843 2 8 2.67157 8 3.5V8.5C8 9.32843 7.32843 10 6.5 10H1.5C0.671573 10 0 9.32843 0 8.5V3.5Z"
+                                                Fill="{Binding Foreground, ElementName=PART_RestoreButton}"
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0"/>
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                    <local:TitleButton
+                                        x:Name="CloseButton"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Command="local:ChromelessWindow.CloseWindow"
+                                        Style="{StaticResource WPFGlyphButtonStyle}"
+                                        Template="{TemplateBinding CloseButtonTemplate}"
+                                        Width="40"
+                                        Height="32"
+                                        ToolTip="{Sync_Resources:SharedLocalizationResourceExtension ResourceName=CloseTooltip}">
+                                        <local:TitleButton.Content>
+                                            <Path
+                                                Name="closePath"
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Data="M0.854492 9.96533L5 5.81982L9.14551 9.96533C9.24316 10.063 9.362 10.1118 9.50195 10.1118C9.57031 10.1118 9.63544 10.0989 9.69727 10.0728C9.75909 10.0466 9.81122 10.011 9.85352 9.96533C9.87714 9.94165 9.89813 9.91577 9.9165 9.8877C9.93359 9.86182 9.94836 9.83398 9.96094 9.8042C9.987 9.74243 10 9.67725 10 9.60889C10 9.47217 9.95117 9.35498 9.85352 9.25732L5.70801 5.11182L9.85352 0.966309C9.95117 0.868652 10 0.749756 10 0.609863C10 0.541504 9.987 0.478027 9.96094 0.419434C9.94568 0.383301 9.92712 0.349854 9.90515 0.319336C9.88965 0.297607 9.87244 0.277344 9.85352 0.258301C9.80792 0.212646 9.75421 0.177002 9.69238 0.150879C9.63379 0.124756 9.57031 0.111816 9.50195 0.111816C9.362 0.111816 9.24316 0.160645 9.14551 0.258301L5 4.40381L0.854492 0.258301C0.756836 0.160645 0.639648 0.111816 0.50293 0.111816C0.467285 0.111816 0.432556 0.115479 0.398682 0.122559C0.367554 0.128906 0.337219 0.138428 0.307617 0.150879C0.245789 0.177002 0.192078 0.212646 0.146484 0.258301C0.121155 0.281738 0.0988159 0.30835 0.0795288 0.337891C0.0641479 0.361572 0.0506592 0.387207 0.0390625 0.414551C0.0130005 0.476318 0 0.541504 0 0.609863C0 0.749756 0.0488281 0.868652 0.146484 0.966309L4.29199 5.11182L0.146484 9.25732C0.0897217 9.31421 0.0494385 9.37744 0.0256958 9.44751C0.00854492 9.4978 0 9.55176 0 9.60889C0 9.7522 0.0471802 9.87256 0.141602 9.97021C0.239258 10.0647 0.35968 10.1118 0.50293 10.1118C0.639648 10.1118 0.756836 10.063 0.854492 9.96533Z"
+                                                Fill="{Binding Foreground, ElementName=CloseButton}"														
+                                                SnapsToDevicePixels="True"
+                                                Stretch="Fill"
+                                                StrokeThickness="0"/>
+                                        </local:TitleButton.Content>
+                                    </local:TitleButton>
+                                </StackPanel>
+                            </Grid>
+                        </local:TitleBar>
+                    </Border>
+                    <Grid.OpacityMask>
+                        <VisualBrush Visual="{Binding Source={x:Reference BorderMask}}"/>
+                    </Grid.OpacityMask>
+                </Grid>
+            </Border>
+        </AdornerDecorator>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ResizeBorderBrush" Value="Transparent">
+                <Setter TargetName="OuterBorder" Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="100" Opacity="0.01" RenderingBias="Performance" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>                   
+            <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                <Setter TargetName="PART_TitleBar" Property="MinHeight" Value="40" />
+                <Setter TargetName="PART_Icon" Property="MinHeight" Value="{StaticResource Windows11TealLightTheme.MinHeight}" />
+                <Setter TargetName="PART_Icon" Property="MinWidth" Value="{StaticResource Windows11TealLightTheme.MinHeight}" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IconAlignment" Value="Left" />
+                    <Condition Property="ShowIcon" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_IconLeft" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_Icon" Property="Visibility" Value="Collapsed" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IconAlignment" Value="Right" />
+                    <Condition Property="ShowIcon" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_IconLeft" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_Icon" Property="Visibility" Value="Visible" />
+            </MultiTrigger>
+            <Trigger Property="UseNativeChrome" Value="False">
+                <Setter TargetName="OuterBorder" Property="CornerRadius" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChromelessWindow}}, Path=CornerRadius}" />
+            </Trigger>
+            <Trigger Property="ResizeMode" Value="NoResize">
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="ResizeBorderThickness" Value="{StaticResource Windows11TealLightTheme.BorderThickness1}" />
+                <Setter TargetName="ContentAreaBorder" Property="BorderThickness" Value="0,1,0,0.5">
+                </Setter>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanMinimize" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="IsEnabled" Value="False" />
+                <Setter TargetName="PART_RestoreButton" Property="IsEnabled" Value="False" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanMinimize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="IsEnabled" Value="False" />
+                <Setter TargetName="PART_RestoreButton" Property="IsEnabled" Value="False" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResize" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_MaximizeButton" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_RestoreButton" />
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                    <Condition Property="WindowState" Value="Normal" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_Resizegrip" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_MaximizeButton" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_Resizegrip" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                <Setter Property="IsEnabled" Value="True" TargetName="PART_RestoreButton" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="NoResize" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="MinimizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MaximizeButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="OuterBorder" Property="Margin" Value="0" />
+            </MultiTrigger>
+
+            <Trigger Property="ShowMaximizeButton" Value="False">
+                <Setter Property="Visibility" Value="Collapsed" TargetName="PART_MaximizeButton" />
+                <Setter Property="Visibility" Value="Collapsed" TargetName="PART_RestoreButton" />
+            </Trigger>
+
+            <Trigger Property="ShowMinimizeButton" Value="False">
+                <Setter Property="Visibility" Value="Collapsed" TargetName="MinimizeButton" />
+            </Trigger>
+
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter TargetName="InnerBorder" Property="CornerRadius" Value="0" />
+            </Trigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="WindowStyle" Value="None" />
+                    <Condition Property="WindowState" Value="Maximized" />
+                    <Condition Property="HideTaskBar" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="TitleBarBorder" Property="Visibility" Value="Collapsed" />
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="SyncfusionChromelessWindowStyle" TargetType="{x:Type local:ChromelessWindow}">
+        <Setter Property="ResizeGripStyle" Value="{StaticResource SyncfusionResizeGripStyle}" />
+        <Setter Property="TitleTextAlignment" Value="Left" />
+        <Setter Property="ResizeBorderThickness" Value="{StaticResource Windows11TealLightTheme.BorderThickness1}" />
+        <Setter Property="SnapsToDevicePixels" Value="False" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="FontFamily" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=ThemeFontFamily}}" />
+        <Setter Property="FontSize" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=BodyTextStyle}}" />
+        <Setter Property="TitleFontSize" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=BodyTextStyle}}" />
+        <Setter Property="FontWeight" Value="{StaticResource Windows11TealLightTheme.FontWeightNormal}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="TitleBarBackground" Value="{StaticResource ContentBackgroundAlt1}" />
+        <Setter Property="TitleBarForeground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="ResizeBorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="MinWidth" Value="140" />
+        <Setter Property="MinHeight" Value="40" />
+        <Setter Property="TitleBarHeight" Value="{StaticResource Windows11TealLightTheme.IconPanelSize}" />
+        <Setter Property="MinimizeButtonTemplate" Value="{StaticResource WPFGlyphWindowButtonTemplate}" />
+        <Setter Property="MaximizeButtonTemplate" Value="{StaticResource WPFGlyphWindowButtonTemplate}" />
+        <Setter Property="RestoreButtonTemplate" Value="{StaticResource WPFGlyphWindowButtonTemplate}" />
+        <Setter Property="CloseButtonTemplate" Value="{StaticResource SyncfusionWindows11TitleBarCloseButtonTemplate}"/>
+        <Setter Property="TitleBarTemplate" Value="{StaticResource SyncfusionTitleBarControlTemplate}" />
+        <Setter Property="IconAlignment" Value="Left" />
+        <Setter Property="Template" Value="{StaticResource SyncfusionChromelessWindowControlTemplate}" />
+        <Setter Property="BorderThickness">
+            <Setter.Value>
+                <Thickness>0.2,1,0.2,0</Thickness>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="SizeToContent" Value="Width">
+                <Setter Property="MinWidth" Value="190" />
+            </Trigger>
+            <Trigger Property="SizeToContent" Value="WidthAndHeight">
+                <Setter Property="MinWidth" Value="190" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="UseNativeChrome" Value="False"/>
+                    <Condition Property="AllowsTransparency" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="WindowStyle" Value="None" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            <Trigger Property="AllowsTransparency" Value="False">
+                <Setter Property="Margin" Value="0" />
+            </Trigger>
+            <Trigger Property="AllowsTransparency" Value="True">
+                <Setter Property="Margin" Value="0" />
+            </Trigger>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource KeyboardFocusVisualStyle}"/>
+            </Trigger>
+            <Trigger Property="UseNativeChrome" Value="True">
+                <Setter Property="WindowChrome.WindowChrome">
+                    <Setter.Value>
+                        <WindowChrome />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Template" Value="{StaticResource SyncfusionChromelessWindowWindows11Template}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionChromelessWindowStyle}" TargetType="{x:Type local:ChromelessWindow}" />    
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.Windows.Shared.ChromelessWindow}" BasedOn="{StaticResource SyncfusionChromelessWindowStyle}" TargetType="{x:Type local:ChromelessWindow}" />    
+    
+</ResourceDictionary>

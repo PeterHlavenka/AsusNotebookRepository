@@ -1,0 +1,29 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:skinmanager="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:local="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <skinmanager:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealLightTheme"/>
+        <skinmanager:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealLightTheme"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/ChromelessWindow/ChromelessWindow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <SolidColorBrush x:Key="MasterBackground" Color="{StaticResource ContentBackgroundAlt2.Color}"/>
+    
+    <Style x:Key="MasterChromelessWindowStyle"
+           BasedOn="{StaticResource SyncfusionChromelessWindowStyle}"
+           TargetType="{x:Type local:ChromelessWindow}">
+        <Setter Property="Background" Value="{StaticResource MasterBackground}" />
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="ResizeBorderBrush" Value="Gray"/>
+        <Setter Property="ResizeBorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    
+    <Style x:Key="MasterControlStyle" TargetType="UserControl">
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Background" Value="{StaticResource MasterBackground}" />
+    </Style>
+    
+</ResourceDictionary>

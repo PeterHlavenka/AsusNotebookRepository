@@ -1,0 +1,739 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+    xmlns:local="clr-namespace:Syncfusion.UI.Xaml.Chat;assembly=Syncfusion.SfChat.Wpf"
+    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealDarkTheme.WPF"
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:shared="http://schemas.syncfusion.com/wpf">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealDarkTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealDarkTheme"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/TextBox.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/FlatButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/PrimaryButton.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="AssistView.Static.FontSize" Color="#000000" />
+    <SolidColorBrush x:Key="AssistView.ChatItem.Static.Background" Color="#000000" />
+
+    <local:DateTimeToStringConverter x:Key="DateTimeConverter"/>
+    <local:TypingIndicatorVisibilityConverter x:Key="TypingIndicatorConverter"/>
+    <local:ViewTemplateSelector x:Key="viewTemplateSelector">
+        <local:ViewTemplateSelector.TextTemplate>
+            <DataTemplate>
+                <TextBlock
+                  Foreground="{StaticResource ContentForeground}"
+                  TextWrapping="Wrap"
+                  Text="{Binding Text}"/>
+            </DataTemplate>
+        </local:ViewTemplateSelector.TextTemplate>
+    </local:ViewTemplateSelector>
+
+    <local:EditTemplateSelector x:Key="editTemplateSelector">
+        <local:EditTemplateSelector.TextTemplate>
+            <DataTemplate>
+                <TextBox
+                 TextWrapping="Wrap"
+                 Text="{Binding Text}"/>
+            </DataTemplate>
+        </local:EditTemplateSelector.TextTemplate>
+    </local:EditTemplateSelector>
+
+    <local:ChatItemTemplateSelector x:Key="chatTemplateSelector">
+        <local:ChatItemTemplateSelector.DefaultTemplate>
+            <DataTemplate>
+                <local:ChatItem Content="{Binding}" Author="{Binding Author}"/>
+            </DataTemplate>
+        </local:ChatItemTemplateSelector.DefaultTemplate>
+        <local:ChatItemTemplateSelector.HeaderTemplate>
+            <DataTemplate>
+                <ContentPresenter ContentTemplate="{Binding Path=BannerTemplate,RelativeSource={RelativeSource AncestorType=local:SfAIAssistView}}" 
+                               HorizontalAlignment="Center"/>
+            </DataTemplate>
+        </local:ChatItemTemplateSelector.HeaderTemplate>
+    </local:ChatItemTemplateSelector>
+
+    <local:SuggestionTemplateSelector x:Key="suggestionTemplateSelector">
+        <local:SuggestionTemplateSelector.ButtonTemplate>
+            <DataTemplate>
+                <Button Margin="3" Padding="4" BorderThickness="1" Content="{Binding}" Style="{StaticResource WPFFlatButtonStyle}" BorderBrush="Transparent">
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+            </DataTemplate>
+        </local:SuggestionTemplateSelector.ButtonTemplate>
+    </local:SuggestionTemplateSelector>
+
+    <shared:BooleanToVisibilityConverterEx x:Key="BooleanToVisibilityConverter"/>
+    <local:EnumToStringConverter x:Key="EnumToStringConverter"/>
+    <shared:BoolToObjectConverter x:Key="BooleanToEnabledStatusConverter" TrueValue="Enabled" FalseValue="Disabled" CanConvertToTargetType="False"/>
+      
+    <Style x:Key="ResponseToolbarButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Width" Value="24"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="ButtonBorder" 
+                 Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}"
+                 CornerRadius="4">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource SecondaryBackgroundHovered}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource SecondaryBackgroundSelected}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Default template for ResponseToolbarItem-->
+    <DataTemplate x:Key="DefaultResponseToolbarItemTemplate">
+        <Button Style="{StaticResource ResponseToolbarButtonStyle}" 
+     AutomationProperties.HelpText="{Binding Tooltip}"
+     AutomationProperties.ItemStatus="{Binding IsEnabled, Converter={StaticResource BooleanToEnabledStatusConverter}}"
+     ToolTip="{Binding Tooltip}"
+     IsEnabled="{Binding IsEnabled}"
+     Visibility="{Binding Visible, Converter={StaticResource BooleanToVisibilityConverter}}"
+     HorizontalAlignment="Left">
+            <Grid Width="12" Height="12" >
+                <Path x:Name="CopyPath" Fill="{StaticResource IconColor}" Visibility="Collapsed" 
+           Data="M10 4.71V12H2.85714V9.75H0V0H4.8L6.94286 2.25H7.65714L10 4.71ZM2.85715 2.25H5.92143L4.49286 0.75H0.714289V9H2.85715V2.25ZM9.28571 5.25H7.14285V3H3.57142V11.25H9.28571V5.25ZM7.85713 4.5007H8.77856L7.85713 3.5332V4.5007Z" 
+           Stretch="Uniform"/>
+                <Path x:Name="RegeneratePath" Fill="{StaticResource IconColor}" Visibility="Collapsed" 
+           Data="M12 6C12 6.55469 11.9277 7.08789 11.7832 7.59961C11.6426 8.11133 11.4414 8.58984 11.1797 9.03516C10.9219 9.47656 10.6094 9.88086 10.2422 10.248C9.87891 10.6113 9.47461 10.9238 9.0293 11.1855C8.58789 11.4434 8.11133 11.6445 7.59961 11.7891C7.08789 11.9297 6.55469 12 6 12C5.44531 12 4.91211 11.9297 4.40039 11.7891C3.88867 11.6445 3.41016 11.4434 2.96484 11.1855C2.51953 10.9238 2.11523 10.6113 1.75195 10.248C1.38867 9.88477 1.07617 9.48047 0.814453 9.03516C0.556641 8.58984 0.355469 8.11133 0.210938 7.59961C0.0703125 7.08789 0 6.55469 0 6C0 5.44531 0.0703125 4.91211 0.210938 4.40039C0.355469 3.88867 0.556641 3.41211 0.814453 2.9707C1.07617 2.52539 1.38867 2.12109 1.75195 1.75781C2.11914 1.39062 2.52344 1.07812 2.96484 0.820312C3.41016 0.558594 3.88867 0.357422 4.40039 0.216797C4.91211 0.0722656 5.44531 0 6 0C6.43359 0 6.85742 0.046875 7.27148 0.140625C7.68555 0.230469 8.08398 0.361328 8.4668 0.533203C8.84961 0.705078 9.21094 0.917969 9.55078 1.17188C9.89453 1.42578 10.2109 1.71289 10.5 2.0332V0.375C10.5 0.273438 10.5371 0.185547 10.6113 0.111328C10.6855 0.0371094 10.7734 0 10.875 0C10.9766 0 11.0645 0.0371094 11.1387 0.111328C11.2129 0.185547 11.25 0.273438 11.25 0.375C11.25 0.847656 11.25 1.31836 11.25 1.78711C11.2539 2.25586 11.2559 2.72656 11.2559 3.19922C11.2559 3.26562 11.252 3.33203 11.2441 3.39844C11.2363 3.46094 11.2188 3.51953 11.1914 3.57422C11.1641 3.625 11.125 3.66797 11.0742 3.70312C11.0234 3.73437 10.957 3.75 10.875 3.75H7.875C7.77344 3.75 7.68555 3.71289 7.61133 3.63867C7.53711 3.56445 7.5 3.47656 7.5 3.375C7.5 3.27344 7.53711 3.18555 7.61133 3.11133C7.68555 3.03711 7.77344 3 7.875 3H10.3066C10.0605 2.64844 9.77734 2.33398 9.45703 2.05664C9.14062 1.7793 8.79688 1.54492 8.42578 1.35352C8.05469 1.1582 7.66406 1.00977 7.25391 0.908203C6.84375 0.802734 6.42578 0.75 6 0.75C5.51562 0.75 5.04883 0.8125 4.59961 0.9375C4.1543 1.0625 3.73633 1.24023 3.3457 1.4707C2.95898 1.69727 2.60547 1.9707 2.28516 2.29102C1.96875 2.60742 1.69531 2.96094 1.46484 3.35156C1.23828 3.73828 1.0625 4.15625 0.9375 4.60547C0.8125 5.05078 0.75 5.51562 0.75 6C0.75 6.48438 0.8125 6.95117 0.9375 7.40039C1.0625 7.8457 1.23828 8.26367 1.46484 8.6543C1.69141 9.04102 1.96484 9.39453 2.28516 9.71484C2.60547 10.0352 2.95898 10.3086 3.3457 10.5352C3.73633 10.7617 4.1543 10.9375 4.59961 11.0625C5.04883 11.1875 5.51562 11.25 6 11.25C6.47266 11.25 6.92969 11.1914 7.37109 11.0742C7.81641 10.9531 8.23242 10.7812 8.61914 10.5586C9.00977 10.332 9.36719 10.0566 9.69141 9.73242C10.0195 9.4082 10.3027 9.04297 10.541 8.63672C10.7832 8.22266 10.9609 7.79883 11.0742 7.36523C11.1914 6.93164 11.25 6.47656 11.25 6C11.25 5.89844 11.2871 5.81055 11.3613 5.73633C11.4355 5.66211 11.5234 5.625 11.625 5.625C11.7266 5.625 11.8145 5.66211 11.8887 5.73633C11.9629 5.81055 12 5.89844 12 6Z" 
+           Stretch="Uniform"/>
+                <Grid x:Name="LikePath" Visibility="Collapsed">
+                    <Path x:Name="LikePathOuter" Fill="{StaticResource IconColor}" Visibility="Visible" 
+               Data="M0.75 7.94531C0.75 7.73438 0.785156 7.53906 0.855469 7.35938C0.929688 7.17578 1.02734 7.00977 1.14844 6.86133C1.27344 6.71289 1.41797 6.58008 1.58203 6.46289C1.74609 6.3457 1.91797 6.24609 2.09766 6.16406C2.20312 6.11719 2.30273 6.06836 2.39648 6.01758C2.49414 5.96289 2.58789 5.89844 2.67773 5.82422C2.94727 5.60156 3.19141 5.35938 3.41016 5.09766C3.63281 4.83203 3.83789 4.55469 4.02539 4.26562C4.21289 3.97656 4.38672 3.67969 4.54688 3.375C4.71094 3.06641 4.86719 2.75781 5.01562 2.44922C5.15234 2.16797 5.26953 1.88086 5.36719 1.58789C5.46875 1.29492 5.58008 1.00391 5.70117 0.714844C5.79102 0.503906 5.91797 0.332031 6.08203 0.199219C6.25 0.0664062 6.45117 0 6.68555 0C6.82227 0 6.94727 0.0292969 7.06055 0.0878906C7.17383 0.142578 7.2793 0.214844 7.37695 0.304688C7.51758 0.441406 7.63086 0.587891 7.7168 0.744141C7.80664 0.896484 7.875 1.05859 7.92188 1.23047C7.96875 1.39844 8 1.57422 8.01562 1.75781C8.03516 1.9375 8.04492 2.12109 8.04492 2.30859C8.04492 2.68359 8.01953 3.05273 7.96875 3.41602C7.91797 3.7793 7.85352 4.14453 7.77539 4.51172C7.88477 4.50781 7.99219 4.50586 8.09766 4.50586C8.20703 4.50195 8.31641 4.5 8.42578 4.5C8.70312 4.5 8.9668 4.54688 9.2168 4.64062C9.4707 4.73438 9.69141 4.86719 9.87891 5.03906C10.0703 5.20703 10.2207 5.41016 10.3301 5.64844C10.4434 5.88281 10.5 6.14453 10.5 6.43359C10.5 6.5625 10.4883 6.6875 10.4648 6.80859L9.99609 9.42773C9.92969 9.79883 9.80273 10.1426 9.61523 10.459C9.43164 10.7715 9.20312 11.043 8.92969 11.2734C8.66016 11.5 8.35547 11.6777 8.01562 11.8066C7.67578 11.9355 7.31641 12 6.9375 12C6.80078 12 6.66406 11.9902 6.52734 11.9707C6.39062 11.9512 6.25586 11.9238 6.12305 11.8887L2.26172 10.8281C1.94141 10.7383 1.67188 10.5742 1.45312 10.3359C1.23438 10.0938 1.0918 9.81055 1.02539 9.48633L0.779297 8.25586C0.759766 8.14648 0.75 8.04297 0.75 7.94531ZM6.94336 11.25C7.22852 11.25 7.5 11.2012 7.75781 11.1035C8.01562 11.002 8.24609 10.8652 8.44922 10.6934C8.65625 10.5176 8.83008 10.3105 8.9707 10.0723C9.11133 9.83398 9.20703 9.57422 9.25781 9.29297L9.72656 6.67383C9.73438 6.63477 9.74023 6.5957 9.74414 6.55664C9.74805 6.51758 9.75 6.47852 9.75 6.43945C9.75 6.25977 9.71484 6.09766 9.64453 5.95312C9.57422 5.80469 9.47852 5.67969 9.35742 5.57812C9.23633 5.47266 9.09766 5.39258 8.94141 5.33789C8.78516 5.2793 8.62305 5.25 8.45508 5.25C8.3418 5.25 8.23047 5.25195 8.12109 5.25586C8.01172 5.25977 7.90039 5.26172 7.78711 5.26172C7.68164 5.26172 7.58203 5.24219 7.48828 5.20312C7.39844 5.16406 7.31836 5.11133 7.24805 5.04492C7.18164 4.97852 7.12695 4.90039 7.08398 4.81055C7.04492 4.7168 7.02539 4.61719 7.02539 4.51172C7.02539 4.44531 7.0332 4.38086 7.04883 4.31836C7.06836 4.25195 7.08789 4.18555 7.10742 4.11914C7.18555 3.82617 7.23633 3.5293 7.25977 3.22852C7.2832 2.92773 7.29492 2.62695 7.29492 2.32617C7.29492 2.18555 7.29102 2.04883 7.2832 1.91602C7.27539 1.7793 7.25586 1.64648 7.22461 1.51758C7.19336 1.38867 7.14648 1.26562 7.08398 1.14844C7.02148 1.03125 6.9375 0.921875 6.83203 0.820312C6.8125 0.800781 6.79102 0.785156 6.76758 0.773438C6.74805 0.757812 6.72266 0.75 6.69141 0.75C6.625 0.75 6.56836 0.771484 6.52148 0.814453C6.47461 0.857422 6.4375 0.90625 6.41016 0.960938C6.36719 1.04688 6.33203 1.13672 6.30469 1.23047C6.27734 1.32422 6.24805 1.41602 6.2168 1.50586C6.05273 1.97852 5.85938 2.44141 5.63672 2.89453C5.41797 3.34766 5.18359 3.79297 4.93359 4.23047C4.70312 4.63281 4.44141 5.01562 4.14844 5.37891C3.85547 5.74219 3.5332 6.07617 3.18164 6.38086C3.06055 6.48633 2.93164 6.57617 2.79492 6.65039C2.66211 6.72461 2.52344 6.79492 2.37891 6.86133C2.26953 6.91211 2.16211 6.97266 2.05664 7.04297C1.95117 7.11328 1.85742 7.19336 1.77539 7.2832C1.69336 7.37305 1.62695 7.47461 1.57617 7.58789C1.52539 7.69727 1.5 7.81641 1.5 7.94531C1.5 8.00391 1.50586 8.05859 1.51758 8.10938L1.75781 9.33984C1.79297 9.52344 1.87305 9.68359 1.99805 9.82031C2.12695 9.95703 2.28125 10.0508 2.46094 10.1016L6.32227 11.168C6.42383 11.1992 6.52539 11.2207 6.62695 11.2324C6.73242 11.2441 6.83789 11.25 6.94336 11.25Z" 
+               Stretch="Uniform"/>
+                    <Path x:Name="LikePathInner" Fill="{StaticResource IconColor}" Visibility="Collapsed" 
+               Data="M9.25781 15C9.63802 15 10 14.9349 10.3438 14.8047C10.6875 14.6693 10.9948 14.487 11.2656 14.2578C11.5417 14.0234 11.7734 13.7474 11.9609 13.4297C12.1484 13.112 12.276 12.7656 12.3438 12.3906L12.9688 8.89844C12.9792 8.84635 12.987 8.79427 12.9922 8.74219C12.9974 8.6901 13 8.63802 13 8.58594C13 8.34635 12.9531 8.13021 12.8594 7.9375C12.7656 7.73958 12.638 7.57292 12.4766 7.4375C12.3151 7.29688 12.1302 7.1901 11.9219 7.11719C11.7135 7.03906 11.4974 7 11.2734 7C11.1224 7 10.974 7.0026 10.8281 7.00781C10.6823 7.01302 10.5339 7.01562 10.3828 7.01562C10.2422 7.01562 10.1094 6.98958 9.98438 6.9375C9.86458 6.88542 9.75781 6.8151 9.66406 6.72656C9.57552 6.63802 9.5026 6.53385 9.44531 6.41406C9.39323 6.28906 9.36719 6.15625 9.36719 6.01562C9.36719 5.92708 9.3776 5.84115 9.39844 5.75781L9.47656 5.49219C9.58073 5.10156 9.64844 4.70573 9.67969 4.30469C9.71094 3.90365 9.72656 3.5026 9.72656 3.10156C9.72656 2.91406 9.72135 2.73177 9.71094 2.55469C9.70052 2.3724 9.67448 2.19531 9.63281 2.02344C9.59115 1.85156 9.52865 1.6875 9.44531 1.53125C9.36198 1.375 9.25 1.22917 9.10938 1.09375C9.08333 1.06771 9.05469 1.04688 9.02344 1.03125C8.9974 1.01042 8.96354 1 8.92188 1C8.83333 1 8.75781 1.02865 8.69531 1.08594C8.63281 1.14323 8.58333 1.20833 8.54688 1.28125C8.48958 1.39583 8.44271 1.51562 8.40625 1.64062C8.36979 1.76562 8.33073 1.88802 8.28906 2.00781C8.07031 2.63802 7.8125 3.25521 7.51562 3.85938C7.22396 4.46354 6.91146 5.05729 6.57812 5.64062C6.27083 6.17708 5.92188 6.6875 5.53125 7.17188C5.14062 7.65625 4.71094 8.10156 4.24219 8.50781C4.08073 8.64844 3.90885 8.76823 3.72656 8.86719C3.54948 8.96615 3.36458 9.0599 3.17188 9.14844C3.02604 9.21615 2.88281 9.29688 2.74219 9.39062C2.60156 9.48438 2.47656 9.59115 2.36719 9.71094C2.25781 9.83073 2.16927 9.96615 2.10156 10.1172C2.03385 10.263 2 10.4219 2 10.5938C2 10.6719 2.00781 10.7448 2.02344 10.8125L2.34375 12.4531C2.39062 12.6979 2.4974 12.9115 2.66406 13.0938C2.83594 13.276 3.04167 13.401 3.28125 13.4688L8.42969 14.8906C8.5651 14.9323 8.70052 14.9609 8.83594 14.9766C8.97656 14.9922 9.11719 15 9.25781 15Z" 
+               Stretch="Uniform"/>
+                </Grid>
+                <Grid x:Name="DislikePath" Visibility="Collapsed">
+                    <Path x:Name="DisikePathOuter"  Fill="{StaticResource IconColor}" Visibility="Visible" 
+               Data="M3.20508 9.69141C3.20508 9.32031 3.22461 8.95117 3.26367 8.58398C3.30664 8.21289 3.37695 7.84766 3.47461 7.48828C3.36523 7.49219 3.25586 7.49609 3.14648 7.5C3.04102 7.5 2.93359 7.5 2.82422 7.5C2.54688 7.5 2.28125 7.45312 2.02734 7.35938C1.77734 7.26562 1.55664 7.13477 1.36523 6.9668C1.17773 6.79492 1.02734 6.5918 0.914062 6.35742C0.804688 6.11914 0.75 5.85547 0.75 5.56641C0.75 5.44141 0.761719 5.31641 0.785156 5.19141L1.25391 2.57227C1.32031 2.20117 1.44531 1.85937 1.62891 1.54688C1.81641 1.23047 2.04492 0.958984 2.31445 0.732422C2.58789 0.501953 2.89453 0.322266 3.23438 0.193359C3.57422 0.0644531 3.93359 0 4.3125 0C4.44922 0 4.58594 0.00976563 4.72266 0.0292969C4.85938 0.0488281 4.99414 0.0761719 5.12695 0.111328L8.98828 1.17773C9.14453 1.2207 9.29102 1.28516 9.42773 1.37109C9.56445 1.45703 9.68555 1.55859 9.79102 1.67578C9.90039 1.78906 9.99219 1.91797 10.0664 2.0625C10.1406 2.20312 10.1934 2.35352 10.2246 2.51367L10.4707 3.74414C10.4902 3.85352 10.5 3.95703 10.5 4.05469C10.5 4.26172 10.4629 4.45703 10.3887 4.64062C10.3145 4.82031 10.2148 4.98633 10.0898 5.13867C9.96484 5.29102 9.82031 5.42578 9.65625 5.54297C9.49609 5.66016 9.32617 5.75781 9.14648 5.83594C9.04102 5.88281 8.94141 5.93164 8.84766 5.98242C8.75391 6.0332 8.66211 6.09766 8.57227 6.17578C8.28711 6.42578 8.03516 6.67969 7.81641 6.9375C7.59766 7.19531 7.39844 7.46289 7.21875 7.74023C7.03906 8.01758 6.87109 8.30664 6.71484 8.60742C6.55859 8.9082 6.39844 9.22461 6.23438 9.55664C6.09766 9.83789 5.97656 10.123 5.87109 10.4121C5.76953 10.7012 5.66211 10.9922 5.54883 11.2852C5.4668 11.4961 5.33984 11.668 5.16797 11.8008C4.99609 11.9336 4.79297 12 4.55859 12C4.41797 12 4.29297 11.9746 4.18359 11.9238C4.07812 11.873 3.97461 11.7969 3.87305 11.6953C3.73242 11.5547 3.61719 11.4082 3.52734 11.2559C3.44141 11.0996 3.37305 10.9375 3.32227 10.7695C3.27539 10.6016 3.24414 10.4277 3.22852 10.248C3.21289 10.0684 3.20508 9.88281 3.20508 9.69141ZM9.75 4.05469C9.75 4 9.74414 3.94531 9.73242 3.89062L9.49219 2.66016C9.45703 2.47656 9.375 2.31641 9.24609 2.17969C9.12109 2.04297 8.96875 1.94922 8.78906 1.89844L4.92773 0.832031C4.82617 0.800781 4.72266 0.779297 4.61719 0.767578C4.51562 0.755859 4.41211 0.75 4.30664 0.75C4.02148 0.75 3.75 0.800781 3.49219 0.902344C3.23438 1 3.00195 1.13672 2.79492 1.3125C2.5918 1.48437 2.41992 1.68945 2.2793 1.92773C2.13867 2.16602 2.04297 2.42578 1.99219 2.70703L1.52344 5.32617C1.51562 5.36523 1.50977 5.4043 1.50586 5.44336C1.50195 5.48242 1.5 5.52148 1.5 5.56055C1.5 5.74023 1.53516 5.9043 1.60547 6.05273C1.67578 6.19727 1.76953 6.32227 1.88672 6.42773C2.00781 6.5293 2.14648 6.60938 2.30273 6.66797C2.45898 6.72266 2.62305 6.75 2.79492 6.75C2.9082 6.75 3.01953 6.74805 3.12891 6.74414C3.23828 6.74023 3.34961 6.73828 3.46289 6.73828C3.56836 6.73828 3.66602 6.75781 3.75586 6.79688C3.84961 6.83203 3.92969 6.88477 3.99609 6.95508C4.06641 7.02148 4.12109 7.09961 4.16016 7.18945C4.20312 7.2793 4.22461 7.37695 4.22461 7.48242C4.22461 7.51367 4.2207 7.54297 4.21289 7.57031C4.20898 7.59375 4.20703 7.62109 4.20703 7.65234C4.19922 7.67188 4.19336 7.69336 4.18945 7.7168C4.18945 7.73633 4.18555 7.75586 4.17773 7.77539C4.10742 8.0918 4.05273 8.40625 4.01367 8.71875C3.97461 9.03125 3.95508 9.34961 3.95508 9.67383C3.95508 9.81055 3.95898 9.94727 3.9668 10.084C3.97461 10.2207 3.99414 10.3535 4.02539 10.4824C4.06055 10.6074 4.10742 10.7305 4.16602 10.8516C4.22852 10.9688 4.3125 11.0781 4.41797 11.1797C4.4375 11.1992 4.45703 11.2168 4.47656 11.2324C4.5 11.2441 4.52734 11.25 4.55859 11.25C4.625 11.25 4.68164 11.2285 4.72852 11.1855C4.77539 11.1426 4.8125 11.0938 4.83984 11.0391C4.88281 10.9492 4.91797 10.8574 4.94531 10.7637C4.97266 10.666 5.00195 10.5723 5.0332 10.4824C5.19727 10.0098 5.39062 9.54883 5.61328 9.09961C5.83594 8.64648 6.07031 8.20117 6.31641 7.76367C6.55078 7.34961 6.8125 6.9668 7.10156 6.61523C7.39062 6.26367 7.71289 5.93164 8.06836 5.61914C8.19336 5.50977 8.32031 5.41992 8.44922 5.34961C8.58203 5.27539 8.72266 5.20508 8.87109 5.13867C8.98047 5.0918 9.08789 5.0332 9.19336 4.96289C9.29883 4.89258 9.39258 4.8125 9.47461 4.72266C9.55664 4.62891 9.62305 4.52734 9.67383 4.41797C9.72461 4.30469 9.75 4.18359 9.75 4.05469Z" 
+               Stretch="Uniform"/>
+                    <Path x:Name="DislikePathInner" Fill="{StaticResource IconColor}" Visibility="Collapsed" 
+               Data="M6.74219 1C6.36198 1 6 1.0651 5.65625 1.19531C5.3125 1.33073 5.00521 1.51302 4.73438 1.74219C4.45833 1.97656 4.22656 2.2526 4.03906 2.57031C3.85156 2.88802 3.72396 3.23438 3.65625 3.60938L3.03125 7.10156C3.02083 7.15365 3.01302 7.20573 3.00781 7.25781C3.0026 7.3099 3 7.36198 3 7.41406C3 7.65365 3.04688 7.86979 3.14062 8.0625C3.23438 8.26042 3.36198 8.42708 3.52344 8.5625C3.6849 8.70312 3.86979 8.8099 4.07812 8.88281C4.28646 8.96094 4.5026 9 4.72656 9C4.8776 9 5.02604 8.9974 5.17188 8.99219C5.31771 8.98698 5.46615 8.98438 5.61719 8.98438C5.75781 8.98438 5.89062 9.01042 6.01562 9.0625C6.13542 9.11458 6.24219 9.1849 6.33594 9.27344C6.42448 9.36198 6.4974 9.46615 6.55469 9.58594C6.60677 9.71094 6.63281 9.84375 6.63281 9.98438C6.63281 10.0729 6.6224 10.1589 6.60156 10.2422L6.52344 10.5078C6.41927 10.8984 6.35156 11.2943 6.32031 11.6953C6.28906 12.0964 6.27344 12.4974 6.27344 12.8984C6.27344 13.0859 6.27865 13.2682 6.28906 13.4453C6.29948 13.6276 6.32552 13.8047 6.36719 13.9766C6.40885 14.1484 6.47135 14.3125 6.55469 14.4688C6.63802 14.625 6.75 14.7708 6.89062 14.9062C6.91667 14.9323 6.94531 14.9531 6.97656 14.9688C7.0026 14.9896 7.03646 15 7.07812 15C7.16667 15 7.24219 14.9714 7.30469 14.9141C7.36719 14.8568 7.41667 14.7917 7.45312 14.7188C7.51042 14.6042 7.55729 14.4844 7.59375 14.3594C7.63021 14.2344 7.66927 14.112 7.71094 13.9922C7.92969 13.362 8.1875 12.7448 8.48438 12.1406C8.77604 11.5365 9.08854 10.9427 9.42188 10.3594C9.72917 9.82292 10.0781 9.3125 10.4688 8.82812C10.8594 8.34375 11.2891 7.89844 11.7578 7.49219C11.9193 7.35156 12.0911 7.23177 12.2734 7.13281C12.4505 7.03385 12.6354 6.9401 12.8281 6.85156C12.974 6.78385 13.1172 6.70312 13.2578 6.60938C13.3984 6.51562 13.5234 6.40885 13.6328 6.28906C13.7422 6.16927 13.8307 6.03385 13.8984 5.88281C13.9661 5.73698 14 5.57812 14 5.40625C14 5.32812 13.9922 5.25521 13.9766 5.1875L13.6562 3.54688C13.6094 3.30208 13.5026 3.08854 13.3359 2.90625C13.1641 2.72396 12.9583 2.59896 12.7188 2.53125L7.57031 1.10938C7.4349 1.06771 7.29948 1.03906 7.16406 1.02344C7.02344 1.00781 6.88281 1 6.74219 1Z" 
+               Stretch="Uniform"/>
+                </Grid>
+            </Grid>
+        </Button>
+        <DataTemplate.Triggers>
+            <!-- Copy Icon Visible -->
+            <DataTrigger Binding="{Binding ItemType,Converter={StaticResource EnumToStringConverter}}" Value="Copy">
+                <Setter TargetName="CopyPath" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <!-- Regenerate Icon Visible -->
+            <DataTrigger Binding="{Binding ItemType,Converter={StaticResource EnumToStringConverter}}" Value="Regenerate">
+                <Setter TargetName="RegeneratePath" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <!-- Like Icon Visible -->
+            <DataTrigger Binding="{Binding ItemType,Converter={StaticResource EnumToStringConverter}}" Value="Like">
+                <Setter TargetName="LikePath" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <!-- Dislike Icon Visible -->
+            <DataTrigger Binding="{Binding ItemType,Converter={StaticResource EnumToStringConverter}}" Value="Dislike">
+                <Setter TargetName="DislikePath" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsLiked}" Value="True">
+                <Setter TargetName="LikePathInner" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsLiked}" Value="False">
+                <Setter TargetName="DislikePathInner" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <Style BasedOn="{StaticResource WPFPrimaryButtonStyle}" x:Key="stopResponseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="btnBorder" BorderThickness="{TemplateBinding BorderThickness}" 
+                     BorderBrush="{TemplateBinding BorderBrush}" 
+                     Background="{TemplateBinding Background}"
+                     CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}" 
+                     Width="{TemplateBinding Width}">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle x:Name="rect" Fill="{TemplateBinding Foreground}" Width="12" Height="12" RadiusX="2" RadiusY="2" Margin="18,0,0,0"/>
+                                <TextBlock x:Name="stopBtnText" Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Border>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ButtonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stopBtnText" Storyboard.TargetProperty="Text">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Canceling"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rect" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="btnBorder" Storyboard.TargetProperty="Width" To="84" Duration="0:0:0"/>
+                                        <ThicknessAnimation Storyboard.TargetName="stopBtnText" Storyboard.TargetProperty="Margin" To="16,0,0,0" Duration="0:0:0.0"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="btnBorder" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource BorderAlt4}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="btnBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource BorderAlt4}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stopBtnText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource PrimaryForeground}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TypingIndicatorStyle" TargetType="{x:Type local:TypingIndicator}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TypingIndicator}">
+                    <StackPanel x:Name="layoutRoot" Orientation="Horizontal">
+                        <shared:SfAvatarView 
+                     x:Name="PART_AvatarView"                       
+                     Content="{Binding Author.Content, RelativeSource={RelativeSource TemplatedParent}}"
+                     ContentTemplate="{Binding Author.ContentTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                     />
+                        <TextBlock x:Name="IndicatorText" VerticalAlignment="Center" 
+                            Margin="8,0,0,0"
+                            Foreground="{StaticResource TooltipForeground}"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BodyTextStyle}}"
+                            Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <Viewbox x:Name="PART_LinearBox" 
+                                      Width="30" 
+                                      Height="30" 
+                                      Margin="-6,10,0,0"
+                                      VerticalAlignment="Center"
+                                      Visibility="Collapsed">
+                            <Grid>
+                                <Ellipse x:Name="_r1" HorizontalAlignment="Left" Margin="12,67.667,0,73.333" 
+                                    Fill="{StaticResource TooltipForeground}" 
+                                    StrokeThickness="4"
+                                    Height="20"                              
+                                    Width="20"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Ellipse.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Ellipse.RenderTransform>
+                                </Ellipse>
+                                <Ellipse x:Name="_r2" HorizontalAlignment="Left"
+                                    Margin="39,67.667,0,73.333" 
+                                    Fill="{StaticResource TooltipForeground}" 
+                                    Width="20" StrokeThickness="4" 
+                                    Height="20" 
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Ellipse.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Ellipse.RenderTransform>
+                                </Ellipse>
+                                <Ellipse x:Name="_r3" HorizontalAlignment="Left" Margin="67,67.667,0,73.333" 
+                                    Fill="{StaticResource TooltipForeground}" 
+                                    Width="20" StrokeThickness="4"
+                                    Height="20" RenderTransformOrigin="0.5,0.5">
+                                    <Ellipse.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Ellipse.RenderTransform>
+                                </Ellipse>
+                            </Grid>
+                        </Viewbox>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="AnimationType">
+                                <VisualState x:Name="LinearBox">
+                                    <Storyboard RepeatBehavior="Forever">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PART_LinearBox">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_r1">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_r1">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="-10"/>
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_r2">
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-10"/>
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_r3">
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-10"/>
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource TypingIndicatorStyle}" TargetType="{x:Type local:TypingIndicator}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Chat.TypingIndicator}" BasedOn="{StaticResource TypingIndicatorStyle}" TargetType="{x:Type local:TypingIndicator}"/>
+
+    <Style x:Key="SycfusionChat" TargetType="local:ChatItemsView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ChatItemsView">
+                    <Border
+                     Padding="{TemplateBinding Padding}"
+                     Background="{TemplateBinding Background}"
+                     BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel>
+                            <ContentPresenter Content="Helloo"/>
+                            <ItemsControl
+                         x:Name="PART_ItemsControl"
+                         ItemsSource="{TemplateBinding ItemsSource}"
+                         ItemTemplate="{TemplateBinding ItemTemplate}"
+                         ItemsPanel="{TemplateBinding ItemsPanel}"
+                         ItemContainerStyle="{TemplateBinding ItemContainerStyle}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SyncfusionChatStyle" TargetType="local:SfAIAssistView">
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="Width" Value="800"/>
+        <Setter Property="Background" Value="{StaticResource ContentBackground}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SfAIAssistView">
+                    <Border
+                     Padding="{TemplateBinding Padding}"
+                     Background="{TemplateBinding Background}"
+                     BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <local:ChatItemsView
+								VirtualizingPanel.IsVirtualizing="True"
+                                VirtualizingPanel.VirtualizationMode="Recycling"
+                                VirtualizingStackPanel.ScrollUnit="Pixel"
+                             Grid.ColumnSpan="2"
+                             Margin="6,6,6,6"
+                             Background="{StaticResource ContentBackground}"
+                             Padding="0"    
+                             BorderBrush="{StaticResource ContentBackground}" 
+                             x:Name="ChatItems" 
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                ItemTemplateSelector="{StaticResource chatTemplateSelector}"
+                             ItemsSource="{Binding Path=Messages, RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                                <!--<local:ChatItemsView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel VerticalAlignment="Bottom"/>
+                                    </ItemsPanelTemplate>
+                                </local:ChatItemsView.ItemsPanel>-->
+                                <local:ChatItemsView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ListViewItem">
+                                                    <Border Background="{StaticResource ContentBackground}">
+                                                        <ContentPresenter />
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </local:ChatItemsView.ItemContainerStyle>
+                            </local:ChatItemsView>
+                            <local:SuggestionsViewer                             
+                             x:Name="suggest"
+                             HorizontalAlignment="Right"
+                             Margin="6,6,14,6"
+                             HorizontalContentAlignment="Right"
+                             Grid.Row="1"                  
+                             ItemsSource="{TemplateBinding Suggestions}"/>
+                            <local:TypingIndicator
+                             Grid.Row="1"
+                             Height="32"
+                             Margin="6,0,6,0"
+                             Visibility="{Binding Path=ShowTypingIndicator, RelativeSource={RelativeSource Mode=TemplatedParent},Converter={StaticResource TypingIndicatorConverter}}" 
+                             Author="{Binding Path=TypingIndicator.Author,RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                             Text="{Binding Path=TypingIndicator.Text,RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                             x:Name="PART_TypeIndicator"
+                             VerticalAlignment="Bottom"/>
+                            <ContentPresenter Grid.Row="2" Grid.Column="1" x:Name="stopResponeContentPresenter" Visibility="Collapsed">
+                            <ContentPresenter.Content>
+                            <Button x:Name="stopResponseButton" Width="143" Height="24" Tag="Stop"
+                             Content="Stop Responding" FontSize="12" Style="{StaticResource stopResponseButtonStyle}">
+                            </Button>
+                            </ContentPresenter.Content>
+                            </ContentPresenter>
+                            <local:RichTextBox
+                                Grid.Row="3"
+                               Margin="6,6,14,6"
+                               TextWrapping="Wrap"
+                               x:Name="PART_Input">
+                            </local:RichTextBox>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionChatStyle}" TargetType="local:SfAIAssistView"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Chat.SfAIAssistView}" BasedOn="{StaticResource SyncfusionChatStyle}" TargetType="local:SfAIAssistView"/>
+
+    <Style x:Key="ChatMessageStyle" TargetType="local:ChatItem">
+        <Setter Property="ContentTemplateSelector" Value="{StaticResource viewTemplateSelector}"/>
+        <Setter Property="ViewTemplateSelector" Value="{StaticResource viewTemplateSelector}"/>
+        <Setter Property="EditTemplateSelector" Value="{StaticResource editTemplateSelector}"/>
+        <Setter Property="Margin" Value="0,8"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ChatItem">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid
+                            x:Name="MainGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Name="avatarColumn" Width="36" />
+                                <ColumnDefinition x:Name="contentColumn" Width="8*" />
+                                <ColumnDefinition x:Name="spaceColumn" Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <shared:SfAvatarView 
+                                x:Name="PART_Avatar" 
+                                Grid.Row="1"
+                                Visibility="Visible"
+                                Content="{Binding Author.Content}"
+                                ContentTemplate="{Binding Author.ContentTemplate}"
+                                Width="10" Height="10"
+                                VerticalAlignment="Top"/>
+                            <!-- Response Toolbar Items -->
+                            <ItemsControl x:Name="PART_ResponseToolbarItems"
+Grid.Row="2" Grid.Column="1"
+ItemsSource="{TemplateBinding ResponseToolbarItems}"
+VerticalAlignment="Bottom"
+HorizontalAlignment="Left"
+HorizontalContentAlignment="Left"
+KeyboardNavigation.TabNavigation="Local"
+KeyboardNavigation.DirectionalNavigation="Cycle"
+AutomationProperties.Name="Response Toolbar"
+IsTabStop="False">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentControl Content="{Binding}">
+                                            <ContentControl.Style>
+                                                <Style TargetType="ContentControl">
+                                                    <Setter Property="ContentTemplate" Value="{Binding ItemTemplate}"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ItemTemplate}" Value="{x:Null}">
+                                                            <Setter Property="ContentTemplate" Value="{StaticResource DefaultResponseToolbarItemTemplate}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </ContentControl.Style>
+                                        </ContentControl>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            <StackPanel
+                                x:Name="header"
+                                Grid.Column="1"
+                                VerticalAlignment="Bottom"
+                                Margin="8,8,16,0"
+                                Orientation="Horizontal">
+                                <TextBlock 
+                                    Margin="2"
+                                    Foreground="{StaticResource ContentForegroundAlt1}"
+                                    Text="{Binding Author.Name}"
+                                    VerticalAlignment="Bottom"
+                                    x:Name="AuthorName"/>
+                                <TextBlock 
+                                    Margin="2"
+                                    Foreground="{StaticResource ContentForegroundAlt1}"
+                                    Text="{Binding DateTime, Converter={StaticResource DateTimeConverter}}"
+                                    VerticalAlignment="Bottom"
+                                    x:Name="MessageTime"/>
+                            </StackPanel>
+                            <Border  x:Name="message"               
+                                      Grid.Row="1"
+                                      Grid.Column="1">
+                                <Grid Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition x:Name="editButtonColumn"  Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Border x:Name="messageContent" 
+                                             Grid.Column="1"
+                                             CornerRadius="4"
+                                             Background="{StaticResource ContentBackgroundAlt1}"
+                                             MinHeight="32"
+                                             Padding="12,6,12,6">
+                                        <Border.Resources>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="FontSize" Value="16"/>
+                                            </Style>
+                                        </Border.Resources>
+                                        <ContentPresenter 
+                                            x:Name="presenter">
+                                        </ContentPresenter>
+                                    </Border>
+                                    <Button x:Name="Editing" Visibility="Collapsed"
+                                            Grid.Column="0"
+                                            
+                                            Padding="8"
+                                            Grid.Row="1">
+                                        <Button.ContentTemplate>
+                                            <DataTemplate>
+                                                <Viewbox Stretch="Uniform">
+                                                    <Path Fill="Black" 
+                                                          Data="M15.9453 2.57031C15.9453 2.94531 15.875 3.3099 15.7344 3.66406C15.5938 4.01302 15.3906 4.32031 15.125 4.58594L5.14062 14.5703C5.07812 14.6328 5.00521 14.6849 4.92188 14.7266C4.84375 14.7682 4.76042 14.8021 4.67188 14.8281L0.804688 15.7969C0.752604 15.8073 0.713542 15.8125 0.6875 15.8125C0.552083 15.8125 0.434896 15.7656 0.335938 15.6719C0.236979 15.5729 0.1875 15.4557 0.1875 15.3203C0.1875 15.2891 0.192708 15.2474 0.203125 15.1953L1.17188 11.3281C1.19792 11.2396 1.23177 11.1562 1.27344 11.0781C1.3151 10.9948 1.36719 10.9219 1.42969 10.8594L11.5234 0.765625C11.7682 0.520833 12.0521 0.333333 12.375 0.203125C12.7031 0.0677083 13.0391 0 13.3828 0C13.7422 0 14.0781 0.0677083 14.3906 0.203125C14.7031 0.333333 14.974 0.515625 15.2031 0.75C15.4375 0.979167 15.6198 1.25 15.75 1.5625C15.8802 1.875 15.9453 2.21094 15.9453 2.57031ZM14.9453 2.60156C14.9453 2.3776 14.9062 2.16927 14.8281 1.97656C14.7552 1.77865 14.6484 1.60677 14.5078 1.46094C14.3724 1.3151 14.2083 1.20312 14.0156 1.125C13.8229 1.04167 13.612 1 13.3828 1C13.1849 1 13.0104 1.02865 12.8594 1.08594C12.7083 1.13802 12.5677 1.21094 12.4375 1.30469C12.3125 1.39844 12.1927 1.50521 12.0781 1.625C11.9635 1.74479 11.8411 1.86979 11.7109 2L14 4.28906C14.1302 4.16406 14.2526 4.04167 14.3672 3.92188C14.4818 3.80208 14.5807 3.67708 14.6641 3.54688C14.7526 3.41667 14.8203 3.27604 14.8672 3.125C14.9193 2.97396 14.9453 2.79948 14.9453 2.60156ZM1.375 14.625L4.42969 13.8594L13.2969 4.99219L11.0078 2.70312L2.14062 11.5703L1.375 14.625Z"/>
+                                                </Viewbox>
+                                            </DataTemplate>
+                                        </Button.ContentTemplate>
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                            </VisualStateGroup>
+
+                            <VisualStateGroup x:Name="UserState">
+                                <VisualState x:Name="OtherUser">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ResponseToolbarItems" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="messageContent"
+                                       Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="Transparent"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="CurrentUser">
+
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Avatar" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="header" Storyboard.TargetProperty="HorizontalAlignment">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static HorizontalAlignment.Right}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="message" Storyboard.TargetProperty="HorizontalAlignment">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static HorizontalAlignment.Right}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <Int32AnimationUsingKeyFrames Storyboard.TargetName="header" Storyboard.TargetProperty="(Grid.Column)" BeginTime="0">
+                                            <DiscreteInt32KeyFrame Value="2" KeyTime="0:0:0"/>
+                                        </Int32AnimationUsingKeyFrames>
+                                        <Int32AnimationUsingKeyFrames Storyboard.TargetName="message" Storyboard.TargetProperty="(Grid.Column)" BeginTime="0">
+                                            <DiscreteInt32KeyFrame Value="2" KeyTime="0:0:0"/>
+                                        </Int32AnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="contentColumn" Storyboard.TargetProperty="Width" BeginTime="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <GridLength>2*</GridLength>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="spaceColumn" Storyboard.TargetProperty="Width" BeginTime="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <GridLength>8*</GridLength>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="messageContent" Storyboard.TargetProperty="Padding">
+                                            <DiscreteObjectKeyFrame>
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>12,6</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="message" Storyboard.TargetProperty="Margin">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0,0,12,0</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="editButtonColumn" Storyboard.TargetProperty="Width">
+                                            <DiscreteObjectKeyFrame>
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <GridLength>36</GridLength>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="messageContent" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame Value=""/>
+                                        </ObjectAnimationUsingKeyFrames>-->
+
+                                    </Storyboard>
+
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <VisualStateGroup x:Name="ViewState">
+                                <VisualState x:Name="Standalone"/>
+                                <VisualState x:Name="MergeMessage">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Avatar" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="header" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <VisualStateGroup x:Name="EditState">
+                                <VisualState x:Name="Enter">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Editing" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="Exit">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Editing" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="View">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Editing" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EditOkButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EditCancelButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="Edit">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EditOkButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EditCancelButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="messageContent" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{DynamicResource SyncfusionChatItemsBackground}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource ChatMessageStyle}" TargetType="local:ChatItem"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Chat.ChatItem}" BasedOn="{StaticResource ChatMessageStyle}" TargetType="local:ChatItem"/>
+
+    <Style x:Key="SyncfusionSuggestionVewerStyle" TargetType="local:SuggestionsViewer">
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <WrapPanel
+                     Orientation="Horizontal" 
+                     HorizontalAlignment="Right"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemTemplateSelector" Value="{StaticResource suggestionTemplateSelector}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SuggestionsViewer">
+                    <Border
+                     Background="{TemplateBinding Background}"
+                     BorderBrush="{TemplateBinding BorderBrush}"
+                     BorderThickness="{TemplateBinding BorderThickness}">
+                        <ItemsPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionSuggestionVewerStyle}" TargetType="local:SuggestionsViewer"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Chat.SuggestionsViewer}" BasedOn="{StaticResource SyncfusionSuggestionVewerStyle}" TargetType="local:SuggestionsViewer"/>
+
+</ResourceDictionary>

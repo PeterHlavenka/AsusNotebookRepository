@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="ComponentCustomizer.ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:images="clr-namespace:Adwind.UI.Images;assembly=Adwind.UI.Images"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <ToggleButton
+            Grid.Column="0"
+            Width="200"
+            Height="50"
+            Content="Default ToggleButton"
+            Margin="5" />
+        
+        <ToggleButton
+            Grid.Row="0"
+            Grid.Column="1"
+            Width="200"
+            Height="50"
+            Margin="5"
+            Focusable="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="1"
+                    Text="Toggle with TextBlock" />
+            </Grid>
+        </ToggleButton>
+        <ToggleButton
+            Grid.Row="0"
+            Grid.Column="2"
+            Width="200"
+            Height="50"
+            Margin="5"
+            Focusable="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="1"
+                    Text="With Foreground binding"
+                    Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" />
+            </Grid>
+        </ToggleButton>
+        <ToggleButton
+            Grid.Row="0"
+            Grid.Column="3"
+            Width="200"
+            Height="50"
+            Content="Disabled ToggleButton"
+            Margin="5"
+            IsEnabled="False" />
+
+        <!-- Second Row: -->
+        <!-- <images:SvgToggleButton -->
+        <!--     Grid.Row="1" -->
+        <!--     Grid.Column="0" -->
+        <!--     Width="200" -->
+        <!--     Height="50" -->
+        <!--     Source="Clean.svg" -->
+        <!--     IsChecked="False" /> -->
+        
+        <ToggleButton
+            Name="ColorChangeToggleButton"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="200"
+            Height="50"
+            Margin="5"
+            Focusable="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <images:SvgControl
+                    Name="SvgControl"
+                    AppName="Adwind.UI.Images"
+                    Source="/svgs/AddGroupArrow2.svg" 
+                    CustomizeMode="All"
+                    Width="32"
+                    Height="32"
+                    Margin="0,0,20,0"
+                    HorizontalAlignment="Left"/>
+                <TextBlock
+                    Grid.Column="1"
+                    Text="Barva dle motivu" 
+                    VerticalAlignment="Center"/>
+            </Grid>
+        </ToggleButton>
+
+        <ToggleButton
+            Name="StreamSourceToggleButton"
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="200"
+            Height="50"
+            Margin="5"
+            Focusable="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <images:SvgControl
+                    Name="SvgControlFromStreamSourceToggleButton"
+                    AppName="Adwind.UI.Images"
+                    StreamSource="{Binding StreamSource, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                    CustomizeMode="All"
+                    Width="32"
+                    Height="32"
+                    Margin="0,0,20,0"
+                    HorizontalAlignment="Left"/>
+                <TextBlock
+                    Grid.Column="1"
+                    Text="From stream" 
+                    VerticalAlignment="Center"/>
+            </Grid>
+        </ToggleButton>
+
+        <!-- Third Row: -->
+        <ToggleButton
+
+            Grid.Row="2"
+            Grid.Column="0"
+            Width="200"
+            Height="50"
+            Margin="5"
+            Focusable="True">
+            <StackPanel Orientation="Horizontal">
+                <images:SvgToggleControl Source="MigrationAnalysis.svg" />
+                <images:ToggleTextBlock Text="no toto " VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+
+        </ToggleButton>
+    </Grid>
+</UserControl>

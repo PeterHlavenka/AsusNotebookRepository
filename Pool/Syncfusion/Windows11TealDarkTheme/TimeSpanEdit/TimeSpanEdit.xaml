@@ -1,0 +1,221 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shared="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealDarkTheme.WPF"
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealDarkTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealDarkTheme"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/GlyphRepeatButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/RepeatButton.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="TimeSpanEdit.Static.Border" Color="#c8c8c8" />
+
+    <SolidColorBrush x:Key="TimeSpanEdit.MouseOver.Border" Color="#179bd7" />
+
+    <SolidColorBrush x:Key="TimeSpanEdit.Focused.Border" Color="#c8c8c8" />
+
+    <Thickness x:Key="Win11Margin" >4,0,0,0</Thickness>
+
+    <LinearGradientBrush x:Key="TimeSpanEditBorderBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
+        <LinearGradientBrush.RelativeTransform>
+            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
+        </LinearGradientBrush.RelativeTransform>
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.5" Color="{StaticResource BorderGradient.Color}"/>
+            <GradientStop Offset="1.0" Color="{StaticResource Border.Color}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TimeSpanEditBorderBrushHovered" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
+        <LinearGradientBrush.RelativeTransform>
+            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
+        </LinearGradientBrush.RelativeTransform>
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="1.0" Color="{StaticResource Border.Color}"/>
+            <GradientStop Offset="0.5" Color="{StaticResource BorderGradient.Color}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TimeSpanEditBorderBrushFocused" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,2">
+        <LinearGradientBrush.RelativeTransform>
+            <ScaleTransform ScaleY="-1" CenterY="0.5"/>
+        </LinearGradientBrush.RelativeTransform>
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="1.0" Color="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt2Gradient.Color}}"/>
+            <GradientStop Offset="1.0" Color="{StaticResource BorderAlt2.Color}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <shared:BoolToVisibilityConverter x:Key="TimeEditBooleanToVisibilityConverter" />
+
+    <Style x:Key="SyncfusionTimeSpanEditStyle" TargetType="{x:Type shared:TimeSpanEdit}">
+        <Setter Property="CaretBrush" Value="{StaticResource ContentForeground}" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackground}}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackgroundAlt4}" />
+        <Setter Property="BorderBrush" Value="{StaticResource TimeSpanEditBorderBrush}" />
+        <Setter Property="FontFamily" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ThemeFontFamily}}" />
+        <Setter Property="FontSize" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BodyTextStyle}}" />
+        <Setter Property="FontWeight" Value="{StaticResource Windows11TealDarkTheme.FontWeightNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.ThemeBorderThicknessVariant1}" />
+        <Setter Property="AllowDrop" Value="False" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="MinHeight" Value="{StaticResource Windows11TealDarkTheme.MinHeight}" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type shared:TimeSpanEdit}">
+                    <Border
+                        x:Name="MainBorder"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}"
+                        SnapsToDevicePixels="true">
+                        <Grid x:Name="TimeSpanGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Background="Transparent"
+                                Margin="{StaticResource Win11Margin}"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}"
+                                FontWeight="{TemplateBinding FontWeight}"
+                                Foreground="{TemplateBinding Foreground}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <Grid x:Name="RepeatButtonGrid" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <RepeatButton
+                                    x:Name="upbutton"
+                                    Grid.Row="0"
+                                    Width="NaN"
+                                    Margin="4, 2, 4, 1"
+                                    Padding="5 0 5 0"
+                                    Background="Transparent"
+                                    BorderThickness="{StaticResource Windows11TealDarkTheme.BorderThickness}"
+                                    Command="{Binding Path=UpCommand, RelativeSource={RelativeSource TemplatedParent}}"
+                                    IsTabStop="False"
+                                    Style="{StaticResource WPFRepeatButtonStyle}"
+                                    Visibility="{Binding ShowArrowButtons, Converter={StaticResource TimeEditBooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <RepeatButton.Content>
+                                        <Path
+                                                    x:Name="upbuttonpath"
+                                                    Width="10"
+                                                    Height="6"
+                                                    HorizontalAlignment="Stretch"
+                                                    VerticalAlignment="Stretch"
+                                                    StrokeThickness="{StaticResource Windows11TealDarkTheme.StrokeThickness1}"
+                                                    Stretch="Uniform">
+                                            <Path.Data>
+                                                <PathGeometry>M0.5 4.875C0.5 4.77344 0.537109 4.68555 0.611328 4.61133L4.73633 0.486328C4.81055 0.412109 4.89844 0.375 5 0.375C5.10156 0.375 5.18945 0.412109 5.26367 0.486328L9.38867 4.61133C9.46289 4.68555 9.5 4.77344 9.5 4.875C9.5 4.97656 9.46289 5.06445 9.38867 5.13867C9.31445 5.21289 9.22656 5.25 9.125 5.25C9.02344 5.25 8.93555 5.21289 8.86133 5.13867L5 1.2832L1.13867 5.13867C1.06445 5.21289 0.976562 5.25 0.875 5.25C0.773438 5.25 0.685547 5.21289 0.611328 5.13867C0.537109 5.06445 0.5 4.97656 0.5 4.875Z</PathGeometry>
+                                            </Path.Data>
+                                            <Path.Style>
+                                                <Style TargetType="Path">
+                                                    <Setter Property="Fill" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(TextBlock.Foreground)}"/>
+                                                </Style>
+                                            </Path.Style>
+                                        </Path>
+                                    </RepeatButton.Content>
+                                </RepeatButton>
+                                <RepeatButton
+                                    x:Name="downbutton"
+                                    Grid.Row="1"
+                                    Width="NaN"
+                                    Margin="4, 1, 4, 2"
+                                    Padding="5 0 5 0"
+                                    Background="Transparent"
+                                    BorderThickness="{StaticResource Windows11TealDarkTheme.BorderThickness}" 
+                                    Command="{Binding Path=DownCommand, RelativeSource={RelativeSource TemplatedParent}}"
+                                    IsTabStop="False"
+                                    Style="{StaticResource WPFRepeatButtonStyle}"
+                                    Visibility="{Binding ShowArrowButtons, Converter={StaticResource TimeEditBooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <RepeatButton.Content>
+                                        <Path
+                                                    x:Name="downbuttonpath"
+                                                    Width="10"
+                                                    Height="6"
+                                                    HorizontalAlignment="Stretch"
+                                                    VerticalAlignment="Stretch"
+                                                    StrokeThickness="{StaticResource Windows11TealDarkTheme.StrokeThickness1}"
+                                                    Stretch="Uniform">
+                                            <Path.Data>
+                                                <PathGeometry>M0.5 1.125C0.5 1.02344 0.537109 0.935547 0.611328 0.861328C0.685547 0.787109 0.773438 0.75 0.875 0.75C0.976562 0.75 1.06445 0.787109 1.13867 0.861328L5 4.7168L8.86133 0.861328C8.93555 0.787109 9.02344 0.75 9.125 0.75C9.22656 0.75 9.31445 0.787109 9.38867 0.861328C9.46289 0.935547 9.5 1.02344 9.5 1.125C9.5 1.22656 9.46289 1.31445 9.38867 1.38867L5.26367 5.51367C5.18945 5.58789 5.10156 5.625 5 5.625C4.89844 5.625 4.81055 5.58789 4.73633 5.51367L0.611328 1.38867C0.537109 1.31445 0.5 1.22656 0.5 1.125Z</PathGeometry>
+                                            </Path.Data>
+                                            <Path.Style>
+                                                <Style TargetType="Path">
+                                                    <Setter Property="Fill" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(TextBlock.Foreground)}"/>
+                                                </Style>
+                                            </Path.Style>
+                                        </Path>
+                                    </RepeatButton.Content>
+                                </RepeatButton>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="MainBorder" Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+                            <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ContentBackgroundAlt6}" />
+                            <Setter Property="TextElement.Foreground" Value="{StaticResource DisabledForeground}" />
+                            <Setter TargetName="downbuttonpath" Property="Fill" Value="{StaticResource IconColorDisabled}" />
+                            <Setter TargetName="upbuttonpath" Property="Fill" Value="{StaticResource IconColorDisabled}" />
+                          
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MainBorder" Property="BorderBrush" Value="{StaticResource TimeSpanEditBorderBrush}" />
+                            <Setter Property="Background" Value="{StaticResource ContentBackgroundAlt5}" />
+                            <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter TargetName="MainBorder" Property="BorderBrush" Value="{StaticResource TimeSpanEditBorderBrushFocused}" />
+                            <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ContentBackground}" />
+                            <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.BorderThickness1112}" />
+                            <Setter TargetName="upbutton" Property="Padding" Value="5 0 5 -1"/>
+                            <Setter TargetName="downbutton" Property="Padding" Value="5 0 5 -1"/>
+                            <Setter Property="Padding" Value="0,0,0,-1"/>
+                        </Trigger>
+                        <Trigger SourceName="upbutton" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="upbuttonpath" Property="Fill" Value="{StaticResource IconColorHovered}" />
+                        </Trigger>
+                        <Trigger SourceName="upbutton" Property="IsPressed" Value="True">
+                            <Setter TargetName="upbuttonpath" Property="Fill" Value="{StaticResource IconColorSelected}" />
+                        </Trigger>
+                        <Trigger SourceName="downbutton" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="downbuttonpath" Property="Fill" Value="{StaticResource IconColorHovered}" />
+                        </Trigger>
+                        <Trigger SourceName="downbutton" Property="IsPressed" Value="True">
+                            <Setter TargetName="downbuttonpath" Property="Fill" Value="{StaticResource IconColorSelected}" />
+                        </Trigger>
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}" />
+                            <Setter Property="MinHeight" Value="16" TargetName="downbutton"/>
+                            <Setter Property="MinHeight" Value="16" TargetName="upbutton"/>
+                            <Setter TargetName="downbutton" Property="VerticalAlignment" Value="Center"/>
+                            <Setter TargetName="upbutton" Property="VerticalAlignment" Value="Center"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionTimeSpanEditStyle}" TargetType="{x:Type shared:TimeSpanEdit}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.Windows.Shared.TimeSpanEdit}" BasedOn="{StaticResource SyncfusionTimeSpanEditStyle}" TargetType="{x:Type shared:TimeSpanEdit}" />
+</ResourceDictionary>

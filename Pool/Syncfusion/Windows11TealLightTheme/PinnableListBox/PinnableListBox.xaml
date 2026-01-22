@@ -1,0 +1,348 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shared="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealLightTheme.WPF"
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealLightTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealLightTheme"/>
+
+    </ResourceDictionary.MergedDictionaries>
+
+    <shared:StringToVisibility x:Key="StringToVisibilityConverter" />
+
+    <shared:CountToVisibilityConverter x:Key="CountToVisibilityConverter" />
+
+    <Style x:Key="SyncfusionPinnableListBoxStyle" TargetType="{x:Type shared:PinnableListBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealLightTheme.BorderThickness1}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type shared:PinnableListBox}">
+                    <Grid x:Name="PART_Grid">
+                        <Border
+                            x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="true"
+                            CornerRadius="{StaticResource Windows11TealLightTheme.CornerRadius4}">
+                            <Grid x:Name="ContenHost">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock
+                                    x:Name="Header"
+                                    Padding="4"
+                                    VerticalAlignment="Center"
+                                    FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=SubTitleTextStyle}}"
+                                    FontWeight="{StaticResource Windows11TealLightTheme.FontWeightMedium}"
+                                    Foreground="{StaticResource ContentForeground}"
+                                    Text="{TemplateBinding Header}" />
+                                <Line
+                                    Grid.Row="1"
+                                    Height="1"
+                                    HorizontalAlignment="Stretch"
+                                    SnapsToDevicePixels="true"
+                                    Stretch="Uniform"
+                                    Stroke="{StaticResource BorderAlt}"
+                                    StrokeThickness="{StaticResource Windows11TealLightTheme.StrokeThickness1}"
+                                    Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Header, Converter={StaticResource StringToVisibilityConverter}}"
+                                    X1="0"
+                                    X2="1"
+                                    Y1="0"
+                                    Y2="0" />
+                                <ScrollViewer x:Name="ScrollViewer" Grid.Row="2" FocusVisualStyle="{x:Null}">
+                                    <Grid x:Name="ItemsContainer">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <shared:PinnableItemsControl
+                                            x:Name="PART_PinnedItems"
+                                            IsPinnedContainer="True"
+                                            ItemsSource="{Binding PinnedItems, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <Line
+                                            x:Name="pinline"
+                                            Grid.Row="1"
+                                            Height="1"
+                                            HorizontalAlignment="Stretch"
+                                            SnapsToDevicePixels="true"
+                                            Stretch="Uniform"
+                                            Stroke="{StaticResource BorderAlt}"
+                                            StrokeThickness="{StaticResource Windows11TealLightTheme.StrokeThickness1}"
+                                            Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PinnedItems.Count, Converter={StaticResource CountToVisibilityConverter}}"
+                                            X1="0"
+                                            X2="1"
+                                            Y1="0"
+                                            Y2="0" />
+                                        <shared:PinnableItemsControl
+                                            x:Name="PART_UnpinnedItems"
+                                            Grid.Row="2"
+                                            Focusable="False"
+                                            ItemsSource="{Binding UnpinnedItems, RelativeSource={RelativeSource TemplatedParent}}" />
+                                    </Grid>
+                                </ScrollViewer>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+                            <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                            <Setter TargetName="Header" Property="Foreground" Value="{StaticResource DisabledForeground}" />
+                        </Trigger>
+                        <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionPinnableListBoxStyle}" TargetType="{x:Type shared:PinnableListBox}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.Windows.Shared.PinnableListBox}" BasedOn="{StaticResource SyncfusionPinnableListBoxStyle}" TargetType="{x:Type shared:PinnableListBox}" />
+
+    <Style x:Key="MaterialPinnableButtonStyle" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource IconColorDisabled}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SyncfusionPinnableListBoxItemStyle" TargetType="{x:Type shared:PinnableListBoxItem}">
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="FontSize" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=BodyTextStyle}}" />
+        <Setter Property="FontFamily" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=ThemeFontFamily}}" />
+        <Setter Property="FontWeight" Value="{StaticResource Windows11TealLightTheme.FontWeightNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealLightTheme.BorderThickness}" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Margin" Value="5,1,5,1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type shared:PinnableListBoxItem}">
+                    <Grid x:Name="PinnableListBoxItemGrid">
+                        <Border x:Name="SelectionIndicator"
+                                        HorizontalAlignment="Left"            
+                                        CornerRadius="1.5"
+                                        Height="12"
+                                        Width="2"
+                                        Visibility="Collapsed"     
+                                        Background="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=PrimaryBackground}}" />
+                        <Border
+                        x:Name="OuterBorder"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource Windows11TealLightTheme.CornerRadius4}"
+                        SnapsToDevicePixels="true"
+                        >
+                        <Grid x:Name="ContentHost" Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid x:Name="ItemHost">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Rectangle
+                                    x:Name="InnerPath"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    RadiusX="3"
+                                    RadiusY="3" />
+                                <Grid Margin="{TemplateBinding Padding}" VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image
+                                        x:Name="Icon"
+                                        Grid.RowSpan="2"
+                                        VerticalAlignment="Center"
+                                        Source="{TemplateBinding Icon}" />
+                                    <ContentPresenter
+                                        x:Name="ItemContent"
+                                        Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        TextElement.FontFamily="{TemplateBinding FontFamily}"
+                                        TextElement.FontSize="{TemplateBinding FontSize}"
+                                        TextElement.FontWeight="{TemplateBinding FontWeight}"
+                                        Margin="3,0,0,0"/>
+                                    <TextBlock
+                                        x:Name="Description"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        FontFamily="{TemplateBinding FontFamily}"
+                                        FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=CaptionText}}"
+                                        FontWeight="{StaticResource Windows11TealLightTheme.FontWeightNormal}"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        Text="{TemplateBinding Description}"
+                                        TextTrimming="WordEllipsis"
+                                        Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Description, Converter={StaticResource StringToVisibilityConverter}}" />
+                                    </Grid>
+                                </Grid>
+                                <Button
+                                x:Name="pinnedButton"
+                                Grid.Column="1"
+                                Width="24"
+                                Background="Transparent"
+                                BorderThickness="{StaticResource Windows11TealLightTheme.BorderThickness}"
+                                Command="{x:Static shared:PinnableListBoxItem.PinCommand}"
+                                Style="{StaticResource MaterialPinnableButtonStyle}"
+                                Visibility="Collapsed">
+                                    <Path
+                                    x:Name="Pinpath"
+                                    Width="11"
+                                    Height="11"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Bottom"
+                                    Fill="{StaticResource IconColor}"
+                                    Stretch="Fill" >
+                                        <Path.Data>
+                                            <PathGeometry>M11 4.65918C11 4.87012 10.9417 5.0625 10.8252 5.23633C10.7087 5.41113 10.5521 5.53809 10.3555 5.61816L7.43347 6.83301C7.38614 6.85156 7.34427 6.87988 7.30783 6.91992C7.27142 6.95703 7.24594 7 7.23138 7.05078L6.27557 10.2217C6.25372 10.2949 6.21185 10.3545 6.14996 10.4014C6.09171 10.4492 6.02252 10.4727 5.94241 10.4727C5.90256 10.4727 5.86499 10.4668 5.82965 10.4541C5.78104 10.4375 5.73669 10.4092 5.69662 10.3691L3.49554 8.17383L0.491547 11.1699H0V10.6738L3.00397 7.68262L0.802887 5.4873C0.733704 5.41797 0.699097 5.33496 0.699097 5.23633C0.699097 5.16797 0.719147 5.10449 0.759186 5.0459C0.799225 4.98828 0.852051 4.94629 0.917572 4.9209L4.1564 3.62988C4.24014 3.59668 4.30206 3.53711 4.3421 3.4502L5.55463 0.785156C5.63837 0.59668 5.76764 0.448242 5.94241 0.338867C6.11719 0.226562 6.30835 0.169922 6.5159 0.169922C6.65427 0.169922 6.78717 0.197266 6.91461 0.251953C7.04568 0.305664 7.15857 0.380859 7.25323 0.474609L10.6942 3.91309C10.7924 4.01074 10.8671 4.125 10.9181 4.25586C10.9392 4.30664 10.9563 4.35742 10.9692 4.40918C10.9897 4.49121 11 4.5752 11 4.65918ZM6.5159 0.867188C6.44305 0.867188 6.37753 0.885742 6.31927 0.921875C6.27979 0.948242 6.24695 0.982422 6.22076 1.02344C6.21072 1.03906 6.20169 1.05566 6.19363 1.07422L4.98114 3.73828C4.92651 3.8623 4.85004 3.9707 4.75174 4.06543C4.69315 4.11914 4.62939 4.16602 4.56049 4.20605C4.51373 4.2334 4.46463 4.25781 4.41312 4.27832L1.6713 5.36719L5.7731 9.46484L6.55957 6.85449C6.60327 6.70605 6.67792 6.57324 6.78351 6.45703C6.89276 6.34082 7.01837 6.25195 7.16037 6.19043L10.0879 4.96973C10.1534 4.94043 10.2044 4.89941 10.2408 4.84473C10.2809 4.78613 10.3009 4.7207 10.3009 4.64844C10.3009 4.55078 10.2681 4.46875 10.2026 4.40332L6.7562 0.970703C6.68701 0.901367 6.60693 0.867188 6.5159 0.867188Z</PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                </Button>
+                            </Grid>
+                            <Border.Triggers>
+                                <!-- Animates the SelectionIndicator -->
+                                <EventTrigger RoutedEvent="Border.MouseDown">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="SelectionIndicator" 
+                                                     Storyboard.TargetProperty="Height"
+                                                     From="12" 
+                                                     To="7" 
+                                                     Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="Border.MouseUp">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="SelectionIndicator" 
+                                                     Storyboard.TargetProperty="Height"
+                                                     From="7" 
+                                                     To="12" 
+                                                     Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="ContentHost" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ContentBackgroundHovered}" />
+                            <Setter TargetName="ItemContent" Property="TextElement.Foreground" Value="{StaticResource HoveredForeground}" />
+                            <Setter TargetName="Description" Property="Foreground" Value="{StaticResource HoveredForeground}" />
+                            <Setter TargetName="ContentHost" Property="Background" Value="Transparent" />
+                            <Setter TargetName="pinnedButton" Property="Visibility" Value="Visible" />
+
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ContentBackgroundSelected}" />
+                            <Setter TargetName="ItemContent" Property="TextElement.Foreground" Value="{StaticResource SelectedForeground}" />
+                            <Setter TargetName="Description" Property="Foreground" Value="{StaticResource SelectedForeground}" />
+                            <Setter TargetName="ContentHost" Property="Background" Value="Transparent" />
+                            <Setter Property="Visibility" TargetName="SelectionIndicator" Value="Visible"/>
+                            <Setter TargetName="Pinpath" Property="Fill" Value="{StaticResource SelectedForeground}"/>
+                        </Trigger>
+
+                        <Trigger SourceName="pinnedButton" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="pinnedButton" Property="Background" Value="{StaticResource ContentBackgroundHovered}" />
+                        </Trigger>
+                        <Trigger SourceName="pinnedButton" Property="IsPressed" Value="True">
+                            <Setter TargetName="pinnedButton" Property="Background" Value="{StaticResource ContentBackgroundSelected}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPinned" Value="True">
+                            <Setter TargetName="pinnedButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="Pinpath" Property="Width" Value="11" />
+                            <Setter TargetName="Pinpath" Property="Height" Value="12" />
+                            <Setter TargetName="Pinpath" Property="Data">
+                                <Setter.Value>
+                                    <PathGeometry>M10.8252 5.06641C10.9417 4.89258 11 4.7002 11 4.48926C11 4.35156 10.9727 4.2168 10.9181 4.08594C10.9058 4.05469 10.8922 4.02441 10.8772 3.99512C10.8646 3.96973 10.851 3.94531 10.8365 3.92188C10.7964 3.85742 10.749 3.79785 10.6942 3.74316L7.25323 0.304688C7.15857 0.210938 7.04568 0.135742 6.91461 0.0820312C6.85025 0.0546875 6.78448 0.0341797 6.71732 0.0205078C6.68341 0.0136719 6.64914 0.0078125 6.6145 0.00390625C6.58194 0.000976562 6.54907 0 6.5159 0C6.30835 0 6.11719 0.0566406 5.94241 0.168945C5.76764 0.27832 5.63837 0.426758 5.55463 0.615234L4.3421 3.28027C4.30206 3.36719 4.24014 3.42676 4.1564 3.45996L0.917572 4.75098C0.88678 4.7627 0.858765 4.77832 0.833588 4.79785C0.805206 4.81934 0.780396 4.8457 0.759186 4.87598C0.719147 4.93457 0.699097 4.99805 0.699097 5.06641C0.699097 5.1377 0.717285 5.20117 0.753632 5.25684C0.767426 5.27832 0.783844 5.29785 0.802887 5.31738L3.00397 7.5127L0 10.5039V11H0.491547L3.49554 8.00391L5.69662 10.1992C5.76581 10.2686 5.84775 10.3027 5.94241 10.3027C6.02252 10.3027 6.09171 10.2793 6.14996 10.2314C6.21185 10.1846 6.25372 10.125 6.27557 10.0518L7.23138 6.88086C7.24594 6.83008 7.27142 6.78711 7.30783 6.75C7.34427 6.70996 7.38614 6.68164 7.43347 6.66309L10.3555 5.44824C10.4128 5.4248 10.4666 5.39746 10.5171 5.36621C10.5652 5.33594 10.6103 5.30273 10.6522 5.26562C10.6775 5.24316 10.7017 5.21973 10.7247 5.19336L10.7513 5.16406C10.7775 5.13379 10.8022 5.10059 10.8252 5.06641Z</PathGeometry>
+                                </Setter.Value>
+                            </Setter>
+
+                        </Trigger>                      
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="MinHeight" Value="{StaticResource TouchMode.MinHeight}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ContentBackgroundDisabled}" />
+                            <Setter TargetName="ItemContent" Property="TextElement.Foreground" Value="{StaticResource DisabledForeground}" />
+                            <Setter TargetName="Description" Property="Foreground" Value="{StaticResource DisabledForeground}" />
+                            <Setter TargetName="ContentHost" Property="Background" Value="{StaticResource ContentBackgroundDisabled}" />
+                            <Setter TargetName="Pinpath" Property="Fill" Value="{StaticResource IconColorDisabled}" />
+                        </Trigger>
+                        <Trigger Property="Icon" Value="{x:Null}">
+                            <Setter TargetName="ItemContent" Property="Grid.ColumnSpan" Value="2" />
+                        </Trigger>
+                        <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionPinnableListBoxItemStyle}" TargetType="{x:Type shared:PinnableListBoxItem}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.Windows.Shared.PinnableListBoxItem}" BasedOn="{StaticResource SyncfusionPinnableListBoxItemStyle}" TargetType="{x:Type shared:PinnableListBoxItem}" />
+
+</ResourceDictionary>

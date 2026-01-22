@@ -1,0 +1,1483 @@
+<ResourceDictionary xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealDarkTheme.WPF"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:shared="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+                    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:grid="clr-namespace:Syncfusion.UI.Xaml.Grid;assembly=Syncfusion.SfGrid.WPF">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/ChromelessWindow/ChromelessWindow.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/FlatButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/Button.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/PrimaryButton.xaml"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/FlatPrimaryButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/ComboBox.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/GlyphButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/GlyphDropdownExpander.xaml"/>
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/Slider.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/TextBox.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/MSControl/ScrollViewer.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealDarkTheme.WPF;component/UpDown/UpDown.xaml" />
+		<ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Print/Themes/Generic.xaml" />
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealDarkTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealDarkTheme"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <grid:PageCountFormatConverter x:Key="PageCountFormatConverter" />
+    <grid:ZoomFactorFormatConverter x:Key="ZoomFactorFormatConverter" />
+    <grid:PrintOrientationConverter x:Key="PrintOrientationConverter" />
+    <grid:ScaleOptionsConverter x:Key="ScaleOptionsConverter" />
+
+    <!--Print Preview-->
+    
+    <Style TargetType="{x:Type grid:PrintOptionsControl}" x:Key="SyncfusionDataGridPrintOptionsControlStyle" BasedOn="{StaticResource PrintOptionsControlStyle}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type grid:PrintOptionsControl}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{StaticResource BorderAlt}" BorderThickness="0,0,1,0">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
+                                      VerticalScrollBarVisibility="Auto"
+                                      Background="Transparent"
+                                      Style="{StaticResource WPFScrollViewerStyle}">
+                            <Grid Width="270" HorizontalAlignment="Center">
+                                <StackPanel>
+                                    <StackPanel Margin="0 10 0 10"
+                                                Width="240" Orientation="Horizontal">
+                                        <Border Margin="0 0 10 0"
+                                                BorderThickness="1" BorderBrush="{StaticResource ContentBackground}" CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}">
+                                            <Button x:Name="PartPrintButton"                                                    
+                                                Height="56"
+                                                Width="56"
+                                                Command="{Binding PrintCommand}"                                            
+                                                Style="{StaticResource WPFFlatPrimaryButtonStyle}" 
+                                                Tag="Print">
+                                                <Grid SnapsToDevicePixels="True">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition />
+                                                        <RowDefinition />
+                                                    </Grid.RowDefinitions>
+                                                    <Path x:Name="printIcon"
+                                                          Data="M4 2.5C4 1.11929 5.11929 0 6.5 0H17.5C18.8807 0 20 1.11929 20 2.5V4.5H20.5C22.433 4.5 24 6.067 24 8V15.5C24 16.6046 23.1046 17.5 22 17.5H20V19.5C20 20.8807 18.8807 22 17.5 22H6.5C5.11929 22 4 20.8807 4 19.5V17.5H2C0.895431 17.5 0 16.6046 0 15.5V8C0 6.067 1.567 4.5 3.5 4.5H4V2.5ZM5 4.5H19V2.5C19 1.67157 18.3284 1 17.5 1H6.5C5.67157 1 5 1.67157 5 2.5V4.5ZM4 16.5V14.5C4 13.1193 5.11929 12 6.5 12H17.5C18.8807 12 20 13.1193 20 14.5V16.5H22C22.5523 16.5 23 16.0523 23 15.5V8C23 6.61929 21.8807 5.5 20.5 5.5H3.5C2.11929 5.5 1 6.61929 1 8V15.5C1 16.0523 1.44772 16.5 2 16.5H4ZM6.5 13C5.67157 13 5 13.6716 5 14.5V19.5C5 20.3284 5.67157 21 6.5 21H17.5C18.3284 21 19 20.3284 19 19.5V14.5C19 13.6716 18.3284 13 17.5 13H6.5Z"
+                                                          HorizontalAlignment="Center"
+                                                          Height="24" Width="24"
+                                                          Fill="{StaticResource IconColor}"
+                                                          VerticalAlignment="Center"/>
+                                                    <TextBlock x:Name="printTextBlock"
+                                                           Grid.Row="1"
+                                                           HorizontalAlignment="Center" 
+                                                           VerticalAlignment="Center"
+                                                           SnapsToDevicePixels="True"
+                                                           Height="12" FontSize="10"
+                                                           Text ="{grid:GridLocalizationResourceExtension ResourceName=Print}" />
+                                                </Grid>
+                                            </Button>
+                                        </Border>
+                                        <Border Margin="10 0 0 0"
+                                                BorderThickness="1" BorderBrush="{StaticResource ContentBackground}" CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}">
+                                            <Button x:Name="PartQuickPrintButton"
+                                                Height="56"
+                                                Width="56"
+                                                Command="{Binding QuickPrintCommand}"
+                                                Style="{StaticResource WPFFlatPrimaryButtonStyle}"
+                                                Tag="QuickPrint">
+                                                <Grid SnapsToDevicePixels="True">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition />
+                                                        <RowDefinition />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Height="22" Width="24">
+                                                        <Path x:Name="quickPrintIcon" 
+                                                          HorizontalAlignment="Center"
+                                                          Data="M4 2.5C4 1.11929 5.11929 0 6.5 0H17.5C18.8807 0 20 1.11929 20 2.5V4.5H20.5C22.433 4.5 24 6.067 24 8V11.4009C23.6945 11.0716 23.3598 10.7697 23 10.4995V8C23 6.61929 21.8807 5.5 20.5 5.5H3.5C2.11929 5.5 1 6.61929 1 8V15.5C1 16.0523 1.44772 16.5 2 16.5H4V14.5C4 13.1193 5.11929 12 6.5 12H12.4995C12.2628 12.315 12.0504 12.6493 11.865 13H6.5C5.67157 13 5 13.6716 5 14.5V19.5C5 20.3284 5.67157 21 6.5 21H12.4995C12.7697 21.3598 13.0716 21.6945 13.4009 22H6.5C5.11929 22 4 20.8807 4 19.5V17.5H2C0.895431 17.5 0 16.6046 0 15.5V8C0 6.067 1.567 4.5 3.5 4.5H4V2.5ZM5 4.5H19V2.5C19 1.67157 18.3284 1 17.5 1H6.5C5.67157 1 5 1.67157 5 2.5V4.5Z"
+                                                          Fill="{StaticResource IconColor}"
+                                                          VerticalAlignment="Center"/>
+                                                        <Path x:Name="quickPrintTickIcon" 
+                                                          Data="M24 16.5C24 19.5376 21.5376 22 18.5 22C15.4624 22 13 19.5376 13 16.5C13 13.4624 15.4624 11 18.5 11C21.5376 11 24 13.4624 24 16.5ZM21.1464 14.1464C21.3417 13.9512 21.6583 13.9512 21.8536 14.1464C22.0488 14.3417 22.0488 14.6583 21.8536 14.8536L17.8536 18.8536C17.6583 19.0488 17.3417 19.0488 17.1464 18.8536L15.1464 16.8536C14.9512 16.6583 14.9512 16.3417 15.1464 16.1464C15.3417 15.9512 15.6583 15.9512 15.8536 16.1464L17.5 17.7929L21.1464 14.1464Z"
+                                                          HorizontalAlignment="Center"
+                                                          Fill="{StaticResource IconColor}"
+                                                          VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <TextBlock x:Name="quickPrintTextBlock" Grid.Row="1"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           SnapsToDevicePixels="True"
+                                                           Height="12" FontSize="10"
+                                                           Text ="{grid:GridLocalizationResourceExtension ResourceName=QuickPrint}" />
+                                                </Grid>
+                                            </Button>
+                                        </Border>
+                                    </StackPanel>
+                                    <ComboBox x:Name="ScaleOptionCmbBox"
+                                              Height="38"
+                                              Width="240"
+                                              Margin="0 6"
+                                              Style="{StaticResource WPFComboBoxStyle}"
+                                              SelectedIndex="{Binding PrintScaleOption,
+                                                                      Mode=TwoWay,
+                                                                      Converter={StaticResource ScaleOptionsConverter}}">
+                                        <ComboBoxItem Tag="NoScale" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path x:Name="no_scaling"
+                                                          Height="16"
+                                                          Width="12"
+                                                          Margin="8 10 10 10"
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill" >
+                                                        <Path.Data>
+                                                            <PathGeometry>M0 2V14C0 14.276 0.052083 14.5365 0.15625 14.7812C0.260417 15.0208 0.403646 15.2318 0.585938 15.4141C0.768229 15.5964 0.981771 15.7396 1.22656 15.8438C1.46615 15.9479 1.72396 16 2 16H10C10.276 16 10.5365 15.9479 10.7812 15.8438C11.0208 15.7396 11.2318 15.5964 11.4141 15.4141C11.5964 15.2318 11.7396 15.0208 11.8438 14.7812C11.9479 14.5365 12 14.276 12 14V6.125C12 5.57292 11.8047 5.10156 11.4141 4.71094L7.28906 0.585938C6.89844 0.195312 6.42708 0 5.875 0H2C1.72396 0 1.46615 0.0520833 1.22656 0.15625C0.981771 0.260417 0.768229 0.403646 0.585938 0.585938C0.403646 0.768229 0.260417 0.981771 0.15625 1.22656C0.052083 1.46615 0 1.72396 0 2ZM1 2C1 1.86458 1.02604 1.73698 1.07812 1.61719C1.13021 1.49219 1.20312 1.38542 1.29688 1.29688C1.38542 1.20312 1.49219 1.13021 1.61719 1.07812C1.73698 1.02604 1.86458 1 2 1H5.875C5.89583 1 5.91667 1 5.9375 1C5.95833 1 5.97917 1.0026 6 1.00781V4C6 4.27604 6.05208 4.53646 6.15625 4.78125C6.26042 5.02083 6.40365 5.23177 6.58594 5.41406C6.76823 5.59635 6.98177 5.73958 7.22656 5.84375C7.46615 5.94792 7.72396 6 8 6H10.9922C10.9974 6.02083 11 6.04167 11 6.0625C11 6.08333 11 6.10417 11 6.125V14C11 14.1406 10.974 14.2734 10.9219 14.3984C10.8698 14.5182 10.7995 14.6224 10.7109 14.7109C10.6224 14.7995 10.5182 14.8698 10.3984 14.9219C10.2734 14.974 10.1406 15 10 15H2C1.85938 15 1.72917 14.974 1.60938 14.9219C1.48958 14.8698 1.38542 14.7995 1.29688 14.7109C1.20312 14.6172 1.13021 14.5104 1.07812 14.3906C1.02604 14.2708 1 14.1406 1 14V2ZM7 1.70312L10.2969 5H8C7.85938 5 7.72917 4.97396 7.60938 4.92188C7.48958 4.86979 7.38542 4.79948 7.29688 4.71094C7.20312 4.61719 7.13021 4.51042 7.07812 4.39062C7.02604 4.27083 7 4.14062 7 4V1.70312Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <TextBlock Grid.Column="1"
+                                                               HorizontalAlignment="Left"                                                             
+                                                               VerticalAlignment="Center"                                                   
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=NoScaling}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="FitGrid" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="24" Width="24" Margin="4,10,10,10"
+                                                         Data="M7.63636 0C7.83719 0 8 0.162806 8 0.363636V2.39483L8.83378 1.56105C8.97579 1.41904 9.20603 1.41904 9.34804 1.56105C9.49005 1.70306 9.49005 1.9333 9.34804 2.07531L7.89349 3.52986C7.75148 3.67187 7.52124 3.67187 7.37923 3.52986L5.92469 2.07531C5.78268 1.9333 5.78268 1.70306 5.92469 1.56105C6.0667 1.41904 6.29694 1.41904 6.43895 1.56105L7.27273 2.39483V0.363636C7.27273 0.162806 7.43553 0 7.63636 0ZM4 5.09091C4 4.48842 4.48842 4 5.09091 4H8.45455C8.55506 4 8.65109 4.0416 8.71983 4.11493L11.1744 6.73311C11.2376 6.80051 11.2727 6.88943 11.2727 6.98182V10.9091C11.2727 11.5116 10.7843 12 10.1818 12H5.09091C4.48842 12 4 11.5116 4 10.9091V5.09091ZM5.09091 4.72727C4.89008 4.72727 4.72727 4.89008 4.72727 5.09091V10.9091C4.72727 11.1099 4.89008 11.2727 5.09091 11.2727H10.1818C10.3826 11.2727 10.5455 11.1099 10.5455 10.9091V7.34545H8.09091V4.72727H5.09091ZM8.81818 5.28319L10.0697 6.61818H8.81818V5.28319ZM1.56105 6.28832C1.70306 6.14632 1.9333 6.14632 2.07531 6.28832L3.52986 7.74287C3.67187 7.88488 3.67187 8.11512 3.52986 8.25713L2.07531 9.71168C1.9333 9.85368 1.70306 9.85368 1.56105 9.71168C1.41904 9.56967 1.41904 9.33943 1.56105 9.19742L2.39483 8.36364H0.363636C0.162806 8.36364 0 8.20083 0 8C0 7.79917 0.162806 7.63636 0.363636 7.63636H2.39483L1.56105 6.80258C1.41904 6.66058 1.41904 6.43033 1.56105 6.28832ZM13.7117 6.28832C13.8537 6.43033 13.8537 6.66058 13.7117 6.80258L12.8779 7.63636H14.9091C15.1099 7.63636 15.2727 7.79917 15.2727 8C15.2727 8.20083 15.1099 8.36364 14.9091 8.36364H12.8779L13.7117 9.19742C13.8537 9.33943 13.8537 9.56967 13.7117 9.71168C13.5697 9.85368 13.3394 9.85368 13.1974 9.71168L11.7429 8.25713C11.6009 8.11512 11.6009 7.88488 11.7429 7.74287L13.1974 6.28832C13.3394 6.14632 13.5697 6.14632 13.7117 6.28832ZM5.92469 13.9247L7.37923 12.4701C7.52124 12.3281 7.75148 12.3281 7.89349 12.4701L9.34804 13.9247C9.49005 14.0667 9.49005 14.2969 9.34804 14.4389C9.20603 14.581 8.97579 14.581 8.83378 14.4389L8 13.6052V15.6364C8 15.8372 7.83719 16 7.63636 16C7.43553 16 7.27273 15.8372 7.27273 15.6364V13.6052L6.43895 14.4389C6.29694 14.581 6.0667 14.581 5.92469 14.4389C5.78268 14.2969 5.78268 14.0667 5.92469 13.9247Z"
+                                                         Fill="{StaticResource IconColor}"
+                                                         Stretch="Fill" />
+                                                    <TextBlock Grid.Column="1"
+                                                               HorizontalAlignment="Left"
+                                                               VerticalAlignment="Center"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=FitGridOnOnePage}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="FitColumns" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="24" Width="24" Margin="4,10,10,10"
+                                                          Data="M4 1.09091C4 0.488417 4.48842 0 5.09091 0H8.45455C8.55506 0 8.65109 0.041603 8.71983 0.11493L11.1744 2.73311C11.2376 2.80051 11.2727 2.88943 11.2727 2.98182V4.36364H10.5455V3.34545H8.09091V0.727273H5.09091C4.89008 0.727273 4.72727 0.890078 4.72727 1.09091V4.36364H4V1.09091ZM8.81818 1.28319L10.0697 2.61818H8.81818V1.28319ZM1.56105 3.0156C1.70306 2.87359 1.9333 2.87359 2.07531 3.0156L3.52986 4.47014C3.67187 4.61215 3.67187 4.84239 3.52986 4.9844L2.07531 6.43895C1.9333 6.58096 1.70306 6.58096 1.56105 6.43895C1.41904 6.29694 1.41904 6.0667 1.56105 5.92469L2.39483 5.09091H0.363636C0.162806 5.09091 0 4.9281 0 4.72727C0 4.52644 0.162806 4.36364 0.363636 4.36364H2.39483L1.56105 3.52986C1.41904 3.38785 1.41904 3.15761 1.56105 3.0156ZM13.7117 3.0156C13.8537 3.15761 13.8537 3.38785 13.7117 3.52986L12.8779 4.36364H14.9091C15.1099 4.36364 15.2727 4.52644 15.2727 4.72727C15.2727 4.9281 15.1099 5.09091 14.9091 5.09091H12.8779L13.7117 5.92469C13.8537 6.0667 13.8537 6.29694 13.7117 6.43895C13.5697 6.58096 13.3394 6.58096 13.1974 6.43895L11.7429 4.9844C11.6009 4.84239 11.6009 4.61215 11.7429 4.47014L13.1974 3.0156C13.3394 2.87359 13.5697 2.87359 13.7117 3.0156ZM4.72727 6.54545V8.36364C4.72727 8.56447 4.89008 8.72727 5.09091 8.72727H10.1818C10.3826 8.72727 10.5455 8.56447 10.5455 8.36364V6.54545H11.2727V8.36364C11.2727 8.96613 10.7843 9.45455 10.1818 9.45455H5.09091C4.48842 9.45455 4 8.96613 4 8.36364V6.54545H4.72727ZM4 12C4 11.3975 4.48842 10.9091 5.09091 10.9091H8.45455C8.55506 10.9091 8.65109 10.9507 8.71983 11.024L11.1744 13.6422C11.2376 13.7096 11.2727 13.7985 11.2727 13.8909V16H10.5455V14.2545H8.09091V11.6364H5.09091C4.89008 11.6364 4.72727 11.7992 4.72727 12V16H4V12ZM8.81818 12.1923L10.0697 13.5273H8.81818V12.1923Z" 
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill" />
+                                                    <TextBlock Grid.Column="1"
+                                                               HorizontalAlignment="Left"
+                                                               VerticalAlignment="Center"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=FitAllColumnsOnOnePage}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="FitRows" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="24" Width="24" Margin="4,10,10,10"
+                                                              Data="M4.46512 0C4.67062 0 4.83721 0.166592 4.83721 0.372093V2.45053L5.69038 1.59736C5.83569 1.45204 6.07129 1.45204 6.2166 1.59736C6.36191 1.74267 6.36191 1.97826 6.2166 2.12357L4.72823 3.61195C4.58291 3.75726 4.34732 3.75726 4.20201 3.61195L2.71363 2.12357C2.56832 1.97826 2.56832 1.74267 2.71363 1.59736C2.85895 1.45204 3.09454 1.45204 3.23985 1.59736L4.09302 2.45053V0.372093C4.09302 0.166592 4.25961 0 4.46512 0ZM1.11628 4.83721C0.910778 4.83721 0.744186 5.0038 0.744186 5.2093V10.4186C0.744186 10.6241 0.910778 10.7907 1.11628 10.7907H8.55814C8.76364 10.7907 8.93023 10.6241 8.93023 10.4186V7.34884H6.25116V4.83721H1.11628ZM6.99535 5.32399L8.36138 6.60465H6.99535V5.32399ZM0 5.2093C0 4.5928 0.499775 4.09302 1.11628 4.09302H6.62326C6.71779 4.09302 6.80878 4.129 6.87775 4.19366L9.55682 6.70529C9.63185 6.77563 9.67442 6.87389 9.67442 6.97674V10.4186C9.67442 11.0351 9.17464 11.5349 8.55814 11.5349H1.11628C0.499775 11.5349 0 11.0351 0 10.4186V5.2093ZM12.2791 4.83721C12.0736 4.83721 11.907 5.0038 11.907 5.2093V10.4186C11.907 10.6241 12.0736 10.7907 12.2791 10.7907H16V11.5349H12.2791C11.6626 11.5349 11.1628 11.0351 11.1628 10.4186V5.2093C11.1628 4.5928 11.6626 4.09302 12.2791 4.09302H16V4.83721H12.2791ZM2.71363 13.5043L4.20201 12.016C4.34732 11.8706 4.58291 11.8706 4.72823 12.016L6.2166 13.5043C6.36191 13.6496 6.36191 13.8852 6.2166 14.0306C6.07129 14.1759 5.83569 14.1759 5.69038 14.0306L4.83721 13.1774V15.2558C4.83721 15.4613 4.67062 15.6279 4.46512 15.6279C4.25961 15.6279 4.09302 15.4613 4.09302 15.2558V13.1774L3.23985 14.0306C3.09454 14.1759 2.85895 14.1759 2.71363 14.0306C2.56832 13.8852 2.56832 13.6496 2.71363 13.5043Z" 
+                                                              Fill="{StaticResource IconColor}"
+                                                              Stretch="Fill" />
+                                                    <TextBlock Grid.Column="1" Padding="0"
+                                                               HorizontalAlignment="Left"
+                                                               VerticalAlignment="Center"
+                                                              Text="{grid:GridLocalizationResourceExtension ResourceName=FitAllRowsOnOnePage}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox x:Name="PART_OrientationComboBox"
+                                              Height="38"
+                                              Width="240"
+                                              Margin="0 6"
+                                              Style="{StaticResource WPFComboBoxStyle}"
+                                              SelectedIndex="{Binding PrintOrientation,
+                                                                      Mode=TwoWay,
+                                                                      Converter={StaticResource PrintOrientationConverter},
+                                                                      ConverterParameter=SelectedItem}">
+                                        <ComboBoxItem Tag="Portrait" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="16"
+                                                          Width="14"
+                                                          Margin="8 10 10 10"
+                                                          Fill="{StaticResource IconColor}"
+                                                          RenderTransformOrigin="0.5,0.5"
+                                                          Stretch="Uniform" >
+                                                        <Path.Data>
+                                                            <PathGeometry>M12 2V14C12 14.276 11.9479 14.5365 11.8438 14.7812C11.7396 15.0208 11.5964 15.2318 11.4141 15.4141C11.2318 15.5964 11.0182 15.7396 10.7734 15.8438C10.5339 15.9479 10.276 16 10 16H2C1.72396 16 1.46354 15.9479 1.21875 15.8438C0.979167 15.7396 0.768229 15.5964 0.585938 15.4141C0.403646 15.2318 0.260417 15.0208 0.15625 14.7812C0.0520833 14.5365 0 14.276 0 14V6.125C0 5.57292 0.195312 5.10156 0.585938 4.71094L4.71094 0.585938C5.10156 0.195312 5.57292 0 6.125 0H10C10.276 0 10.5339 0.0520833 10.7734 0.15625C11.0182 0.260417 11.2318 0.403646 11.4141 0.585938C11.5964 0.768229 11.7396 0.981771 11.8438 1.22656C11.9479 1.46615 12 1.72396 12 2ZM11 2C11 1.86458 10.974 1.73698 10.9219 1.61719C10.8698 1.49219 10.7969 1.38542 10.7031 1.29688C10.6146 1.20312 10.5078 1.13021 10.3828 1.07812C10.263 1.02604 10.1354 1 10 1H6.125C6.10417 1 6.08333 1 6.0625 1C6.04167 1 6.02083 1.0026 6 1.00781V4C6 4.27604 5.94792 4.53646 5.84375 4.78125C5.73958 5.02083 5.59635 5.23177 5.41406 5.41406C5.23177 5.59635 5.01823 5.73958 4.77344 5.84375C4.53385 5.94792 4.27604 6 4 6H1.00781C1.0026 6.02083 1 6.04167 1 6.0625C1 6.08333 1 6.10417 1 6.125V14C1 14.1406 1.02604 14.2734 1.07812 14.3984C1.13021 14.5182 1.20052 14.6224 1.28906 14.7109C1.3776 14.7995 1.48177 14.8698 1.60156 14.9219C1.72656 14.974 1.85938 15 2 15H10C10.1406 15 10.2708 14.974 10.3906 14.9219C10.5104 14.8698 10.6146 14.7995 10.7031 14.7109C10.7969 14.6172 10.8698 14.5104 10.9219 14.3906C10.974 14.2708 11 14.1406 11 14V2ZM5 1.70312L1.70312 5H4C4.14062 5 4.27083 4.97396 4.39062 4.92188C4.51042 4.86979 4.61458 4.79948 4.70312 4.71094C4.79688 4.61719 4.86979 4.51042 4.92188 4.39062C4.97396 4.27083 5 4.14062 5 4V1.70312Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+
+                                                    <TextBlock Grid.Column="1"
+                                                               HorizontalAlignment="Left"
+                                                               VerticalAlignment="Center"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=PortraitOrientation}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="LandScape" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border >
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="12"
+                                                          Width="16"
+                                                          Margin="4 10 10 10"
+                                                          Fill="{StaticResource IconColor}"
+                                                          RenderTransformOrigin="0.5,0.5"
+                                                          Stretch="Uniform" >
+                                                        <Path.Data>
+                                                            <PathGeometry>M14.0391 0C14.2995 0 14.5469 0.0546875 14.7812 0.164062C15.0208 0.268229 15.2292 0.411458 15.4062 0.59375C15.5885 0.770833 15.7318 0.979167 15.8359 1.21875C15.9453 1.45312 16 1.70052 16 1.96094V10.0391C16 10.2995 15.9453 10.5495 15.8359 10.7891C15.7318 11.0234 15.5885 11.2318 15.4062 11.4141C15.2292 11.5911 15.0208 11.7344 14.7812 11.8438C14.5469 11.9479 14.2995 12 14.0391 12H1.96094C1.70052 12 1.45052 11.9479 1.21094 11.8438C0.976562 11.7344 0.768229 11.5911 0.585938 11.4141C0.408854 11.2318 0.265625 11.0234 0.15625 10.7891C0.0520833 10.5495 0 10.2995 0 10.0391V6.11719C0 5.85156 0.0494792 5.59635 0.148438 5.35156C0.252604 5.10156 0.398438 4.88542 0.585938 4.70312L4.71094 0.585938C4.89844 0.398438 5.11198 0.255208 5.35156 0.15625C5.59635 0.0520833 5.85417 0 6.125 0H14.0391ZM15 2C15 1.86458 14.974 1.73698 14.9219 1.61719C14.8698 1.49219 14.7969 1.38542 14.7031 1.29688C14.6146 1.20312 14.5078 1.13021 14.3828 1.07812C14.263 1.02604 14.1354 1 14 1H6.125C6.10417 1 6.08333 1 6.0625 1C6.04167 1 6.02083 1.0026 6 1.00781V4.03906C6 4.3099 5.94531 4.5651 5.83594 4.80469C5.72656 5.03906 5.58073 5.24479 5.39844 5.42188C5.21615 5.59896 5.0026 5.73958 4.75781 5.84375C4.51823 5.94792 4.26562 6 4 6H1.00781C1.0026 6.02604 1 6.0651 1 6.11719V10C1 10.1406 1.02604 10.2734 1.07812 10.3984C1.13021 10.5182 1.20052 10.6224 1.28906 10.7109C1.3776 10.7995 1.48177 10.8698 1.60156 10.9219C1.72656 10.974 1.85938 11 2 11H14C14.1406 11 14.2708 10.974 14.3906 10.9219C14.5104 10.8698 14.6146 10.7995 14.7031 10.7109C14.7969 10.6172 14.8698 10.5104 14.9219 10.3906C14.974 10.2708 15 10.1406 15 10V2ZM5 1.70312L1.71094 5H4C4.14062 5 4.27083 4.97396 4.39062 4.92188C4.51042 4.86979 4.61458 4.79948 4.70312 4.71094C4.79688 4.61719 4.86979 4.51042 4.92188 4.39062C4.97396 4.27083 5 4.14062 5 4V1.70312Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <TextBlock Grid.Column="1"
+                                                               HorizontalAlignment="Left"
+                                                               VerticalAlignment="Center"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=LandScapeOrientation}" />
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox x:Name="PART_PapersComboBox"
+                                              Height="38"
+                                              Width="240"
+                                              Margin="0 6"
+                                              Style="{StaticResource WPFComboBoxStyle}"
+                                              SelectedIndex="3">
+                                        <ComboBoxItem Tag="Letter" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                        Fill="{StaticResource IconColor}"
+                                                          Width="13"
+                                                          Height="16"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                           Margin="8 10 10 10"
+                                                          Stretch="Fill">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M81.4015,46.427L80.4015,46.427L61.4015,46.427L60.4015,46.427L60.4015,47.427L60.4015,71.427L60.4015,72.427L61.4015,72.427L80.4015,72.427L81.4015,72.427L81.4015,71.427L81.4015,47.427z M80.4015,71.427L61.4015,71.427L61.4015,47.427L80.4015,47.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Letter" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="21.59 cm * 27.94 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Legal" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                           Margin="8 10 10 10"
+                                                          Height="16"
+                                                          Width="10">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M80.402,81.427L61.402,81.427L61.402,113.427L80.402,113.427z M79.402,112.427L62.402,112.427L62.402,82.427L79.402,82.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Legal" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="21.59 cm * 35.56 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Executive" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid  >
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path 
+                                                          Fill="{StaticResource IconColor}"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          Width="12"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          Stretch="Fill" >
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M79.4015,124.427L78.4015,124.427L62.4015,124.427L61.4015,124.427L61.4015,125.427L61.4015,148.427L61.4015,149.427L62.4015,149.427L78.4015,149.427L79.4015,149.427L79.4015,148.427L79.4015,125.427z M78.4015,148.427L62.4015,148.427L62.4015,125.427L78.4015,125.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+
+                                                    <Grid Grid.Column="1" Margin="3 0 0 0" >
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Executive" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"                                                       
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="18.41 cm * 26.67 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="A4" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                          Width="11"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M81.4015,169.427L80.4015,169.427L62.4015,169.427L61.4015,169.427L61.4015,170.427L61.4015,196.427L61.4015,197.427L62.4015,197.427L80.4015,197.427L81.4015,197.427L81.4015,196.427L81.4015,170.427z M80.4015,196.427L62.4015,196.427L62.4015,170.427L80.4015,170.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="A4" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="21 cm * 29.7 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Envelope #10" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                          Width="8"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M76.4015,223.427L75.4015,223.427L66.4015,223.427L65.4015,223.427L65.4015,224.427L65.4015,245.427L65.4015,246.427L66.4015,246.427L75.4015,246.427L76.4015,246.427L76.4015,245.427L76.4015,224.427z M75.4015,245.427L66.4015,245.427L66.4015,224.427L75.4015,224.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Envelope #10" />
+                                                        <TextBlock Grid.Row="1"  
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="10.48 cm * 24.13 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Envelope DL" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path 
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                          Width="9"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M77.4015,282.427L76.4015,282.427L66.4015,282.427L65.4015,282.427L65.4015,283.427L65.4015,302.427L65.4015,303.427L66.4015,303.427L76.4015,303.427L77.4015,303.427L77.4015,302.427L77.4015,283.427z M76.4015,302.427L66.4015,302.427L66.4015,283.427L76.4015,283.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Envelope DL" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="11 cm * 22 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Envelope C5" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                          Width="12"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M78.4015,346.427L77.4015,346.427L63.4015,346.427L62.4015,346.427L62.4015,347.427L62.4015,367.427L62.4015,368.427L63.4015,368.427L77.4015,368.427L78.4015,368.427L78.4015,367.427L78.4015,347.427z M77.4015,367.427L63.4015,367.427L63.4015,347.427L77.4015,347.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Envelope C5" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="16.2 cm * 22.9 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Envelope B5" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path 
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill"
+                                                          Width="11"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M79.4015,406.427L78.4015,406.427L63.4015,406.427L62.4015,406.427L62.4015,407.427L62.4015,429.427L62.4015,430.427L63.4015,430.427L78.4015,430.427L79.4015,430.427L79.4015,429.427L79.4015,407.427z M78.4015,429.427L63.4015,429.427L63.4015,407.427L78.4015,407.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Envelope B5" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   Text="17.6 cm * 25 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Envelope Monarch" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path
+                                                          Fill="{StaticResource IconColor}" 
+                                                          Stretch="Fill"
+                                                          Width="9"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center">
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M76.4015,455.427L75.4015,455.427L66.4015,455.427L65.4015,455.427L65.4015,456.427L65.4015,473.427L65.4015,474.427L66.4015,474.427L75.4015,474.427L76.4015,474.427L76.4015,473.427L76.4015,456.427z M75.4015,473.427L66.4015,473.427L66.4015,456.427L75.4015,456.427z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="Envelope Monarch" />
+                                                        <TextBlock Grid.Row="1"
+                                                                   Height="14"
+                                                                   FontSize="10"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Top"
+                                                                   Text="9.84 cm * 19.05 cm" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Custom Size" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Width="12"
+                                                          Height="16"
+                                                          Margin="8 10 10 10"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"                                                         
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill" >
+                                                        <Path.Data>
+                                                            <PathGeometry>F1M355.128,227.697L376.944,227.697L376.944,198.697L355.128,198.697z M377.945,228.697L354.129,228.697L354.129,197.697L377.945,197.697z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1" Margin="4 0 0 0">
+                                                        <TextBlock HorizontalAlignment="Left"                                                                   
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=CustomSize}" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                    </ComboBox>
+                                    <TextBlock Margin="0,4" 
+                                               Width="240"
+                                               Height="14"
+                                               FontSize="10"
+                                               Text="{grid:GridLocalizationResourceExtension ResourceName=CustomPageSizes}" />
+                                    <Border x:Name="PART_CustomPageSizeBorder"
+                                            Margin="0,0,0,10"
+                                            Height="76"
+                                            Width="240"
+                                            BorderThickness="0"
+                                            CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}"
+                                            Background="{StaticResource ContentBackgroundAlt1}"
+                                            BorderBrush="{StaticResource ContentBackground}"
+                                            SnapsToDevicePixels="True">
+                                        <Grid x:Name="PART_CustomPageSizeGrid" Margin="5">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="35" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel x:Name="PART_PageWidthUpDownPanel"
+                                                        Margin="3 0 3 3"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        Orientation="Horizontal"
+                                                        SnapsToDevicePixels="True">
+                                                <TextBlock HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           IsHitTestVisible="False"
+                                                           SnapsToDevicePixels="True"
+                                                           Height="16"
+                                                           FontSize="12"
+                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Width}" />
+                                                <shared:UpDown x:Name="PART_PageWidthUpDown"
+                                                              Style="{StaticResource SyncfusionUpDownStyle}"
+                                                               EnableFocusedColors="True"
+                                                               Width="61"
+                                                               Margin="3 0 0 0"
+                                                               Height="24"
+                                                               HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"
+                                                               TextAlignment="Center"
+                                                               MinValue="1"
+                                                               Value="21" />
+                                            </StackPanel>
+                                            <StackPanel x:Name="PART_PageHeightUpDownPanel"
+                                                        Grid.Column="1"
+                                                        Margin="3 0 3 3"
+                                                        HorizontalAlignment="Right"
+                                                        VerticalAlignment="Center"
+                                                        Orientation="Horizontal"
+                                                        SnapsToDevicePixels="True">
+                                                <TextBlock HorizontalAlignment="Right"
+                                                           VerticalAlignment="Center"
+                                                           IsHitTestVisible="False"
+                                                           Margin="1,0,0,0"
+                                                           Height="16"
+                                                           FontSize="12"
+                                                           SnapsToDevicePixels="True"
+                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Height}" />
+                                                <shared:UpDown x:Name="PART_PageHeightUpDown"
+                                                               EnableFocusedColors="True"
+                                                               Width="61" 
+                                                               Margin="3 0 0 0"
+                                                               Height="24"
+                                                               Style="{StaticResource SyncfusionUpDownStyle}"
+                                                               HorizontalAlignment="Right"
+                                                               TextAlignment="Center"
+                                                               MinValue="1"
+                                                               Value="29.7" />
+                                            </StackPanel>
+                                            <Button x:Name="PART_PageSizeOkButton"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    HorizontalAlignment="Right"
+                                                    Width="70"
+                                                    Height="25"
+                                                    Margin="0 0 3 4"
+                                                    Content="{grid:GridLocalizationResourceExtension ResourceName=OK}"
+                                                    SnapsToDevicePixels="True"
+                                                    Style="{StaticResource WPFButtonStyle}" />
+                                        </Grid>
+                                    </Border>
+                                    <ComboBox x:Name="PART_MarginComboBox"
+                                              Width="240"
+                                              Height="38"
+                                              Margin="0,8"
+                                              Style="{StaticResource WPFComboBoxStyle}"
+                                              SelectedIndex="0">
+                                        <ComboBoxItem Tag="Normal" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="25" Width="24" VerticalAlignment="Top"
+                                                            Margin="4,3,8,3"
+                                                            Data="M0 2.5C0 1.11929 1.11929 0 2.5 0H14.5C15.8807 0 17 1.11929 17 2.5V21.5C17 22.8807 15.8807 24 14.5 24H2.5C1.11929 24 0 22.8807 0 21.5V2.5ZM2.5 1C1.67157 1 1 1.67157 1 2.5V4H4V1H2.5ZM5 1V4H12V1H5ZM13 1V4H16V2.5C16 1.67157 15.3284 1 14.5 1H13ZM16 5H13V19H16V5ZM16 20H13V23H14.5C15.3284 23 16 22.3284 16 21.5V20ZM12 23V20H5V23H12ZM4 23V20H1V21.5C1 22.3284 1.67157 23 2.5 23H4ZM1 19H4V5H1V19ZM5 5V19H12V5H5Z"
+                                                            Fill="{StaticResource IconColor}"/>
+
+                                                    <Grid Grid.Column="1">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Margin="3 1 3 0"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=Normal}" />
+                                                        <Grid Grid.Row="1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition />
+                                                                <RowDefinition />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="50"/>
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <StackPanel Orientation="Horizontal" Margin="3 0 3 3">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Left}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.5 cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Right}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.5 cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="3 0 3 3">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Top}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           VerticalAlignment="Top"
+                                                                           Text=" 2.5 cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1"
+                                                                        Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Bottom}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.5 cm" />
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Narrow" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Height="25" Width="24"
+                                                            Margin="4,3,8,3"
+                                                            VerticalAlignment="Top"  
+                                                            Data="M0 2.5C0 1.11929 1.11929 0 2.5 0H14.5C15.8807 0 17 1.11929 17 2.5V21.5C17 22.8807 15.8807 24 14.5 24H2.5C1.11929 24 0 22.8807 0 21.5V2.5ZM2.5 1C1.67157 1 1 1.67157 1 2.5V3H3V1H2.5ZM4 1V3H13V1H4ZM14 1V3H16V2.5C16 1.67157 15.3284 1 14.5 1H14ZM16 4H14V20H16V4ZM16 21H14V23H14.5C15.3284 23 16 22.3284 16 21.5V21ZM13 23V21H4V23H13ZM3 23V21H1V21.5C1 22.3284 1.67157 23 2.5 23H3ZM1 20H3V4H1V20ZM4 4V20H13V4H4Z"
+                                                            Fill="{StaticResource IconColor}" />
+                                                    <Grid Grid.Column="1">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Margin="3 1 3 0"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=Narrow}" />
+                                                        <Grid Grid.Row="1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition />
+                                                                <RowDefinition />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="50"/>
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <StackPanel Orientation="Horizontal" Margin="3 0 3 3">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Left}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 1.27cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Right}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 1.27cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Margin="3 0 3 3" Grid.Row="1" Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Top}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 1.27cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1"
+                                                                        Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Bottom}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 1.27cm" />
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Moderate" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Data="M0 2.5C0 1.11929 1.11929 0 2.5 0H14.5C15.8807 0 17 1.11929 17 2.5V21.5C17 22.8807 15.8807 24 14.5 24H2.5C1.11929 24 0 22.8807 0 21.5V2.5ZM2.5 1C1.67157 1 1 1.67157 1 2.5V5H5V1H2.5ZM6 1V5H11V1H6ZM12 1V5H16V2.5C16 1.67157 15.3284 1 14.5 1H12ZM16 6H12V18H16V6ZM16 19H12V23H14.5C15.3284 23 16 22.3284 16 21.5V19ZM11 23V19H6V23H11ZM5 23V19H1V21.5C1 22.3284 1.67157 23 2.5 23H5ZM1 18H5V6H1V18ZM6 6V18H11V6H6Z"
+                                                              Fill="{StaticResource IconColor}"
+                                                              Height="25"
+                                                              Width="24"
+                                                              VerticalAlignment="Top"
+                                                              Margin="4,3,8,3"/>
+                                                    <Grid Grid.Column="1">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Margin="3 1 3 0"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=Moderate}" />
+                                                        <Grid Grid.Row="1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition />
+                                                                <RowDefinition />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="50"/>
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <StackPanel Orientation="Horizontal" Margin="3 0 3 3">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Left}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           VerticalAlignment="Top"
+                                                                           Text=" 1.91cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Right}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 1.91cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1" Margin="3 0 3 3" Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Top}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.54cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1"
+                                                                        Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Bottom}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.54cm" />
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Wide" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Data="M0 2.5C0 1.11929 1.11929 0 2.5 0H14.5C15.8807 0 17 1.11929 17 2.5V21.5C17 22.8807 15.8807 24 14.5 24H2.5C1.11929 24 0 22.8807 0 21.5V2.5ZM2.5 1C1.67157 1 1 1.67157 1 2.5V5H6V1H2.5ZM7 1V5H10V1H7ZM11 1V5H16V2.5C16 1.67157 15.3284 1 14.5 1H11ZM16 6H11V18H16V6ZM16 19H11V23H14.5C15.3284 23 16 22.3284 16 21.5V19ZM10 23V19H7V23H10ZM6 23V19H1V21.5C1 22.3284 1.67157 23 2.5 23H6ZM1 18H6V6H1V18ZM7 6V18H10V6H7Z"
+                                                        Fill="{StaticResource IconColor}"
+                                                        Width="24"
+                                                        Height="25"
+                                                        Margin="4,3,8,3"
+                                                        VerticalAlignment="Top" />
+                                                    <Grid Grid.Column="1">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Margin="3 1 3 0"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=Wide}" />
+                                                        <Grid Grid.Row="1">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition />
+                                                                <RowDefinition />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="50"/>
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <StackPanel Orientation="Horizontal" Margin="3 0 3 3">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Left}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 5.08cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Right}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 5.08cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1" Margin="3 0 3 3" Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Top}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text=" 2.54cm" />
+                                                            </StackPanel>
+                                                            <StackPanel Grid.Row="1"
+                                                                        Grid.Column="2"
+                                                                        Margin="3 0 3 3"
+                                                                        Orientation="Horizontal">
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="{grid:GridLocalizationResourceExtension ResourceName=Bottom}" />
+                                                                <TextBlock HorizontalAlignment="Left"
+                                                                           VerticalAlignment="Top"
+                                                                           Height="14"
+                                                                           FontSize="10"
+                                                                           Text="  2.54cm" />
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                        <ComboBoxItem Tag="Custom Margin" Style="{StaticResource WPFComboBoxItemStyle}">
+                                            <Border Background="Transparent">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*" />
+                                                        <ColumnDefinition Width="8*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Path Width ="17"
+                                                          Height="24"
+                                                          Margin="0 3 8 3"
+                                                          HorizontalAlignment="Left"
+                                                          VerticalAlignment="Top"
+                                                          Fill="{StaticResource IconColor}"
+                                                          Stretch="Fill" >
+                                                        <Path.Data>
+                                                            <PathGeometry>M15 1H2C1.44771 1 1 1.44772 1 2V22C1 22.5523 1.44772 23 2 23H15C15.5523 23 16 22.5523 16 22V2C16 1.44772 15.5523 1 15 1ZM2 0C0.895431 0 0 0.89543 0 2V22C0 23.1046 0.89543 24 2 24H15C16.1046 24 17 23.1046 17 22V2C17 0.895431 16.1046 0 15 0H2Z</PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                    <Grid Grid.Column="1">
+                                                        <TextBlock Margin="3 1 3 0"
+                                                                   HorizontalAlignment="Left"
+                                                                   VerticalAlignment="Center"
+                                                                   Text="{grid:GridLocalizationResourceExtension ResourceName=CustomMargin}" />
+                                                    </Grid>
+                                                </Grid>
+                                            </Border>
+                                        </ComboBoxItem>
+                                    </ComboBox>
+                                    <TextBlock Margin="0,4" 
+                                               Width="240"
+                                               Height="14"
+                                               FontSize="10"
+                                               Text="{grid:GridLocalizationResourceExtension ResourceName=CustomMargins}" />
+                                    <Border x:Name="PART_CustomPageMarginBorder"
+                                            Margin="0,0,0,10"
+                                            Height="110"
+                                            Width="240"
+                                            BorderBrush="{StaticResource ContentBackground}"
+                                            Background="{StaticResource ContentBackgroundAlt1}"
+                                            BorderThickness="0"
+                                            CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}"
+                                            SnapsToDevicePixels="True">
+                                        <Grid x:Name="PART_CustomPageMarginGrid" Margin="5"
+                                             SnapsToDevicePixels="True">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="35" />
+                                                <RowDefinition Height="35" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel x:Name="PART_PageLeftUpDownPanel"
+                                                            Margin="3 0 3 3"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Orientation="Horizontal"
+                                                            SnapsToDevicePixels="True">
+                                                    <TextBlock HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"
+                                                               SnapsToDevicePixels="True"
+                                                               Height="16"
+                                                               FontSize="12"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=Left}" />
+                                                    <shared:UpDown x:Name="PART_LeftUpDown"
+                                                                  EnableFocusedColors="True"
+                                                                   Width="61"
+                                                                   Height="24"
+                                                                   Margin="3 0 0 0"
+                                                                   HorizontalAlignment="Center"
+                                                                   VerticalAlignment="Center"
+                                                                   TextAlignment="Center"
+                                                                   Style="{StaticResource SyncfusionUpDownStyle}"
+                                                                   MinValue="0"
+                                                                   MaxValue ="22"
+                                                                   Value="2.5" />
+                                                </StackPanel>
+                                                <StackPanel x:Name="PART_PageRightUpDownPanel"
+                                                            Grid.Column="1"
+                                                            Margin="3 0 3 3"
+                                                            HorizontalAlignment="Right"
+                                                            Orientation="Horizontal"
+                                                            SnapsToDevicePixels="True">
+                                                    <TextBlock HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"
+                                                               Height="16"
+                                                               FontSize="12"
+                                                               SnapsToDevicePixels="True"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=Right}" />
+                                                    <shared:UpDown x:Name="PART_RightUpDown"
+                                                                  EnableFocusedColors="True"
+                                                                   Width="61"
+                                                                   Margin="3 0 0 0"
+                                                                   Height="24"
+                                                                   HorizontalAlignment="Center"
+                                                                   VerticalAlignment="Center"
+                                                                   TextAlignment="Center"
+                                                                   Style="{StaticResource SyncfusionUpDownStyle}"
+                                                                   MinValue="0"
+                                                                   MaxValue ="22"
+                                                                   Value="2.5" />
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="1" SnapsToDevicePixels="True">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel x:Name="PART_PageTopUpDownPanel"
+                                                            Margin="3 0 3 3"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Orientation="Horizontal"
+                                                            SnapsToDevicePixels="True">
+                                                    <TextBlock HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"
+                                                               Height="16"
+                                                               FontSize="12"
+                                                               SnapsToDevicePixels="True"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=Top}" />
+                                                    <shared:UpDown x:Name="PART_TopUpDown"
+                                                                  EnableFocusedColors="True"
+                                                                   Width="61"
+                                                                   Margin="3 0 0 0"
+                                                                   Height="24"
+                                                                   HorizontalAlignment="Center"
+                                                                   VerticalAlignment="Center"
+                                                                   TextAlignment="Center"
+                                                                   Style="{StaticResource SyncfusionUpDownStyle}"
+                                                                   MaxValue ="22"
+                                                                   Value="2.5" />
+                                                </StackPanel>
+                                                <StackPanel x:Name="PART_PageBottomUpDownPanel"
+                                                            Grid.Column="1"
+                                                            Margin="3 0 3 3"
+                                                            HorizontalAlignment="Right"
+                                                            Orientation="Horizontal"
+                                                            SnapsToDevicePixels="True">
+                                                    <TextBlock HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"
+                                                               Height="16"
+                                                               FontSize="12"
+                                                               SnapsToDevicePixels="True"
+                                                               Text="{grid:GridLocalizationResourceExtension ResourceName=Bottom}" />
+                                                    <shared:UpDown x:Name="PART_BottomUpDown"
+                                                                  EnableFocusedColors="True"
+                                                                   Width="61"
+                                                                   Margin="3 0 0 0"
+                                                                   Height="24"
+                                                                   HorizontalAlignment="Center"
+                                                                   VerticalAlignment="Center"
+                                                                   TextAlignment="Center"
+                                                                   Style="{StaticResource SyncfusionUpDownStyle}"
+                                                                   MaxValue ="22"
+                                                                   Value="2.5" />
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="2" SnapsToDevicePixels="True" Margin="0 0 3 4">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <Button x:Name="PART_MarginOkButton"
+                                                        Grid.Column="1"
+                                                        HorizontalAlignment="Right"
+                                                        Width="70"
+                                                        Height="25"
+                                                        Content="{grid:GridLocalizationResourceExtension ResourceName=OK}"
+                                                        SnapsToDevicePixels="True"
+                                                        Style="{StaticResource WPFButtonStyle}" />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="sfskin:SfSkinManager.SizeMode" Value="Touch">
+                            <Setter Property="Height" TargetName="PART_CustomPageSizeBorder" Value="85" />
+                            <Setter Property="Width" TargetName="PART_PageWidthUpDown" Value="63" />
+                            <Setter Property="Width" TargetName="PART_PageHeightUpDown" Value="63" />
+                            <Setter Property="Margin" TargetName="PART_CustomPageSizeGrid" Value="2,5,5,2" />
+                            <Setter Property="Margin" TargetName="PART_PageWidthUpDownPanel" Value="0,1,0,1" />
+                            <Setter Property="Margin" TargetName="PART_PageHeightUpDownPanel" Value="0,1,0,1" />
+                            <Setter Property="Margin" TargetName="PART_PageSizeOkButton" Value="0,2,0,2" />
+                            <Setter Property="Height" TargetName="PART_CustomPageMarginBorder" Value="125" />
+                            <Setter Property="Margin" TargetName="PART_CustomPageMarginGrid" Value="2,5,5,2" />
+                            <Setter Property="Margin" TargetName="PART_PageLeftUpDownPanel" Value="0,1,0,1" />
+                            <Setter Property="Margin" TargetName="PART_PageRightUpDownPanel" Value="0,1,0,1" />
+                            <Setter Property="Margin" TargetName="PART_PageTopUpDownPanel" Value="0,2,0,1" />
+                            <Setter Property="Margin" TargetName="PART_PageBottomUpDownPanel" Value="0,2,0,1" />
+                            <Setter Property="Width" TargetName="PART_LeftUpDown" Value="63" />
+                            <Setter Property="Width" TargetName="PART_RightUpDown" Value="63" />
+                            <Setter Property="Width" TargetName="PART_TopUpDown" Value="63" />
+                            <Setter Property="Width" TargetName="PART_BottomUpDown" Value="63" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" SourceName="PartQuickPrintButton" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="quickPrintTextBlock" Property="Foreground" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}}"/>
+                            <Setter TargetName="quickPrintIcon" Property="Fill" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}}"/>
+                            <Setter TargetName="quickPrintTickIcon" Property="Fill" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" SourceName="PartPrintButton" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="printTextBlock" Property="Foreground" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}}"/>
+                            <Setter TargetName="printIcon" Property="Fill" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type grid:PrintOptionsControl}" BasedOn="{StaticResource SyncfusionDataGridPrintOptionsControlStyle}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Grid.PrintOptionsControl}" TargetType="{x:Type grid:PrintOptionsControl}" BasedOn="{StaticResource SyncfusionDataGridPrintOptionsControlStyle}"/>
+
+    <Style TargetType="{x:Type grid:GridPrintPreviewControl}" x:Key="SyncfusionGridPrintPreviewControlStyle" BasedOn="{StaticResource GridPrintPreviewControlStyle}">
+        <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type grid:GridPrintPreviewControl}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="270" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <grid:PrintOptionsControl DataContext="{Binding ElementName=PART_PrintPreviewAreaControl}" />
+
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid Background="{StaticResource ContentBackgroundAlt2}">
+                                <grid:PrintPreviewAreaControl x:Name="PART_PrintPreviewAreaControl"  />
+                            </Grid>
+                            <Grid Grid.Row="1" Background="{StaticResource ContentBackgroundAlt1}" DataContext="{Binding ElementName=PART_PrintPreviewAreaControl}">
+                                <Border BorderThickness="0,1,0,0" BorderBrush="{StaticResource BorderAlt}">
+                                    <DockPanel>
+                                        <StackPanel HorizontalAlignment="Left"
+                                                VerticalAlignment="Center"
+                                                DockPanel.Dock="Left"
+                                                Orientation="Horizontal">
+                                            <Button x:Name="FirstPageButton"
+                                                Margin="15,0,0,0"
+                                                Width="24"
+                                                Height="24"
+                                                Command="{Binding FirstCommand}"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path  Width="7.5"
+                                                  Height="9"
+                                                  Stretch="Fill"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0,0.01300294 L1.0000002,0.01300294 1.0000002,16.013003 0,16.013003 z M11.278009,0 L11.972009,0.72000102 4.4380183,7.9909952 11.99801,15.286999 11.30401,16.007 2.9970098,7.9909952 z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                            <Button x:Name="PerviousPageButton"
+                                                Margin="5,0"
+                                                Width="24"
+                                                Height="24"
+                                                Command="{Binding PreviousCommand}"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path Width="4.5"
+                                                  Height="9"
+                                                  Stretch="Fill"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                                                    <Path.Data>
+                                                        <PathGeometry>M7.3199828,0 L8.0119999,0.72200069 1.4449779,7.0109903 7.9879826,13.278008 7.2970031,14.001 0,7.0109903 z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                            <TextBox x:Name="PART_TextBox"
+                                                 Width="25"
+                                                 Height="25"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center"
+                                                 TextAlignment="Center"
+                                                 Text="{Binding PageIndex}" 
+                                                 Style="{StaticResource WPFTextBoxStyle}" />
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   TextAlignment="Center"
+                                                   Text="{Binding TotalPages,
+                                                                  Converter={StaticResource PageCountFormatConverter}}" />
+                                            <Button x:Name="NextPageButton"
+                                                Margin="5,0"
+                                                Width="24"
+                                                Height="24"
+                                                Command="{Binding NextCommand}"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path Width="4.5"
+                                                  Height="9"
+                                                  Stretch="Fill"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0.6929932,0 L8.0000001,7.0109903 0.71600357,14.001 0.02398695,13.279 6.5559998,7.0109903 0,0.72099343 z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                            <Button x:Name="LastPageButton"
+                                                Margin="0,0,15,0"
+                                                Width="24"
+                                                Height="24"
+                                                Command="{Binding LastCommand}"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path Width="7.5"
+                                                  Height="9"
+                                                  Stretch="Fill"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0.69400204,0.0059965644 L9.0010006,8.0220015 0.72097958,16.012997 0.026977501,15.292996 7.5600173,8.0220015 0,0.72599783 z M10.998004,0 L11.998004,0 11.998004,16 10.998004,16 z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                        </StackPanel>
+                                        <Grid HorizontalAlignment="Right" DockPanel.Dock="Right" Margin="0,0,8,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Margin="8,0,8,0"
+                                                   Text="{Binding ElementName=PART_ZoomSlider,
+                                                                  Path=Value,
+                                                                  Converter={StaticResource ZoomFactorFormatConverter}}" />
+                                            <Button x:Name="PART_PlusZoomButton"
+                                                Grid.Column="3"
+                                                Width="24"
+                                                Height="24"
+                                                Margin="8,0,8,0"
+                                                HorizontalAlignment="Center"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path x:Name="pluspath"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center" 
+                                                  Width="12"
+                                                  Height="12"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                                                  Stretch="Fill" 
+                                                  SnapsToDevicePixels="True">
+                                                    <Path.Data>
+                                                        <PathGeometry>M13 6.5C13 6.63542 12.9505 6.7526 12.8516 6.85156C12.7526 6.95052 12.6354 7 12.5 7H7V12.5C7 12.6354 6.95052 12.7526 6.85156 12.8516C6.7526 12.9505 6.63542 13 6.5 13C6.36458 13 6.2474 12.9505 6.14844 12.8516C6.04948 12.7526 6 12.6354 6 12.5V7H0.5C0.364583 7 0.247396 6.95052 0.148438 6.85156C0.0494792 6.7526 0 6.63542 0 6.5C0 6.36458 0.0494792 6.2474 0.148438 6.14844C0.247396 6.04948 0.364583 6 0.5 6H6V0.5C6 0.364583 6.04948 0.247396 6.14844 0.148438C6.2474 0.0494792 6.36458 0 6.5 0C6.63542 0 6.7526 0.0494792 6.85156 0.148438C6.95052 0.247396 7 0.364583 7 0.5V6H12.5C12.6354 6 12.7526 6.04948 12.8516 6.14844C12.9505 6.2474 13 6.36458 13 6.5Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                            <Slider x:Name="PART_ZoomSlider"
+                                                Grid.Column="2"
+                                                Width="150"  
+                                                Height="20"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                HorizontalContentAlignment="Center"
+                                                Maximum="500"
+                                                Minimum="10"
+                                                Orientation="Horizontal"
+                                                IsMoveToPointEnabled="True"
+                                                Value="{Binding ZoomFactor}"
+                                                Style="{StaticResource WPFSliderStyle}"/>
+                                            <Button x:Name="PART_MinusZoomButton"
+                                                Grid.Column="1"
+                                                Width="24"
+                                                Height="24"
+                                                Margin="8,0,8,0"
+                                                HorizontalAlignment="Center"
+                                                Style="{StaticResource WPFGlyphButtonStyle}">
+                                                <Path x:Name="minuspath"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center" 
+                                                  Width="12" 
+                                                  Height="1"
+                                                  Fill="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                                                  Stretch="None" 
+                                                  SnapsToDevicePixels="True">
+                                                    <Path.Data>
+                                                        <PathGeometry>M0.302734 1.07275C0.364563 1.09888 0.429688 1.11182 0.498047 1.11182H9.50195C9.5415 1.11182 9.57947 1.10742 9.61578 1.09863C9.64215 1.09229 9.66772 1.08374 9.69238 1.07275C9.75421 1.04663 9.80792 1.01099 9.85352 0.965332C9.87006 0.94873 9.88525 0.931396 9.89923 0.913086C9.92377 0.881104 9.94434 0.846436 9.96094 0.809082C9.9751 0.775635 9.98541 0.740967 9.99188 0.705322C9.99731 0.675537 10 0.64502 10 0.61377C10 0.576172 9.99603 0.540039 9.9881 0.505371C9.98169 0.477051 9.9726 0.449707 9.96094 0.42334C9.93488 0.361572 9.89911 0.307861 9.85352 0.262207C9.80792 0.213379 9.75421 0.176025 9.69238 0.149902C9.63379 0.123779 9.57031 0.11084 9.50195 0.11084H0.498047C0.429688 0.11084 0.364563 0.123779 0.302734 0.149902C0.260437 0.168701 0.221619 0.193359 0.186096 0.224121C0.172363 0.23584 0.15918 0.248535 0.146484 0.262207C0.100891 0.307861 0.0651245 0.361572 0.0390625 0.42334C0.0215454 0.462646 0.00994873 0.504395 0.00421143 0.54834C0.00140381 0.56958 0 0.591309 0 0.61377C0 0.682129 0.0130005 0.747314 0.0390625 0.809082C0.0651245 0.867676 0.100891 0.919678 0.146484 0.965332C0.192078 1.01099 0.244141 1.04663 0.302734 1.07275Z</PathGeometry>
+                                                    </Path.Data>
+                                                </Path>
+                                            </Button>
+                                        </Grid>
+                                    </DockPanel>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type grid:GridPrintPreviewControl}" BasedOn="{StaticResource SyncfusionGridPrintPreviewControlStyle}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Grid.GridPrintPreviewControl}" TargetType="{x:Type grid:GridPrintPreviewControl}" BasedOn="{StaticResource SyncfusionGridPrintPreviewControlStyle}"/>
+    
+    <Style TargetType="{x:Type grid:PrintPageControl}" x:Key="SyncfusionDataGridPrintPageControlStyle" BasedOn="{StaticResource PrintPageControlStyle}">
+        <Setter Property="Background" Value="{StaticResource White}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+    </Style>
+    <Style TargetType="{x:Type grid:PrintPageControl}" BasedOn="{StaticResource SyncfusionDataGridPrintPageControlStyle}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Grid.PrintPageControl}" TargetType="{x:Type grid:PrintPageControl}" BasedOn="{StaticResource SyncfusionDataGridPrintPageControlStyle}"/>
+    
+</ResourceDictionary>

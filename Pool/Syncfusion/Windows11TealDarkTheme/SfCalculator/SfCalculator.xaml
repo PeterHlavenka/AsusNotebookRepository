@@ -1,0 +1,758 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealDarkTheme.WPF"  
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Controls.Input;assembly=Syncfusion.SfInput.WPF"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealDarkTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealDarkTheme"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <syncfusion:MemoryConverter x:Key="MemoryConverter" />
+
+    <Style x:Key="SyncfusionCalculatorButtonStyle" TargetType="{x:Type syncfusion:CalculatorButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.BorderThickness}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type syncfusion:CalculatorButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius4}"
+                        SnapsToDevicePixels="true">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource ContentBackgroundHovered}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ContentBackgroundHovered}" />
+                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource HoveredForeground}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource ContentBackgroundSelected}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ContentBackgroundSelected}" />
+                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource SelectedForeground}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource ContentBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource DisabledForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionCalculatorButtonStyle}" TargetType="{x:Type syncfusion:CalculatorButton}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.Windows.Controls.Input.CalculatorButton}" BasedOn="{StaticResource SyncfusionCalculatorButtonStyle}" TargetType="{x:Type syncfusion:CalculatorButton}" />
+
+    <Style x:Key="SyncfusionFunctionsPaneStyle" TargetType="syncfusion:FunctionsPane">
+        <Setter Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.BorderThickness1}"/> 
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:FunctionsPane">
+                    <Grid x:Name="PART_Root">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button1"
+                            Grid.Column="0"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="MC"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="MemoryClear" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button2"
+                            Grid.Column="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="MR"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="MemoryRecall" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button3"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="MS"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Memory" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button4"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="M+"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="MemoryAdd" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button5"
+                            Grid.Column="4"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="M-"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="MemorySubract" />
+                        <syncfusion:CalculatorButton
+                            Key="Back"
+                            x:Name="PART_Button6"
+                            Grid.Row="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Function="Back">
+                            <syncfusion:CalculatorButton.Content>
+                                <Path
+                                    x:Name="BackPath"
+                                    Width="16"
+                                    Height="16"
+                                    Margin="0,0,0,0"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RenderTransformOrigin="0.5,0.5"
+                                    Stretch="Uniform">
+                                    <Path.Data>
+                                        <PathGeometry>M13.9997 1H4.13203C3.78077 1 3.45526 1.1843 3.27454 1.4855L1.47454 4.4855C1.28453 4.80219 1.28453 5.19781 1.47454 5.5145L3.27454 8.5145C3.45526 8.8157 3.78077 9 4.13203 9H13.9997C14.5519 9 14.9997 8.55228 14.9997 8V2C14.9997 1.44772 14.5519 1 13.9997 1ZM4.13203 0C3.42951 0 2.77849 0.368598 2.41705 0.971009L0.617048 3.97101C0.237029 4.60437 0.237029 5.39563 0.617048 6.02899L2.41705 9.02899C2.77849 9.6314 3.42951 10 4.13203 10H13.9997C15.1042 10 15.9997 9.10457 15.9997 8V2C15.9997 0.895431 15.1042 0 13.9997 0H4.13203ZM10.8669 2.64645C11.0621 2.84171 11.0621 3.15829 10.8669 3.35355L9.4636 4.75684L10.8664 6.15969C11.0617 6.35495 11.0617 6.67153 10.8664 6.86679C10.6712 7.06205 10.3546 7.06205 10.1593 6.86679L8.75649 5.46394L7.35364 6.86679C7.15838 7.06205 6.84179 7.06205 6.64653 6.86679C6.45127 6.67153 6.45127 6.35495 6.64653 6.15969L8.04938 4.75684L6.6461 3.35355C6.45084 3.15829 6.45084 2.84171 6.6461 2.64645C6.84136 2.45118 7.15794 2.45118 7.35321 2.64645L8.75649 4.04973L10.1598 2.64645C10.355 2.45118 10.6716 2.45118 10.8669 2.64645Z</PathGeometry>
+                                    </Path.Data>
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </syncfusion:CalculatorButton.Content>
+                        </syncfusion:CalculatorButton>
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button7"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="C"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Clear" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button8"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="CE"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="ClearEntry" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button9"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="±"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Sign" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button10"
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="√"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="SquareRoot" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button11"
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="/"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Divide" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button12"
+                            Grid.Row="3"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Function="Multiply">
+                            <syncfusion:CalculatorButton.Content>
+                                <Path
+                                    x:Name="MultiplyPath"
+                                    Width="7"
+                                    Height="14"
+                                    Margin="0,0,0,0"
+                                    RenderTransformOrigin="0.5,0.5"
+                                    Stretch="Uniform">
+                                    <Path.Data>
+                                        <PathGeometry>M9.99904 1L1 10M1.00096 1L10 10</PathGeometry>
+                                    </Path.Data>
+                                    <Path.Style>
+                                        <Style TargetType="Path">
+                                            <Setter Property="Stroke" Value="{Binding ElementName=PART_Button12, Path=Foreground}"/>
+                                        </Style>
+                                    </Path.Style>
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </syncfusion:CalculatorButton.Content>
+                        </syncfusion:CalculatorButton>
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button13"
+                            Grid.Row="4"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Function="Subract">
+                            <syncfusion:CalculatorButton.Content>
+                                <Path
+                                    x:Name="SubractPath"
+                                    Width="5"
+                                    Height="14"
+                                    Margin="0,0,0,0"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RenderTransformOrigin="0.5,0.5"
+                                    Stretch="Uniform">
+                                    <Path.Data>
+                                        <PathGeometry>M1 1L9 1</PathGeometry>
+                                    </Path.Data>
+                                    <Path.Style>
+                                        <Style TargetType="Path">
+                                            <Setter Property="Stroke" Value="{Binding ElementName=PART_Button13, Path=Foreground}"/>
+                                        </Style>
+                                    </Path.Style>
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </syncfusion:CalculatorButton.Content>
+                        </syncfusion:CalculatorButton>
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button14"
+                            Grid.Row="5"
+                            Grid.Column="3"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Function="Add">
+                            <syncfusion:CalculatorButton.Content>
+                                <Path
+                                    x:Name="AddPath"
+                                    Width="6"
+                                    Height="14"
+                                    Margin="0,0,0,0"
+                                    RenderTransformOrigin="0.5,0.5"
+                                    Stretch="Uniform">
+                                    <Path.Data>
+                                        <PathGeometry>M7 1V13M1 7L13 7</PathGeometry>
+                                    </Path.Data>
+                                    <Path.Style>
+                                        <Style TargetType="Path">
+                                            <Setter Property="Stroke" Value="{Binding ElementName=PART_Button14, Path=Foreground}"/>
+                                        </Style>
+                                    </Path.Style>
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </syncfusion:CalculatorButton.Content>
+                        </syncfusion:CalculatorButton>
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button15"
+                            Grid.Row="2"
+                            Grid.Column="4"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="%"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Percentage" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button16"
+                            Grid.Row="3"
+                            Grid.Column="4"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="1/x"
+                            FlowDirection="LeftToRight"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Reciproc" />
+                        <syncfusion:CalculatorButton
+                            x:Name="PART_Button17"
+                            Grid.Row="4"
+                            Grid.RowSpan="2"
+                            Grid.Column="4"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="="
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Function="Return" />
+                        <syncfusion:InputPane
+                            x:Name="PART_Input"
+                            Grid.Row="2"
+                            Grid.RowSpan="5"
+                            Grid.ColumnSpan="3"
+                            Focusable="False"
+                            IsTabStop="False" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="PART_Button14" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="AddPath" Property="Fill" Value="{StaticResource HoveredForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button13" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="SubractPath" Property="Fill" Value="{StaticResource HoveredForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button12" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MultiplyPath" Property="Fill" Value="{StaticResource HoveredForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button6" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackPath" Property="Fill" Value="{StaticResource HoveredForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button14" Property="IsPressed" Value="True">
+                            <Setter TargetName="AddPath" Property="Fill" Value="{StaticResource SelectedForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button13" Property="IsPressed" Value="True">
+                            <Setter TargetName="SubractPath" Property="Fill" Value="{StaticResource SelectedForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button12" Property="IsPressed" Value="True">
+                            <Setter TargetName="MultiplyPath" Property="Fill" Value="{StaticResource SelectedForeground}" />
+                        </Trigger>
+                        <Trigger SourceName="PART_Button6" Property="IsPressed" Value="True">
+                            <Setter TargetName="BackPath" Property="Fill" Value="{StaticResource SelectedForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+                
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SyncfusionSfCalculatorStyle" TargetType="syncfusion:SfCalculator">
+        <Setter Property="FunctionsPaneStyle" Value="{StaticResource SyncfusionFunctionsPaneStyle}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackgroundAlt1}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderAlt}" />
+        <Setter Property="FontFamily" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ThemeFontFamily}}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.BorderThickness1}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:SfCalculator">
+                    <Border
+                        x:Name="Chrome"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource Windows11TealDarkTheme.CornerRadius7}">
+                        <Grid Name="ContentHost">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <syncfusion:DisplayPane
+                                x:Name="PART_Display"
+                                Grid.ColumnSpan="2"
+                                Margin="1"
+                                
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{StaticResource Windows11TealDarkTheme.BorderThickness0001}"
+                                DisplayText="{Binding DisplayText, RelativeSource={RelativeSource TemplatedParent}}"
+                                Expression="{Binding Expression, RelativeSource={RelativeSource TemplatedParent}}"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                Foreground="{TemplateBinding Foreground}"
+                                IsTabStop="False"
+                                Memory="{Binding Memory, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <syncfusion:FunctionsPane
+                                x:Name="PART_Functions"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                IsTabStop="False"
+                                Style="{TemplateBinding FunctionsPaneStyle}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Chrome" Property="Background" Value="{StaticResource ContentBackground}" />
+                            <Setter TargetName="Chrome" Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource SyncfusionSfCalculatorStyle}" TargetType="{x:Type syncfusion:SfCalculator}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.Windows.Controls.Input.SfCalculator}" BasedOn="{StaticResource SyncfusionSfCalculatorStyle}" TargetType="{x:Type syncfusion:SfCalculator}" />
+
+    <Style x:Key="SyncfusionInputPaneStyle" TargetType="syncfusion:InputPane">
+        <Setter Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Background" Value="{StaticResource ContentBackground}" />
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}" />
+        <Setter Property="FontSize" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}" />
+        <Setter Property="FontWeight" Value="{StaticResource Windows11TealDarkTheme.FontWeightNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource Windows11TealDarkTheme.BorderThickness1}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:InputPane">
+                    <Grid x:Name="PART_Root">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:CalculatorButton
+                            Key="NumPad7"
+                            x:Name="PART_Digit7"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="7"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad8"
+                            x:Name="PART_Digit8"
+                            Grid.Column="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="8"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad9"
+                            x:Name="PART_Digit9"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="9"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad4"
+                            x:Name="PART_Digit4"
+                            Grid.Row="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="4"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad5"
+                            x:Name="PART_Digit5"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="5"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad6"
+                            x:Name="PART_Digit6"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="6"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad1"
+                            x:Name="PART_Digit1"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="1"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad2"
+                            x:Name="PART_Digit2"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="2"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad3"
+                            x:Name="PART_Digit3"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="3"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="NumPad0"
+                            x:Name="PART_Digit0"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="0"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                        <syncfusion:CalculatorButton
+                            Key="Decimal"
+                            x:Name="PART_Decimal"
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            Margin="1"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="."
+                            FontSize="{TemplateBinding FontSize}"
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="sfskin:SkinManagerHelper.FocusVisualKind" Value="HighVisibility">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckKeyboardFocusVisualStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionInputPaneStyle}" TargetType="{x:Type syncfusion:InputPane}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.Windows.Controls.Input.InputPane}" BasedOn="{StaticResource SyncfusionInputPaneStyle}" TargetType="{x:Type syncfusion:InputPane}" />
+
+    <Style x:Key="SyncfusionDisplayPaneStyle" TargetType="syncfusion:DisplayPane">
+        <Setter Property="Height" Value="70" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:DisplayPane">
+                    <Grid x:Name="DisplayPaneHost">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            x:Name="Border"
+                            Grid.RowSpan="2"
+                            Grid.ColumnSpan="2"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" />
+                        <TextBlock
+                            x:Name="ExpressionBlock"
+                            Grid.ColumnSpan="2"
+                            Margin="8"
+                            HorizontalAlignment="Right"
+                            FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                            FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                            Text="{TemplateBinding Expression}"
+                            TextAlignment="Right"
+                            TextWrapping="Wrap" />
+                        <Viewbox
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom">
+                            <TextBlock
+                                x:Name="DisplayTextBlock"
+                                Margin="8"
+                                VerticalAlignment="Center"
+                                FontSize="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CaptionText}}"
+                                FontWeight="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"
+                                Text="{Binding DisplayText, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Viewbox>
+                        <TextBlock
+                            x:Name="PART_MemorySign"
+                            Grid.Row="1"
+                            Margin="8"
+                            VerticalAlignment="Bottom"
+                            Text="M"
+                            Visibility="{Binding Path=Memory, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource MemoryConverter}}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ContentBackground}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ContentBackground}" />
+                            <Setter TargetName="ExpressionBlock" Property="Foreground" Value="{StaticResource DisabledForeground}" />
+                            <Setter TargetName="PART_MemorySign" Property="Foreground" Value="{StaticResource DisabledForeground}" />
+                            <Setter TargetName="DisplayTextBlock" Property="Foreground" Value="{StaticResource DisabledForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionDisplayPaneStyle}" TargetType="{x:Type syncfusion:DisplayPane}" />
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Control=Syncfusion.Windows.Controls.Input.DisplayPane}" BasedOn="{StaticResource SyncfusionDisplayPaneStyle}" TargetType="{x:Type syncfusion:DisplayPane}" />
+
+</ResourceDictionary>

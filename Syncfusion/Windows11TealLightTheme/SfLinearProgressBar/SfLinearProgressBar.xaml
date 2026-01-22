@@ -1,0 +1,40 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shared="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF" 
+                    xmlns:progressbar="clr-namespace:Syncfusion.UI.Xaml.ProgressBar;assembly=Syncfusion.SfProgressBar.WPF"
+                    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealLightTheme.WPF"
+                    xmlns:Microsoft_Windows_Aero="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealLightTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealLightTheme"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="SyncfusionSfLinearProgressBarStyle" TargetType="{x:Type progressbar:SfLinearProgressBar}">
+        <Setter Property="ProgressColor" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=PrimaryBackground}}"/>
+        <Setter Property="SecondaryProgressColor" Value="{StaticResource ContentForeground}"/>
+        <Setter Property="TrackColor" Value="{StaticResource BorderAlt1}"/>
+        <Setter Property="IndicatorCornerRadius" Value="2"/>
+		<Setter Property="Template">
+      <Setter.Value>
+          <ControlTemplate TargetType="progressbar:SfLinearProgressBar">
+              <Grid>
+                  <ContentPresenter Content="{TemplateBinding Content}"/>
+              </Grid>
+          </ControlTemplate>
+      </Setter.Value>
+  </Setter>
+
+        <Style.Triggers>            
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="ProgressColor" Value="{StaticResource BorderAlt1}"/>
+                <Setter Property="SecondaryProgressColor" Value="{StaticResource BorderAlt1}"/>
+                <Setter Property="TrackColor" Value="{StaticResource BorderAlt}"/>
+                <Setter Property="IndicatorCornerRadius" Value="2"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionSfLinearProgressBarStyle}"  TargetType="{x:Type progressbar:SfLinearProgressBar}"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.UI.Xaml.ProgressBar.SfLinearProgressBar}" BasedOn="{StaticResource SyncfusionSfLinearProgressBarStyle}"  TargetType="{x:Type progressbar:SfLinearProgressBar}"/>
+</ResourceDictionary>

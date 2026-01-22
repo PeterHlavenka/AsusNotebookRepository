@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Syncfusion.Licensing" Version="32.1.23" />
+      <PackageReference Include="Syncfusion.SfGrid.WPF" Version="32.1.23" />
+      <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="32.1.23" />
+      <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="32.1.23" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Syncfusion.Themes.Windows11TealDarkTheme.WPF">
+        <HintPath>..\..\Syncfusion\Syncfusion.Themes.Windows11TealDarkTheme.WPF.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
+

@@ -1,0 +1,32 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF">
+
+    <ResourceDictionary.MergedDictionaries>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealDarkTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealDarkTheme"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="WPFTextBlockStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background"                                
+                Value="Transparent"/>
+        <Setter Property="FontSize" Value="{StaticResource Windows11TealDarkTheme.BodyTextStyle}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Windows11TealDarkTheme.ThemeFontFamily}"/>
+        <Setter Property="FontWeight" Value="{StaticResource Windows11TealDarkTheme.FontWeightNormal}"/>
+        <!-- Visentio - TextBlock.xaml existuje jen v tmavém motivu a Foreground je nastaven na ContentForeground -->
+        <Setter Property="Foreground" Value="{StaticResource ContentForeground}"/>
+        <Setter Property="TextWrapping"
+                Value="NoWrap"/>
+        <Setter Property="TextTrimming"
+                Value="None"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Foreground" Value="{StaticResource DisabledForeground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource WPFTextBlockStyle}" TargetType="{x:Type TextBlock}"/>
+</ResourceDictionary>

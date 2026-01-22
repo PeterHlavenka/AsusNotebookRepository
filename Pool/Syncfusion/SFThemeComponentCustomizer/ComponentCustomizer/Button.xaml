@@ -1,0 +1,198 @@
+﻿<UserControl x:Class="ComponentCustomizer.Button"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+             xmlns:conv="clr-namespace:UserInterface.Wpf.Converters;assembly=UserInterface.Wpf"
+             xmlns:images="clr-namespace:Adwind.UI.Images;assembly=Adwind.UI.Images"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="1000">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button
+            Width="50"
+            Height="50"
+            Margin="5">
+            <Image Height="24px" Width="24px"
+                   Source="{svgc:SvgImage Source=/svgs/Clean.svg, AppName=Adwind.UI.Images}" />
+        </Button>
+
+        <Button
+            Grid.Column="1"
+            Content="Button"
+            Width="200"
+            Height="50"
+            Margin="5" />
+
+        <Button Grid.Column="2"
+                Width="200"
+                Height="50"
+                Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <Image Height="24px" Width="24px"
+                       Source="{svgc:SvgImage Source=/svgs/Clean.svg, AppName=Adwind.UI.Images}" />
+                <TextBlock Text="Nechci měnit barvu"
+                           VerticalAlignment="Center"
+                           Margin="10,0" />
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="3"
+                Width="200"
+                Height="50"
+                Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <images:SvgControl
+                    Height="32"
+                    Width="32"
+                    AppName="Adwind.UI.Images"
+                    Source="/svgs/Clean.svg" />
+                <TextBlock Text="Barva dle motivu"
+                           VerticalAlignment="Center"
+                           Margin="10,0" />
+            </StackPanel>
+        </Button>
+
+        <!-- <Button Grid.Column="4" -->
+        <!--         Content="Disabled Button" -->
+        <!--         Width="200" -->
+        <!--         Height="50" -->
+        <!--         Margin="5" -->
+        <!--         IsEnabled="False" /> -->
+
+        <!-- UPLNA VYMENA IKONY ZA JINOU IKONU -->
+        <Button
+            Grid.Column="4"
+            Width="200"
+            Height="50"
+            Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <Grid>
+                    <images:SvgControl
+                        Height="32"
+                        Width="32"
+                        Visibility="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Grid}, Converter={x:Static conv:BoolToVisibilityConverter.Default}}"
+                        Source="/svgs/AddGroupArrow.svg" />
+                    <images:SvgControl
+                        Height="32"
+                        Width="32"
+                        Visibility="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Grid}, Converter={x:Static conv:BoolToVisibilityConverter.Inverted}}"
+                        Source="/svgs/AddArrow.svg" />
+                </Grid>
+                <TextBlock Text="Button with two SVGs"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="10,0" />
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="1" Grid.Column="2"
+                Width="200"
+                Height="50"
+                Margin="5"
+                Click="ButtonBase_OnClick">
+            <!-- <svgc:SvgViewbox Width="64" Height="64" -->
+            <!--                 Source="{Binding SvgSource, RelativeSource={RelativeSource AncestorType=UserControl}}" /> -->
+            
+            <images:SvgControl 
+                Height="32"
+                Width="32"
+                CustomizeMode="All">
+                <images:SvgControl.Style>
+                    <Style TargetType="images:SvgControl">
+                        <Setter Property="Source" Value="/svgs/Arrowhead_Down.svg" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ShowSyntax}" Value="False">
+                                <Setter Property="Source" Value="/svgs/Arrowhead_Up.svg" />
+                                <Setter Property="Fill" Value="Orange"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </images:SvgControl.Style>
+            </images:SvgControl>
+        </Button>
+        
+        <Button Grid.Row="1" Grid.Column="3"
+                Width="200"
+                Height="50"
+                Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <images:SvgControl 
+                                      Height="32"
+                                      Width="32"
+                                      CustomizeMode="All"
+                                      Source="/svgs/AddGroupArrow.svg">
+                    <images:SvgControl.Style>
+                        <Style TargetType="{x:Type images:SvgControl}">
+                            <Setter Property="Fill" Value="Gray"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Fill" Value="LightSalmon"/>
+                                </Trigger>
+                                <!-- <Trigger Property="IsMouseOver" Value="False"> -->
+                                <!--     <Setter Property="Fill" Value="Gray"/> -->
+                                <!-- </Trigger> -->
+                            </Style.Triggers>
+                        </Style>
+                    </images:SvgControl.Style>
+                </images:SvgControl>
+                <TextBlock Text="MouseOver Fill" Margin="10,0" />
+            </StackPanel>
+        </Button>
+        
+        <Button Grid.Row="1" Grid.Column="4"
+                Width="200"
+                Height="50"
+                Margin="5">
+            <!-- <svgc:SvgViewbox Width="64" Height="64" -->
+            <!--                 Source="{Binding SvgSource, RelativeSource={RelativeSource AncestorType=UserControl}}" /> -->
+            
+            <images:SvgControl 
+                Height="32"
+                Width="32"
+                CustomizeMode="All"
+                Source="{Binding SvgSource, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                <images:SvgControl.Style>
+                    <Style TargetType="{x:Type images:SvgControl}">
+                        <Setter Property="Fill" Value="Gray"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" Value="Teal"/>
+                            </Trigger>
+                            <!-- <Trigger Property="IsMouseOver" Value="False"> -->
+                            <!--     <Setter Property="Fill" Value="Gray"/> -->
+                            <!-- </Trigger> -->
+                        </Style.Triggers>
+                    </Style>
+                </images:SvgControl.Style>
+            </images:SvgControl>
+        </Button>
+        
+        <Button Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"
+                Height="50"
+                Margin="5">
+            <!-- <svgc:SvgViewbox Width="64" Height="64" -->
+            <!--                 Source="{Binding SvgSource, RelativeSource={RelativeSource AncestorType=UserControl}}" /> -->
+            
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding ImageSource, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                <TextBlock Text="Image with ImageSource, prebarvene jen oko pomoci DrawingImage" Margin="10,0" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

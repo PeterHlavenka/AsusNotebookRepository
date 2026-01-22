@@ -1,0 +1,935 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealLightTheme.WPF"
+                    xmlns:listCollection="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:input="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.Wpf"
+                    xmlns:scheduler="clr-namespace:Syncfusion.UI.Xaml.Scheduler;assembly=Syncfusion.SfScheduler.WPF"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
+
+    <ResourceDictionary.MergedDictionaries>       
+        <sfskin:ResourceDictionaryProvider DictionaryName="Common" ThemeName="Windows11TealLightTheme"/>
+        <sfskin:ResourceDictionaryProvider DictionaryName="Brushes" ThemeName="Windows11TealLightTheme"/>
+        <ResourceDictionary Source="/Syncfusion.SfScheduler.WPF;component/Reminder/SchedulerReminderControl.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/Button.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/FlatButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/GlyphButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/PrimaryButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/MSControl/FlatPrimaryButton.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/ColorPicker/ColorPicker.xaml" />
+        <ResourceDictionary Source="/Syncfusion.Themes.Windows11TealLightTheme.WPF;component/ChromelessWindow/ChromelessWindow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <scheduler:InverseBooleanToVisibilityConverter x:Key="inverseBooleanToVisibilityConverter"/>
+    <scheduler:ReminderTimeIntervalConverter x:Key="ReminderTimeIntervalConverter"/>
+
+    <DataTemplate x:Key="SyncfusionSchedulerComboBoxItemTemplate">
+        <TextBlock Height="24" Padding="2,4,4,4" VerticalAlignment="Center" Text="{Binding}"/>
+    </DataTemplate>
+
+    <Style x:Key="SyncfusionSchedulerReminderListViewItemStyle" TargetType="ListViewItem">
+     <Setter Property="Height" Value="35"/>
+     <Setter Property="Width" Value="480"/>
+     <Setter Property="Template">
+         <Setter.Value>
+             <ControlTemplate TargetType="ListViewItem">
+                 <Border x:Name="border" Background="Transparent">
+                     <VisualStateManager.VisualStateGroups>
+                         <VisualStateGroup x:Name="SelectionStates">
+                             <VisualState x:Name="Selected">
+                                 <Storyboard>
+                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                        Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                         <EasingColorKeyFrame KeyTime="0" Value="Transparent" />
+                                     </ColorAnimationUsingKeyFrames>
+                                 </Storyboard>
+                             </VisualState>
+                         </VisualStateGroup>
+                     </VisualStateManager.VisualStateGroups>
+                     <ContentPresenter/>
+                 </Border>
+             </ControlTemplate>
+         </Setter.Value>
+     </Setter>
+    </Style>
+
+    <Style x:Key="SyncfusionAppointmentEditorColorPickerForegroundStyle" TargetType="{x:Type input:ColorPicker}"
+           BasedOn="{StaticResource SyncfusionColorPickerStyle}">
+        <Setter Property="Brush" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=PrimaryForeground}}" />
+    </Style>
+
+    <Style x:Key="SyncfusionAppointmentEditorColorPickerBackgroundStyle" TargetType="{x:Type input:ColorPicker}" 
+           BasedOn="{StaticResource SyncfusionColorPickerStyle}">
+        <Setter Property="Brush" Value="{DynamicResource {sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Key=PrimaryBackground}}" />
+    </Style>
+
+    <Style x:Key="SyncfusionAppointmentEditorFlatButtonStyle"
+            BasedOn="{StaticResource WPFButtonStyle}"
+            TargetType="{x:Type Button}" >
+    </Style>
+
+    <Style x:Key="SyncfusionAppointmentEditorPrimaryButtonStyle"
+            BasedOn="{StaticResource WPFPrimaryButtonStyle}"
+            TargetType="{x:Type Button}" >
+    </Style>
+
+    <Style x:Key="SyncfusionRecurrenceEditorPrimaryButtonStyle"
+            BasedOn="{StaticResource WPFPrimaryButtonStyle}"
+            TargetType="{x:Type Button}" >
+    </Style>
+
+    <Style x:Key="SyncfusionEditorFlatButtonStyle"
+            BasedOn="{StaticResource WPFButtonStyle}"
+            TargetType="{x:Type Button}" >
+    </Style>
+
+    <Style x:Key="SyncfusionAppointmentEditorGlyphButtonStyle"
+            BasedOn="{StaticResource WPFGlyphButtonStyle}"
+            TargetType="{x:Type Button}" >
+    </Style>
+
+    <Style x:Key="SyncfusionReminderCloseButtonStyle" TargetType="{x:Type Path}">
+        <Setter Property="Data">
+            <Setter.Value>
+                <PathGeometry>M11 1L1 11M1 1L11 11</PathGeometry>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Stroke" Value="{StaticResource IconColor}"/>
+    </Style>
+
+    <DataTemplate x:Key="SyncfusionSchedulerColorPickerHeaderTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Border BorderBrush="LightGray" 
+                    BorderThickness="1"
+                    x:Name="selectedColorRect"
+                    Width="13"
+                    Height="13" 
+                    CornerRadius="{StaticResource Windows11TealLightTheme.CornerRadius2}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Background="{Binding Brush, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type input:ColorPicker}}}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <Style TargetType="scheduler:RecurrenceEditorControl" x:Key="SyncfusionRecurrenceEditorControlStyle">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="scheduler:RecurrenceEditorControl">
+                    <StackPanel x:Name="EditEvent" Margin="24,0,24,0" Orientation="Vertical">
+                        <TextBlock x:Name="PART_RecurrenceTextBlock" 
+                                   Width="300"  Margin="0,8,0,8"
+                                   Height="Auto" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Center"
+                                   Text="This is one appointment in a series. What do you want to open?"
+                                   TextWrapping="WrapWithOverflow" 
+                                   FontSize="14"/>
+
+                        <RadioButton x:Name="PART_SingleRadioButton" Width="Auto" 
+                                     Height="32"
+                                     Content="Just this one"
+                                     GroupName="Recurrence"
+                                     Margin="0,8,0,0"
+                                     IsChecked="True" 
+                                     FontSize="14"/>
+
+                        <RadioButton x:Name="PART_SeriesRadioButton"
+                                     Height="32"
+                                     Width="Auto" 
+                                     Margin="0,4,0,8"
+                                     Content="The entire series"
+                                     GroupName="Recurrence" 
+                                     FontSize="14"/>
+
+                        <StackPanel Orientation="Horizontal" Height="32" HorizontalAlignment="Right" Margin="0,8,0,24">
+                            <Button x:Name="PART_RecurrenceOkButton" 
+                                    Style="{StaticResource SyncfusionRecurrenceEditorPrimaryButtonStyle}"
+                                    Width="70" Height="24" 
+                                    IsDefault="True"/>
+                            <Button x:Name="PART_RecurrenceCancelButton" 
+                                    Margin="12,0,0,0" 
+                                    Style="{StaticResource SyncfusionEditorFlatButtonStyle}"
+                                    Width="70" Height="24"  
+                                    IsCancel="True" />
+                        </StackPanel>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionRecurrenceEditorControlStyle}" TargetType="scheduler:RecurrenceEditorControl"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Scheduler.RecurrenceEditorControl}" BasedOn="{StaticResource SyncfusionRecurrenceEditorControlStyle}" TargetType="scheduler:RecurrenceEditorControl"/>
+
+    <Style TargetType="scheduler:AppointmentEditorControl" x:Key="SyncfusionAppointmentEditorControlStyle">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="scheduler:AppointmentEditorControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <ScrollViewer x:Name="ScrollViewer" Height="Auto" Background="Transparent" HorizontalScrollBarVisibility="Hidden" IsDeferredScrollingEnabled="False" VerticalScrollBarVisibility="Auto">
+                            <StackPanel x:Name="EditorView" Orientation="Vertical">
+
+                                <Grid x:Name="BasicEditorGrid" Height="Auto">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="TitleLabel" Margin="8,0,0,0" />
+                                    <Label x:Name="LocationLabel" Grid.Column="1" Margin="3,0,0,0" />
+                                    
+                                    <TextBox x:Name="SubjectTextBox" 
+                                             Grid.Row="1" 
+                                             Grid.Column="0" 
+                                             Margin="14,0,0,0"
+                                             Height="24"
+                                             HorizontalAlignment="Left" 
+                                             VerticalAlignment="Top"
+                                             Width="238" 
+                                             AutomationProperties.Name="Title"/>
+
+                                    <TextBox x:Name="LocationTextBox" 
+                                             Grid.Row="1" 
+                                             Grid.Column="1" 
+                                             Margin="9,0,0,0"
+                                             Height="24"
+                                             HorizontalAlignment="Left"
+                                             VerticalAlignment="Top"
+                                             Width="238" 
+                                             AutomationProperties.Name="Location"/>
+
+                                    <Label x:Name="StartLabel"
+                                           Grid.Row="2" 
+                                           Grid.Column="0" 
+                                           Margin="8,8,0,0" />
+
+                                    <Label x:Name="EndLabel"
+                                           Grid.Row="2" 
+                                           Grid.Column="1"
+                                           Margin="3,8,0,0" />
+
+                                    <Grid Grid.Row="3" 
+                                          Grid.Column="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <syncfusion:SfDatePicker x:Name="StartDatePicker"
+                                                                 HorizontalAlignment="Left"
+                                                                 Width="112" 
+                                                                 Margin="14,0,0,0"
+                                                                 VerticalAlignment="Top"/>
+                                        <syncfusion:SfTimePicker x:Name="StartTimePicker"
+                                                                 Grid.Column="1"
+                                                                 Margin="11,0,0,0"
+                                                                 Width="112"
+                                                                 HorizontalAlignment="Left" 
+                                                                 VerticalAlignment="Top"
+                                                                  Visibility="{Binding IsChecked,ElementName=AllDayCheckBox,Mode=TwoWay,Converter={StaticResource inverseBooleanToVisibilityConverter}}" />
+                                    </Grid>
+                                    <Grid  Grid.Row="3" 
+                                           Grid.Column="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <syncfusion:SfDatePicker x:Name="EndDatePicker" 
+                                                                 Margin="9,0,0,0" 
+                                                                 VerticalAlignment="Top" 
+                                                                 HorizontalAlignment="Left" Width="112"/>
+                                        <syncfusion:SfTimePicker x:Name="EndTimePicker"
+                                                                 Grid.Column="1" Margin="5,0,0,0"
+                                                                 Width="112"
+                                                                 HorizontalAlignment="Left"
+                                                                 VerticalAlignment="Top"
+                                                                 Visibility="{Binding IsChecked,ElementName=AllDayCheckBox,Mode=TwoWay,Converter={StaticResource inverseBooleanToVisibilityConverter}}"/>
+                                    </Grid>
+                                    <Grid x:Name="AllDayTimeZoneGrid"
+                                          Grid.Row="4"
+                                          Margin="0,10,0,0"
+                                          Height="Auto">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <CheckBox x:Name="AllDayCheckBox" 
+                                                  Margin="14,0,0,0" 
+                                                  Width="110"
+                                                  HorizontalAlignment="Left"/>
+
+                                        <CheckBox x:Name="TimeZoneCheckBox" 
+                                                  Grid.Column="1" 
+                                                  HorizontalAlignment="Left"  
+                                                  Width="110" Margin="10,0,0,0"
+                                                  Visibility="{Binding IsChecked,ElementName=AllDayCheckBox,Mode=OneWay,Converter={StaticResource inverseBooleanToVisibilityConverter}}" />
+                                    </Grid>
+                                    <Grid x:Name="ColorPickerGrid" 
+                                          Grid.Column="1"
+                                          Grid.Row="4" 
+                                          Height="Auto" Margin="0,10,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid x:Name="ForegroundColorPickerPanel" 
+                                              Margin="4,0,0,0" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <Label x:Name="ForegroundColorPickerLabel"
+                                                   Width="75"/>
+                                            <syncfusion:ColorPicker x:Name="ForegroundColorPicker" 
+                                                                    Grid.Column="1"  
+                                                                    Width="37" 
+                                                                    Height="20"
+                                                                    Margin="5,0,0,0" 
+                                                                    HorizontalAlignment="Left"
+                                                                    VerticalAlignment="Center"
+                                                                    GradientBrushDisplayMode="Extended"
+                                                                    Style="{StaticResource SyncfusionAppointmentEditorColorPickerForegroundStyle}"
+                                                                    HeaderTemplate="{StaticResource SyncfusionSchedulerColorPickerHeaderTemplate}" />
+                                        </Grid>
+                                        <Grid x:Name="BackgroundColorPickerPanel" 
+                                              Grid.Column="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label x:Name="BackgroundColorPickerLabel" 
+                                                   Width="75"/>
+                                            <syncfusion:ColorPicker x:Name="BackgroundColorPicker" 
+                                                                    Grid.Column="1"  
+                                                                    Width="37" 
+                                                                    Height="20" 
+                                                                    Margin="5,0,0,0"
+                                                                    HorizontalAlignment="Left" 
+                                                                    VerticalAlignment="Center"
+                                                                    GradientBrushDisplayMode="Extended"
+                                                                    Style="{StaticResource SyncfusionAppointmentEditorColorPickerBackgroundStyle}"
+                                                                    HeaderTemplate="{StaticResource SyncfusionSchedulerColorPickerHeaderTemplate}" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+
+                                <Grid x:Name="TimeZoneGrid" Visibility="Collapsed">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="StartTimezoneLabel" Margin="8,8,0,0" />
+
+                                    <Label x:Name="EndTimezoneLabel" Grid.Column="1" Margin="3,8,12,0" />
+
+                                    <syncfusion:ComboBoxAdv x:Name="StartTimeZoneComboBox" 
+                                                            Grid.Row="1" 
+                                                            Width="238" 
+                                                            Height="24" 
+                                                            HorizontalAlignment="Left" 
+                                                            Margin="14,0,0,8"
+                                                            SelectedIndex="0"
+                                                            ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}">
+
+                                    </syncfusion:ComboBoxAdv>
+                                    <syncfusion:ComboBoxAdv x:Name="EndTimeZoneComboBox" 
+                                                            Grid.Row="1"
+                                                            Grid.Column="1"  
+                                                            Width="238" Height="24" 
+                                                            HorizontalAlignment="Left" 
+                                                            ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                            Margin="9,0,12,8"
+                                                            SelectedIndex="0"/>
+                                </Grid>
+
+                                <Grid Name="RecurrenceTypeGrid" VerticalAlignment="Stretch" Height="Auto">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Label x:Name="RepeatLabel"
+                                               Margin="8,8,0,0" />
+                                        <syncfusion:ComboBoxAdv x:Name="RecurrenceTypesComboBox" 
+                                                                Grid.Row="1" VerticalAlignment="Top"
+                                                                Width="238" Height="24" 
+                                                                ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                HorizontalAlignment="Left" 
+                                                                Margin="14,0,0,4">
+                                        </syncfusion:ComboBoxAdv>
+                                    </Grid>
+
+                                    <Grid x:Name="RepeatEveryIntervalGrid" Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Label x:Name="RepeatEveryLabel" Margin="2,8,12,0" />
+                                        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+                                            <syncfusion:UpDown  x:Name="EveryIntervalGapNumberBox" 
+                                                                IsScrollingOnCircle="True"
+                                                                MaxValue="100"
+                                                                MinValue="1"
+                                                                NumberDecimalDigits="0"
+                                                                Step="1"
+                                                                Height="24"
+                                                                VerticalAlignment="Top"
+                                                                Width="112"
+                                                                Margin="8,0,0,0"/>
+                                            <Label x:Name="RecurrenceIntervalLabel" 
+                                                   Margin="0,0,12,0"
+                                                   HorizontalAlignment="Left" 
+                                                   HorizontalContentAlignment="Center" />
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid x:Name="RecurrenceEndRangeGrid" Grid.Row="1" Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="RecurrenceEndLabel"
+                                               HorizontalAlignment="Left"/>
+                                        <syncfusion:ComboBoxAdv x:Name="EndRecurrenceRangeComboBox" 
+                                                                Grid.Row="1"
+                                                                HorizontalAlignment="Left"
+                                                                Margin="6,0,0,0" 
+                                                                VerticalAlignment="Top" 
+                                                                Width="112"
+                                                                Height="24" 
+                                                                ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"/>
+                                        <syncfusion:SfDatePicker x:Name="EndRecurrenceDatePicker"
+                                                                 Grid.Row="1"  
+                                                                 Grid.Column="1"
+                                                                 VerticalAlignment="Top"
+                                                                 Height="24"
+                                                                 Width="112"
+                                                                 Margin="5,0,8,0"
+                                                                 Visibility="Collapsed"/>
+                                        <syncfusion:UpDown  x:Name="EndRecurrenceNumberBox" 
+                                                            VerticalAlignment="Top"
+                                                            Grid.Column="1"
+                                                            Grid.Row="1" 
+                                                            IsScrollingOnCircle="True"
+                                                            MaxValue="112"
+                                                            MinValue="1"
+                                                            NumberDecimalDigits="0"  
+                                                            Step="1"
+                                                            Width="112"
+                                                            Height="24" 
+                                                            Margin="5,0,8,0"
+                                                            Visibility="Visible"/>
+                                    </Grid>
+                                    <Grid x:Name="WeeklyRecurrenceGrid" Grid.Row="1"
+                                                                        Grid.RowSpan="2" 
+                                                                        VerticalAlignment="Bottom" 
+                                                                        Visibility="Visible">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Label x:Name="WeeklyRepeatOnLabel"
+                                               Margin="8,0,0,0"  />
+                                        <syncfusion:ComboBoxAdv x:Name="WeekDaysComboBox"
+                                                                Width="238"
+                                                                Grid.Row="1"
+                                                                IsEditable="True"
+                                                                Height="24"  
+                                                                Margin="14,0,0,0" 
+                                                                ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                HorizontalAlignment="Left" 
+                                                                AllowMultiSelect="True"/>
+                                    </Grid>
+                                    
+                                    <Grid x:Name="MonthlyRecurrenceGrid" 
+                                          Grid.Row="1" 
+                                          Grid.RowSpan="2" 
+                                          Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label x:Name="MonthlyRepeatOnLabel" 
+                                               Margin="8,4,0,0" 
+                                               VerticalContentAlignment="Center" />
+                                        <StackPanel Orientation="Horizontal" 
+                                                    Grid.Row="1">
+                                            <RadioButton x:Name="IsSpecificDayOfMonthRadioButton"
+                                                         GroupName="SpecificMonth" 
+                                                         Margin="14,1,12,0"
+                                                         IsChecked="True" 
+                                                         HorizontalContentAlignment="Center"
+                                                         HorizontalAlignment="Right" 
+                                                         AutomationProperties.Name="Specific month day"/>
+                                            <syncfusion:UpDown  x:Name="EveryDayOfMonthNumberBox"
+                                                                IsScrollingOnCircle="True"
+                                                                MaxValue="31"
+                                                                MinValue="1"
+                                                                NumberDecimalDigits="0"
+                                                                Step="1" 
+                                                                Height="24"             
+                                                                Width="169" 
+                                                                Margin="14,0,12,8"
+                                                                IsEnabled="{Binding IsChecked, ElementName=IsSpecificDayOfMonthRadioButton,Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" 
+                                                    Grid.Row="2">
+                                            <RadioButton x:Name="IsSpecificMonthWeekRadioButton" 
+                                                         GroupName="SpecificMonth" 
+                                                         Margin="14,1,0,1"
+                                                         HorizontalContentAlignment="Center"/>
+                                            <syncfusion:ComboBoxAdv x:Name="WeekNumberOfMonthComboBox"
+                                                                    Width="103" 
+                                                                    Margin="6,1,0,1" 
+                                                                    Height="24"
+                                                                    ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                    IsEnabled="{Binding IsChecked,ElementName=IsSpecificMonthWeekRadioButton,Mode=TwoWay}"/>
+                                            <syncfusion:ComboBoxAdv x:Name="MonthWeekComboBox" 
+                                                                    Width="103"
+                                                                    Margin="9,0,0,0"
+                                                                    Height="24" 
+                                                                    ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                    IsEnabled="{Binding IsChecked,ElementName=IsSpecificMonthWeekRadioButton,Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid x:Name="YearlyRecurrenceGrid"
+                                          Grid.Row="1" 
+                                          Grid.RowSpan="3" 
+                                          Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label x:Name="YearlyRepeatOnLabel"
+                                               Margin="8,2,0,0"
+                                               VerticalContentAlignment="Center" />
+                                        <syncfusion:ComboBoxAdv x:Name="YearSpecificMonthComboBox" 
+                                                                Grid.Row="1" 
+                                                                ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                HorizontalAlignment="Left" 
+                                                                Width="238" 
+                                                                Height="24"
+                                                                Margin="14,0,0,8"/>
+                                        <StackPanel Orientation="Horizontal"
+                                                    Grid.Row="2" 
+                                                    Margin="0,5,0,0">
+                                            <RadioButton x:Name="IsSpecificMonthDayOnYearRadioButton"
+                                                         GroupName="SpecificYear"
+                                                         Margin="12,1,12,4"
+                                                         HorizontalContentAlignment="Center"
+                                                         IsChecked="True" 
+                                                         HorizontalAlignment="Left"
+                                                         AutomationProperties.Name="Specific month day"/>
+                                            <syncfusion:UpDown  x:Name="EveryMonthDayOnYearNumberBox"
+                                                                IsScrollingOnCircle="True"
+                                                                MaxValue="31"
+                                                                MinValue="1"
+                                                                NumberDecimalDigits="0"
+                                                                Step="1"
+                                                                Height="24"                     
+                                                                Width="174"
+                                                                Margin="12,0,12,8"
+                                                               IsEnabled="{Binding IsChecked,ElementName=IsSpecificMonthDayOnYearRadioButton,Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" 
+                                                    Grid.Row="3" 
+                                                    Margin="0,5,0,0">
+                                            <RadioButton x:Name="IsSpecificMonthWeekOnYearRadioButton" 
+                                                         GroupName="SpecificYear" 
+                                                         Margin="12,0,0,0" 
+                                                         HorizontalContentAlignment="Center"
+                                                         AutomationProperties.Name="Specific month week"/>
+                                            <syncfusion:ComboBoxAdv x:Name="WeekNumberOfMonthYearComboBox"
+                                                                    Margin="6,0,0,0" 
+                                                                    ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                    Height="24"
+                                                                    Width="103"
+                                                                    IsEnabled="{Binding IsChecked,ElementName=IsSpecificMonthWeekOnYearRadioButton,Mode=TwoWay}"/>
+                                            <syncfusion:ComboBoxAdv x:Name="MonthWeekOnYearComboBox" 
+                                                                    Margin="11,0,0,0" 
+                                                                    ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                    Height="24" 
+                                                                    Width="103"
+                                                                    IsEnabled="{Binding IsChecked,ElementName=IsSpecificMonthWeekOnYearRadioButton,Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+
+                                <Grid Name="Reminder" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="AddReminderButton"
+                                            Margin="14,0,0,0" 
+                                            Style="{StaticResource SyncfusionAppointmentEditorPrimaryButtonStyle}"
+                                            Height="24"
+                                            Width="110"
+                                            VerticalAlignment="Top" 
+                                            HorizontalAlignment="Left"
+                                            Grid.Row="1" />
+
+                                    <ListView x:Name="ReminderList"
+                                              HorizontalAlignment="Left"
+                                              Grid.Row="0"
+                                              ItemContainerStyle="{StaticResource SyncfusionSchedulerReminderListViewItemStyle}"
+                                              Margin="7, 8, 0, 8" 
+                                              Background="Transparent"
+                                              BorderThickness="0"
+                                              BorderBrush="Transparent">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel x:Name="ReminderStack" 
+                                                            Orientation="Horizontal" 
+                                                            Margin="3,0,0,0"
+                                                            Background="Transparent">
+                                                    <syncfusion:UpDown x:Name="ReminderTimeInterval"
+                                                                       Margin="5,0,0,0" 
+                                                                       Height="24"
+                                                                       Width="100" 
+                                                                       IsScrollingOnCircle="True"
+                                                                       MinValue="0"
+                                                                       Step="1" 
+                                                                       NumberDecimalDigits="0"
+                                                                       Value="{Binding Converter={StaticResource ReminderTimeIntervalConverter}, Path=ReminderTimeInterval, Mode=OneWay, ConverterParameter=TimeInterval}"/>
+                                                    <syncfusion:ComboBoxAdv x:Name="ReminderTimeIntervalMenu" 
+                                                                            ItemTemplate="{StaticResource SyncfusionSchedulerComboBoxItemTemplate}"
+                                                                            Margin="8, 0, 0, 0" 
+                                                                            Width="98"
+                                                                            Height="24"
+                                                                            HorizontalAlignment="Left"
+                                                                            VerticalAlignment="Center"
+                                                                            SelectedIndex="{Binding Converter={StaticResource ReminderTimeIntervalConverter}, Path=ReminderTimeInterval, Mode=OneWay, ConverterParameter=TimeIntervalMenu}" />
+
+                                                    <Button Height="24" x:Name="RemoveReminder"
+                                                                        Style="{StaticResource SyncfusionAppointmentEditorGlyphButtonStyle}"
+                                                                        Width="25"
+                                                                        Margin="6,0,0,0">
+                                                        <Path Stretch="Uniform" 
+                                                              Width="10" 
+                                                              Height="10" 
+                                                              Margin="0"  
+                                                              Style="{StaticResource SyncfusionReminderCloseButtonStyle}"
+                                                              RenderTransformOrigin="0.5,0.5">
+                                                            <Path.RenderTransform>
+                                                                <TransformGroup>
+                                                                    <TransformGroup.Children>
+                                                                        <RotateTransform Angle="0" />
+                                                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                                    </TransformGroup.Children>
+                                                                </TransformGroup>
+                                                            </Path.RenderTransform>
+                                                        </Path>
+                                                    </Button>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </Grid>
+
+                                <Grid Name="ResourceGrid" Height="Auto" Visibility="Collapsed">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label x:Name="ResourceLabel"
+                                           Margin="8,8,0,0" 
+                                           Grid.Row="0"
+                                           VerticalAlignment="Top"/>
+                                    <syncfusion:ComboBoxAdv x:Name="ResourceComboBox" 
+                                                            Height="24"
+                                                            Margin="14,0,6,0" 
+                                                            Grid.Row="1" 
+                                                            AllowMultiSelect="True"
+                                                            Width="494" 
+                                                            HorizontalAlignment="Left">
+                                        <syncfusion:ComboBoxAdv.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Height="24" Padding="2,4,4,4" Text="{Binding Name}" VerticalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </syncfusion:ComboBoxAdv.ItemTemplate>
+                                    </syncfusion:ComboBoxAdv>
+                                </Grid>
+                                <StackPanel x:Name="NotesPanel"
+                                            Orientation="Vertical"
+                                            Height="Auto">
+                                    <Label x:Name="DescriptionLabel" 
+                                           Margin="8,8,0,0"  />
+                                    <TextBox x:Name="NotesTextBox" 
+                                             Margin="14,4,6,0"
+                                             HorizontalAlignment="Left" 
+                                             VerticalAlignment="Center" 
+                                             Height="40"
+                                             Width="494" 
+                                             VerticalScrollBarVisibility="Auto"
+                                             TextWrapping="Wrap" 
+                                             AcceptsReturn="True"
+                                             AutomationProperties.Name="Description"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                        <Grid Height="Auto" Background="Transparent" Grid.Row="1" Margin="0, 8, 0, 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="233"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="80"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="DeleteAppointmentButton"  
+                                    Margin="-20,0,0,0"
+                                    Width="70" 
+                                    Height="24" 
+                                    Visibility="Collapsed" 
+                                    Style="{StaticResource SyncfusionAppointmentEditorFlatButtonStyle}"/>
+                            <Button x:Name="SaveAppointmentButton" 
+                                    Grid.Column="2"
+                                    Width="70" 
+                                    Height="24"
+                                    IsDefault="True" 
+                                    Style="{StaticResource SyncfusionAppointmentEditorPrimaryButtonStyle}"/>
+                            <Button x:Name="CancelAppointmentButton" 
+                                    Grid.Column="3"
+                                    Width="70" 
+                                    Height="24" 
+                                    IsCancel="True" 
+                                    Style="{StaticResource SyncfusionAppointmentEditorFlatButtonStyle}"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionAppointmentEditorControlStyle}" TargetType="scheduler:AppointmentEditorControl"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Scheduler.AppointmentEditorControl}" BasedOn="{StaticResource SyncfusionAppointmentEditorControlStyle}" TargetType="scheduler:AppointmentEditorControl"/>
+
+    <Style  x:Key="SyncfusionSchedulerReminderAlertWindowStyle" BasedOn="{StaticResource SyncfusionChromelessWindowStyle}" TargetType="scheduler:SchedulerReminderAlertWindow">
+        <Setter Property="LeftHeaderItemsSource">
+            <Setter.Value>
+                <listCollection:ArrayList>
+                    <Grid Width="16"
+                          Height="16"
+                          Margin="12,0,0,0"
+                          HorizontalAlignment="Left">
+                        <Path Data="M24.0459,1.9940863C22.090275,1.9940867 20.500435,3.7837088 20.500435,5.9828703 20.500435,6.1765296 20.516533,6.3649871 20.544119,6.5493176L20.566452,6.6729229 21.214073,6.5807907C22.010324,6.4840838 22.830551,6.4340002 23.671194,6.4340002 24.791801,6.4340002 25.895575,6.5230377 26.969215,6.6929114L27.504127,6.7882234 27.547319,6.5493176C27.574993,6.3649871 27.591267,6.1765296 27.591267,5.9828703 27.591267,3.7837088 26.001427,1.9940867 24.0459,1.9940863z M24.0459,0C26.98259,0 29.364,2.6789484 29.364,5.9828703 29.364,6.3631696 29.325602,6.7308398 29.264404,7.0909998L28.877613,7.0909998 29.328443,7.2080796C35.709423,8.9988019 40.523598,13.706933 40.523598,19.33026 40.523598,21.050928 40.106197,22.693295 39.350994,24.196766 38.85799,29.539064 38.904289,37.866304 43.231216,41.710627 49.871159,47.612917 48.025444,52.03993 47.287838,53.515001L26.629612,53.515001 24.924,53.515001 24.924,58.230986 25.194012,58.329767C26.253155,58.777498 26.997999,59.825701 26.997999,61.047651 26.997999,62.677813 25.673832,64.000002 24.046049,64.000002 22.416367,64.000002 21.094,62.677813 21.094,61.047651 21.094,59.825701 21.837831,58.777498 22.897268,58.329767L23.167,58.231127 23.167,53.515001 21.464781,53.515001 0.80445221,53.515001C0.066837148,52.03993 -1.7768643,47.612917 4.8625169,41.710627 9.6535063,37.450312 9.1963033,27.6856 8.5694999,22.580198 8.2367983,21.541218 8.0603571,20.453138 8.0603571,19.33026 8.0603571,13.706933 12.115521,8.9988019 18.165386,7.2080796L18.817469,7.0300756 18.785555,6.8193915C18.748995,6.5462154 18.727001,6.2680947 18.727001,5.9828703 18.727001,2.6789484 21.108511,0 24.0459,0z"
+                              Fill="#FCA319"
+                              RenderTransformOrigin="0.5,0.5"
+                              Stretch="Uniform">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <TransformGroup.Children>
+                                      <RotateTransform Angle="0" />
+                                      <ScaleTransform ScaleX="-1" ScaleY="1" />
+                                    </TransformGroup.Children>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Grid>
+                </listCollection:ArrayList>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionSchedulerReminderAlertWindowStyle}" TargetType="scheduler:SchedulerReminderAlertWindow"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Scheduler.SchedulerReminderAlertWindow}" BasedOn="{StaticResource SyncfusionSchedulerReminderAlertWindowStyle}" TargetType="scheduler:SchedulerReminderAlertWindow"/>
+
+    <Style x:Key="SyncfusionSchedulerReminderNotificationControlStyle" TargetType="scheduler:ReminderNotificationControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="scheduler:ReminderNotificationControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="80" />
+                          <RowDefinition Height="190" />
+                          <RowDefinition Height="80" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock x:Name="NoReminder" 
+                                   Grid.Row="0"
+                                   Margin="40,0,0,0"
+                                   VerticalAlignment="Center"
+                                   FontWeight="Medium"
+                                   Visibility="Collapsed"/>
+
+                       <Grid Margin="12,5,12,0" 
+                             x:Name="ReminderHeader"
+                             Grid.Row="0">
+                            <Grid.RowDefinitions>
+                              <RowDefinition Height="Auto" />
+                              <RowDefinition Height="Auto" />
+                              <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock x:Name="HeaderSubject"
+                                       VerticalAlignment="Bottom"
+                                       FontSize="20"/>
+                            <TextBlock x:Name="HeaderTime"
+                                       Grid.Row="1"
+                                       FontSize="12"
+                                       Margin="1,5,0,0"
+                                       VerticalAlignment="Top"/>
+                            <TextBlock x:Name="HeaderLocation"
+                                       Grid.Row="2"
+                                       Margin="0,5,0,0"
+                                       FontSize="14"
+                                       VerticalAlignment="Top" />
+                        </Grid>
+
+                        <ListView x:Name="ReminderList"
+                                  Grid.Row="1"
+                                  Margin="12,12,12,0" 
+                                  SelectedIndex="0"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  BorderThickness="1" 
+                                  ItemsSource="{Binding Reminders}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="24" 
+                                          Margin="0" 
+                                          Width="470">
+                                        <Grid.ColumnDefinitions>
+                                          <ColumnDefinition Width="235" />
+                                          <ColumnDefinition Width="205" />
+                                          <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0"
+                                                   Margin="6, 0, 0, 0"
+                                                   x:Name="ReminderSubject"
+                                                   FontWeight="Medium"
+                                                   FontSize="12"
+                                                   VerticalAlignment="Center"
+                                                   Text="{Binding Appointment.Subject}"/>
+                                        <TextBlock Grid.Column="1"
+                                                   Margin="12, 0, 0, 0"
+                                                   x:Name="ReminderDeliveryTime"
+                                                   VerticalAlignment="Center"
+                                                   HorizontalAlignment="Left" 
+                                                   FontSize="12"
+                                                   Text="{Binding Converter={StaticResource reminderTimeConverter}}"
+                                                   IsEnabled="False"/>
+                                        <Button Height="20" 
+                                                Style="{StaticResource SyncfusionAppointmentEditorGlyphButtonStyle}"                               
+                                                Width="Auto" 
+                                                Background="Transparent" 
+                                                HorizontalAlignment="Right" 
+                                                VerticalAlignment="Center"
+                                                Visibility="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=ListViewItem}, Converter={StaticResource booleanToVisibilityConverter}}"
+                                                Grid.Column="2">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                   <TextBlock  Text="{scheduler:SchedulerLocalizationResourceExtension ResourceName=Dismiss}" Background="Transparent" />
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <Path Style="{StaticResource SyncfusionReminderCloseButtonStyle}"
+                                                  Stretch="Uniform" 
+                                                  Fill="{Binding Path=Foreground, Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                                                  Width="10" 
+                                                  Height="10" 
+                                                  Margin="0" 
+                                                  RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Button>
+                                    </Grid>
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Appointment.Subject}" Value="{x:Static sys:String.Empty}">
+                                           <Setter TargetName="ReminderSubject" Property="TextBlock.Text" Value="{scheduler:SchedulerLocalizationResourceExtension ResourceName=EmptyAppointmentSubject}" />
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <Grid Grid.Row="3" 
+                              Margin="12"
+                              IsEnabled="{Binding ElementName=ReminderHeader, Path=IsVisible}">
+                            <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="200" />
+                              <ColumnDefinition Width="178" />
+                              <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                              <RowDefinition Height="Auto" />
+                              <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="ClickSnooze"
+                                       Grid.Row="0"
+                                       FontSize="12"
+                                       Grid.Column="0"
+                                       FontWeight="Medium"
+                                       Margin="0,0,4,0"/>
+                            <syncfusion:ComboBoxAdv x:Name="Snooze"
+                                                    Grid.Row="1"
+                                                    Grid.Column="0"
+                                                    SelectedIndex="0"
+                                                    Width="190"
+                                                    Margin="0"
+                                                    HorizontalAlignment="Left"
+                                                    VerticalAlignment="Center" 
+                                                    Height="22" />
+                            <Button x:Name="SetSnooze"
+                                    Style="{StaticResource SyncfusionEditorFlatButtonStyle}"
+                                    Grid.Row="1"
+                                    Grid.Column="1" 
+                                    HorizontalAlignment="Left"
+                                    Width="100" 
+                                    Grid.ColumnSpan="2" />
+                            <Button x:Name="DismissAll"
+                                    Style="{StaticResource SyncfusionEditorFlatButtonStyle}"
+                                    Grid.Column="2"
+                                    Grid.Row="1"
+                                    Width="100"
+                                    HorizontalAlignment="Right"
+                                    Grid.RowSpan="2" 
+                                    IsCancel="True"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+           </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource SyncfusionSchedulerReminderNotificationControlStyle}" TargetType="scheduler:ReminderNotificationControl"/>
+    <Style x:Key="{sfskin:DefaultStyleKeyExtension Theme={x:Type themelocal:Windows11TealLightThemeSkinHelper}, Control=Syncfusion.UI.Xaml.Scheduler.ReminderNotificationControl}" BasedOn="{StaticResource SyncfusionSchedulerReminderNotificationControlStyle}" TargetType="scheduler:ReminderNotificationControl"/>
+</ResourceDictionary>

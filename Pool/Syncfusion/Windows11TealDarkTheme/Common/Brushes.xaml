@@ -1,0 +1,521 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:themelocal="clr-namespace:Syncfusion.Themes.Windows11TealDarkTheme.WPF"
+					xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+					xmlns:ice="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderGradient.Color}">#8AFFFFFF</Color>
+<Color x:Key="BorderGradient.Color">#8AFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Border.Color}">#14FFFFFF</Color>
+<Color x:Key="Border.Color">#14FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt2Gradient.Color}">#FF027B66</Color>
+<Color x:Key="BorderAlt2Gradient.Color">#FF027B66</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt2.Color}">#0FFFFFFF</Color>
+<Color x:Key="BorderAlt2.Color">#0FFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackground.Color}">#FF027B66</Color>
+<Color x:Key="PrimaryBackground.Color">#FF027B66</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt2.Color}">#FF282828</Color>
+<Color x:Key="ContentBackgroundAlt2.Color">#FF282828</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt1.Color}">#9AFFFFFF</Color>
+<Color x:Key="BorderAlt1.Color">#9AFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ErrorBackground.Color}">#FFFF99A3</Color>
+<Color x:Key="ErrorBackground.Color">#FFFF99A3</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SuccessForeground.Color}">#FF6CCB5F</Color>
+<Color x:Key="SuccessForeground.Color">#FF6CCB5F</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=WarningForeground.Color}">#FFFCE000</Color>
+<Color x:Key="WarningForeground.Color">#FFFCE000</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=LinkForeground.Color}">#FF99EBFF</Color>
+<Color x:Key="LinkForeground.Color">#FF99EBFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentForeground.Color}">#FFFFFFFF</Color>
+<Color x:Key="ContentForeground.Color">#FFFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackground.Color}">#FF1C1C1C</Color>
+<Color x:Key="ContentBackground.Color">#FF1C1C1C</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground.Color}">#FF000000</Color>
+<Color x:Key="PrimaryForeground.Color">#FF000000</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundOpacity2.Color}">#CC027B65</Color>
+<Color x:Key="PrimaryBackgroundOpacity2.Color">#CC027B65</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt4.Color}">#3EFFFFFF</Color>
+<Color x:Key="BorderAlt4.Color">#3EFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt.Color}">#15FFFFFF</Color>
+<Color x:Key="BorderAlt.Color">#15FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundOpacity1.Color}">#E5027B65</Color>
+<Color x:Key="PrimaryBackgroundOpacity1.Color">#E5027B65</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorLight1.Color}">#FF02AD8F</Color>
+<Color x:Key="PrimaryColorLight1.Color">#FF02AD8F</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderGradient.Color}">#0DFFFFFF</Color>
+<Color x:Key="SecondaryBorderGradient.Color">#0DFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorder.Color}">#17FFFFFF</Color>
+<Color x:Key="SecondaryBorder.Color">#17FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderHoveredGradient.Color}">#0DFFFFFF</Color>
+<Color x:Key="SecondaryBorderHoveredGradient.Color">#0DFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderHovered.Color}">#17FFFFFF</Color>
+<Color x:Key="SecondaryBorderHovered.Color">#17FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColor.Color}">#C8FFFFFF</Color>
+<Color x:Key="IconColor.Color">#C8FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundHovered.Color}">#0FFFFFFF</Color>
+<Color x:Key="ContentBackgroundHovered.Color">#0FFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorLight2.Color}">#FF03DFB9</Color>
+<Color x:Key="PrimaryColorLight2.Color">#FF03DFB9</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackgroundHovered.Color}">#15FFFFFF</Color>
+<Color x:Key="SecondaryBackgroundHovered.Color">#15FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackgroundSelected.Color}">#0AFFFFFF</Color>
+<Color x:Key="SecondaryBackgroundSelected.Color">#0AFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderGradient.Color}">#23000000</Color>
+<Color x:Key="PrimaryButtonBorderGradient.Color">#23000000</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorder.Color}">#14FFFFFF</Color>
+<Color x:Key="PrimaryButtonBorder.Color">#14FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderHoveredGradient.Color}">#14FFFFFF</Color>
+<Color x:Key="PrimaryButtonBorderHoveredGradient.Color">#14FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderHovered.Color}">#14FFFFFF</Color>
+<Color x:Key="PrimaryButtonBorderHovered.Color">#14FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt5Gradient.Color}">#11FFFFFF</Color>
+<Color x:Key="BorderAlt5Gradient.Color">#11FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt5.Color}">#17FFFFFF</Color>
+<Color x:Key="BorderAlt5.Color">#17FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorDisabled.Color}">#5CFFFFFF</Color>
+<Color x:Key="IconColorDisabled.Color">#5CFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorHovered.Color}">#FFFFFFFF</Color>
+<Color x:Key="IconColorHovered.Color">#FFFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorSelected.Color}">#FFFFFFFF</Color>
+<Color x:Key="IconColorSelected.Color">#FFFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundSelected.Color}">#0FFFFFFF</Color>
+<Color x:Key="ContentBackgroundSelected.Color">#0FFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series1.Color}">#FF5DCFB4</Color>
+<Color x:Key="Series1.Color">#FF5DCFB4</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series5.Color}">#FF9C65F6</Color>
+<Color x:Key="Series5.Color">#FF9C65F6</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series2.Color}">#FF68B5FB</Color>
+<Color x:Key="Series2.Color">#FF68B5FB</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series4.Color}">#FFFAB86B</Color>
+<Color x:Key="Series4.Color">#FFFAB86B</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series3.Color}">#FF6174DB</Color>
+<Color x:Key="Series3.Color">#FF6174DB</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt3.Color}">#FFFFFFFF</Color>
+<Color x:Key="BorderAlt3.Color">#FFFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt6.Color}">#0AFFFFFF</Color>
+<Color x:Key="ContentBackgroundAlt6.Color">#0AFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupBorder.Color}">#15FFFFFF</Color>
+<Color x:Key="PopupBorder.Color">#15FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupBackground.Color}">#FF2C2C2C</Color>
+<Color x:Key="PopupBackground.Color">#FF2C2C2C</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundPressed.Color}">#0AFFFFFF</Color>
+<Color x:Key="ContentBackgroundPressed.Color">#0AFFFFFF</Color>
+	<!-- Visentio - original record: <SolidColorBrush x:Key="TableSelectedBackground" Color="#0FFFFFFF" ice:Freeze="True" /> -->
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableSelectedBackground.Color}">#30FFFFFF</Color>
+<Color x:Key="TableSelectedBackground.Color">#30FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupHoveredBackground.Color}">#0FFFFFFF</Color>
+<Color x:Key="PopupHoveredBackground.Color">#0FFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupPressedBackground.Color}">#0AFFFFFF</Color>
+<Color x:Key="PopupPressedBackground.Color">#0AFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=White.Color}">#FFFFFFFF</Color>
+<Color x:Key="White.Color">#FFFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorDark1.Color}">#FF016151</Color>
+<Color x:Key="PrimaryColorDark1.Color">#FF016151</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorDark3.Color}">#FF00AAF9</Color>
+<Color x:Key="SystemAccentColorDark3.Color">#FF00AAF9</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentForegroundAlt1.Color}">#C8FFFFFF</Color>
+<Color x:Key="ContentForegroundAlt1.Color">#C8FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series7.Color}">#FF7277FD</Color>
+<Color x:Key="Series7.Color">#FF7277FD</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series6.Color}">#FFDC8647</Color>
+<Color x:Key="Series6.Color">#FFDC8647</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt5.Color}">#15FFFFFF</Color>
+<Color x:Key="ContentBackgroundAlt5.Color">#15FFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ErrorForeground.Color}">#FFFF99A3</Color>
+<Color x:Key="ErrorForeground.Color">#FFFF99A3</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Black.Color}">#FF000000</Color>
+<Color x:Key="Black.Color">#FF000000</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt4.Color}">#0FFFFFFF</Color>
+<Color x:Key="ContentBackgroundAlt4.Color">#0FFFFFFF</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorDark2.Color}">#FF002F27</Color>
+<Color x:Key="PrimaryColorDark2.Color">#FF002F27</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt3.Color}">#FF2C2C2C</Color>
+<Color x:Key="ContentBackgroundAlt3.Color">#FF2C2C2C</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Overlay.Color}">#BF000000</Color>
+<Color x:Key="Overlay.Color">#BF000000</Color>
+<Color x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=HoveredForeground.Color}">#FFFFFFFF</Color>
+<Color x:Key="HoveredForeground.Color">#FFFFFFFF</Color>
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=White}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="White" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Black}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="Black" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextFillColorPrimary}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextFillColorPrimary" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextFillColorSecondary}" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextFillColorSecondary" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextFillColorTertiary}" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextFillColorTertiary" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextFillColorDisabled}" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextFillColorDisabled" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnAccentFillColorPrimary}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnAccentFillColorPrimary" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnAccentFillColorSecondary}" Color="#7F000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnAccentFillColorSecondary" Color="#7F000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnAccentFillColorDisabled}" Color="#87FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnAccentFillColorDisabled" Color="#87FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnAccentFillColorSelectedText}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnAccentFillColorSelectedText" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnSystemCritical}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnSystemCritical" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnSystemSuccess}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnSystemSuccess" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnSystemAttention}" Color="#E4000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnSystemAttention" Color="#E4000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TextOnSystemCaution}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="TextOnSystemCaution" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorTransparent}" Color="#00FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorTransparent" Color="#00FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorDefault}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorDefault" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorSecondary}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorSecondary" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorTertiary}" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorTertiary" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorInputActive}" Color="#FF1E1E1E" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorInputActive" Color="#FF1E1E1E" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlFillColorDisabled}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlFillColorDisabled" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrongFillColorDefault}" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrongFillColorDefault" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrongFillColorDisabled}" Color="#3EFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrongFillColorDisabled" Color="#3EFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SubtleFillColorTransparent}" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="SubtleFillColorTransparent" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SubtleFillColorSecondary}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SubtleFillColorSecondary" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SubtleFillColorTertiary}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SubtleFillColorTertiary" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SubtleFillColorDisabled}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SubtleFillColorDisabled" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlSolidFillColorDefault}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlSolidFillColorDefault" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlAltFillColorTransparent}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlAltFillColorTransparent" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlAltFillColorSecondary}" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlAltFillColorSecondary" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlAltFillColorTertiary}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlAltFillColorTertiary" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlAltFillColorQuarternary}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlAltFillColorQuarternary" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlAltFillColorDisabled}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlAltFillColorDisabled" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorDefault}" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorDefault" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorSecondary}" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorSecondary" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorOnAccentDefault}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorOnAccentDefault" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorOnAccentSecondary}" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorOnAccentSecondary" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorOnAccentTertiary}" Color="#37000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorOnAccentTertiary" Color="#37000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorOnAccentDisabled}" Color="#33000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorOnAccentDisabled" Color="#33000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrokeColorForStrongFillWhenOnImage}" Color="#6B000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrokeColorForStrongFillWhenOnImage" Color="#6B000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrongStrokeColorDefault}" Color="#8A000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrongStrokeColorDefault" Color="#8A000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ControlStrongStrokeColorDisabled}" Color="#FF454545" ice:Freeze="True" />
+<SolidColorBrush x:Key="ControlStrongStrokeColorDisabled" Color="#FF454545" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CardStrokeColorDefault}" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="CardStrokeColorDefault" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CardStrokeColorDefaultSolid}" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="CardStrokeColorDefaultSolid" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=CardBackgroundFillColorSecondary}" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="CardBackgroundFillColorSecondary" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=DividerStrokeColorDefault}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="DividerStrokeColorDefault" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SurfaceStrokeColorDefault}" Color="#FF757575" ice:Freeze="True" />
+<SolidColorBrush x:Key="SurfaceStrokeColorDefault" Color="#FF757575" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SurfaceStrokeColorFlyout}" Color="#33000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="SurfaceStrokeColorFlyout" Color="#33000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=FocusStrokeColorOuter}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="FocusStrokeColorOuter" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=FocusStrokeColorInner}" Color="#B2000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="FocusStrokeColorInner" Color="#B2000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=AcrylicBackgroundFillColorDefault}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="AcrylicBackgroundFillColorDefault" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SolidBackgroundFillColorBase}" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="SolidBackgroundFillColorBase" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SolidBackgroundFillColorSecondary}" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="SolidBackgroundFillColorSecondary" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SolidBackgroundFillColorTertiary}" Color="#FF282828" ice:Freeze="True" />
+<SolidColorBrush x:Key="SolidBackgroundFillColorTertiary" Color="#FF282828" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SolidBackgroundFillColorQuarternary}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="SolidBackgroundFillColorQuarternary" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorSolidAttentionBackground}" Color="#FF2E2E2E" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorSolidAttentionBackground" Color="#FF2E2E2E" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorCritical}" Color="#FFFF99A4" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorCritical" Color="#FFFF99A4" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorSuccess}" Color="#FF6CCB5F" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorSuccess" Color="#FF6CCB5F" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorAttention}" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorAttention" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorCaution}" Color="#FFFCE100" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorCaution" Color="#FFFCE100" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorSuccessBackground}" Color="#FF393D1B" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorSuccessBackground" Color="#FF393D1B" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorCautionBackground}" Color="#FF433519" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorCautionBackground" Color="#FF433519" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemFillColorCriticalBackground}" Color="#FF442726" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemFillColorCriticalBackground" Color="#FF442726" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColor}" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColor" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorLight3}" Color="#FFDFF5FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorLight3" Color="#FFDFF5FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorLight2}" Color="#FFACE5FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorLight2" Color="#FFACE5FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorLight1}" Color="#FF93DDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorLight1" Color="#FF93DDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorDark1}" Color="#FF46C4FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorDark1" Color="#FF46C4FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorDark2}" Color="#FF13B4FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorDark2" Color="#FF13B4FF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SystemAccentColorDark3}" Color="#FF00AAF9" ice:Freeze="True" />
+<SolidColorBrush x:Key="SystemAccentColorDark3" Color="#FF00AAF9" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackground}" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBackground" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundGradient}" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBackgroundGradient" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorForeground}" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorForeground" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackground}" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackground" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForeground}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryForeground" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForegroundDisabled}" Color="#87000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryForegroundDisabled" Color="#87000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorDark3}" Color="#FF001612" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorDark3" Color="#FF001612" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorDark2}" Color="#FF002F27" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorDark2" Color="#FF002F27" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorDark1}" Color="#FF016151" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorDark1" Color="#FF016151" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorLight1}" Color="#FF02AD8F" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorLight1" Color="#FF02AD8F" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorLight2}" Color="#FF03DFB9" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorLight2" Color="#FF03DFB9" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryColorLight3}" Color="#FF04F8CE" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryColorLight3" Color="#FF04F8CE" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentForegroundAlt1}" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentForegroundAlt1" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=HoveredForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="HoveredForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SelectedForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SelectedForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=DisabledForeground}" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="DisabledForeground" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PlaceholderForeground}" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PlaceholderForeground" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableHoveredForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TableHoveredForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TablePressedForeground}" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TablePressedForeground" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableSelectedForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TableSelectedForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupHoveredForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupHoveredForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupPressedForeground}" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupPressedForeground" Color="#08FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupSelectedForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupSelectedForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupDisabledForeground}" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupDisabledForeground" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundHovered}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundHovered" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundPressed}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundPressed" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundSelected}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundSelected" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundInactive}" Color="#07FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundInactive" Color="#07FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableHoveredBackground}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TableHoveredBackground" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TablePressedBackground}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TablePressedBackground" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableSelectedBackground}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TableSelectedBackground" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TableAlternativeBackground}" Color="#7FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TableAlternativeBackground" Color="#7FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupBackground}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupBackground" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupHoveredBackground}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupHoveredBackground" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupPressedBackground}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupPressedBackground" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupSelectedBackground}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupSelectedBackground" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupDisabledBackground}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupDisabledBackground" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundDisabled}" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundDisabled" Color="#FF1C1C1C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt1}" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt1" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt2}" Color="#FF282828" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt2" Color="#FF282828" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt3}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt3" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt4}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt4" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt5}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt5" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentBackgroundAlt6}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentBackgroundAlt6" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColor}" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="IconColor" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorHovered}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="IconColorHovered" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorSelected}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="IconColorSelected" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=IconColorDisabled}" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="IconColorDisabled" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PopupBorder}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PopupBorder" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt5}" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt5" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt5Gradient}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt5Gradient" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt4}" Color="#3EFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt4" Color="#3EFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt3}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt3" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt2}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt2" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt2Gradient}" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt2Gradient" Color="#FF027B66" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt1}" Color="#9AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt1" Color="#9AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Border}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="Border" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderGradient}" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderGradient" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=BorderAlt}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="BorderAlt" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackground}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBackground" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorder}" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorder" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderGradient}" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderGradient" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackgroundHovered}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBackgroundHovered" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderHovered}" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderHovered" Color="#17FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderHoveredGradient}" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderHoveredGradient" Color="#0DFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryForegroundHovered}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryForegroundHovered" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackgroundSelected}" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBackgroundSelected" Color="#0AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryForegroundSelected}" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryForegroundSelected" Color="#C8FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderSelected}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderSelected" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderSelectedGradient}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderSelectedGradient" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBackgroundDisabled}" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBackgroundDisabled" Color="#0FFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderDisabled}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderDisabled" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryBorderDisabledGradient}" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryBorderDisabledGradient" Color="#11FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SecondaryForegroundDisabled}" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="SecondaryForegroundDisabled" Color="#5CFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=LinkForeground}" Color="#FF99EBFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="LinkForeground" Color="#FF99EBFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=LinkForegroundHovered}" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="LinkForegroundHovered" Color="#FF60CDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ErrorBorder}" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="ErrorBorder" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ErrorBackground}" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="ErrorBackground" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ErrorForeground}" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="ErrorForeground" Color="#FFFF99A3" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=OnErrorBackground}" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="OnErrorBackground" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=SuccessForeground}" Color="#FF6CCB5F" ice:Freeze="True" />
+<SolidColorBrush x:Key="SuccessForeground" Color="#FF6CCB5F" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=WarningForeground}" Color="#FFFCE000" ice:Freeze="True" />
+<SolidColorBrush x:Key="WarningForeground" Color="#FFFCE000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TooltipBackground}" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="TooltipBackground" Color="#FF2C2C2C" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TooltipForeground}" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TooltipForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=TooltipBorder}" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="TooltipBorder" Color="#15FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=WindowBackgroundBrush}" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series1}" Color="#FF5DCFB4" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series1" Color="#FF5DCFB4" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series2}" Color="#FF68B5FB" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series2" Color="#FF68B5FB" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series3}" Color="#FF6174DB" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series3" Color="#FF6174DB" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series4}" Color="#FFFAB86B" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series4" Color="#FFFAB86B" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series5}" Color="#FF9C65F6" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series5" Color="#FF9C65F6" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series6}" Color="#FFDC8647" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series6" Color="#FFDC8647" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series7}" Color="#FF7277FD" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series7" Color="#FF7277FD" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series8}" Color="#FF474747" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series8" Color="#FF474747" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series9}" Color="#FF333333" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series9" Color="#FF333333" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series10}" Color="#FF7A7A7A" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series10" Color="#FF7A7A7A" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Series11}" Color="#FF292929" ice:Freeze="True" />
+<SolidColorBrush x:Key="Series11" Color="#FF292929" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=Overlay}" Color="#BF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="Overlay" Color="#BF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundOpacity1}" Color="#E5027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBackgroundOpacity1" Color="#E5027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundOpacity2}" Color="#CC027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBackgroundOpacity2" Color="#CC027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBackgroundOpacity3}" Color="#66027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBackgroundOpacity3" Color="#66027B65" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryForegroundOpacity1}" Color="#87000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryForegroundOpacity1" Color="#87000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ScrollBarBackground}" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="ScrollBarBackground" Color="#19000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorder}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorder" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderGradient}" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorderGradient" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderHovered}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorderHovered" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderHoveredGradient}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorderHoveredGradient" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderFocused}" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorderFocused" Color="#14FFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryButtonBorderFocusedGradient}" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryButtonBorderFocusedGradient" Color="#23000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=PrimaryBorderSelected}" Color="#66000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PrimaryBorderSelected" Color="#66000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=ContentForegroundAlt2}" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="ContentForegroundAlt2" Color="#8AFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="{sfskin:ThemeKey Theme={x:Type themelocal:Windows11TealDarkThemeSkinHelper}, Key=OverlayRangeNavigator}" Color="#7F000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="OverlayRangeNavigator" Color="#7F000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="DefaultPrimaryBackground" Color="#FF5FCDFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="DefaultPrimaryForeground" Color="#FF000000" ice:Freeze="True" />
+<SolidColorBrush x:Key="PurpleShadowDarkPrimaryBackground" Color="#FF6B69D6" ice:Freeze="True" />
+<SolidColorBrush x:Key="PurpleShadowDarkPrimaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="VioletRedPrimaryBackground" Color="#FF881798" ice:Freeze="True" />
+<SolidColorBrush x:Key="VioletRedPrimaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="PlumbLightPrimaryBackground" Color="#FFE3008C" ice:Freeze="True" />
+<SolidColorBrush x:Key="PlumbLightPrimaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="MintLightPrimaryBackground" Color="#FF00B294" ice:Freeze="True" />
+<SolidColorBrush x:Key="MintLightPrimaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+<SolidColorBrush x:Key="YellowGoldPrimaryBackground" Color="#FFFFB900" ice:Freeze="True" />
+<SolidColorBrush x:Key="YellowGoldPrimaryForeground" Color="#FF202020" ice:Freeze="True" />
+<SolidColorBrush x:Key="SteelBluePrimaryBackground" Color="#FF68768A" ice:Freeze="True" />
+<SolidColorBrush x:Key="SteelBluePrimaryForeground" Color="#FFFFFFFF" ice:Freeze="True" />
+
+</ResourceDictionary>

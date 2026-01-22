@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Colors>
+    <Color Key="PrimaryBackground.Color">#FF027B66</Color>
+    <Color Key="BorderGradient.Color">#8AFFFFFF</Color>
+    <Color Key="Border.Color">#14FFFFFF</Color>
+    <Color Key="BorderAlt2Gradient.Color">#FF00B293</Color>
+    <Color Key="BorderAlt2.Color">#0FFFFFFF</Color>
+    <Color Key="ContentBackgroundAlt2.Color">#FF282828</Color>
+    <Color Key="BorderAlt1.Color">#9AFFFFFF</Color>
+    <Color Key="ErrorBackground.Color">#FFFF99A3</Color>
+    <Color Key="SuccessForeground.Color">#FF6CCB5F</Color>
+    <Color Key="WarningForeground.Color">#FFFCE000</Color>
+    <Color Key="LinkForeground.Color">#FF99EBFF</Color>
+    <Color Key="ContentForeground.Color">#FFFFFFFF</Color>
+    <Color Key="ContentBackground.Color">#FF1C1C1C</Color>
+    <Color Key="PrimaryForeground.Color">#FFFFFFFF</Color>
+    <Color Key="PrimaryBackgroundOpacity2.Color">#CC00B293</Color>
+    <Color Key="BorderAlt4.Color">#3EFFFFFF</Color>
+    <Color Key="BorderAlt.Color">#15FFFFFF</Color>
+    <Color Key="PrimaryBackgroundOpacity1.Color">#E500B293</Color>
+    <Color Key="PrimaryColorLight1.Color">#FF00E5BE</Color>
+    <Color Key="SecondaryBorderGradient.Color">#0DFFFFFF</Color>
+    <Color Key="SecondaryBorder.Color">#17FFFFFF</Color>
+    <Color Key="SecondaryBorderHoveredGradient.Color">#0DFFFFFF</Color>
+    <Color Key="SecondaryBorderHovered.Color">#17FFFFFF</Color>
+    <Color Key="IconColor.Color">#C8FFFFFF</Color>
+    <Color Key="ContentBackgroundHovered.Color">#0FFFFFFF</Color>
+    <Color Key="PrimaryColorLight2.Color">#FF19FFD8</Color>
+    <Color Key="SecondaryBackgroundHovered.Color">#15FFFFFF</Color>
+    <Color Key="SecondaryBackgroundSelected.Color">#0AFFFFFF</Color>
+    <Color Key="PrimaryButtonBorderGradient.Color">#23000000</Color>
+    <Color Key="PrimaryButtonBorder.Color">#14FFFFFF</Color>
+    <Color Key="PrimaryButtonBorderHoveredGradient.Color">#14FFFFFF</Color>
+    <Color Key="PrimaryButtonBorderHovered.Color">#14FFFFFF</Color>
+    <Color Key="BorderAlt5Gradient.Color">#11FFFFFF</Color>
+    <Color Key="BorderAlt5.Color">#17FFFFFF</Color>
+    <Color Key="IconColorDisabled.Color">#5CFFFFFF</Color>
+    <Color Key="IconColorHovered.Color">#FFFFFFFF</Color>
+    <Color Key="IconColorSelected.Color">#FFFFFFFF</Color>
+    <Color Key="ContentBackgroundSelected.Color">#0FFFFFFF</Color>
+    <Color Key="Series1.Color">#FF5DCFB4</Color>
+    <Color Key="Series5.Color">#FF9C65F6</Color>
+    <Color Key="Series2.Color">#FF68B5FB</Color>
+    <Color Key="Series4.Color">#FFFAB86B</Color>
+    <Color Key="Series3.Color">#FF6174DB</Color>
+    <Color Key="PrimaryColorDark1.Color">#FF00987E</Color>
+    <Color Key="White.Color">#FFFFFFFF</Color>
+    <Color Key="SystemAccentColorDark3.Color">#FF00AAF9</Color>
+    <Color Key="ContentForegroundAlt1.Color">#C8FFFFFF</Color>
+    <Color Key="Series7.Color">#FF7277FD</Color>
+    <Color Key="Series6.Color">#FFDC8647</Color>
+    <Color Key="PopupBackground.Color">#FF2C2C2C</Color>
+    <Color Key="ContentBackgroundAlt5.Color">#15FFFFFF</Color>
+    <Color Key="ErrorForeground.Color">#FFFF99A3</Color>
+    <Color Key="Black.Color">#FF000000</Color>
+    <Color Key="ContentBackgroundAlt4.Color">#0FFFFFFF</Color>
+    <Color Key="PrimaryColorDark2.Color">#FF006554</Color>
+    <Color Key="ContentBackgroundAlt3.Color">#FF2C2C2C</Color>
+    <Color Key="Overlay.Color">#BF000000</Color>
+    <Color Key="BorderAlt3.Color">#FFFFFFFF</Color>
+    <Color Key="HoveredForeground.Color">#FFFFFFFF</Color>
+
+<!--    Adwind-->
+    <Color Key="AdwindRed">#FFCC3333</Color>
+    <Color Key="AdwindYellow">#FFFDDE82</Color>
+
+    <Color Key="Adwind_Foreground">Black</Color>
+    <Color Key="AdwindYellow_Background_Hovered">#FFFDDE82" Opacity="0.6</Color>
+    <Color Key="Adwind_BorderBrush">DarkGoldenrod</Color>
+    <Color Key="Adwind_Secondary_Border_Hovered">DarkGoldenrod" Opacity="0.6</Color>
+    <Color Key="AdwindPrimaryBacground09">#FF2A579A" Opacity="0.7</Color>
+    
+</Colors>

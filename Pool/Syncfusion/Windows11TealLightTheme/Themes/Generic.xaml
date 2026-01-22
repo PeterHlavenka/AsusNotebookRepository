@@ -1,0 +1,10 @@
+<sfskin:ThemeResourceDictionary
+	ThemeName="Windows11TealLightTheme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:sfskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Syncfusion.Themes.Windows11TealLightTheme.WPF">
+    
+
+        
+</sfskin:ThemeResourceDictionary>

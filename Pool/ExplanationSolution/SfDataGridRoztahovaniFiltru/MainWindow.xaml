@@ -1,0 +1,58 @@
+﻿<Window x:Class="SfDataGridRoztahovaniFiltru.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SfDataGridRoztahovaniFiltru"
+        mc:Ignorable="d"
+        Title="SfDataGrid s roztahovacími filtry" 
+        Height="600" 
+        Width="900"
+        syncfusion:SfSkinManager.Theme="{syncfusion:SkinManagerExtension ThemeName=Windows11Dark}">
+    
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <!-- Override style pro GridFilterControl - zajistí viditelnost ResizingThumb i s tématem -->
+        <Style TargetType="syncfusion:GridFilterControl" BasedOn="{StaticResource {x:Type syncfusion:GridFilterControl}}">
+            <Setter Property="ResizingThumbVisibility" Value="Visible"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" 
+                   Text="SfDataGrid s povolenými filtry - popupy lze roztahovat pomocí úchytu vpravo dole" 
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   Margin="5"
+                   TextWrapping="Wrap"/>
+        
+        <syncfusion:SfDataGrid x:Name="DataGrid"
+                               Grid.Row="1"
+                               Margin="5"
+                               AutoGenerateColumns="True"
+                               AllowDraggingColumns="True"
+                               AllowEditing="False"
+                               AllowFiltering="True"
+                               AllowSorting="True"
+                               FilterRowPosition="FixedTop"
+                               HeaderRowHeight="32"
+                               SelectionMode="Extended"
+                               ColumnSizer="Star"
+                               ItemsSource="{Binding Orders}"
+                               AllowTriStateSorting="True"
+                               ShowGroupDropArea="True"
+                               GridLinesVisibility="Both">
+            
+        </syncfusion:SfDataGrid>
+    </Grid>
+</Window>
+
