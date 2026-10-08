@@ -39,13 +39,14 @@ public sealed class Widget : Window
     }
     private readonly AccountPanel[] accounts;
     private readonly DispatcherTimer timer = new() { Interval = TimeSpan.FromSeconds(10) };
+    private readonly DispatcherTimer topmostTimer = new() { Interval = TimeSpan.FromSeconds(1) };
     private readonly Border panel;
     private readonly Forms.NotifyIcon tray;
     private readonly Drawing.Icon icon;
     private readonly CancellationTokenSource lifetime = new();
     private readonly string settingsPath = FilePath.Combine(AccountConfiguration.UserDirectory, "widget.settings.json");
     private readonly string? checkDirectory;
-    private bool closed, pinned = true;
+    private bool closed;
     private Settings settings;
     private sealed record Settings(double? Left = null, double? Top = null);
 
@@ -84,18 +85,22 @@ public sealed class Widget : Window
         panel.ContextMenu = BuildMenu();
         icon = CreateIcon(); tray = new Forms.NotifyIcon { Icon = icon, Text = "", Visible = true };
         var trayMenu = new Forms.ContextMenuStrip();
-        trayMenu.Items.Add("Zobrazit miniokno", null, (_, _) => Dispatcher.Invoke(() => { Show(); Topmost = pinned; }));
+        trayMenu.Items.Add("Zobrazit miniokno", null, (_, _) => Dispatcher.Invoke(() => { Show(); EnsureTopmost(); }));
         trayMenu.Items.Add("Obnovit", null, async (_, _) => await Dispatcher.InvokeAsync(RefreshAsync).Task.Unwrap());
         trayMenu.Items.Add("Zavřít", null, (_, _) => Dispatcher.Invoke(Close));
         tray.ContextMenuStrip = trayMenu;
-        tray.MouseClick += (_, e) => { if (e.Button == Forms.MouseButtons.Left) Dispatcher.Invoke(() => { Show(); Topmost = pinned; }); };
+        tray.MouseClick += (_, e) => { if (e.Button == Forms.MouseButtons.Left) Dispatcher.Invoke(() => { Show(); EnsureTopmost(); }); };
+        SourceInitialized += (_, _) => EnsureTopmost();
+        Deactivated += (_, _) => Dispatcher.BeginInvoke(new Action(EnsureTopmost), DispatcherPriority.Background);
+        IsVisibleChanged += (_, _) => EnsureTopmost();
+        topmostTimer.Tick += (_, _) => EnsureTopmost();
         Loaded += async (_, _) => {
-            PositionWindow(); timer.Tick += async (_, _) => await RefreshAsync(); timer.Start();
+            PositionWindow(); topmostTimer.Start(); EnsureTopmost(); timer.Tick += async (_, _) => await RefreshAsync(); timer.Start();
             await RefreshAsync(); if (checkDirectory is not null) await FinishCheckAsync();
             else if (loginAccount is not null && accounts.FirstOrDefault(a => a.Key == loginAccount) is { } account) await SignInAsync(account);
         };
         Closed += (_, _) => {
-            closed = true; lifetime.Cancel(); timer.Stop(); Save(); tray.Visible = false; tray.Dispose(); icon.Dispose();
+            closed = true; lifetime.Cancel(); timer.Stop(); topmostTimer.Stop(); Save(); tray.Visible = false; tray.Dispose(); icon.Dispose();
             foreach (var account in accounts) account.Connection?.Dispose();
         };
     }
@@ -170,15 +175,21 @@ public sealed class Widget : Window
         menu.Items.Add(status);
         var edit = new MenuItem { Header = "Nastavit účty…" }; edit.Click += (_, _) => EditAccounts(); menu.Items.Add(edit);
         menu.Opened += (_, _) => edit.IsEnabled = !accounts.Any(a => a.SigningIn);
-        var top = new MenuItem { Header = "Vždy navrchu", IsCheckable = true, IsChecked = true }; top.Click += (_, _) => { pinned = top.IsChecked; Topmost = pinned; };
         var reposition = new MenuItem { Header = "Vrátit do pravého dolního rohu" }; reposition.Click += (_, _) => { settings = new(); PositionWindow(); Save(); };
         var hide = new MenuItem { Header = "Skrýt do oznamovací oblasti" }; hide.Click += (_, _) => Hide();
         var close = new MenuItem { Header = "Zavřít" }; close.Click += (_, _) => Close();
-        menu.Items.Add(top); menu.Items.Add(reposition); menu.Items.Add(new Separator()); menu.Items.Add(hide); menu.Items.Add(close);
-        menu.Opened += (_, _) => top.IsChecked = pinned;
+        menu.Items.Add(reposition); menu.Items.Add(new Separator()); menu.Items.Add(hide); menu.Items.Add(close);
         return menu;
     }
 
+    private void EnsureTopmost()
+    {
+        if (closed || !IsVisible || !IsEnabled || panel.ContextMenu?.IsOpen == true) return;
+        Topmost = true;
+        var handle = new WindowInteropHelper(this).Handle;
+        if (handle != IntPtr.Zero)
+            SetWindowPos(handle, new IntPtr(-1), 0, 0, 0, 0, 0x13); // Keep position/size and do not activate.
+    }
     private void EditAccounts()
     {
         var editor = new AccountEditor(accounts.Select(a => a.Definition).ToArray()) { Owner = this };
@@ -261,7 +272,16 @@ public sealed class Widget : Window
     }
     private async Task FinishCheckAsync()
     {
-        var firstObservation = accounts.Select(a => a.Snapshot?.ObservedAt).ToArray(); await Task.Delay(11300);
+        var firstObservation = accounts.Select(a => a.Snapshot?.ObservedAt).ToArray();
+        var handle = new WindowInteropHelper(this).Handle;
+        Topmost = false;
+        SetWindowPos(handle, new IntPtr(-2), 0, 0, 0, 0, 0x13);
+        bool nativeTopmostRemoved = (GetWindowLong(handle, -20) & 8) == 0;
+        await Task.Delay(1500);
+        bool nativeTopmostRecovered = Topmost && (GetWindowLong(handle, -20) & 8) != 0;
+        if (!nativeTopmostRemoved || !nativeTopmostRecovered)
+            throw new InvalidOperationException("Always-on-top recovery failed");
+        await Task.Delay(11300);
         Directory.CreateDirectory(checkDirectory!); var dpi = VisualTreeHelper.GetDpi(this);
         var bitmap = new RenderTargetBitmap((int)Math.Ceiling(ActualWidth * dpi.DpiScaleX), (int)Math.Ceiling(ActualHeight * dpi.DpiScaleY), 96 * dpi.DpiScaleX, 96 * dpi.DpiScaleY, PixelFormats.Pbgra32);
         bitmap.Render(this); var encoder = new PngBitmapEncoder(); encoder.Frames.Add(BitmapFrame.Create(bitmap));
@@ -270,7 +290,7 @@ public sealed class Widget : Window
             automaticRefresh = a.Snapshot?.ObservedAt > firstObservation[i], error = a.Failure,
             rows = a.Percentages.Select(x => x.Text).ToArray(), resetLabels = a.Resets.Select(x => x.Text).ToArray() }).ToArray();
         File.WriteAllText(FilePath.Combine(checkDirectory!, "check.json"), JsonSerializer.Serialize(new {
-            accounts = results, parserChecks = ParserChecks.Run(), topmost = Topmost,
+            accounts = results, parserChecks = ParserChecks.Run(), topmost = Topmost, nativeTopmostRemoved, nativeTopmostRecovered,
             nativeTopmost = (GetWindowLong(new WindowInteropHelper(this).Handle, -20) & 8) != 0,
             tooltipDisabled = !ToolTipService.GetIsEnabled(panel) && panel.ToolTip is null && tray.Text == "",
             showInTaskbar = ShowInTaskbar, width = ActualWidth, height = ActualHeight,
@@ -283,6 +303,7 @@ public sealed class Widget : Window
         using var brush = new Drawing.SolidBrush(Drawing.Color.FromArgb(184, 206, 170)); graphics.FillRectangle(brush, 2, 4, 12, 3); graphics.FillRectangle(brush, 2, 10, 8, 3);
         var handle = bitmap.GetHicon(); try { using var native = Drawing.Icon.FromHandle(handle); return (Drawing.Icon)native.Clone(); } finally { DestroyIcon(handle); }
     }
+    [DllImport("user32.dll")] private static extern bool SetWindowPos(IntPtr window, IntPtr after, int x, int y, int width, int height, uint flags);
     [DllImport("user32.dll")] private static extern bool DestroyIcon(IntPtr icon);
     [DllImport("user32.dll")] private static extern int GetWindowLong(IntPtr window, int index);
 }

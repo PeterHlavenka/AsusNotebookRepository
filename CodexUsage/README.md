@@ -7,7 +7,7 @@ Malé plovoucí miniokno pro Windows zobrazující zbývající limity jednoho n
 - Šířka se přizpůsobuje počtu účtů: 121 bodů pro jeden, 240 pro dva. Výška je 40 bodů.
 - Dva řádky u každého účtu: nahoře zbývající pětihodinový limit a čas resetu, dole týdenní limit a datum resetu.
 - Čas v místním časovém pásmu Windows ve 24hodinovém formátu.
-- Obnova každých 10 sekund, vždy navrchu, přesun tažením myši, bez tooltipů a přepínání dvojklikem.
+- Obnova údajů každých 10 sekund. Miniokno trvale udržuje režim vždy navrchu a každou sekundu obnovuje pořadí oken bez přebírání fokusu. Přesun tažením myši, bez tooltipů a přepínání dvojklikem. Vlastní nabídky a dialogy mají přednost; zabezpečená plocha Windows a exkluzivní fullscreen mohou miniokno zakrýt.
 
 ## Sestavení a spuštění
 
@@ -52,7 +52,7 @@ Předchozí nastavení accounts.json vedle EXE se při prvním spuštění přev
 
 ## Další ovládání
 
-Pravým tlačítkem lze obnovit údaje, zobrazit stav připojení, vypnout režim vždy navrchu, obnovit polohu, skrýt okno nebo aplikaci zavřít. Jedním kliknutím na ikonu v oznamovací oblasti se okno znovu zobrazí.
+Pravým tlačítkem lze obnovit údaje, zobrazit stav připojení, obnovit polohu, skrýt okno nebo aplikaci zavřít. Jedním kliknutím na ikonu v oznamovací oblasti se okno znovu zobrazí.
 
 Procenta znamenají zbývající limit. Hvězdička označuje starou nebo neověřenou hodnotu, případně čekání na nové údaje po resetu. Podporované jsou pětihodinové a týdenní limity, jiné firemní limity se nezobrazují.
 
@@ -82,7 +82,7 @@ Aktualizace: spusť Install.cmd z nové verze ZIP. Předchozí verze zůstává 
 
 Odinstalace: spusť Uninstall.ps1 z instalační složky. Smaže aplikaci a její zástupce, konfiguraci a uložená přihlášení zachová.
 
-    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-1.3.0-win-x64-desktop-runtime.zip
+    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-1.3.1-win-x64-desktop-runtime.zip
 
 Ověření používá oddělený testovací profil bez vytváření zástupců a kontroluje instalaci, opakovanou instalaci, aktualizaci, zachování nastavení, odmítnutí poškozených souborů a cest mimo balíček a odinstalaci. GitHub Actions sestaví a ověří ZIP, poté jej uloží jako artifact; nevydává automaticky veřejný release.
 

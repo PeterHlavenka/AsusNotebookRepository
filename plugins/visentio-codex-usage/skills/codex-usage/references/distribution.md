@@ -8,7 +8,7 @@ Extract the whole ZIP, then run Install.cmd. It installs into %LOCALAPPDATA%\Pro
 
 Right-click the miniwindow > Nastavit účty… to add/remove accounts, set optional e-mail identity checks and choose icons. Use visentio for the company icon. A fresh install has one current Codex account with this icon. For additional accounts, sign in separately through the corresponding account menu. These profiles do not switch the main Codex account.
 
-The window is 40 device-independent units high, always on top by default, draggable, and refreshes every ten seconds. The two rows show remaining five-hour and weekly Codex limits, with local 24-hour reset time and reset date. An asterisk means the reading is old, uncertain or awaiting a reset refresh.
+The window is 40 device-independent units high, always on top with automatic recovery every second without taking focus, draggable, and refreshes every ten seconds. The two rows show remaining five-hour and weekly Codex limits, with local 24-hour reset time and reset date. An asterisk means the reading is old, uncertain or awaiting a reset refresh.
 
 Settings and encrypted profiles live under %LOCALAPPDATA%\CodexUsage. Never share this folder.
 
