@@ -1,0 +1,6 @@
+source/bin/
+source/obj/
+app/
+accounts.json
+widget.settings.json
+*.tmp
