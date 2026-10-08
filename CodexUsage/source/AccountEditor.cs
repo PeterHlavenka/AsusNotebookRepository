@@ -22,7 +22,7 @@ public sealed class AccountEditor : Window
         accounts = new(definitions.Select(a => new AccountDefinition { Id = a.Id, Name = a.Name, Email = a.Email, Icon = a.Icon }));
         var layout = new DockPanel { Margin = new Thickness(14) };
         var help = new TextBlock {
-            Text = "Přidej účty, které chceš sledovat. E-mail je volitelný; při vyplnění se ověřuje shoda.\nJeden účet bez e-mailu automaticky použije přihlášení v Codexu.",
+            Text = "Přidej účty, které chceš sledovat. E-mail je volitelný; při vyplnění se ověřuje shoda.\nJeden účet bez e-mailu použije aktuální Codex. Ikona: iniciály, emoji nebo visentio.",
             TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 0, 0, 12)
         };
         DockPanel.SetDock(help, Dock.Top); layout.Children.Add(help);
@@ -32,7 +32,7 @@ public sealed class AccountEditor : Window
             CanUserDeleteRows = false, SelectionMode = DataGridSelectionMode.Single };
         grid.Columns.Add(Column("Název", nameof(AccountDefinition.Name), 140));
         grid.Columns.Add(Column("E-mail (volitelný)", nameof(AccountDefinition.Email), 270));
-        grid.Columns.Add(Column("Ikona", nameof(AccountDefinition.Icon), 65));
+        grid.Columns.Add(Column("Ikona", nameof(AccountDefinition.Icon), 85));
         layout.Children.Add(grid);
         AddButton(buttons, "Přidat", () => {
             if (accounts.Count >= 8) return;

@@ -1,8 +1,8 @@
 # Codex Usage
 
-Malé plovoucí miniokno pro Windows zobrazující zbývající limity jednoho nebo více účtů Codex. Je použitelné pro různé členy týmu; neobsahuje pevné e-maily, uživatelské iniciály ani firemní logo.
+Malé plovoucí miniokno pro Windows zobrazující zbývající limity jednoho nebo více účtů Codex. Je použitelné pro různé členy týmu; neobsahuje pevné e-maily ani uživatelské iniciály. Pro firemní použití nabízí volitelnou ikonu Visentia.
 
-- Bez konfigurace zobrazí jeden účet z aktuálního přihlášení Codexu.
+- Bez konfigurace zobrazí jeden účet z aktuálního přihlášení Codexu s ikonou Visentia.
 - Přes nabídku lze nastavit jeden až osm účtů, jejich názvy a vlastní ikony (iniciály nebo emoji).
 - Šířka se přizpůsobuje počtu účtů: 121 bodů pro jeden, 240 pro dva. Výška je 40 bodů.
 - Dva řádky u každého účtu: nahoře zbývající pětihodinový limit a čas resetu, dole týdenní limit a datum resetu.
@@ -30,7 +30,7 @@ Pravým tlačítkem otevři **Nastavit účty…**. Přidej, odeber nebo uprav �
 
 - **Název**: tvoje vlastní označení účtu.
 - **E-mail**: volitelný. Pokud je vyplněný, miniokno ověřuje, že se načítá správný účet.
-- **Ikona**: nejvýše dva znaky nebo emoji. Bez vyplnění se odvodí iniciály z názvu.
+- **Ikona**: nejvýše dva znaky, emoji nebo hodnota visentio pro firemní logo. Bez vyplnění se odvodí iniciály z názvu. Volba loga neovlivňuje přihlášení ani výběr účtu.
 
 Každý účet má vlastní profil. Při více účtech bez zadaného e-mailu se používají pouze samostatná přihlášení, aby se aktuální účet Codexu nezobrazil opakovaně pod různými ikonami. U účtů s vyplněným e-mailem lze před samostatným přihlášením použít aktuální Codex, pouze pokud e-mail souhlasí.
 

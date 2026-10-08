@@ -118,6 +118,21 @@ public sealed class Widget : Window
     }
     private static UIElement CreateAvatar(AccountDefinition account, int index)
     {
+        if (string.Equals(account.Icon, "visentio", StringComparison.OrdinalIgnoreCase)) {
+            var canvas = new Canvas { Width = 24, Height = 24, VerticalAlignment = VerticalAlignment.Center };
+            var teal = Brush("#00B4B0");
+            var left = new Ellipse { Width = 6, Height = 6, Fill = teal };
+            Canvas.SetLeft(left, 2); Canvas.SetTop(left, 2); canvas.Children.Add(left);
+            var right = new Ellipse { Width = 6, Height = 6, Fill = teal };
+            Canvas.SetLeft(right, 13); Canvas.SetTop(right, 1); canvas.Children.Add(right);
+            canvas.Children.Add(new System.Windows.Shapes.Path {
+                Data = Geometry.Parse("M 2,11 C 2,8 8,8 8,11 L 8,20 C 8,23 2,23 2,20 Z"), Fill = teal
+            });
+            canvas.Children.Add(new System.Windows.Shapes.Path {
+                Data = Geometry.Parse("M 10,12 L 14,17 L 21,8 L 23,10 L 14,23 L 10,18 Z"), Fill = teal
+            });
+            return canvas;
+        }
         string[] colors = ["#385063", "#32625B", "#63506F", "#6B543D"];
         return new Border {
             Width = 22, Height = 22, CornerRadius = new CornerRadius(11),

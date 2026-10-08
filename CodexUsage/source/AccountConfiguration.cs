@@ -35,7 +35,7 @@ public static class AccountConfiguration
         PropertyNameCaseInsensitive = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true
     };
 
-    public static AccountDefinition[] Default() => [new() { Id = "default", Name = "Codex", Icon = "C" }];
+    public static AccountDefinition[] Default() => [new() { Id = "default", Name = "Codex", Icon = "visentio" }];
 
     public static AccountDefinition[] Load(string path, string legacyPath)
     {
@@ -87,8 +87,9 @@ public static class AccountConfiguration
             if (account.Email is not null && (!MailAddress.TryCreate(account.Email, out var parsed) ||
                 !string.Equals(parsed.Address, account.Email, StringComparison.OrdinalIgnoreCase)))
                 throw new InvalidDataException("Vyplň platný e-mail, nebo ho ponech prázdný");
-            if (account.Icon is not null && (new StringInfo(account.Icon).LengthInTextElements > 2 || account.Icon.Any(char.IsControl)))
-                throw new InvalidDataException("Ikona může obsahovat nejvýše dva znaky nebo emoji");
+            if (account.Icon is not null && !string.Equals(account.Icon, "visentio", StringComparison.OrdinalIgnoreCase) &&
+                (new StringInfo(account.Icon).LengthInTextElements > 2 || account.Icon.Any(char.IsControl)))
+                throw new InvalidDataException("Ikona může obsahovat nejvýše dva znaky, emoji nebo visentio");
         }
         return accounts;
     }
