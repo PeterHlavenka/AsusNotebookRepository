@@ -67,3 +67,34 @@ Ověření po automatické obnově uloží check.json a widget.png. Používá v
 Kontroluje parser limitů, shodu účtů, 24hodinový formát, jednoúčtové a víceúčtové konfigurace, neplatná ID profilů, režim vždy navrchu a stav obnovy každého účtu. Živé čtení vyžaduje přihlášení příslušných účtů.
 
 Pro otevření přihlášení konkrétního profilu lze použít --login ID. Parametr ID musí odpovídat ID v místní konfiguraci.
+
+## Distribuce pro tým (bez certifikátu)
+
+Kompaktní instalační ZIP pro Windows x64 vytvoří:
+
+    .\distribution\Build-TeamBundle.ps1
+
+Výstup je v dist. Kolegové již mají .NET 10 Desktop Runtime (x64); instalátor ověřuje tuto konkrétní závislost. Volitelný parametr -SelfContained vytvoří větší balíček s runtime.
+
+Rozbal celý ZIP a spusť Install.cmd. Instaluje bez administrátora do %LOCALAPPDATA%\Programs\VisentioCodexUsage, vytvoří zástupce v nabídce Start a na ploše a zapne spuštění po přihlášení do Windows. Nastavení a přihlášení zůstávají v %LOCALAPPDATA%\CodexUsage.
+
+Aktualizace: spusť Install.cmd z nové verze ZIP. Předchozí verze zůstává zachovaná, zástupci se přesměrují na novou verzi. Instalátor kontroluje úplnost a SHA-256 souborů. Kontrolní součty ověřují poškození, nikoli identitu vydavatele; balíček není podepsaný. Používej schválený odkaz správce. Neexistuje tichý automatický downloader nepodepsaného kódu.
+
+Odinstalace: spusť Uninstall.ps1 z instalační složky. Smaže aplikaci a její zástupce, konfiguraci a uložená přihlášení zachová.
+
+    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-1.3.0-win-x64-desktop-runtime.zip
+
+Ověření používá oddělený testovací profil bez vytváření zástupců a kontroluje instalaci, opakovanou instalaci, aktualizaci, zachování nastavení, odmítnutí poškozených souborů a cest mimo balíček a odinstalaci. GitHub Actions sestaví a ověří ZIP, poté jej uloží jako artifact; nevydává automaticky veřejný release.
+
+## ChatGPT workspace plugin
+
+Plugin je v plugins/visentio-codex-usage v kořeni repozitáře. Obsahuje ikonu a skill pro instalaci, aktualizaci a podporu. Nepředstírá čtení živých limitů z webového ChatGPT a neinstaluje Windows aplikaci samotným přidáním do workspace.
+
+Po pushnutí těchto souborů může správce workspace otevřít Admin > Plugins > Add > Import marketplace:
+- Source: URL tohoto GitHub repozitáře
+- Path: prázdné (marketplace je v kořeni)
+- Branch: master
+
+Manifest .agents/plugins/marketplace.json obsahuje jediný plugin. Správce poté nastaví jeho dostupnost pro členy týmu. Repo import a sync pluginu jsou samostatné od aktualizace Windows miniokna. Aktuální schválený odkaz na instalační balíček je nutné doplnit po jeho vydání; plugin zatím nevymýšlí neexistující download URL.
+
+Dokumentace: https://learn.chatgpt.com/docs/enterprise/plugin-management

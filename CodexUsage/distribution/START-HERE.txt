@@ -1,0 +1,23 @@
+VISENTIO CODEX USAGE — WINDOWS x64
+
+1. Install Codex desktop and sign in with your own ChatGPT account.
+2. Extract this entire ZIP into a folder.
+3. Double-click Install.cmd. No administrator privileges are needed. The compact bundle requires .NET 10 Desktop Runtime (x64); the standalone bundle includes it.
+4. The miniwindow starts and is configured to run at Windows sign-in.
+5. Right-click the miniwindow > Nastavit účty… to add a personal account or change icons.
+   Use visentio as the icon value for the company logo.
+
+Updates: obtain the next version from the maintainer and run its Install.cmd.
+Configuration, window position and sign-in profiles are retained.
+Only download packages from the maintainer's verified link. This small-team distribution is unsigned.
+
+Without installing: run app\CodexUsage.exe directly. Keep the whole app folder together.
+Codex and internet access are required. Only Codex five-hour and weekly limits are shown.
+Refreshing these limits does not call a model.
+
+Uninstall:
+Run %LOCALAPPDATA%\Programs\VisentioCodexUsage\Uninstall.ps1 with PowerShell.
+Accounts and encrypted sign-in profiles are intentionally retained.
+
+Installation options for IT:
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -NoStartup -NoLaunch -NoDesktopShortcut

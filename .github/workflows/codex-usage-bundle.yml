@@ -1,0 +1,41 @@
+name: Codex Usage team bundle
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'CodexUsage/**'
+      - 'plugins/visentio-codex-usage/**'
+      - '.github/workflows/codex-usage-bundle.yml'
+  pull_request:
+    paths:
+      - 'CodexUsage/**'
+      - 'plugins/visentio-codex-usage/**'
+      - '.github/workflows/codex-usage-bundle.yml'
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build compact Windows bundle
+        shell: pwsh
+        run: ./CodexUsage/distribution/Build-TeamBundle.ps1
+      - name: Verify install and update
+        shell: pwsh
+        run: |
+          $archive = Get-ChildItem ./CodexUsage/dist/*desktop-runtime.zip | Select-Object -First 1
+          ./CodexUsage/distribution/Verify-TeamBundle.ps1 -Archive $archive.FullName
+      - name: Package workspace plugin
+        shell: pwsh
+        run: Compress-Archive -LiteralPath ./plugins/visentio-codex-usage -DestinationPath ./CodexUsage/dist/visentio-codex-usage-plugin.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: visentio-codex-usage-distribution
+          path: |
+            CodexUsage/dist/*.zip
+            CodexUsage/dist/*.sha256
+          if-no-files-found: error

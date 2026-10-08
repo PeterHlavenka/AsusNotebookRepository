@@ -4,3 +4,4 @@ app/
 accounts.json
 widget.settings.json
 *.tmp
+dist/
