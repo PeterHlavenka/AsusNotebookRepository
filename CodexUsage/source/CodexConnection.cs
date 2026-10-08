@@ -64,6 +64,7 @@ public sealed class CodexConnection : IDisposable
     { this.profileHome = profileHome; this.expectedEmail = expectedEmail; }
     private int nextId;
     private bool disposed;
+    public string? Email { get; private set; }
 
     public async Task<UsageSnapshot> ReadAsync()
     {
@@ -74,6 +75,7 @@ public sealed class CodexConnection : IDisposable
             var account = await RequestAsync("account/read", new { refreshToken = false });
             if (!AccountMatches(account, expectedEmail))
                 throw new AccountUnavailableException("Přihlas správný účet");
+            Email = account.GetProperty("account").GetProperty("email").GetString();
             return UsageSnapshot.Parse(await RequestAsync("account/rateLimits/read", null));
         }
         catch { Disconnect(); throw; }
@@ -103,6 +105,7 @@ public sealed class CodexConnection : IDisposable
             var info = await RequestAsync("account/read", new { refreshToken = false });
             if (!AccountMatches(info, expectedEmail))
                 throw new AccountUnavailableException("Byl přihlášen jiný účet");
+            Email = info.GetProperty("account").GetProperty("email").GetString();
         }
         finally
         {
@@ -116,11 +119,11 @@ public sealed class CodexConnection : IDisposable
     }
 
     public static bool AccountMatches(JsonElement response, string? expectedEmail) =>
-        !string.IsNullOrWhiteSpace(expectedEmail) &&
         response.TryGetProperty("account", out var account) && account.ValueKind == JsonValueKind.Object &&
-        account.TryGetProperty("type", out var type) && type.GetString() == "chatgpt" &&
+        account.TryGetProperty("type", out var type) && type.ValueKind == JsonValueKind.String && type.GetString() == "chatgpt" &&
         account.TryGetProperty("email", out var email) && email.ValueKind == JsonValueKind.String &&
-        string.Equals(email.GetString(), expectedEmail, StringComparison.OrdinalIgnoreCase);
+        !string.IsNullOrWhiteSpace(email.GetString()) &&
+        (expectedEmail is null || string.Equals(email.GetString(), expectedEmail, StringComparison.OrdinalIgnoreCase));
 
     private async Task ConnectAsync()
     {

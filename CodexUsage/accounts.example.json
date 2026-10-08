@@ -1,4 +1,10 @@
 {
-  "personal": "personal@example.com",
-  "work": "work@example.com"
+  "accounts": [
+    {
+      "id": "default",
+      "name": "Codex",
+      "email": null,
+      "icon": "C"
+    }
+  ]
 }
