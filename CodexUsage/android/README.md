@@ -1,10 +1,10 @@
 # Codex Usage for Android (experimental)
 
-Native Android home-screen widget, Android 8+ including Android 13. No PC, server, OpenAI API key, model requests or personal data bundled in the APK. One or two accounts in a compact 48dp horizontal strip, with a 3x1 default grid allocation; Visentio logo for work on the left, a circular P avatar for personal on the right. Remaining percentages use 15sp type, reset times/dates 13sp. Compact dates (e.g. 16.10.) and 18dp icons leave room for both accounts. Missing values stay missing; old cached values use a muted amber color. No update-time footer.
+Native Android home-screen widget, Android 8+ including Android 13. No PC, server, OpenAI API key, model requests or personal data bundled in the APK. One or two accounts in a compact 48dp horizontal strip, with a 3x1 default grid allocation; Visentio logo for work on the left, a circular P avatar for personal on the right. Percentages and reset times/dates all use 15sp condensed type, with each percentage and reset sharing the same row and baseline. Compact dates (e.g. 16.10.), minimal spacing, and 28dp icons leave room for both accounts. Missing values stay missing; old cached values use a muted amber color. No update-time footer.
 
 ## Install
 
-Install `dist/CodexUsage-0.1.3.apk` on the phone, allowing installation from the browser/file manager when Android asks. This development APK is signed with the build machine's local Android debug key. It is for testing, not a production release. Updates must use the same signing key or require reinstalling and signing in again. Keep signing keys out of Git.
+Install `dist/CodexUsage-0.1.4.apk` on the phone, allowing installation from the browser/file manager when Android asks. This development APK is signed with the build machine's local Android debug key. It is for testing, not a production release. Updates must use the same signing key or require reinstalling and signing in again. Keep signing keys out of Git.
 
 Open Codex Usage, add an account, complete sign-in in the system browser, return to the app and add the widget. Long-press the home screen > Widgets > Codex Usage also works. Resize horizontally as needed. Existing widgets keep their launcher grid allocation; remove and re-add the widget to apply the new three-column, one-row default. Grid sizing is ultimately controlled by the launcher. Tap percentages to refresh; tap an icon for settings.
 

@@ -40,21 +40,26 @@ public class UsageWidget extends AppWidgetProvider {
             }
             views.setViewVisibility(R.id.account2,accounts.length()>1?View.VISIBLE:View.GONE);
             views.setViewVisibility(R.id.divider,accounts.length()>1?View.VISIBLE:View.GONE);
-            int[] icons={R.id.icon1,R.id.icon2},avatars={R.id.avatar1,R.id.avatar2},percent={R.id.percent1,R.id.percent2},reset={R.id.reset1,R.id.reset2};
+            int[] icons={R.id.icon1,R.id.icon2},avatars={R.id.avatar1,R.id.avatar2};
+            int[][] percent={{R.id.percent1Short,R.id.percent1Week},{R.id.percent2Short,R.id.percent2Week}};
+            int[][] reset={{R.id.reset1Short,R.id.reset1Week},{R.id.reset2Short,R.id.reset2Week}};
             for(int i=0;i<Math.max(1,accounts.length());i++) {
                 views.setOnClickPendingIntent(icons[i],open);views.setOnClickPendingIntent(avatars[i],open);
-                if(accounts.length()==0){views.setOnClickPendingIntent(R.id.root,open);views.setTextViewText(percent[i],"—\n—");continue;}
+                if(accounts.length()==0){views.setOnClickPendingIntent(R.id.root,open);continue;}
                 JSONObject a=accounts.getJSONObject(i),snapshot=a.optJSONObject("snapshot");
                 boolean work=!a.optString("kind").equals("personal");
                 views.setViewVisibility(icons[i],work?View.VISIBLE:View.GONE);views.setViewVisibility(avatars[i],work?View.GONE:View.VISIBLE);
                 String email=a.optString("email","Codex"); views.setTextViewText(avatars[i],"P");
-                views.setTextViewText(percent[i],UsageData.percent(snapshot,"short")+"\n"+UsageData.percent(snapshot,"week"));
-                views.setTextViewText(reset[i],snapshot==null?"Přihlásit":UsageData.reset(snapshot,"short",ZoneId.systemDefault())+"\n"+UsageData.reset(snapshot,"week",ZoneId.systemDefault()));
                 boolean stale=UsageData.stale(snapshot,System.currentTimeMillis()/1000)||a.has("error");
-                views.setTextColor(percent[i],Color.parseColor(stale?"#938F78":"#B8CEAA"));
-                views.setContentDescription(percent[i],email+": "+(stale?"starší nebo nedostupné údaje, ":"")+"zbývá v pětihodinovém a týdenním limitu "+UsageData.percent(snapshot,"short")+", "+UsageData.percent(snapshot,"week"));
+                String[] slots={"short","week"};
+                for(int row=0;row<2;row++) {
+                    views.setTextViewText(percent[i][row],UsageData.percent(snapshot,slots[row]));
+                    views.setTextViewText(reset[i][row],snapshot==null?(row==0?"Login":"—"):UsageData.reset(snapshot,slots[row],ZoneId.systemDefault()));
+                    views.setTextColor(percent[i][row],Color.parseColor(stale?"#938F78":"#B8CEAA"));
+                    views.setContentDescription(percent[i][row],email+": "+(stale?"starší nebo nedostupné údaje, ":"")+"zbývá v "+(row==0?"pětihodinovém":"týdenním")+" limitu "+UsageData.percent(snapshot,slots[row]));
+                }
             }
-        } catch(Exception error){views.setTextViewText(R.id.percent1,"—\n—");views.setTextViewText(R.id.reset1,"Chyba");views.setOnClickPendingIntent(R.id.root,open);}
+        } catch(Exception error){views.setTextViewText(R.id.reset1Short,"Chyba");views.setOnClickPendingIntent(R.id.root,open);}
         manager.updateAppWidget(ids,views);
     }
 }
