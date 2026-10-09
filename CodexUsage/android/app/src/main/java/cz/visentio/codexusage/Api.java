@@ -26,7 +26,7 @@ final class Api {
         HttpURLConnection connection=(HttpURLConnection)new URL(url).openConnection();
         connection.setInstanceFollowRedirects(false); connection.setConnectTimeout(12000); connection.setReadTimeout(12000);
         connection.setRequestProperty("Accept","application/json");
-        connection.setRequestProperty("User-Agent","CodexUsageAndroid/0.1.2");
+        connection.setRequestProperty("User-Agent","CodexUsageAndroid/0.1.3");
         if(token!=null)connection.setRequestProperty("Authorization","Bearer "+token);
         if(account!=null&&!account.isEmpty())connection.setRequestProperty("ChatGPT-Account-Id",account);
         try {

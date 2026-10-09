@@ -32,7 +32,7 @@ final class UsageData {
     static String reset(JSONObject snapshot,String slot,ZoneId zone) {
         JSONObject w=snapshot==null?null:snapshot.optJSONObject(slot);
         if(w==null||w.optLong("reset")==0) return "—";
-        return DateTimeFormatter.ofPattern(slot.equals("short")?"HH:mm":"d. M.",Locale.ROOT)
+        return DateTimeFormatter.ofPattern(slot.equals("short")?"HH:mm":"d.M.",Locale.ROOT)
             .format(Instant.ofEpochSecond(w.optLong("reset")).atZone(zone));
     }
     static boolean stale(JSONObject snapshot,long now) {
