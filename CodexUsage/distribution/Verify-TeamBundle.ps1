@@ -1,10 +1,14 @@
 [CmdletBinding()]
-param([Parameter(Mandatory)][string]$Archive)
+param([Parameter(Mandatory)][string]$Archive, [switch]$WorkspacePlugin)
 $ErrorActionPreference = 'Stop'
 $testRoot = Join-Path ([IO.Path]::GetTempPath()) ('CodexUsageDistributionCheck-' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $testRoot | Out-Null
 Expand-Archive -LiteralPath $Archive -DestinationPath $testRoot
-$bundle = Join-Path $testRoot 'Visentio-Codex-Usage'
+$bundle = if ($WorkspacePlugin) {
+    Join-Path $testRoot 'visentio-codex-usage\skills\setup\bundle'
+} else {
+    Join-Path $testRoot 'Visentio-Codex-Usage'
+}
 $profile = Join-Path $testRoot 'profile'
 $configDirectory = Join-Path $profile 'CodexUsage'
 New-Item -ItemType Directory -Path $configDirectory -Force | Out-Null
@@ -28,7 +32,21 @@ function Invoke-IsolatedScript([string]$script,[string]$arguments = '') {
     $process.Dispose()
     return $result
 }
-$installer = Join-Path $bundle 'Install.ps1'
+$installer = if ($WorkspacePlugin) {
+    Join-Path $testRoot 'visentio-codex-usage\skills\setup\scripts\Setup.ps1'
+} else {
+    Join-Path $bundle 'Install.ps1'
+}
+if ($WorkspacePlugin) {
+    # A prerequisite stub is sufficient: these installer checks deliberately do not launch Codex.
+    $codexStubDirectory = Join-Path $profile 'OpenAI\Codex\bin\test'
+    New-Item -ItemType Directory -Path $codexStubDirectory -Force | Out-Null
+    New-Item -ItemType File -Path (Join-Path $codexStubDirectory 'codex.exe') | Out-Null
+    $preflight = Invoke-IsolatedScript $installer '-CheckOnly'
+    if ($preflight.exitCode -ne 0) { throw $preflight.output }
+    $preflightResult = $preflight.output | ConvertFrom-Json
+    if (!$preflightResult.codexAvailable -or !$preflightResult.desktopRuntime10 -or !$preflightResult.bundledExecutable) { throw 'Setup prerequisite check failed' }
+}
 $flags = '-NoLaunch -NoShortcuts'
 $first = Invoke-IsolatedScript $installer $flags
 if ($first.exitCode -ne 0) { throw $first.output }

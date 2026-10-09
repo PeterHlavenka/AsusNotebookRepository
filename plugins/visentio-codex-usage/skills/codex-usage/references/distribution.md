@@ -1,29 +1,44 @@
-# Install and use
+# Set up without a separate ZIP
 
-Distribution source: ask the Visentio maintainer for the current approved ZIP. There is no published installer URL configured in this package yet. Do not invent one.
+The Windows application and installer are included in ../setup/bundle as part of this plugin.
+Invoke the plugin's Setup / Nastavit workflow in the user's LOCAL Windows ChatGPT/Codex client with shell access.
+Follow ../setup/SKILL.md; it resolves scripts/Setup.ps1 from its own installed skill directory.
+No download URL, GitHub release, separate ZIP, source checkout or SDK is needed for the colleague.
 
-Requirements: Windows x64, installed Codex desktop and internet. The compact team bundle requires .NET 10 Desktop Runtime (x64), checked by the installer. A standalone bundle can include the runtime.
+Requirements: local Windows x64, Codex desktop, .NET 10 Desktop Runtime (x64), internet for quota reads and the user's own Codex sign-in.
+Setup -CheckOnly reports prerequisites without reading credentials.
+The installed app goes to %LOCALAPPDATA%\Programs\VisentioCodexUsage, with Start/desktop shortcuts and Windows sign-in startup.
+No administrator rights are needed. Company policies can still restrict unsigned software or scripts.
 
-Extract the whole ZIP, then run Install.cmd. It installs into %LOCALAPPDATA%\Programs\VisentioCodexUsage, creates a Start menu and desktop shortcut, enables Windows startup, and opens the miniwindow. No elevation is required. Company policies can restrict unsigned scripts or software; ask IT if blocked.
+Web/cloud/mobile chats can use the support instructions, but cannot install or launch a local Windows window.
+If local resources or execution are unavailable, tell the user to open setup in the local Windows client.
+Do not substitute manual ZIP distribution or claim that adding the plugin silently installs Windows software.
 
-Right-click the miniwindow > Nastavit účty… to add/remove accounts, set optional e-mail identity checks and choose icons. Use visentio for the company icon. A fresh install has one current Codex account with this icon. For additional accounts, sign in separately through the corresponding account menu. These profiles do not switch the main Codex account.
+# Accounts and operation
 
-The window is 40 device-independent units high, always on top with automatic recovery every second without taking focus, draggable, and refreshes every ten seconds. The two rows show remaining five-hour and weekly Codex limits, with local 24-hour reset time and reset date. An asterisk means the reading is old, uncertain or awaiting a reset refresh.
+Right-click the miniwindow > Nastavit účty… to add/remove accounts, set optional identity-check e-mails or choose icons.
+The value visentio draws the company logo. A fresh install uses one current Codex account.
+Each optional additional account uses the user's own separate sign-in and does not switch the main Codex application.
 
-Settings and encrypted profiles live under %LOCALAPPDATA%\CodexUsage. Never share this folder.
+The window is 40 device-independent units high, draggable, and maintains always-on-top every second without taking focus.
+Secure Windows screens and some exclusive-fullscreen applications can still cover it.
+Quota reads refresh every ten seconds. Rows display remaining five-hour and weekly Codex limits.
+Time uses local Windows time in 24-hour format. An asterisk marks old, uncertain or reset-pending readings.
 
-# Update
+Settings and encrypted profiles live in %LOCALAPPDATA%\CodexUsage. Never share this directory or ask for credential files.
 
-Extract the approved next-version ZIP and run Install.cmd. The installer verifies bundled file hashes, closes only an app installed under its own managed folder, stores the new version separately and updates shortcuts. Existing account settings and sign-in profiles remain untouched. Hashes detect corruption; they do not authenticate the publisher of an unsigned package.
+# Update and launch
 
-# Troubleshoot
+After the plugin syncs to a new version, run the same setup workflow again.
+Setup installs its bundled version, updates shortcuts and launches the app; it does not update in the background merely because the plugin synced.
+The installer validates file hashes and retains previous version directories and all account settings.
+A running copy outside the managed installation must be closed by the user before setup launches another copy.
 
-If the app is hidden, click its tray icon. If it is closed, open Visentio Codex Usage from Start.
-If no quota appears, confirm Codex is installed and signed in. Open Stav připojení… for a short status. Request only a redacted error, never credentials.
-If an account e-mail is configured, it must match the chosen account.
-If the local encrypted storage fails, preserve it and contact the maintainer. Do not delete or replace the main Codex authentication store.
-Only five-hour and weekly Codex windows are supported; other limits can be unavailable.
+# Troubleshoot and remove
 
-# Remove
-
-Run Uninstall.ps1 from %LOCALAPPDATA%\Programs\VisentioCodexUsage. It removes only this installation and its shortcuts; account settings and encrypted sign-ins are retained.
+Click the tray icon to show a hidden app; use Start > Visentio Codex Usage for a closed app.
+If no quota appears, verify Codex is installed and signed in. Stav připojení… gives a short status; request only a redacted error.
+A configured e-mail must match the selected account.
+Preserve encrypted storage on errors; do not delete the main Codex authentication store.
+Run Uninstall.ps1 from %LOCALAPPDATA%\Programs\VisentioCodexUsage to remove the installation and its shortcuts.
+Accounts and encrypted profiles remain untouched.

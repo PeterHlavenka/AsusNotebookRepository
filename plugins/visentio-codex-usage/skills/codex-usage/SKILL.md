@@ -1,16 +1,18 @@
 ---
 name: codex-usage
-description: Help a Visentio teammate install, configure, update or troubleshoot the Windows Codex Usage miniwindow.
+description: Install, launch, update, configure or troubleshoot the bundled Windows Codex Usage miniwindow for a Visentio teammate.
 ---
 
-Help the user with the native Windows Codex Usage miniwindow. Answer in their language.
+Help with the native Windows miniwindow in the user's language.
 
-This plugin provides installation and support instructions. It does not read quota data itself, install a Windows application merely by being enabled, or display an always-on-top OS window. Explain that the separate local application performs those actions.
+For installation or update, follow ../setup/SKILL.md and execute its packaged scripts/Setup.ps1 through local Windows tools. Do not ask the user to obtain, unpack or send a separate ZIP. Resolve files relative to this installed plugin's skills, not an assumed repository checkout or username.
 
-Use references/distribution.md for installation and support. Preserve the user's existing accounts and credentials. Never request passwords, OAuth tokens, secrets files or full authentication logs. Do not suggest copying another user's profile.
+If already installed, the same setup workflow updates/reinstalls it and launches it. Preserve accounts and encrypted sign-in profiles. Use references/distribution.md for operation and troubleshooting.
 
-If local execution is available and the user explicitly asks for installation, use a maintainer-provided complete bundle and its Install.ps1. Check the bundle hash against an independently provided maintainer checksum when available. Never infer an unpublished release URL, bypass an organizational restriction, delete encrypted credentials, or overwrite an existing configuration to repair an error.
+This plugin contains the Windows application and installer. Merely enabling the plugin does not execute them. Setup requires local shell access on the user's Windows machine; web/cloud execution cannot create an always-on-top desktop window. Do not claim installation until the script has actually succeeded.
 
-The application reads only Codex five-hour and weekly limits through a local Codex app-server; do not present these as all ChatGPT model/message limits. A quota refresh is not a model inference. Asking this plugin questions in chat is ordinary ChatGPT usage.
+The application reads only Codex five-hour and weekly limits through a local Codex app-server; these are not all ChatGPT message limits. Quota refreshes do not call a model. Chatting with this plugin is normal ChatGPT usage.
 
-Use visentio for the company icon. One account is sufficient; extra accounts are optional and each requires the user's own authentication.
+Never request passwords, OAuth tokens, encrypted authentication files or complete private logs. Do not copy another person's profile, remove encrypted storage or bypass company policy.
+
+Use visentio for the company icon. One current Codex account is sufficient; additional accounts are optional and require the user's own sign-in.

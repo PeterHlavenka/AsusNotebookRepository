@@ -29,9 +29,14 @@ jobs:
         run: |
           $archive = Get-ChildItem ./CodexUsage/dist/*desktop-runtime.zip | Select-Object -First 1
           ./CodexUsage/distribution/Verify-TeamBundle.ps1 -Archive $archive.FullName
-      - name: Package workspace plugin
+      - name: Build plugin with bundled Windows app
         shell: pwsh
-        run: Compress-Archive -LiteralPath ./plugins/visentio-codex-usage -DestinationPath ./CodexUsage/dist/visentio-codex-usage-plugin.zip
+        run: ./CodexUsage/distribution/Build-WorkspacePlugin.ps1
+      - name: Verify plugin setup without a separate ZIP
+        shell: pwsh
+        run: |
+          $archive = Get-ChildItem ./CodexUsage/dist/Visentio-Codex-Usage-Workspace-Plugin-*.zip | Select-Object -First 1
+          ./CodexUsage/distribution/Verify-TeamBundle.ps1 -Archive $archive.FullName -WorkspacePlugin
       - uses: actions/upload-artifact@v4
         with:
           name: visentio-codex-usage-distribution

@@ -68,33 +68,47 @@ Kontroluje parser limitů, shodu účtů, 24hodinový formát, jednoúčtové a 
 
 Pro otevření přihlášení konkrétního profilu lze použít --login ID. Parametr ID musí odpovídat ID v místní konfiguraci.
 
-## Distribuce pro tým (bez certifikátu)
+## Distribuce přímo přes workspace plugin
 
-Kompaktní instalační ZIP pro Windows x64 vytvoří:
+Plugin v plugins/visentio-codex-usage obsahuje aplikaci pro Windows x64, instalátor a krok Nastavit / Setup. Kolega nepotřebuje zvláštní ZIP, download URL, SDK ani checkout zdrojového repozitáře.
 
-    .\distribution\Build-TeamBundle.ps1
+Postup kolegy:
+1. Přidá Visentio Codex Usage z firemního katalogu.
+2. V místním Windows klientu ChatGPT/Codex se shell přístupem spustí Nastavit.
+3. Workflow ověří Codex a .NET 10 Desktop Runtime (x64), nainstaluje přibalenou aplikaci, vytvoří zástupce, nastaví spuštění po přihlášení do Windows a miniokno spustí.
 
-Výstup je v dist. Kolegové již mají .NET 10 Desktop Runtime (x64); instalátor ověřuje tuto konkrétní závislost. Volitelný parametr -SelfContained vytvoří větší balíček s runtime.
+Webový nebo cloudový chat nemůže tento Windows instalátor spustit na uživatelově ploše. Pouhé zapnutí pluginu nic neinstaluje. Je nutné ověřit, že cílový workspace desktop klient přenáší celý přibalený skill a umožňuje jeho lokální spuštění; lokální test skriptu sám o sobě neprokazuje funkční onboarding workspace.
 
-Rozbal celý ZIP a spusť Install.cmd. Instaluje bez administrátora do %LOCALAPPDATA%\Programs\VisentioCodexUsage, vytvoří zástupce v nabídce Start a na ploše a zapne spuštění po přihlášení do Windows. Nastavení a přihlášení zůstávají v %LOCALAPPDATA%\CodexUsage.
+## Sestavení pluginu pro správce
 
-Aktualizace: spusť Install.cmd z nové verze ZIP. Předchozí verze zůstává zachovaná, zástupci se přesměrují na novou verzi. Instalátor kontroluje úplnost a SHA-256 souborů. Kontrolní součty ověřují poškození, nikoli identitu vydavatele; balíček není podepsaný. Používej schválený odkaz správce. Neexistuje tichý automatický downloader nepodepsaného kódu.
+    .\distribution\Build-WorkspacePlugin.ps1
 
-Odinstalace: spusť Uninstall.ps1 z instalační složky. Smaže aplikaci a její zástupce, konfiguraci a uložená přihlášení zachová.
+Skript sestaví aplikaci a aktualizuje payload skills/setup/bundle přímo ve zdrojové složce pluginu. Přidává pouze EXE, DLL, deps.json, runtimeconfig.json, hash manifest a instalátor. Verze aplikace a pluginu musí souhlasit. Tyto soubory je nutné commitnout spolu se zdroji, protože GitHub workspace import čte repozitář, nikoli CI artifact. Přibalené EXE a DLL mají cílené výjimky z ignorování Gitem.
 
-    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-1.3.1-win-x64-desktop-runtime.zip
+    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-Workspace-Plugin-1.4.0.zip -WorkspacePlugin
 
-Ověření používá oddělený testovací profil bez vytváření zástupců a kontroluje instalaci, opakovanou instalaci, aktualizaci, zachování nastavení, odmítnutí poškozených souborů a cest mimo balíček a odinstalaci. GitHub Actions sestaví a ověří ZIP, poté jej uloží jako artifact; nevydává automaticky veřejný release.
+Test spouští skutečný setup z rozbaleného pluginu v odděleném profilu bez zástupců a bez spuštění Codexu. Ověřuje předpoklady, instalaci, opakovanou instalaci, aktualizaci, zachování nastavení, odmítnutí poškozených souborů a cest mimo balíček a odinstalaci. Není to test hostitelského workspace UI.
 
-## ChatGPT workspace plugin
+GitHub Actions sestaví a ověří balíčky jako artifact. Nevydává veřejný release a necommitne aktualizovaný payload za správce. Před pushem změny verze vždy spusť Build-WorkspacePlugin.ps1 a commitni jeho payload.
 
-Plugin je v plugins/visentio-codex-usage v kořeni repozitáře. Obsahuje ikonu a skill pro instalaci, aktualizaci a podporu. Nepředstírá čtení živých limitů z webového ChatGPT a neinstaluje Windows aplikaci samotným přidáním do workspace.
+## Instalace a aktualizace
 
-Po pushnutí těchto souborů může správce workspace otevřít Admin > Plugins > Add > Import marketplace:
+Instalace je pro aktuálního uživatele bez administrátora do %LOCALAPPDATA%\Programs\VisentioCodexUsage. Účty, pozice okna a přihlášení zůstávají v %LOCALAPPDATA%\CodexUsage. Zástupci se vytvoří v nabídce Start, na ploše a ve složce po spuštění.
+
+Po synchronizaci nové verze pluginu kolega spustí Nastavit znovu. Aktualizace zachová nastavení i předchozí verzi aplikace. Neprobíhá skryté spouštění nepodepsaného kódu při pouhé synchronizaci pluginu. Bez certifikátu mohou instalaci omezit firemní politiky Windows; hash kontroluje poškození, nikoli identitu vydavatele.
+
+Odinstalace přes Uninstall.ps1 v instalační složce odstraní aplikaci a její zástupce, ale zachová nastavení a přihlášení.
+
+Samostatný Build-TeamBundle.ps1 je ponechán pro správce a testování, nikoli jako požadovaný distribuční postup pro kolegy.
+
+## Import do Visentio Workspace
+
+Správce otevře Admin > Plugins > Add > Import marketplace:
 - Source: URL tohoto GitHub repozitáře
 - Path: prázdné (marketplace je v kořeni)
 - Branch: master
 
-Manifest .agents/plugins/marketplace.json obsahuje jediný plugin. Správce poté nastaví jeho dostupnost pro členy týmu. Repo import a sync pluginu jsou samostatné od aktualizace Windows miniokna. Aktuální schválený odkaz na instalační balíček je nutné doplnit po jeho vydání; plugin zatím nevymýšlí neexistující download URL.
+Manifest .agents/plugins/marketplace.json obsahuje jediný plugin. Správce nastaví jeho dostupnost pro členy týmu. Existující import stačí po pushnutí aktualizovat volbou Synchronizovat nyní. Nedělej nový duplicitní plugin.
 
 Dokumentace: https://learn.chatgpt.com/docs/enterprise/plugin-management
+Onboarding: https://developers.openai.com/plugins/build/plugins

@@ -1,0 +1,23 @@
+{
+  "architecture": "win-x64",
+  "selfContained": false,
+  "files": [
+    {
+      "sha256": "CC93CA43D6C79A26EE0DC8D2994A6F4C954A4062D0F683ADBA8A3F9F03921412",
+      "path": "CodexUsage.deps.json"
+    },
+    {
+      "sha256": "669E35911ABF7B1FBB5E0F0786BDD94E1FAA439E6897F4FDD98B7848CB8A6286",
+      "path": "CodexUsage.dll"
+    },
+    {
+      "sha256": "80BE0CE05F16832C699D8837FFDE8410D950C05F24F49E7A24995E2138DE6A46",
+      "path": "CodexUsage.exe"
+    },
+    {
+      "sha256": "96BC2946DFF8790400D652EC7F8DE7BB043E954980D59470C112788B68A1FBD3",
+      "path": "CodexUsage.runtimeconfig.json"
+    }
+  ],
+  "version": "1.4.0"
+}

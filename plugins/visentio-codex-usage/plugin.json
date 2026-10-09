@@ -1,21 +1,24 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "visentio-codex-usage",
-  "version": "1.3.1",
-  "description": "Install, configure and troubleshoot the local Visentio Codex usage miniwindow.",
-  "author": { "name": "Visentio" },
+  "version": "1.4.0",
+  "description": "Install and run the bundled Windows Codex usage miniwindow through local setup.",
+  "author": {
+    "name": "Visentio"
+  },
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Visentio Codex Usage",
         "shortDescription": "Miniokno s limity Codexu",
-        "longDescription": "Pomoc s instalací a nastavením miniokna Codex Usage pro Windows. Samotné miniokno běží lokálně a zobrazuje limity vlastních účtů uživatele.",
+        "longDescription": "Obsahuje miniokno pro Windows a jeho instalační workflow. Nastavení v místním Windows klientu provede instalaci, vytvoří zástupce a spustí aplikaci bez ručního ZIPu.",
         "developerName": "Visentio",
         "category": "Productivity",
         "logo": "./assets/visentio.svg",
         "composerIcon": "./assets/visentio.svg",
-        "defaultPrompt": "Pomoz mi nainstalovat nebo nastavit miniokno Visentio Codex Usage."
-      }
+        "defaultPrompt": "Nainstaluj a spusť přibalené miniokno Visentio Codex Usage na tomto počítači."
+      },
+      "onboardingSkill": "./skills/setup/SKILL.md"
     }
   }
 }
