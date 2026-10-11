@@ -52,11 +52,12 @@ public class MainActivity extends Activity {
             button("Vymazat poškozené přihlášení",()->{Store.reset(this);UsageWidget.render(this);render();});
         }
         button("Obnovit usage",()->{message("Obnovuji…");UsageJob.now(this);});
-        button("Přidat widget na plochu",()->{
+        button("Přidat oba účty · 3×1",()->{
             AppWidgetManager manager=AppWidgetManager.getInstance(this);
             if(manager.isRequestPinAppWidgetSupported())manager.requestPinAppWidget(new ComponentName(this,UsageWidget.class),null,null);
             else message("Podrž plochu → Widgety → Codex Usage");
         });
+        button("Přidat jeden účet · 2×1",this::pinSingle);
         Switch live=new Switch(this);live.setText("Průběžná obnova každou minutu");live.setTextColor(Color.parseColor("#B8CEAA"));live.setChecked(LiveService.running);body.addView(live);
         live.setOnCheckedChangeListener((v,enabled)->{
             Store.live(this,enabled);
@@ -68,6 +69,25 @@ public class MainActivity extends Activity {
         text("Experimentální aplikace: přihlášení a čtení limitů používají endpointy Codexu, které se mohou změnit. Žádné API klíče ani volání modelů. Přihlášení zůstává šifrované v tomto telefonu.",12);
     }
     private void notifications(){if(Build.VERSION.SDK_INT>=33&&checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED)requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},1);}
+    private void pinSingle() {
+        AppWidgetManager manager=AppWidgetManager.getInstance(this);
+        if(!manager.isRequestPinAppWidgetSupported()){message("Podrž plochu → Widgety → Codex Usage → Jeden účet");return;}
+        try {
+            JSONArray accounts=Store.read(this);
+            if(accounts.length()==0){message("Nejdřív přihlas účet");return;}
+            String[] labels=new String[accounts.length()];
+            for(int i=0;i<labels.length;i++)labels[i]=(accounts.getJSONObject(i).optString("kind").equals("personal")?"Osobní":"Visentio")+" · "+accounts.getJSONObject(i).optString("email");
+            new AlertDialog.Builder(this).setTitle("Účet pro widget 2×1").setItems(labels,(dialog,index)->{
+                try {
+                    String accountId=accounts.getJSONObject(index).getString("id");
+                    Intent pinned=new Intent(this,SingleUsageWidget.class).setAction(SingleUsageWidget.PINNED).putExtra("accountId",accountId);
+                    // The launcher fills in the allocated widget ID; the receiver is explicit and validates its provider.
+                    PendingIntent callback=PendingIntent.getBroadcast(this,accountId.hashCode(),pinned,PendingIntent.FLAG_MUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
+                    manager.requestPinAppWidget(new ComponentName(this,SingleUsageWidget.class),null,callback);
+                } catch(Exception e){message("Widget se nepodařilo přidat");}
+            }).show();
+        } catch(Exception e){message("Přihlášení není dostupné");}
+    }
     private void login(String kind){notifications();startForegroundService(new Intent(this,LoginService.class).putExtra("kind",kind));message("Otevírám přihlášení v prohlížeči…");}
     private void message(String message){Toast.makeText(this,message,Toast.LENGTH_LONG).show();}
 }

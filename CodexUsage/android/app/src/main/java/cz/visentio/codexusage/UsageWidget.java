@@ -21,23 +21,31 @@ public class UsageWidget extends AppWidgetProvider {
         UsageJob.now(c);
     }
     @Override public void onEnabled(Context c){UsageJob.schedule(c);}
-    @Override public void onDisabled(Context c){UsageJob.cancel(c);Store.live(c,false);c.stopService(new Intent(c,LiveService.class));}
+    @Override public void onDeleted(Context c,int[] ids){
+        for(int id:ids)c.getSharedPreferences("widgets",0).edit().remove("account_"+id).apply();
+    }
+    @Override public void onDisabled(Context c){
+        AppWidgetManager manager=AppWidgetManager.getInstance(c);
+        if(manager.getAppWidgetIds(new ComponentName(c,UsageWidget.class)).length+
+            manager.getAppWidgetIds(new ComponentName(c,SingleUsageWidget.class)).length>0)return;
+        UsageJob.cancel(c);Store.live(c,false);c.stopService(new Intent(c,LiveService.class));
+    }
     static void render(Context c) {
         AppWidgetManager manager=AppWidgetManager.getInstance(c);
-        int[] ids=manager.getAppWidgetIds(new ComponentName(c,UsageWidget.class)); if(ids.length==0)return;
+        for(int id:manager.getAppWidgetIds(new ComponentName(c,UsageWidget.class)))renderOne(c,manager,id,false);
+        for(int id:manager.getAppWidgetIds(new ComponentName(c,SingleUsageWidget.class)))renderOne(c,manager,id,true);
+    }
+    private static void renderOne(Context c,AppWidgetManager manager,int widgetId,boolean single) {
         RemoteViews views=new RemoteViews(c.getPackageName(),R.layout.usage_widget);
         Intent refresh=new Intent(c,UsageWidget.class).setAction(REFRESH).addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
         PendingIntent refreshIntent=PendingIntent.getBroadcast(c,1,refresh,PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
-        PendingIntent open=PendingIntent.getActivity(c,2,new Intent(c,MainActivity.class),PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent settings=new Intent(c,single?WidgetConfigActivity.class:MainActivity.class);
+        settings.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,widgetId);
+        PendingIntent open=PendingIntent.getActivity(c,widgetId,settings,PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
         views.setOnClickPendingIntent(R.id.root,refreshIntent);
         try {
-            JSONArray accounts=Store.read(c);
-            // Match the desktop strip: work on the left, personal on the right.
-            if(accounts.length()==2&&accounts.getJSONObject(0).optString("kind").equals("personal")&&
-                !accounts.getJSONObject(1).optString("kind").equals("personal")) {
-                JSONObject first=accounts.getJSONObject(0);
-                accounts.put(0,accounts.getJSONObject(1));accounts.put(1,first);
-            }
+            String selectedId=c.getSharedPreferences("widgets",0).getString("account_"+widgetId,null);
+            JSONArray accounts=WidgetAccounts.select(Store.read(c),single,selectedId);
             views.setViewVisibility(R.id.account2,accounts.length()>1?View.VISIBLE:View.GONE);
             views.setViewVisibility(R.id.divider,accounts.length()>1?View.VISIBLE:View.GONE);
             int[] icons={R.id.icon1,R.id.icon2},avatars={R.id.avatar1,R.id.avatar2};
@@ -45,7 +53,7 @@ public class UsageWidget extends AppWidgetProvider {
             int[][] reset={{R.id.reset1Short,R.id.reset1Week},{R.id.reset2Short,R.id.reset2Week}};
             for(int i=0;i<Math.max(1,accounts.length());i++) {
                 views.setOnClickPendingIntent(icons[i],open);views.setOnClickPendingIntent(avatars[i],open);
-                if(accounts.length()==0){views.setOnClickPendingIntent(R.id.root,open);continue;}
+                if(accounts.length()==0){views.setOnClickPendingIntent(R.id.root,open);if(single)views.setTextViewText(R.id.reset1Short,"Účet");continue;}
                 JSONObject a=accounts.getJSONObject(i),snapshot=a.optJSONObject("snapshot");
                 boolean work=!a.optString("kind").equals("personal");
                 views.setViewVisibility(icons[i],work?View.VISIBLE:View.GONE);views.setViewVisibility(avatars[i],work?View.GONE:View.VISIBLE);
@@ -60,6 +68,6 @@ public class UsageWidget extends AppWidgetProvider {
                 }
             }
         } catch(Exception error){views.setTextViewText(R.id.reset1Short,"Chyba");views.setOnClickPendingIntent(R.id.root,open);}
-        manager.updateAppWidget(ids,views);
+        manager.updateAppWidget(widgetId,views);
     }
 }
