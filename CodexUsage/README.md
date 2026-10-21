@@ -85,7 +85,15 @@ Webový nebo cloudový chat nemůže tento Windows instalátor spustit na uživa
 
 Skript sestaví aplikaci a aktualizuje payload skills/setup/bundle přímo ve zdrojové složce pluginu. Přidává pouze EXE, DLL, deps.json, runtimeconfig.json, hash manifest a instalátor. Verze aplikace a pluginu musí souhlasit. Tyto soubory je nutné commitnout spolu se zdroji, protože GitHub workspace import čte repozitář, nikoli CI artifact. Přibalené EXE a DLL mají cílené výjimky z ignorování Gitem.
 
-    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-Workspace-Plugin-1.4.0.zip -WorkspacePlugin
+    .\distribution\Verify-TeamBundle.ps1 -Archive .\dist\Visentio-Codex-Usage-Workspace-Plugin-1.4.1.zip -WorkspacePlugin
+
+Ověření distribuce přes Git včetně instalačního workflow:
+
+    .\distribution\Verify-WorkspaceCheckout.ps1
+
+Test vytvoří vlastní dočasný Git index a dva čisté checkouty aktuálního pluginu s `core.autocrlf=false` a `true`, bez commitu nebo změny pracovního indexu. U obou ověří SHA-256 všech přibalených souborů a provede setup, opakovanou instalaci, aktualizaci, odmítnutí poškozených JSON souborů a odinstalaci v izolovaném uživatelském profilu. Nastavení musí zůstat zachované. CI tento test spouští před sestavením i po něm, aby nové sestavení nezakrylo chybu již uloženého payloadu.
+
+Soubory v `plugins/visentio-codex-usage/skills/setup/bundle/app/` jsou podle `.gitattributes` binární (`binary`, zahrnuje `-text`), včetně `.deps.json` a `.runtimeconfig.json`. Jejich konce řádků se nesmějí normalizovat: manifest kontroluje přesné bajty. Oba build skripty používají stejné nastavení publish a společný `Write-BundleManifest.ps1`, který po zkopírování aplikace spočítá hashe finálních souborů a zapíše seřazený manifest v UTF-8/LF.
 
 Test spouští skutečný setup z rozbaleného pluginu v odděleném profilu bez zástupců a bez spuštění Codexu. Ověřuje předpoklady, instalaci, opakovanou instalaci, aktualizaci, zachování nastavení, odmítnutí poškozených souborů a cest mimo balíček a odinstalaci. Není to test hostitelského workspace UI.
 

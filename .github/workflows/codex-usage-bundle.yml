@@ -3,11 +3,13 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - '.gitattributes'
       - 'CodexUsage/**'
       - 'plugins/visentio-codex-usage/**'
       - '.github/workflows/codex-usage-bundle.yml'
   pull_request:
     paths:
+      - '.gitattributes'
       - 'CodexUsage/**'
       - 'plugins/visentio-codex-usage/**'
       - '.github/workflows/codex-usage-bundle.yml'
@@ -21,6 +23,9 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
+      - name: Verify committed plugin after clean Git checkout (before rebuilding)
+        shell: pwsh
+        run: ./CodexUsage/distribution/Verify-WorkspaceCheckout.ps1
       - name: Build compact Windows bundle
         shell: pwsh
         run: ./CodexUsage/distribution/Build-TeamBundle.ps1
@@ -37,6 +42,9 @@ jobs:
         run: |
           $archive = Get-ChildItem ./CodexUsage/dist/Visentio-Codex-Usage-Workspace-Plugin-*.zip | Select-Object -First 1
           ./CodexUsage/distribution/Verify-TeamBundle.ps1 -Archive $archive.FullName -WorkspacePlugin
+      - name: Verify rebuilt plugin after clean Git checkout
+        shell: pwsh
+        run: ./CodexUsage/distribution/Verify-WorkspaceCheckout.ps1
       - uses: actions/upload-artifact@v4
         with:
           name: visentio-codex-usage-distribution

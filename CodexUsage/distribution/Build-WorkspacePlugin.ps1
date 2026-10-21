@@ -11,7 +11,7 @@ $output = [IO.Path]::GetFullPath($OutputDirectory)
 $staging = Join-Path $output ('plugin-build-' + [guid]::NewGuid().ToString('N'))
 $app = Join-Path $staging 'app'
 New-Item -ItemType Directory -Path $app -Force | Out-Null
-dotnet publish (Join-Path $projectRoot 'source\CodexUsage.csproj') -c Release -r win-x64 --self-contained false -o $app -p:DebugType=None -p:DebugSymbols=false -p:IncludeSourceRevisionInInformationalVersion=false --nologo
+dotnet publish (Join-Path $projectRoot 'source\CodexUsage.csproj') -c Release -r win-x64 --self-contained false -o $app -p:DebugType=None -p:DebugSymbols=false -p:IncludeSourceRevisionInInformationalVersion=false -p:ContinuousIntegrationBuild=true --nologo
 if ($LASTEXITCODE -ne 0) { throw 'Plugin app publish failed' }
 $allowed = @('CodexUsage.exe','CodexUsage.dll','CodexUsage.deps.json','CodexUsage.runtimeconfig.json')
 $files = @(Get-ChildItem -LiteralPath $app -File)
@@ -21,14 +21,11 @@ if ($files.Count -ne $allowed.Count -or @(Get-ChildItem -LiteralPath $app -Direc
 $bundle = Join-Path $pluginRoot 'skills\setup\bundle'
 $targetApp = Join-Path $bundle 'app'
 New-Item -ItemType Directory -Path $targetApp -Force | Out-Null
-if (@(Get-ChildItem -LiteralPath $targetApp -File | Where-Object { $_.Name -notin $allowed }).Count -gt 0) {
+if (@(Get-ChildItem -LiteralPath $targetApp -Directory).Count -gt 0 -or @(Get-ChildItem -LiteralPath $targetApp -File | Where-Object { $_.Name -notin $allowed }).Count -gt 0) {
     throw 'Remove unexpected files from the generated payload before rebuilding'
 }
 foreach ($file in $files) { Copy-Item -LiteralPath $file.FullName -Destination $targetApp -Force }
-$bundleManifest = @{ version = $manifest.version; architecture = 'win-x64'; selfContained = $false; files = @($files | ForEach-Object {
-    @{ path = $_.Name; sha256 = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash }
-}) }
-$bundleManifest | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $bundle 'bundle.json') -Encoding UTF8
+& (Join-Path $PSScriptRoot 'Write-BundleManifest.ps1') -BundleDirectory $bundle -Version $manifest.version
 foreach ($file in @('Install.ps1','Uninstall.ps1')) { Copy-Item -LiteralPath (Join-Path $PSScriptRoot $file) -Destination $bundle -Force }
 $zip = Join-Path $output ("Visentio-Codex-Usage-Workspace-Plugin-$($manifest.version).zip")
 Compress-Archive -LiteralPath $pluginRoot -DestinationPath $zip -Force

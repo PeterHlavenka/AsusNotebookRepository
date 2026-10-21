@@ -10,13 +10,9 @@ $work = Join-Path $output ('build-' + [guid]::NewGuid().ToString('N'))
 $bundle = Join-Path $work 'Visentio-Codex-Usage'
 $app = Join-Path $bundle 'app'
 New-Item -ItemType Directory -Path $app -Force | Out-Null
-dotnet publish (Join-Path $projectRoot 'source\CodexUsage.csproj') -c Release -r win-x64 --self-contained $SelfContained.IsPresent -o $app -p:DebugType=None -p:DebugSymbols=false --nologo
+dotnet publish (Join-Path $projectRoot 'source\CodexUsage.csproj') -c Release -r win-x64 --self-contained $SelfContained.IsPresent -o $app -p:DebugType=None -p:DebugSymbols=false -p:IncludeSourceRevisionInInformationalVersion=false -p:ContinuousIntegrationBuild=true --nologo
 if ($LASTEXITCODE -ne 0) { throw 'Publish failed' }
-$files = @(Get-ChildItem -LiteralPath $app -File -Recurse)
-$manifest = @{ version = $version; architecture = 'win-x64'; selfContained = $SelfContained.IsPresent; files = @($files | ForEach-Object {
-    @{ path = $_.FullName.Substring($app.Length + 1).Replace('\','/'); sha256 = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash }
-}) }
-$manifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $bundle 'bundle.json') -Encoding UTF8
+& (Join-Path $PSScriptRoot 'Write-BundleManifest.ps1') -BundleDirectory $bundle -Version $version -SelfContained:$SelfContained
 foreach ($name in @('Install.ps1','Install.cmd','Uninstall.ps1','START-HERE.txt')) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination $bundle
 }
